@@ -1,99 +1,124 @@
+import os
 import imaplib
 import email
+from bs4 import BeautifulSoup 
 from dotenv import dotenv_values
-import os
-import datetime
-from pprint import pprint
+import html
 import re
-from bs4 import BeautifulSoup
+import urllib.parse
+from datetime import datetime
 
-def parse_content(html):
-    
-    soup = BeautifulSoup(html, 'html.parser')
-    articles = soup.find_all('table')
-
-    titles = []
-    summaries = []
-
-    for article in articles:
-        title = article.find('strong').text
-        link = article.find('a')
-        if link and 'href' in link.attrs:
-            link = link['href']
-        else:
-            link = None
-        summary = article.find('span', {'style': re.compile('font-family')})
-        summary = summary.text.strip()
-        titles.append(title)
-        summaries.append(summary)
-        print(title)
-        print(link)
-        print(summary)
-
-    return titles, summaries, articles
-
-now = datetime.datetime.now() + datetime.timedelta(hours=2)
-print(now.strftime("[%d-%m-%Y %H:%M:%S]")+ " Script is running")
-
+##########################################
+####        CONFIG      #################
+########################################
 config = dotenv_values(".env")
 password = config['KEY']
-email_address = config['email']
+username = config['email']
 
-imap_server = "imap.gmail.com"
-
+########################################
+######      CONNEXION       ############
+########################################
 imap = imaplib.IMAP4_SSL("74.125.20.108")
-imap.login(email_address,password)
+imap.login(username, password)
+imap.select("inbox")
 
-imap.select('Inbox')
+#########################################
+######      CATCH DATA          #########
+#########################################
+# Search for latest email from dan@tldrnewsletter.com
+typ, data = imap.search(None, 'FROM "dan@tldrnewsletter.com"') 
+#print(data)
 
-status, msgnums = imap.search(None, 'FROM "dan@tldrnewsletter.com"')
+topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing", ""]
 
+ids_read = []
+with open('ids.txt','r') as i:
+  ids_read = [line.strip() for line in i] 
 
-topics=["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing", ""]
+all_ids = data[0].split()
 
+# Filter out existing ids
+new_ids = [id for id in all_ids if id not in ids_read]
 
-def display_message(ids, id_):
-    msgnum = ids[id_]
-    _,data = imap.fetch(msgnum, "(RFC822)")
-    message = email.message_from_bytes(data[0][1])
-    print(f"\n ------- DATA FROM {id_} id  --------------\n")
+is_written = False
 
-    print(f" \n ----- MESSAGE FROM {id_} id  -----------\n ")
+for num in new_ids:
+    print(num)
+    is_written = False
+    _, email_data = imap.fetch(num, '(RFC822)')
+    raw_email = email_data[0][1]
+    # Decode HTML entities
+    raw_email = html.unescape(raw_email.decode())
+	#print(raw_email)
+    msg = email.message_from_string(raw_email)
+    date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
+    print('Date envoi : ', date_envoi)
 
-    file = f'./tldr_{id_}.html'
-    html_body = None
-    if message.is_multipart():
-        for part in message.get_payload():
-            if part.get_content_type() == 'text/html':
-                html_body = part.as_string()
+    soup = BeautifulSoup(raw_email, 'html.parser')
+	#print(soup.prettify())
 
+    articles = []
+
+    for div in soup.find_all('div', class_='3D"text-block"'):
+        print('\n div : \n', div)
+
+        if div.find('strong') and div.find('a') and div.find('span'):
+            title = div.find('strong').text
+            title = html.unescape(title)
+            title = title.replace("=","")
+            title = title.replace('\r\n','')
+            link = div.find('a')
+            pattern = r'href=*?">'
+
+            decoded_link = urllib.parse.unquote(link)
+            match = re.search(pattern, str(decoded_link))
+            
+            if match:
+                print(match)
+                url = match.group(0)
+                url = replace("href='3D","")
+                url = replace(">","")
+                url = urllib.parse.unquote(url)
+                print('\n link : \n ', url)
+            
+            else:
+                url='https://tldr.tech'
+            
+            summary = div.find('span').text
+            summary = html.unescape(summary)
+            summary = summary.replace("=","")
+            cleaned_summary = summary.replace('\r\n','')
+            article = {
+	            'title': title,
+	            'link': url,
+	            'summary': cleaned_summary
+	            }
+            articles.append(article)
     
-    if html_body:    
-        # Remove more than 2 newlines
-        parse_content(html_body) 
-        html_body = re.sub(r'\n\s*\n', '\n\n', html_body)
-
-        # Remove whitespace between tags
-        html_body = re.sub(r'>\s+<', '><', html_body)
-        titles, summaries, articles = parse_content(html_body)
+    if articles:
+        articles.pop()
         print(articles)
+        date_for_filename = date_envoi.date()
+        for topic in topics:
+            if f"TLDR {topic}" in raw_email:
+                filename = f"article_{date_for_filename.strftime('%d-%m-%Y')}.md"
+                folder = f"TLDR_{topic}"
+                # Créer le dossier s'il n'existe pas
+                if not os.path.exists(folder):
+                    os.makedirs(folder)
 
-        with open(file,'w') as f:
-            f.write(html_body)
-    else :
-        print('html_body is None')
+                # Enregistrer le fichier
+                filepath = os.path.join(folder, filename)
+                with open(filepath, "w") as f:
+                    f.write(f"# Articles TLDR {topic} {date_for_filename.strftime('%d-%m-%Y')}\n\n")
+                    for i, article in enumerate(articles):
+                        f.write(f'## Article {i+1}\n')
+                        f.write(f'### [{article["title"]}]({article["link"]})\n')
+                        f.write(f'### Summary \n {article["summary"]}\n\n')
+                        is_written = True
+    if is_written:    
+        # Write the email id in ids.txt. I do here to be sure that the textfile is written
+        with open('ids.txt', 'a') as i:
+            i.write(f'{num}\n')
 
-    print('New file added')
-
-
-ids = msgnums[0].split() 
-last = len(ids) - 1
-
-mid = last//2
-
-display_message(ids,0)
-display_message(ids, last)
-display_message(ids, mid)
-
-
-
+print('Latest email articles extracted!')
