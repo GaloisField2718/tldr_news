@@ -4,9 +4,19 @@
 
 This repo is built with `pipenv`.
 
+Before to run you have to declare a `.env` file with this format : 
+```
+email = 'YOUR_EMAIL'
+KEY = 'YOUR_PASSWORD'
+```
+
+For gmail account you should activate double-authentication (2FA) and setup an app passwords :  [Sign in with app passwords - Google Account Help](https://support.google.com/accounts/answer/185833?hl=en).
+
+After this you can run this repo with :
+
 ```
 pipenv shell
-> pipenv install
+> pipenv install --ignore-pipfile
 > python3 script.py
 ```
 
