@@ -29,7 +29,7 @@ imap.select("inbox")
 typ, data = imap.search(None, 'FROM "dan@tldrnewsletter.com"') 
 #print(data)
 
-topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing", ""]
+topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing","InfoSec", ""]
 
 ids_read = []
 with open('ids.txt','r') as i:
