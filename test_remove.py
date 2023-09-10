@@ -84,5 +84,11 @@ for part in msg.walk():
     newsletter = part_string
   
 #  print('La newsletter du ', date_envoi, ' est \n\n ', newsletter)
+imap.store(num, "+FLAGS", "\\Deleted")
+imap.expunge()
+# close the mailbox
+imap.close()
+# logout from the account
+imap.logout()
 
-print('Latest email articles extracted!')
+print('Email ', num, ' is deleted!')
