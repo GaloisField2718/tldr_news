@@ -26,8 +26,8 @@ The repository is structured around each categories from **TLDR newsletter**. Ea
 
 The `ids.txt` file is used to save each email's id to be able to not do again the treatment if it's already done.
 
-## TODO
+Some tests and archives and still in the repo. 
 
-Links are not effective for most of links. I'm still working to find a solution. Feel free to try any solutions. I hope to solve this issue as soon as possible :)
+## TODO
 
 Automate treatment.
