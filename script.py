@@ -42,21 +42,13 @@ typ, data = imap.search(None, 'FROM "dan@tldrnewsletter.com"')
 #print(data)
 
 topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing","InfoSec", ""]
-all_ids = data[0].split()
 
-try:  
-  ids_read = []
-  with open('ids.txt','r') as i:
-    ids_read = [line.strip() for line in i] 
-	
-  ids_read = [ast.literal_eval(id) for id in ids_read]
-  print(f"ids read : {ids_read}")
-  	
-  # Filter out existing ids
-  new_ids = [id for id in all_ids if id not in ids_read]
+all_ids = data[0].decode().split()
+all_ids = [int(id_) for id_ in all_ids]
 
-except:
-  new_ids= all_ids
+ids_read = [ast.literal_eval(line.strip()) for line in open('ids.txt')]
+
+new_ids = [id_ for id_ in all_ids if id_ not in ids_read]
 
 print(f"new ids : {new_ids}")
 
@@ -114,11 +106,5 @@ for num in new_ids[::-1]:
     # Write the email id in ids.txt. I do here to be sure that the textfile is written
     with open('ids.txt', 'a') as i:
       i.write(f'{num}\n')
-
-#    print("is writen  : ", is_written)
-#    if is_written:    
-        # Write the email id in ids.txt. I do here to be sure that the textfile is written
-#        with open('ids.txt', 'a') as i:
-#            i.write(f'{num}\n')
 
 print('Latest email articles extracted!')
