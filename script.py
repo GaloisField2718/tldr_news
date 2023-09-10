@@ -18,8 +18,7 @@ from bs4 import BeautifulSoup
 
 from datetime import datetime
 import ast # To transform ids string from ids.txt in bytes
-from link import extract_url
-
+import quopri
 
 ##########################################
 ####        CONFIG      #################
@@ -43,94 +42,83 @@ typ, data = imap.search(None, 'FROM "dan@tldrnewsletter.com"')
 #print(data)
 
 topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Marketing","InfoSec", ""]
-
-ids_read = []
-with open('ids.txt','r') as i:
-  ids_read = [line.strip() for line in i] 
-
-ids_read = [ast.literal_eval(id) for id in ids_read]
-print(f"ids read : {ids_read}")
 all_ids = data[0].split()
 
-# Filter out existing ids
-new_ids = [id for id in all_ids if id not in ids_read]
+try:  
+  ids_read = []
+  with open('ids.txt','r') as i:
+    ids_read = [line.strip() for line in i] 
+	
+  ids_read = [ast.literal_eval(id) for id in ids_read]
+  print(f"ids read : {ids_read}")
+  	
+  # Filter out existing ids
+  new_ids = [id for id in all_ids if id not in ids_read]
+
+except:
+  new_ids= all_ids
 
 print(f"new ids : {new_ids}")
 
 is_written = False
 
-for num in new_ids:
-    print(num)
-    is_written = False
-    _, email_data = imap.fetch(num, '(RFC822)')
-    raw_email = email_data[0][1]
-    # Decode HTML entities
-    raw_email = html.unescape(raw_email.decode())
-	#print(raw_email)
-    msg = email.message_from_string(raw_email)
-    date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
-    print('Date envoi : ', date_envoi)
+for num in new_ids[::-1]:
+  print(num)
+  is_written = False
+  _, email_data = imap.fetch(num, '(RFC822)')
+  raw_email = email_data[0][1]
+  msg = email.message_from_bytes(raw_email)
+  date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
+  print('Date envoi : ', date_envoi)
+  
 
-    soup = BeautifulSoup(raw_email, 'html.parser')
-	#print(soup.prettify())
+  sender = msg['From']
+  pattern = r' <dan@tldrnewsletter.com>'
+  sender = re.sub(pattern,'', sender)
+  pattern = r'=?utf-\w+\?Q\?.+\?='
+  sender = re.sub(pattern, '', sender)
+  sender = sender.replace(' =?', '')
+  print(sender)
+  
 
-    articles = []
-
-    for div in soup.find_all('div', class_='3D"text-block"'):
-        print('\n div : \n', div)
-
-        if div.find('strong') and div.find('a') and div.find('span'):
-            
-            title = div.find('strong').text
-            title = html.unescape(title)
-            title = title.replace("=","")
-            title = title.replace('\r\n','')
-
-            a_tag = div.find('a')
-            print('a tag complet : ', a_tag)
-            opening_tag = a_tag.split('>', 1) 
-
-            print('a tag : ',opening_tag)
-            url = extract_url(opening_tag)
-
-            summary = div.find('span').text
-            summary = html.unescape(summary)
-            summary = summary.replace("=","")
-            cleaned_summary = summary.replace('\r\n','')
-            
-            article = {
-	            'title': title,
-	            'link': url,
-	            'summary': cleaned_summary
-	            }
-            
-            articles.append(article)
+  newsletter = ""
+  
+  for part in msg.walk():
+    if part.get_content_type()=='text/plain':
+      part_text = part.get_payload()
+      part_decoded = quopri.decodestring(part_text)
+      part_string = part_decoded.decode('utf-8')
+      newsletter = part_string
+  
+#  print('La newsletter du ', date_envoi, ' est \n\n ', newsletter)
     
-    if articles:
-        articles.pop()
-        print(articles)
-        date_for_filename = date_envoi.date()
-        for topic in topics:
-            if f"TLDR {topic}" in raw_email:
-                filename = f"article_{date_for_filename.strftime('%d-%m-%Y')}.md"
-                folder = f"TLDR_{topic}"
-                # Créer le dossier s'il n'existe pas
-                if not os.path.exists(folder):
-                    os.makedirs(folder)
+  date_for_filename = date_envoi.date()
+    
+  topic = sender
+  filename = f"article_{date_for_filename.strftime('%d-%m-%Y')}.md"
+  folder = f"{topic}"
+  
+  # Créer le dossier s'il n'existe pas
+  if not os.path.exists(folder):
+    os.makedirs(folder)
+  
+  # Enregistrer le fichier
+  filepath = os.path.join(folder, filename)
+  with open(filepath, "w") as f:
+    f.write(f"# Articles {topic} {date_for_filename.strftime('%d-%m-%Y')}\n\n")
+    f.write(newsletter)
+    is_written= True
+                    
+  print("is writen  : ", is_written)
+  if is_written:
+    # Write the email id in ids.txt. I do here to be sure that the textfile is written
+    with open('ids.txt', 'a') as i:
+      i.write(f'{num}\n')
 
-                # Enregistrer le fichier
-                filepath = os.path.join(folder, filename)
-                with open(filepath, "w") as f:
-                    f.write(f"# Articles TLDR {topic} {date_for_filename.strftime('%d-%m-%Y')}\n\n")
-                    for i, article in enumerate(articles):
-                        f.write(f'## Article {i+1}\n')
-                        f.write(f'### [{article["title"]}]({article["link"]})\n')
-                        f.write(f'### Summary \n {article["summary"]}\n\n')
-                        is_written= True
-    print("is writen  : ", is_written)
-    if is_written:    
+#    print("is writen  : ", is_written)
+#    if is_written:    
         # Write the email id in ids.txt. I do here to be sure that the textfile is written
-        with open('ids.txt', 'a') as i:
-            i.write(f'{num}\n')
+#        with open('ids.txt', 'a') as i:
+#            i.write(f'{num}\n')
 
 print('Latest email articles extracted!')
