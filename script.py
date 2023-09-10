@@ -57,7 +57,7 @@ is_written = False
 for num in new_ids[::-1]:
   print(num)
   is_written = False
-  _, email_data = imap.fetch(num, '(RFC822)')
+  _, email_data = imap.fetch(str(num), '(RFC822)')
   raw_email = email_data[0][1]
   msg = email.message_from_bytes(raw_email)
   date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
@@ -103,8 +103,15 @@ for num in new_ids[::-1]:
                     
   print("is writen  : ", is_written)
   if is_written:
+    imap.store(str(num), "+FLAGS", "\\Deleted")
+    imap.expunge()
+    print('Email ', str(num), ' is deleted!')
     # Write the email id in ids.txt. I do here to be sure that the textfile is written
     with open('ids.txt', 'a') as i:
       i.write(f'{num}\n')
-
+# close the mailbox
+imap.close()
+# logout from the account
+imap.logout()
+ 
 print('Latest email articles extracted!')
