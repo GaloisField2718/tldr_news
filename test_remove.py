@@ -55,7 +55,7 @@ print(f"new ids : {new_ids}")
 
 is_written = False
 
-num = 480
+num = b'480'
 
 
 _, email_data = imap.fetch(num, '(RFC822)')
