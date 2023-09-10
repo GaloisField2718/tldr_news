@@ -28,6 +28,14 @@ The `ids.txt` file is used to save each email's id to be able to not do again th
 
 Some tests and archives and still in the repo. 
 
+## Automation
+
+To run automation I use `crontab -e` with the cronjob file content. 
+
+Warning ! You have to authorise acces with `chmod +x automation.sh && chmod +x script_push.sh` to be able to use it.
+
 ## TODO
 
-Automate treatment.
+Improve render. We need to select the Title for each article add `(TITLE)` before `[LINK]`.
+
+
