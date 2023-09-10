@@ -1,25 +1,13 @@
-#     script.py
-#
-#   Target dan@tldrnewsletter.com puis enregistre automatiquement ses mails
-#
-#
-
 import os
-
 import imaplib
 import email
-
+from bs4 import BeautifulSoup 
 from dotenv import dotenv_values
-
 import html
 import re
 import urllib.parse
-from bs4 import BeautifulSoup 
-
 from datetime import datetime
 import ast # To transform ids string from ids.txt in bytes
-from link import extract_url
-
 
 ##########################################
 ####        CONFIG      #################
@@ -80,30 +68,36 @@ for num in new_ids:
         print('\n div : \n', div)
 
         if div.find('strong') and div.find('a') and div.find('span'):
-            
             title = div.find('strong').text
             title = html.unescape(title)
             title = title.replace("=","")
             title = title.replace('\r\n','')
+            link = div.find('a')
+            pattern = r'href=*?">'
 
-            a_tag = div.find('a')
-            print('a tag complet : ', a_tag)
-            opening_tag = a_tag.split('>', 1) 
-
-            print('a tag : ',opening_tag)
-            url = extract_url(opening_tag)
-
+            decoded_link = urllib.parse.unquote(link)
+            match = re.search(pattern, str(decoded_link))
+            
+            if match:
+                print(match)
+                url = match.group(0)
+                url = replace("href='3D","")
+                url = replace(">","")
+                url = urllib.parse.unquote(url)
+                print('\n link : \n ', url)
+            
+            else:
+                url='https://tldr.tech'
+            
             summary = div.find('span').text
             summary = html.unescape(summary)
             summary = summary.replace("=","")
             cleaned_summary = summary.replace('\r\n','')
-            
             article = {
 	            'title': title,
 	            'link': url,
 	            'summary': cleaned_summary
 	            }
-            
             articles.append(article)
     
     if articles:
