@@ -55,35 +55,33 @@ print(f"new ids : {new_ids}")
 
 is_written = False
 
-num
+num = 480
 
-for num in new_ids[::-1]:
-  print(num)
-  is_written = False
-  _, email_data = imap.fetch(num, '(RFC822)')
-  raw_email = email_data[0][1]
-  msg = email.message_from_bytes(raw_email)
-  date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
-  print('Date envoi : ', date_envoi)
+
+_, email_data = imap.fetch(num, '(RFC822)')
+raw_email = email_data[0][1]
+msg = email.message_from_bytes(raw_email)
+date_envoi = datetime.strptime(msg['Date'], '%a, %d %b %Y %H:%M:%S %z')
+print('Date envoi : ', date_envoi)
   
 
-  sender = msg['From']
-  pattern = r' <dan@tldrnewsletter.com>'
-  sender = re.sub(pattern,'', sender)
-  pattern = r'=?utf-\w+\?Q\?.+\?='
-  sender = re.sub(pattern, '', sender)
-  sender = sender.replace(' =?', '')
-  print(sender)
+sender = msg['From']
+pattern = r' <dan@tldrnewsletter.com>'
+sender = re.sub(pattern,'', sender)
+pattern = r'=?utf-\w+\?Q\?.+\?='
+sender = re.sub(pattern, '', sender)
+sender = sender.replace(' =?', '')
+print(sender)
   
 
-  newsletter = ""
+newsletter = ""
   
-  for part in msg.walk():
-    if part.get_content_type()=='text/plain':
-      part_text = part.get_payload()
-      part_decoded = quopri.decodestring(part_text)
-      part_string = part_decoded.decode('utf-8')
-      newsletter = part_string
+for part in msg.walk():
+  if part.get_content_type()=='text/plain':
+    part_text = part.get_payload()
+    part_decoded = quopri.decodestring(part_text)
+    part_string = part_decoded.decode('utf-8')
+    newsletter = part_string
   
 #  print('La newsletter du ', date_envoi, ' est \n\n ', newsletter)
 
