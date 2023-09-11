@@ -45,16 +45,12 @@ topics = ["AI", "Crypto", "Design", "Cybersecurity", "Founders", "Web Dev", "Mar
 
 all_ids = data[0].decode().split()
 all_ids = [int(id_) for id_ in all_ids]
+print(f"All ids : {all_ids}")
 
-ids_read = [ast.literal_eval(line.strip()) for line in open('ids.txt')]
-
-new_ids = [id_ for id_ in all_ids if id_ not in ids_read]
-
-print(f"new ids : {new_ids}")
 
 is_written = False
 
-for num in new_ids[::-1]:
+for num in all_ids[::-1]:
   print(num)
   is_written = False
   _, email_data = imap.fetch(str(num), '(RFC822)')
@@ -106,9 +102,6 @@ for num in new_ids[::-1]:
     imap.store(str(num), "+FLAGS", "\\Deleted")
     imap.expunge()
     print('Email ', str(num), ' is deleted!')
-    # Write the email id in ids.txt. I do here to be sure that the textfile is written
-    with open('ids.txt', 'a') as i:
-      i.write(f'{num}\n')
 # close the mailbox
 imap.close()
 # logout from the account
