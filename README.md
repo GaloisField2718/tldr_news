@@ -26,7 +26,7 @@ The repository is structured around each categories from **TLDR newsletter**. Ea
 
 The `ids.txt` file is used to save each email's id to be able to not do again the treatment if it's already done.
 
-Some tests and archives and still in the repo. 
+Some tests and archives are still in the repo. 
 
 ## Automation
 
