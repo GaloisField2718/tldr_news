@@ -1,0 +1,28 @@
+name: derive-ci
+
+on:
+  pull_request:
+  push:
+    branches:
+      - feat/tldr-derived-data-foundation
+
+permissions:
+  contents: read
+
+jobs:
+  safe-derive-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run derive unit tests
+        run: python3 -m unittest tests_derive.test_derive
+
+      - name: Full-corpus strict privacy validation
+        run: python3 -m tools.tldr_derive validate --all --strict-privacy
