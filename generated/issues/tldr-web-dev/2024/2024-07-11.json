@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-07-11",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-07-11",
+  "source_path": "TLDR Web Dev/article_11-07-2024.md",
+  "source_content_hash": "sha256:d318e4e66eeb49acf2096dd9b51c0003ce01d1f37a16c3345d391dc4b0977ff5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-07-11",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-11:a04",
+          "order": 1,
+          "title": "SNEAKY REACT MEMORY LEAKS: HOW THE REACT COMPILER WON'T SAVE YOU",
+          "summary": "The new React compiler has some limitations in addressing memory leaks caused by closures, particularly in the context of memoization hooks. While the compiler effectively caches values that don't depend on state or props, it doesn't prevent the underlying issue of shared closure contexts that can lead to prolonged memory retention. The author demonstrates this with a code example where creating a new object dependent on state within a memoized function results in a memory leak despite the compiler's memoization.",
+          "url": "https://schiener.io/2024-07-07/react-closures-compiler?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "schiener.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a05",
+          "order": 2,
+          "title": "WEIRD THINGS I LEARNED WHILE WRITING AN X86 EMULATOR",
+          "summary": "This article explores unusual aspects of the x86 instruction set architecture discovered while creating an x86 emulator for time travel debugging. There are multiple encodings for the same instructions in the architecture. It uses prefixes to modify instruction behavior. The author also notes the peculiar nature of segment overrides in both 32-bit and 64-bit modes, the surprising behavior of shift instructions, and the inconsistent handling of flags by different instructions.",
+          "url": "https://www.timdbg.com/posts/useless-x86-trivia/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "timdbg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a06",
+          "order": 3,
+          "title": "REAL-TIME AUDIO PROGRAMMING 101: TIME WAITS FOR NOTHING",
+          "summary": "Real-time audio programming requires avoiding any code that might cause delays or unpredictable behavior, as such glitches would disrupt the smooth flow of audio data and lead to undesirable sound artifacts. People working with real-time audio need to understand worst-case execution times and avoid common pitfalls like locking, memory allocation, and external events within the audio callback function. To achieve seamless audio processing, employ lock-free data structures and atomic operations for communication between real-time and non-real-time contexts.",
+          "url": "http://www.rossbencina.com/code/real-time-audio-programming-101-time-waits-for-nothing?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "rossbencina.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-11:a07",
+          "order": 1,
+          "title": "YOUR PAIN IN 2024 AS A WEB DEVELOPER (REDDIT THREAD)",
+          "summary": "Web developers have a hard time keeping up with new developments that are happening all the time. They also feel like they don't have enough time and/or are getting bored of their jobs.",
+          "url": "https://links.tldrnewsletter.com/SPnRM1",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a08",
+          "order": 2,
+          "title": "MARGIN OF SAFETY - MENTAL MODEL",
+          "summary": "Margin of Safety is a mental model that emphasizes the importance of accounting for potential errors and uncertainties when making estimations. It essentially acts as a buffer, preventing failure by providing extra capacity to handle unexpected events. It's a useful model to apply when estimating software projects (and most other things in life).",
+          "url": "https://read.perspectiveship.com/p/margin-of-safety?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "read.perspectiveship.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-11:a09",
+          "order": 1,
+          "title": "👉 GET 80% AUTOMATED E2E TEST COVERAGE BY OCTOBER",
+          "summary": "Over 2/3rd of dev teams test less than 50% of their workflows, causing bugs to sneak out. QA Wolf [9] gets your organization to 80% automated E2E test coverage in less than 4 months.",
+          "url": "https://www.qawolf.com/?utm_campaign=Automated4Months07112024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a09",
+          "order": 2,
+          "title": "Schedule a demo to learn more.",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_campaign=Automated4Months07112024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a11",
+          "order": 3,
+          "title": "POSTING V1",
+          "summary": "Posting is an HTTP client that lives in your terminal. It can be used over SSH and enables efficient keyboard-centric workflows. Your requests are stored locally in simple YAML files, so they're easy to read and version control.",
+          "url": "https://github.com/darrenburns/posting?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a12",
+          "order": 4,
+          "title": "VUE VINE",
+          "summary": "Vine is a new syntax for organizing Vue components within a single file. It addresses the common pain point of navigating between multiple files when developing small, reusable components. It helps handle the increasingly logic-heavy nature of frontend development better.",
+          "url": "https://vue-vine.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "vue-vine.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a13",
+          "order": 5,
+          "title": "TAILKITS",
+          "summary": "Tailkits is a TailwindCSS template directory.",
+          "url": "https://tailkits.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "tailkits.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-11:a14",
+          "order": 1,
+          "title": "GITHUB COPILOT EXTENSIONS ARE ALL YOU NEED",
+          "summary": "GitHub Copilot Extensions are a new way to enhance VS Code by integrating AI directly into the developer workflow. These extensions utilize LLMs to provide context-specific answers, generate code, and offer insights within VSCode itself. Developers can build custom chat participants using the Chat API and access LLMs directly through the Language Model API.",
+          "url": "https://code.visualstudio.com/blogs/2024/06/24/extensions-are-all-you-need?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "code.visualstudio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a15",
+          "order": 2,
+          "title": "ASKING AN LLM TO BUILD A SIMPLE WEB TOOL",
+          "summary": "This author used ChatGPT to build a simple web tool for configuring box shadows. They were impressed by ChatGPT's ability to create a functional tool without any external dependencies. Despite requiring some manual adjustments for aesthetics and layout, the process was efficient, with ChatGPT reliably modifying only the parts requested.",
+          "url": "https://eli.thegreenplace.net/2024/asking-an-llm-to-build-a-simple-web-tool/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "eli.thegreenplace.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a16",
+          "order": 3,
+          "title": "LEVELS OF COMPLEXITY: RAG APPLICATIONS",
+          "summary": "This roadmap is an overview of RAG (retrieval augmented generation). It starts with the basics of RAG, explaining how to traverse file systems, chunk and batch text, and interact with embedding APIs. It then progresses to more advanced techniques, including asynchronous programming, improved chunking strategies, and robust retry mechanisms. The roadmap also goes over observability and evaluation techniques.",
+          "url": "https://jxnl.co/writing/2024/02/28/levels-of-complexity-rag-applications/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "jxnl.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-11:a17",
+          "order": 1,
+          "title": "DEEP-ML",
+          "summary": "A collection of free ML code challenges.",
+          "url": "https://www.deep-ml.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "deep-ml.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a18",
+          "order": 2,
+          "title": "JUDGE DISMISSES LAWSUIT OVER GITHUB COPILOT AI CODING ASSISTANT",
+          "summary": "A US judge has dismissed a lawsuit alleging that GitHub Copilot violated open-source licenses by using code samples for AI training.",
+          "url": "https://www.infoworld.com/article/2515112/judge-dismisses-lawsuit-over-github-copilot-ai-coding-assistant.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a19",
+          "order": 3,
+          "title": "NO MORE BOOT LOADER: PLEASE USE THE KERNEL INSTEAD (35 MINUTE VIDEO)",
+          "summary": "Red Hat boot loader engineering is developing a new bootloader called nmbl that uses the Linux kernel as its own bootloader, aiming to replace GRUB with a fast, secure, and user-space solution.",
+          "url": "https://pretalx.com/devconf-cz-2024/talk/W3AVCT/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "pretalx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-11:a20",
+          "order": 4,
+          "title": "STATE OF TEXT RENDERING 2024",
+          "summary": "A 37-page overview of text rendering in 2024.",
+          "url": "https://behdad.org/text2024/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "behdad.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-12-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-12",
+  "source_path": "TLDR InfoSec/article_12-12-2025.md",
+  "source_content_hash": "sha256:00b2287b0ac7c94790094499845b466d1b5a6658f4ba109c101ec4bd9cd47e9d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a04",
+          "order": 1,
+          "title": "CODE ZTWTLDR26",
+          "summary": "ThreatLocker's annual Zero Trust World [4] is the most interactive, HANDS-ON CYBERSECURITY LEARNING event. Join hacking labs, get Cyber Hero certified, and attend sessions with cybersecurity, IT, and business experts.",
+          "url": "https://ztw.com/",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a04",
+          "order": 2,
+          "title": "Use code ZTWTLDR26 for $200 off your all-access pass",
+          "summary": "",
+          "url": "https://ztw.com/",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a05",
+          "order": 1,
+          "title": "PIERCE COUNTY LIBRARY DATA BREACH IMPACTS 340,000",
+          "summary": "",
+          "url": "https://www.securityweek.com/pierce-county-library-data-breach-impacts-340000/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a06",
+          "order": 2,
+          "title": "SECURITY FLAWS IN FREEDOM CHAT APP EXPOSED USERS' PHONE NUMBERS AND PINS",
+          "summary": "Two major flaws in Freedom Chat have been discovered: one allowed attackers to enumerate nearly 2,000 users' phone numbers by mass-guessing them against the app's servers, and another leaked users' PIN codes to everyone in the default public channel via backend responses. Freedom Chat reset all PINs, tightened rate limiting, removed exposed numbers, and shipped an updated version. This is founder Tanner Haas' second messaging app to face serious security issues.",
+          "url": "https://techcrunch.com/2025/12/11/security-flaws-in-freedom-chat-app-exposed-users-phone-numbers-and-pins/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a07",
+          "order": 3,
+          "title": "NEW OPENAI MODELS LIKELY POSE “HIGH” CYBERSECURITY RISK",
+          "summary": "OpenAI has stated that the cybersecurity capabilities of its frontier models are accelerating rapidly and that upcoming models are likely to pose a “high” risk. OpenAI notes that in August, GPT-5 scored 27% on a CTF, whereas last month GPT-5.1-Codex-Max scored 76%. OpenAI's Fouad Martin points to the models' ability to work for extended periods as a driving force behind this.",
+          "url": "https://links.tldrnewsletter.com/P4wbcM",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a08",
+          "order": 1,
+          "title": "INFOSTEALER HAS ENTERED THE CHAT",
+          "summary": "Criminals are exploiting interest in OpenAI's Atlas browser by buying Google ads that point to a shared ChatGPT conversation posing as an installation guide for a macOS “Atlas browser.” The guide instructs users to run a one‑line Terminal command that silently downloads a script, steals credentials, and deploys the AMOS infostealer, which exfiltrates browser data, crypto‑wallet info, documents, and more, while also installing a backdoor for persistent remote access.",
+          "url": "https://www.kaspersky.com/blog/share-chatgpt-chat-clickfix-macos-amos-infostealer/54928/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "kaspersky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a09",
+          "order": 2,
+          "title": "SECURING MCP SERVERS WITH 1PASSWORD",
+          "summary": "MCP (Model Context Protocol) server configurations used by AI development tools like Cursor and Claude Code typically store plaintext API keys in mcp.json files, creating a risk of credential exposure when repositories are pushed to version control or shared with teammates. Developers can eliminate this risk by storing secrets in 1Password vaults, referencing them using op://vault/item/field syntax in .env files, and launching MCP servers with the 1Password CLI command op run --env-file=.env to dynamically inject credentials at runtime without persisting them on disk. This pattern ensures secrets are decrypted only in memory during process execution and automatically disappear when the process exits, preventing accidental exposure in Git history while maintaining developer productivity.",
+          "url": "https://1password.com/blog/securing-mcp-servers-with-1password-stop-credential-exposure-in-your-agent?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a10",
+          "order": 3,
+          "title": "WEAPONIZING THE AWS CLI FOR PERSISTENCE",
+          "summary": "The AWS CLI allows users to define command aliases that can run arbitrary bash commands. A limitation that previous work faced when trying to abuse aliases was that if an attacker overwrote a command (such as `aws sts`) with a malicious alias, they could not call the original command. This post introduces a one-liner that dynamically modifies the alias file to restore the original command so it can be used in the malicious alias and then restores the malicious alias after running.",
+          "url": "https://slayer0x.github.io/awscli/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "slayer0x.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a11",
+          "order": 1,
+          "title": "WHERE IDENTITY SECURITY MEETS COMMUNITY",
+          "summary": "SO-CON 2026 (April 13-18, 2026) [11] is where the community comes together to advance the practice of Attack Path Management. We are excited to share that Kevin Mandia, Founder and Former CEO of Mandiant, will deliver the featured keynote at SO-CON 2026 [11].",
+          "url": "https://specterops.io/so-con/?utm_source=newsletter&utm_medium=TLDR&utm_campaign=TLDR_So_Con&utm_id=contentsyndicationlatest_campaign&utm_content=TLDR1",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a11",
+          "order": 2,
+          "title": "Secure your spot today!",
+          "summary": "",
+          "url": "https://specterops.io/so-con/?utm_source=newsletter&utm_medium=TLDR&utm_campaign=TLDR_So_Con&utm_id=contentsyndicationlatest_campaign&utm_content=TLDR1",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a12",
+          "order": 3,
+          "title": "PRIMA SECURITY (PRODUCT LAUNCH)",
+          "summary": "Prime Security (Prima) provides an AI-powered “agentic security architect” that autonomously performs design-stage security reviews across planned development work, continuously identifying, prioritizing, and helping mitigate software design flaws so security teams can focus on higher-level architecture strategy.",
+          "url": "https://www.primesec.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "primesec.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a13",
+          "order": 4,
+          "title": "AI INFRA GUARD",
+          "summary": "AI Infra Guard integrates capabilities such as AI infra vulnerability scan, MCP Server risk scan, and Jailbreak Evaluation to provide users with the most comprehensive, intelligent, and user-friendly solution for AI security risk self-examination.",
+          "url": "https://github.com/Tencent/AI-Infra-Guard?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a14",
+          "order": 5,
+          "title": "RAPTOR",
+          "summary": "RAPTOR is an autonomous offensive/defensive security research framework built on Claude Code.",
+          "url": "https://github.com/gadievron/raptor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a15",
+          "order": 1,
+          "title": "10K DOCKER IMAGES SPRAY LIVE CLOUD CREDS ACROSS THE INTERNET",
+          "summary": "Flare's research reveals that over 10,000 public Docker Hub images expose active secrets from more than 100 organizations, including a Fortune 500 company and a major bank, often via personal or “shadow IT” accounts. These images leak API keys and other live credentials for cloud, CI/CD, and AI services, and even when secrets are removed from images, about three-quarters of the underlying keys remain valid, leaving organizations open to compromise.",
+          "url": "https://www.theregister.com/2025/12/11/docker_hub_secrets_leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a16",
+          "order": 2,
+          "title": "COPILOT'S NO-CODE AI AGENTS LIABLE TO LEAK COMPANY DATA",
+          "summary": "Nontechnical employees can quickly build Copilot Studio agents that connect to sensitive systems, but these bots are easily tricked into ignoring security instructions, leaking customer data, and even modifying records such as trip costs. Tenable's experiment with a travel-booking bot shows how simple prompt injections expose credit card details and abuse edit permissions.",
+          "url": "https://links.tldrnewsletter.com/FzNqqI",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a17",
+          "order": 3,
+          "title": "STOP HACKLORE: AN OPEN LETTER",
+          "summary": "A group of current and former CISOs, security leaders, and practitioners has released an open letter urging the public, employers, journalists, and policymakers to stop spreading outdated security recommendations. Specifically, they cited: avoid public WiFi, never scan QR codes, never charge devices from public USB ports, turn off Bluetooth and NFC, regularly clear cookies, and regularly change passwords as outdated advice. Instead, they recommend focusing on reminding the public to keep critical devices and applications updated, enabling MFA, and using strong passphrases and password managers.",
+          "url": "https://www.hacklore.org/letter?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hacklore.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-12:a18",
+          "order": 1,
+          "title": "GIGAOM'S 2025 RADAR REPORT FOR FOR PENETRATION TESTING AS A SERVICE: COBALT NAMED A LEADER",
+          "summary": "The 2025 GigaOm PTaaS Radar Report confirms traditional, periodic testing is no longer adequate protection. Read it for an expert",
+          "url": "https://resource.cobalt.io/gigaom-radar-report-for-ptaas-2025?utm_campaign=28200064-GigaOm+Radar+Report+2025&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a18",
+          "order": 2,
+          "title": "framework for evaluating 16 leading PTaaS vendors. Get the report",
+          "summary": "",
+          "url": "https://resource.cobalt.io/gigaom-radar-report-for-ptaas-2025?utm_campaign=28200064-GigaOm+Radar+Report+2025&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a19",
+          "order": 3,
+          "title": "MICROSOFT BOUNTY PROGRAM NOW INCLUDES ANY FLAW IMPACTING ITS SERVICES",
+          "summary": "Microsoft has announced an expansion of its bug bounty program to include any Microsoft service and third-party service that impacts Microsoft and doesn't offer its own bug bounty program.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-bounty-program-now-includes-any-flaw-impacting-its-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-12:a20",
+          "order": 4,
+          "title": "UK FINES LASTPASS OVER 2022 DATA BREACH IMPACTING 1.6M USERS",
+          "summary": "The UK's Information Commissioner's Office (ICO) fined LastPass £1.2M over failing to implement security measures that could have prevented the 2022 data breach.",
+          "url": "https://www.bleepingcomputer.com/news/security/uk-fines-lastpass-over-2022-data-breach-impacting-16-million-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

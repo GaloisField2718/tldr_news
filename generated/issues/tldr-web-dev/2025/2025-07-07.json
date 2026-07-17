@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-07-07",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-07",
+  "source_path": "TLDR Web Dev/article_07-07-2025.md",
+  "source_content_hash": "sha256:c1ff2c09e6386cefba2739844949f4abfa5dceb5fdb131780cbce8e32cf0cc58",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-07",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-07:a04",
+          "order": 1,
+          "title": "BEHIND THE SCENES: SPEEDING UP PGSTREAM SNAPSHOTS FOR POSTGRESQL",
+          "summary": "pgstream is an open-source change data capture tool that improved its snapshot performance for PostgreSQL databases. The initial implementation used native tools for schema capture and transaction snapshots for data reads, but suffered from slow write speeds. By switching to binary COPY FROM for bulk inserts and deferring index creation, pgstream improved its snapshot performance, surpassing pg_dump/pg_restore in speed.",
+          "url": "https://xata.io/blog/behind-the-scenes-speeding-up-pgstream-snapshots-for-postgresql?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "xata.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a05",
+          "order": 2,
+          "title": "SERVING 200 MILLION REQUESTS PER DAY WITH A CGI-BIN",
+          "summary": "1990s-era CGI can still handle over 200 million requests per day on modest hardware using Go and SQLite. CGI's performance bottleneck was traditionally attributed to the overhead of process creation for each request, compounded by slow scripting languages. However, advancements in hardware and the use of faster languages like Go and Rust have improved CGI's efficiency and its ability to use multiple CPU cores properly.",
+          "url": "https://simonwillison.net/2025/Jul/5/cgi-bin-performance/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-07:a06",
+          "order": 1,
+          "title": "ASYNC QUEUE – ONE OF MY FAVORITE PROGRAMMING INTERVIEWS (CAN AI BREAK IT?)",
+          "summary": "This dev's favorite programming interview question involves an asynchronous queue designed to prevent a faulty server from handling multiple simultaneous requests from a single-threaded client. The interview starts with implementing a `sendOnce` function and then progressively adds complexity with features like minimum delays, `sendMany` functionality, request cancellation, retries, and prioritization. This question tests a candidate's ability to reason about code, handle new requirements, and adapt to a single-threaded environment.",
+          "url": "https://davidgomes.com/async-queue-interview-ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "davidgomes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a07",
+          "order": 2,
+          "title": "WHY I DON'T THINK AGI IS RIGHT AROUND THE CORNER",
+          "summary": "",
+          "url": "https://www.dwarkesh.com/p/timelines-june-2025?utm_source=tldrwebdev",
+          "reading_time_minutes": 21,
+          "source_domain": "dwarkesh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a08",
+          "order": 3,
+          "title": "NVIDIA IS FULL OF SH*T",
+          "summary": "This dev criticizes NVIDIA for issues with the RTX 50 series launch, including scalpers, melting power connectors, and misleading marketing. NVIDIA prioritizes data center GPUs over consumer graphics cards, leading to defective products with technologies like DLSS used to compensate for insufficient hardware performance.",
+          "url": "https://blog.sebin-nyshkim.net/posts/nvidia-is-full-of-shit/?utm_source=tldrwebdev",
+          "reading_time_minutes": 28,
+          "source_domain": "blog.sebin-nyshkim.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-07:a09",
+          "order": 1,
+          "title": "OPENCODE",
+          "summary": "Opencode is an open-source AI coding agent for use in the terminal. It has similar capabilities to Claude Code but is provider-agnostic, supporting Anthropic, OpenAI, Google, and local models. Opencode has a terminal-based user interface and a client/server architecture, allowing for remote control from various devices.",
+          "url": "https://github.com/sst/opencode?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a10",
+          "order": 2,
+          "title": "OMNITOOLS",
+          "summary": "OmniTools is a self-hosted, web-based app with a variety of online tools for simplifying tasks related to coding, images, videos, PDFs, and more. It processes files entirely client-side.",
+          "url": "https://github.com/iib0011/omni-tools?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-07:a11",
+          "order": 1,
+          "title": "MAKING LANGUAGE MODELS PLAY BABA IS YOU",
+          "summary": "\"Baba is Eval\" is a project that turns the puzzle game \"Baba is You\" into a benchmark environment for language models. The project enables models to fetch game states, control the level through actions like movement and undo, and automate menu navigation. Initial experiments with Claude 4 show poor performance, which means AI needs better reasoning capabilities and context management for solving more complex levels.",
+          "url": "https://fi-le.net/baba/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "fi-le.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a12",
+          "order": 2,
+          "title": "LOCAL-FIRST SOFTWARE: YOU OWN YOUR DATA, IN SPITE OF THE CLOUD",
+          "summary": "\"Local-first software\" combines the benefits of cloud apps, like real-time collaboration and multi-device access, with the data ownership and control of traditional local applications. This approach prioritizes local storage and networks over centralized servers, making data modifications and access faster and independent of constant internet connectivity. Conflict-free Replicated Data Types (CRDTs) are a promising foundational technology for achieving these goals, but more research and experimentation are still needed.",
+          "url": "https://www.inkandswitch.com/essay/local-first/?utm_source=tldrwebdev",
+          "reading_time_minutes": 62,
+          "source_domain": "inkandswitch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a13",
+          "order": 3,
+          "title": "HOW TO NAVIGATE THE AI DISTRIBUTION SHIFT",
+          "summary": "The emerging AI distribution shift is happening quickly. To navigate it, companies must strategically bet on a single AI platform, prioritizing retention, engagement, and user quality over initial scale, and understand the value exchange mechanisms at hand. Retention and product quality still matter over all else, but taking advantage of new AI distribution channels can launch products into escape velocity.",
+          "url": "https://blog.brianbalfour.com/p/how-to-navigate-the-ai-distribution?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "blog.brianbalfour.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-07:a14",
+          "order": 1,
+          "title": "DATA ON AI-RELATED SHOW HN POSTS",
+          "summary": "Hacker News data reveals a large increase in AI-related \"Show HN\" posts, which now represent over 20% of the total, but these posts receive fewer votes and comments compared to non-AI-related submissions.",
+          "url": "https://links.tldrnewsletter.com/eDJdjd",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a15",
+          "order": 2,
+          "title": "APPLE_GENERATIVE_MODEL_SAFETY_DECRYPTED",
+          "summary": "This repository contains decrypted safety filter files for Apple's generative AI models and provides tools and instructions to extract the encryption key and decrypt the overrides.",
+          "url": "https://links.tldrnewsletter.com/GXwPeH",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a16",
+          "order": 3,
+          "title": "12-FACTOR AGENTS - PRINCIPLES FOR BUILDING RELIABLE LLM APPLICATIONS",
+          "summary": "This post presents principles for building reliable, scalable, and maintainable LLM-powered apps, with the core idea being that successful LLM apps often rely more on traditional software engineering than complex AI frameworks.",
+          "url": "https://links.tldrnewsletter.com/uPwPC6",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-07:a17",
+          "order": 4,
+          "title": "PROFILE README GENERATOR",
+          "summary": "This is a tool that makes the creation of customized GitHub profile READMEs easier.",
+          "url": "https://links.tldrnewsletter.com/0JbvQb",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

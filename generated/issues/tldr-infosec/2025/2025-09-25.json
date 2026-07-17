@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-09-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-25",
+  "source_path": "TLDR InfoSec/article_25-09-2025.md",
+  "source_content_hash": "sha256:a2772ff5667ad25e09b092f75e378742d5bae32820af200356da4dd68308adf5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a04",
+          "order": 1,
+          "title": "",
+          "summary": "AI is fast transforming every aspect of security and compliance—and no aspect of GRC will be left unchanged.",
+          "url": "https://www.vanta.com/vantacon?utm_campaign=vantacon-2025&utm_source=tldr-infosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "vanta.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a04",
+          "order": 2,
+          "title": "Grab your ticket here.",
+          "summary": "",
+          "url": "https://www.vanta.com/vantacon?utm_campaign=vantacon-2025&utm_source=tldr-infosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "vanta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a05",
+          "order": 1,
+          "title": "CISCO WARNS OF IOS ZERO-DAY VULNERABILITY EXPLOITED IN ATTACKS",
+          "summary": "Cisco has released security updates for CVE-2025-20352, a high-severity zero-day vulnerability in IOS and IOS XE software that's being actively exploited in the wild. The flaw stems from a stack-based buffer overflow in the SNMP subsystem, allowing authenticated attackers to trigger DoS conditions or achieve root-level code execution on vulnerable devices. Cisco strongly recommends upgrading to patched versions immediately, as no workarounds exist beyond limiting SNMP access to trusted users.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-ios-zero-day-vulnerability-exploited-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a06",
+          "order": 2,
+          "title": "STATE-SPONSORED HACKERS EXPLOITING LIBRAESVA EMAIL SECURITY GATEWAY VULNERABILITY",
+          "summary": "Libraesva has patched CVE-2025-59689, a command injection vulnerability in its Email Security Gateway with a CVSS score of 6.1, after discovering state-sponsored threat actors were actively exploiting it. The flaw can be triggered by malicious emails, allowing attackers to execute commands on the affected system. Organizations using Libraesva ESG should immediately apply the available security update to prevent exploitation.",
+          "url": "https://thehackernews.com/2025/09/state-sponsored-hackers-exploiting.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a07",
+          "order": 3,
+          "title": "LARGE-SCALE ATTACK TARGETING MACS VIA GITHUB PAGES IMPERSONATING COMPANIES TO ATTEMPT TO DELIVER STEALER MALWARE",
+          "summary": "Attackers created fraudulent GitHub Pages impersonating over 100 companies (including LastPass, 1Password, financial institutions, and tech firms) using SEO to rank high in search results and trick Mac users into downloading fake software installers. The malicious sites redirect victims through multiple layers to ultimately execute a terminal command that downloads Atomic Stealer malware, which harvests credentials and sensitive data from infected systems. The campaign leverages trusted GitHub infrastructure and creates multiple backup repositories under different usernames to evade takedown efforts while targeting a broad range of high-value software applications.",
+          "url": "https://links.tldrnewsletter.com/gMcudc",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a08",
+          "order": 1,
+          "title": "REDISCLOSURE: NEW TECHNIQUE FOR EXPLOITING FULL-TEXT SEARCH IN MYSQL (MYBB CASE STUDY)",
+          "summary": "Researchers have discovered a new regular expression (regex) injection method that exploits MySQL's Full-Text Search (FTS) boolean mode operators to bypass input sanitization. This technique utilizes characters like * and +, which have different meanings in FTS versus regex. The attack extracts sensitive data without breaking SQL syntax, demonstrated in CVE-2025-48941 in myBB, where attackers could enumerate deleted thread titles by observing search redirects instead of error messages. This is risky because FTS functions are often unsanitized, as developers don't view them as regular expressions, and the payloads can evade WAFs and security scanners.",
+          "url": "https://exploit.az/posts/wor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "exploit.az",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a09",
+          "order": 2,
+          "title": "PROJECT RAIN:L1TF",
+          "summary": "L1TF Reloaded is a complex attack chain that uses half-Spectre gadgets to load data into L1 cache and L1 Terminal Fault to read cross-VM secrets via kernel data structures, breaking KASLR and extracting TLS keys. Google responded with Address Space Isolation (ASI), removing sensitive memory from kernel space during VM execution and mapping it during controlled transitions with buffer clearing. The attack highlights how speculative execution vulnerabilities can bypass privilege boundaries in virtualized environments, emphasizing the need for comprehensive architectural defenses beyond piecemeal mitigations.",
+          "url": "https://bughunters.google.com/blog/4684191115575296/project-rain-l1tf?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "bughunters.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a10",
+          "order": 3,
+          "title": "BOOKWORM TO STATELY TAURUS USING THE UNIT 42 ATTRIBUTION FRAMEWORK",
+          "summary": "Palo Alto Networks' Unit 42 linked the Bookworm malware family to the Chinese APT group Stately Taurus by analyzing shared artifacts, including PDB paths, infrastructure, and targeting of Southeast Asian governments. Using the Admiralty System, they scored evidence reliability, reaching a confidence score of 58.4 based on toolsets, victim profiles, timelines from 2015-2022, and environment fingerprints. This case shows how structured attribution enables evidence-based threat actor identification, improving cybersecurity intelligence.",
+          "url": "https://unit42.paloaltonetworks.com/bookworm-to-stately-taurus/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a11",
+          "order": 1,
+          "title": "IAM STOPS AT LOGIN - ATTACKERS DON'T. SEE HOW STRONGDM GOVERNS WHAT HAPPENS NEXT",
+          "summary": "Legacy PAM can't enforce in-session commands, and developers bypass controls that block productivity. Meanwhile, attackers exploit these gaps to escalate privileges and move laterally. StrongDM delivers continuous action-layer authorization [11] across cloud-native and ephemeral environments. Zero standing privilege, protocol-native coverage of 100+ resource types, and just-in-time access that doesn't",
+          "url": "https://www.strongdm.com/signup?trk=strongdm-newsletter-trial&utm_source=strongdm&utm_medium=newsletter&utm_campaign=2026-q3-tldr-newsletter&utm_content=trial",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a11",
+          "order": 2,
+          "title": "frustrate developers. Start your 14-day free trial",
+          "summary": "",
+          "url": "https://www.strongdm.com/signup?trk=strongdm-newsletter-trial&utm_source=strongdm&utm_medium=newsletter&utm_campaign=2026-q3-tldr-newsletter&utm_content=trial",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a12",
+          "order": 3,
+          "title": "ZAPISEC WAF-COPILOT",
+          "summary": "ZAPISEC WAF-Copilot is an AI-driven security framework for web applications. It offers a highly configurable and streamlined vulnerability assessment process using AI engines, CVE data correlation and organization, continuous monitoring supported by a database, and a simple, intuitive user interface.",
+          "url": "https://github.com/spartancyberultron/WAF-Copilot?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a13",
+          "order": 4,
+          "title": "DEVIOUS-WINRM",
+          "summary": "This tool allows server access via WinRM or PowerShell Remoting, with features for capture the flag and penetration testing. It was developed to address limitations in tools like Evil-WinRM and to contribute to open-source security. Devious-WinRM, built on PowerShell Remoting Protocol, uses WinRM but needs fewer permissions, especially in basic Active Directory environments.",
+          "url": "https://github.com/1upbyte/Devious-WinRM?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a14",
+          "order": 5,
+          "title": "KALI LINUX 2025.3 RELEASED WITH 10 NEW TOOLS, WIFI ENHANCEMENTS",
+          "summary": "Kali Linux 2025.3 introduces ten new security tools, including Caido web security auditing toolkit, krbrelayx Kerberos exploitation framework, and AI-powered tools like Gemini CLI and llm-tools-nmap for LLM-based network scanning. The release adds Nexmon firmware patching framework support for enhanced Wi-Fi capabilities on Raspberry Pi devices, including Pi 5, enabling monitor mode and frame injection for wireless security testing. Additional updates include Kali NetHunter improvements with Samsung S10 support, CARsenal car hacking features with new UI, and experimental Magisk kernel module installation capabilities.",
+          "url": "https://www.bleepingcomputer.com/news/security/kali-linux-20253-released-with-10-new-tools-wifi-enhancements/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a15",
+          "order": 1,
+          "title": "ANOTHER BRICKSTORM: STEALTHY BACKDOOR ENABLING ESPIONAGE INTO TECH AND LEGAL SECTORS",
+          "summary": "China-nexus threat actor UNC5221 uses BRICKSTORM backdoors on network appliances and VMware infrastructure to maintain persistent access, averaging 393 days undetected. The actor employs sophisticated tactics, including VM cloning to extract credentials offline, credential harvesting via BRICKSTEAL servlet filters, and legitimate tool abuse to access M365 mailboxes and secret vaults. Organizations should inventory unmonitored appliances, hunt for unusual internet traffic from management interfaces, and monitor for VM cloning activities and suspicious SSH enablement on virtualization platforms.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a16",
+          "order": 2,
+          "title": "CISA SAYS HACKERS BREACHED FEDERAL AGENCY USING GEOSERVER EXPLOIT",
+          "summary": "Attackers exploited CVE-2024-36401, a critical GeoServer RCE vulnerability, to breach a US federal agency. They maintained access for three weeks before detection. The threat actors deployed China Chopper webshells, moved laterally to web and SQL servers, and used brute force techniques for privilege escalation and credential harvesting. Organizations should prioritize patching critical vulnerabilities in CISA's KEV catalog and ensure continuous EDR monitoring, as over 16,000 GeoServer instances remain exposed online.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-says-hackers-breached-federal-agency-using-geoserver-exploit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a17",
+          "order": 3,
+          "title": "SOLARWINDS FIXES WEB HELP DESK PATCH BYPASS FOR ACTIVELY EXPLOITED FLAW — AGAIN",
+          "summary": "SolarWinds issued a third patch for the critical Java deserialization vulnerability in Web Help Desk, CVE-2025-26399 bypasses CVE-2024-28988, which bypassed the original CVE-2024-28986 flaw. This CVE affects the AjaxProxy component, allowing unauthenticated remote code execution. Trend Micro researchers found each patch bypass. Experts warn that patch bypasses are common with blacklist approaches and predict that this could be exploited, given its history of active exploitation.",
+          "url": "https://www.csoonline.com/article/4061929/solarwinds-fixes-web-help-desk-patch-bypass-for-actively-exploited-flaw-again.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-25:a18",
+          "order": 1,
+          "title": "CISA, GITHUB TAKE ACTION AFTER MASSIVE NPM SUPPLY CHAIN COMPROMISE",
+          "summary": "CISA issued an alert with eight remediation tips after the Shai-Hulud worm compromised 500+ NPM packages by stealing GitHub tokens and cloud credentials. GitHub responded by enforcing stricter authentication, including mandatory 2FA for publishing and switching to trusted methods with short-lived tokens.",
+          "url": "https://links.tldrnewsletter.com/ncg0IY",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a19",
+          "order": 2,
+          "title": "HACKERS CLAIM GERMAN AVIATION FIRM, LEAK CUSTOMER DATA",
+          "summary": "The J Group ransomware gang claims to have breached FAI Aviation Group, a German charter operator, stealing nearly 3TB of sensitive data, including patient records, employee documents, audit files, CVs, and passport copies, and threatening to sell the data after failed ransom talks.",
+          "url": "https://links.tldrnewsletter.com/Mjaw4Q",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-25:a20",
+          "order": 3,
+          "title": "POKEMON FANS BEG CREATORS TO SUE THE US GOVT FOR \"GOTTA CATCH 'EM ALL\" ICE PROPAGANDA",
+          "summary": "The Department of Homeland Security (DHS) made a viral video with Pokémon images, music, and the \"Gotta Catch 'Em All\" slogan to promote ICE raids, showing detained immigrants as Pokémon cards and outraging fans who called on Nintendo to sue for unauthorized use.",
+          "url": "https://links.tldrnewsletter.com/SJh4UU",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

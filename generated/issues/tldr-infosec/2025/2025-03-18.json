@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-03-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-03-18",
+  "source_path": "TLDR InfoSec/article_18-03-2025.md",
+  "source_content_hash": "sha256:d3d3ff7e2f1142b25ec23bba03ac17683db05d07575fe88b39f81bfe9faf61d6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-03-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a04",
+          "order": 1,
+          "title": "STOP BREACHES BEFORE THEY START. BUILT FOR THE 99%.",
+          "summary": "Most businesses don't have massive security teams or unlimited budgets—so they need tools that work for them.",
+          "url": "https://www.intruder.io/?utm_source=tldr&utm_medium=p_referral&utm_campaign=global%7Cfixed%7C18_03",
+          "reading_time_minutes": null,
+          "source_domain": "intruder.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a07",
+          "order": 1,
+          "title": "100 CAR DEALERSHIPS HIT BY SUPPLY CHAIN ATTACK",
+          "summary": "100 dealerships have been compromised through ClickFix code displaying fake reCAPTCHA prompts. When clicked, these prompts copied commands to users' clipboards and instructed them to execute these in Windows Run, ultimately installing SectopRAT malware.",
+          "url": "https://www.securityweek.com/100-car-dealerships-hit-by-supply-chain-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a08",
+          "order": 2,
+          "title": "APACHE TOMCAT VULNERABILITY ACTIVELY EXPLOITED JUST 30 HOURS AFTER PUBLIC DISCLOSURE",
+          "summary": "CVE-2025-24813 in Apache Tomcat is under active exploitation 30 hours post-disclosure. The vulnerability enables remote code execution through malicious serialized Java uploads via PUT requests, no authentication is required. It is critical to update to versions 9.0.99, 10.1.35, and 11.0.3 ASAP.",
+          "url": "https://links.tldrnewsletter.com/pPQLX7",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a09",
+          "order": 3,
+          "title": "MALICIOUS ADOBE, DOCUSIGN OAUTH APPS TARGET MICROSOFT 365 ACCOUNTS",
+          "summary": "Proofpoint researchers uncovered a malware campaign using malicious OAuth apps posing as Adobe Drive, Adobe Drive X, Adobe Acrobat, and DocuSign. These apps request minimal benign permissions but redirect users to phishing pages or malware downloads.",
+          "url": "https://www.bleepingcomputer.com/news/security/malicious-adobe-docusign-oauth-apps-target-microsoft-365-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a10",
+          "order": 1,
+          "title": "DETECTING HOTKEY-BASED KEYLOGGERS USING AN UNDOCUMENTED KERNEL DATA STRUCTURE",
+          "summary": "Hotkey-based keyloggers register alphanumeric hotkeys that, on keypress, record the keystroke, unregister the hotkey, resend the keypress, and reregister the hotkey. These keyloggers are stealthy since the RegisterHotKey and UnregisterHotKey APIs are not monitored by ETW. In this post, Elastic researchers detail their detection method for hotkey-based keyloggers using an undocumented kernel data structure listing all registered keyloggers' hotkeys.",
+          "url": "https://www.elastic.co/security-labs/detecting-hotkey-based-keyloggers?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a11",
+          "order": 2,
+          "title": "THE CAT FLAP - HOW TO REALLY PURRSIST IN AWS ACCOUNTS",
+          "summary": "This post describes a method for obtaining backdoor persistence in AWS by modifying the AWSControlTowerExecution role to allow an attacker-controlled account to assume it. The attack is effective because many tools will not flag violations against this role, which contains AdministratorAccess by default. There are likely other AWS service roles that this attack could utilize.",
+          "url": "https://rootcat.de/blog/thecatflap?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "rootcat.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a12",
+          "order": 3,
+          "title": "ANALYSIS AT SCALE WITH X64DBG AUTOMATE",
+          "summary": "The post covers how to use x64dbg Automate to automate repetitive x64dbg tasks like finding malware entrypoints, annotating payloads, and bypassing anti-debug checks. A malware sample is included for experimentation.",
+          "url": "https://x64dbg.com/blog/2025/03/04/analysis-at-scale-with-x64dbg-automate.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "x64dbg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a13",
+          "order": 1,
+          "title": "📊 GET A HANDLE ON YOUR CVE FOOTPRINT WITH CHAINGUARD CVE VISUALIZATIONS",
+          "summary": "CVE management can be a thankless slog: engineering teams plug away without an effective strategy or end in sight, while business leaders lack data to make real changes. Chainguard's new CVE Visualizations functionality [13] allows organizations to better understand and communicate the benefits of zero CVE images versus the costs of",
+          "url": "https://www.chainguard.dev/unchained/chainguard-cve-visualizations-now-generally-available?utm_source=TLDRinfosec&utm_medium=email&utm_content=email-ad",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a13",
+          "order": 2,
+          "title": "ongoing CVE management. Read the blog",
+          "summary": "",
+          "url": "https://www.chainguard.dev/unchained/chainguard-cve-visualizations-now-generally-available?utm_source=TLDRinfosec&utm_medium=email&utm_content=email-ad",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a14",
+          "order": 3,
+          "title": "AICEBERG (PRODUCT LAUNCH)",
+          "summary": "Aiceberg is designed to prevent unsanctioned, unsuitable, or illegal content and automatically redacts personal and other sensitive information. It can detect common cyberattack vectors such as prompt injection, prompt leaking, and jailbreaking and is capable of performing a security analysis of agentic workflows.",
+          "url": "https://www.aiceberg.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "aiceberg.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a15",
+          "order": 4,
+          "title": "NODE VERSION AUDIT",
+          "summary": "Node Version Audit is a convenient tool to easily check a given Node.js version against a regularly updated list of CVE exploits, new releases, and end-of-life dates.",
+          "url": "https://github.com/lightswitch05/node-version-audit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a16",
+          "order": 5,
+          "title": "ANNOUNCING OSV-SCANNER V2: VULNERABILITY SCANNER AND REMEDIATION TOOL FOR OPEN SOURCE",
+          "summary": "Google's OSV-Scanner V2.0.0 is an open-source vulnerability scanner that now integrates with OSV-SCALIBR. It offers improved dependency extraction, layer-aware container scanning for Debian, Ubuntu, and Alpine images, interactive HTML output, and guided remediation for Maven pom.xml files. Future plans for the project include enhanced integration with OSV-SCALIBR, increased ecosystem support, full filesystem accountability, reachability analysis, and VEX support.",
+          "url": "http://security.googleblog.com/2025/03/announcing-osv-scanner-v2-vulnerability.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a17",
+          "order": 1,
+          "title": "TIKTOK ROLLS OUT A ‘SECURITY CHECKUP' TOOL TO HELP USERS SECURE THEIR ACCOUNTS",
+          "summary": "TikTok's new \"Security Checkup\" tool offers users a centralized screen to review security settings, enabling two-factor authentication, backup logins, device management, and biometric options.",
+          "url": "https://techcrunch.com/2025/03/17/tiktok-rolls-out-a-security-checkup-tool-to-help-users-secure-their-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a18",
+          "order": 2,
+          "title": "ATTACKERS USE CSS TO CREATE EVASIVE PHISHING MESSAGES",
+          "summary": "Threat actors are using CSS to create evasive phishing messages by hiding text and tracking user behavior. Cisco Talos has observed attackers exploiting CSS to evade detection and raise security concerns. Experts recommend using advanced filtering and privacy proxies to mitigate these risks.",
+          "url": "https://securityaffairs.com/175512/security/attackers-use-css-to-create-evasive-phishing-messages.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a19",
+          "order": 3,
+          "title": "UPDATE: STOPPING CYBERCRIMINALS FROM ABUSING COBALT STRIKE",
+          "summary": "Microsoft, Fortra, and Health ISAC are working together to stop cybercriminals from misusing Cobalt Strike and compromised Microsoft software to deploy ransomware. They have made significant progress in reducing the availability of unauthorized copies and seizing malicious domains. Ongoing efforts include sending takedown notices and collaborating with law enforcement to combat illicit usage of cyber intrusion tools.",
+          "url": "https://www.cobaltstrike.com/blog/update-stopping-cybercriminals-from-abusing-cobalt-strike?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cobaltstrike.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-18:a20",
+          "order": 1,
+          "title": "JAGUAR LAND ROVER BREACHED BY HELLCAT RANSOMWARE GROUP USING ITS INFOSTEALER PLAYBOOK—THEN A SECOND HACKER STRIKES",
+          "summary": "The HELLCAT ransomware group breached Jaguar Land Rover (JLR) by leaking sensitive data through stolen Jira credentials obtained via infostealer malware, which were later exploited by another actor, \"APTS,\" to exfiltrate additional data from JLR.",
+          "url": "https://www.infostealers.com/article/jaguar-land-rover-breached-by-hellcat-ransomware-using-its-infostealer-playbook-then-a-second-hacker-strikes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "infostealers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a21",
+          "order": 2,
+          "title": "EMAIL SECURITY NOW AVAILABLE FOR FREE FOR POLITICAL PARTIES AND CAMPAIGNS THROUGH CLOUDFLARE FOR CAMPAIGNS",
+          "summary": "Cloudflare is offering free Email Security to protect political campaigns from cyber attacks.",
+          "url": "https://blog.cloudflare.com/email-security-now-available-for-free-for-political-parties-and-campaigns/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-18:a22",
+          "order": 3,
+          "title": "WHITE HOUSE EXEMPTS CYBER PROS FROM MASS LAYOFFS; JUDGE REINSTATES CISA FIRINGS",
+          "summary": "The White House has exempted cybersecurity professionals from layoffs, offering hope during CISA job cuts, and a judge has reinstated fired federal employees, underscoring management incompetence in the DOGE project.",
+          "url": "https://www.csoonline.com/article/3847411/white-house-exempts-cyber-pros-from-mass-layoffs-judge-reinstates-cisa-firings.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

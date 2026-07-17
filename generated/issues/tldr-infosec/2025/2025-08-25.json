@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-08-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-25",
+  "source_path": "TLDR InfoSec/article_25-08-2025.md",
+  "source_content_hash": "sha256:2d43382ec5e57a1352911d76ed79c8f2c3b4ab7c5f692c69719a6352d7fbb47b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Many organizations solve software installation problems by handing out local admin rights. This generally “works” in terms of getting software installed, at the cost of creating a massive security threat.",
+          "url": "https://www.threatlocker.com/platform/elevation-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=elevation_control_q3_25&utm_content=elevation_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a04",
+          "order": 2,
+          "title": "specific software",
+          "summary": ">> Execute approved software as a local admin without entering credentials",
+          "url": "https://www.threatlocker.com/platform/elevation-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=elevation_control_q3_25&utm_content=elevation_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a04",
+          "order": 3,
+          "title": "See the ThreatLocker difference",
+          "summary": "",
+          "url": "https://www.threatlocker.com/platform/elevation-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=elevation_control_q3_25&utm_content=elevation_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a05",
+          "order": 1,
+          "title": "BOOKING.COM PHISHING CAMPAIGN USES SNEAKY 'ん' CHARACTER TO TRICK YOU",
+          "summary": "Attackers are using the Japanese hiragana character 'ん' (n) in phishing domains to impersonate Booking.com, creating URLs that appear legitimate but redirect victims to credential-stealing sites. The campaign exploits how the character renders similarly to the Latin 'n' in many fonts, making malicious domains harder to detect. Users should verify URLs carefully and avoid clicking links in unsolicited emails claiming to be from Booking.com.",
+          "url": "https://www.bleepingcomputer.com/news/security/bookingcom-phishing-campaign-uses-sneaky-character-to-trick-you/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a06",
+          "order": 2,
+          "title": "OVER 300 ENTITIES HIT BY A VARIANT OF ATOMIC MACOS STEALER IN RECENT CAMPAIGN",
+          "summary": "Over 300 entities were infected by SHAMOS, a variant of the Atomic macOS Stealer (AMOS), through malvertising campaigns between June and August. The malware steals passwords stored in Keychain, browser data, cryptocurrency wallets, and other sensitive information from infected macOS systems. The campaign used malicious advertisements to distribute the stealer, targeting Mac users with fake software downloads.",
+          "url": "https://securityaffairs.com/181441/malware/over-300-entities-hit-by-a-variant-of-atomic-macos-stealer-in-recent-campaign.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a07",
+          "order": 3,
+          "title": "90K EXPOSED AFTER SLEEP THERAPY PROVIDER DATA BREACH",
+          "summary": "CPAP Medical Supplies, a company that serves mainly military personnel, suffered a hack between December 13 and 21 that exposed over 90,000 individuals' sensitive data. The breach created risks of identity and medical fraud. Affected customers have been offered monitoring services. CPAP Medical Supplies has stressed that there has been no evidence of misuse so far.",
+          "url": "https://links.tldrnewsletter.com/ZZ8cZB",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a08",
+          "order": 1,
+          "title": "THE SILENT, FILELESS THREAT OF VSHELL",
+          "summary": "Attackers embed base64-encoded Bash commands in RAR filenames that run automatically during directory listing with unsafe patterns like eval \"echo $f\" or for f in *. The attack downloads loaders specific to architecture that fetch XOR-encrypted VShell backdoor payloads, decrypts them in memory, and executes as fake kernel threads such as [kworker/0:2] to evade detection. This method bypasses defenses because antivirus doesn't scan filenames, the malware doesn't touch disk after decryption, and execution happens via common shell operations without needing executable permissions.",
+          "url": "https://www.trellix.com/blogs/research/the-silent-fileless-threat-of-vshell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "trellix.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a09",
+          "order": 2,
+          "title": "HOW TO CREATE A SECURE CI/CD PIPELINE USING OKTA TERRAFORM",
+          "summary": "This post walks through how to set up a CI/CD pipeline using Terraform and GitHub Actions to manage Okta resources. The pipeline is configured to use AWS for remote state storage and storing the secrets for accessing Okta.",
+          "url": "https://developer.okta.com/blog/2024/10/11/terraform-ci-cd?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "developer.okta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a10",
+          "order": 3,
+          "title": "DO CLAUDE CODE SECURITY REVIEWS PASS THE VIBE CHECK?",
+          "summary": "Anthropic's Claude platform has introduced AI-powered code security reviews, which can make detecting common vulnerabilities easier and more integrated for developers. While these tools provide helpful automation for identifying issues like SQL injection and authentication flaws, they are not foolproof and miss complex bugs. Human expertise, comprehensive security practices, and additional testing are still necessary to achieve safe and secure application development in the fast-evolving landscape of AI-assisted coding.",
+          "url": "https://links.tldrnewsletter.com/4YHaUn",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a11",
+          "order": 1,
+          "title": "💪 TRYHACKME: GAMIFIED CYBERSECURITY TRAINING THAT STRENGTHENS YOUR DEFENSES",
+          "summary": "Security teams are always busy, and it’s hard to find time and space for training. TryHackMe makes training easy (and fun) with exciting browser-based exercises [11], hyper-realistic simulations, and hands-on labs all designed to maximize challenge and engagement while building real skills. “I’m personally a massive fan of",
+          "url": "https://business.tryhackme.com/?utm_source=TLDR&utm_medium=affiliates&utm_campaign=TLDR_newsletter_25Aug25",
+          "reading_time_minutes": null,
+          "source_domain": "business.tryhackme.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a11",
+          "order": 2,
+          "title": "TryHackMe” Keith Manville, Google Security. Try free",
+          "summary": "",
+          "url": "https://business.tryhackme.com/?utm_source=TLDR&utm_medium=affiliates&utm_campaign=TLDR_newsletter_25Aug25",
+          "reading_time_minutes": null,
+          "source_domain": "business.tryhackme.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a12",
+          "order": 3,
+          "title": "RRE-BURP",
+          "summary": "The RRE Burp extension automates detecting Recursive Request Exploits by tracing API call chains from protected resources to find unauthenticated upstream APIs exploitable to bypass access controls. It uses Shannon entropy analysis (default threshold 3.0) to identify valuable backend tokens and parameters, then traces requests to find low-trust inputs that produce these high-value outputs. Demonstrated at DEF CON 33, it scales to find vulnerabilities across streaming services (\"Streamageddon\"), revealing how API chain flaws can bypass paywalls.",
+          "url": "https://github.com/jumpycastle/rre-burp?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a13",
+          "order": 4,
+          "title": "INTRODUCING UNIT 42'S ATTRIBUTION FRAMEWORK",
+          "summary": "Unit 42's three-tier attribution framework tracks threats from activity clusters to named threat actors, requiring rigorous evidence like Diamond Model mapping and Admiralty System scoring for source reliability (A-F) and credibility (1-6). It mandates six-month observation, multiple sources, and TTP analysis before tier promotion, preventing premature attribution and enabling focused tracking. Default scores apply to common artifacts, with analyst adjustments and review board validation.",
+          "url": "https://unit42.paloaltonetworks.com/unit-42-attribution-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a14",
+          "order": 5,
+          "title": "RAVEN",
+          "summary": "Raven is a modern, efficient, lightweight subdomain enumeration tool for security researchers and penetration testers. Built in Go, it offers a robust and user-friendly experience for discovering subdomains of a target domain. Raven has advanced features to minimize false positives and optimize performance.",
+          "url": "https://github.com/Nowafen/Raven?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a15",
+          "order": 1,
+          "title": "TINY QUANTUM DOTS UNLOCK THE FUTURE OF UNBREAKABLE ENCRYPTION",
+          "summary": "Physicists from Hebrew University and Los Alamos Labs developed quantum encryption using imperfect quantum dot light sources, outperforming traditional laser-based systems by extending secure transmission distances by over 3 dB. The breakthrough employs a truncated decoy state and heralded purification protocols to filter multi-photon emissions in real time, removing the need for perfect single-photon sources for 40 years. Room-temperature tests showed the approach works with existing equipment, making quantum-secure communication more practical and affordable.",
+          "url": "https://www.sciencedaily.com/releases/2025/08/250822073814.htm?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "sciencedaily.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a16",
+          "order": 2,
+          "title": "EX-DEVELOPER JAILED FOUR YEARS FOR SABOTAGING OHIO EMPLOYER WITH KILL-SWITCH MALWARE",
+          "summary": "A former developer for an Ohio company was sentenced to four years for deploying malicious code and a kill switch that caused global outages after he lost access. His actions cost the company hundreds of thousands, highlighting the threat of insider sabotage.",
+          "url": "https://links.tldrnewsletter.com/n32Hwa",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a17",
+          "order": 3,
+          "title": "HONEY, I SHRUNK THE IMAGE AND NOW I'M PWNED",
+          "summary": "Security researchers found that Google Gemini-powered tools can be deceived by hidden prompts embedded in images, exploiting image scaling for prompt injection. This trick can cause AI to leak data or act out of bounds. Google says it's not a default vulnerability, but experts urge stronger AI system defenses and user previews.",
+          "url": "https://www.theregister.com/2025/08/21/google_gemini_image_scaling_attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-25:a18",
+          "order": 1,
+          "title": "KIDNEY DIALYSIS FIRM DAVITA CONFIRMS RANSOMWARE ATTACK COMPROMISED DATA OF 2.7M PEOPLE",
+          "summary": "DaVita, a kidney dialysis provider, confirmed that a ransomware attack exposed personal and health information of 2,689,826 individuals, as reported to the Department of Health's Office for Civil Rights.",
+          "url": "https://securityaffairs.com/181458/data-breach/kidney-dialysis-firm-davita-confirms-ransomware-attack-compromised-data-of-2-7m-people.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a19",
+          "order": 2,
+          "title": "AWS TRUSTED ADVISOR TRICKED INTO SHOWING UNPROTECTED S3 BUCKETS AS SECURE",
+          "summary": "Researchers found a way to trick AWS Trusted Advisor into not warning about unsecured S3 buckets by denying access to certain checks.",
+          "url": "https://www.securityweek.com/aws-trusted-advisor-tricked-into-showing-unprotected-s3-buckets-as-secure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-25:a20",
+          "order": 3,
+          "title": "INTERPOL CYBERCRIME CRACKDOWN IN AFRICA LEADS TO THE ARREST OF OVER 1,200 SUSPECTS",
+          "summary": "Interpol's Operation Serengeti 2.0 led to 1,209 arrests across Africa, recovering $97.4 million and dismantling major cybercrime schemes.",
+          "url": "https://abcnews.go.com/Technology/wireStory/large-interpol-cybercrime-crackdown-africa-leads-arrest-1200-124875773?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "abcnews.go.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

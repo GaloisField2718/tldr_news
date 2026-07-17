@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-07-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-02",
+  "source_path": "TLDR InfoSec/article_02-07-2025.md",
+  "source_content_hash": "sha256:a99e2fe042718c3f836cacef756de7174eb0ff88f1027dd3247a684842272f3d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a04",
+          "order": 1,
+          "title": "STOP BLOCKING. START ALLOWLISTING",
+          "summary": "There's a lot of software out there. If you're making an ad-hoc decision on every program a user decided to install, you'll never do anything else.",
+          "url": "https://www.threatlocker.com/pages/threatlocker-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q3_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a05",
+          "order": 2,
+          "title": "↗️ See a four minute demo ↗️",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/threatlocker-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q3_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a06",
+          "order": 1,
+          "title": "KELLY BENEFITS SAYS 2024 DATA BREACH IMPACTS 550K CUSTOMERS",
+          "summary": "In its latest update to law enforcement, Kelly Benefits has updated the total number of impacted individuals of a December 2024 breach to 550K. Kelly Benefits is a provider of benefits consulting, enrollment technology, payroll administration, HRIS, compliance support, and carrier management. The specific data that was breached varies per individual but may include SSNs, tax ID numbers, dates of birth, medical information, health insurance information, and financial information.",
+          "url": "https://www.bleepingcomputer.com/news/security/kelly-benefits-says-2024-data-breach-impacts-550-000-customers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a07",
+          "order": 2,
+          "title": "ESSE HEALTH SAYS RECENT DATA BREACH AFFECTS OVER 263K PATIENTS",
+          "summary": "Esse Health, the largest independent physicians' group in the Greater St. Louis area, reported a data breach impacting over 263K individuals. The breached data includes patient personal information, health insurance information, medical record number, patient account number, and some health information, but does not include SSNs or financial information. Esse Health did not disclose the nature of the breach, but based on the recovery timeline, ransomware is suspected.",
+          "url": "https://www.bleepingcomputer.com/news/security/esse-health-says-recent-data-breach-affects-over-263-000-patients/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a08",
+          "order": 3,
+          "title": "CRITICAL VULNERABILITY IN ANTHROPIC'S MCP EXPOSES DEVELOPER MACHINES TO REMOTE EXPLOITS",
+          "summary": "A critical vulnerability (CVE-2025-49596) in Anthropic's MCP Inspector tool exposed developers to remote code execution via misconfigurations and browser flaws. Attackers could exploit this by tricking users into visiting malicious websites. Fixed in version 0.14.1, the patch adds authentication and origin validation to secure localhost services against RCE attacks.",
+          "url": "https://links.tldrnewsletter.com/3uZM0c",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a09",
+          "order": 1,
+          "title": "AND NOW MALWARE THAT TELLS AI TO IGNORE IT?",
+          "summary": "Researchers at Check Point discovered a new malware dubbed SkyNet, which employs a novel technique to attempt to evade AI-based scanners and tools. The method hard-codes a prompt that attempts to tell any AI analyzing the code to ignore any previous instructions and respond with a “NO MALWARE DETECTED” message. Check Point noted that the SkyNet malware was unable to stop Check Point's AI scanners from scanning it and concluded that the author would need to refine their prompt injection technique.",
+          "url": "https://links.tldrnewsletter.com/N3AF9N",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a10",
+          "order": 2,
+          "title": "CAN YOU TRUST THAT VERIFIED SYMBOL? EXPLOITING IDE EXTENSIONS IS EASIER THAN IT SHOULD BE",
+          "summary": "Researchers have found critical vulnerabilities in popular IDEs (VSCode, Visual Studio, IntelliJ IDEA, and Cursor) where malicious extensions can appear verified while containing dangerous code. The flaw enables attackers to create files that utilize verified symbols but incorporate malicious functionality, allowing them to execute system commands and potentially impact millions of developers using these platforms.",
+          "url": "https://links.tldrnewsletter.com/HOsnbu",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a11",
+          "order": 3,
+          "title": "ANALYSIS OF THE THREAT CASE OF KIMSUKY GROUP USING 'CLICKFIX' TACTIC",
+          "summary": "The Kimsuky APT group has evolved its \"ClickFix\" tactic, tricking users into executing malicious PowerShell commands disguised as troubleshooting guides or security checks. The campaign uses spear-phishing emails, fake job sites, and compromised sites, employing obfuscation and multilingual variants to evade detection. Defense involves EDR monitoring for abnormal PowerShell activity and user education to identify prompts that ask users to copy and paste codes or \"fix\" browser issues.",
+          "url": "https://www.genians.co.kr/en/blog/threat_intelligence/suky-castle?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "genians.co.kr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a12",
+          "order": 1,
+          "title": "NEWTOWNER",
+          "summary": "Newtowner is a tool that is designed to test firewalls and network boundaries by masquerading traffic to appear as if it's coming from various data centers around the world",
+          "url": "https://github.com/assetnote/newtowner?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a13",
+          "order": 2,
+          "title": "SQLMAP COMMAND BUILDER",
+          "summary": "Advanced SQLMap command builder with an intuitive cheatsheet UI. Works locally in your browser as a single HTML file (no data sent anywhere).",
+          "url": "https://github.com/vizzdoom/sqlmap-command-builder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a14",
+          "order": 3,
+          "title": "X64DBG: TYPE SYSTEM AND MODERNIZATION",
+          "summary": "x64dbg is an open-source Windows debugger designed to simplify reverse engineering and malware analysis. This release features a revamped type system with support for bitfields, enums, and anonymous types from the Windows SDK, as well as significant performance improvements for complex data analysis. New features include AVX-512, half-float support for modern applications, workflow enhancements such as copying function graphs and arguments, and a modernized build system with cross-platform capabilities.",
+          "url": "https://x64dbg.com/blog/2025/06/30/release-announcement.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "x64dbg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a15",
+          "order": 1,
+          "title": "AT&T ROLLS OUT “WIRELESS LOCK” FEATURE TO BLOCK SIM SWAP ATTACKS",
+          "summary": "AT&T has announced a new “Wireless Lock” feature to protect users from SIM swap attacks. When the new feature is enabled, customers and employees will be unable to port the phone number to a new SIM card or transfer it to a new provider until the setting is disabled. Wireless Lock also protects certain billing information, authorized users, and phone numbers.",
+          "url": "https://www.bleepingcomputer.com/news/security/atandt-rolls-out-wireless-lock-feature-to-block-sim-swap-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a16",
+          "order": 2,
+          "title": "CLOUDFLARE WILL NOW BLOCK AI CRAWLERS BY DEFAULT",
+          "summary": "",
+          "url": "https://www.theverge.com/news/695501/cloudflare-block-ai-crawlers-default?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-02:a17",
+          "order": 1,
+          "title": "US SHUTS DOWN A STRING OF NORTH KOREAN IT WORKER SCAMS",
+          "summary": "The U.S. disrupted North Korean IT scams involving fake remote workers at over 100 companies that stole data and $1.6M+ in crypto, with eleven suspects facing charges.",
+          "url": "https://www.theregister.com/2025/06/30/us_north_korea_workers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a18",
+          "order": 2,
+          "title": "MICROSOFT OPEN-SOURCES VS CODE COPILOT CHAT EXTENSION ON GITHUB",
+          "summary": "Microsoft has made the GitHub Copilot Chat extension for VS Code open-source, allowing everyone to see and use its code.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-open-sources-vs-code-copilot-chat-extension-on-github/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-02:a19",
+          "order": 3,
+          "title": "AT&T DEPLOYS NEW ACCOUNT LOCK FEATURE TO COUNTER SIM SWAPPING",
+          "summary": "AT&T has introduced a Wireless Account Lock feature that enhances security by preventing unauthorized changes and alerting customers of account updates, with only main account holders able to manage it.",
+          "url": "https://cyberscoop.com/att-wireless-account-lock-sim-swapping-protection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

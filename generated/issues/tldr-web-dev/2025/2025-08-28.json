@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-08-28",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-08-28",
+  "source_path": "TLDR Web Dev/article_28-08-2025.md",
+  "source_content_hash": "sha256:f3187a185bc9bc3d1ec465789c1d692420c58f2f3b8510d6f01b0cf9fa1edfc7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-08-28",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-28:a04",
+          "order": 1,
+          "title": "BUILDING YOUR OWN CLI CODING AGENT WITH PYDANTIC-AI",
+          "summary": "This is a tutorial on building a custom CLI coding agent using Pydantic-AI and an MCP that can read code, run tests, and update codebases. The author chose to build their own agent rather than using commercial tools because it allows for customization to their specific dev environment, standards, and project requirements. The implementation uses Claude as the foundation model and adds capabilities like automated testing, development guidelines through instructions, and extensible tools through MCP servers.",
+          "url": "https://martinfowler.com/articles/build-own-coding-agent.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a05",
+          "order": 2,
+          "title": "HOW WE MIGRATED OUR RUSH.JS MONOREPO TO NODE TYPE STRIPPING",
+          "summary": "The team at Calm Engineering migrated their Rush.js monorepo to Node type stripping, which allows running TypeScript files natively in Node without transpilation, resulting in faster builds, tests, and shorter feedback loops. The main challenge was refactoring their extensive use of Sinon stubbed modules, which they solved by changing their approach from stubbing modules to stubbing classes. The migration involved incrementally moving from CommonJS to ESM modules, adding file extensions to imports, and updating their codebase to be fully ESM compliant, ultimately achieving 30-40% faster local development tasks.",
+          "url": "https://www.calm.com/blog/engineering/how-we-migrated-our-rushjs-monorepo-to-node-type-stripping?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "calm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a06",
+          "order": 3,
+          "title": "UNDERSTANDING GO ERROR TYPES: POINTER VS. VALUE",
+          "summary": "When upgrading Go error handling to errors.As(), there's a dangerous bug where the function requires exact type matching between pointer vs. value types—if an error is returned as a value but checked as a pointer, the check silently fails without compilation errors. The solution is to use compile-time interface assertions to document intended usage and linters to enforce consistency, since these mismatches can bypass critical error handling in production.",
+          "url": "https://blog.fillmore-labs.com/posts/errors-1?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.fillmore-labs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-28:a07",
+          "order": 1,
+          "title": "ENGINEERING LEAD FAILURE MODES",
+          "summary": "Tech leads commonly fail in five ways: micromanaging decisions, abandoning coding for meetings, refusing to pivot failing strategies, tolerating low performance, and always playing hero instead of empowering others. The fixes involve delegating decisions, maintaining 80-90% coding time, using data-driven feedback loops to course-correct, upholding high standards, and teaching team members to solve problems independently.",
+          "url": "https://open.substack.com/pub/productforengineers/p/tech-lead-failure-modes?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a08",
+          "order": 2,
+          "title": "WHY IS THE WEB ESSENTIAL SH*T NOW? (REDDIT THREAD)",
+          "summary": "This Reddit user laments how the modern web has become user-hostile, with intrusive popups, cookie warnings, and SEO-optimized content, which contrast sharply with the authentic, human-centered early internet of Geocities sites and hobby pages. Replies agree that while today's web is technically advanced, commercialization has replaced genuine information sharing with dark patterns and affiliate schemes, losing the egalitarian spirit that made the early internet special.",
+          "url": "https://links.tldrnewsletter.com/wwAbZ1",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-28:a09",
+          "order": 1,
+          "title": "HOW AI IS RESHAPING PRODUCT ORGS - AND WHY SOME TEAMS ARE LAGGING BEHIND",
+          "summary": "Miro surveyed 2,000+ developers [9], PMs, and designers on AI adoption. While engineers lead AI usage (especially for coding), product teams lag behind, creating workflow bottlenecks. While many focus on technical skills, the real issue is leadership support for experimentation. Get the report + a framework for cross-functional AI adoption [9].",
+          "url": "https://miro.com/events/ai-reshaping-product-org/?utm_campaign=glb-26q3-nsp-wp-c3_nap-ai_at_work_report&utm_source=tldr&utm_medium=newsletter&utm_content=hosted+event&src=-tldr_glb",
+          "reading_time_minutes": null,
+          "source_domain": "miro.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a10",
+          "order": 2,
+          "title": "FIREBASE STUDIO",
+          "summary": "Firebase Studio is a new AI-powered platform from Google that lets devs build apps directly in the browser using natural language prompts and Gemini, complete with repo imports and real-time collaboration. It includes built-in testing with web previews and Android emulators, plus seamless deployment to Firebase hosting.",
+          "url": "https://firebase.studio?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "firebase.studio",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a11",
+          "order": 3,
+          "title": "HEADLESS TREE: THE DEFINITIVE TREE COMPONENT FOR THE WEB",
+          "summary": "Headless Tree is a highly customizable React library that provides complex tree component functionality, including drag-and-drop, keyboard navigation, search, and multi-select capabilities, while giving devs complete control over styling and rendering. The library uses a flat structure approach for easy virtualization and offers a modular architecture with a total bundle size of just 9.5kB.",
+          "url": "https://github.com/lukasbach/headless-tree?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a12",
+          "order": 4,
+          "title": "JS MINIFICATION BENCHMARKS",
+          "summary": "This repo benchmarks popular JavaScript minifiers like esbuild, terser, swc, and Google Closure Compiler against real-world libraries, scoring them on file size reduction (85% weight) and speed (15% weight). @swc/core consistently ranks #1 for its balance of excellent compression and fast processing, while oxc-minify takes #2 with the fastest speeds overall.",
+          "url": "https://github.com/privatenumber/minification-benchmarks?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-28:a13",
+          "order": 1,
+          "title": "PILOTING CLAUDE FOR CHROME",
+          "summary": "Anthropic is testing a Chrome extension that lets Claude AI directly control browsers—clicking buttons, filling forms, and managing tasks—but it's limited it to just 1,000 users due to serious security concerns. The AI proved vulnerable to prompt injection attacks where bad actors could trick it into harmful actions, with success rates dropping from 24% to 11% after safety improvements. This cautious rollout reflects Anthropic's belief that browser-controlling AI is inevitable, but it wants to iron out the risks before wider deployment.",
+          "url": "https://www.anthropic.com/news/claude-for-chrome?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a14",
+          "order": 2,
+          "title": "HOW YOUR PROGRAM ACTUALLY RUNS: FROM C TO CPU",
+          "summary": "This article traces how C code transforms from human-readable text into electrical signals your CPU can execute, going through preprocessing, compilation to assembly, binary translation, linking, OS loading, and finally CPU execution via logic gates. At the hardware level, millions of tiny AND, OR, and XOR gates process binary patterns to perform operations like addition, bridging the gap between high-level programming and actual electrical signals.",
+          "url": "https://levelup.gitconnected.com/how-your-program-actually-runs-from-c-to-cpu-86e7d7ba299a?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "levelup.gitconnected.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-28:a15",
+          "order": 1,
+          "title": "500X FASTER `POSTMESSAGE(STRING)`",
+          "summary": "Bun achieved a 500x speedup for postMessage with strings by skipping serialization entirely.",
+          "url": "https://bun.com/blog/how-we-made-postMessage-string-500x-faster?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "bun.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a16",
+          "order": 2,
+          "title": "WHAT ARE SLOS, SLAS, AND SLIS? A COMPLETE GUIDE TO SERVICE RELIABILITY METRICS",
+          "summary": "Service reliability boils down to three key metrics: SLIs measure what's actually happening (like 99.95% uptime), SLOs set your internal targets (99.9% goal), and SLAs are customer promises with penalties attached.",
+          "url": "https://incident.io/blog/slo-sla-sli?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "incident.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-28:a17",
+          "order": 3,
+          "title": "OPTIMIZING PWAS FOR DIFFERENT DISPLAY MODES",
+          "summary": "Devs can use CSS media queries and JavaScript to detect the current display mode and tailor the user experience accordingly.",
+          "url": "https://www.smashingmagazine.com/2025/08/optimizing-pwas-different-display-modes?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

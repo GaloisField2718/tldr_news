@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-07-30",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-30",
+  "source_path": "TLDR InfoSec/article_30-07-2025.md",
+  "source_content_hash": "sha256:94fee78042a5aa51f2b4acd6619a55e0bc3e65f875d4bc347a649d9ec63309bb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-30",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a04",
+          "order": 1,
+          "title": "",
+          "summary": "One of the most visible trends in cybersecurity is the emergence of platforms that offer capabilities across multiple technology segments. SentinelOne and 451 Research have partnered together to survey 600+ security practitioners and leaders [4] to understand this trend and what SecOps teams are choosing and why they are choosing them.",
+          "url": "https://www.sentinelone.com/lp/unify-defense/?utm_source=tldr&utm_medium=paid-display&utm_campaign=amer-us-platform&utm_content=infosec-newsletter-7-30-2025",
+          "reading_time_minutes": null,
+          "source_domain": "sentinelone.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a05",
+          "order": 1,
+          "title": "ENDGAME GEAR MOUSE CONFIG TOOL INFECTED USERS WITH MALWARE",
+          "summary": "German peripherals maker Endgame Gear is warning users that malware was embedded in its configuration tool for the OP1w 4k v2 mouse between June 26 and July 9. The malicious version of the download included the XRed backdoor, which features keylogging capabilities, the ability to open a remote shell, and data exfiltration. Endgame Gear has announced that, going forward, it will discontinue hosting separate download pages and will add SHA hash verification and digital signing for all hosted files.",
+          "url": "https://www.bleepingcomputer.com/news/security/endgame-gear-mouse-config-tool-infected-users-with-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a06",
+          "order": 2,
+          "title": "LOVENSE SEX TOY APP FLAW LEAKS PRIVATE USER EMAIL ADDRESSES",
+          "summary": "A group of security researchers discovered two vulnerabilities in the Lovense sex toy app that could allow an attacker to retrieve a user's private email address with just their username and perform an account takeover with just an email address. To exploit the flaw, an attacker sends a POST request to the `/api/wear/genGtoken` API endpoint, then forwards the encrypted payload to another endpoint, which returns a fake ID that the user can add to their contact list to reveal the real email address. Lovense claims that both flaws were fixed. However, researchers report that only the account takeover flaw was fixed.",
+          "url": "https://www.bleepingcomputer.com/news/security/lovense-sex-toy-app-flaw-leaks-private-user-email-addresses/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a07",
+          "order": 3,
+          "title": "TELECOM GIANT ORANGE WARNS OF DISRUPTION AMID ONGOING CYBERATTACK",
+          "summary": "French telecom giant Orange reported a cyberattack on July 25 that disrupted services for business clients and some public sector services in France. The company isolated affected systems and expects full restoration by Wednesday. Orange claims no customer or internal data was compromised and has notified the relevant authorities about the incident.",
+          "url": "https://techcrunch.com/2025/07/29/telecom-giant-orange-warns-of-disruption-amid-ongoing-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a08",
+          "order": 1,
+          "title": "WIZ RESEARCH UNCOVERS CRITICAL VULNERABILITY IN AI VIBE CODING PLATFORM BASE44 ALLOWING UNAUTHORIZED ACCESS TO PRIVATE APPLICATIONS",
+          "summary": "Wiz Research discovered a critical vulnerability in Base44, a popular \"vibe coding\" platform that allows users to build apps through natural language prompts. The flaw allowed attackers to bypass authentication using only non-secret app IDs, potentially granting access to private enterprise applications and sensitive data.",
+          "url": "https://www.wiz.io/blog/critical-vulnerability-base44?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a09",
+          "order": 2,
+          "title": "FAKE CAPTCHA LED TO LUMMA",
+          "summary": "Attackers used a fake CAPTCHA page that employed the ClickFix social engineering technique to trick users into pressing Windows+R and pasting a PowerShell command that downloaded LUMMA stealer malware. The malware targeted browser credential stores (Login Data and Web Data) from Microsoft Edge and Google Chrome, establishing C2 communication within minutes of initial execution. The attack chain leveraged multiple evasion techniques, including heavily obfuscated PowerShell, AutoIt scripts, and mshta.exe proxy execution to bypass security controls.",
+          "url": "https://www.nccgroup.com/us/research-blog/fake-captcha-led-to-lumma/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "nccgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a10",
+          "order": 3,
+          "title": "BUILDING A CLOUD SECURITY ROADMAP: TOOLS BY LAYER AND WHEN YOU NEED THEM",
+          "summary": "This post provides an overview of the layers in cloud environments, the threats that target each layer, and the tools that are best suited to address them. The cloud infrastructure/control plane layer handles tasks such as resource provisioning, configuration management, and user permissions. The orchestration layer hosts platforms such as Kubernetes and related services live, whereas the platform layer runs more generalized workloads. Finally, the application layer includes software that end-users rely on, such as custom web applications, APIs, and SaaS apps.",
+          "url": "https://groundedcloudsecurity.substack.com/p/building-a-cloud-security-roadmap?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "groundedcloudsecurity.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a11",
+          "order": 1,
+          "title": "MSP SECURITY HEADACHES? DUO HAS THE CURE.",
+          "summary": "Looking to meet rising expectations? Unlock the next level of MSP efficiency with Duo's_ __Smarter Security Toolkit for MSPs_ [11].",
+          "url": "https://docs.google.com/document/d/1d-vWrFyrgkifybSWnHbLeaIcFfVQ1g6YdhZSHvQpIyw/edit?tab=t.0%3Futm_medium%3Dpublisher-direct&utm_source=TLDR-InfoSec&utm_campaign=roi_q42025_duo-MSP&utm_content=ebook1&utm_term=20250728",
+          "reading_time_minutes": null,
+          "source_domain": "docs.google.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a12",
+          "order": 2,
+          "title": "FIRECRAWL",
+          "summary": "Firecrawl is an API service that takes a URL, crawls it, and converts it into clean Markdown or structured data, which can then be processed by an LLM or other tool.",
+          "url": "https://github.com/mendableai/firecrawl?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a13",
+          "order": 3,
+          "title": "SEAL SECURITY (PRODUCT LAUNCH)",
+          "summary": "Seal is a supply chain security tool that differentiates itself by providing patches for vulnerable packages instead of pushing for version upgrades.",
+          "url": "https://www.seal.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "seal.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a14",
+          "order": 4,
+          "title": "EBYTE-GO-MORPHER",
+          "summary": "Ebyte-Go-Morpher is a Go tool that parses, analyzes, and rewrites Go source code to apply multiple layers of obfuscation. It operates directly on the Go Abstract Syntax Tree (AST) and generates obfuscated source files along with runtime decryption logic.",
+          "url": "https://github.com/EvilBytecode/Ebyte-Go-Morpher?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a15",
+          "order": 1,
+          "title": "SECURITY PROS ARE DROWNING IN THREAT-INTEL DATA AND IT'S MAKING EVERYTHING MORE DANGEROUS",
+          "summary": "A Google Cloud and Forrester study of 1,541 tech leaders found that 61% of security professionals are overwhelmed by threat intelligence data, while 60% lack skilled analysts. Top concerns include phishing (46%), ransomware (44%), and AI prompt injection attacks (34%).",
+          "url": "https://www.theregister.com/2025/07/28/security_pros_drowning_in_threatintel/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a16",
+          "order": 2,
+          "title": "PYPI USERS EMAIL PHISHING ATTACK",
+          "summary": "PyPI users are being targeted by phishing emails from \"pypj[.]org\" (note the \"j\"), which request email verification. The fake site mimics PyPI to steal credentials. Users should delete these emails, avoid clicking any links, and change their passwords if compromised.",
+          "url": "https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.pypi.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a17",
+          "order": 3,
+          "title": "NEW CHOICEJACKING ATTACK STEALS DATA FROM PHONES VIA PUBLIC CHARGERS",
+          "summary": "Choicejacking is a new attack that bypasses smartphone security prompts by spoofing USB or Bluetooth input devices to simulate user actions in under 133 milliseconds. The attack tricks phones into enabling data transfer mode without consent, allowing attackers to access photos, messages, and install malware through compromised public charging stations. Unlike traditional juice jacking attacks, Choicejacking exploits device communication protocols to simulate keyboard input and overflow input buffers, affecting both Android and iOS devices.",
+          "url": "https://hackread.com/choicejacking-attack-steals-data-phones-public-chargers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-30:a11",
+          "order": 1,
+          "title": "UNLOCK THE NEXT LEVEL OF MSP EFFICIENCY",
+          "summary": "Meet rising expectations and unlock the next level of MSP efficiency with Duo's_ __SMARTER SECURITY TOOLKIT FOR MSPS_.",
+          "url": "https://docs.google.com/document/d/1d-vWrFyrgkifybSWnHbLeaIcFfVQ1g6YdhZSHvQpIyw/edit?tab=t.0%3Futm_medium%3Dpublisher-direct&utm_source=TLDR-InfoSec&utm_campaign=roi_q42025_duo-MSP&utm_content=ebook1&utm_term=20250728",
+          "reading_time_minutes": null,
+          "source_domain": "docs.google.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a11",
+          "order": 2,
+          "title": "Get the Toolkit",
+          "summary": "",
+          "url": "https://docs.google.com/document/d/1d-vWrFyrgkifybSWnHbLeaIcFfVQ1g6YdhZSHvQpIyw/edit?tab=t.0%3Futm_medium%3Dpublisher-direct&utm_source=TLDR-InfoSec&utm_campaign=roi_q42025_duo-MSP&utm_content=ebook1&utm_term=20250728",
+          "reading_time_minutes": null,
+          "source_domain": "docs.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a18",
+          "order": 3,
+          "title": "RTÉ INVESTIGATING POTENTIAL CYBER SECURITY INCIDENT",
+          "summary": "The UK's National Cyber Security Centre (NCSC) contacted the Irish broadcaster RTÉ regarding a potential cybersecurity threat, based on information that it had received.",
+          "url": "https://www.irishtimes.com/media/2025/07/28/rte-investigating-potential-cyber-security-incident/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "irishtimes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-30:a19",
+          "order": 4,
+          "title": "MINNESOTA ACTIVATES NATIONAL GUARD AFTER ST. PAUL CYBERATTACK",
+          "summary": "Minnesota Governor Tim Walz activated the National Guard to provide cyber protection after a cyberattack on Friday crippled the City of Saint Paul's digital services and critical systems.",
+          "url": "https://www.bleepingcomputer.com/news/security/minnesota-activates-national-guard-after-st-paul-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

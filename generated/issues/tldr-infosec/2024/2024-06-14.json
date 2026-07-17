@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-06-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-06-14",
+  "source_path": "TLDR InfoSec/article_14-06-2024.md",
+  "source_content_hash": "sha256:2c6e3dc4fe1f3d8a281cda0651c57879fd0bb59a641d3a095872e5aa858cfe8f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-06-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a04",
+          "order": 1,
+          "title": "INFORMATION SECURITY",
+          "summary": "Orca's 2024 State of Cloud Security Report [4] identifies the most commonly found, yet dangerous cloud security risks.",
+          "url": "https://orca.security/resources/blog/2024-state-public-cloud-report-risk-prioritization/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a06",
+          "order": 2,
+          "title": "1️⃣ Read the report",
+          "summary": "2️⃣ Follow recommended security practices",
+          "url": "https://orca.security/lp/2024-state-of-cloud-security-report/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a08",
+          "order": 1,
+          "title": "SECURITY FIRM CYLANCE SAYS IT HAS BEEN HACKED, DATA PUT UP FOR SALE ONLINE",
+          "summary": "Cybersecurity firm Cylance confirmed a cyberattack where 34 million customer, employee, and partner emails and PII were stolen. The data is being sold on the dark web for $750,000. Cylance stated the breached data is relatively old and unrelated to the Snowflake hack.",
+          "url": "https://www.techradar.com/pro/security/security-firm-cylance-says-it-has-been-hacked-data-put-up-for-sale-online?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a09",
+          "order": 2,
+          "title": "PURE STORAGE SAYS ATTACKERS BROKE INTO A SNOWFLAKE ENVIRONMENT",
+          "summary": "Cloud storage provider Pure Storage disclosed that attackers gained unauthorized access to a Snowflake workspace containing customer telemetry data like company names, usernames, emails, and software versions. However, Pure Storage assured no sensitive data like passwords or customer-stored data was compromised.",
+          "url": "https://www.computing.co.uk/news/4322223/pure-storage-attackers-broke-snowflake-environment?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "computing.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a10",
+          "order": 3,
+          "title": "ARM WARNS OF ACTIVELY EXPLOITED FLAW IN MALI GPU KERNEL DRIVERS",
+          "summary": "Arm has issued a security bulletin warning users of a vulnerability in the kernel drivers of Bifrost and Valhall GPUs. The vulnerability that is reportedly being actively exploited is a Use-After-Free vulnerability. These GPUs are used in smartphones, tablets, Chromebooks, various embedded devices, automotive infotainment systems, and smart TVs.",
+          "url": "https://www.bleepingcomputer.com/news/security/arm-warns-of-actively-exploited-flaw-in-mali-gpu-kernel-drivers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a11",
+          "order": 1,
+          "title": "BYPASSING EDR NTDS.DIT PROTECTION USING BLUE TEAM TOOLS",
+          "summary": "This blog post details a method for extracting NTDS hashes while bypassing EDR and OS protections. The SYSTEM hive and NTDS.dit are needed to extract these hashes. The author utilized forensics tooling to extract these files without triggering EDR or OS protections.",
+          "url": "https://links.tldrnewsletter.com/yLK61q",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a12",
+          "order": 2,
+          "title": "HOW TO SECURELY TRANSFER FILES WITH PRESIGNED URLS",
+          "summary": "This blog post provides prescriptive guidance for generating presigned URLs that involves using tightly scoped IAM roles, unique minces, and VPC endpoints. It details a solution overview for deploying a presigned URL generation API and an access object API. The post concludes with best practices for sharing and monitoring presigned URLs such as using HTTPS for transit, tightly scoping CORS permissions, monitoring CloudWatch logs, and utilizing AWS WAF.",
+          "url": "https://aws.amazon.com/blogs/security/how-to-securely-transfer-files-with-presigned-urls/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a13",
+          "order": 3,
+          "title": "5 STEPS FOR CREATING AN APPSEC PROGRAM",
+          "summary": "This post lays out 5 steps to building an AppSec program. Start by creating or updating application and infrastructure diagrams to engage security partners and gain visibility into the attack surface. Existing security tools should then be mapped to the diagrams. The limitations of those tools should be explored and then repeatable processes should be built around security. After a program reaches this level of maturity, further projects such as secure libraries, terraform modules, and DAST integrations can be pursued.",
+          "url": "https://pulse.latio.tech/p/latio-pulse-5-steps-for-creating?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a14",
+          "order": 1,
+          "title": "BACKSLASH SECURITY (PRODUCT LAUNCH)",
+          "summary": "Backslash combines SCA, SAST, SBOM, VEX, and secrets detection with a single platform that uncovers the most critical risks through reachability analysis.",
+          "url": "https://www.backslash.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "backslash.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a15",
+          "order": 2,
+          "title": "WITNESS",
+          "summary": "Witness is a pluggable framework for software supply chain risk management. It automates, normalizes, and verifies software artifact provenance.",
+          "url": "https://github.com/in-toto/witness?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a16",
+          "order": 3,
+          "title": "OPENRECALL",
+          "summary": "OpenRecall is a fully open-source, privacy-first alternative to Microsoft's Recall feature. It offers similar digital history functionality as Microsoft's Recall but functions completely on device and is cross-platform.",
+          "url": "https://github.com/openrecall/openrecall?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a17",
+          "order": 1,
+          "title": "IOS 18 CRACKS DOWN ON APPS ASKING FOR FULL ADDRESS BOOK ACCESS",
+          "summary": "Apple unveiled new privacy features in iOS 18 that restrict apps from accessing users' full address books. Apps must first get permission to access contacts before users can pick which specific contacts to share. This two-step process aims to prevent apps from covertly building social networks from address books without consent.",
+          "url": "https://techcrunch.com/2024/06/12/ios-18-cracks-down-on-apps-asking-for-full-address-book-access/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a18",
+          "order": 2,
+          "title": "GOOGLE'S PRIVACY SANDBOX MORE LIKE A PRIVACY MIRAGE, CAMPAIGNERS CLAIM",
+          "summary": "Privacy campaigner noyb filed a GDPR complaint alleging Google's Privacy Sandbox API, meant to replace third-party cookies, still allows Google to track users within Chrome without proper consent.",
+          "url": "https://www.theregister.com/2024/06/13/noyb_gdpr_privacy_sandbox/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a19",
+          "order": 3,
+          "title": "OPERATION CELESTIAL FORCE EMPLOYS MOBILE AND DESKTOP MALWARE TO TARGET INDIAN ENTITIES",
+          "summary": "A malware called Celestial Force uses mobile and desktop malware like GravityRAT and HeavyLift to target Indian entities. The malware is managed through a tool called GravityAdmin, facilitating malicious activities on infected devices. The operation involves various campaigns that target different platforms with overlapping infrastructure to distribute malicious payloads.",
+          "url": "https://blog.talosintelligence.com/cosmic-leopard/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.talosintelligence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-14:a20",
+          "order": 1,
+          "title": "10 YEARS OF THE GITHUB SECURITY BUG BOUNTY PROGRAM",
+          "summary": "GitHub has paid over $4 million through its 10-year-old bug bounty program.",
+          "url": "https://github.blog/2024-06-11-10-years-of-the-github-security-bug-bounty-program/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a21",
+          "order": 2,
+          "title": "PSA: BARTENDER MAC APP UNDER NEW OWNERSHIP",
+          "summary": "Mac users have raised concerns after discovering that the popular Bartender app was sold and the certificate changed with no communication by the new owners.",
+          "url": "https://www.macrumors.com/2024/06/04/bartender-mac-app-new-owner/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "macrumors.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-14:a22",
+          "order": 3,
+          "title": "WATCH OUT! CISA WARNS IT IS BEING IMPERSONATED BY SCAMMERS",
+          "summary": "Scammers are pretending to be CISA employees to trick people into giving them personal information or money.",
+          "url": "https://www.tripwire.com/state-of-security/watch-out-cisa-warns-it-being-impersonated-scammers?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "tripwire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

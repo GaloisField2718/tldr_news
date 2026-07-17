@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-02-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-02-12",
+  "source_path": "TLDR InfoSec/article_12-02-2024.md",
+  "source_content_hash": "sha256:8258ac945b0b43b20d186ecf268987330c49911eaed9948bfba02ed1e5abd47e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-02-12",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-12:a05",
+          "order": 1,
+          "title": "FAKE LASTPASS PASSWORD MANAGER SPOTTED ON APPLE’S APP STORE",
+          "summary": "A fake clone of LastPass called LassPass was listed on the Apple App Store. Malicious clones like this rarely make it through Apple’s review process. Apple has confirmed that it has since been removed.",
+          "url": "https://www.bleepingcomputer.com/news/security/fake-lastpass-password-manager-spotted-on-apples-app-store/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a06",
+          "order": 2,
+          "title": "PHISHCEPTION - SENDGRID IS ABUSED TO HOST PHISHING ATTACKS IMPERSONATING ITSELF",
+          "summary": "Netcraft has spotted a new phishing campaign that uses compromised SendGrid accounts to phish for new accounts by emailing users that their account had a payment error or other similar issues. The email is sent from a SendGrid account and uses SendGrid’s tracking links to mask the destination. Users are directed to a JsPen link that obfuscates a script tag which loads a JS file from Azure Front Door that is an obfuscated clone of the SendGrid login page.",
+          "url": "https://www.netcraft.com/blog/popular-email-platform-used-to-impersonate-itself/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "netcraft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a07",
+          "order": 3,
+          "title": "JUNIPER SUPPORT PORTAL EXPOSED CUSTOMER DEVICE INFO",
+          "summary": "The support website for Juniper Networks, a networking equipment vendor, was exposing sensitive customer information including device details, warranty status, service contracts, and serial numbers. The data exposure was the result of a recent upgrade to the support portal. Juniper has since fixed the problem and stated that no identifiable or personal customer data was exposed.",
+          "url": "https://krebsonsecurity.com/2024/02/juniper-support-portal-exposed-customer-device-info/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-12:a08",
+          "order": 1,
+          "title": "SECURE AUTHENTICATION AND AUTHORISATION IN REACT NATIVE",
+          "summary": "This article focuses on overlooked authentication and authorization mechanisms in mobile app front ends.",
+          "url": "https://medium.com/@christopherobocha/secure-authentication-and-authorisation-in-react-native-a260f1787a89?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a09",
+          "order": 2,
+          "title": "CYCODE DISCOVERS A SUPPLY CHAIN VULNERABILITY IN BAZEL",
+          "summary": "A blog post from Cycode detailing a supply chain vulnerability that it discovered in Bazel. The post begins with an overview of GitHub Custom Actions and then details how Cycode leveraged a custom action in Bazel to achieve remote code execution. The Bazel project included a custom action that passed the user-controlled issue body directly to a bash shell in the GitHub runner which was vulnerable to command injection.",
+          "url": "https://cycode.com/blog/cycode-discovers-a-supply-chain-vulnerability-in-bazel/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "cycode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a10",
+          "order": 3,
+          "title": "HOW WE WERE ABLE TO INFILTRATE ATTACKER TELEGRAM BOTS",
+          "summary": "A post from Checkmarx on a technique that it discovered to intercept messages from malicious Telegram bots that attackers utilize for info-stealing operations. Checkmarx's team extracted the bot details from a malicious package. They then utilized the /getUpdates endpoint to retrieve details of a specific message or all messages by looping through message IDs. The post also details two methods for redirecting messages when an attacker utilizes a webhook.",
+          "url": "https://checkmarx.com/blog/how-we-were-able-to-infiltrate-attacker-telegram-bots/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-12:a11",
+          "order": 1,
+          "title": "METARADAR",
+          "summary": "This app is a tool for analyzing Bluetooth (BLE) environments. It scans for BLE devices in the background, notifying you if the device you are looking for is near you or if some unknown device has been following you for a long time.",
+          "url": "https://github.com/Semper-Viventem/MetaRadar?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a12",
+          "order": 2,
+          "title": "STUNCHECK",
+          "summary": "StunCheck is a set of tools for scanning, testing, and exploiting STUN and TURN servers.",
+          "url": "https://github.com/Pepelux/stuncheck?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a13",
+          "order": 3,
+          "title": "JIRA-LENS",
+          "summary": "Jira-Lens is a fast and customizable Python-based vulnerability scanner for Jira. Jira-Lens performs 25+ checks for vulnerabilities against target Jira servers.",
+          "url": "https://github.com/MayankPandey01/Jira-Lens?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-12:a14",
+          "order": 1,
+          "title": "NEW MACOS BACKDOOR WRITTEN IN RUST SHOWS POSSIBLE LINK WITH WINDOWS RANSOMWARE GROUP",
+          "summary": "RustDoor is a new backdoor that has been targeting Apple macOS since November 2023, masquerading as a Visual Studio update. It has Intel and Arm versions and unknown initial access. RustDoor is being actively developed. It can gather/upload files and system info to its C2 server.",
+          "url": "https://www.bitdefender.com/blog/labs/new-macos-backdoor-written-in-rust-shows-possible-link-with-windows-ransomware-group/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a15",
+          "order": 2,
+          "title": "RASPBERRY ROBIN KEEPS RIDING THE WAVE OF ENDLESS 1-DAYS",
+          "summary": "Raspberry Robin operators are utilizing fresh 1-day exploits for privilege escalation, suggesting the team has access to exploit sellers or in-house development. The rapidly evolving QNAP malware acts as an initial access vector for payloads like ransomware.",
+          "url": "https://research.checkpoint.com/2024/raspberry-robin-keeps-riding-the-wave-of-endless-1-days/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a16",
+          "order": 3,
+          "title": "BGPWATCH — A COMPREHENSIVE PLATFORM FOR DETECTING AND DIAGNOSING HIJACKING INCIDENTS",
+          "summary": "BGPWatch is a comprehensive platform built by APNIC for detecting and diagnosing hijacking incidents in BGP routing. It allows users to browse, view, and search for hijack events in real time, providing detailed information about each event. BGPWatch offers routing path analysis and subscription services for operators to monitor via email.",
+          "url": "https://blog.apnic.net/2024/02/07/bgpwatch-a-comprehensive-platform-for-detecting-and-diagnosing-hijacking-incidents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.apnic.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-12:a17",
+          "order": 1,
+          "title": "CYBER SECURITY FUNDING INSIGHTS Q4 2023: SOFT LANDING FOR THE ECONOMY, A BIT BUMPIER FOR STARTUPS",
+          "summary": "$89 billion was invested across approximately 6,400 deals in Q4 2023, the lowest figure in the past five years.",
+          "url": "https://datatribe.com/datatribe-insights-q423/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "datatribe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a18",
+          "order": 2,
+          "title": "GOOGLE TO PAY $350 MILLION TO SETTLE SHAREHOLDERS' DATA PRIVACY LAWSUIT",
+          "summary": "Google has agreed to pay $350 million to settle a shareholder lawsuit related to a 2018 Google+ bug exposing private data associated with as many as 500,000 accounts.",
+          "url": "https://www.reuters.com/legal/google-pay-350-million-revolve-shareholders-data-privacy-lawsuit-2024-02-06/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "reuters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a19",
+          "order": 3,
+          "title": "QR CODES - WHAT’S THE REAL RISK?",
+          "summary": "The National Cyber Security Centre has provided an overview of the threats involved in scanning QR codes and prescriptive guidance for evaluating QR code safety.",
+          "url": "https://www.ncsc.gov.uk/blog-post/qr-codes-whats-real-risk?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-12:a20",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

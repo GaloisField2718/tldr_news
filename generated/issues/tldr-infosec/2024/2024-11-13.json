@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-11-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-11-13",
+  "source_path": "TLDR InfoSec/article_13-11-2024.md",
+  "source_content_hash": "sha256:815a22cd356147383ae139ea3aca4be6340ff1553e194de21a789b34619e8e11",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-11-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a04",
+          "order": 1,
+          "title": "WANT THE BLAME OR THE CONTROL? INFOSEC + CIAM",
+          "summary": "50% of CISOs own customer identity. The other 50% say “that's engineering's job.” 100% of CISOs get called to the floor when the customer-facing app gets compromised. Frontegg [5] puts InfoSec in the captain's chair without needing to become coders.👇",
+          "url": "https://frontegg.com/product/security-suite?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_11_13",
+          "reading_time_minutes": null,
+          "source_domain": "frontegg.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a04",
+          "order": 2,
+          "title": "→ Dive deeper",
+          "summary": "",
+          "url": "https://frontegg.com/product/security-suite?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_11_13",
+          "reading_time_minutes": null,
+          "source_domain": "frontegg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a06",
+          "order": 3,
+          "title": "→ Book a personalized demo",
+          "summary": "→ Learn how Hint Health [7] leveraged Frontegg for better security",
+          "url": "https://meetings.hubspot.com/dana-sharir/dana-discovery-meeting?uuid=e0ae213e-5928-46ae-8dc6-46e116cab5ab&utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_11_13",
+          "reading_time_minutes": null,
+          "source_domain": "meetings.hubspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a08",
+          "order": 1,
+          "title": "2M RECORDS EXPOSED BY A TECH RECRUITMENT SERVICE",
+          "summary": "A publicly exposed, unprotected database belonging to Alltech Consulting Services containing 2M records of data belonging to over 200K job seekers was discovered. The records included salary expectations, work experience information, internal notes, names, email addresses, phone numbers, last four digits of SSNs, and passport numbers. The finding was responsibly disclosed to Alltech Consulting Services, which password-protected the database the following day.",
+          "url": "https://www.websiteplanet.com/news/alltechconsultinginc-breach-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "websiteplanet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a09",
+          "order": 2,
+          "title": "AMAZON CONFIRMS EMPLOYEE DATA BREACH, BUT SAYS IT'S LIMITED TO CONTACT INFO",
+          "summary": "A breach at Amazon's property management vendor exposed work contact details (emails, phone numbers, and locations) of potentially millions of employees. The incident is linked to the 2023 MOVEit vulnerability, which affected multiple organizations.",
+          "url": "https://www.theverge.com/2024/11/11/24293817/amazon-employee-emails-phone-numbers-moveit-data-breach?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a10",
+          "order": 3,
+          "title": "MILLIONS OF HOT TOPIC CUSTOMERS IMPACTED BY DATA BREACH",
+          "summary": "A massive data breach at Hot Topic exposed nearly 57 million customers' personal information, including emails, names, addresses, and partial credit card data. A hacker, who allegedly accessed data through an employee's compromised computer and unprotected Snowflake account, has demanded $100,000 from Hot Topic.",
+          "url": "https://www.securityweek.com/millions-of-hot-topic-customers-impacted-by-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a11",
+          "order": 1,
+          "title": "EVASIVE ZIP CONCATENATION: TROJAN TARGETS WINDOWS USERS",
+          "summary": "Zip Concatenation is where a threat actor concatenates the binary data of two zip files to attempt to hide the malicious content. An attacker creates two zip files - one that contains a benign document and another that contains malware - and then concatenates the two zip files. The attacker then relies upon the victim and any relevant cybersecurity tools only seeing one of the archives and missing the malicious files. This post breaks down a real-world campaign that used zip concatenation to hide a Trojan in a second archive and shows how 7zip would miss the file but Windows Explorer and Winrar would not.",
+          "url": "https://perception-point.io/blog/evasive-concatenated-zip-trojan-targets-windows-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "perception-point.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a12",
+          "order": 2,
+          "title": "OPEN SOURCE SECURITY INCIDENTS AREN'T GOING AWAY",
+          "summary": "",
+          "url": "https://www.darkreading.com/vulnerabilities-threats/open-source-security-incidents-aren-t-going-away?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a13",
+          "order": 3,
+          "title": "GOISSUE – THE TOOL BEHIND RECENT GITHUB PHISHING ATTACKS",
+          "summary": "A new phishing tool called GoIssue, which sells for $700-$3,000, enables attackers to harvest GitHub users' email addresses and send mass phishing emails. The tool poses significant risks as it targets developers' credentials, potentially enabling supply chain attacks and corporate network breaches.",
+          "url": "https://slashnext.com/blog/goissue-github-phishing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "slashnext.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a14",
+          "order": 1,
+          "title": "KNOW THINE ENEMY: DISCOVER THE LATEST CREDIT CARD FRAUD METHODS – AND HOW TO BEAT THEM",
+          "summary": "Sophisticated cybercriminal tactics are driving credit card fraud to record highs, with losses projected to hit $43bn by 2026. Protect your business with strategies from Flashpoint's free guide [14]. Learn modern fraud methods to help your team counteract threats. Use real-time data to boost detection/prevention. Apply expert insights to",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a14",
+          "order": 2,
+          "title": "reduce losses + protect customer trust. Get the guide.",
+          "summary": "",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a15",
+          "order": 3,
+          "title": "SMUGGLESHIELD",
+          "summary": "SmuggleShield is an experimental browser extension that aims to prevent HTML smuggling attacks by detecting common patterns.",
+          "url": "https://github.com/RootUp/SmuggleShield?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a16",
+          "order": 4,
+          "title": "ZENITY (PRODUCT LAUNCH)",
+          "summary": "Zenity has built an agentless application security platform for securing low-code, no-code, and generative AI development solutions.",
+          "url": "https://www.zenity.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "zenity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a17",
+          "order": 5,
+          "title": "AUDITFORGE",
+          "summary": "AuditForge is a pentest reporting application that makes it simple and easy to write down findings and generate customizable reports.",
+          "url": "https://github.com/caverav/auditforge?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a18",
+          "order": 1,
+          "title": "SNOWFLAKE HACKERS IDENTIFIED AND CHARGED WITH STEALING 50 BILLION AT&T RECORDS",
+          "summary": "Two hackers, Connor Moucka and John Binns, have been accused by the US government of stealing approximately 50 billion AT&T customer call and text records. The breach, which occurred in April 2023, affected nearly all of AT&T's customers. The stolen data included call and message metadata.",
+          "url": "https://techcrunch.com/2024/11/12/snowflake-hackers-identified-and-charged-with-stealing-50-billion-att-records/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a19",
+          "order": 2,
+          "title": "COMPARING STATIC AND RUNTIME REACHABILITY",
+          "summary": "This article compares static and runtime reachability, two emerging approaches to determining whether vulnerabilities in code dependencies are actually exploitable. Both offer package-level and function-level capabilities. Static reachability analyzes code repositories to identify potential vulnerabilities during development but can't eliminate false positives completely, while runtime reachability uses agents to monitor actual code execution and provide near-certain identification of exploitable vulnerabilities. Static reachability integrates well with development workflows and doesn't require agent deployment. Runtime reachability offers superior accuracy in identifying truly exploitable vulnerabilities but requires agent installation and currently has limited vendor support.",
+          "url": "https://pulse.latio.tech/p/comparing-static-and-runtime-reachability?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a20",
+          "order": 3,
+          "title": "NORTH KOREAN HACKERS CREATE FLUTTER APPS TO BYPASS MACOS SECURITY",
+          "summary": "North Korean hackers created malicious Flutter apps for macOS, passing Apple's security checks with legitimate developer IDs. These apps connect to DPRK servers and have the ability to execute scripts from a command and control server. Apple has revoked the signatures of these apps to prevent them from bypassing security measures on macOS systems.",
+          "url": "https://www.bleepingcomputer.com/news/security/north-korean-hackers-create-flutter-apps-to-bypass-macos-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-13:a21",
+          "order": 1,
+          "title": "LIVING OFF SECURITY TOOLS (WEBAPP)",
+          "summary": "Living Off Security Tools (LOST) is a project that shows how attackers can use security tools for post-exploitation.",
+          "url": "https://0xanalyst.github.io/Project-Lost/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "0xanalyst.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a22",
+          "order": 2,
+          "title": "MICROSOFT EXCHANGE ADDS WARNING TO EMAILS ABUSING SPOOFING FLAW",
+          "summary": "Microsoft Exchange has issued a warning for a high-severity vulnerability that allows attackers to impersonate senders in emails to make malicious messages more convincing.",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-microsoft-exchange-server-flaw-enables-spoofing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-13:a23",
+          "order": 3,
+          "title": "VMWARE MAKES WORKSTATION AND FUSION FREE FOR EVERYONE",
+          "summary": "VMware has made its Fusion and Workstation desktop hypervisors free for commercial, educational, and personal use.",
+          "url": "https://www.bleepingcomputer.com/news/software/vmware-makes-workstation-and-fusion-free-for-everyone/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

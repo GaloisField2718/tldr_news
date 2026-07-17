@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-12-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-12-11",
+  "source_path": "TLDR InfoSec/article_11-12-2023.md",
+  "source_content_hash": "sha256:b160f267f1f56dde85f46af3f50247282699b791c676f03b6c38a70aa5cafe12",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-12-11",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-11:a05",
+          "order": 1,
+          "title": "YOUR MOBILE PASSWORD MANAGER MIGHT BE EXPOSING YOUR CREDENTIALS",
+          "summary": "Researchers from IIIT Hyderabad discovered a vulnerability that allows malicious apps to expose credentials when a user autofills with a password manager on Android. The attack involves tricking password managers into autofilling into the app as well as a Login with Google WebView.",
+          "url": "https://techcrunch.com/2023/12/06/your-mobile-password-manager-might-be-exposing-your-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a06",
+          "order": 2,
+          "title": "NEW BLUETOOTH FLAWS LETS ATTACKERS TAKE OVER ANDROID, IOS, MACOS, AND LINUX DEVICES",
+          "summary": "Researchers have discovered a new flaw, tracked as CVE-2023-45866, that allows for remote code execution on Android, iOS, macOS, and Linux Devices. The attack deceives the target into thinking that it’s connected to a Bluetooth keyboard by taking advantage of an unauthenticated pairing mechanism that’s defined in the Bluetooth specification. No specialized hardware is needed for the attack, which allows attackers in Bluetooth proximity to inject keystrokes into a vulnerable device.",
+          "url": "https://thehackernews.com/2023/12/new-bluetooth-flaw-let-hackers-take.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a07",
+          "order": 3,
+          "title": "STEALTHY LINUX ROOTKIT FOUND IN THE WILD AFTER GOING UNDETECTED FOR 2 YEARS",
+          "summary": "Krasue is a Linux Remote Access Trojan (RAT) that has been active since 2020, primarily targeting organizations in Thailand. The malware utilizes multiple embedded rootkits drawn from open-source code to support different Linux kernel versions, a common technique for Linux rootkits. Krasue leverages its rootkit capabilities to hook functions like kill() system calls, network operations, and file listing to hide malicious activity and evade detection.",
+          "url": "https://arstechnica.com/security/2023/12/stealthy-linux-rootkit-found-in-the-wild-after-going-undetected-for-2-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-11:a08",
+          "order": 1,
+          "title": "HUNTING MALICIOUS INFRASTRUCTURE - HEADERS AND STATIC STRINGS",
+          "summary": "This post breaks down a process for hunting malicious open-source infrastructure by identifying hardcoded headers or static strings that are included in the application. It includes two worked examples using Responder and Havoc C2. This is part of a series of posts on techniques to hunt malicious infrastructure.",
+          "url": "https://michaelkoczwara.medium.com/hunting-malicious-infrastructure-headers-and-hardcoded-static-strings-2d7bb4e46d64?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "michaelkoczwara.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a09",
+          "order": 2,
+          "title": "3 SYMFONY (RCE): A PEEK BEHIND THE CURTAIN",
+          "summary": "This post goes step by step on how the author identified three Symfony RCEs. Symfony is a free and open source PHP framework that makes web development faster and easier.",
+          "url": "https://medium.com/@bxrowski0x/3-symfony-rce-a-peek-behind-the-curtain-83da5433e149?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a10",
+          "order": 3,
+          "title": "WANNACRY: ANALYSIS OF A CRYPTO WORM",
+          "summary": "This post analyzes the 2017 WannaCry ransomware attack which rapidly spread by exploiting Windows vulnerabilities, encrypting files, and demanding cryptocurrency payments to decrypt them. It reviews key indicators of WannaCry's behavior, a YARA rule to detect it, and discusses the malware's unorthodox \"kill switch\" domain check which ultimately halted its spread.",
+          "url": "https://medium.com/@snoballz_909/wannacry-analysis-of-a-crypto-worm-a06996c4ecc0?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-11:a11",
+          "order": 1,
+          "title": "TINJA - THE TEMPLATE INJECTION ANALYZER",
+          "summary": "TInjA is a CLI tool for testing webpages for template injection vulnerabilities. TInjA currently supports 44 different templating engines and can scan for SSTI and CSTI.",
+          "url": "https://github.com/Hackmanit/TInjA?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a12",
+          "order": 2,
+          "title": "BAMBDAS",
+          "summary": "Bambdas is a new feature of Burp Suite that allows for customization of the Burp Suite UI from the GUI using Java snippets. Bambdas is meant to allow users to customize the functionality of Burp Suite and add in utility that is needed for them. Examples of Bambdas and helpful snippets are provided in the post.",
+          "url": "https://portswigger.net/blog/introducing-bambdas?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a13",
+          "order": 3,
+          "title": "DEP-SCAN",
+          "summary": "OWASP dep-scan is a next-generation security and risk audit tool based on known vulnerabilities, advisories, and license limitations for project dependencies. Both local repositories and container images are supported as the input, and the tool is ideal for integration with ASPM/VM platforms and in CI environments.",
+          "url": "https://github.com/owasp-dep-scan/dep-scan?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-11:a14",
+          "order": 1,
+          "title": "STATE OF ASPM 2024",
+          "summary": "This report found that AppSec chaos reigns, with 78% of CISOs responding that today’s AppSec attack surfaces are unmanageable and 90% of responders confirming that relationships between their security and development teams need to improve. Surprisingly, 77% of CISOs believe software supply chain security is a bigger blind spot for AppSec than Gen AI or open source.",
+          "url": "https://cycode.com/thank-you-page/state-of-aspm-2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cycode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a15",
+          "order": 2,
+          "title": "+1500 HUGGINGFACE API TOKENS WERE EXPOSED, LEAVING MILLIONS OF META-LLAMA, BLOOM, AND PYTHIA USERS VULNERABLE",
+          "summary": "Lasso Security discovered over 1,500 exposed API tokens that could leave millions of users vulnerable to exploitation by malicious actors. Its team was able to gain access to high-value organization accounts and repositories, including from Meta, Microsoft, Google, and VMware. They also found that HuggingFace had deprecated org_api tokens but had not taken active actions to secure exposed tokens.",
+          "url": "https://www.lasso.security/blog/1500-huggingface-api-tokens-were-exposed-leaving-millions-of-meta-llama-bloom-and-pythia-users-for-supply-chain-attacks?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "lasso.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a16",
+          "order": 3,
+          "title": "2.6 BILLION PERSONAL RECORDS COMPROMISED BY DATA BREACHES IN PAST TWO YEARS — UNDERSCORING NEED FOR END‑TO‑END ENCRYPTION",
+          "summary": "The total number of data breaches more than tripled between 2013 and 2022 — exposing 2.6 billion personal records in the past two years alone — and has continued to get worse in 2023. Ransomware and vendor attacks contributed in a major way to the sharp increase in data breaches and resulting compromise of sensitive records. The number of ransomware attacks in the first nine months of 2023, for instance, was 70% higher than the same period in 2022.",
+          "url": "https://www.apple.com/newsroom/2023/12/report-2-point-6-billion-records-compromised-by-data-breaches-in-past-two-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-11:a17",
+          "order": 1,
+          "title": "EDR-TELEMETRY",
+          "summary": "EDR-Telemetry is a project that lists telemetry features from EDR providers and other endpoint agents. The motivation of this project is to allow security practitioners to quickly compare and evaluate the telemetry potential of those providers.",
+          "url": "https://github.com/tsale/EDR-Telemetry?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a18",
+          "order": 2,
+          "title": "NISSAN OCEANIA RESTORING SYSTEMS AFTER CYBERATTACK",
+          "summary": "The Australian and New Zealand Nissan Corporation and Financial Services has advised that its systems were subject to a cyber incident. Nissan is working to investigate the extent of the incident and whether any personal information has been accessed.",
+          "url": "https://www.securityweek.com/nissan-restoring-systems-after-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a19",
+          "order": 3,
+          "title": "HACKTIVISTS HACKED AN IRISH WATER UTILITY AND INTERRUPTED THE WATER SUPPLY",
+          "summary": "Hacktivists hacked a small water utility in the Erris area of Ireland and interrupted the water supply for two days. The cyber attack impacted 180 homeowners and the Eurotronics water pumping system. The attackers defaced the user interface of the water-pumping system.",
+          "url": "https://securityaffairs.com/155552/hacktivism/hacktivist-hacked-irish-water-utility.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-11:a20",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

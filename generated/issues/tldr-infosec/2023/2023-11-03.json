@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-11-03",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-11-03",
+  "source_path": "TLDR InfoSec/article_03-11-2023.md",
+  "source_content_hash": "sha256:6420981b897eb77020e913c3ed07b2f9cc190ca8045c42118f8d9fdaeb954c76",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-11-03",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-03:a05",
+          "order": 1,
+          "title": "RESEARCHERS FIND 34 WINDOWS DRIVERS VULNERABLE TO FULL DEVICE TAKEOVER",
+          "summary": "Researchers at VMware Carbon Black have discovered that 34 Windows Driver Model (WDM) and Windows Driver Frameworks (WDF) drivers are vulnerable to exploitation by non-privileged actors who could gain full control of the devices and execute arbitrary code. The technique has been employed by various adversaries, including the North Korea-linked Lazarus Group.",
+          "url": "https://thehackernews.com/2023/11/researchers-find-34-windows-drivers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a06",
+          "order": 2,
+          "title": "CRITICAL ATLASSIAN CONFLUENCE FLAW CAN LEAD TO SIGNIFICANT DATA LOSS",
+          "summary": "Atlassian has issued a warning about a critical security vulnerability affecting all versions of Confluence Data Center and Server, which could lead to significant data loss if exploited by an unauthenticated attacker. The vulnerability is an improper authorization issue. Atlassian is not aware of any attacks exploiting this vulnerability but urges customers to take immediate action to protect their installs.",
+          "url": "https://securityaffairs.com/153300/security/atlassian-confluence-data-center-flaw.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a07",
+          "order": 3,
+          "title": "DOZENS OF NPM PACKAGES CAUGHT ATTEMPTING TO DEPLOY REVERSE SHELL",
+          "summary": "Phylum's automated risk detection platform alerted them to a campaign involving at least 48 different publications on npm. These packages, published by the npm user \"hktalent\" with a package called rshNpm, contained obfuscated JavaScript designed to initiate a reverse shell on package install. The attack chain is triggered by package installation via an install hook in the package.json.",
+          "url": "https://blog.phylum.io/dozens-of-npm-packages-caught-attempting-to-deploy-reverse-shell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.phylum.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-03:a08",
+          "order": 1,
+          "title": "MALVERTISING VIA DYNAMIC SEARCH ADS",
+          "summary": "Malwarebytes detected an incident in which attackers utilized a hacked website to generate dynamic search ads that advertised software containing a Trojan. Dynamic search ads are a feature of Google ads that allows for generating ads based on the content of a webpage. Malwarebytes speculates that the attackers may not have even known that they were creating these malvertising ads.",
+          "url": "https://www.malwarebytes.com/blog/threat-intelligence/2023/10/malvertising-via-dynamic-search-ads-delivers-malware-bonanza/amp?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a09",
+          "order": 2,
+          "title": "COMMON CYBERSECURITY MISCONFIGURATIONS IN NETWORKS",
+          "summary": "The Cyber Security Agency of Singapore has released an advisory detailing common misconfigurations in networks. The 13 item list includes common misconfigurations such as weak authentication, unnecessary open ports, and unencrypted data.",
+          "url": "https://www.csa.gov.sg/alerts-advisories/Advisories/2023/ad-2023-022?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csa.gov.sg",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a10",
+          "order": 3,
+          "title": "POPPING BLISTERS FOR RESEARCH: AN OVERVIEW OF PAST PAYLOADS AND EXPLORING RECENT DEVELOPMENTS",
+          "summary": "This article provides an overview of Blister, a malware loader that loads a payload embedded within it. The authors analyze past payloads dropped by Blister loaders based on 137 unpacked samples from the past year and a half and explore recent developments. The analysis shows that Blister is mostly used in a targeted manner with Mythic agents as its payload of choice. The article provides YARA rules and scripts to help analyze the Mythic agent and the packer observed with it.",
+          "url": "https://research.nccgroup.com/2023/11/01/popping-blisters-for-research-an-overview-of-past-payloads-and-exploring-recent-developments/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "research.nccgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-03:a11",
+          "order": 1,
+          "title": "AGE",
+          "summary": "age is an encryption tool, format, and go library. It features small, explicit keys, no config options, and UNIX-style composability. age supports many common encryption tool features such as passphrases, recipients, and SSH keys.",
+          "url": "https://github.com/FiloSottile/age?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a12",
+          "order": 2,
+          "title": "GHIDRA-RICKROLL",
+          "summary": "A gag tool showcasing that Ghidra will automatically detect and render image and audio files embedded in a binary.",
+          "url": "https://github.com/nneonneo/ghidra-rickroll?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a13",
+          "order": 3,
+          "title": "AWS EUROPEAN SOVEREIGN CLOUD",
+          "summary": "AWS has announced a new independent sovereign cloud in Europe. The sovereign cloud is designed for public sector organizations in highly regulated industries that require a distinct cloud that is located solely in the EU. AWS has committed to maintaining the same level of service as the main cloud and providing high availability capabilities through distinct and geographically distant regions and availability zones in the European Sovereign Cloud.",
+          "url": "https://aws.amazon.com/blogs/security/aws-digital-sovereignty-pledge-announcing-a-new-independent-sovereign-cloud-in-europe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-03:a14",
+          "order": 1,
+          "title": ".US HARBORS PROLIFIC MALICIOUS LINK SHORTENING SERVICE",
+          "summary": "Researchers at Infoblox have been tracking a three year old link shortening service that caters to threat actors. Prior to May 2023, the shortening service primarily used .info domains, but it has now migrated to primarily using .US domains. The .US top-level domain (TLD) is meant to be managed and verified by the National Telecommunications and Information Administration, but researchers have speculated that this management has been outsourced, leading to the TLD hosting many phishing websites.",
+          "url": "https://krebsonsecurity.com/2023/10/us-harbors-prolific-malicious-link-shortening-service/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a15",
+          "order": 2,
+          "title": "NORTH KOREAN HACKERS TARGETING CRYPTO EXPERTS WITH KANDYKORN MACOS MALWARE",
+          "summary": "North Korean state-sponsored hackers have targeted blockchain engineers of an unnamed crypto exchange platform via Discord using macOS malware named KANDYKORN. Security researchers have linked the activity, which began in April 2023, to the Lazarus Group. The attackers lured victims by impersonating blockchain engineers on a public Discord server. The malware is a full-featured memory resident RAT with built-in capabilities to enumerate files, run additional malware, exfiltrate data, terminate processes, and run arbitrary commands.",
+          "url": "https://thehackernews.com/2023/11/north-korean-hackers-tageting-crypto.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a16",
+          "order": 3,
+          "title": "THIS TINY DEVICE (FLIPPER ZERO) IS SENDING UPDATED IPHONES INTO A NEVER-ENDING DOS LOOP",
+          "summary": "A security researcher experienced a series of pop-up windows that made it nearly impossible to use his iPhone while traveling by train in the Netherlands. The culprit, it turned out, was using a Flipper Zero device to send Bluetooth pairing requests to all iPhones within radio range. This slim, lightweight device has been available since 2020, but in recent months, it has become much more visible.",
+          "url": "https://arstechnica.com/security/2023/11/flipper-zero-gadget-that-doses-iphones-takes-once-esoteric-attacks-mainstream/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-03:a17",
+          "order": 1,
+          "title": "INFOSECMAP (WEBAPP)",
+          "summary": "InfoSecMap is a searchable database of different events and meetups related to information security.",
+          "url": "https://infosecmap.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "infosecmap.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a18",
+          "order": 2,
+          "title": "BOEING CONFIRMS CYBERATTACK AMID LOCKBIT RANSOMWARE CLAIMS",
+          "summary": "Aerospace company Boeing has confirmed that it is investigating a cyberattack that affected its parts and distribution business. This comes after LockBit ransomware claimed that it had breached the company's network and stolen data. Boeing has stated that the incident did not affect flight safety, and it is collaborating with law enforcement and regulatory agencies.",
+          "url": "https://www.bleepingcomputer.com/news/security/boeing-confirms-cyberattack-amid-lockbit-ransomware-claims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-03:a19",
+          "order": 3,
+          "title": "DOZENS OF COUNTRIES WILL PLEDGE TO STOP PAYING RANSOMWARE GANGS",
+          "summary": "An alliance of 40 countries will sign a pledge to stop paying ransoms demanded by cybercriminal groups during the third annual International Counter-Ransomware Initiative summit in Washington, D.C. The initiative is in response to record ransomware risks worldwide, with the U.S. being the target of approximately 46% of these incidents. The summit will also focus on strategies to block the funds used by ransomware groups to finance their operations.",
+          "url": "https://www.bleepingcomputer.com/news/security/dozens-of-countries-will-pledge-to-stop-paying-ransomware-gangs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-21",
+  "source_path": "TLDR InfoSec/article_21-01-2026.md",
+  "source_content_hash": "sha256:e1f89519d74ea9e38e7d989a65fe29552adec2380ca2d3d6724340aafdccd622",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a04",
+          "order": 1,
+          "title": "THE DARK SIDE OF AI: 2.6MM UNDERGROUND MESSAGES ANALYZED",
+          "summary": "Flashpoint just released a massive study of the AI threat landscape. Analysts monitored over 2.6 MILLION AI-RELATED POSTS across Telegram, the dark web, and underground LLM forums.",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a05",
+          "order": 1,
+          "title": "ACF PLUGIN BUG GIVES HACKERS ADMIN ON 50K WORDPRESS SITES",
+          "summary": "Wordfence detected a new critical vulnerability in the Advanced Custom Fields Extended (ACF Extended) plugin for WordPress that could allow unauthenticated attackers to obtain admin privileges. The vulnerability arises from a lack of enforcement of role restrictions during form-based user creation. The vulnerability is only exploitable on sites that use a “Create User” or “Update User” form with the role field mapped.",
+          "url": "https://www.bleepingcomputer.com/news/security/acf-plugin-bug-gives-hackers-admin-on-50-000-wordpress-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a06",
+          "order": 2,
+          "title": "MINNESOTA DEPARTMENT OF HUMAN SERVICES DATA BREACH IMPACTS 300K",
+          "summary": "The Minnesota Department of Human Services is notifying 300K victims that their data was accessed by an unauthorized individual over the course of a month. A user affiliated with a licensed care provider accessed data in the MnCHOICES system without authorization. The data accessed includes names, sex, dates of birth, phone numbers, addresses, Medicaid ID numbers, and the last four digits of SSNs.",
+          "url": "https://www.startribune.com/minnesota-department-of-human-services-data-breach-impacts-300k/601566960?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "startribune.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a07",
+          "order": 3,
+          "title": "APACHE AIRFLOW VULNERABILITIES ENABLE SENSITIVE DATA EXPOSURE",
+          "summary": "Two new vulnerabilities allow for sensitive data leakage in versions of Apache Airflow prior to 3.16. The first vulnerability arises from Airflow failing to properly mask proxy credentials in log files. The second vulnerability arises from Airflow not applying user-registered secret pattern masking before truncating field templates when dealing with long fields in the Rendered Templates UI.",
+          "url": "https://cybersecuritynews.com/apache-airflow-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a08",
+          "order": 1,
+          "title": "HOW TO GET SCAMMED (BY DPRK HACKERS)",
+          "summary": "A security researcher documented a DPRK-linked Contagious Interview campaign in which threat actors posed as recruiters on Discord, delivering malware via fake technical assessments that deployed a multi-stage payload using blockchain-based dead-drop resolvers across Tron, Aptos, and Binance Smart Chain. The final RAT establishes persistence by injecting into VS Code and Cursor IDEs, exfiltrates credentials, and evades analysis by detecting cloud/CI/CD environments. Detection requires monitoring for Node.js processes that spawn with eval flags and API calls to blockchain endpoints such as api.trongrid.io.",
+          "url": "https://links.tldrnewsletter.com/MhQZlM",
+          "reading_time_minutes": 18,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a09",
+          "order": 2,
+          "title": "CLANG HARDENING CHEAT SHEET - TEN YEARS LATER",
+          "summary": "Quarkslab has updated its Clang hardening cheat sheet after ten years, documenting new compiler mitigations including FORTIFY_SOURCE level 3, stack clash protection via -fstack-clash-protection, and Intel CET/ARM PAC+BTI for control-flow integrity. The guide covers defenses against ROP/JOP attacks through hardware-assisted mechanisms such as shadow stacks and indirect branch tracking, as well as speculative execution mitigations with -mspeculative-load-hardening. Security teams should adopt the OpenSSF-recommended compiler flags and consider architecture-specific protections (CET for x86 and PAC/BTI for ARM) while balancing performance trade-offs.",
+          "url": "https://blog.quarkslab.com/clang-hardening-cheat-sheet-ten-years-later.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "blog.quarkslab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a10",
+          "order": 3,
+          "title": "SOLYXIMMORTAL: PYTHON MALWARE ANALYSIS",
+          "summary": "SolyxImmortal is a Python-based spyware that targets Windows systems, focused on long-term surveillance and data theft rather than destruction. It steals browser credentials, harvests documents, logs keystrokes, and captures screenshots, then exfiltrates everything via hardcoded Discord webhooks over HTTPS to blend into normal traffic. It minimizes detection while continuously monitoring victims by persisting through AppData and Run keys, abusing DPAPI to decrypt Chromium credentials, and batching keystrokes and archives.",
+          "url": "https://www.cyfirma.com/research/solyximmortal-python-malware-analysis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "cyfirma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a11",
+          "order": 1,
+          "title": "SECURITY LEADERS: BENCHMARK YOUR PASSWORD MATURITY IN UNDER 5 MINUTES",
+          "summary": "As cyberattackers grow bolder and data protection regulations become stricter, organizational password management is a must. The Bitwarden Password Management Maturity Model [11] is a free and simple framework for evaluating your password posture. For more on how to protect your",
+          "url": "https://bitwarden.com/go/password-management-maturity-model/tldr/?utm_campaign=34103600-TLDR+2026&utm_source=tldr_infosec&utm_medium=email&utm_content=maturity_model_01212026_send",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a12",
+          "order": 2,
+          "title": "org, take a look at the most trusted enterprise password manager",
+          "summary": "",
+          "url": "https://bitwarden.com/go/streamline-security-and-protect-your-organization-info-tech-report/tldr/?utm_campaign=34103600-TLDR+2026&utm_source=tldr_infosec&utm_medium=email&utm_content=info_tech_report_01212026_send%C2%A0",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a13",
+          "order": 3,
+          "title": "ANAMNESIS",
+          "summary": "Anamnesis is an evaluation framework for studying how LLM agents generate exploits from vulnerability reports, demonstrating that Claude Opus 4.5 and GPT-5.2 agents can independently develop working exploits that bypass ASLR, NX, full RELRO, CFI, Shadow Stack, and seccomp sandboxes when given a QuickJS use-after-free vulnerability and proof-of-concept trigger.",
+          "url": "https://github.com/SeanHeelan/anamnesis-release?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a14",
+          "order": 4,
+          "title": "SYZKALLER",
+          "summary": "Syzkaller is a kernel fuzzer that finds bugs across various operating systems, including Linux and Windows. Originally for Linux, it now supports other OS kernels. It is a coverage-guided tool developed by Google, but it is not an official product.",
+          "url": "https://github.com/google/syzkaller?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a15",
+          "order": 5,
+          "title": "ADTRAPPER",
+          "summary": "ADTrapper is a comprehensive security analysis platform designed for cybersecurity professionals to analyze Windows AD authentication logs.",
+          "url": "https://github.com/MHaggis/ADTrapper?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a16",
+          "order": 1,
+          "title": "UK GAMBLING REGULATOR ACCUSES META OF LYING ABOUT ITS STRUGGLE TO SPOT ILLEGAL ADS",
+          "summary": "The UK Gambling Commission's executive director accused Meta of knowingly allowing illegal gambling advertisements, noting that its own searchable ad library reveals operators using keywords like \"not on Gamstop\" to target vulnerable users. Meta suggested the regulator deploy AI tools to find and report these ads rather than proactively policing its own platform. The commission's executive director described Meta's ad library as \"a window into criminality\" and said the company appears \"happy to turn a blind eye and continue taking money from criminals.\"",
+          "url": "https://www.theregister.com/2026/01/20/uk_gambling_comission_criticizes_meta/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a17",
+          "order": 2,
+          "title": "NORTH KOREA-LINKED HACKERS TARGET DEVELOPERS VIA MALICIOUS VS CODE PROJECTS",
+          "summary": "North Korean operators are posing as recruiters and sending developers fake coding tests that require cloning malicious Git repositories into VS Code. Once the project is opened and trusted, malicious tasks.json configurations fetch obfuscated JavaScript payloads from Vercel to install backdoors such as BeaverTail and InvisibleFerret, enabling remote code execution, keylogging, data theft, and crypto mining.",
+          "url": "https://thehackernews.com/2026/01/north-korea-linked-hackers-target.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a18",
+          "order": 3,
+          "title": "WEAPONIZING CALENDAR INVITES: A SEMANTIC ATTACK ON GOOGLE GEMINI",
+          "summary": "A seemingly normal calendar invite hides a natural-language payload in the event description, which Gemini processes when a user later asks about their schedule. This triggers Gemini to summarize private meetings, write the summary into a new event visible to the attacker, and reply with a harmless message.",
+          "url": "https://www.miggo.io/post/weaponizing-calendar-invites-a-semantic-attack-on-google-gemini?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "miggo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-21:a19",
+          "order": 1,
+          "title": "CHATGPT HEALTH RAISES BIG SECURITY, SAFETY CONCERNS",
+          "summary": "OpenAI's ChatGPT Health product raises data privacy concerns by enabling medical record integration and third-party sharing without confirmed end-to-end encryption or HIPAA protections, and notably excludes regions with stricter data regulations, such as the EEA and the UK.",
+          "url": "https://links.tldrnewsletter.com/iGLwIP",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a20",
+          "order": 2,
+          "title": "COP COPS IT AFTER COPILOT COPS OUT: WEST MIDLANDS POLICE CHIEF QUITS OVER AI HALLUCINATION",
+          "summary": "West Midlands Police chief constable retired after the force used Microsoft Copilot's fabricated report about a non-existent football match to justify banning Israeli fans, highlighting the risks of AI hallucinations in law enforcement decision-making.",
+          "url": "https://www.theregister.com/2026/01/19/copper_chief_cops_it_after/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-21:a21",
+          "order": 3,
+          "title": "WARWICKSHIRE SCHOOL TO REOPEN AFTER CYBERATTACK CRIPPLED IT",
+          "summary": "A Warwickshire secondary school is reopening after a severe cyberattack disabled critical IT and safety systems, including gates, fire alarms, registers, phones, and internet.",
+          "url": "https://www.theregister.com/2026/01/19/higham_lane_school_reopens/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

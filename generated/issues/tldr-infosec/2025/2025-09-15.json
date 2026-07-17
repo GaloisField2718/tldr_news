@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-09-15",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-15",
+  "source_path": "TLDR InfoSec/article_15-09-2025.md",
+  "source_content_hash": "sha256:d73153c417ec74093f8fcfeba12b5e4ac444c3bbb127ee138d54555f2d45b636",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-15",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a04",
+          "order": 1,
+          "title": "EMAIL THREATS ARE RISING—BASIC DEFENSES STILL LAG",
+          "summary": "83% OF IT LEADERS HAVE FACED EMAIL-RELATED SECURITY INCIDENTS, and nearly half saw them happen in just the past year. Phishing and spoofing top the list—making email not just a communication tool, but a frontline risk surface. But despite the risk, ONLY 33% HAVE IMPLEMENTED CORE PROTECTIONS like DMARC, DKIM, or SPF.",
+          "url": "https://exclaimer.com/research/state-of-email-report-2025/?utm_medium=via-campaign-referral&utm_source=tldr_newsletter&utm_campaign=tldr&utm_content=state_of_email_report",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a05",
+          "order": 2,
+          "title": "→ [5]Explore the security trends",
+          "summary": "",
+          "url": "https://exclaimer.com/blog/mastering-email-security-a-guide-to-protecting-your-inbox/",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a04",
+          "order": 3,
+          "title": "→ [4]Get the full research",
+          "summary": "",
+          "url": "https://exclaimer.com/research/state-of-email-report-2025/?utm_medium=via-campaign-referral&utm_source=tldr_newsletter&utm_campaign=tldr&utm_content=state_of_email_report",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a06",
+          "order": 1,
+          "title": "HYBRIDPETYA RANSOMWARE BYPASSES UEFI SECURE BOOT ECHOING PETYA/NOTPETYA",
+          "summary": "The HybridPetya ransomware on VirusTotal echoes the infamous Petya/NotPetya attacks but adds UEFI bootkit capabilities and exploits CVE-2024-7344 to bypass UEFI Secure Boot on outdated systems. Unlike NotPetya, HybridPetya functions as actual ransomware with decryption capabilities, encrypting the Master File Table after compromising EFI partitions and displaying fake CHKDSK status before showing ransom demands. This marks the fourth known UEFI bootkit with Secure Boot bypass capability, joining BlackLotus, BootKitty, and the Hyper-V Backdoor PoC, indicating these sophisticated attacks are becoming more common.",
+          "url": "https://securityaffairs.com/182149/malware/hybridpetya-ransomware-bypasses-uefi-secure-boot-echoing-petya-notpetya.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a07",
+          "order": 2,
+          "title": "WHITECOBRA FLOODS VSCODE MARKET WITH CRYPTO-STEALING EXTENSIONS",
+          "summary": "A threat actor named WhiteCobra has been flooding the VSCode marketplace and OpenVSX registry with malicious extensions targeting VSCode, Cursor, and Windsurf users. The extensions contain an extension.js file that is nearly identical to the Hello World example but loads a prompt.js file, which downloads and executes a platform-specific infostealer payload from Cloudflare Pages. An Ethereum core developer reported on X that their wallet was drained after downloading a seemingly legitimate extension with a professional logo, detailed description, and 54K downloads.",
+          "url": "https://www.bleepingcomputer.com/news/security/whitecobra-floods-vscode-market-with-crypto-stealing-extensions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a08",
+          "order": 3,
+          "title": "SAMSUNG PATCHES ACTIVELY EXPLOITED ZERO-DAY REPORTED BY WHATSAPP DEVS",
+          "summary": "Samsung patched a remote code execution vulnerability that impacted Samsung devices running Android 13 or later. The vulnerability arose from an out-of-bounds write in the libimagecodec.quram.so library, which is used for image parsing. Apple patched the relevant vulnerability in its devices last month after it was reported to it by WhatsApp and Meta researchers as well.",
+          "url": "https://www.bleepingcomputer.com/news/security/samsung-patches-actively-exploited-zero-day-reported-by-whatsapp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a09",
+          "order": 1,
+          "title": "THE CURIOUS TALE OF A FAKE CARRIER.APP",
+          "summary": "Google Project Zero found a fake carrier app exploiting a heap overflow in Apple's DCP firmware on iPhone 12/13. The exploit bypassed kernel protections by targeting the DCP's weaker security, using a fake Vodafone app distributed via enterprise certificates to sideload malware. The vulnerability (CVE-2021-30983) caused memory corruption through an unbounded loop in display code, allowing attackers to gain kernel access by corrupting C++ objects and manipulating memory between the DCP and main system.",
+          "url": "https://googleprojectzero.blogspot.com/2022/06/curious-case-carrier-app.html?m=1&utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a10",
+          "order": 2,
+          "title": "UNMASKING THE GENTLEMEN RANSOMWARE: TACTICS, TECHNIQUES, AND PROCEDURES REVEALED",
+          "summary": "The Gentlemen ransomware group has executed sophisticated attacks across 17 countries, focusing on sectors like manufacturing and healthcare. Their operations use custom tools to bypass security measures, exploit privileged accounts, and deploy ransomware with double extortion tactics. The campaign demonstrates a shift to highly tailored, evasive strategies, raising the bar for enterprise defense and incident response recommendations.",
+          "url": "https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "trendmicro.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a11",
+          "order": 3,
+          "title": "SUPABASE SECURITY BEST PRACTICES (2025 GUIDE)",
+          "summary": "This comprehensive guide addresses frequent security pitfalls seen in Supabase deployments, offering precise and practical solutions grounded in recent audits. It covers how components like authentication, database schemas, Edge Functions, storage, and CORS interact from a security perspective and how to secure them with simple, effective policies—such as “read-only by default”, automate audits, and revisit configurations as the platform evolves.",
+          "url": "https://links.tldrnewsletter.com/SMuT8l",
+          "reading_time_minutes": 20,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a12",
+          "order": 1,
+          "title": "AI-POWERED EMAIL ATTACKS JUST MET THEIR MATCH - AN AI DETECTION ENGINEER",
+          "summary": "Email attacks are evolving faster than security teams can write rules. Sublime's ADÉ [12] (Autonomous Detection Engineer) fights fire with fire: while hackers automate phishing and social engineering",
+          "url": "https://sublime.security/blog/meet-ade-the-autonomous-detection-engineer-for-email?utm_source=tldr&utm_medium=content-synd&utm_campaign=tldr_newsletter&utm_content=ADE_launch",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a12",
+          "order": 2,
+          "title": "attacks, ADÉ automatically creates and backtests Detection Rules",
+          "summary": "in response to missed attacks.",
+          "url": "https://sublime.security/blog/meet-ade-the-autonomous-detection-engineer-for-email?utm_source=tldr&utm_medium=content-synd&utm_campaign=tldr_newsletter&utm_content=ADE_launch",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a12",
+          "order": 3,
+          "title": "Read more on the Sublime Security blog",
+          "summary": "",
+          "url": "https://sublime.security/blog/meet-ade-the-autonomous-detection-engineer-for-email?utm_source=tldr&utm_medium=content-synd&utm_campaign=tldr_newsletter&utm_content=ADE_launch",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a13",
+          "order": 4,
+          "title": "GROUPPOLICYBACKDOOR",
+          "summary": "GroupPolicyBackdoor is a tool for Group Policy Objects (GPOs) manipulation and exploitation.",
+          "url": "https://github.com/synacktiv/GroupPolicyBackdoor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a14",
+          "order": 5,
+          "title": "REDACCESS (PRODUCT LAUNCH)",
+          "summary": "Red Access provides an agentless security platform that protects web sessions and assets across browsers and apps, enabling secure access, data loss prevention, and visibility for remote and hybrid enterprise environments.",
+          "url": "https://redaccess.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "redaccess.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a15",
+          "order": 6,
+          "title": "GARUDRECON",
+          "summary": "GarudRecon is an automated reconnaissance framework designed for asset discovery, vulnerability detection, and continuous monitoring.",
+          "url": "https://github.com/rix4uni/GarudRecon?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a16",
+          "order": 1,
+          "title": "600 GB OF ALLEGED GREAT FIREWALL OF CHINA DATA PUBLISHED IN LARGEST LEAK YET",
+          "summary": "Hacktivists from Enlace Hacktivista leaked nearly 600 GB of data supposedly from China's Great Firewall, exposing source code, communications, and documents from Geedge Networks and MESA Lab, key to the censorship system. The leak reveals that the Great Firewall operates as a commercial platform called \"Tiangou,\" which has been exported to Myanmar, Pakistan, Ethiopia, Kazakhstan, and other Belt and Road countries for surveillance purposes. The 500 GB archive includes source code, project records, and internal documents revealing how China's censorship functions and spreads globally through public-private partnerships.",
+          "url": "https://hackread.com/great-firewall-of-china-data-published-largest-leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a17",
+          "order": 2,
+          "title": "MODDER INJECTS AI DIALOGUE INTO 2002'S ANIMAL CROSSING USING MEMORY HACK",
+          "summary": "A modder connected AI chatbots to the 2002 game Animal Crossing, enabling villagers to discuss their indebtedness and organize against Tom Nook. Using memory hacking and two Python scripts, the mod injects dynamic, AI-generated dialogue into the game, with a writer creating the dialogue and a director adding technical elements.",
+          "url": "https://arstechnica.com/gaming/2025/09/animal-crossing-mod-uses-ai-to-orchestrate-anti-tom-nook-villager-revolt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a18",
+          "order": 3,
+          "title": "WHAT I LEARNED FROM GETTING REJECTED BY AMAZON: A SECURITY ENGINEER'S INTERVIEW EXPERIENCE",
+          "summary": "A security engineer shares their experience preparing for and interviewing for an AppSec role at Amazon. The author walks through their screening interview and three days of onsite interviews, which included scripting and automation questions, a coding challenge, a threat modeling exercise, and other questions. The article wraps up with lessons learned after a rejection and the resources the author used to prepare.",
+          "url": "https://medium.com/@yuvasurya1998/what-i-learned-from-getting-rejected-by-amazon-a-security-engineers-interview-experience-293e65a2f942?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-15:a20",
+          "order": 1,
+          "title": "SMBS ARE BEING HUNTED - LEARN TO FIGHT BACK AT N-ABLE CYBER RESILIENCE SUMMIT",
+          "summary": "Join Francis Odum and cyber experts from Microsoft and Align for a full day virtual event. Featuring exclusive threat intelligence, AI-driven defense strategies for SMBs, and unfiltered insights.",
+          "url": "https://www.n-able.com/cyber-resilience-summit-2025?utm_medium=email-paid&utm_source=-promotion&utm_campaign=multi-glbl-l-me-tldr_sept_quick_link_promo_2025_cyber_summit-2025-09-15&utm_content=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "n-able.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a21",
+          "order": 2,
+          "title": "Register for free",
+          "summary": "",
+          "url": "https://www.n-able.com/cyber-resilience-summit-2025?utm_medium=email-paid&utm_source=-promotion&utm_campaign=multi-glbl-l-me-tldr_sept_quick_link_promo_2025_cyber_summit-2025-09-15&utm_content=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "n-able.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a22",
+          "order": 3,
+          "title": "QRATOR LABS MITIGATED RECORD L7 DDOS ATTACK FROM 5.76M-DEVICE BOTNET",
+          "summary": "Qrator Labs thwarted a record Layer 7 DDoS from a botnet of 5.76M compromised IoT devices targeting government infrastructure, a 333% increase since March 2025, mainly from Brazil (1.41M), Vietnam (661K), and the US (647K).",
+          "url": "https://hackread.com/qrator-labs-mitigate-l7-ddos-attack-5-76m-botnet/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-15:a23",
+          "order": 4,
+          "title": "POPULAR AI CHATBOTS LEAKING DATA: MILLIONS OF USERS COULD BE AFFECTED",
+          "summary": "Researchers revealed that Vyro AI's server leaked 116GB of data, exposing user prompts, authentication tokens, and putting over 150 million users' privacy and accounts at risk.",
+          "url": "https://links.tldrnewsletter.com/Wg0bsX",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

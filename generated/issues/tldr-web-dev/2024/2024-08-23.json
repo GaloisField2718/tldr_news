@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-08-23",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-23",
+  "source_path": "TLDR Web Dev/article_23-08-2024.md",
+  "source_content_hash": "sha256:d30fcfd8b903c9e843f5e8df16d67c23f1a3d52785c8cd87ee235a702e766779",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-23",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-23:a04",
+          "order": 1,
+          "title": "CONTINUOUS REINVENTION: A BRIEF HISTORY OF BLOCK STORAGE AT AWS",
+          "summary": "Elastic Block Store (EBS) at AWS has evolved from simple shared drives to a massive, distributed SSD system delivering over 140 trillion operations daily. This post shares key lessons learned over the years, emphasizing the importance of incremental improvements, comprehensive instrumentation, and the power of constraints to drive innovation. It also discusses how a team tackled performance challenges by addressing the entire system stack, from the hypervisor to the network, and ultimately by building their own SSDs optimized for EBS.",
+          "url": "https://www.allthingsdistributed.com/2024/08/continuous-reinvention-a-brief-history-of-block-storage-at-aws.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 25,
+          "source_domain": "allthingsdistributed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a05",
+          "order": 2,
+          "title": "STRLCPY AND HOW CPUS CAN DEFY COMMON SENSE",
+          "summary": "strlcpy is a string copying function that traverses the source string only once, compared to strlen + memcpy, which traverses it twice. While it seems intuitive that a single traversal should be faster, benchmarks show that the double traversal method is often significantly faster, particularly for larger strings. This is due to the fact that CPUs can execute independent instructions in parallel, and the memcpy loop in strlen + memcpy has fewer dependencies than the fused loop in strlcpy, allowing for greater parallelism.",
+          "url": "https://nrk.neocities.org/articles/cpu-vs-common-sense?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "nrk.neocities.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a06",
+          "order": 3,
+          "title": "WHAT IS UDP?",
+          "summary": "UDP is a networking protocol that adds port numbers to IP packets, allowing programs on a host to communicate directly with each other. It's often described as \"connectionless\" and \"unreliable\" because it doesn't guarantee delivery of packets, but this makes it ideal for situations where speed and efficiency are important. UDP is used in a wide variety of applications, including live video streaming, online gaming, and VPNs like WireGuard.",
+          "url": "https://pboyd.io/posts/udp/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "pboyd.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-23:a07",
+          "order": 1,
+          "title": "LESSONS LEARNED IN 35 YEARS OF MAKING SOFTWARE",
+          "summary": "This blog post contains a list of lessons learned by a developer from 35 years of making software. The advice covers topics such as relationships, chasing interests, how people see the world, different mindsets to develop, and more. A lot of career progression in white-collar work is gained through developing relationships.",
+          "url": "https://dev.jimgrey.net/2024/07/03/lessons-learned-in-35-years-of-making-software/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "dev.jimgrey.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a08",
+          "order": 2,
+          "title": "ASK HN: WHAT WAS YOUR BIGGEST STARTUP FAIL? (HACKER NEWS THREAD)",
+          "summary": "Hacker News commenters detail various reasons why their startups failed. Some were too ambitious with their MVPs, while others tried to compete on price in a market that wasn't as price-sensitive as expected. Other people built something that people didn't want, while others hired people too early.",
+          "url": "https://news.ycombinator.com/item?id=41283877&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a09",
+          "order": 3,
+          "title": "HOW TO GET A JOB AT A STARTUP",
+          "summary": "To stand out in competitive startup hiring, tailor your application to be concise, clear, and easy for recruiters to scan quickly. Show genuine curiosity by asking insightful questions during interviews and digging into how the company operates. Finally, align yourself with the company's culture, show ownership and optimism, and be flexible with your availability.",
+          "url": "https://open.substack.com/pub/productforengineers/p/how-to-get-a-job-at-a-startup?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-23:a10",
+          "order": 1,
+          "title": "REACH OVER 4 MILLION TECH PROFESSIONALS",
+          "summary": "Developers hate ads, but they love TLDR. With over 4 million subscribers, we're your direct line to tech professionals like",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=secondary08232024",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a10",
+          "order": 2,
+          "title": "software devs, AI engineers, and engineering execs. Learn more",
+          "summary": "about running your first campaign.",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=secondary08232024",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a11",
+          "order": 3,
+          "title": "INSTANTDB",
+          "summary": "Instant is a client-side database that makes it easy to build real-time and collaborative apps like Notion or Figma. You write relational queries in the shape of the data you want and Instant handles all the data fetching, permission checking, and offline caching. It also handles optimistic updates and rollbacks for you when you change data.",
+          "url": "https://github.com/instantdb/instant?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a12",
+          "order": 4,
+          "title": "LOGTAPE",
+          "summary": "LogTape is a flexible logging library for JavaScript and TypeScript with zero dependencies designed to work across environments like Deno, Node.js, and browsers. It supports structured logging, hierarchical categories, and customizable sinks.",
+          "url": "https://github.com/dahlia/logtape?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a13",
+          "order": 5,
+          "title": "FILAMENT",
+          "summary": "Filament is a collection of full-stack components for faster Laravel development that are well-designed, intuitive to use, and fully extensible.",
+          "url": "https://github.com/filamentphp/filament?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-23:a14",
+          "order": 1,
+          "title": "PYTHON'S PREPROCESSOR",
+          "summary": "Python has a powerful preprocessor that allows users to extend its functionality in unexpected ways, despite the common misconception that it lacks one. It uses custom codecs and path configuration files, allowing the interpreter to interpret code written in different languages. This article explores various examples, such as adding unary increment/decrement operators, interpreting C/C++ code using cppyy, and validating TOML files with jsonschema.",
+          "url": "https://pydong.org/posts/PythonsPreprocessor/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "pydong.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a15",
+          "order": 2,
+          "title": "NOTRIS: A TETRIS CLONE FOR THE PLAYSTATION 1",
+          "summary": "This developer created a homebrew PSX game called \"Notris\" in C using modern tools. Driven by the desire to understand classic PSX development, they chose to work directly with the PSNoobSDK and C, learning the intricacies of PSX graphics and programming. They started with a JavaScript prototype, then transitioned to C, building a Tetris clone that is playable on original PSX hardware.",
+          "url": "https://github.com/jbreckmckye/notris?utm_source=tldrwebdev",
+          "reading_time_minutes": 21,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a16",
+          "order": 3,
+          "title": "CONSTRAINING WRITERS IN DISTRIBUTED SYSTEMS",
+          "summary": "This article discusses strategies for minimizing data loss in distributed storage systems by constraining how data is written across multiple nodes. It explores the concept of \"copysets,\" where data is written to specific subsets of nodes, reducing the probability of losing data due to node failures. This approach contrasts with simple replication, where data is written to randomly chosen nodes, increasing the risk of data loss as the number of nodes grows.",
+          "url": "https://shachaf.net/w/constraining-writers-in-distributed-systems?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "shachaf.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-23:a17",
+          "order": 1,
+          "title": "IN A LEAKED RECORDING, AMAZON CLOUD CHIEF TELLS EMPLOYEES THAT MOST DEVELOPERS COULD STOP CODING SOON AS AI TAKES OVER",
+          "summary": "AWS CEO Matt Garman predicts that AI will automate many coding tasks, leading to a shift in the role of software developers, who will need to focus more on innovation and customer needs rather than coding itself.",
+          "url": "https://archive.ph/vjJnu?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a18",
+          "order": 2,
+          "title": "A TOC OF THE 20 PART LINKER ESSAY",
+          "summary": "A 20-part essay on linkers.",
+          "url": "https://lwn.net/Articles/276782/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "lwn.net",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a19",
+          "order": 3,
+          "title": "ISAIAH",
+          "summary": "Isaiah is a self-hostable clone of lazydocker for the web that lets you manage your Docker fleet easily.",
+          "url": "https://github.com/will-moss/isaiah?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a20",
+          "order": 4,
+          "title": "USESTATEOBJECT: A SIMPLE, CONVENIENT API AROUND USESTATE",
+          "summary": "The useStateObject hook provides a simplified API for managing objects in React state by allowing direct property access and offering methods for merging, updating, and resetting state.",
+          "url": "https://www.jameskerr.blog/posts/use-state-object?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "jameskerr.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-23:a21",
+          "order": 5,
+          "title": "PROTOCOL BUFFER DESIGN: PRINCIPLES AND PRACTICES FOR COLLABORATIVE DEVELOPMENT",
+          "summary": "Good protobuf design includes avoiding common pitfalls like ambiguous field naming and leveraging validation tools to maintain future-proof protocols.",
+          "url": "https://eng.lyft.com/protocol-buffer-design-principles-and-practices-for-collaborative-development-8f5aa7e6ed85?source=rss----25cd379abb8---4&utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "eng.lyft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

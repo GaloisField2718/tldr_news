@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-08-07",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-07",
+  "source_path": "TLDR Web Dev/article_07-08-2024.md",
+  "source_content_hash": "sha256:501c008dbf862c4ef3720266c9e0b566a1d6e5ca0906e61e746220c37083f7b5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-07",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-07:a04",
+          "order": 1,
+          "title": "TRACKING SUPERMARKET PRICES WITH PLAYWRIGHT",
+          "summary": "This article goes through the process of building a website for tracking supermarket prices in Greece. The main challenge was scraping JavaScript-heavy websites, which was solved using Playwright. The scraping pipeline was automated using Concourse CI and ran on a Hetzner server, with the author's old laptop acting as an exit node to avoid IP restrictions.",
+          "url": "https://www.sakisv.net/2024/08/tracking-supermarket-prices-playwright/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "sakisv.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a05",
+          "order": 2,
+          "title": "FULL TEXT SEARCH OVER POSTGRES: ELASTICSEARCH VS. ALTERNATIVES",
+          "summary": "This article compares different full text search (FTS) options for Postgres databases, focusing on Elasticsearch and Postgres' native FTS. While Postgres FTS is simple and real-time, it lacks features and performs poorly on large datasets. Elasticsearch requires ETL pipelines, leading to data freshness issues and operational overhead. The article introduces and compares alternative search engines like Algolia, Meilisearch, ParadeDB, and Typesense.",
+          "url": "https://blog.paradedb.com/pages/elasticsearch_vs_postgres?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.paradedb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-07:a06",
+          "order": 1,
+          "title": "WHAT'S HIDDEN BEHIND \"JUST IMPLEMENTATION DETAILS\"",
+          "summary": "The phrase \"just implementation details\" often underestimates the complexity and difficulty involved in building and deploying software. Designing good software involves challenges like designing a maintainable system, having robustness and observability, and providing a good user experience. The perception that \"CRUD\" applications are simple is not true since they also require careful database design, production support, and handling of background jobs, user logins, and permissions.",
+          "url": "https://ntietz.com/blog/whats-behind-just-implementation/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "ntietz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a07",
+          "order": 2,
+          "title": "\"20% FOR TECH DEBT\" DOESN'T WORK",
+          "summary": "Dedicating 20% of engineering capacity to technical debt doesn't work as effectively as it seems. This article highlights five common traps that hinder this approach, such as creating separate backlogs for product and tech, failing to communicate the value of technical work, and diluting focus on specific initiatives. Technical work should be integrated into the product roadmap and clearly demonstrate its business value in order to actually be prioritized.",
+          "url": "https://zaidesanton.substack.com/p/how-to-implement-20-for-tech-debt-?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "zaidesanton.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a08",
+          "order": 3,
+          "title": "DOES ANYONE REALLY USE ANGULAR ANYMORE? (REDDIT THREAD)",
+          "summary": "Angular is still used in enterprise-scale applications a lot, such as in banks and government agencies. React is seemingly more popular with startups and scale-ups though.",
+          "url": "https://links.tldrnewsletter.com/aIDT7l",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-07:a09",
+          "order": 1,
+          "title": "INTRODUCING STRUCTURED OUTPUTS IN THE API",
+          "summary": "OpenAI has introduced Structured Outputs in its API, allowing developers to have model-generated outputs adhere to provided JSON schemas. This guarantees output consistency and format compliance. It's available in the API today.",
+          "url": "https://links.tldrnewsletter.com/1iSw1K",
+          "reading_time_minutes": 28,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a10",
+          "order": 2,
+          "title": "FLEAK",
+          "summary": "Fleak is a low-code serverless API Builder for data teams that requires no infrastructure and allows you to embed API endpoints to your existing modern AI & Data tech stack.",
+          "url": "https://fleak.ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "fleak.ai",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a11",
+          "order": 3,
+          "title": "PLUNK",
+          "summary": "Plunk is an open-source email platform built on top of AWS SES. It allows you to easily send emails from your applications.",
+          "url": "https://github.com/useplunk/plunk?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-07:a12",
+          "order": 1,
+          "title": "ALL THE SPICIEST PARTS OF THE GOOGLE ANTITRUST RULING",
+          "summary": "The US v. Google antitrust ruling revealed that Apple considers Bing an inferior search engine and wouldn't switch to it, even for a huge payment. The judge declared that TikTok and other social media platforms are not competitors to Google Search because they lack the ability to index the entire web. The ruling further stated that AI search technology is not yet advanced enough to replace traditional search engine methods - this was used to justify the final call that Google is a monopoly.",
+          "url": "https://www.theverge.com/24214574/google-antitrust-search-apple-microsoft-bing-ruling-breakdown?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a13",
+          "order": 2,
+          "title": "THERE IS NO MYSTERY OVER WHO WROTE THE BLUE SCREEN OF DEATH, DESPITE WHAT SOME MAY WANT YOU TO BELIEVE",
+          "summary": "The Blue Screen of Death, a notorious part of Microsoft's history, has a clear authorship for each of its iterations. Steve Ballmer is credited with the text of the error message in Windows 3.1, which was not a true \"blue screen of death\" as it displayed a black screen with an error message. The Windows 95 kernel error was actually brought to its final form by Raymond Chen. John Vert is the author of the true \"blue screen of death\" associated with Windows NT.",
+          "url": "https://devblogs.microsoft.com/oldnewthing/20240730-00/?p=110062&utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a14",
+          "order": 3,
+          "title": "CAN WE TRUST MICROSOFT WITH OPEN SOURCE?",
+          "summary": "There was a controversy surrounding Microsoft's commitment to open-source development, specifically regarding the .NET framework. Microsoft was seemingly starting to shift away from open-source practices by removing features like \"Hot Reload\" from the .NET SDK and making them exclusive to Visual Studio. However, the community's strong reaction to this prompted Microsoft to reverse its decision and bring back Hot Reload as an open-source feature.",
+          "url": "https://dusted.codes/can-we-trust-microsoft-with-open-source?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "dusted.codes",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-07:a15",
+          "order": 1,
+          "title": "I DON'T KNOW HOW CPUS WORK SO I SIMULATED ONE IN CODE",
+          "summary": "This author built a simulated 8-bit computer from scratch in code to gain a better understanding of how CPUs work, specifically how bits move, how an ALU functions, and the basic fetch-decode-execute cycle.",
+          "url": "https://djharper.dev/post/2019/05/21/i-dont-know-how-cpus-work-so-i-simulated-one-in-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "djharper.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a16",
+          "order": 2,
+          "title": "UNDERSTANDING 3D GRAPHICS",
+          "summary": "This article provides a comprehensive overview of fundamental concepts in 3D graphics, focusing on shape and color representation.",
+          "url": "https://azeemba.com/posts/understanding-3d-graphics.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "azeemba.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a17",
+          "order": 3,
+          "title": "IN MEMORY OF NIALL CROSBY",
+          "summary": "Niall Crosby, the CEO and founder of AG Grid, passed away recently in a helicopter crash.",
+          "url": "https://blog.ag-grid.com/in-memory-of-niall-crosby/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.ag-grid.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-07:a18",
+          "order": 4,
+          "title": "X OFFICIALLY KILLS ITS SAN FRANCISCO HEADQUARTERS, WILL RELOCATE WORKERS TO SOUTH BAY",
+          "summary": "X is closing its San Francisco headquarters and relocating employees to the South Bay near Palo Alto and San Jose, California.",
+          "url": "https://sfstandard.com/2024/08/05/x-officially-kills-its-san-francisco-headquarters-will-relocate-workers-to-south-bay/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "sfstandard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

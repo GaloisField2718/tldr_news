@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-07-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-14",
+  "source_path": "TLDR InfoSec/article_14-07-2025.md",
+  "source_content_hash": "sha256:2266eb8aebd036f039a7055ab846462d6fb8843cedec0c236b62e9e0a3c6ebb4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a04",
+          "order": 1,
+          "title": "SOURCES",
+          "summary": "Flashpoint analyzed 2.6M+ AI-related posts from underground sources [4] (such as dark web forums and Telegram groups). Their analysis revelas how threat actors are operationalizing everything from jailbroken LLMs to deepfake-as-a-service.",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a04",
+          "order": 2,
+          "title": "Download the full defender's guide",
+          "summary": "",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a05",
+          "order": 1,
+          "title": "ROWHAMMER ATTACK DEMONSTRATED AGAINST NVIDIA GPU",
+          "summary": "A group of researchers from the University of Toronto demonstrated that the Rowhammer attack method can be applied to GPUs in an attack they dubbed GPUHammer. Rowhammer attacks involve repeatedly accessing (“hammering”) a DRAM row, leading to electrical interference that causes bit flips in adjacent memory regions. The researchers have demonstrated that GPUHammer attacks can reduce the accuracy of ML models from 80% to 0.1%.",
+          "url": "https://www.securityweek.com/rowhammer-attack-demonstrated-against-nvidia-gpu/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a06",
+          "order": 2,
+          "title": "MCDONALD'S CHATBOT RECRUITMENT PLATFORM EXPOSED 64 MILLION JOB APPLICATIONS",
+          "summary": "McDonald's chatbot recruitment platform, McHire, exposed the personal data of over 64 million job applicants due to default credentials ('123456' username/password) and an insecure API. Security researchers accessed all applicant information, including names, addresses, phone numbers, and chat messages.",
+          "url": "https://www.securityweek.com/mcdonalds-chatbot-recruitment-platform-leaked-64-million-job-applications/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a07",
+          "order": 3,
+          "title": "OVER 600 LARAVEL APPS EXPOSED TO REMOTE CODE EXECUTION DUE TO LEAKED APP_KEYS ON GITHUB",
+          "summary": "Cybersecurity researchers discovered that leaked Laravel APP_KEYs from GitHub can enable remote code execution attacks. Over 260,000 APP_KEYs were extracted from GitHub, with more than 600 vulnerable applications identified. When attackers obtain these encryption keys, they can exploit deserialization flaws to execute arbitrary code on servers, compromising data and infrastructure security.",
+          "url": "https://links.tldrnewsletter.com/ZFczFW",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a08",
+          "order": 1,
+          "title": "GROK-4 JAILBREAK WITH ECHO CHAMBER AND CRESCENDO",
+          "summary": "Researchers have shown that combining two LLM jailbreak techniques, Echo Chamber and Crescendo, enhances the ability to bypass AI safety measures more effectively than using either method separately. Experiments with Grok-4 on harmful tasks, like providing bomb-making instructions, achieved success rates ranging from 30% to 67%.",
+          "url": "https://neuraltrust.ai/blog/grok-4-jailbreak-echo-chamber-and-crescendo?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "neuraltrust.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a09",
+          "order": 2,
+          "title": "ROLLING OUT SANTA WITHOUT FREEZING PRODUCTIVITY: TIPS FROM SECURING FIGMA'S FLEET",
+          "summary": "Figma successfully deployed Santa, an open-source binary authorization tool, across all employee laptops by running it in monitoring mode for months to build a comprehensive allowlist based on actual usage patterns. It minimized user disruption through a custom Slack-based self-service system that allows employees to quickly approve blocked applications after automated security checks, as well as an escape hatch that enables temporary monitoring mode during rollout. The phased deployment began with users having zero unknown binaries and gradually expanded to 100% coverage over three months, utilizing automated package rule generation and group-based policies to handle edge cases, such as developer tools.",
+          "url": "https://www.figma.com/blog/rolling-out-santa-without-freezing-productivity/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "figma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a10",
+          "order": 3,
+          "title": "HOW I FOUND A BYPASS IN GOOGLE'S BIG ANTI-ADBLOCK UPDATE",
+          "summary": "The author discovered a Chrome bug that allowed MV3 extensions to bypass Google's removal of webRequestBlocking (which kills adblockers) by exploiting legacy JavaScript bindings and creating fake webRequest events with spoofed WebView IDs. The exploit worked by using the constructor of existing webRequest events to create new events with the opt_webViewInstanceId parameter set, which skipped permission checks for webRequestBlocking since the browser never verified if the extension had WebView permissions. Google patched the vulnerability in Chrome 118 by adding proper permission validation, although it didn't award a bounty since it didn't expose new data to extensions.",
+          "url": "https://links.tldrnewsletter.com/G0eOpv",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a11",
+          "order": 1,
+          "title": "84% OF ENTERPRISES HIT BY API SECURITY INCIDENTS, NEW STUDY REVEALS",
+          "summary": "Akamai's new 2024 study of 1,200+ CIOs, CISOs, and security professionals reveals 84% of enterprises experienced API security incidents. The research examines how incidents impact profits, damage credibility, and where gaps exist in API inventories and testing. Access the full research [11] plus their API Security Fundamentals guide [12].",
+          "url": "https://www.akamai.com/lp/api-security-study-2024?utm_source=tldr&utm_medium=email&utm_campaign=f-mc-67957&utm_id=global_api&utm_term=inquire&utm_content=apisec",
+          "reading_time_minutes": null,
+          "source_domain": "akamai.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a13",
+          "order": 2,
+          "title": "TRUSTIFI (PRODUCT LAUNCH)",
+          "summary": "The cloud-based email security solution leverages AI to scan emails for threats such as impersonation, spoofing, spear-phishing, and business email compromise.",
+          "url": "https://links.tldrnewsletter.com/VwdvPW",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a14",
+          "order": 3,
+          "title": "CAMERADAR",
+          "summary": "Cameradar hacks its way into RTSP video surveillance cameras as it is a tool that scans for RTSP camera streams, identifies device models, performs dictionary attacks to find stream routes and credentials, then generates a comprehensive report.",
+          "url": "https://github.com/Ullaakut/cameradar?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a15",
+          "order": 4,
+          "title": "RECONSNAP (PRODUCT LAUNCH)",
+          "summary": "The platform enables automated digital change detection, capturing visual and structural changes on selected targets. This helps you track updates, detect anomalies, and react to potential threats before others.",
+          "url": "https://www.reconsnap.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reconsnap.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a16",
+          "order": 1,
+          "title": "GOOGLE GEMINI FOR WORKSPACE HIJACKS EMAIL SUMMARIES FOR PHISHING",
+          "summary": "A security researcher discovered an indirect prompt-injection attack on Google's Gemini model. The prompt injection attack involves including invisible instructions for Gemini in emails. When a user then uses Google Gemini for Workspace to summarize the email, Gemini will follow the instructions and may include phishing links or misinformation in its summary.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-gemini-flaw-hijacks-email-summaries-for-phishing/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a17",
+          "order": 2,
+          "title": "“LOCALHOST TRACKING” EXPLAINED. IT COULD COST META 32 BILLION",
+          "summary": "Meta deployed “localhost tracking” that bypassed Android security protections by using its mobile apps to listen on local network ports while tracking scripts in web browsers sent user identifiers via WebRTC, linking anonymous browsing activity to real Facebook/Instagram identities even when users employed VPNs, incognito mode, and deleted cookies. The scheme affected 22% of the world's most visited websites and collected complete browsing histories, purchases, and behavioral patterns without proper consent across billions of users over multiple years. Meta now faces potential fines of €32 billion under GDPR, DSA, and DMA regulations for violating data protection, personalized advertising restrictions, and rules governing the combination of cross-platform data.",
+          "url": "https://www.zeropartydata.es/p/localhost-tracking-explained-it-could?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "zeropartydata.es",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a18",
+          "order": 3,
+          "title": "SMM CALLOUT VULNERABILITIES IDENTIFIED IN GIGABYTE UEFI FIRMWARE MODULES",
+          "summary": "Four SMM callout vulnerabilities (CVE-2025-7026 through CVE-2025-7029) were found in Gigabyte UEFI firmware, allowing attackers with admin privileges to execute code in System Management Mode, bypassing OS protections and potentially disabling Secure Boot and Intel BootGuard. These flaws result from improper validation of CPU registers and pointers in SMI handlers, enabling malicious control over SMRAM writes and flash operations. Although they were previously fixed by AMI, these issues reappeared in Gigabyte's firmware, so users should urgently update to the latest UEFI from Gigabyte's support site.",
+          "url": "https://kb.cert.org/vuls/id/746790?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "kb.cert.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-14:a19",
+          "order": 1,
+          "title": "TELEGRAM MESSENGER'S TIES TO RUSSIA'S FSB REVEALED IN NEW REPORT",
+          "summary": "Russian investigative outlet IStories alleges that Telegram's server infrastructure is maintained by companies with ties to Russia's FSB intelligence service, potentially enabling surveillance of users' communications even when using VPNs and incognito mode, though Telegram denies the claims and maintains that no third parties have access to user data.",
+          "url": "https://www.newsweek.com/telegram-messenger-russia-fsb-ties-report-2083491?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "newsweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a20",
+          "order": 2,
+          "title": "DONOT APT HITS EUROPEAN MINISTRY WITH NEW LOPTIKMOD MALWARE",
+          "summary": "The India-linked DoNot APT group targeted a European foreign affairs ministry by using spear-phishing emails impersonating defense officials to deliver its LoptikMod malware via Google Drive links, marking an expansion of its operations beyond its traditional South Asian focus.",
+          "url": "https://hackread.com/donot-apt-hits-european-ministry-loptikmod-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-14:a21",
+          "order": 3,
+          "title": "THIRTEEN ROMANIANS ARRESTED FOR PHISHING THE UK'S TAX SERVICE",
+          "summary": "Thirteen individuals in Romania and one in the UK were apprehended for executing a phishing scam targeting HMRC, which resulted in a theft of £47 million from taxpayers and impacted 100,000 HMRC customers.",
+          "url": "https://www.securityweek.com/thirteen-romanians-arrested-for-phishing-the-uks-tax-service/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

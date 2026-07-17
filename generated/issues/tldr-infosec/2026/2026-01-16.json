@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-16",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-16",
+  "source_path": "TLDR InfoSec/article_16-01-2026.md",
+  "source_content_hash": "sha256:761f10d855f1f6a659fdb58ea84b33169d4add63a857a13be54be5265a792972",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-16",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-16:a04",
+          "order": 1,
+          "title": "A SINGLE CLICK MOUNTED A COVERT, MULTISTAGE ATTACK AGAINST COPILOT",
+          "summary": "Varonis researchers discovered a now-patched vulnerability in Microsoft Copilot Personal, dubbed \"Reprompt,\" that enabled single-click data exfiltration via indirect prompt injection in legitimate Copilot URLs. The attack allowed the extraction of usernames, locations, and chat history even after the victim closed the chat window. Microsoft 365 Copilot was not affected. The vulnerability has been remediated as of this week.",
+          "url": "https://arstechnica.com/security/2026/01/a-single-click-mounted-a-covert-multistage-attack-against-copilot/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a05",
+          "order": 2,
+          "title": "CIRO SAYS ABOUT 750K PEOPLE'S DATA AFFECTED BY CYBERSECURITY INCIDENT",
+          "summary": "The Canadian Investment Regulatory Organization (CIRO) says that the data of about 750K Canadian investors was compromised in a breach last year. The compromised data includes social insurance numbers, investment account numbers, and phone numbers. CIRO stated that the breach resulted from a sophisticated phishing attack.",
+          "url": "https://www.ctvnews.ca/sci-tech/article/ciro-says-about-750k-peoples-data-affected-by-cybersecurity-incident?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "ctvnews.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a06",
+          "order": 3,
+          "title": "SENSITIVE DATA OF EURAIL, INTERRAIL TRAVELERS COMPROMISED IN DATA BREACH",
+          "summary": "A breach at Eurail B.V., the company behind Eurail and Interrail passes, exposed travellers' personal details, including contact information and ID or passport data, and possibly bank and limited health data for some DiscoverEU participants. Affected systems were secured, passwords reset, and customers have been urged to watch for phishing, change related passwords, and monitor bank accounts for unusual activity.",
+          "url": "https://www.helpnetsecurity.com/2026/01/15/eurail-interrail-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-16:a07",
+          "order": 1,
+          "title": "DISSECTING AND EXPLOITING CVE-2025-62507: REMOTE CODE EXECUTION IN REDIS",
+          "summary": "JFrog's Security Researchers have demonstrated successful remote code execution exploitation of CVE-2025-62507, a stack buffer overflow in Redis 8.2.x's XACKDEL command with a CVSS score of 8.8. Unauthenticated attackers can overwrite the return address using crafted stream IDs, a vulnerability made easier by the lack of stack canary protection in the official Docker image. Shodan detected approximately 2,924 servers running vulnerable versions that are immediately exploitable without authentication, while 183,907 additional instances with authentication could also be at risk. Organizations are advised to upgrade to Redis 8.3.2, enable authentication, and compile with the -fstack-protector option, as the research highlights that CVSS scores alone should not determine patching priorities, since high-severity vulnerabilities can still offer straightforward remote code execution paths.",
+          "url": "https://jfrog.com/blog/exploiting-remote-code-execution-in-redis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "jfrog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a08",
+          "order": 2,
+          "title": "STREAMLINING SECURITY INVESTIGATIONS WITH AGENTS",
+          "summary": "Slack's security team introduced an agentic system for investigating security issues that involves a Director persona instructing a series of SME personas, with the results checked by a Critic persona. The Director persona reviews the investigation's status and poses a question to the experts, who use their domain expertise to prepare answers. The Director then queries those answers to advance the investigation loop or conclude the investigation. This system also enables cost optimization: expert personas, which process more data, can use cheaper models, whereas the Director persona, which requires more reasoning, can use more expensive models.",
+          "url": "https://slack.engineering/streamlining-security-investigations-with-agents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "slack.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a09",
+          "order": 3,
+          "title": "THE ERA OF SEMANTIC SECURITY: COMPUTER USE AGENTS AND THE END OF SIGNATURES",
+          "summary": "Local computer use agents fundamentally shift the endpoint security industry because a properly functioning agent can be indistinguishable from a malicious agent or attacker, diminishing the value of signatures. A previous analogue is the adoption of PowerShell by both attackers and sysadmins, which made context necessary to distinguish attacks from standard use. Successful organizations will need to build contextual defense systems rather than trying to push back on agent adoption.",
+          "url": "https://www.originhq.com/blog/era-of-semantic-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "originhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-16:a10",
+          "order": 1,
+          "title": "WHY SUMO LOGIC'S TDIR SCORE TIED FOR SECOND IN THE GARTNER CRITICAL CAPABILITIES REPORT FOR SIEM",
+          "summary": "Consolidating security and IT Ops is no longer just a nice-to-have. By automatically tuning alert thresholds [11] and mapping threats to adversary tactics based on premium threat intelligence feeds, Sumo Logic is helping Dev, Sec, and Ops teams collaborate. Sign up for a demo and get some cool swag [12]!",
+          "url": "https://www.sumologic.com/briefs/gartner-siem-critical-capabilities?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a13",
+          "order": 2,
+          "title": "THE STATE OF RUST CRYPTOGRAPHY IN 2026",
+          "summary": "Rust's cryptography ecosystem has matured significantly, with aws-lc-rs and ring now serving as the official crypto providers for rustls. At least two libraries, aws-lc-rs and boring, offer FIPS 140-3 certification alongside post-quantum KEM support via Kyber algorithms. The ecosystem divides between pure-Rust implementations, such as RustCrypto, dalek-cryptography, and graviola, which offer better auditability and cross-compilation, and C library wrappers that provide assembly-optimized performance. This is a relevant trade-off because 37.2 percent of cryptographic library vulnerabilities stem from memory safety issues. For teams requiring FIPS compliance and performance, aws-lc-rs is recommended. For WebAssembly targets and easier cross-compilation, RustCrypto crates remain the preferred choice.",
+          "url": "https://links.tldrnewsletter.com/PcNYBz",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a14",
+          "order": 3,
+          "title": "ISVERIFIED (PRODUCT LAUNCH)",
+          "summary": "isVerified offers mobile apps that secure executive and institutional phone calls by detecting AI-generated voice deepfakes in real time and binding a verified user identity to a hardened VoIP channel, protecting enterprises from vishing and voice impersonation attacks.",
+          "url": "https://www.isverified.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "isverified.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a15",
+          "order": 4,
+          "title": "BLUETEAM-TOOLS",
+          "summary": "This GitHub repository contains 65+ tools and resources useful for blue teaming activities.",
+          "url": "https://github.com/A-poc/BlueTeam-Tools?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-16:a16",
+          "order": 1,
+          "title": "US GOV'T: HOUSE SYSADMIN STOLE 200 PHONES, CAUGHT BY HOUSE IT DESK",
+          "summary": "A former House Committee on Transportation and Infrastructure sysadmin was indicted for allegedly ordering 240 government cell phones, shipping them to his home, and selling over 200 to a pawn shop in a scheme that cost taxpayers $150,000. The scheme unraveled when one phone, which was instructed to be sold only \"in parts\" to bypass MDM controls, ended up intact on eBay. The buyer called the House IT help desk number displayed on boot. The case highlights the importance of asset management controls and segregation of duties for personnel with procurement authority.",
+          "url": "https://arstechnica.com/tech-policy/2026/01/us-govt-house-sysadmin-stole-200-phones-caught-by-house-it-desk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a17",
+          "order": 2,
+          "title": "MICROSOFT TAPS UK COURTS TO DISMANTLE CYBERCRIME HOST REDVDS",
+          "summary": "Microsoft coordinated civil actions in the US and UK to take down RedVDS, a cybercrime-as-a-service provider that rents cheap virtual servers, fueling large-scale phishing and fraud campaigns worldwide and causing at least $40 million in reported US losses. The operation involves domain seizures, infrastructure disruption, and collaboration with Europol, German authorities, and victim organizations like H2-Pharma and a Florida condo association.",
+          "url": "https://www.theregister.com/2026/01/15/microsoft_uk_courts_redvds/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a18",
+          "order": 3,
+          "title": "FRENCH DATA REGULATOR FINES TELCO SUBSIDIARIES $48 MILLION OVER DATA BREACH",
+          "summary": "France's CNIL fined Free SAS and Free Mobile, subsidiaries of Groupe Iliad, a combined €42 million after a 2024 breach exposed bank and other personal data of 24 million subscribers. Regulators cited weak VPN authentication, poor anomaly detection, and inadequate breach notifications, and criticized the firms' basic security lapses. The companies, which have since upgraded controls, plan to appeal, calling the sanctions unprecedented and disproportionate.",
+          "url": "https://therecord.media/france-data-regulator-fine?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-16:a19",
+          "order": 1,
+          "title": "SOUTH KOREAN GIANT KYOWON CONFIRMS DATA THEFT IN RANSOMWARE ATTACK",
+          "summary": "South Korean education conglomerate Kyowon Group confirmed a ransomware attack impacted 600 of its 800 servers.",
+          "url": "https://www.bleepingcomputer.com/news/security/south-korean-giant-kyowon-confirms-data-theft-in-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a20",
+          "order": 2,
+          "title": "MICROSOFT UPDATES WINDOWS DLL THAT TRIGGERED SECURITY ALERTS",
+          "summary": "Microsoft's updates on January 13 patched the WinSqlite3.dll component across Windows 10/11 and Server 2012-2025 after third-party security tools flagged it as vulnerable to CVE-2025-6965, a memory corruption flaw.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-updates-windows-dll-that-triggered-security-alerts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-16:a21",
+          "order": 3,
+          "title": "CENTRAL MAINE HEALTHCARE DATA BREACH IMPACTS 145,000 INDIVIDUALS",
+          "summary": "Hackers accessed Central Maine Healthcare's network between March and June 2025, exposing names, dates of birth, Social Security numbers, treatment details, provider information, service dates, and insurance data for 145,381 people.",
+          "url": "https://www.securityweek.com/central-maine-healthcare-data-breach-impacts-145000-individuals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

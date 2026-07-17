@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-03-21",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-21",
+  "source_path": "TLDR Web Dev/article_21-03-2025.md",
+  "source_content_hash": "sha256:6b76550069b84f8eebb77bbf630277e1468af87255c09076914fe0f7763307db",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-21",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-21:a04",
+          "order": 1,
+          "title": "LEAKING PASSWORDS (AND MORE!) ON MACOS",
+          "summary": "CVE-2024-54471 is a now-patched macOS vulnerability affecting versions prior to macOS Sequoia 15.1, Sonoma 14.7.1, and Ventura 13.7.1. It allowed unauthorized access to file server credentials stored in the macOS keychain through the NetAuthAgent daemon's MIG server. Attackers could retrieve usernames and passwords, getting access to corporate SSO credentials, user NAS drives, and sensitive files. It also exposed iCloud API tokens, allowing attackers to steal personal data, contacts, calendars, and even track locations.",
+          "url": "https://wts.dev/posts/password-leak/?utm_source=tldrwebdev",
+          "reading_time_minutes": 31,
+          "source_domain": "wts.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a05",
+          "order": 2,
+          "title": "MINDING THE GAPS: A NEW WAY TO DRAW SEPARATORS IN CSS",
+          "summary": "CSS gap decorations are a new proposal to simplify drawing separator lines in layouts like Grid and Flexbox. The proposal extends the `column-rule` property to other layout types and introduces `row-rule`, which allows for gap decorations and control over their appearance, including alternating colors and varying widths. Additional properties like `*-rule-break` and `*-rule-outset` offer fine-tuning of decoration behavior at intersections.",
+          "url": "https://blogs.windows.com/msedgedev/2025/03/19/minding-the-gaps-a-new-way-to-draw-separators-in-css/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blogs.windows.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a06",
+          "order": 3,
+          "title": "A DEEP DIVE INTO THE INLINE BACKGROUND OVERLAP PROBLEM",
+          "summary": "The CSS inline background overlap problem is where semi-transparent backgrounds on inline text with padding overlap and create darker intersections. This problem can be fixed with an SVG filter, using `feComponentTransfer` to restore transparency and blend the text on top. However, a better approach involves setting shapes and RGBA values in CSS and passing them to the SVG filter via different channels/alpha points, so you get full CSS control over text and background without hardcoding values in the SVG filter.",
+          "url": "https://frontendmasters.com/blog/overlapping-inline-backgrounds/?utm_source=tldrwebdev",
+          "reading_time_minutes": 53,
+          "source_domain": "frontendmasters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-21:a07",
+          "order": 1,
+          "title": "THE FRONTEND TREADMILL",
+          "summary": "Frontend teams should avoid rewriting their frontend with new frameworks, as these frameworks become obsolete quickly. Instead, teams should deeply understand their current framework and focus on web fundamentals, which offer more long-term value and career stability. The current frontend ecosystem is broken, making it difficult for new developers to learn.",
+          "url": "https://polotek.net/posts/the-frontend-treadmill/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "polotek.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a08",
+          "order": 2,
+          "title": "NEXT.JS VS TANSTACK",
+          "summary": "Next.js is strong in its out-of-the-box setup and high-scale optimization, but finds its APIs and cloud service features are often unnecessary and complex for many applications. The app router also has a steep learning curve, with debugging difficulties. On the other hand, TanStack combined with Vite is simpler, clearer, and faster to set up.",
+          "url": "https://www.kylegill.com/essays/next-vs-tanstack/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "kylegill.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a09",
+          "order": 3,
+          "title": "THE PAIN THAT IS GITHUB ACTIONS",
+          "summary": "Rewriting CI scripts in GitHub Actions is a frustrating experience, especially when having to deal with complex merge queues, multiple runners, and various builds. Setting up seemingly basic software practices is a challenge due to hidden gotchas, inconsistent behavior, and poor debugging tools. There are also security concerns because of the complex and confusing security model involving tokens and permissions, alongside the risks of using Docker containers with GitHub Actions due to file permission issues and limitations.",
+          "url": "https://www.feldera.com/blog/the-pain-that-is-github-actions?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "feldera.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-21:a10",
+          "order": 1,
+          "title": "CLAUDE CAN NOW SEARCH THE WEB",
+          "summary": "Claude can now search the internet to provide more up-to-date and relevant responses, with citations, for paid users in the US.",
+          "url": "https://www.anthropic.com/news/web-search?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a11",
+          "order": 2,
+          "title": "BRIGHT",
+          "summary": "A React Server Component for syntax highlighting.",
+          "url": "https://github.com/code-hike/bright?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a12",
+          "order": 3,
+          "title": "FRONTEND PRACTICE",
+          "summary": "A collection of real sites that come with a spec sheet on each site, which you can use to recreate the project to improve your frontend skills.",
+          "url": "https://www.frontendpractice.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "frontendpractice.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-21:a13",
+          "order": 1,
+          "title": "WHY REACT IS SURPRISINGLY THE BEST MODEL FOR LLM WORKFLOWS",
+          "summary": "React's component-based model is surprisingly well-suited for building complex, backend LLM workflows, agents, and durable applications. Current LLM frameworks are often criticized for being Python-centric, relying on inflexible static graphs and problematic global state management. However, using React's data model with unidirectional data flow across all use cases makes React's model a much better approach for LLMs.",
+          "url": "https://www.gensx.com/blog/why-react-is-the-best-backend-workflow-engine?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "gensx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a14",
+          "order": 2,
+          "title": "HOW I ACCEPTED MYSELF INTO CANADA'S LARGEST AI HACKATHON",
+          "summary": "This developer found a vulnerability in the GenAI Genesis 2025 hackathon application website, hosted on Firebase. After realizing the site retrieved and parsed all user application data, they manipulated their application status to \"accepted\" by directly updating the database. They later discovered an information leakage issue where sensitive reviewer data could be accessed.",
+          "url": "https://fastcall.dev/posts/genai-genesis-firebase/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "fastcall.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a15",
+          "order": 3,
+          "title": "DIAGRAMS AI CAN, AND CANNOT, GENERATE",
+          "summary": "AI is great at creating generic diagrams and assisting with whiteboarding new systems using tools like ChatGPT. However, it currently struggles to accurately diagram real-life, existing systems from source code due to challenges in training data, code analysis, and understanding system intent.",
+          "url": "https://www.ilograph.com/blog/posts/diagrams-ai-can-and-cannot-generate/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "ilograph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-21:a16",
+          "order": 1,
+          "title": "2FA OR NOT 2FA",
+          "summary": "Strong, memorable passwords, combined with password management strategies, can be more secure and convenient for individual users than relying on 2FA, which introduces extra points of failure due to needing secondary devices and recovery processes.",
+          "url": "http://mikhailian.mova.org/node/295?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "mikhailian.mova.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a17",
+          "order": 2,
+          "title": "OPENAI.FM",
+          "summary": "An interactive demo for developers to try the new text-to-speech model in the OpenAI API.",
+          "url": "https://www.openai.fm/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "openai.fm",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a18",
+          "order": 3,
+          "title": "PUSHING SIDE PROJECTS FORWARD WITH ALMOST NO FREE TIME",
+          "summary": "To make progress with side projects with limited free time, break down large tasks into small, easily achievable actions to maintain momentum and avoid feeling overwhelmed.",
+          "url": "https://rafaelcamargo.com/blog/pushing-side-projects-forward-with-almost-no-free-time/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "rafaelcamargo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-21:a19",
+          "order": 4,
+          "title": "95% AI-WRITTEN CODE? UNPACKING THE Y COMBINATOR CEO'S DEVELOPER JOBS BOMBSHELL",
+          "summary": "Y Combinator's CEO claims that 25% of the accelerator's startups are launching with 95% AI-written code, which has led to smaller engineering teams, faster profitability pressure, and a shift in the roles of human engineers towards AI oversight and complex problem-solving.",
+          "url": "https://leaddev.com/hiring/95-ai-written-code-unpacking-the-y-combinator-ceos-developer-jobs-bombshell?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "leaddev.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

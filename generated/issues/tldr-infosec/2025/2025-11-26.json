@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-11-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-26",
+  "source_path": "TLDR InfoSec/article_26-11-2025.md",
+  "source_content_hash": "sha256:d89305cf8a09cb0e1215fcb272f1ceddf968db7eccb0b6303be846fc66297595",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a04",
+          "order": 1,
+          "title": "THE COMPETITION",
+          "summary": "When G2, the world's largest software marketplace, analyzed 14 enterprise password managers, the results weren't even close:",
+          "url": "https://bitwarden.com/blog/bitwarden-g2-enterprise-grid/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=G2_enterprise_grid",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a04",
+          "order": 2,
+          "title": "See the full breakdown →",
+          "summary": "Ready to see why Bitwarden continues to lead the G2 reports for 11 consecutive quarters? Start a free trial of Bitwarden for your",
+          "url": "https://bitwarden.com/blog/bitwarden-g2-enterprise-grid/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=G2_enterprise_grid",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a05",
+          "order": 3,
+          "title": "business",
+          "summary": "",
+          "url": "https://bitwarden.com/go/business-password-manager/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=form_page",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a06",
+          "order": 1,
+          "title": "FAKE PRETTIER EXTENSION ON VSCODE MARKETPLACE DROPPED ANIVIA STEALER",
+          "summary": "Checkmarx Zero identified and removed a malicious VSCode extension, \"prettier-vscode-plus,\" within 4 hours of publication, limiting the impact to 6 downloads and 3 installs before removal. The brandjacking attack deployed Anivia Stealer (likely rebranded ZeroTrace, sold as MaaS for €120/month) using fileless execution from memory and sandbox evasion techniques to steal Windows credentials, data, and WhatsApp chats. Security teams should implement extension vetting controls and monitor developer tool installations, as supply chain attacks targeting IDEs increasingly aim to compromise source code and credentials.",
+          "url": "https://hackread.com/prettier-extension-vscode-marketplace-anivia-stealer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a07",
+          "order": 2,
+          "title": "US BANKS SCRAMBLE TO ASSESS DATA THEFT AFTER HACKERS BREACH FINANCIAL TECH FIRM",
+          "summary": "Major US banks and financial firms are investigating data stolen in a cyberattack targeting SitusAMC, a New York firm that serves hundreds of lenders. The breach involved theft of corporate, legal, and accounting records, but no malware was deployed. The full scope and impact remain under review. The FBI and affected banks are working to safeguard customer information and determine how many consumers may be affected.",
+          "url": "https://techcrunch.com/2025/11/24/us-banks-scramble-to-assess-data-theft-after-hackers-breach-financial-tech-firm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a08",
+          "order": 3,
+          "title": "UPDATE FIREFOX TO PATCH CVE-2025-13016 VULNERABILITY AFFECTING 180 MILLION USERS",
+          "summary": "A critical memory vulnerability in Firefox's WebAssembly (Wasm) engine, tracked as CVE-2025-13016, exposed 180 million users to remote code execution risks for six months. The flaw involved a stack buffer overflow within the Garbage Collection mechanism caused by an incorrect memory pointer calculation, allowing attackers to hijack program flow via malicious webpages. Security professionals should ensure all instances of Firefox are updated to version 145 or ESR 140.5 immediately to mitigate this high-severity risk.",
+          "url": "https://hackread.com/update-firefox-patch-cve-2025-13016-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a09",
+          "order": 1,
+          "title": "PUBLIC REPORT: GOOGLE PRIVATE AI COMPUTE REVIEW",
+          "summary": "NCC Group conducted a comprehensive security review of Google's Private AI Compute system across two phases (April-September), investing 100 person-days with 10 consultants to assess the cloud-based AI system designed to extend mobile device capabilities while maintaining local privacy guarantees. The review covered architecture assessment, cryptographic implementations, IP-blinding relay security, Outbound RPC Enforcement configuration, and frontend server source code analysis. Security teams working on privacy-preserving cloud AI architectures should examine the full downloadable report for insights on attestation mechanisms, secure enclaves, cryptographic protocols, and privacy-preserving infrastructure design patterns.",
+          "url": "https://www.nccgroup.com/research-blog/public-report-google-private-ai-compute-review/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "nccgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a10",
+          "order": 2,
+          "title": "HOW TO REPLICATE THE CLAUDE CODE ATTACK WITH PROMPTFOO",
+          "summary": "State actors weaponized Claude Code through jailbreaking (roleplay as security researchers + task decomposition) rather than traditional exploits, achieving 82% success rates in installing keyloggers, reverse shells with systemd/.bashrc persistence, LD_PRELOAD hooks, and exfiltrating SSH/API keys. The \"lethal trifecta\" vulnerability arises when agents have access to private data, exposure to untrusted content, and external communication ability. Traditional security tools fail because jailbreak traffic appears legitimate and the attack vector is semantic, not technical. Security teams must implement deterministic access controls, use red team testing tools like Promptfoo before deployment, and recognize that context-blind guardrails and helpful-by-default bias create fundamental vulnerabilities requiring semantic security defenses beyond traditional WAF/IDS/AV solutions.",
+          "url": "https://www.promptfoo.dev/blog/claude-code-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "promptfoo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a11",
+          "order": 3,
+          "title": "STOP PUTTING YOUR PASSWORDS INTO RANDOM WEBSITES (YES, SERIOUSLY, YOU ARE THE PROBLEM)",
+          "summary": "Organizations and individuals have been carelessly exposing sensitive passwords, credentials, keys, and private data by pasting them into public online code formatting tools like JSONFormatter and CodeBeautify. These tools often let users save and share formatted data through predictable URLs, leaving credentials easily discoverable and accessible to anyone, including attackers. Thousands of secrets belonging to major sectors such as government, banking, healthcare, and critical infrastructure have been discovered. Never trust random online tools with any sensitive information, as this habit creates far-reaching security risks and exposure.",
+          "url": "https://labs.watchtowr.com/stop-putting-your-passwords-into-random-websites-yes-seriously-you-are-the-problem/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a12",
+          "order": 1,
+          "title": "MINDLESS AUTOMATION WON'T SAVE OVERWHELMED SOC TEAMS",
+          "summary": "Old-world automation has collapsed under the weight of the ever-changing nature of the SOC, burying analysts in more work while breaches increased. Mate Security [12] is pioneering WISDOM-LED PERFORMANCE: infusing company and industry knowledge into every part of the security organization - from junior and senior analysts to AI",
+          "url": "https://www.mate.security?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr&utm_term=ai-soc",
+          "reading_time_minutes": null,
+          "source_domain": "mate.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a12",
+          "order": 2,
+          "title": "agents. Become an elite SOC",
+          "summary": "",
+          "url": "https://www.mate.security?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr&utm_term=ai-soc",
+          "reading_time_minutes": null,
+          "source_domain": "mate.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a13",
+          "order": 3,
+          "title": "SANTAMON",
+          "summary": "Santamon is an experimental macOS detection sidecar for Santa that evaluates Endpoint Security telemetry locally using CEL rules. It forwards only matched detections to a backend while keeping raw telemetry on-device. Santamon leverages Santa's existing ESF sensor capabilities, avoiding Apple entitlement requirements. It adds three detection rule types: simple matching, time-window correlation, and baseline (first-seen) tracking with optional process tree enrichment.",
+          "url": "https://github.com/0x4D31/santamon?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a14",
+          "order": 4,
+          "title": "BLT",
+          "summary": "OWASP BLT (Bug Logging Tool) is an open-source platform that democratizes bug bounties and security research. Built by the community for the community, BLT makes it easy for security researchers, developers, and organizations to collaborate on finding and fixing security vulnerabilities.",
+          "url": "https://github.com/OWASP-BLT/BLT?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a15",
+          "order": 5,
+          "title": "RAY SECURITY (PRODUCT LAUNCH)",
+          "summary": "Ray Security offers real-time, AI-driven data protection for enterprises. Its platform learns and monitors data usage, applying dynamic security controls to active data, detecting unusual behavior, and automatically responding to threats without impeding operations.",
+          "url": "https://raysecurity.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "raysecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a16",
+          "order": 1,
+          "title": "JPMORGAN, CITI, MORGAN STANLEY ASSESS FALLOUT FROM SITUSAMC DATA BREACH",
+          "summary": "SitusAMC, a mortgage data processor serving major banks including JPMorgan, Citi, and Morgan Stanley, suffered a data exfiltration attack discovered on November 12 that exposed corporate data and potentially customer PII, including SSNs, financial details, and employment records from loan applications. The attack used no ransomware, focusing purely on data theft. It was contained through credential resets, by disabling remote access, and by updating the firewall. Financial institutions must strengthen third-party risk management programs with written oversight policies per new SEC Regulation S-P amendments, as vendor breaches now account for 30% of financial sector incidents (up 15% YoY).",
+          "url": "https://www.csoonline.com/article/4095182/jpmorgan-citi-morgan-stanley-assess-fallout-from-situsamc-data-breach.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a17",
+          "order": 2,
+          "title": "GOOGLE ANTIGRAVITY EXFILTRATES DATA",
+          "summary": "Google Antigravity is vulnerable to indirect prompt injection attacks where poisoned content manipulates the AI into bypassing .gitignore restrictions to steal sensitive credentials from .env files. The data is exfiltrated via a browser subagent directed to a malicious URL, exploiting default settings that allow autonomous command execution and whitelist dangerous domains. Security professionals should mitigate this risk by reviewing \"Agent-assisted development\" permissions and strictly monitoring AI agent access to sensitive files and external network traffic.",
+          "url": "https://www.promptarmor.com/resources/google-antigravity-exfiltrates-data?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "promptarmor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a18",
+          "order": 3,
+          "title": "WORMGPT 4 AND KAWAIIGPT: NEW DARK LLMS BOOST CYBERCRIME AUTOMATION",
+          "summary": "WormGPT 4 and KawaiiGPT are new \"dark LLMs\" that empower less-skilled cybercriminals by automating phishing, malware creation, and reconnaissance without ethical guardrails. WormGPT 4 is a paid service that offers malware generation capabilities. KawaiiGPT is a free, open-source tool that facilitates social engineering and lateral movement scripts. Security professionals should view these tools as a new baseline for digital risk and prepare for a democratized threat landscape where advanced attack capabilities are accessible to anyone with an internet connection.",
+          "url": "https://www.securityweek.com/wormgpt-4-and-kawaiigpt-new-dark-llms-boost-cybercrime-automation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-26:a19",
+          "order": 1,
+          "title": "CHINA'S LENOVO AND OTHER TECH GIANTS STACK MEMORY CHIPS: THE RACE IS ON, AND PRICES ARE UP",
+          "summary": "Lenovo is stockpiling memory chips at 50% above normal levels as AI datacenter demand creates global semiconductor shortages.",
+          "url": "https://cybernews.com/ai-news/chinas-lenovo-tech-giants-stack-memory-chips-prices-up/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cybernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a20",
+          "order": 2,
+          "title": "HACKERS HIJACK BLENDER 3D ASSETS TO DEPLOY STEALC V2 DATA-STEALING MALWARE",
+          "summary": "Hackers are distributing malicious Blender 3D asset files on platforms like CGTrader, leveraging Blender's Auto Run feature and embedded Python scripts.",
+          "url": "https://thehackernews.com/2025/11/hackers-hijack-blender-3d-assets-to.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-26:a21",
+          "order": 3,
+          "title": "CANON SAYS SUBSIDIARY IMPACTED BY ORACLE EBS HACK",
+          "summary": "Canon confirmed that a recent cyberattack linked to the Oracle E-Business Suite hacking campaign affected only a US subsidiary's web server.",
+          "url": "https://www.securityweek.com/canon-says-subsidiary-impacted-by-oracle-ebs-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

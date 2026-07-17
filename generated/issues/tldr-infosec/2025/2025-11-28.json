@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-11-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-28",
+  "source_path": "TLDR InfoSec/article_28-11-2025.md",
+  "source_content_hash": "sha256:e9ad87e2e60d5352450dda57e91c905656679c9b013d78de06b87f5d4cea8cd6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a04",
+          "order": 1,
+          "title": "CODE ZTWTLDR26",
+          "summary": "ThreatLocker's annual Zero Trust World [4] is the most interactive, HANDS-ON CYBERSECURITY LEARNING event. Join hacking labs, get Cyber Hero certified, and attend sessions with cybersecurity, IT, and business experts.",
+          "url": "https://ztw.com/",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a04",
+          "order": 2,
+          "title": "Use code ZTWTLDR26 for $200 off your all-access pass",
+          "summary": "",
+          "url": "https://ztw.com/",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a05",
+          "order": 1,
+          "title": "OPENAI API USER DATA EXPOSED IN MIXPANEL BREACH, CHATGPT UNAFFECTED",
+          "summary": "A breach of Mixpanel's analytics platform exposed OpenAI API user metadata, including names, emails, location data, internal user/org IDs, and browser information. No passwords, API keys, chat logs, or payment data were compromised, and ChatGPT users were unaffected. OpenAI immediately removed Mixpanel from production and notified impacted users. It is conducting a broader vendor security audit. This incident highlights third-party vendor risk. Organizations should inventory analytics tools that receive user data, enforce data minimization policies with vendors, have API users enable MFA, and monitor for targeted phishing using the exposed metadata.",
+          "url": "https://hackread.com/openai-api-mixpanel-data-breach-chatgpt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a06",
+          "order": 2,
+          "title": "ASAHI SAYS CROOKS STOLE DATA OF APPROXIMATELY 2M CUSTOMERS AND EMPLOYEES",
+          "summary": "Ransomware operators hit the Asahi Group in late September, crippling Japanese operations and exposing data on around 2 million people, including customers, employees, and their families. Personal information such as names, addresses, phone numbers, emails, birth dates, and gender was accessed, but no credit card data was involved.",
+          "url": "https://securityaffairs.com/185126/data-breach/asahi-says-crooks-stole-data-of-approximately-2m-customers-and-employees.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a07",
+          "order": 3,
+          "title": "GAINSIGHT CEO DOWNPLAYS IMPACT OF ATTACK THAT SPREAD TO SALESFORCE ENVIRONMENTS",
+          "summary": "Gainsight is investigating a breach involving its Salesforce-connected app, working with Mandiant and relying heavily on Salesforce logs to understand which customers were affected and how attackers used compromised OAuth tokens. The company insists that only a small number of customers saw data impact. Google Threat Intelligence has flagged hundreds of potentially affected Salesforce instances.",
+          "url": "https://cyberscoop.com/gainsight-ceo-downplays-salesforce-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a08",
+          "order": 1,
+          "title": "THREAT HUNTING VS. THREAT INTELLIGENCE",
+          "summary": "Threat intelligence focuses on understanding the external threat landscape, while threat hunting proactively investigates internal systems for threats that have evaded automated defenses through hypothesis-driven analysis and behavioral anomaly detection. The two functions create a feedback loop: intelligence provides IOCs, TTPs, and focus areas to guide hunting hypotheses, while hunting discoveries enrich intelligence with validated internal findings. Security teams should integrate both by using threat intelligence to prioritize hunting efforts via MITRE ATT&CK TTP mapping, embedding intelligence feeds into SIEM/EDR for automated IOC correlation, and establishing workflows that link hunting results to strategic and tactical intelligence products.",
+          "url": "https://www.recordedfuture.com/blog/threat-hunting-vs-threat-intelligence?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "recordedfuture.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a09",
+          "order": 2,
+          "title": "THE MINEFIELD BETWEEN SYNTAXES: EXPLOITING SYNTAX CONFUSIONS IN THE WILD",
+          "summary": "Syntax confusion arises when different components, such as browsers, proxies, frameworks, or libraries, parse the same input in conflicting ways, letting attackers bypass filters or change behaviour. By abusing alternate syntaxes, an attacker can slip dangerous characters or paths past validation and turn limited issues like SSRF or cache quirks into powerful primitives such as stored XSS or arbitrary file access.",
+          "url": "https://www.yeswehack.com/learn-bug-bounty/syntax-confusion-ambiguous-parsing-exploits?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "yeswehack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a10",
+          "order": 1,
+          "title": "XBOW: EXPERT-LEVEL PENTESTING DONE IN HOURS. NO MEETINGS REQUIRED.",
+          "summary": "Traditional pentests take weeks or more. With XBOW Lightspeed Pentest On-Demand [10] you can launch a test in minutes. Get your compliance report in 5 business days, including proof-of-exploit findings, and stay audit-ready. Try it yourself to see why XBOW is ranked #1 on the HackerOne World Leaderboard with 1,092+ zero-day vulnerabilities",
+          "url": "https://xbow.com/?utm_source=tldr&utm_medium=email&utm_campaign=lightspeed-promo-1",
+          "reading_time_minutes": null,
+          "source_domain": "xbow.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a11",
+          "order": 2,
+          "title": "discovered to date. Start your test.",
+          "summary": "",
+          "url": "https://xbow.com/pentest?utm_source=tldr&utm_medium=email&utm_campaign=lightspeed-promo-1",
+          "reading_time_minutes": null,
+          "source_domain": "xbow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a12",
+          "order": 3,
+          "title": "DEVOPS PIPELINE ATTACK SURFACE (WEBAPP)",
+          "summary": "A fully searchable, client-side guide to 88+ tools across 15 categories for pentesters and red teamers.",
+          "url": "https://arcanum-sec.github.io/devops-attack-surface/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "arcanum-sec.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a13",
+          "order": 4,
+          "title": "GODEFENDER",
+          "summary": "GoDefender is a Go-based security toolkit that detects and defends against debugging, virtualization, and DLL injection attacks to hinder reverse engineering efforts. It provides virtualization detection, anti-debugging via API monitoring and critical function patching, and DLL injection prevention using Binary Image Signature Mitigation Policy to block non-Microsoft binaries.",
+          "url": "https://github.com/EvilBytecode/GoDefender?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a14",
+          "order": 5,
+          "title": "INFIISCAL",
+          "summary": "Infisical is an open-source secrets management platform that features a dashboard, client SDKs for fetching secrets, an API, and integrations with several platforms, like Kubernetes and Terraform.",
+          "url": "https://github.com/Infisical/infisical?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a15",
+          "order": 1,
+          "title": "INSIDE THE GITHUB INFRASTRUCTURE POWERING NORTH KOREA'S CONTAGIOUS INTERVIEW NPM ATTACKS",
+          "summary": "Socket Threat Research exposed North Korea's Contagious Interview operation, which added 197 malicious npm packages since October, using a GitHub-Vercel-npm delivery chain to distribute OtterCookie malware targeting blockchain and Web3 developers through fake job interviews. The malware performs comprehensive data theft. Security teams should treat npm installs as remote code execution, implement network egress controls on CI/CD systems, require code review for GitHub templates, and deploy real-time package scanning to detect behaviors like import-time loaders and eval on network responses before malware executes.",
+          "url": "https://links.tldrnewsletter.com/0voZc2",
+          "reading_time_minutes": 21,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a16",
+          "order": 2,
+          "title": "REPORT NAMES TEEN IN SCATTERED LAPSUS$ HUNTERS, GROUP DENIES",
+          "summary": "A 15-year-old in Jordan known as \"Rey\" was allegedly identified as a key administrator of Scattered LAPSUS$ Hunters after operational security failures. The group, which merged tactics from Scattered Spider, LAPSUS$, and ShinyHunters, conducted high-impact attacks against Jaguar Land Rover, Schneider Electric, Telefonica, and other major organizations using stolen Salesforce data, insider recruitment, and ALPHV/BlackCat ransomware variants. The group vigorously denied the allegations in a detailed Telegram response, offering 10 BTC to anyone who could prove Rey's identity with evidence. Rey himself claims he's been cooperating with law enforcement since June and is attempting to exit the cybercrime community.",
+          "url": "https://hackread.com/report-names-teen-scattered-lapsus-hunters-group/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a17",
+          "order": 3,
+          "title": "SCOTTISH COUNCIL STILL REBUILDING SYSTEMS TWO YEARS AFTER RANSOMWARE ATTACK",
+          "summary": "A 2023 ransomware attack on Comhairle nan Eilean Siar forced the Western Isles council to rebuild multiple core systems, leaving some finance and revenue platforms still not fully restored two years later. The incident has cost around £950,000, created large data gaps and backlogs, and left staff under intense, prolonged pressure.",
+          "url": "https://www.theregister.com/2025/11/27/western_isles_ransomware_council/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-28:a18",
+          "order": 1,
+          "title": "MICROSOFT TEAMS' GUEST CHAT FEATURE EXPOSES CROSS-TENANT BLIND SPOT",
+          "summary": "Microsoft Teams' cross-tenant guest chat feature (MC1182004) bypasses all Defender for Office 365 protections when users accept external tenant invitations.",
+          "url": "https://www.csoonline.com/article/4097381/microsoft-teams-guest-chat-feature-exposes-cross-tenant-blind-spot.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a19",
+          "order": 2,
+          "title": "MICROSOFT TO SECURE ENTRA ID SIGN-INS FROM SCRIPT INJECTION ATTACKS",
+          "summary": "Microsoft will implement a strengthened Content Security Policy for Entra ID by October 2026 that blocks external script injection and cross-site scripting attacks.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-to-secure-entra-id-sign-ins-from-external-script-injection-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-28:a20",
+          "order": 3,
+          "title": "FAKE LINKEDIN JOBS TRICK MAC USERS INTO DOWNLOADING FLEXIBLE FERRET MALWARE",
+          "summary": "The Contagious Interview campaign targets Mac users through fake LinkedIn job postings that lure victims to fraudulent assessment websites.",
+          "url": "https://www.malwarebytes.com/blog/news/2025/11/fake-linkedin-jobs-trick-mac-users-into-downloading-flexible-ferret-malware?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

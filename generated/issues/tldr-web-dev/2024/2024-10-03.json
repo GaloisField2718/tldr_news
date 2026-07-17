@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-10-03",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-03",
+  "source_path": "TLDR Web Dev/article_03-10-2024.md",
+  "source_content_hash": "sha256:06905e0de65d86dda8968e47314daa259a3dcc7181b2bdec3c9f35cbdb7f53d7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a04",
+          "order": 1,
+          "title": "FEATURES",
+          "summary": "",
+          "url": "https://blog.cloudflare.com/builder-day-2024-announcements?utm_medium=native&utm_source=newsletter&utm_campaign=2024-q4-pay-gbl-developers-dp-ge-general-tldr_webdev_1_093024",
+          "reading_time_minutes": null,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a08",
+          "order": 1,
+          "title": "THE HARDEST BUG INVESTIGATION OF MY CAREER AND THE INSANE CODE THAT CAUSED IT",
+          "summary": "A weird bug in an augmented reality system caused disorienting visual glitches and interestingly, only happened every Wednesday. After an extensive, months-long investigation involving robotic arms, lasers, and a high-FPS camera, the root cause turned out to be due to a time-translation hack using day-of-week words in German and English neglecting to account for the German word for Wednesday, \"Mittwoch.\" This oversight led to timestamp discrepancies, resulting in the weekly glitches and an unpredictable error correction mechanism.",
+          "url": "https://links.tldrnewsletter.com/hSr9Ko",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a09",
+          "order": 2,
+          "title": "\"WE RAN OUT OF COLUMNS\" - THE BEST, WORST CODEBASE",
+          "summary": "This is the story of a massive, poorly designed legacy codebase with a chaotic database structure, including a table with a single column and row used for generating IDs and a manually-updated calendar table. The codebase itself was a mishmash of technologies, with a mix of VB and C#, various JavaScript frameworks, and even a shipping manager built in a weekend by a lone developer. Despite its flaws, developers found the chaotic nature of the system freeing, as they were forced to create isolated, independent solutions within the larger mess.",
+          "url": "https://jimmyhmiller.github.io/ugliest-beautiful-codebase?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "jimmyhmiller.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a10",
+          "order": 3,
+          "title": "SERIALIZATION IS THE SECRET",
+          "summary": "JavaScript is a mutable programming language, while Elixir leans towards immutability. While both languages appear to have similar variable assignment behavior, Elixir achieves this through \"rebinding,\" creating new variables with new values instead of mutating existing ones. This immutable approach, along with Elixir's process-based concurrency, eliminates the possibility of race conditions and unexpected state changes that are common in mutable languages.",
+          "url": "https://www.zachdaniel.dev/p/serialization-is-the-secret?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "zachdaniel.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a11",
+          "order": 1,
+          "title": "HASH ORDERING AND HYRUM'S LAW",
+          "summary": "Hyrum's Law states that any observable behavior in a system, even if undocumented, will be relied upon by some users. This has massive consequences, especially during large-scale migrations, as users might depend on seemingly insignificant details like hash iteration order. One example is the iteration order of hash tables in Java, which is technically unspecified but often remains stable for years. This can lead to users inadvertently writing code that depends on the order, causing problems during Java version upgrades.",
+          "url": "https://eaftan.github.io/hash-ordering/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "eaftan.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a12",
+          "order": 2,
+          "title": "GOOD PROGRAMMERS WORRY ABOUT DATA STRUCTURES AND THEIR RELATIONSHIPS",
+          "summary": "Linus Torvalds (the creator of Git and Linux) says that data structures are more important than code in software development since good data structures lead to better code design and maintainability. This developer supports this view with personal experience, describing how restructuring data in a project allowed a team to move faster in the long run. The prioritization is also how Git grew to be the dominant version control system.",
+          "url": "https://read.engineerscodex.com/p/good-programmers-worry-about-data?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a13",
+          "order": 3,
+          "title": "HEALTHY PERFORMANCE MANAGEMENT FOR ENGINEERS? IT'S POSSIBLE!",
+          "summary": "Traditional performance reviews can be ineffective for engineering roles. Instead, a better way to manage performance is by setting clear expectations while also being dynamic, since the nature of development is always changing.",
+          "url": "https://shiftmag.dev/performance-management-for-engineers-4283/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "shiftmag.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a05",
+          "order": 1,
+          "title": "FREE VIRTUAL TICKETS TO CAMUNDACON NYC, THE ANNUAL PROCESS ORCHESTRATION CONFERENCE",
+          "summary": "",
+          "url": "https://newyork.camundacon.com/page/3899887/tickets?utm_medium=paid_leadgen&utm_source=tldr&utm_campaign=CamundaCon.NA.24Q4.Oct",
+          "reading_time_minutes": null,
+          "source_domain": "newyork.camundacon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a15",
+          "order": 2,
+          "title": "IF YOU'RE INTO AUTOMATION — AS A SOFTWARE DEVELOPER, ARCHITECT, OR DIGITAL TRANSFORMATION EXPERT — YOU DON'T WANT TO MISS [14]CamundaCon [15]. Level up in technical sessions and business talks (including speakers from Gartner, Forrester, Capital One, and Walmart) and get new ideas for your automation projects. Join virtually for $0",
+          "summary": "",
+          "url": "https://newyork.camundacon.com/page/4152456/virtual-only?utm_campaign=CamundaCon.NA.24Q4.Oct&utm_medium=paid_leadgen&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "newyork.camundacon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a16",
+          "order": 3,
+          "title": "TINYJS",
+          "summary": "TinyJS is a JavaScript library for dynamically creating HTML elements with deep property assignment. It makes DOM manipulation easier by allowing you to generate standard HTML tags programmatically, apply properties, append content, and select DOM elements.",
+          "url": "https://github.com/victorqribeiro/TinyJS?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a17",
+          "order": 4,
+          "title": "ULTIMATE EXPRESS",
+          "summary": "Ultimate Express is a drop-in replacement for Express.js that offers faster performance using µWebSockets while maintaining full Express compatibility.",
+          "url": "https://github.com/dimdenGD/ultimate-express?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a18",
+          "order": 5,
+          "title": "THE FASTEST MUTEXES",
+          "summary": "Cosmopolitan Libc's new mutex implementation is much faster than other popular libraries. One of the secrets behind the implementation is nsync, a C library written by a distinguished engineer at Google.",
+          "url": "https://justine.lol/mutex/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "justine.lol",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a19",
+          "order": 1,
+          "title": "IN THE LAND OF LLMS, CAN WE DO BETTER MOCK DATA GENERATION?",
+          "summary": "Using LLMs to generate mock data has proven to be much harder than expected. A team explored using LLMs to generate Rust code for dynamic INSERT queries for their database platform, but found the generated code bad. Eventually, the team developed a hybrid approach, using LLMs to predict faker (Python package) methods for data generation while using topological sorting for accurate insertion order.",
+          "url": "https://neurelo.substack.com/p/in-the-land-of-llms-can-we-do-better?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "neurelo.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a20",
+          "order": 2,
+          "title": "OFFLINE UX PATTERNS",
+          "summary": "Expensify's offline UX patterns prioritize \"optimistic responses,\" assuming API requests will succeed when the user is back online and allowing them to proceed as if the action is complete. These responses can be incorporated with or without feedback, where the user is either aware or not aware that a request is pending and/or sent.",
+          "url": "https://github.com/Expensify/App/blob/main/contributingGuides/OFFLINE_UX.md?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a21",
+          "order": 3,
+          "title": "WEB SCRAPING WITH YOUR WEB BROWSER: WHY NOT?",
+          "summary": "Web scraping can be effectively done directly within a web browser, despite the widespread reliance on Python and other external tools. While limitations like CORS restrictions exist, they can be overcome with the use of proxy servers. This article shows a simple web scraper built entirely within a web browser using just a few lines of JavaScript code.",
+          "url": "https://8chananon.github.io/tut/scraping1.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "8chananon.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-03:a22",
+          "order": 1,
+          "title": "DON'T SLEEP ON ABORTCONTROLLER",
+          "summary": "AbortController is a JavaScript API that allows you to abort various operations like network requests, event listeners, and streams in a clean way.",
+          "url": "https://kettanaito.com/blog/dont-sleep-on-abort-controller?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "kettanaito.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a23",
+          "order": 2,
+          "title": "WP ENGINE SUES AUTOMATTIC AND WORDPRESS FOUNDER (62 PAGE PDF)",
+          "summary": "WP Engine has sued Automattic and WordPress founder Matt Mullenweg for libel, slander, attempted extortion, unfair competition, and more.",
+          "url": "https://wpengine.com/wp-content/uploads/2024/10/Complaint-WP-Engine-v-Automattic-et-al.pdf?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "wpengine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a24",
+          "order": 3,
+          "title": "WHY TCP NEEDS 3 HANDSHAKES",
+          "summary": "TCP requires three handshakes to establish a connection because it makes sure both parties confirm their ability to send and receive data.",
+          "url": "https://www.pixelstech.net/article/1727412048-Why-TCP-needs-3-handshakes?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "pixelstech.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-03:a25",
+          "order": 4,
+          "title": "ANGULAR ROUTING ESSENTIALS: ALL YOU NEED TO KNOW IN ONE POST",
+          "summary": "A comprehensive guide to Angular Routing that covers essential concepts like defining routes, links, and outlets and advanced features like data resolvers and route protection.",
+          "url": "https://monsterlessons-academy.com/posts/angular-routing-essentials-all-you-need-to-know-in-one-post?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "monsterlessons-academy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

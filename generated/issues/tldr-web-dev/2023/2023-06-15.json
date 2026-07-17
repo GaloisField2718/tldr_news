@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2023-06-15",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-06-15",
+  "source_path": "TLDR Web Dev/article_15-06-2023.md",
+  "source_content_hash": "sha256:0ee4851b40157fcdc6e168552a827e18fe3229728bfc111cd760fe7950aaba6e",
+  "format_family": "inline_url",
+  "parse_status": "partial",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'MINUTE READ) [http://jsomers.net/blog/speed-matters]' has no inline URL",
+      "line": 64
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'ZAP [https://github.com/zigzap/zap]' has no inline URL",
+      "line": 100
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'ZEAL [https://zealdocs.org/]' has no inline URL",
+      "line": 107
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'REWIND-UI [https://github.com/rewindui/rewindui]' has no inline URL",
+      "line": 112
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'MINUTE READ) [https://archive.ph/0hiBN]' has no inline URL",
+      "line": 163
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-06-15",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-06-15:o001",
+          "order": 1,
+          "title": "NATIVE JSON OUTPUT FROM GPT-4",
+          "summary": "The new GPT API features function calling, making it easier to connect with external tools and APIs. It can output JSON instead of just strings when making function calls. Function calling basically gives developers lower-level access to the large language model, making developing on top of the GPT API easier. This article goes through an example of using the API properly and the implications of this new feature.",
+          "url": "https://yonom.substack.com/p/native-json-output-from-gpt-4",
+          "reading_time_minutes": 8,
+          "source_domain": "yonom.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o002",
+          "order": 2,
+          "title": "MIGRATING NETFLIX TO GRAPHQL SAFELY",
+          "summary": "Netflix migrated their mobile apps to GraphQL in 2022. This was done with zero downtime and involved a total overhaul from the client to the API layer. Doing this safely for 100s of millions of customers without disruption was exceptionally challenging, especially considering the many dimensions of change involved. This blog post shares the broadly-applicable techniques (beyond GraphQL) Netflix used to perform this migration. The three strategies discussed are AB Testing, Replay Testing, and Sticky Canaries. Netflix first created a new GraphQL service over the previous legacy monolith API endpoints. It then deprecated both the service and legacy API in favor of GraphQL services owned by the domain teams.",
+          "url": "https://netflixtechblog.com/migrating-netflix-to-graphql-safely-8e1e4d4f1e72",
+          "reading_time_minutes": 8,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o003",
+          "order": 3,
+          "title": "MINUTE READ)",
+          "summary": "Using HTTP to query for a search works, but it's not the most optimal UX if your query takes a long time. Users have to wait for the entire search to complete, which can take up to 30 seconds for sparse queries that are not requested often. A better UX would be to stream responses as you query, which can be accomplished with Server-sent events (SSE). This article explains how SSE works, how it differs from traditional web sockets, and how you can integrate it in Express.js.",
+          "url": "https://www.hyperdx.io/blog/speeding-up-search-latency-with-server-sent-events-on-express",
+          "reading_time_minutes": null,
+          "source_domain": "hyperdx.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-06-15:o004",
+          "order": 1,
+          "title": "MINUTE READ) [http://jsomers.net/blog/speed-matters]",
+          "summary": "The obvious benefit to working quickly is that you’ll finish more stuff per unit time. But there’s more to it than that. If you work quickly, the cost of doing something new will seem lower in your mind, so you’ll be inclined to do more. Google famously prioritized speed as a feature. They realized that if search is fast, you’re more likely to search. The reason is that it encourages you to try stuff, get feedback, and try again. Working fast ends up implicitly lowering the activation energy to do new tasks, which means you get more done and try more things.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o005",
+          "order": 2,
+          "title": "MINUTE READ)",
+          "summary": "This retrospective post covers things one developer learned while working on large TypeScript and React codebases. It recommends best practices to replicate and pitfalls to avoid.",
+          "url": "https://dev.to/noriste/some-things-i-learnt-from-working-on-big-frontend-codebases-1e0a",
+          "reading_time_minutes": null,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o006",
+          "order": 3,
+          "title": "MY TAKE ON A UNIFIED THEORY OF REACTIVITY",
+          "summary": "Reactivity is an important feature of front end frameworks. There are a number of ways to provide this functionality. This post summarizes the three ways frameworks today provide reactivity: value-based (think states in React), observables-based (through subscriptions), and signal-based (which is close to observables-based, but without the need to subscribe/unsubscribe). It discusses the pros and cons of each reactivity model and a hot take on why signals are the best model out of the three.",
+          "url": "https://www.builder.io/blog/unified-reactivity-theory",
+          "reading_time_minutes": 7,
+          "source_domain": "builder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-06-15:o007",
+          "order": 1,
+          "title": "ZAP [https://github.com/zigzap/zap]",
+          "summary": "Zap is a zig framework to create REST APIs quickly. It can be considered to be a microframework for web applications, similar to Flask for Python. Zap comes with multiple features, such as routes, endpoints, cookie support, middleware, and more.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o008",
+          "order": 2,
+          "title": "ZEAL [https://zealdocs.org/]",
+          "summary": "Zeal is an offline documentation browser for software developers. It comes with over 200 docs in multiple languages.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o009",
+          "order": 3,
+          "title": "REWIND-UI [https://github.com/rewindui/rewindui]",
+          "summary": "Rewind-UI is a React component library for building modern web applications using Tailwind CSS. It offers a range of accessible, highly customizable components that can be easily integrated into any React project. Rewind-UI comes with a set of default styles that can be easily customized using Tailwind CSS classes. Furthermore, each component can be parameterized using a set of props that can be used to change the default styles of the component.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-06-15:o010",
+          "order": 1,
+          "title": "FINISH YOUR PROJECTS",
+          "summary": "Most people dream of building great projects, but many never start. Of the few that start, even fewer finish. This guide breaks down how to plan successfully and overcome roadblocks to become one of the few that finishes the projects they start. Finishing requires effort and courage.",
+          "url": "https://github.com/readme/guides/finish-your-projects",
+          "reading_time_minutes": 5,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o011",
+          "order": 2,
+          "title": "ALWAYS THE SAME WARNING SIGNS",
+          "summary": "Promising stories like that of Theranos and FTX have ended with the discovery of fraud. But how were investors and so many others fooled by the founders of these companies? Each company had warning signs that were similar and when these warning signs came up, they deserved much more scrutiny than they actually got. For example, if it seems like only one person can get this company to work and/or if a lot of important data is missing or kept secret, then it might be a sign to take a closer look at the company.",
+          "url": "https://www.science.org/content/blog-post/always-same-warning-signs",
+          "reading_time_minutes": 3,
+          "source_domain": "science.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o012",
+          "order": 3,
+          "title": "LOW CODE AND NO CODE DEVELOPMENT TOOLS",
+          "summary": "As the demand for software applications continues to grow, the pressure on developers to deliver high-quality solutions in a timely manner has increased exponentially. No-code and low-code development tools have become popular to address this challenge. This article explores the world of low-code and zero-code development tools, the benefits, key features, use cases, challenges, and the future of this emerging field.",
+          "url": "https://semaphoreci.com/blog/low-code-no-code-development-tools",
+          "reading_time_minutes": 14,
+          "source_domain": "semaphoreci.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-06-15:o013",
+          "order": 1,
+          "title": "MINUTE READ) [https://archive.ph/0hiBN]",
+          "summary": "Coding interviews continue to get harder as more software engineers join the industry. Recognizing patterns in problem statements can help make interviews easier to both approach and solve. This article lays out 20 coding interview patterns that a developer should know if they are interviewing for a new job.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o014",
+          "order": 2,
+          "title": "5 FRONT-END FRAMEWORKS TO CONSIDER OTHER THAN REACT",
+          "summary": "React is just one of many choices for frontend development. This blog will discuss frontend frameworks other than React that are popular and a good fit for web application development.",
+          "url": "https://www.syncfusion.com/blogs/post/5-front-end-web-frameworks-other-than-react.aspx/amp",
+          "reading_time_minutes": 4,
+          "source_domain": "syncfusion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o015",
+          "order": 3,
+          "title": "TEST YOUR REACT HOOKS WITH VITEST EFFICIENTLY",
+          "summary": "Vitest is a powerful unit testing framework primarily used for JavaScript and TypeScript. This post explores how to use Vitest and React Testing Library to help unit test React hooks in a way that makes them easy to maintain and extend.",
+          "url": "https://mayashavin.com/articles/test-react-hooks-with-vitest",
+          "reading_time_minutes": 8,
+          "source_domain": "mayashavin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-06-15:o016",
+          "order": 4,
+          "title": "INTRODUCING VERCEL'S AI ACCELERATOR",
+          "summary": "Vercel has announced a 6 week program with over $850k in credits from Vercel and top AI platforms.",
+          "url": "https://vercel.com/blog/vercel-ai-accelerator",
+          "reading_time_minutes": 2,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-03-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-19",
+  "source_path": "TLDR InfoSec/article_19-03-2026.md",
+  "source_content_hash": "sha256:f435989a49a7bc4ed46b4e683aeb1751f1d04ad267d52427559754863ef1d689",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a04",
+          "order": 1,
+          "title": "SEE IDENTITY ATTACK PATHS ACROSS OKTA, GITHUB, AND MAC",
+          "summary": "BloodHound Enterprise users can now see identity attack paths across Okta, GitHub, and Jamf using OpenGraph [4].",
+          "url": "http://specterops.io/opengraph-bloodhound-enterprise?utm_source=tldr&utm_medium=ad&utm_campaign=web-260313-opengraph",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a05",
+          "order": 1,
+          "title": "FORTINET PATCHES FORTIGATE FIREWALL VULNERABILITIES THAT ALLOWED HACKERS TO STEAL ENTERPRISE CREDENTIALS",
+          "summary": "SentinelOne observed attackers exploiting three critical CVSS 9.8 vulnerabilities in FortiGate NGFWs between December 2025 and February 2026: CVE-2025-59718 and CVE-2025-59719, both stemming from improper cryptographic signature verification, which allowed unauthenticated attackers to forge SAML tokens and gain administrative access. CVE-2026-24858 was exploited as a zero-day to log into devices using an alternative account. CVE-2025-59718 was added to CISA's KEV catalog in late January 2026. Fortinet responded by suspending FortiCloud SSO before releasing a firmware patch. Defenders should apply the patch immediately, rotate all LDAP and AD credentials associated with FortiGate devices, enforce strong admin access controls, audit mS-DS-MachineAccountQuota settings, and monitor EDR telemetry from servers adjacent to the NGFW for unauthorized local admin account creation.",
+          "url": "https://www.techradar.com/pro/security/fortinet-patches-fortigate-firewall-vulnerabilities-that-allowed-hackers-to-steal-enterprise-credentials?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a06",
+          "order": 2,
+          "title": "STRYKER TARGETED BY LARGE-SCALE WIPER ATTACK, TENS OF THOUSANDS OF DEVICES LOST",
+          "summary": "The pro-Iranian hacktivist group Handala compromised Stryker's Microsoft Intune environment on March 11, abusing legitimate MDM remote-wipe functionality to factory reset tens of thousands of Windows endpoints across 79 countries, erasing up to 95% of devices in some offices before containment. Handala, assessed by Palo Alto Networks to operate under the Iranian Ministry of Intelligence and Security, claims to have wiped over 200,000 systems and exfiltrated 50 TB of corporate data prior to triggering the destructive wipe. Medical devices, Vocera, Mako surgical robotics, LIFEPAK, and SurgiCount platforms remained unaffected due to architectural isolation from the impacted Microsoft environment. Organizations should audit MDM admin credential access and enforce conditional access policies to prevent similar living-off-the-land abuse.",
+          "url": "https://gbhackers.com/stryker-targeted-by-large-scale-wiper-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a07",
+          "order": 3,
+          "title": "MARQUIS SAYS OVER 672,000 PEOPLE HAD PERSONAL AND FINANCIAL DATA STOLEN IN RANSOMWARE ATTACK",
+          "summary": "Marquis had 672,075 people's data stolen in an August 2025 ransomware attack. Stolen data includes names, birth dates, addresses, bank and card account numbers, and Social Security numbers, with over half the victims living in Texas. Marquis sued its firewall vendor, SonicWall, in February, as it claims SonicWall's failings let attackers steal firewall configuration backup files to breach its network.",
+          "url": "https://techcrunch.com/2026/03/18/marquis-says-over-672000-people-had-personal-and-financial-data-stolen-in-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a08",
+          "order": 1,
+          "title": "ACCELERATE AND AUTOMATE REMEDIATION WITH SEMGREP AUTOFIX",
+          "summary": "Semgrep Autofix, now in public beta, pairs the Semgrep Pro static analysis engine with frontier-model LLMs to deliver contextual upgrade guidance, line-level breaking change analysis, and AI-generated fix suggestions directly in pull requests. The tool performs dual static analysis — first-party code analysis to map how your codebase uses a dependency, and third-party version diffing to identify breaking changes — before passing results to an LLM to produce high-confidence remediation. Layered on top of Semgrep Assistant's existing 95% false positive reduction via codebase-aware reachability analysis, Autofix shifts developer effort from writing fixes to reviewing AI-generated patches.",
+          "url": "https://semgrep.dev/blog/2026/semgrep-autofix-public-beta/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a09",
+          "order": 2,
+          "title": "AGENT SKILLS ARE THE NEW PACKAGES OF AI: IT'S TIME TO MANAGE THEM SECURELY",
+          "summary": "JFrog launched the Agent Skills Registry, a centralized repository for governing AI agent skills — reusable, file-system-based instruction sets that execute with the invoking user's privileges and carry the same supply chain risks as OSS packages: prompt poisoning, malicious code, version drift, and weak provenance. The registry integrates with Agent Skills, ClawHub, and OpenShell, and enforces a publish-time security pipeline via `jf skills publish` that runs a two-stage behavioral scan, generates in-toto compliant attestations, and optionally produces cryptographically signed provenance evidence before a skill reaches the repository. At install time, `jf skill install` verifies that evidence chain, providing zero-trust consumption across coding agents, CI/CD pipelines, and automation tooling without locking teams into vendor-specific marketplaces.",
+          "url": "https://jfrog.com/blog/agent-skills-new-ai-packages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "jfrog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a10",
+          "order": 3,
+          "title": "THE MOST ORGANIZED THREAT ACTORS USE YOUR ITSM (BMC FOOTPRINTS PRE-AUTH REMOTE CODE EXECUTION CHAINS)",
+          "summary": "watchTowr chained four flaws in BMC FootPrints — an auth bypass (CVE-2025-71257), two SSRF bugs (CVE-2025-71258, CVE-2025-71259), and a Java deserialization RCE (CVE-2025-71260) — to achieve pre-authenticated remote code execution on fully patched versions 20.20.02 through 20.24.01.001. The auth bypass leaks a session token via the password-reset endpoint, which then unlocks the SSRF and deserialization chains. BMC shipped hotfixes in September 2025 after a three-month back-and-forth reproduction process. CVEs were only assigned in March. FootPrints had no CVEs since 2014, making it an under-scrutinized target sitting on networks that also hold IT asset inventories and incident data.",
+          "url": "https://labs.watchtowr.com/thanks-itsms-threat-actors-have-never-been-so-organized-bmc-footprints-pre-auth-remote-code-execution-chains/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a11",
+          "order": 1,
+          "title": "7 MUST-HAVE FEATURES TO SECURE YOUR WORKFORCE",
+          "summary": "Threat actors don't break in — they log in. As credential-based attacks become the primary entry point for breaches, you need workforce identity verification (IDV) to verify that every login is legitimate. The Workforce IDV checklist breaks down the seven must-have features to help you evaluate solutions and protect against unauthorized access.",
+          "url": "https://withpersona.com/guides/workforce-idv-checklist?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_campaign=brnd_wf_ds_wf-idv_infosec-tldr-idv-checklist",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a11",
+          "order": 2,
+          "title": "Download the checklist today",
+          "summary": "",
+          "url": "https://withpersona.com/guides/workforce-idv-checklist?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_campaign=brnd_wf_ds_wf-idv_infosec-tldr-idv-checklist",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a12",
+          "order": 3,
+          "title": "VMKATZ",
+          "summary": "VMkatz is a ~2.5 MB static binary that extracts Windows credentials directly from VM memory snapshots and virtual disks across VMware, VirtualBox, Proxmox, and Hyper-V without exfiltrating disk images. It supports all 9 LSASS SSP providers via in-place decryption, native VMFS-6 raw SCSI access to bypass file locks on running ESXi VMs, and natively parses NTDS.dit ESE databases for full Active Directory hash extraction with no impacket or external dependencies.",
+          "url": "https://github.com/nikaiw/VMkatz/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a13",
+          "order": 4,
+          "title": "NATIVE SECURITY (PRODUCT LAUNCH)",
+          "summary": "Native provides a multi-cloud security control plane that turns high-level security policy into provider-native controls, enforcing secure-by-design architecture across AWS, Azure, Google Cloud, and Oracle using built‑in security features instead of after-the-fact detection.",
+          "url": "https://native.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "native.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a14",
+          "order": 5,
+          "title": "FIM",
+          "summary": "FIM is an Open Source Host-based file integrity monitoring tool that performs file system analysis, file integrity checking, real-time alerting, and provides Audit daemon data.",
+          "url": "https://github.com/Achiefs/fim?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a15",
+          "order": 1,
+          "title": "IRANIAN BOTNET EXPOSED VIA OPEN DIRECTORY: 15-NODE RELAY NETWORK AND ACTIVE C2",
+          "summary": "An OPSEC failure on an Iranian-hosted staging server at 185.221.239[.]162 exposed a financially motivated operator's full working environment, including a 15-node KCP-based relay network spanning Finnish Hetzner nodes and Iranian ISPs, a Python botnet deployer (ohhhh.py) opening 500 concurrent SSH sessions to compile and launch a DDoS bot client (cnc) directly on victim machines via gcc, and MHDDos tooling tested against live targets. The exposed .bash_history documented three operational phases: tunnel deployment using paqet and 3x-ui, DDoS development targeting a FiveM GTA server (5.42.223[.]60:30120) and 194.147.222[.]151, and iterative C2 botnet buildout with Farsi inline comments confirming operator origin. Defenders should block the listed IOCs, monitor for unexpected gcc invocations and renamed binaries (\"hex\"), audit SSH access logs for credential-stuffing patterns, and treat any recruited hosts as independently compromised regardless of C2 reachability.",
+          "url": "https://hunt.io/blog/iran-botnet-operation-open-directory?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "hunt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a16",
+          "order": 2,
+          "title": "THE SHADOW AI PROBLEM: HOW SAAS APPS ARE QUIETLY ENABLING MASSIVE BREACHES",
+          "summary": "A Grip Security analysis of 23,000 SaaS environments found every one of them runs embedded AI, with public SaaS attacks up 490% year-over-year and 80% of incidents exposing PII or customer data. The 2025 Salesloft Drift breach shows the blast radius: attackers stole OAuth tokens and used them to access 700+ organizations, including Cloudflare and Palo Alto Networks. Companies average 140 AI-enabled SaaS environments, most of which are installed without a security review.",
+          "url": "https://links.tldrnewsletter.com/es7Ndm",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a17",
+          "order": 3,
+          "title": "'CLAUDY DAY' TRIO OF FLAWS EXPOSES CLAUDE USERS TO DATA THEFT",
+          "summary": "Oasis Security researchers combined three vulnerabilities — an invisible prompt injection through URL parameters, an open redirect on claude.com, and data exfiltration via the Anthropic Files API into a single attack called \"Claudy Day.\" When a victim clicks a malicious Google search result, it loads covert instructions that silently extract conversation history, save it to a file, and then upload it to the attacker's Anthropic account. If MCP servers or integrations are active, the attack's impact extends to files, messages, and connected APIs.",
+          "url": "https://links.tldrnewsletter.com/rSJAvr",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-19:a18",
+          "order": 1,
+          "title": "QUANTUM CRYPTOGRAPHY PIONEERS WIN TURING AWARD",
+          "summary": "Charles Bennet and Gilles Brassard were awarded the Turing Award for their pioneering work in Quantum Information Science.",
+          "url": "https://www.quantamagazine.org/quantum-cryptography-pioneers-win-turing-award-20260318/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "quantamagazine.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a19",
+          "order": 2,
+          "title": "LINUX FOUNDATION KICKS OFF EFFORT TO SHIELD FOSS MAINTAINERS FROM AI SLOP BUG REPORTS",
+          "summary": "Anthropic, AWS, GitHub, Google, Microsoft, and OpenAI have pledged $12.5M to a project to help open source maintainers combat the deluge of AI-generated bug reports.",
+          "url": "https://www.theregister.com/2026/03/18/linux_foundation_ai_slop_defense/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-19:a20",
+          "order": 3,
+          "title": "RESEARCHERS WARN OF UNPATCHED, CRITICAL TELNETD FLAW AFFECTING ALL VERSIONS",
+          "summary": "CVE-2026-32746 (CVSS 9.8) is an unpatched buffer overflow in GNU InetUtils telnetd's LINEMODE SLC handler affecting all versions up to 2.7 that enables unauthenticated RCE as root via a single connection to port 23.",
+          "url": "https://securityaffairs.com/189620/hacking/researchers-warn-of-unpatched-critical-telnetd-flaw-affecting-all-versions.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

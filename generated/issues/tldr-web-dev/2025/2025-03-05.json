@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-03-05",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-05",
+  "source_path": "TLDR Web Dev/article_05-03-2025.md",
+  "source_content_hash": "sha256:ce3697bbf34eef4d37032291073d08eaebad57b39a4611aef378121a811a5d7a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a04",
+          "order": 1,
+          "title": "✂️ CUT YOUR QA CYCLES DOWN TO MINUTES WITH QA WOLF",
+          "summary": "If QA is a bottleneck on your software engineering team and you're releasing slowly because of it, you need to check out QA Wolf.",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250203-None_Experiment-FALSE&utm_term=headline-CutYourQACyclesDownToMinutesWithQAWolf&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithQAWolf_None_None_None_Newsletter-PrimaryPlacement_20250203_v1",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a08",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250203-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithQAWolf_None_None_None_Newsletter-PrimaryPlacement_20250203_v1",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a09",
+          "order": 1,
+          "title": "ABUSING SQLITE TO HANDLE CONCURRENCY",
+          "summary": "SkyPilot uses SQLite for state management, but had issues with high concurrent writes when scaling its Managed Jobs feature, leading to database lock errors. After investigating SQLite's internals, it found that lock acquisition is prone to starvation due to the lack of FIFO guarantees and that WAL mode doesn't fully solve concurrent write problems. Avoiding SQLite for high write concurrency is the best option, but WAL mode and a high lock timeout can be used if you must use SQLite for such situations.",
+          "url": "https://blog.skypilot.co/abusing-sqlite-to-handle-concurrency/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.skypilot.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a10",
+          "order": 2,
+          "title": "FINDING LEAKED PASSWORDS WITH AI: HOW WE BUILT COPILOT SECRET SCANNING",
+          "summary": "GitHub Copilot secret scanning uses AI to detect generic passwords in codebases. The development team faced challenges with unconventional file types and the need for resource-efficient scaling, leading to improvements in offline evaluation, prompt engineering, and workload-aware request management. Mirror testing was necessary for high precision and a low false positives rate.",
+          "url": "https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a11",
+          "order": 3,
+          "title": "RESOURCE PREFETCHING MAY SLOW DOWN YOUR WEBSITE",
+          "summary": "While prefetching is supposed to improve website performance by loading resources in advance, it can sometimes worsen loading speed by competing with critical content for bandwidth. Despite being assigned the lowest priority, prefetch requests may initiate too early, delaying the loading of important elements like the Largest Contentful Paint (LCP). To prevent this, you can inject prefetch hints via JavaScript after the initial page load to make sure essential content loads first.",
+          "url": "https://www.debugbear.com/blog/prefetch-slower-website?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "debugbear.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a12",
+          "order": 1,
+          "title": "LLM SUBSCRIPTIONS VS. APIS VALUE FOR MONEY",
+          "summary": "LLM subscriptions like ChatGPT Plus and Claude Pro are cheaper than using their API equivalents. The potential AI usage one could get from these $20 subscriptions can potentially exceed $1300 per month for Claude and $14,661 for ChatGPT if fully used. Even with lower usage, the subscription still provides a cost-effective alternative to direct API access.",
+          "url": "https://www.asad.pw/llm-subscriptions-vs-apis-value-for-money/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "asad.pw",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a13",
+          "order": 2,
+          "title": "GOODBYE, SKYPE: A PRODUCT INSIDER'S TAKE ON THE ICONIC APP'S FALL",
+          "summary": "The downfall of Skype was due to a lack of focus, prioritization of features over quality, and a failure to capitalize on opportunities like the COVID-19 pandemic. Plus, Microsoft's focus on Teams made Skype redundant and obsolete.",
+          "url": "https://blog.logrocket.com/product-management/goodbye-skype-product-insider-take/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.logrocket.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a14",
+          "order": 3,
+          "title": "HOW TO DO THOUGHTFUL CODE REVIEWS",
+          "summary": "Before sending out code for a review, devs should do a self-review and break down large changes into smaller pull requests. The code reviewer should provide specific, actionable feedback. Repetitive tasks like formatting should be handled by linters and AI agents.",
+          "url": "https://links.tldrnewsletter.com/LXgz8n",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a15",
+          "order": 1,
+          "title": "NUT",
+          "summary": "Nut is an open-source project that combines debugging technology with AI to automate bug fixing during app dev. It uses recording capabilities to provide AI with the context needed to effectively debug code generated through prompting, making creating apps without having to manually write code easier.",
+          "url": "https://nut.new/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "nut.new",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a16",
+          "order": 2,
+          "title": "STYLE OBSERVER",
+          "summary": "Style Observer is an observer library that lets you observe CSS changes and run JS.",
+          "url": "https://github.com/LeaVerou/style-observer?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a17",
+          "order": 1,
+          "title": "WHY FASTDOOM IS FAST",
+          "summary": "The fastDOOM port of DOOM (a video game) runs much faster on a restored IBM PS/1. fastDOOM's speed improvements are from various optimizations, such as code cleanup, strategic inlining, and renderer choices.",
+          "url": "https://fabiensanglard.net/fastdoom/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "fabiensanglard.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a18",
+          "order": 2,
+          "title": "DEALING WITH (HYPOTHETICAL) SHAM PACKAGES",
+          "summary": "This post discusses a hypothetical scenario where a malicious package, a \"Swindle\" in the \"Sham\" language ecosystem, is introduced into a software supply chain. In this case, an engineer might unknowingly merge a malicious update through automated dependency management, leading to potential security breaches. It then goes over how to discover the compromise and deal with it properly.",
+          "url": "https://blog.rubygems.org/2025/02/20/dealing-with-sham-packages.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.rubygems.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-05:a19",
+          "order": 1,
+          "title": "MICHIGAN TYPESCRIPT FOUNDER SUCCESSFULLY RUNS DOOM INSIDE TYPESCRIPT'S TYPE SYSTEM",
+          "summary": "The founder of Michigan TypeScript successfully ran Doom within TypeScript's type system by creating a WebAssembly runtime in TypeScript types, processing 177 terabytes of type definitions, and essentially turning the type checker into a virtual machine.",
+          "url": "https://socket.dev/blog/typescript-types-running-doom?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a20",
+          "order": 2,
+          "title": "HOW DEEPSEEK BECAME A FORTUNE TELLER FOR CHINA'S YOUTH",
+          "summary": "DeepSeek, China's advanced AI reasoning model, has become a popular tool for AI-powered fortune-telling.",
+          "url": "https://www.technologyreview.com/2025/03/03/1112604/deepseek-fortune-teller-china/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "technologyreview.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a21",
+          "order": 3,
+          "title": "BUILDING WEBSITES WITH LLMS",
+          "summary": "Website interactions can be built with lots of little HTML pages linked together with CSS view transitions instead of complex JavaScript.",
+          "url": "https://blog.jim-nielsen.com/2025/lots-of-little-html-pages/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-05:a22",
+          "order": 4,
+          "title": "SHOULD MANAGERS STILL CODE?",
+          "summary": "While all engineering managers should be familiar with their team's codebase, whether they should actively write code depends on the individual manager, team, and organization.",
+          "url": "https://theengineeringmanager.substack.com/p/should-managers-still-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "theengineeringmanager.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

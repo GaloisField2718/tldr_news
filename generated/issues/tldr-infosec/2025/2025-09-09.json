@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-09-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-09",
+  "source_path": "TLDR InfoSec/article_09-09-2025.md",
+  "source_content_hash": "sha256:793dd055e151a1debf33aa773f640684a8f6d8ddeff3716c6f44dd72e11766ed",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a04",
+          "order": 1,
+          "title": "AI AND THREAT INTELLIGENCE: THE DEFENDERS' GUIDE",
+          "summary": "In this guide [4], you'll learn how to:",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a04",
+          "order": 2,
+          "title": "Get the guide 📥",
+          "summary": "",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a05",
+          "order": 1,
+          "title": "FINANCIAL SERVICES FIRM WEALTHSIMPLE DISCLOSES DATA BREACH",
+          "summary": "Canadian financial services firm Wealthsimple disclosed a data breach detected on August 30 that exposed the personal information of fewer than 30,000 customers (less than 1% of its 3 million client base) through a compromised third-party software package. The stolen data included contact details, government IDs, financial account numbers, Social Insurance Numbers, IP addresses, and dates of birth. No passwords or customer funds were compromised. Wealthsimple is providing affected customers with two years of free credit monitoring, dark-web monitoring, identity theft protection, and insurance. It confirmed the incident was unrelated to recent Salesforce breaches.",
+          "url": "https://www.bleepingcomputer.com/news/security/financial-services-firm-wealthsimple-discloses-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a06",
+          "order": 2,
+          "title": "GHOSTACTION ATTACK STEALS 3,325 SECRETS FROM GITHUB PROJECTS",
+          "summary": "The GhostAction supply chain attack compromised 817 GitHub repositories by injecting malicious workflow files that appeared to be routine automation scripts but actually exfiltrated CI/CD secrets to an external server. The campaign affected 327 developers across multiple programming languages, stealing 3,325 secrets, including npm, PyPI, DockerHub tokens, and AWS credentials that could enable further attacks on software supply chains. The attackers personalized each commit and analyzed legitimate workflows to identify which secrets to target. At least 24 projects (9 npm and 15 PyPI) remain at risk from compromised tokens despite no confirmed malicious package releases yet.",
+          "url": "https://hackread.com/ghostaction-attack-steals-github-projects-secrets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a07",
+          "order": 3,
+          "title": "OVER 6,700 PRIVATE REPOSITORIES MADE PUBLIC IN NX SUPPLY CHAIN ATTACK",
+          "summary": "Hackers used stolen secrets from Nx to expose over 6,700 private repositories in a major supply chain attack that targeted hundreds of organizations. The threat actors leveraged malicious Nx packages to steal API keys and credentials, and exploited the compromised accounts to publish sensitive data from private repositories to public GitHub repositories.",
+          "url": "https://www.securityweek.com/over-6700-private-repositories-made-public-in-nx-supply-chain-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a08",
+          "order": 1,
+          "title": "GPUGATE MALWARE: MALICIOUS GITHUB DESKTOP IMPLANTS USE HARDWARE-SPECIFIC DECRYPTION, ABUSE GOOGLE ADS TO TARGET WESTERN EUROPE",
+          "summary": "Russian-speaking threat actors deployed the \"GPUGate\" campaign using a sophisticated multi-stage attack combining Google Ads malvertising, GitHub commit manipulation, and hardware-specific GPU-gated decryption to target Western European IT professionals with fake GitHub Desktop installers. The attackers leveraged Google's paid search results, modified legitimate GitHub repository commits to include malicious download links, and created 128MB installers with OpenCL-based decryption that only executes on systems with real GPUs (device names >10 characters), effectively bypassing sandbox analysis. The campaign demonstrates advanced evasion tactics, including UAC bypass, Windows Defender exclusions, persistence through scheduled tasks, and modular payload delivery, with the ultimate goal of credential theft, lateral movement, and potential ransomware deployment targeting high-value IT sector victims.",
+          "url": "https://arcticwolf.com/resources/blog/gpugate-malware-malicious-github-desktop-implants-use-hardware-specific-decryption-abuse-google-ads-target-western-europe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "arcticwolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a09",
+          "order": 2,
+          "title": "REVERSE ENGINEERING OF APPLE'S IOS 0-CLICK CVE-2025-43300: 2 BYTES THAT MAKE SIZE MATTER",
+          "summary": "CVE-2025-43300 is a zero-click out-of-bounds write vulnerability in the ImageIO framework that occurs when processing DNG images with JPEG lossless compression. Exploited in the wild, the vulnerability stems from incorrect buffer allocation and loop bounds in the lossless JPEG decompression code, where the system assumes at least two components per pixel but processes images with only 1 component, causing writes beyond allocated memory. Apple's patch adds bounds checking to verify buffer size before each write operation and raises an exception when the buffer would be exceeded, fixing the mismatch between allocated buffer size (based on components per pixel) and actual write operations.",
+          "url": "https://blog.quarkslab.com/patch-analysis-of-Apple-iOS-CVE-2025-43300.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.quarkslab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a10",
+          "order": 3,
+          "title": "ESCAPING THE CONFINES OF PORT 445",
+          "summary": "Attackers are restricted to using port 445 when performing NTLM relay attacks on SMB in Active Directory environments. A common strategy to get around this limitation is by extracting the SAM and SYSTEM registry hives to dump NT hashes, but this often triggers alerts or is blocked by EDR. This article details a technique that uses Service Control Manager (SCM) to start the Webclient service, which offers more lateral movement options.",
+          "url": "https://specterops.io/blog/2025/07/24/escaping-the-confines-of-port-445-ntlm-relay/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a11",
+          "order": 1,
+          "title": "GARTNER®HYPE CYCLETM FOR SECURITY OPERATIONS, 2025",
+          "summary": "Download This Gartner® Report to Learn Dropzone's Takeaways:",
+          "url": "https://content.dropzone.ai/resources/gartner-hype-cycle-security-operations-2025?utm_%5B%E2%80%A6%5Dip=&utm_medium=newsletter&utm_content=Gartner+Hype+Cycle&utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "content.dropzone.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a12",
+          "order": 2,
+          "title": "Download the Report",
+          "summary": "",
+          "url": "https://content.dropzone.ai/resources/gartner-hype-cycle-security-operations-2025?utm_%5B%E2%80%A6%5Dip=&utm_medium=newsletter&utm_content=Gartner+Hype+Cycle",
+          "reading_time_minutes": null,
+          "source_domain": "content.dropzone.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a13",
+          "order": 3,
+          "title": "DITTOBYTES",
+          "summary": "Dittobytes compiles C-code into truly Position Independent Code (PIC) for Windows, macOS, and Linux. Supporting AMD64 and ARM64, it has a metamorphic engine that ensures each compile produces unique, functional shellcode. The resulting shellcode is very small and simple and has minimal overhead.",
+          "url": "https://github.com/tijme/dittobytes?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a14",
+          "order": 4,
+          "title": "FIRECOMPASS (PRODUCT LAUNCH)",
+          "summary": "FireCompass is a platform that integrates attack surface management, continuous threat exposure management, network and application penetration testing, penetration testing as a service, and red teaming.",
+          "url": "https://firecompass.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "firecompass.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a15",
+          "order": 5,
+          "title": "FINDMYTAKEOVER",
+          "summary": "findmytakeover is a tool that detects dangling DNS records in a multi-cloud environment. It achieves this by scanning all DNS zones and infrastructure within the configured cloud service provider, whether in a single or multiple accounts, to identify DNS records for which the underlying infrastructure no longer exists, rather than relying on a wordlist.",
+          "url": "https://github.com/anirudhbiyani/findmytakeover?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a16",
+          "order": 1,
+          "title": "GERMANY CHARGES HACKER WITH ROSNEFT CYBERATTACK IN LATEST WAKE-UP CALL FOR CRITICAL INFRASTRUCTURE",
+          "summary": "German prosecutors charged a 30-year-old man with computer sabotage, data alteration, and espionage for attacking Rosneft Deutschland in March 2022, stealing and deleting 20 terabytes of data while leaving a \"Glory to Ukraine\" message, costing the company €12.36 million in damages. The attack, conducted in the aftermath of Russia's invasion of Ukraine, exposed sensitive internal communications and corporate documents, with the stolen data later distributed by the Anonymous hacktivist collective. The incident highlights the vulnerability of critical energy infrastructure to cyberattacks, particularly during geopolitical tensions, emphasizing the need for enhanced cybersecurity measures in essential services sectors.",
+          "url": "https://www.exponential-e.com/blog/germany-charges-hacker-with-rosneft-cyberattack-in-latest-wake-up-call-for-critical-infrastructure?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "exponential-e.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a17",
+          "order": 2,
+          "title": "SEXTORTION WITH A TWIST: SPYWARE TAKES WEBCAM PICS OF USERS WATCHING PORN",
+          "summary": "A new variant of spyware called Stealerium can automatically take webcam photos of people while they watch porn, then send these to hackers for possible blackmail. Distributed as free, open-source code, it infects users via phishing emails. Researchers say this marks a move from large-scale ransom to more personal extortion, and warn it's hard to track individual victims.",
+          "url": "https://arstechnica.com/security/2025/09/sextortion-with-a-twist-spyware-takes-webcam-pics-of-users-watching-porn/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a18",
+          "order": 3,
+          "title": "THE CRAZY, TRUE STORY BEHIND THE FIRST AI-POWERED RANSOMWARE",
+          "summary": "NYU researchers built an AI-powered ransomware as a proof-of-concept, showing how large language models can automate targeted ransomware attacks. Their project, initially intended for research purposes, was flagged by security experts as a real threat after it was uploaded to VirusTotal. The experiment highlights growing concerns that, soon, cybercriminals will be able to easily weaponize AI for sophisticated, undetectable attacks.",
+          "url": "https://www.theregister.com/2025/09/05/real_story_ai_ransomware_promptlock/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-09:a19",
+          "order": 1,
+          "title": "PONEMON + MATTERMOST RESEARCH: 64% OF ORGANIZATIONS SUFFERED MISSION-CRITICAL WORKFLOW DISRUPTIONS LAST YEAR",
+          "summary": "According to the report, cyberattacks are the leading cause of mission-critical failures, with average costs hitting $1M per",
+          "url": "https://mattermost.com/exclusive-report-the-state-of-mission-critical-work/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=InfoSec9-9",
+          "reading_time_minutes": null,
+          "source_domain": "mattermost.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a19",
+          "order": 2,
+          "title": "incident. Read the full analysis",
+          "summary": "",
+          "url": "https://mattermost.com/exclusive-report-the-state-of-mission-critical-work/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=InfoSec9-9",
+          "reading_time_minutes": null,
+          "source_domain": "mattermost.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a20",
+          "order": 3,
+          "title": "MAX SEVERITY ARGO CD API FLAW LEAKS REPOSITORY CREDENTIALS",
+          "summary": "A maximum severity vulnerability (CVE-2025-55190, CVSS 10.0) in Argo CD allows API tokens with minimal project-level get permissions to bypass isolation mechanisms and retrieve all repository credentials, including usernames and passwords.",
+          "url": "https://www.bleepingcomputer.com/news/security/max-severity-argo-cd-api-flaw-leaks-repository-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a21",
+          "order": 4,
+          "title": "NPM DEBUG AND CHALK PACKAGES COMPROMISED",
+          "summary": "Attackers injected malware into npm packages like debug, chalk, supports-color, and strip-ansi, targeting crypto/web3 wallets in browsers.",
+          "url": "https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "aikido.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-09:a22",
+          "order": 5,
+          "title": "GITHUB ACCOUNT COMPROMISE LED TO SALESLOFT DRIFT BREACH AFFECTING 22 COMPANIES",
+          "summary": "Hackers accessed Salesloft's GitHub account between March and June, stealing security tokens linked to 22 companies and prompting the company to disable Drift, reset credentials, and enhance security measures.",
+          "url": "https://thehackernews.com/2025/09/github-account-compromise-led-to.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

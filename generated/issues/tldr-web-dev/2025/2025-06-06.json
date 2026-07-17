@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-06-06",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-06-06",
+  "source_path": "TLDR Web Dev/article_06-06-2025.md",
+  "source_content_hash": "sha256:68e455edd82e81901db80905f96566a6f8bf34505f76eb4549115feead0631c2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-06-06",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-06:a04",
+          "order": 1,
+          "title": "REVERSE ENGINEERING LINEAR'S SYNC ENGINE: A DETAILED STUDY (1 HOUR READ)",
+          "summary": "This document reverse-engineers Linear's Sync Engine (LSE). LSE uses models defined with JavaScript classes and decorators, using MobX for observability and a sophisticated bootstrapping and lazy loading system. Client-side changes are sent as transactions to the server and are managed using a transaction queue, with conflict resolution handled using a \"last-writer-wins\" strategy.",
+          "url": "https://github.com/wzhudev/reverse-linear-sync-engine?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a05",
+          "order": 2,
+          "title": "ONE ROUNDTRIP PER NAVIGATION",
+          "summary": "Navigating to a new page should ideally involve a single request to fetch the necessary data. Client-side logic and component-based architectures, while offering colocation of UI and data fetching, often lead to inefficient multiple requests and client-server waterfalls. Server Loaders centralize data fetching but sacrifice colocation, while GraphQL and React Server Components (RSC) attempt to achieve both colocation and single-round trip efficiency by composing data dependencies or rendering components on the server.",
+          "url": "https://overreacted.io/one-roundtrip-per-navigation?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "overreacted.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a06",
+          "order": 3,
+          "title": "WHAT A DEVELOPER NEEDS TO KNOW ABOUT SCIM",
+          "summary": "SCIM (System for Cross-domain Identity Management) is a standard used by identity providers to communicate user changes (additions, updates, and removals) to other software. It makes integration easier by standardizing JSON formats for CRUD operations between the identity provider and the software application.",
+          "url": "https://tesseral.com/blog/what-a-developer-needs-to-know-about-scim?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "tesseral.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-06:a07",
+          "order": 1,
+          "title": "TRACK ERRORS FIRST",
+          "summary": "Error tracking is the most valuable signal in observability, but is often overshadowed by logs, metrics, and traces. Exceptions show that programmer assumptions have failed, making them the most informative events to track with detailed context. Errors should never be treated as generic events.",
+          "url": "https://www.bugsink.com/blog/track-errors-first/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "bugsink.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a08",
+          "order": 2,
+          "title": "I THINK I'M DONE THINKING ABOUT GENAI FOR NOW",
+          "summary": "The discourse around generative AI often avoids serious criticisms, such as the demoralizing impact of it on software development. However, because the technology is evolving so quickly, having a consistent negative opinion on it is hard to maintain.",
+          "url": "https://blog.glyph.im/2025/06/i-think-im-done-thinking-about-genai-for-now.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 28,
+          "source_domain": "blog.glyph.im",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-06:a09",
+          "order": 1,
+          "title": "HYPERDX",
+          "summary": "HyperDX is an open-source observability platform built on ClickHouse and OpenTelemetry. It helps engineers quickly diagnose production issues by unifying logs, metrics, traces, session replays, and errors into a single searchable and visualizable interface.",
+          "url": "https://github.com/hyperdxio/hyperdx?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a10",
+          "order": 2,
+          "title": "ELEVEN V3 (ALPHA)",
+          "summary": "ElevenLabs' Eleven v3 (alpha) is a text-to-speech model that offers world-class expressiveness and control through audio tags. This new version supports dynamic conversations between multiple speakers with shared context and emotions across over 70 languages. Users can now control the emotion, delivery, and direction of the generated audio.",
+          "url": "https://elevenlabs.io/v3?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "elevenlabs.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-06:a11",
+          "order": 1,
+          "title": "ANTHROPIC CO-FOUNDER ON CUTTING ACCESS TO WINDSURF: 'IT WOULD BE ODD FOR US TO SELL CLAUDE TO OPENAI'",
+          "summary": "Anthropic cut Windsurf's access to its Claude AI models due to rumors of OpenAI acquiring the AI coding assistant. According to Anthropic co-founder Jared Kaplan, it would be \"odd\" to essentially sell Claude to its main competitor.",
+          "url": "https://techcrunch.com/2025/06/05/anthropic-co-founder-on-cutting-access-to-windsurf-it-would-be-odd-for-us-to-sell-claude-to-openai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a12",
+          "order": 2,
+          "title": "THE SIGNALFIRE STATE OF TECH TALENT REPORT",
+          "summary": "The SignalFire 2025 Talent Report shows large shifts in the tech talent landscape, such as a sharp decline in new grad hiring and a growing geographic distribution of tech talent. Entry-level hiring has dropped a lot as companies prioritize experienced talent and high-leverage technical roles. Elite AI labs like Anthropic are dominating the talent race through high retention rates and strategic poaching from competitors.",
+          "url": "https://www.signalfire.com/blog/signalfire-state-of-talent-report-2025?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "signalfire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a13",
+          "order": 3,
+          "title": "THE NO-NONSENSE APPROACH TO AI AGENT DEVELOPMENT",
+          "summary": "",
+          "url": "https://vercel.com/blog/the-no-nonsense-approach-to-ai-agent-development?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-06:a14",
+          "order": 1,
+          "title": "GOOGLE RESTRICTS ANDROID SIDELOADING—WHAT IT MEANS FOR USER AUTONOMY AND THE FUTURE OF MOBILE FREEDOM",
+          "summary": "Google's increasing restrictions on Android sideloading, framed as security measures, are raising concerns about user autonomy, innovation, and competition.",
+          "url": "https://puri.sm/posts/google-restricts-android-sideloading-what-it-means-for-user-autonomy-and-the-future-of-mobile-freedom/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "puri.sm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a15",
+          "order": 2,
+          "title": "OPENAI SLAMS COURT ORDER TO SAVE ALL CHATGPT LOGS, INCLUDING DELETED CHATS",
+          "summary": "OpenAI is contesting a court order to preserve all ChatGPT user logs, including deleted chats, arguing it violates user privacy and contractual obligations.",
+          "url": "https://arstechnica.com/tech-policy/2025/06/openai-says-court-forcing-it-to-save-all-chatgpt-logs-is-a-privacy-nightmare/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a16",
+          "order": 3,
+          "title": "LLMS & ELIXIR: WINDFALL OR DEATHBLOW?",
+          "summary": "The Elixir community should embrace large language models (LLMs) as a potential force multiplier by investing in tools and documentation that allow LLMs to effectively work with Elixir.",
+          "url": "https://www.zachdaniel.dev/p/llms-and-elixir-windfall-or-deathblow?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "zachdaniel.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-06:a17",
+          "order": 4,
+          "title": "API DOCUMENTATION - SCREEN TIME NETWORK",
+          "summary": "The Screen Time Network API allows users to access current and historical screen time data and subscribe to screen time-related events for themselves or public users.",
+          "url": "https://www.thescreentimenetwork.com/api/?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "thescreentimenetwork.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

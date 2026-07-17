@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-03-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-03-29",
+  "source_path": "TLDR InfoSec/article_29-03-2024.md",
+  "source_content_hash": "sha256:4ade8df7db11697776ba2299ced486e5c0680415b23eda3029d22dba57572999",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-03-29",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-29:a04",
+          "order": 1,
+          "title": "PYPI HALTED NEW USERS AND PROJECTS WHILE IT FENDED OFF SUPPLY-CHAIN ATTACK",
+          "summary": "PyPI, the main Python Package Index repository, temporarily halted new project creation and user registration due to a continuous attack of malicious package uploads designed to infect devices through typosquatting techniques. After a 10-hour suspension, PyPI restored normal operations as it had addressed the security concerns.",
+          "url": "https://arstechnica.com/security/2024/03/pypi-halted-new-users-and-projects-while-it-fended-off-supply-chain-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a05",
+          "order": 2,
+          "title": "NVIDIA'S NEW CHATGPT-LIKE AI CHATBOT FALLS VICTIM TO HIGH-SEVERITY SECURITY VULNERABILITIES - URGENT CHATRTX PATCH ISSUED",
+          "summary": "Nvidia's ChatRTX AI chatbot was found to have severe security vulnerabilities in versions 0.2 and prior, including cross-site scripting and improper privilege management attacks. Nvidia has addressed these issues in the latest iteration of ChatRTX 0.2.",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-new-ai-chatbot-falls-victim-to-high-severity-security-vulnerabilities-urgent-chatrtx-patch-issued?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a06",
+          "order": 3,
+          "title": "LINUX VERSION OF DINODASRAT SPOTTED IN CYBERATTACKS",
+          "summary": "The multiplatform backdoor, DinodasRAT, has been spotted infecting Linux machines in several attacks in China, Turkey, Taiwan, and Uzbekistan. The malware, also known as XDealer, is an infostealer and backdoor. It establishes persistence by using SystemV or SystemD startup scripts.",
+          "url": "https://thehackernews.com/2024/03/linux-version-of-dinodasrat-spotted-in.html?m=1&utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-29:a07",
+          "order": 1,
+          "title": "ANALYSIS OF THE MOBOX SECURITY BREACH",
+          "summary": "The MOBOX decentralized lending protocol was attacked on March 14, leading to losses of $750,000. The attack was possible because of a vulnerability in the logic of the contract’s borrow() function that allowed the attacker to burn the pool’s currency which drove up the price while the attacker claimed referral rewards to use for more borrowing. The team recommends that similar lending protocols implement lock-up period restrictions to prevent these attacks.",
+          "url": "https://slowmist.medium.com/analysis-of-the-mobox-security-breach-f8fe63389aae?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "slowmist.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a08",
+          "order": 2,
+          "title": "DISSECTING A COMPLEX VULNERABILITY AND ACHIEVING ARBITRARY CODE EXECUTION IN ICHITARO WORD",
+          "summary": "This research document by Cisco Talos details a complex vulnerability in Ichitaro Word that leads to arbitrary code execution. The exploit achieves a frame pointer overwrite by exploiting an out-of-bounds index, enabling the construction of powerful exploitation primitives for full code execution. This detailed document provides a good walkthrough on how to approach similar reverse engineering problems to find vulnerabilities in software.",
+          "url": "https://blog.talosintelligence.com/exploiting-low-severity-vulnerability-using-a-frame-pointer-overwrite/?utm_source=tldrinfosec",
+          "reading_time_minutes": 52,
+          "source_domain": "blog.talosintelligence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a09",
+          "order": 3,
+          "title": "HOW APPLE MITIGATES VULNERABILITIES IN INSTALLER SCRIPTS",
+          "summary": "Installer Scripts are valuable targets for attackers as they give processes and their children access to areas in the system that are protected by System Integrity Protection. This article details how vulnerabilities have bypassed these protections in the past. It provides an in-depth look at PackageKit, which is designed to eliminate this full class of vulnerabilities.",
+          "url": "https://blog.kandji.io/apple-mitigates-vulnerabilities-installer-scripts?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "blog.kandji.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-29:a10",
+          "order": 1,
+          "title": "FBI-TOOLS",
+          "summary": "A list of OSINT Tools for gathering information and actions forensics.",
+          "url": "https://github.com/danieldurnea/FBI-tools?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a11",
+          "order": 2,
+          "title": "ARSENAL",
+          "summary": "Tools and scripts for personal use cases and bug bounties",
+          "url": "https://github.com/Azathothas/Arsenal?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a12",
+          "order": 3,
+          "title": "DROZER",
+          "summary": "After 7 years, a new version of Drozer has been released. Drozer allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Android Runtime, other apps' IPC endpoints, and the underlying OS.",
+          "url": "https://github.com/WithSecureLabs/drozer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-29:a13",
+          "order": 1,
+          "title": "US OFFERS $10M TO HELP CATCH CHANGE HEALTHCARE HACKERS",
+          "summary": "The U.S. government will provide a $10 million reward for information on the ALPHV/BlackCat cybercrime gang's leadership after an affiliate claimed responsibility for the massive ransomware attack on a U.S. health tech giant last month.",
+          "url": "https://techcrunch.com/2024/03/28/state-department-10-million-change-healthcare-hackers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a14",
+          "order": 2,
+          "title": "DIVING DEEPER INTO AI PACKAGE HALLUCINATIONS",
+          "summary": "AI Package Hallucination exploits LLMs like ChatGPT and Gemini to spread non-existent, potentially malicious packages through recommendations. Extensive testing on the GPT-3.5 Turbo model with 457 questions across 40 subjects in two programming languages revealed a concerning 30% hallucination rate.",
+          "url": "https://lasso-security.webflow.io/blog/ai-package-hallucinations?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "lasso-security.webflow.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a15",
+          "order": 3,
+          "title": "A LOOK AT SOFTWARE COMPOSITION ANALYSIS",
+          "summary": "Doyensec published a whitepaper on the results of testing Snyk, Dependabot, and Semgrep for SCA. The goal of the test was to find which tool had the highest true positive rate with the lowest false positive rate, while ignoring false negative rate. The test found that Dependabot had the highest true positive rate but also the highest false positive rate while Semgrep had the second highest true positive rate and the lowest false positive rate.",
+          "url": "https://blog.doyensec.com/2024/03/14/supplychain.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.doyensec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-29:a16",
+          "order": 1,
+          "title": "NAVIGATING CYBER 2024 REPORT",
+          "summary": "This report highlights the escalating sophistication of adversarial tactics leveraged by threat actors, including social engineering, SEO poisoning, malvertising, and QR code phishing, as well as their exploitation of generative AI for scaled attacks.",
+          "url": "https://www.fsisac.com/hubfs/Knowledge/NavigatingCyber/2024/FSISAC-NavCyber24-Report.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "fsisac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a17",
+          "order": 2,
+          "title": "VULTR’S NEW TERMS OF SERVICE CLAIMS COMMERCIAL RIGHTS (MASTODON THREAD)",
+          "summary": "Vultr, a cloud provider, recently updated its Terms of Service to include a clause granting perpetual commercial rights over all hosted content.",
+          "url": "https://grimgreenfo.rest/notes/9rdle0uyo4d30029?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "grimgreenfo.rest",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-29:a18",
+          "order": 3,
+          "title": "LIFE AFTER DEATH? IO CAMPAIGNS LINKED TO NOTORIOUS RUSSIAN BUSINESSMAN PRIGOZHIN PERSIST AFTER HIS POLITICAL DOWNFALL AND DEATH",
+          "summary": "Prigozhin's influence on information operations campaigns persists despite his undoing - the infrastructure of these campaigns remains active, posing a potential threat to global security.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/io-campaigns-russian-prigozhin-persist/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

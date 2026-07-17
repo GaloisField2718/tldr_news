@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-06-10",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-06-10",
+  "source_path": "TLDR Dev/article_10-06-2026.md",
+  "source_content_hash": "sha256:bf7a7513224f7465be67f490d9c05ecaa95f74c29dd3f1834923927f9a6539d2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-06-10",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-10:a04",
+          "order": 1,
+          "title": "WHY GIT HAS A VARIABLE NAMED FALSE_BUT_THE_COMPILER_DOES_NOT_KNOW_IT_",
+          "summary": "Git uses a specialized C programming trick involving a global variable named `false_but_the_compiler_does_not_know_it_` to manage specific compiler warnings. By defining this variable in a separate compilation unit without a constant qualifier, developers prevent compilers from incorrectly flagging valid code as unreachable. While the trick suppresses false-positive warnings during initial compilation, link-time optimization can still identify the constant value and remove redundant branches from the final binary.",
+          "url": "https://blog.codingconfessions.com/p/false-but-the-compiler-does-not-know-it?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.codingconfessions.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a05",
+          "order": 2,
+          "title": "IS GREP ALL YOU NEED? THE HARNESS MATTERS MORE THAN THE SEARCH",
+          "summary": "Lexical search using grep frequently outperforms vector-based semantic search in long-memory question answering tasks. The agent harness, or the framework used to deliver results to the model, is just as influential as the retrieval method itself. Exact string matching is great in these scenarios because it captures verbatim details like names and dates that semantic embeddings often miss or smooth over.",
+          "url": "https://www.stacksweep.dev/grep-vs-vector-agentic-search?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "stacksweep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a06",
+          "order": 3,
+          "title": "HOW TO READ DISTRIBUTED TRACES WHEN YOU DIDN'T WRITE THE CODE",
+          "summary": "Distributed traces serve as automated documentation that allows engineers to understand and debug complex systems even when they are unfamiliar with the underlying source code. By analyzing the tree of spans within a trace, devs can visualize how a single request moves through various services, databases, and external APIs.",
+          "url": "https://newsletter.signoz.io/p/how-to-read-distributed-traces-when?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "newsletter.signoz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-10:a07",
+          "order": 1,
+          "title": "CLEANING UP AFTER AI ROCKSTAR DEVELOPERS",
+          "summary": "So-called “rockstar\" developers often leave behind overly complex and idiosyncratic codebases that prioritize individual cleverness over long-term team maintainability. AI tools usually make this problematic pattern worse by rapidly producing massive amounts of fragmented code that don't have a cohesive architectural vision.",
+          "url": "https://www.codingwithjesse.com/blog/rockstar-developers/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "codingwithjesse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a08",
+          "order": 2,
+          "title": "AGENT EXPERIENCE IS THE NEW DEVELOPER EXPERIENCE",
+          "summary": "",
+          "url": "https://www.builder.io/blog/agent-experience?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "builder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-10:a09",
+          "order": 1,
+          "title": "YOUR SDLC WASN'T BUILT FOR AI. LAUNCHDARKLY IS.",
+          "summary": "CodeControl [9] from LaunchDarkly lets you release safer AI-generated changes with progressive rollouts, implement self-healing systems, and monitor in real time. Automatic fixes, variation testing, and enterprise-grade governance help you ship at AI speed. See how it",
+          "url": "https://launchdarkly.com/platform/code-control/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=brandrepo&utm_term=secondary&utm_content=code-control",
+          "reading_time_minutes": null,
+          "source_domain": "launchdarkly.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a09",
+          "order": 2,
+          "title": "works",
+          "summary": "",
+          "url": "https://launchdarkly.com/platform/code-control/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=brandrepo&utm_term=secondary&utm_content=code-control",
+          "reading_time_minutes": null,
+          "source_domain": "launchdarkly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a10",
+          "order": 3,
+          "title": "ASM",
+          "summary": "asm provides a unified command-line and terminal interface to organize skills across various AI platforms like Claude Code, Cursor, and Windsurf. By centralizing management into one tool, it replaces the manual process of juggling hidden directories with a streamlined system for installing, searching, and auditing agent capabilities.",
+          "url": "https://github.com/luongnv89/asm?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a11",
+          "order": 4,
+          "title": "DESKTOP COMMANDER MCP",
+          "summary": "Desktop Commander MCP is an open-source server that allows AI models to interact directly with a local computer's file system and terminal. The tool provides capabilities for executing shell commands, managing active processes, and performing surgical code edits across various file formats, including Excel, PDF, and Word documents.",
+          "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-10:a12",
+          "order": 1,
+          "title": "APPLE BETS CHEAPER AI WILL WOO SMALL DEVELOPERS",
+          "summary": "Apple is offering free access to its Foundation Models running in Private Cloud Compute for developers with fewer than 2 million first-time App Store downloads. This initiative aims to attract indie developers by removing the financial barriers associated with high-tier AI infrastructure costs during the early stages of app development.",
+          "url": "https://techcrunch.com/2026/06/08/apple-bets-cheaper-ai-will-woo-small-developers/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a13",
+          "order": 2,
+          "title": "APPLE REVEALS NEW AI ARCHITECTURE BUILT AROUND GOOGLE GEMINI MODELS",
+          "summary": "Apple has introduced an overhaul of the Apple Intelligence platform through a new architecture built on foundation models co-developed with Google. This updated system has better reasoning capabilities and introduces multimodal support for tasks like image creation and photo editing. A new system orchestrator coordinates these features across devices, allowing AI to provide context-aware responses based on specific apps and user tasks.",
+          "url": "https://www.macrumors.com/2026/06/08/apple-reveals-new-ai-architecture/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "macrumors.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a14",
+          "order": 3,
+          "title": "AI IS SLOWING DOWN",
+          "summary": "The AI industry is having a financial crisis because it requires trillions of dollars in annual revenue by 2030 to justify its current infrastructure spending and mounting debt. Major labs are not meeting the growth rates necessary to pay for their staggering compute commitments, while many corporate clients are already scaling back usage due to unpredictable costs and a lack of clear return on investment.",
+          "url": "https://www.wheresyoured.at/ai-is-slowing-down/?utm_source=tldrdev",
+          "reading_time_minutes": 24,
+          "source_domain": "wheresyoured.at",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-10:a15",
+          "order": 1,
+          "title": "WWDC 2026: APPLE IS FOLDING",
+          "summary": "At WWDC 2026, Apple signaled the launch of a foldable \"iPhone Ultra\" by introducing developer tools, APIs, and interface requirements designed to prepare the software ecosystem for dynamic screen sizes and multiple displays.",
+          "url": "https://cupertinolens.com/2026/06/09/wwdc-2026-apple-is-folding/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "cupertinolens.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a16",
+          "order": 2,
+          "title": "THE BETTER THE AUTOPILOT, THE WORSE THE PILOT",
+          "summary": "Highly reliable automation increases safety risks because of complacency by the developer and by causing manual skill decay.",
+          "url": "https://julienreszka.com/blog/the-better-the-autopilot-the-worse-the-pilot/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "julienreszka.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-10:a17",
+          "order": 3,
+          "title": "SQLITE IMPROVING PERFORMANCE WITH PRE-SORT",
+          "summary": "Sorting batches of random data before insertion improves SQLite performance by minimizing B+ Tree page splits and thrashing.",
+          "url": "https://andersmurphy.com/2026/06/07/sqlite-improving-performance-with-pre-sort.html?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "andersmurphy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

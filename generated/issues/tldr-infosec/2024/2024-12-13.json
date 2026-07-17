@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-12-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-12-13",
+  "source_path": "TLDR InfoSec/article_13-12-2024.md",
+  "source_content_hash": "sha256:5dbf374e1e88a4a039fea8517959bb4748b3cd0dfaa51eabab2858af5ba37bdd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-12-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a04",
+          "order": 1,
+          "title": "THE MSP PLAYBOOK FOR SELLING NETWORK PENTESTING",
+          "summary": "If you're an MSP, you could seriously upgrade your value proposition [4] by offering network pentesting to your customers.",
+          "url": "https://www.vonahi.io/msp-playbook?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20241213",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a04",
+          "order": 2,
+          "title": "Get the playbook now →",
+          "summary": "",
+          "url": "https://www.vonahi.io/msp-playbook?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20241213",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a05",
+          "order": 1,
+          "title": "NEW EVILMSGSPY ANDROID SPYWARE USED BY CHINESE POLICE",
+          "summary": "Researchers from Lookout have discovered a spyware app developed by Wuhan Chinasoft Token Information Technology Co., Ltd and used by Chinese law enforcement. The spyware collects messages from chat apps, screen recordings, screenshots, audio recordings, location information, network activity, installed apps, browser bookmarks, and external storage files. Lookout found evidence that the app is still in active development and that an iOS equivalent may exist.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-eaglemsgspy-android-spyware-used-by-chinese-police-researchers-say/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a06",
+          "order": 2,
+          "title": "RESEARCHERS CRACK MICROSOFT AZURE MFA IN AN HOUR",
+          "summary": "Researchers from Oasis Security discovered an MFA bypass on one of Microsoft Azure's MFA methods that could lead to the compromise of Microsoft 365 accounts. The researchers discovered that the endpoint did not implement rate limiting and that the auth period lasted for a full three minutes as opposed to the recommended 30 seconds. The researchers also discovered that an attacker could rapidly make many auth attempts to enumerate the full 6-digit MFA space.",
+          "url": "https://www.darkreading.com/cyberattacks-data-breaches/researchers-crack-microsoft-azure-mfa-hour?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a07",
+          "order": 3,
+          "title": "300,000+ PROMETHEUS SERVERS AND EXPORTERS EXPOSED TO DOS ATTACKS",
+          "summary": "Researchers at Aquasec have found over 336,000 exposed Prometheus servers and exporters, risking data breaches and DoS attacks. Vulnerabilities like \"RepoJacking\" can lead to code execution through compromised exporters. To mitigate risks, organizations should prioritize authentication, limit public exposure, and secure debugging endpoints.",
+          "url": "https://www.aquasec.com/blog/300000-prometheus-servers-and-exporters-exposed-to-dos-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "aquasec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a08",
+          "order": 1,
+          "title": "SECURING AWS LAMBDA: HOW MISCONFIGURATIONS CAN LEAD TO LATERAL MOVEMENT",
+          "summary": "AWS Lambda functions are popular attack vectors for credentials theft and lateral movement. This post presents a realistic application architecture and walks through a scenario in which an attacker exploits a vulnerability in a Lambda function to achieve code execution and pivots to data exfiltration. It suggests using hardened IAM roles, secure coding practices, and monitoring to mitigate Lambda attacks.",
+          "url": "https://www.sentinelone.com/blog/lateral-movement-in-aws-lambda-environments/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "sentinelone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a09",
+          "order": 2,
+          "title": "RETROFITTING SPATIAL SECURITY TO HUNDREDS OF MILLIONS OF LINES OF C++",
+          "summary": "Google has made a large push to move to memory safe languages but in the process is embracing hardening C++ to bridge the gap. The security team has attempted to harden libc++ by adding bounds checking to improve spatial security. The team started by integrating the changes into the test and preproduction environment for a year before promoting to production for all but a few exceptions. The safety checks only add a 0.3% performance overhead, but they have resulted in the discovery of over 1,000 bugs and successfully interfered with a red team engagement.",
+          "url": "https://security.googleblog.com/2024/11/retrofitting-spatial-safety-to-hundreds.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a10",
+          "order": 3,
+          "title": "EVERYDAY GHIDRA: GHIDRA DATA TYPES — CREATING CUSTOM GDTS FROM WINDOWS HEADERS — PART 2",
+          "summary": "This second part of a guide on \"Everyday Ghidra\" explains how to create custom Ghidra Data Type (GDT) files from Windows headers to improve reverse engineering. You can ensure accurate and efficient analysis of binaries by using a compiler to preprocess headers before submission to Ghidra. Training Ghidra to use NDIS data types enhances the decompilation process and reveals new structures and variables for better analysis.",
+          "url": "https://links.tldrnewsletter.com/lVDP6k",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a11",
+          "order": 1,
+          "title": "ZEROPATH RESEARCH REVEALS VULNERABILITIES IN POPULAR AI PLATFORMS AND OPEN SOURCE PROJECTS",
+          "summary": "Since July 2024, ZeroPath's software has autonomously uncovered critical zero-day vulnerabilities—including RCE, authentication bypasses, and IDORs—in widely-used AI and open source tools. These include security flaws in projects owned by Netflix, Salesforce, and Hulu. See the full list [11] and read more about the methodology and research [11].",
+          "url": "https://zeropath.com/blog/0day-discoveries?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20241213",
+          "reading_time_minutes": null,
+          "source_domain": "zeropath.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a12",
+          "order": 2,
+          "title": "PIPE",
+          "summary": "Pipe offers authenticated pub sub pipes over SSH with zero install.",
+          "url": "https://pipe.pico.sh/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pipe.pico.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a13",
+          "order": 3,
+          "title": "PICKLESCAN",
+          "summary": "Picklescan is a CLI tool that can scan Python pickle files to detect suspicious actions. It can load files from directories, URLs, zip archives, or Hugging Face.",
+          "url": "https://github.com/mmaitre314/picklescan?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a14",
+          "order": 4,
+          "title": "TERRAFORM PROVIDER FOR RCE VIA STATEFILE POISONING",
+          "summary": "",
+          "url": "https://github.com/offensive-actions/terraform-provider-statefile-rce?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a15",
+          "order": 1,
+          "title": "OVER 600 VULNERABILITIES FOUND IN AVERAGE SOFTWARE CONTAINER",
+          "summary": "NetRise compiled advanced SBOMs for 70 of the most downloaded containers on DockerHub and found that the average container had over 600 vulnerabilities. 45% of the vulnerabilities were 2-10 years old and 7.9% were over 5 years old. 4.2% of high and critical vulnerabilities were being actively exploited. NetRise also noted that many components did not include manifests and emphasized the importance of advanced SBOMs.",
+          "url": "https://www.techmonitor.ai/technology/cybersecurity/software-container-vulnerabilities-study?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techmonitor.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a16",
+          "order": 2,
+          "title": "HACKING TERRAFORM STATE FOR PRIVILEGE ESCALATION",
+          "summary": "This article discusses hacking Terraform state for privilege escalation by modifying the state file to control infrastructure changes without a \"terraform apply.\" Attackers can manipulate the state file to delete resources or take over a deployment pipeline, which is why it is important to secure and lock the Terraform state to prevent unauthorized changes. The article highlights the need to use a read-only role for \"terraform plan\" executions to inspect changes without altering infrastructure until the deployment step.",
+          "url": "https://www.plerion.com/blog/hacking-terraform-state-for-privilege-escalation?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a17",
+          "order": 3,
+          "title": "RADIANT CAPITAL INCIDENT UPDATE",
+          "summary": "Radiant Capital faced a cyberattack resulting in a $50M loss. It was traced back to a DPRK-aligned threat actor using sophisticated malware. Despite following best practices, the attackers evaded detection by simulating benign transactions while executing malicious ones in the background. The incident highlights the need for stronger device-level security measures in the evolving DeFi industry to combat advanced threats.",
+          "url": "https://links.tldrnewsletter.com/bkfRca",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-13:a18",
+          "order": 1,
+          "title": "ADMINISTRATOR OF ONLINE CRIMINAL MARKETPLACE ARRESTED IN KOSOVO",
+          "summary": "Liridon Masurica, an online criminal marketplace administrator known as \"@blackdb,\" was arrested in Kosovo.",
+          "url": "https://www.justice.gov/usao-mdfl/pr/administrator-online-criminal-marketplace-arrested-kosovo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "justice.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a19",
+          "order": 2,
+          "title": "GOOGLE CLOUD EXPANDS VULNERABILITY DETECTION FOR ARTIFACT REGISTRY USING OSV",
+          "summary": "Google Cloud's Artifact Registry now offers enhanced vulnerability scanning using Open Source Vulnerabilities (OSV) platform that expands coverage for open-source packages and base images.",
+          "url": "http://security.googleblog.com/2024/12/google-cloud-expands-vulnerability.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-13:a20",
+          "order": 3,
+          "title": "US BITCOIN ATM OPERATOR BYTE FEDERAL SUFFERED A DATA BREACH",
+          "summary": "US Bitcoin ATM operator Byte Federal disclosed a data breach affecting 58,000 customers caused by a server breach through a GitLab vulnerability.",
+          "url": "https://securityaffairs.com/171941/data-breach/us-bitcoin-atm-operator-byte-federal-suffered-a-data-breach.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

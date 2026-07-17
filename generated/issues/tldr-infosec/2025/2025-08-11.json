@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-08-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-11",
+  "source_path": "TLDR InfoSec/article_11-08-2025.md",
+  "source_content_hash": "sha256:691e29d65c7ce50bde9c0070c3814790169b90748b0121a5b3458f23a6881e28",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a04",
+          "order": 1,
+          "title": "YOUR EDR JUST LET RANSOMWARE WALTZ PAST. AGAIN",
+          "summary": "You know the drill: attackers only need to win once, you need to win every single time. The game is rigged against you.",
+          "url": "https://www.threatlocker.com/pages/application-control-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q3_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a04",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/application-control-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q3_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a05",
+          "order": 1,
+          "title": "BROSIX AND CHATOX PROMISED TO KEEP YOUR CHATS SECURED. THEY DIDN'T",
+          "summary": "Chatox and Brosix are both communications platforms for personal and team use owned by Stefan Chekanov. A security researcher discovered an unencrypted backup of chat logs containing 155.3GB of unique, compressed files containing over 65M stored messages and 73K files for Chatox and over 37M messages and 191K files for Brosix. Upon notification, the Brosix backup was secured, but the Chatox backup is still unsecured.",
+          "url": "https://links.tldrnewsletter.com/FRbfy7",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a06",
+          "order": 2,
+          "title": "WINRAR ZERO-DAY EXPLOITED TO PLANT MALWARE ON ARCHIVE EXTRACTION",
+          "summary": "Researchers from ESET discovered a new WinRAR vulnerability that is being actively exploited in phishing campaigns. Unpatched versions of WinRAR and Windows versions of UnRAR, RAR, and UnRAR.dll can be tricked into using a path specified by a maliciously crafted archive file as the extraction directory. This vulnerability is being exploited by the Russian hacking group RomCom to install malware.",
+          "url": "https://www.bleepingcomputer.com/news/security/winrar-zero-day-flaw-exploited-by-romcom-hackers-in-phishing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a07",
+          "order": 3,
+          "title": "LINUX-BASED LENOVO WEBCAMS' FLAW CAN BE REMOTELY EXPLOITED FOR BADUSB ATTACKS",
+          "summary": "Security researchers discovered vulnerabilities in Lenovo 510 FHD and Performance FHD webcams that allow attackers to remotely transform them into BadUSB devices capable of injecting keystrokes and installing malware. The Linux-based webcams lack firmware validation, enabling complete compromise and persistent re-infection even after system wipes and OS reinstalls. Lenovo has released firmware version 4.8.0 to address the vulnerabilities following responsible disclosure in April.",
+          "url": "https://links.tldrnewsletter.com/qOIdYH",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a08",
+          "order": 1,
+          "title": "REPEATER STRIKE: MANUAL TESTING, AMPLIFIED",
+          "summary": "Gareth Heyes of PortSwigger writes about his experience writing a Burp Suite AI extension to automate hunting for IDOR and similar vulnerabilities. The extension, Repeater Strike, scans requests and responses to generate regular expressions that can be used to identify vulnerabilities in your traffic. While the extension worked in small tests, the AI struggled with longer responses, creating regular expressions that aren't site specific, and detecting more complex vulnerabilities.",
+          "url": "https://portswigger.net/research/repeater-strike-manual-testing-amplified?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a09",
+          "order": 2,
+          "title": "I SPY: ESCALATING TO ENTRA ID'S GLOBAL ADMIN WITH A FIRST-PARTY APP",
+          "summary": "Researchers from DataDog discovered an attack vector where an attacker could abuse an Entra ID service principal (SP) with the Cloud Application Administrator or Application Administrator roles or the `Application.ReadWrite.All` permission to obtain global admin. The attacker uses the compromised SP to hijack the Office 365 Exchange Online SP to add a new federated domain, which they can then abuse to log in as any hybrid user. The researchers reported this vulnerability to Microsoft, but it was dismissed as a configuration issue.",
+          "url": "https://securitylabs.datadoghq.com/articles/i-spy-escalating-to-entra-id-global-admin/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a10",
+          "order": 3,
+          "title": "WHY XSS PERSISTS IN THIS FRAMEWORKS ERA?",
+          "summary": "Modern frameworks block most HTML XSS through automatic escaping, but XSS persists when developers bypass protections with WYSIWYG editors, markdown parsers, or flawed sanitizers. Frameworks don't guard against JavaScript XSS via URL attributes (href/src with javascript:) or eval in OAuth flows, redirects, or postMessage. Even trusted libraries may cause XSS if misused, and defenses like CSP and WAF are often bypassed, so developers must treat all input as untrusted and reliably use protections.",
+          "url": "https://flatt.tech/research/posts/why-xss-persists-in-this-frameworks-era/?utm_source=tldrinfosec",
+          "reading_time_minutes": 24,
+          "source_domain": "flatt.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a11",
+          "order": 1,
+          "title": "UBLOCK ORIGIN LITE AVAILABLE FOR SAFARI",
+          "summary": "uBlock Origin Lite has been released for Safari on macOS and iOS following the discontinuation of the original uBlock Origin. uBlock Origin Lite provides best-in-class ad blocking without consuming CPU or memory resources.",
+          "url": "https://www.howtogeek.com/ublock-origin-lite-is-finally-available-on-safari/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "howtogeek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a12",
+          "order": 2,
+          "title": "0DAY.TODAY ARCHIVE",
+          "summary": "VulnCheck-OSS created a GitHub repo archiving tens of thousands of exploits from 0day.today, a public exploit database that went offline in early 2025 and returned without its decade of data. The archive categorizes exploits (DoS, local, remote, shellcode, and web apps) with an index.json file for access, including metadata like CVEs, dates, and platforms. The project aims to prevent data loss and help security researchers use historical proof-of-concepts for analysis and detection.",
+          "url": "https://github.com/vulncheck-oss/0day.today.archive?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a13",
+          "order": 3,
+          "title": "SIMPLIFY ACCESS REVIEWS WITH TRELICA BY 1PASSWORD",
+          "summary": "Trelica by 1Password introduced an access review feature that automates SaaS user access audits across 350+ API integrations, custom applications via APIs, and non-SCIM apps through CSV uploads. It offers a standardized workflow with context (roles, access levels, and issues), automated reviewer notifications, and inline actions for deactivating users or updating permissions. Reviews produce exportable audit reports with reviewer details and notes to meet compliance standards like SOC 2, SOX, PCI DSS, and ISO 27001.",
+          "url": "https://blog.1password.com/simplify-access-reviews-with-trelica-by-1password/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a14",
+          "order": 1,
+          "title": "API KEYS FOR BEDROCK: A BRIEF SECURITY OVERVIEW",
+          "summary": "AWS has introduced the ability to create Bedrock API keys, which are special API keys that are explicitly scoped to Bedrock. Long-term API keys are tied to an automatically generated or existing IAM user, can be configured with an expiration of up to 100 years, and are composed of a magic 3-byte prefix, a human-readable section, and a base64-encoded secret. Short-term API keys are scoped to a specific user's session and have the format `bedrock-api-key-[BASE64]` where [BASE64] is a base64-encoded pre-signed URL.",
+          "url": "https://medium.com/@adan.alvarez/api-keys-for-bedrock-a-brief-security-overview-2133ed9a2b3f?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a15",
+          "order": 2,
+          "title": "RESEARCHERS UNCOVER GPT-5 JAILBREAK AND ZERO-CLICK AI AGENT ATTACKS EXPOSING CLOUD AND IOT SYSTEMS",
+          "summary": "Researchers from NeuralTrust demonstrated a jailbreak against GPT-5 using \"Echo Chamber\" and storytelling to bypass ethical guardrails, poisoning context to generate prohibited instructions without triggering refusals. Zenity Labs revealed \"AgentFlayer\" attacks exploiting ChatGPT Connectors, Cursor AI, and Microsoft Copilot via prompt injections in documents, tickets, or emails to exfiltrate data like API keys. These reveal how AI connected to external systems increases attack surfaces, with Tel-Aviv University showing smart home hijacking via poisoned calendar invites to Google's Gemini AI.",
+          "url": "https://links.tldrnewsletter.com/eCCK80",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a16",
+          "order": 3,
+          "title": "KREBSONSECURITY IN NEW 'MOST WANTED' HBO MAX SERIES",
+          "summary": "Brian Krebs will be featured in a new four-part HBO Max series about Finnish cybercriminal Julius Kivimäki, who was recently sentenced to over six years for extorting a psychotherapy clinic and its patients. The series explores Kivimäki's hacking career from age 14, including DDoS attacks, swatting, and blackmailing 22,000 therapy patients. Titled \"Most Wanted: Teen Hacker,\" it will air weekly on Fridays throughout September across multiple regions.",
+          "url": "https://krebsonsecurity.com/2025/08/krebsonsecurity-in-new-most-wanted-hbo-max-series/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-11:a17",
+          "order": 1,
+          "title": "THE INTERNATIONAL OBFUSCATED C CODE CONTEST IS BACK FOR 2024",
+          "summary": "The International Obfuscated C Code Contest (IOCCC) returned after 4 years with 23 winners showcasing deliberately cryptic code, including entries that abuse Unicode encoding to hide functionality and a 295-character program that displays the moon's current phase.",
+          "url": "https://www.theregister.com/2025/08/09/ioccc_2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-11:a18",
+          "order": 2,
+          "title": "GERMANY LIMITS POLICE SPYWARE USE TO SERIOUS CRIMES",
+          "summary": "Germany's Constitutional Court ruled that police spyware for monitoring encrypted communications can only be used for serious crimes carrying maximum sentences of at least three years, citing the \"very severe\" privacy intrusion of such surveillance tools.",
+          "url": "https://securityaffairs.com/180976/laws-and-regulations/germany-limits-police-spyware-use-to-serious-crimes.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-10-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-24",
+  "source_path": "TLDR InfoSec/article_24-10-2025.md",
+  "source_content_hash": "sha256:71304725884a16f85c8c6dc261ead6811963278203df50493cf8053e177887d0",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Scammers increase their odds by going after people are at their most vulnerable. This makes job seekers a perfect target for offers that are too good to be true. The easiest way to keep yourself safe is by knowing the signs of a scam and having an email security solution – like Sublime – that keeps them out of your inbox. You can't be fooled by a message you never see. Learn about a recent Google Careers scam [4] with convincing brand imitation and indications of attack iteration, both signals of cutting edge attacks.",
+          "url": "https://sublime.security/blog/google-careers-impersonation-credential-phishing-scam-with-endless-variation/?utm_source=tldr&utm_medium=email-newsletter&utm_campaign=blog",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a04",
+          "order": 2,
+          "title": "Read more on the Sublime Security blog",
+          "summary": "",
+          "url": "https://sublime.security/blog/google-careers-impersonation-credential-phishing-scam-with-endless-variation/?utm_source=tldr&utm_medium=email-newsletter&utm_campaign=blog",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a05",
+          "order": 1,
+          "title": "OVER 250 MAGENTO STORES HIT OVERNIGHT AS HACKERS EXPLOIT NEW ADOBE COMMERCE FLAW",
+          "summary": "Threat actors are actively exploiting CVE-2025-54236 (SessionReaper, CVSS 9.1), a critical nested deserialization vulnerability in Adobe Commerce and Magento that enables remote code execution and customer account takeover via the Commerce REST API, with over 250 attacks recorded in 24 hours. Attackers from five known IP addresses are deploying PHP webshells through ‘/customer/address_file/upload' and probing phpinfo, while 62% of Magento stores remain unpatched six weeks after Adobe's fix was released. Security teams must immediately patch all Adobe Commerce and Magento instances, block the listed attacker IPs (34.227.25.4, 44.212.43.34, 54.205.171.35, 155.117.84.134, and 159.89.12.166), and monitor for unauthorized file uploads, as this is the second critical deserialization flaw in these platforms within two years following CosmicSting (CVE-2024-34102).",
+          "url": "https://thehackernews.com/2025/10/over-250-magento-stores-hit-overnight.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a06",
+          "order": 2,
+          "title": "CRITICAL MCP SERVER FLAW EXPOSES OVER 3K SERVERS AND THOUSANDS OF API KEYS",
+          "summary": "Security researchers discovered a critical path traversal vulnerability in Smithery.ai, a popular MCP server hosting service. The researchers discovered that they could exploit a path traversal vulnerability in the dockerBuildPath configuration value to read files outside of their project. The researchers used this vulnerability to find a fly.io API token that granted root access to more than 3k applications.",
+          "url": "https://gbhackers.com/critical-mcp-server-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a07",
+          "order": 3,
+          "title": "LG UPLUS REPORTS SUSPECTED DATA BREACH, CLAIMS ACTIVE RESPONSE TO “HACKING”",
+          "summary": "LG Uplus, one of South Korea's major mobile carriers, reported a data breach. The announcement follows a report from Phrack that a threat actor infiltrated LG Uplus' internal network and seized data from nearly 9k servers, including data of 42,256 accounts and 167 employees.",
+          "url": "https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code=196857&utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "world.kbs.co.kr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a08",
+          "order": 1,
+          "title": "WHY ORGANIZATIONS ARE ABANDONING STATIC SECRETS FOR MANAGED IDENTITIES",
+          "summary": "Organizations are transitioning from static secrets (API keys, passwords, and tokens) to managed identities, achieving a 95% reduction in credential management time and a 75% reduction in learning platform-specific authentication. Major cloud providers (AWS IAM Roles, Azure Managed Identities, and GCP Service Accounts) now offer automated, short-lived credential provisioning that eliminates manual rotation and leakage risks. However, legacy systems and third-party APIs still require traditional secret management. Security teams should prioritize discovering existing credentials using NHI (Non-Human Identity) platforms before migration, aiming to reduce their secret footprint by 70-80% while maintaining robust secret management for remaining use cases.",
+          "url": "https://thehackernews.com/2025/10/why-organizations-are-abandoning-static.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a09",
+          "order": 2,
+          "title": "MODDING AND DISTRIBUTING MOBILE APPS WITH FRIDA",
+          "summary": "Frida enables powerful mobile app modifications by injecting custom agents into running processes. However, distributing these modifications for use by others—especially on non-rooted Android devices—requires embedding Frida's gadget library directly inside the APK. Using a demo app, this post walks through preparing an agent script that always rolls a 'one' in a dice app, compiling it, and patching the APK to include Frida's gadget for autonomous script execution.",
+          "url": "https://pit.bearblog.dev/modding-and-distributing-mobile-apps-with-frida/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "pit.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a10",
+          "order": 3,
+          "title": "COLLECTING IPHONE UNIFIED LOGS VIA MACOS",
+          "summary": "Unified logs are a forensic resource for iOS that includes granular background activity that can't be obtained in any other forensic artifact. The logs can be collected manually on a Mac via libimobiledevice or automatically using a script written by the author. The author provides suggestions for commercial and open-source tools to read the .logarchive, a structured bundle containing binary .tracev3 files.",
+          "url": "https://www.sjdcforensics.com/collecting-iphone-unified-logs-via-macos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "sjdcforensics.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a11",
+          "order": 1,
+          "title": "SAVE $345 ON GARTNER IAM SUMMIT 2025",
+          "summary": "Join IAM and cyber experts at Gartner IAM Summit 2025 [12]. With 80+ expert-led sessions on everything from agentic AI to IAM data management, this is your chance to make career-building connections with global pros. Plus, secure a 1:1 with a Gartner expert to get guidance tailored to your challenges. >> Use code IAM20P3 to save $345 on the standard rate [13].",
+          "url": "https://www.gartner.com/en/conferences/na/identity-access-management-us/sessions?utm_medium=email&utm_campaign=EVT_NA_2025_IAM20_PP_MP1_TLDR&utm_term=secondary&utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gartner.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a14",
+          "order": 2,
+          "title": "SSH-AUDIT",
+          "summary": "ssh-audit is an open-source Python tool that audits SSH server and client configurations by analyzing cryptographic algorithms, key exchanges, host keys, ciphers, and MACs against security best practices, with support for policy compliance testing and vulnerability detection, including Terrapin (CVE-2023-48795) and DHEat (CVE-2002-20001). The tool provides comprehensive analysis, including RSA/DH key length testing, algorithm recommendations, multi-threaded scanning, and built-in hardening guides for OpenSSH, Ubuntu, Debian, and Rocky Linux platforms. It now flags SHA-1 algorithms as failures, warns about quantum computing resistance, and includes built-in policies accessible via -L/--list-policies with custom policy creation via -M/--make-policy.",
+          "url": "https://github.com/jtesta/ssh-audit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a15",
+          "order": 3,
+          "title": "KEYCARD (PRODUCT LAUNCH)",
+          "summary": "Keycard provides an identity and access management platform for AI agents, enabling organizations to assign, track, and control AI agent permissions using cryptography, dynamic tokens, and runtime contextual access policies for secure, scalable agent deployment and visibility.",
+          "url": "https://www.keycard.sh/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "keycard.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a16",
+          "order": 4,
+          "title": "SAFELINE",
+          "summary": "SafeLine is a self-hosted Web Application Firewall(WAF)/reverse proxy that protects web apps from attacks and exploits.",
+          "url": "https://github.com/chaitin/SafeLine?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a17",
+          "order": 1,
+          "title": "META BOOSTS SCAM PROTECTION ON WHATSAPP AND MESSENGER",
+          "summary": "Meta introduced enhanced scam protections for WhatsApp and Messenger, including screen-sharing warnings during video calls with unknown contacts and on-device behavioral analysis to flag suspicious messages, with optional cloud-based AI review that breaks end-to-end encryption. The company removed over 21,000 fake customer support Facebook pages targeting users through comment monitoring on legitimate airline, travel agency, and bank accounts, part of broader scam trends targeting seniors with fake home remodeling and government debt relief schemes. Security teams should educate users, especially vulnerable populations, about enabling these protections, including Passkeys and Security Checkup features, while noting that cloud-based AI analysis compromises message encryption.",
+          "url": "https://www.malwarebytes.com/blog/scams/2025/10/meta-boosts-scam-protection-on-whatsapp-and-messenger?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a18",
+          "order": 2,
+          "title": "GOOGLE AND CHECK POINT NUKE MASSIVE YOUTUBE MALWARE NETWORK",
+          "summary": "A coordinated malware campaign on YouTube, known as the Ghost Network, exploited hijacked accounts to post fake tutorials promising cracked software and gaming cheats. These videos lured users into downloading infostealers, which stole credentials and crypto wallets. The operation relied on fake engagement and resilient tactics, leading Google and Check Point to remove over 3,000 malicious videos in a major crackdown.",
+          "url": "https://www.theregister.com/2025/10/23/youtube_ghost_network_malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a19",
+          "order": 3,
+          "title": "VIBE CODING'S REAL PROBLEM ISN'T BUGS—IT'S JUDGMENT",
+          "summary": "AI code generation enables rapid, large-scale software creation, but speed and flawed judgment are the real risks. While AI-made code has vulnerability rates similar to human work, issues like ineffective coding practices and skipped reviews mean more exposure to breaches, so experts urge integrating security directly into AI workflows and cultivating best usage practices.",
+          "url": "https://www.securityweek.com/vibe-codings-real-problem-isnt-bugs-its-judgment/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-24:a20",
+          "order": 1,
+          "title": "WHAT DOD SUBCONTRACTORS NEED TO KNOW ABOUT THE CMMC FINAL RULE",
+          "summary": "You can think of CMMC as the DoD's new standard cybersecurity background check for its supply chain. The new rule will require stricter verification for contractor security standards. Read the",
+          "url": "https://www.huntress.com/blog/cmmc-final-rule-guide-for-dod-subcontractors?utm_source=tldr&utm_medium=email&utm_campaign=cy25-10-camp-platform-global-prospect-iis-x-tldr_newsletter_1024&utm_content=Quick_Link",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a20",
+          "order": 2,
+          "title": "Huntress blog",
+          "summary": "",
+          "url": "https://www.huntress.com/blog/cmmc-final-rule-guide-for-dod-subcontractors?utm_source=tldr&utm_medium=email&utm_campaign=cy25-10-camp-platform-global-prospect-iis-x-tldr_newsletter_1024&utm_content=Quick_Link",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a21",
+          "order": 3,
+          "title": "MICROSOFT BUILDS ON RECALL WITH GAMING COPILOT — FAILS BASIC PRIVACY TESTS",
+          "summary": "Microsoft's new Gaming Copilot, built on Recall-like Copilot Vision technology, is being silently deployed to Windows 11 PCs without user consent or onboarding.",
+          "url": "https://doublepulsar.com/microsoft-builds-on-recall-with-gaming-copilot-fails-basic-privacy-tests-52988576bcc8?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "doublepulsar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-24:a22",
+          "order": 4,
+          "title": "CANADA FINES CYBERCRIME FRIENDLY CRYPTOMUS $176M",
+          "summary": "",
+          "url": "https://krebsonsecurity.com/2025/10/canada-fines-cybercrime-friendly-cryptomus-176m/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

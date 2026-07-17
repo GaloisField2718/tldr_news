@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-ai:2023-03-01",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2023-03-01",
+  "source_path": "TLDR AI/article_01-03-2023.md",
+  "source_content_hash": "sha256:a31dafd2ed866eae6034e0b9d082fa56d55b8557e7a2630ccf022db6999fc313",
+  "format_family": "inline_url",
+  "parse_status": "partial",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'MINUTE READ) [https://arxiv.org/abs/2302.10663?utm_source=tldrai]' has no inline URL",
+      "line": 49
+    }
+  ],
+  "title": "TLDR AI 2023-03-01",
+  "sections": [
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-01:o001",
+          "order": 1,
+          "title": "SNAPCHAT RELEASES AI CHATBOT POWERED BY CHATGPT",
+          "summary": "",
+          "url": "https://www.theverge.com/2023/2/27/23614959/snapchat-my-ai-chatbot-chatgpt-openai-plus-subscription?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o002",
+          "order": 2,
+          "title": "BEATING OPENAI CLIP WITH 100X LESS DATA AND COMPUTE",
+          "summary": "",
+          "url": "https://www.unum.cloud/blog/2023-02-20-efficient-multimodality?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "unum.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "research-innovation",
+      "heading": "RESEARCH & INNOVATION",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-01:o003",
+          "order": 1,
+          "title": "MINUTE READ) [https://arxiv.org/abs/2302.10663?utm_source=tldrai]",
+          "summary": "The paper describes a method for reconstructing a full 360◦ photographic model of an object using a single image of it. The approach involves fitting a neural radiance field to the image, but the problem is found to be severely ill-posed. To address this, an off-the-shelf conditional image generator based on diffusion is used, and a prompt is engineered to encourage it to \"dream up\" novel views of the object. The DreamFusion method is used to fuse the given input view, the conditional prior, and other regularizers in a final, consistent reconstruction.",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o004",
+          "order": 2,
+          "title": "BETTER JOINT TEXT-IMAGE EMBEDDINGS",
+          "summary": "",
+          "url": "https://www.unum.cloud/blog/2023-02-20-efficient-multimodality?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "unum.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o005",
+          "order": 3,
+          "title": "LANGUAGE IS NOT ALL YOU NEED",
+          "summary": "MLLM is a multimodal transformer trained on internet scale text/image data. It uses a frozen CLIP image encoder and a Magneto decoder only transformer. It has 1.3B parameters and was trained for 360B tokens. It was trained with TorchScale, a new exciting framework, and finished off with language only instruction tuning. It got 26% on an IQ test, which is better than random chance. It has 73% zeroshot ImageNet classification and positive transfer between modalities. It has a 64k vocab size and no code yet but should be coming soon.",
+          "url": "https://arxiv.org/abs/2302.14045?utm_source=tldrai",
+          "reading_time_minutes": 23,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-resources",
+      "heading": "ENGINEERING & RESOURCES",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-01:o006",
+          "order": 1,
+          "title": "OPENAI’S WHISPER LARGE ON AN IPHONE",
+          "summary": "Georgi has been working on Whisper.cpp which dramatically speeds up the runtime of OpenAI’s state of the art speech to text model. He has included a WASM version for the web. This latest model uses 4-bit integer quantization. Interestingly, this type of quantization only seems to work on larger models and fails on smaller models.",
+          "url": "https://github.com/ggerganov/whisper.cpp/pull/540?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o007",
+          "order": 2,
+          "title": "CACTI: A FRAMEWORK FOR IMITATION LEARNING",
+          "summary": "The authors propose a framework for scaling robot learning in multi-task and multi-scene manipulation in kitchen environments, both in simulation and in the real world. The proposed framework, called CACTI, comprises four stages that handle data collection, data augmentation, visual representation learning, and imitation policy training. The approach uses state-of-the-art generative models for data augmentation and pre-trained visual representations to improve training efficiency. Experimental results show that CACTI enables efficient training of a single policy that can perform 10 manipulation tasks involving kitchen objects on a real robot setup, and 18 semantic tasks across 100 layout variations for each individual task in a simulated kitchen environment.",
+          "url": "https://cacti-framework.github.io/?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "cacti-framework.github.io",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o008",
+          "order": 3,
+          "title": "SCENE DIFFUSER",
+          "summary": "Scene Diffuser is a conditional generative model for 3D scene understanding. This repository is the official implementation of paper \"Diffusion-based Generation, Optimization, and Planning in 3D Scenes\". SceneDiffuser provides a unified model for solving scene-conditioned generation, optimization, and planning. In contrast to prior work, SceneDiffuser is intrinsically scene-aware, physics-based, and goal-oriented.",
+          "url": "https://github.com/scenediffuser/Scene-Diffuser?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o009",
+          "order": 4,
+          "title": "T3-TURBO-AI",
+          "summary": "T3-Turbo-AI is a starter repo for building full-stack, type-safe, LLM-powered web apps.",
+          "url": "https://github.com/zckly/create-t3-turbo-ai?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-01:o010",
+          "order": 1,
+          "title": "META INCREASING RESOURCES TO PRODUCT TEAM FOR GENERATIVE AI",
+          "summary": "",
+          "url": "https://www.axios.com/2023/02/27/meta-generative-ai-products?utm_source=tldrai",
+          "reading_time_minutes": 4,
+          "source_domain": "axios.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-01:o011",
+          "order": 1,
+          "title": "BYTEDANCE DEVELOPING AI-BASED LEARNING PLATFORM",
+          "summary": "TikTok parent ByteDance is building an AI-based learning platform called GeniusJoy.",
+          "url": "https://archive.ph/XD1ei?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-01:o012",
+          "order": 2,
+          "title": "LORA SD MODELS FOR PANORAMA GENERATION",
+          "summary": "LoRA models can be plugged into a Stable Diffusion pipeline to change out the styles and quality of generated images. This model from Latent Labs allows you to generate panoramas and beautiful 360 scenes.",
+          "url": "https://civitai.com/models/10753/latentlabs360?utm_source=tldrai",
+          "reading_time_minutes": 1,
+          "source_domain": "civitai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

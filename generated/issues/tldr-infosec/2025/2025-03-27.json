@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-03-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-03-27",
+  "source_path": "TLDR InfoSec/article_27-03-2025.md",
+  "source_content_hash": "sha256:1d705bbc16d59d265abee7b549aa12c62e7be2f3d1c4db676fa21c05092a4a15",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-03-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a04",
+          "order": 1,
+          "title": "ATTACKERS AREN'T CHASING CVES. ARE YOU?",
+          "summary": "Agent-based scanners and legacy approaches have failed to keep up with real-world attacks, creating a false sense of security while missing exposures that are actively being exploited. And they fail to protect unmanageable and unknown assets…",
+          "url": "https://www.runzero.com/platform/?utm_source=tldr-sec&utm_medium=email-sponsored&utm_campaign=rz-product-launch-2025",
+          "reading_time_minutes": null,
+          "source_domain": "runzero.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a05",
+          "order": 2,
+          "title": "Try runZero free →",
+          "summary": "",
+          "url": "https://www.runzero.com/try/?utm_source=tldr-sec&utm_medium=email-sponsored&utm_campaign=rz-product-launch-2025",
+          "reading_time_minutes": null,
+          "source_domain": "runzero.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a06",
+          "order": 1,
+          "title": "NEW NPM ATTACK POISONS LOCAL PACKAGES WITH BACKDOORS",
+          "summary": "Researchers at Reversing Labs identified two malicious packages on npm targeting the ‘ethers' package: ‘ethers-provider2' and ‘ethers-providerz.' These packages stand out because they download a secondary malware stage that monitors the legitimate ‘ethers' package, then swaps its ‘provider-jsonrpc.js' with a trojanized version. This trojanized file downloads a third-stage malware that creates a reverse shell to a malicious IP address. Reversing Labs emphasizes the severity of this issue, as removing the malicious package does not eliminate the risk since the trojanized legitimate package can still harbor the malware.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-npm-attack-poisons-local-packages-with-backdoors/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a07",
+          "order": 2,
+          "title": "NEW ATLANTIS AIO AUTOMATES CREDENTIAL STUFFING ON 140 SERVICES",
+          "summary": "Researchers from Abnormal Security have discovered a new Credential Stuffing as a Service (CSaaS) called Atlantis AIO. Atlantis AIO can automate the process of account takeovers via brute forcing, credential stuffing, or abusing account recovery with pre-built integrations for 140 services. It also aids threat actors in bypassing CAPTCHAs and monetizing stolen credentials/accounts.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-atlantis-aio-automates-credential-stuffing-on-140-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a08",
+          "order": 3,
+          "title": "MACOS USERS WARNED OF NEW VERSIONS OF READERUPDATE MALWARE",
+          "summary": "ReaderUpdate macOS malware loader has evolved to other languages such as Go and Rust. Initially a Python binary, it targets x86 Intel systems through third-party software sites, deploying adware and potentially serving as a pay-per-install platform for threat actors.",
+          "url": "https://www.securityweek.com/macos-users-warned-of-new-versions-of-readerupdate-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a09",
+          "order": 1,
+          "title": "SCALING THREAT MODELING WITH AI: GENERATING 1,000 THREAT MODELS USING GEMINI 2.0 AND AI SECURITY ANALYZER",
+          "summary": "This blog post presents a method to produce high-quality threat models using Gemini 2.0 Flash Thinking and a series of prompts. The author found that the LLM performed poorly with prompts that were too long or too short but found that they could use multiple prompts that are in a “sweet spot” of length to science the desired results. They then used GitHub Actions to queue repositories into a pipeline that their AI Security Analyzer could then generate security design documentation, threat modeling, attack surface, and attack tree analysis for.",
+          "url": "https://xvnpw.github.io/posts/scaling-threat-modeling-with-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "xvnpw.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a10",
+          "order": 2,
+          "title": "HOW TO HACK AN EIGHT SLEEP SMART MATTRESS “POD”",
+          "summary": "Security researcher Dylan Ayrey identified three key vulnerabilities in Eight Sleep's \"Pod\" mattress: a developer backdoor for SSH access, an exposed AWS key, and dependence on cloud services. He replaced the $4,700 hub with a $150 aquarium chiller, demonstrating a simpler solution for temperature control that avoided data collection and internet access, instead of relying on a $200-300 annual subscription.",
+          "url": "https://www.kaspersky.com/blog/how-to-hack-a-smart-mattress/53232/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "kaspersky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a11",
+          "order": 3,
+          "title": "DO YOU OWN YOUR PERMISSIONS, OR DO YOUR PERMISSIONS OWN YOU?",
+          "summary": "The article discusses how BloodHound Enterprise addressed false positives in Active Directory attack paths due to object ownership permissions. It explains how Microsoft's BlockOwnerImplicitRights feature prevents compromised accounts from altering security descriptors to elevate privileges. The author details the implementation of OwnsLimitedRights and WriteOwnerLimitedRights edges in BloodHound v7.1.0, which correctly identify when these features are active, reducing false positives for users blocking owner implicit rights.",
+          "url": "https://posts.specterops.io/do-you-own-your-permissions-or-do-your-permissions-own-you-c829a91f5e45?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "posts.specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a12",
+          "order": 1,
+          "title": "CAN YOUR COMPANY REALLY AFFORD TO SKIP A PASSWORD MANAGER?",
+          "summary": "86% of cyberattacks on companies are credential-related; a data breach can cost millions; password managers like Bitwarden start at $4 per user. Read more about password managers and your IT budget [12]. Need enterprise password management that scales with your business? Trusted globally, Bitwarden is open source and compliant. See how to",
+          "url": "https://bitwarden.com/go/why-budget-for-a-password-manager/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=email&utm_content=IT+budget+password+managers+March+27th+send",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a13",
+          "order": 2,
+          "title": "scale for your business",
+          "summary": "",
+          "url": "https://bitwarden.com/go/bitwarden-overview/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=email&utm_content=Bitwarden+overview+March+27th+send",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a14",
+          "order": 3,
+          "title": "SPLXAI (PRODUCT LAUNCH)",
+          "summary": "SplxAI relies on automated security testing, continuous monitoring, and dynamic remediation to secure internal AI agents and customer-facing AI systems, preventing attacks such as prompt injections, hallucinations, and off-topic responses.",
+          "url": "https://splx.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "splx.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a15",
+          "order": 4,
+          "title": "UTMSTACK",
+          "summary": "UTMStack is a unified threat management platform that merges SIEM (Security Information and Event Management) and XDR (Extended Detection and Response) technologies.",
+          "url": "https://github.com/utmstack/UTMStack?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a16",
+          "order": 5,
+          "title": "PURPLELAB",
+          "summary": "PurpleLab is a readily deployable lab solution for cybersecurity professionals to test and create detection rules, simulate logs, and undertake various security tasks.",
+          "url": "https://github.com/Krook9d/PurpleLab?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a17",
+          "order": 1,
+          "title": "HOW THREAT ACTORS GET THEIR NAMES",
+          "summary": "Many threat actors are recognized by various names. These designations vary based on different vendors' conventions, such as Crowdstrike's use of animal names and Mandiant's APT classifications. This post features a list of threat actor names publicly disclosed by Microsoft, as well as additional names they are recognized by.",
+          "url": "https://blog.cyberalerts.io/coming-soon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.cyberalerts.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a18",
+          "order": 2,
+          "title": "A SNEAKY PHISH JUST GRABBED TROY HUNT'S MAILCHIMP MAILING LIST",
+          "summary": "Troy Hunt of Have I Been Pwned recently fell for a phishing email that claimed his Mailchimp privileges were restricted, redirecting him to a site that stole his login and MFA code. The email's legitimacy was convincing, and fatigue combined with Outlook for iOS not displaying the email address contributed to his error. However, 1Password's lack of autofill should have prevented it. Hunt also questioned why Mailchimp kept unsubscribed emails and has added the breached email list to his site.",
+          "url": "https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "troyhunt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a19",
+          "order": 3,
+          "title": "SECURITY ON THE PATH TO AGI",
+          "summary": "OpenAI is enhancing its security posture through a security grant program, a bug bounty cash increase, and AI-powered defense strategies. It is committed to protecting users, disrupting threats, and developing secure AI technologies as they advance toward AGI.",
+          "url": "https://links.tldrnewsletter.com/kpz2ks",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-27:a20",
+          "order": 1,
+          "title": "SOUTH AFRICAN POULTRY COMPANY REPORTS $1M LOSS AFTER CYBER INTRUSION",
+          "summary": "Astral Foods experienced a cybersecurity incident that resulted in $1.1 million in lost profits and disrupted poultry processing, but no customer data was compromised.",
+          "url": "https://links.tldrnewsletter.com/eYKbEl",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a21",
+          "order": 2,
+          "title": "FILES STOLEN FROM NSW COURT SYSTEM, INCLUDING RESTRAINING ORDERS FOR VIOLENCE",
+          "summary": "Australian police are investigating a cyber attack on the NSW Online Registry that resulted in the theft of 9,000 sensitive files, prompting authorities to contact potentially affected individuals due to risks of victim exposure and extortion.",
+          "url": "https://www.theregister.com/2025/03/26/nsw_police_investigating_court_system/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-27:a22",
+          "order": 3,
+          "title": "NEW RANSOMWARE GROUP CLAIMS ATTACK ON US TELECOM FIRM WIDEOPENWEST",
+          "summary": "A new ransomware group called Arkana Security claims to have hacked US telecom firm WideOpenWest (WOW!) and stolen customer information.",
+          "url": "https://www.securityweek.com/new-ransomware-group-claims-attack-on-us-telecom-firm-wideopenwest/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

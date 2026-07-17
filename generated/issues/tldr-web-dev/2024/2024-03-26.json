@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-03-26",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-03-26",
+  "source_path": "TLDR Web Dev/article_26-03-2024.md",
+  "source_content_hash": "sha256:82d4cbd1ed595d0fa00c2817660ff1a093bae98aae9cb6ee95da45e2ef7c3ace",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-03-26",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-26:a04",
+          "order": 1,
+          "title": "THE PROBLEM WITH USING A UUID PRIMARY KEY IN MYSQL",
+          "summary": "This article goes through the different versions of UUIDs and why using them as a primary key in MySQL can hurt database performance. Using UUIDs as primary keys can lead to slow insert performance, higher storage requirements, and larger index size requirements (since secondary indexes also store primary keys). To mitigate these issues, UUIDs can be stored in a binary format or ordered using UUID v6 or v7.",
+          "url": "https://planetscale.com/blog/the-problem-with-using-a-uuid-primary-key-in-mysql?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a05",
+          "order": 2,
+          "title": "WHAT HAPPENS ON GITLAB WHEN YOU DO GIT PUSH?",
+          "summary": "Git stores project history locally as objects and references (like branches). When you use 'git push', and your git remote is with GitLab, it sends these updates to a remote GitLab server. How you connect (SSH or HTTP(S)) determines the authentication method: SSH uses GitLab Shell for key-based verification, while HTTP(S) relies on Workhorse and Rails for authentication. Once authenticated, Gitaly takes over, managing your Git repository and executing 'git-receive-pack' to handle the incoming changes. Gitaly is used by GitLab to read and write Git data.",
+          "url": "https://nanmu.me/en/posts/2022/what-happens-on-gitlab-when-you-do-git-push/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "nanmu.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a06",
+          "order": 3,
+          "title": "LOW EFFORT IMAGE OPTIMIZATION TIPS",
+          "summary": "This is a tutorial on how to identify unoptimized images and how to optimize them to improve your web application’s performance. Developers should use modern formats like AVIF and WebP where possible and size their images properly to match their rendered dimensions. The `picture` element can be used with multiple image formats and resolutions for the browser to automatically select the best fit. Images below the fold should be lazy loaded.",
+          "url": "https://blog.sentry.io/low-effort-image-optimization-tips/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-26:a07",
+          "order": 1,
+          "title": "HOW TO BUILD A CAREER YOU ENJOY AS AN ENGINEER. WHAT I WISH SOMEONE TOLD ME WHEN I STARTED",
+          "summary": "To progress in your career, focus on impactful projects that align with your skills and interests rather than settling for easy tasks. You should take control and proactively seek out high-impact projects that contribute to company goals and your own career development. These projects should challenge you and it’s easier to work on something challenging if it’s also work that is meaningful to you, aligns with your strengths, and has a significant impact on your company. When you find an area you excel in, invest time and energy to become an expert and the go-to in that area.",
+          "url": "https://open.substack.com/pub/seattledataguy/p/how-to-build-a-career-you-enjoy-as?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a08",
+          "order": 2,
+          "title": "FRIENDS DON'T LET FRIENDS EXPORT TO CSV",
+          "summary": "CSV is a poor choice for storing and transferring tabular data due to its ambiguity, performance issues, and lack of compression. Apache Parquet is a better choice because it is self-describing, has excellent compression, and can be loaded efficiently.",
+          "url": "https://kaveland.no/friends-dont-let-friends-export-to-csv.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "kaveland.no",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a09",
+          "order": 3,
+          "title": "FROM FULL-STACK DEVELOPMENT TO SYSTEMS PROGRAMMING",
+          "summary": "This developer describes their career journey, shifting from full-stack development to specializing in systems programming. They discovered a passion for the technical depth of systems programming through projects focused on network protocols, tooling, and performance optimization. As their focus changes, they wonder whether it's possible to be both a generalist and a specialist.",
+          "url": "https://ochagavia.nl/blog/from-full-stack-development-to-systems-programming/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "ochagavia.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-26:a10",
+          "order": 1,
+          "title": "DOIT HELPS THE BEST COMPANIES BUILD ON AWS",
+          "summary": "Cloud-driven organizations trust DoiT [10] to guide their AWS journey. Whether you’re looking to unleash genAI, accelerate release pipelines, or modernize cloud infrastructure - DoiT is the AWS Premier Partner [10]for you.",
+          "url": "https://www.doit.com/aws-partner/?utm_source=tldr-webdev&utm_campaign=20240326",
+          "reading_time_minutes": null,
+          "source_domain": "doit.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a10",
+          "order": 2,
+          "title": "➡️ Start building with DoiT on AWS",
+          "summary": "➡️ Discover solutions for AWS DevOps [11] or GenAI acceleration [12].",
+          "url": "https://www.doit.com/aws-partner/?utm_source=tldr-webdev&utm_campaign=20240326",
+          "reading_time_minutes": null,
+          "source_domain": "doit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a13",
+          "order": 3,
+          "title": "JAMPACK",
+          "summary": "Jampack optimizes static websites for the best user experience and Core Web Vitals scores.",
+          "url": "https://github.com/divriots/jampack?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a14",
+          "order": 4,
+          "title": "MOUNTAINEER",
+          "summary": "Mountaineer is a web framework for building Web applications using Python.",
+          "url": "https://github.com/piercefreeman/mountaineer?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a15",
+          "order": 5,
+          "title": "INVERTORNOT",
+          "summary": "InvertOrNot is a free, open-source API that predicts if an image should be inverted for optimal dark-mode rendering.",
+          "url": "https://invertornot.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "invertornot.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-26:a16",
+          "order": 1,
+          "title": "WHY I CHARGE A $100,000 SOFTWARE LICENSING FEE FOR 10 LINES OF CODE",
+          "summary": "This developer creates novel, fundamental algorithms and data structures designed to solve specific computing challenges and improve performance. Unlike common open-source models, they license these algorithms with a fee for use in closed-source projects, allowing them to make a lot of money from organizations that can easily afford it.",
+          "url": "https://medium.com/@williamstaffordparsons/why-i-charge-a-100-000-software-licensing-fee-for-10-lines-of-code-317c1dfd6722?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a17",
+          "order": 2,
+          "title": "RIP REDIS: HOW GARANTIA DATA PULLED OFF THE BIGGEST HEIST IN OPEN SOURCE HISTORY",
+          "summary": "The recent Redis license change by Redis Labs (aka Garantia Data) is a harmful move that disregards the contributions of the wider Redis community. Garantia Data didn't create Redis. Redis was initially an independent open-source project and Garantia Data only became involved years after its creation. Redis’ widespread adoption was thanks to the open-source community and Amazon’s ElastiCache, not due to the company itself.",
+          "url": "https://www.gomomento.com/blog/rip-redis-how-garantia-data-pulled-off-the-biggest-heist-in-open-source-history?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "gomomento.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a18",
+          "order": 3,
+          "title": "GOOGLE'S FIRST TENSOR PROCESSING UNIT - ARCHITECTURE",
+          "summary": "Google designed the TPU v1 for fast, cost-effective inference using trained neural network models at scale. Its key feature is a focus on tensor operations, specifically matrix multiplications, which are core to neural network computations. The TPU v1 is 15-30x faster than contemporary CPUs/GPUs for inference. It has 25-29x better performance per watt than GPUs.",
+          "url": "https://thechipletter.substack.com/p/googles-first-tpu-architecture?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "thechipletter.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-26:a19",
+          "order": 1,
+          "title": "THE ALLURE OF LOCAL-FIRST SYNC ENGINES",
+          "summary": "Local-first sync engines revolutionize data management the way React transformed DOM manipulation: both shift from manually writing instructions (imperative) to simply declaring the desired state (declarative), with the engine handling the 'how' of syncing or rendering changes.",
+          "url": "https://blog.jim-nielsen.com/2024/allure-of-sync-engines/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a20",
+          "order": 2,
+          "title": "TWO OPEN SOURCE PROJECTS WITH GREAT DOCUMENTATION",
+          "summary": "esbuild and Redis are examples of open-source projects with great documentation that includes READMEs, architecture explanations, changelogs, and code comments.",
+          "url": "https://johnjago.com/great-docs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "johnjago.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a21",
+          "order": 3,
+          "title": "NEWLY SENIOR ENGINEER, BUT I DON’T FEEL SENIOR. I HAVE BIG GAPING HOLES WITH REGARD TO HOW TO STRUCTURE/REFACTOR CODE AND BUILD SYSTEMS (REDDIT THREAD)",
+          "summary": "Understanding the scope of what you don’t know is an important part of the senior mindset. Seniors should focus on their strengths while working to fill in their gaps.",
+          "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1bl1h2q/newly_senior_engineer_but_i_dont_feel_senior_i/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "reddit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-26:a22",
+          "order": 4,
+          "title": "WHEN APPLE CONSIDERED BUYING BING",
+          "summary": "Apple executives discussed buying or partnering with Microsoft Bing, but they had concerns about its smaller market share and potential challenges in catching up to Google's dominance.",
+          "url": "https://open.substack.com/pub/techemails/p/apple-and-bing?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

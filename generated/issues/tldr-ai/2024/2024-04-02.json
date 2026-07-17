@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-ai:2024-04-02",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2024-04-02",
+  "source_path": "TLDR AI/article_02-04-2024.md",
+  "source_content_hash": "sha256:9333b5d19f1a9a15b4cb6a39470a41adf3c2be5b4a9ebaf930229c0bd79752c7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR AI 2024-04-02",
+  "sections": [
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2024-04-02:a04",
+          "order": 1,
+          "title": "NAVIGATING THE CHALLENGES AND OPPORTUNITIES OF SYNTHETIC VOICES",
+          "summary": "OpenAI's Voice Engine is a model that generates speech mimicking a speaker's voice from a 15-second audio sample. It can be used in applications like educational aids, translation, and support for non-verbal individuals. OpenAI is employing a cautious approach to deployment due to potential misuse.",
+          "url": "https://openai.com/blog/navigating-the-challenges-and-opportunities-of-synthetic-voices?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "openai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a05",
+          "order": 2,
+          "title": "NOBODY KNOWS HOW TO SAFETY-TEST AI",
+          "summary": "Beth Barnes' nonprofit METR is partnering with major AI companies like OpenAI and Anthropic to develop safety tests for advanced AI systems, a move echoed by government initiatives. The focus is on assessing risks such as AI autonomy and self-replication, though there's acknowledgment that safety evaluations are still in early stages and cannot guarantee AI safety. METR's work is seen as pragmatic, despite concerns that current tests may not be sufficiently reliable to justify the rapid advancement of AI technologies.",
+          "url": "https://time.com/6958868/artificial-intelligence-safety-evaluations-risks/?utm_source=tldrai",
+          "reading_time_minutes": 9,
+          "source_domain": "time.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a06",
+          "order": 3,
+          "title": "APPLE RESEARCHERS BOAST ON-DEVICE MODEL THAT OUTPERFORMS GPT-4",
+          "summary": "Apple's AI researchers have developed a new system called ReALM that improves Siri's ability to understand context by considering on-screen, conversational, and background entities. It outperforms ChatGPT 4.0 in benchmarks.",
+          "url": "https://9to5mac.com/2024/04/01/apple-ai-gpt-4/?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "9to5mac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "research-innovation",
+      "heading": "RESEARCH & INNOVATION",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2024-04-02:a07",
+          "order": 1,
+          "title": "TRANSFORMER-LITE: LLMS ON MOBILE PHONE GPUS",
+          "summary": "Running language models on phones is challenging due to latency, bandwidth, and power constraints. Using quantization, removal of the kv cache, and other optimizations - this research shows how to get 30 tokens/second generation for the powerful Gemma 2B model, which is approximately 3x faster than other frameworks.",
+          "url": "https://arxiv.org/abs/2403.20041?utm_source=tldrai",
+          "reading_time_minutes": 26,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a08",
+          "order": 2,
+          "title": "UNSOLVABLE PROBLEM DETECTION IN VLMS",
+          "summary": "There are times when Visual Language Models (VLMs) cannot answer a query given an input image. This is a challenge even for state-of-the-art VLMs like GPT-4V. This paper proposes a benchmark and some potential improvements for VLMs faced with Unsolvable Problems.",
+          "url": "https://arxiv.org/abs/2403.20331?utm_source=tldrai",
+          "reading_time_minutes": 22,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a09",
+          "order": 3,
+          "title": "3D SCENE EDITING WITH TOTAL-DECOM",
+          "summary": "Total-Decom offers a breakthrough in 3D scene reconstruction, allowing for easy editing and manipulation by accurately decomposing objects from multi-view images with minimal user effort.",
+          "url": "https://arxiv.org/abs/2403.19314v1?utm_source=tldrai",
+          "reading_time_minutes": 16,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-resources",
+      "heading": "ENGINEERING & RESOURCES",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2024-04-02:a10",
+          "order": 1,
+          "title": "OPTIMUM-NVIDIA",
+          "summary": "An update to TensorRT from Nvidia achieves speeds up to 28x faster than baseline. Llama 2 in particular can run at 1,200 tokens per second in benchmarks. The update takes advantage of the new Hopper and Ada chip architectures.",
+          "url": "https://github.com/huggingface/optimum-nvidia?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a11",
+          "order": 2,
+          "title": "OPENUI",
+          "summary": "Wandb has released a toolkit that allows you to describe a UI and have it rendered in React, Svelte, etc. It allows for text-based editing as well. The tool can be run locally with Ollama.",
+          "url": "https://github.com/wandb/openui?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a12",
+          "order": 3,
+          "title": "OPENCHAT GEMMA (HUGGINGFACE HUB)",
+          "summary": "Gemma has been challenging to tune. This work from the OpenChat team shows it is possible to match Mistral tune performance.",
+          "url": "https://huggingface.co/openchat/openchat-3.5-0106-gemma?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "huggingface.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2024-04-02:a13",
+          "order": 1,
+          "title": "BEYOND RPA: HOW LLMS ARE USHERING IN A NEW ERA OF INTELLIGENT PROCESS AUTOMATION",
+          "summary": "Despite some early successes, RPA fell short of the enterprise-wide deployments as promised. A Deloitte survey revealed that only 3% of companies were able to successfully scale their RPA initiatives. Recent advances in AI are poised to change this. LLMs’ novel capabilities prime the market opportunity for intelligent process automation to grow by at least 10x in the coming decade.",
+          "url": "https://foundationcapital.com/beyond-rpa-how-llms-are-ushering-in-a-new-era-of-intelligent-process-automation/?utm_source=tldrai",
+          "reading_time_minutes": 7,
+          "source_domain": "foundationcapital.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a14",
+          "order": 2,
+          "title": "WE’RE FOCUSING ON THE WRONG KIND OF AI APOCALYPSE",
+          "summary": "Discussions about AI's future often focus on extreme scenarios, overlooking its immediate impact on jobs and misinformation. However, with thoughtful integration, AI has the potential to transform work into more meaningful and productive tasks rather than leading to apocalyptic outcomes.",
+          "url": "https://time.com/6961559/ethan-mollick-ai-apocalypse-essay/?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "time.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a15",
+          "order": 3,
+          "title": "MICROSOFT’S GENERATIVE AI FOR BEGINNERS COURSE",
+          "summary": "Version 2 of Microsoft's popular course on LLMs, vector databases, prompting, and low code applications is on GitHub. It contains 18 lessons. Some of the content is aspirational, but it is still a good resource for getting started in the space.",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2024-04-02:a16",
+          "order": 1,
+          "title": "BEZI AI ENABLES GENERATIVE AI-BASED 3D DESIGN",
+          "summary": "A significant milestone in the world of 3D design: the ability to ideate at the speed of thought with an infinite asset library.",
+          "url": "https://bezi.com/hq/blog/introducing-bezi-ai?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "bezi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a17",
+          "order": 2,
+          "title": "ROBOT, CAN YOU SAY ‘CHEESE’?",
+          "summary": "Emo is a robot capable of anticipating and mimicking human facial expressions in real-time in a way that significantly enhances human-robot interaction, paving the way for future applications in assistance, education, and companionship.",
+          "url": "https://www.engineering.columbia.edu/news/robot-can-you-say-cheese?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "engineering.columbia.edu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2024-04-02:a18",
+          "order": 3,
+          "title": "YOU CAN NOW USE CHATGPT WITHOUT AN ACCOUNT",
+          "summary": "OpenAI has made ChatGPT accessible without an account, with additional safeguards for accountless users and options to opt out of data training, aiming to attract more users to its platform to widen AI's benefits and gather more training data.",
+          "url": "https://www.engadget.com/you-can-now-use-chatgpt-without-an-account-184417749.html?src=rss&utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "engadget.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

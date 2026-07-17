@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-03-03",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-03",
+  "source_path": "TLDR InfoSec/article_03-03-2026.md",
+  "source_content_hash": "sha256:7bb5776ceff1714618bf0bbe6aa8bc513274de3138c4c5b9ae472cd0867aebc2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-03",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-03:a04",
+          "order": 1,
+          "title": "HACKTIVISTS CLAIM TO HAVE HACKED HOMELAND SECURITY TO RELEASE ICE CONTRACT DATA",
+          "summary": "Hacktivist group “Department of Peace” claims to have breached a DHS tech‑procurement office, leaking ICE contract records involving over 6,000 vendors, including major defense and surveillance firms. The data exposes contract values and detailed contact information, sharpening doxxing, targeting, and supply‑chain risks for companies embedded in the US immigration enforcement infrastructure.",
+          "url": "https://techcrunch.com/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a05",
+          "order": 2,
+          "title": "MADISON SQUARE GARDEN DATA BREACH CONFIRMED MONTHS AFTER HACKER ATTACK",
+          "summary": "Madison Square Garden has confirmed a data breach linked to the 2025 Oracle E-Business Suite campaign, in which Cl0p exploited vulnerabilities in a third-party-hosted instance. Over 210GB of personal information, including names and Social Security numbers, was stolen. Notifications are being sent to individuals affected by the breach.",
+          "url": "https://links.tldrnewsletter.com/MjeDge",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a06",
+          "order": 3,
+          "title": "GOOGLE ADDRESSES ACTIVELY EXPLOITED QUALCOMM ZERO-DAY IN FRESH BATCH OF 129 ANDROID VULNERABILITIES",
+          "summary": "Google's March 2026 Android security update patches 129 vulnerabilities, the highest monthly count since April 2018, including an actively exploited Qualcomm zero-day (CVE-2026-21385) affecting 234 chipsets. Google's Threat Analysis Group reported a high-severity memory-corruption flaw in an open-source Qualcomm display component in December, and fixes were made available to OEMs in January. Android device users should apply security updates as they become available from their device manufacturers.",
+          "url": "https://cyberscoop.com/android-security-update-march-2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-03:a07",
+          "order": 1,
+          "title": "PLEASE, PLEASE, PLEASE STOP USING PASSKEYS FOR ENCRYPTING USER DATA",
+          "summary": "Using passkeys' WebAuthn PRF (Pseudo-Random Function) extension to derive encryption keys for E2EE (End-to-End Encrypted) data dangerously couples data availability to authentication credentials, dramatically increasing the “blast radius” of routine credential loss or deletion. Common password-manager UIs don't clearly communicate that deleting a passkey may permanently orphan encrypted backups, so users can recover their account via other methods yet still be unable to decrypt or restore their data—effectively a self-inflicted, irreversible data-loss scenario. If you must use PRF, add prominent up-front warnings and support documentation, and push credential managers to show explicit deletion warnings for PRF-enabled passkeys.",
+          "url": "https://blog.timcappalli.me/p/passkeys-prf-warning/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.timcappalli.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a08",
+          "order": 2,
+          "title": "THE FORGOTTEN BUG: HOW A NODE.JS CORE DESIGN FLAW ENABLES HTTP REQUEST SPLITTING",
+          "summary": "A long‑standing TOCTOU flaw in Node.js ClientRequest.path allows attackers to bypass CRLF validation by mutating the path after construction but before _implicitHeader() serializes the request line, enabling header injection, body injection, and full HTTP request splitting across popular proxy and HTTP client libraries with roughly 160M+ weekly downloads. Tracing the original CVE‑2018‑12116 fix pinpoints the remaining design gap, demonstrates practical exploits against common proxy patterns, and contrasts vulnerable libraries with those whose architectures naturally close the window. Node.js considers this out of scope for its threat model, shifting responsibility to library authors and application developers, who are urged to re‑validate paths, avoid exposing raw ClientRequest objects before flushing, and audit code where user input flows into req.path or proxyReq.path during this critical window.",
+          "url": "https://r3verii.github.io/cve/2026/02/27/nodejs-toctou.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "r3verii.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a09",
+          "order": 3,
+          "title": "CAPTURE THE KERBEROS FLAG: DETECTING KERBEROS ANOMALIES",
+          "summary": "Kerberos TGT requests emit Windows Events with the Id 4768 and include a wealth of information about the request. The user can compare the request flags against those commonly set by tools such as Metasploit, those included in IoCs from malware campaigns, or those that differ from an established baseline to identify suspicious activity. This post includes a breakdown of the flags and a KQL query for hunting suspicious ones.",
+          "url": "https://blog.nviso.eu/2026/02/12/capture-the-kerberos-flag-detecting-kerberos-anomalies/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.nviso.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-03:a10",
+          "order": 1,
+          "title": "🧘♀️ PEACE OF MIND IN EVERY SPRINT",
+          "summary": "Writing code can be stressful—but not half as stressful as a surprise security meltdown. Inject optimism and calm into the developer scrum with Microsoft Azure [11]. Unified security across code and cloud environments and built-in DDoS protection mean you've got less cause for concern—and a clear mind for innovation. Help",
+          "url": "https://links.tldrnewsletter.com/DFy9Le?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a11",
+          "order": 2,
+          "title": "secure your apps with Azure >",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/DFy9Le",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a12",
+          "order": 3,
+          "title": "AWS SECURITY HUB EXTENDED OFFERS FULL-STACK ENTERPRISE SECURITY WITH CURATED PARTNER SOLUTIONS",
+          "summary": "AWS Security Hub Extended introduces a unified, full‑stack security plan that bundles AWS-native detections with curated partner tools across endpoints, identity, email, data, network, browser, cloud, AI, and SecOps. It standardizes findings via OCSF, centralizes them in Security Hub, and offers pay‑as‑you‑go procurement with AWS as seller of record.",
+          "url": "https://aws.amazon.com/blogs/aws/aws-security-hub-extended-o%EF%AC%80ers-full-stack-enterprise-security-with-curated-partner-solutions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a13",
+          "order": 4,
+          "title": "DIGIBASTION",
+          "summary": "Digibastion is an open-source Web3 security platform that centralizes threat intel, OpSec assessments, best-practice checklists, and tooling to help protect crypto users from phishing, scams, and technical risks.",
+          "url": "https://github.com/Raiders0786/digibastion?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a14",
+          "order": 5,
+          "title": "SAGE",
+          "summary": "Safety for Agents (Sage) is a lightweight agent detection and response layer for AI agents that guards commands, files, and web requests.",
+          "url": "https://github.com/avast/sage?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-03:a15",
+          "order": 1,
+          "title": "AN INTERACTIVE INTRO TO ELLIPTIC CURVE CRYPTOGRAPHY",
+          "summary": "This is a technical primer on how elliptic curve cryptography works. ECC's security comes from the one-way nature of scalar multiplication, rather than from the hardness of the Elliptic Curve Discrete Logarithm Problem, while enabling much smaller keys than RSA for comparable security. The post walks through the mechanics behind point addition, finite-field arithmetic, ECDH, ECDSA, and ECIES, and highlights a key operational risk: reused ECDSA nonces can leak private keys. For security professionals, the actionable takeaway is to prefer well-vetted modern curves and implementations, ensure strong nonce handling and key generation, and remember ECC remains efficient and widely deployed today but is not post-quantum safe.",
+          "url": "https://growingswe.com/blog/elliptic-curve-cryptography?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "growingswe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a16",
+          "order": 2,
+          "title": "PAKISTAN'S TOP NEWS CHANNELS HACKED AND HIJACKED WITH ANTI-MILITARY MESSAGES",
+          "summary": "Multiple major Pakistani news channels, including Geo News, ARY News, and Samaa TV, had their satellite feeds hijacked on March 1 to display anti-military messages during peak Ramadan viewing hours. Attackers compromised the PakSat satellite beams and live feeds. The breach triggered retaliatory cyberattacks from a group called Pakistan Cyber Force against Indian media outlets. Authorities are investigating the coordinated incident, which also reportedly affected websites across 19 countries through unauthorized Google ad campaigns.",
+          "url": "https://hackread.com/pakistan-news-channels-hacked-anti-military-messages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a17",
+          "order": 3,
+          "title": "UNPRECEDENTED GITHUB HACKING SPREE: “SECURITY RESEARCH” AI BOT COMPROMISES MAJOR REPOS",
+          "summary": "Researchers from StepSecurity have uncovered an automated hacking bot, dubbed “hackerbot-claw,” which claims to have scanned over 47k repositories for security vulnerabilities but has actually exploited vulnerabilities to compromise 6 popular open-source projects. The compromised projects include repositories from DataDog, Microsoft, and Aqua Security. Aqua Security renamed and made Trivy private after the bot fully compromised it.",
+          "url": "https://links.tldrnewsletter.com/WHw561",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-03:a18",
+          "order": 1,
+          "title": "GOING VIRAL SHOULDN'T MEAN GOING DOWN",
+          "summary": "Microsoft Azure autoscales when traffic spikes—adjusting capacity automatically so you can skip the scramble. With more global regions than any other cloud provider, you've always got room to grow. Scale",
+          "url": "https://links.tldrnewsletter.com/qMIsKU?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a19",
+          "order": 2,
+          "title": "with Azure →",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/qMIsKU",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a20",
+          "order": 3,
+          "title": "CULTIVATING A ROBUST AND EFFICIENT QUANTUM-SAFE HTTPS",
+          "summary": "Chrome is rolling out Merkle Tree Certificates and a dedicated quantum‑resistant root store to make HTTPS post‑quantum safe without bloating TLS handshakes.",
+          "url": "https://security.googleblog.com/2026/02/cultivating-robust-and-efficient.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a21",
+          "order": 4,
+          "title": "OPENCLAW VULNERABILITY ALLOWED WEBSITES TO HIJACK AI AGENTS",
+          "summary": "A serious vulnerability in the OpenClaw AI assistant enabled attackers to take control of agents through malicious websites by exploiting unsecured localhost WebSocket connections and unlimited password brute-force attempts, but it has been fixed in version 2026.2.25.",
+          "url": "https://links.tldrnewsletter.com/4GqLDV",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-03:a22",
+          "order": 5,
+          "title": "FLORIDA WOMAN IMPRISONED FOR MASSIVE MICROSOFT LICENSE FRAUD SCHEME",
+          "summary": "A Florida woman was sentenced to 22 months in prison and fined $50,000 for trafficking tens of thousands of stolen Microsoft COA labels, extracting product keys, and selling them in bulk to customers worldwide, in a scheme totaling over $5 million.",
+          "url": "https://www.bleepingcomputer.com/news/security/florida-woman-imprisoned-for-massive-microsoft-license-fraud-scheme/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

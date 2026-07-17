@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-08-08",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-08",
+  "source_path": "TLDR Web Dev/article_08-08-2024.md",
+  "source_content_hash": "sha256:28959d8c5ff6954d33af419f323a31de2d37af3fa9605e4f9421347dd9bacd26",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-08",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-08:a04",
+          "order": 1,
+          "title": "CRINGEY, BUT TRUE: HOW UBER TESTS PAYMENTS IN PRODUCTION",
+          "summary": "Uber tests payment systems in production, since traditional staging environments aren't enough for catching real-world bugs. It treats deployments as experiments, carefully selecting a region for initial rollout and continuously monitoring business metrics. This allows it to identify and resolve issues early on with real-world data while reducing the impact on users.",
+          "url": "https://news.alvaroduran.com/p/cringey-but-true-how-uber-tests-payments?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "news.alvaroduran.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a05",
+          "order": 2,
+          "title": "REACT COMPILER, HOW DOES IT WORK?",
+          "summary": "This article explains how React compiler works, specifically how it applies memoization techniques for efficiency on functions and hooks. The compilation involves traversing nodes, compiling functions, and replacing original functions with optimized versions. If memoization is applied, the compiler adds an import for `useMemoCache`. The article details the compiler's operation from entry through Babel to function transformation.",
+          "url": "https://yongseok.me/blog/en/react_compiler_1/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "yongseok.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a06",
+          "order": 3,
+          "title": "TONY HAWK'S PRO STRCPY",
+          "summary": "A buffer overflow vulnerability was found in the \"Create-A-Park\" feature of various Tony Hawk's Pro Skater games. The vulnerability, dubbed \"Tony Hawk's Pro Strcpy\", allows attackers to gain code execution on multiple gaming consoles, including the original Xbox, PlayStation 2, GameCube, and even the Xbox 360 (on a specific older kernel version). This article explores the various methods used to exploit the bug, ranging from simple save game hacks to intricate ROP chains and network-based attacks.",
+          "url": "https://icode4.coffee/?p=954&utm_source=tldrwebdev",
+          "reading_time_minutes": 49,
+          "source_domain": "icode4.coffee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-08:a07",
+          "order": 1,
+          "title": "I MADE A HUGE MISTAKE IN BECOMING AN ENGINEERING MANAGER (REDDIT THREAD)",
+          "summary": "This Redditor regrets becoming an Engineering Manager, finding the role soul-sucking, boring, and tedious. They miss the hands-on coding work they used to do and feel the management role is significantly different and more complex than being a lead. Commenters note that management is not a progression from engineering but rather a different job entirely.",
+          "url": "https://links.tldrnewsletter.com/btwcdD",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a08",
+          "order": 2,
+          "title": "THE SENIOR ENGINEER ILLUSION: WHAT I THOUGHT VS. WHAT I LEARNED",
+          "summary": "This post debunks common misconceptions about senior engineers, revealing that they are not coding superheroes but rather seasoned professionals with experience dealing with complexity. Seniority involves handling legacy systems, managing stakeholder expectations, and orchestrating teams, not just writing code. True seniority comes with continuous learning and adaptability.",
+          "url": "https://www.mensurdurakovic.com/the-senior-engineer-illusion-what-i-thought-vs-what-i-learned/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mensurdurakovic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a09",
+          "order": 3,
+          "title": "PYTHON EXTENSIONS SHOULD BE LAZY",
+          "summary": "Python's \"everything is an object\" philosophy slows down the parsing of large codebases with the ast module due to the overhead of converting C structs to Python objects. This conversion results in excessive memory allocations and garbage collection. To address the issue, this developer implemented a Rust extension that processed the ASTs in Rust, only returning the final results to Python, resulting in a 16x speedup and significantly reduced memory pressure. They argue that Python extensions should be designed to be lazy, meaning that they should only create Python objects when explicitly required, and instead keep data in a compact, optimized format within their own language.",
+          "url": "https://www.gauge.sh/blog/python-extensions-should-be-lazy?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "gauge.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-08:a10",
+          "order": 1,
+          "title": "ANNOUNCING OFFICIAL PUPPETEER SUPPORT FOR FIREFOX",
+          "summary": "Puppeteer, a browser automation library, now officially supports Firefox. Users can now write automation and perform end-to-end testing using Puppeteer across both Chrome and Firefox. This support is built on WebDriver BiDi, a cross-browser protocol currently undergoing standardization.",
+          "url": "https://hacks.mozilla.org/2024/08/puppeteer-support-for-firefox/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "hacks.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a11",
+          "order": 2,
+          "title": "VERCEL AI SDK 3.3",
+          "summary": "Vercel AI SDK 3.3 introduces several new features for building AI applications with JavaScript and TypeScript, including tracing with OpenTelemetry for observability, multi-modal file attachments for chat applications, a `useObject` hook for streaming structured object generation to clients, and additional LLM settings like JSON schema support, stop sequences, and custom headers.",
+          "url": "https://vercel.com/blog/vercel-ai-sdk-3-3?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a12",
+          "order": 3,
+          "title": "VISUAL CSS EDITOR",
+          "summary": "A web-based CSS editor with a GUI.",
+          "url": "https://getbutterfly.com/css-editor/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "getbutterfly.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-08:a13",
+          "order": 1,
+          "title": "BENCHMARKING AWS LAMBDA COLD STARTS ACROSS JAVASCRIPT RUNTIMES",
+          "summary": "This article benchmarks the cold start performance of AWS Lambda functions using Deno, Node.js, and Python runtimes. Deno shows significantly better performance with faster startup times, especially in smaller function configurations. This is likely due to Deno's various runtime caches. You can make your Deno app start time even faster by populating these caches ahead of time during the Docker image creation so that they're immediately available when your application executes in AWS Lambda.",
+          "url": "https://deno.com/blog/aws-lambda-coldstart-benchmarks?ck_subscriber_id=2641246736&utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "deno.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a14",
+          "order": 2,
+          "title": "FIRST IMPRESSIONS OF GLEAM: LOTS OF JOYS AND SOME ROUGH EDGES",
+          "summary": "Gleam is a functional programming language targeting both the BEAM and JavaScript. Its strengths lie in its excellent documentation, welcoming community, and powerful features like pattern matching and shadowing. However, the lack of loops, confusing type aliases, and idiosyncratic grouping mechanisms may pose challenges for developers accustomed to more traditional syntax.",
+          "url": "https://www.ntietz.com/blog/first-impressions-of-gleam/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "ntietz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-08:a15",
+          "order": 1,
+          "title": "ASK HN: HOW DIFFERENT IS AWS/GCP/AZURE IN EVERYDAY WORK (HACKER NEWS THREAD)",
+          "summary": "The foundations of each cloud platform are the same - edge cases are where deeper knowledge and experience help one be more productive in one cloud stack over another.",
+          "url": "https://news.ycombinator.com/item?id=41182565&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a16",
+          "order": 2,
+          "title": "APPLE MEMORY HOLED ITS BROKEN PROMISE FOR AN OCSP OPT-OUT",
+          "summary": "Apple broke its promise to allow Mac users to opt out of Developer ID certificate revocation checks, erasing the promise from its support document shortly after releasing macOS 14 Sonoma.",
+          "url": "https://lapcatsoftware.com/articles/2024/8/3.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "lapcatsoftware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a17",
+          "order": 3,
+          "title": "RELEASE",
+          "summary": "Release is an AI development and deployment platform.",
+          "url": "https://release.ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "release.ai",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-08:a18",
+          "order": 4,
+          "title": "DON'T PIVOT INTO AI RESEARCH",
+          "summary": "Despite its current allure, the field of AI research is likely to become increasingly competitive and less lucrative due to the dominance of large, capital-intensive companies and an oversupply of talent, mirroring the decline of chip design as a high-status profession.",
+          "url": "https://maged.com/pivot-to-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "maged.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

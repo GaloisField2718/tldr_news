@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-01-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-01-19",
+  "source_path": "TLDR InfoSec/article_19-01-2024.md",
+  "source_content_hash": "sha256:66f70f9ab7f6a39816fc15dedf5c60d98dace2118e16f40c0b84889548e65c3f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-01-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a05",
+          "order": 1,
+          "title": "ADVANCED CONTAINER SECURITY BEST PRACTICES (CHEAT SHEET)",
+          "summary": "Want to uplevel your container security strategy? This cheat sheet explores advanced techniques that you can put into action ASAP. Use this cheat sheet as a quick reference to ensure you have the proper benchmarks in place to secure your container environments.",
+          "url": "https://www.wiz.io/lp/container-security-best-practices-cheat-sheet?utm_source=tldrtech&utm_medium=paid-email&utm_campaign=FY24Q3_INB_FORM_Container-Security-Best-Practices-Cheat-Sheet&sfcid=701Py000001WjUTIA0&utm_term=FY24Q4-TldrTech-nl&utm_content=ContainerBestPractices",
+          "reading_time_minutes": null,
+          "source_domain": "wiz.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a05",
+          "order": 2,
+          "title": "GET THE CONTAINER SECURITY CHEAT SHEET",
+          "summary": "",
+          "url": "https://www.wiz.io/lp/container-security-best-practices-cheat-sheet?utm_source=tldrtech&utm_medium=paid-email&utm_campaign=FY24Q3_INB_FORM_Container-Security-Best-Practices-Cheat-Sheet&sfcid=701Py000001WjUTIA0&utm_term=FY24Q4-TldrTech-nl&utm_content=ContainerBestPractices",
+          "reading_time_minutes": null,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a06",
+          "order": 1,
+          "title": "RANSOMWARE GROUP TARGETS FOXCONN SUBSIDIARY FOXSEMICON",
+          "summary": "Foxsemicon, a subsidiary of Foxconn, was recently targeted by the ransomware group LockBit. The hackers defaced Foxsemicon's website, claimed to steal 5TB of data, and are threatening to leak sensitive customer/employee info unless their ransom demand is paid.",
+          "url": "https://www.securityweek.com/ransomware-group-targets-foxconn-subsidiary-foxsemicon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a07",
+          "order": 2,
+          "title": "LEFTOVERLOCALS: LISTENING TO LLM RESPONSES THROUGH LEAKED GPU LOCAL MEMORY",
+          "summary": "Trail of Bits is disclosing a vulnerability that it discovered that allows for memory leakage from an optimized GPU region in GPUs from Apple, Qualcomm, AMD, and Imagination. The researchers showed that they could leak 5.5MB per GPU invocation, which translates to 181MB on a 7B llama.cpp model. They demonstrated that this is enough information to reconstruct the LLM response with high accuracy.",
+          "url": "https://blog.trailofbits.com/2024/01/16/leftoverlocals-listening-to-llm-responses-through-leaked-gpu-local-memory/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a08",
+          "order": 3,
+          "title": "ANDROXGHOST MALWARE BOTNET STEALS AWS, MICROSOFT CREDENTIALS",
+          "summary": "CISA and FBI warn that threat actors using Androxghost malware are building a botnet focused on cloud credential theft and using the stolen information to deliver additional malicious payloads. The botnet scans for servers vulnerable to specific RCE vulnerabilities and then scans the servers for .env files with cloud credentials. The credentials can then be used to spin up infrastructure to expand the botnet or to send out spam masquerading as the compromised companies.",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-androxgh0st-malware-botnet-steals-aws-microsoft-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a09",
+          "order": 1,
+          "title": "LATERAL MOVEMENT – VISUAL STUDIO DTE",
+          "summary": "Visual Studio's Development Tools Environment (DTE) COM library can enable lateral movement by interacting with the OS to execute commands remotely. The class ID of the Visual Studio install needs to be retrieved from the registry first, but it is an interesting path that can be taken.",
+          "url": "https://pentestlab.blog/2024/01/15/lateral-movement-visual-studio-dte/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pentestlab.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a10",
+          "order": 2,
+          "title": "REAL TIME THREAT DETECTION FOR KUBERNETES WITH ATOMIC RED TESTS & FALCO",
+          "summary": "A post on using Atomic Red Tests to test Falco detection in Kubernetes. The post first walks through deploying Atomic Red Tests and Falco in a Kubernetes cluster. It then walks through running tests, monitoring for detections, and adding custom Falco rules for missed events.",
+          "url": "https://www.blackhillsinfosec.com/real-time-threat-detection-for-kubernetes-with-atomic-red-tests-and-falco/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blackhillsinfosec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a11",
+          "order": 3,
+          "title": "A LIGHTWEIGHT METHOD TO DETECT POTENTIAL IOS MALWARE",
+          "summary": "This blog post discusses a lightweight way to detect potential iOS malware by analyzing the Shutdown.log file stored in sysdiag archives. Anomalies and indicators of malware can be detected by extracting and parsing the log file. In the example presented in the post, through analysis of several Pegasus malware infections, it was discovered that the Shutdown.log file contained traces of infection.",
+          "url": "https://securelist.com/shutdown-log-lightweight-ios-malware-detection-method/111734/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a12",
+          "order": 1,
+          "title": "LAST",
+          "summary": "Use OpenAI to scan your code for security issues from the CLI. It requires adding your own OpenAI API token. LAST includes options to scan full code, change code, and run in the pipeline.",
+          "url": "https://github.com/latiotech/LAST?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a13",
+          "order": 2,
+          "title": "APPVERIFIER",
+          "summary": "AppVerifier takes the app's package name and signing certificate hash(es) and compares them to the ones you provided or the ones in the internal database to verify that your apps are genuine.",
+          "url": "https://github.com/soupslurpr/AppVerifier?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a14",
+          "order": 3,
+          "title": "AWSSCRAPE",
+          "summary": "A tool to scrape SSL certificates from all AWS IP ranges and search for specific keywords.",
+          "url": "https://github.com/jhaddix/awsScrape?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a15",
+          "order": 1,
+          "title": "CONTAINERISED CLICKS: MALICIOUS USE OF 9HITS ON VULNERABLE DOCKER HOSTS",
+          "summary": "Vulnerable Docker services are being targeted to deploy XMRig cryptocurrency miner and 9Hits Viewer software, marking the first case of 9Hits being used maliciously. The threat actors aim to diversify their money-making strategies by compromising Docker hosts via Shodan scans and running headless Chrome instances to generate web traffic credits.",
+          "url": "https://www.cadosecurity.com/containerised-clicks-malicious-use-of-9hits-on-vulnerable-docker-hosts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "cadosecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a16",
+          "order": 2,
+          "title": "PIXIEFAIL: NINE VULNERABILITIES IN TIANOCORE'S EDK II IPV6 NETWORK STACK",
+          "summary": "This blog post discusses nine vulnerabilities that have been discovered in the IPv6 network protocol stack of EDK II, TianoCore's open source reference implementation of UEFI. The vulnerabilities affect various vendors that use EDK II's NetworkPkg module, including Arm, Insyde Software, American Megatrends Inc., Phoenix Technologies Inc., and Microsoft Corporation.",
+          "url": "https://blog.quarkslab.com/pixiefail-nine-vulnerabilities-in-tianocores-edk-ii-ipv6-network-stack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 24,
+          "source_domain": "blog.quarkslab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a17",
+          "order": 3,
+          "title": "RUSSIAN THREAT GROUP COLDRIVER EXPANDS ITS TARGETING OF WESTERN OFFICIALS TO INCLUDE THE USE OF MALWARE",
+          "summary": "Google's Threat Analysis Group discusses the COLDRIVER Threat group from Russia and its increasing attacks on western officials using malware. The group primarily focuses on credential phishing against high-profile individuals in NGOs, former intelligence and military officers, and NATO governments. It employs impersonation accounts to establish rapport with targets and increase the success of its phishing campaigns.",
+          "url": "https://blog.google/threat-analysis-group/google-tag-coldriver-russian-phishing-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-19:a18",
+          "order": 1,
+          "title": "HAVE I BEEN PWNED ADDS 71 MILLION EMAILS FROM NAZ.API STOLEN ACCOUNT LIST",
+          "summary": "The Naz.API credential stuffing list contains 70 million unique email addresses and old passwords - it was found on a hacking forum.",
+          "url": "https://www.bleepingcomputer.com/news/security/have-i-been-pwned-adds-71-million-emails-from-nazapi-stolen-account-list/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a19",
+          "order": 2,
+          "title": "A YEAR OF DISRUPTION & RESILIENCE: THE CYBERSECURITY MARKET IN 2023",
+          "summary": "This retrospective on the Cybersecurity Market in 2023 notes that although overall funding was down, the largest acquisition in cybersecurity history also took place last year.",
+          "url": "https://www.returnonsecurity.com/p/2023-cybersecurity-market-review?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "returnonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a20",
+          "order": 3,
+          "title": "[20] [20] TWEETFEED IS BACK! [20] [20]",
+          "summary": "After a couple of months of being down, Tweetfeed is back with Indicators of Compromise (IOCs) shared by the infosec community at X.",
+          "url": "https://bit.ly/42c9P2I",
+          "reading_time_minutes": null,
+          "source_domain": "bit.ly",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-19:a21",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

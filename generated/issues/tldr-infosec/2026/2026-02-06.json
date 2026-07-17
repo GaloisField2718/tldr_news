@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-02-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-06",
+  "source_path": "TLDR InfoSec/article_06-02-2026.md",
+  "source_content_hash": "sha256:bb447f652c201401d1d2bc5c7da4817561b5c4e420fb604a51c0dd3912c6fb73",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-06",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-06:a04",
+          "order": 1,
+          "title": "CRITICAL N8N FLAWS DISCLOSED ALONG WITH PUBLIC EXPLOITS",
+          "summary": "CVE-2026-25049 enables any authenticated n8n user with workflow-editing permissions to escape the JavaScript sandbox via incomplete AST-based sanitization, resulting in unrestricted RCE and access to all stored credentials, API keys, and connected cloud accounts. The flaws bypass the prior patch for CVE-2025-68613 via a type confusion vulnerability in property access key validation, with public PoC exploits now available and GreyNoise reporting 33,000+ probing requests against exposed n8n endpoints. Organizations should immediately update to n8n versions 2.5.2 or 1.123.17, rotate the N8N_ENCRYPTION_KEY and all stored credentials, and restrict workflow editing to trusted users only.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-n8n-flaws-disclosed-along-with-public-exploits/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a05",
+          "order": 2,
+          "title": "CVE-2025-22225 IN VMWARE ESXI NOW USED IN ACTIVE RANSOMWARE ATTACKS",
+          "summary": "CISA confirmed that ransomware gangs are actively exploiting CVE-2025-22225 (CVSS 8.2), an arbitrary kernel write vulnerability in VMware ESXi that enables sandbox escape from the VMX process, now added to the KEV catalog as used in ransomware campaigns. Huntress attributed a related exploit chain to Chinese-speaking threat actors using the MAESTRO orchestrator toolkit, which chains CVE-2025-22224, CVE-2025-22225, and CVE-2025-22226 to achieve full VM escape and deploy the VSOCKpuppet backdoor for persistent hypervisor control. Organizations running unpatched ESXi should apply VMSA-2025-0004 immediately and audit for signs of unauthorized kernel driver loading or VSOCK-based lateral movement from guest VMs.",
+          "url": "https://securityaffairs.com/187637/security/cve-2025-22225-in-vmware-esxi-now-used-in-active-ransomware-attacks.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a06",
+          "order": 3,
+          "title": "DATA BREACH AT GOVTECH GIANT CONDUENT BALLOONS, AFFECTING MILLIONS MORE AMERICANS",
+          "summary": "A ransomware attack on Conduent in January 2025 exposed highly sensitive data, including names, Social Security numbers, medical details, and insurance information, for tens of millions of Americans across multiple states. Conduent, which supports government healthcare programs for over 100 million people, is still tallying victims and slowly issuing breach notifications. It has offered few specifics about the incident's full scale.",
+          "url": "https://techcrunch.com/2026/02/05/data-breach-at-govtech-giant-conduent-balloons-affecting-millions-more-americans/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-06:a07",
+          "order": 1,
+          "title": "AUTHENTICATION DOWNGRADE ATTACKS: DEEP DIVE INTO MFA BYPASS",
+          "summary": "IOActive demonstrated an authentication downgrade attack using Cloudflare Workers as a transparent reverse proxy to intercept Microsoft Entra ID login flows, modifying the JSON configuration and injecting CSS to hide FIDO2/WebAuthn options and force victims to fall back to phishable MFA methods, such as push notifications. The technique leverages trusted CDN infrastructure with valid TLS certificates and zero forensic footprint, enabling session token capture (ESTSAUTH cookies) while authentication logs appear completely legitimate. Organizations with \"mixed mode\" MFA policies should enforce FIDO2-only Conditional Access rules without fallback methods and alert when users unexpectedly switch from hardware keys to weaker authentication factors.",
+          "url": "https://www.ioactive.com/authentication-downgrade-attacks-deep-dive-into-mfa-bypass/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "ioactive.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a08",
+          "order": 2,
+          "title": "HOW LLMS FEED YOUR RE HABIT: FOLLOWING THE USE-AFTER-FREE TRAIL IN CLFS",
+          "summary": "AI tools helped a security researcher track down a serious memory bug in a Windows file system driver. By comparing an old and a new version of the driver, the author identified a risky change and then used timing tricks to trigger a bug in which freed memory is reused. Connected to Ghidra, LLMs explained confusing functions, named important structures, and highlighted where the bug lived, so the researcher could focus on logic instead of wading through code.",
+          "url": "https://clearbluejar.github.io/posts/how-llms-feed-your-re-habit-following-the-uaf-trail-in-clfs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "clearbluejar.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a09",
+          "order": 3,
+          "title": "HANDS ON WITH AWS BOTTLEROCKET: EVALUATING THE SECURITY OF AMAZON'S HARDENED OS",
+          "summary": "AWS Bottlerocket is a hardened OS designed for running Kubernetes nodes that includes several layers of protection, such as a read-only root filesystem, an always-enabled, restrictive SELinux profile, no package managers, language interpreters, or command shells, as well as removing many other common privilege escalation tools. This article compares an Ubuntu node and a Bottlerocket node with three common container escape techniques and found that Bottlerocket prevented all three of them, while they all succeeded on the Ubuntu node.",
+          "url": "https://pitfallen.net/blog/hands-on-with-aws-bottlerocket/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "pitfallen.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-06:a10",
+          "order": 1,
+          "title": "NETTY ZERO-DAY CVE: SPOOFED EMAIL THAT STILL PASSES ALL THE CHECKS",
+          "summary": "Netty is everywhere in the Java ecosystem - used by Apple, Meta, and Google among many others. Read about a business logic flaw around SMTP that could enable attackers to bypass SPF, DKIM, and DMARC, and how depthfirst's security AI agent [11] flagged the issue and generated a",
+          "url": "https://depthfirst.com/post/casting-a-net-ty-for-bugs-and-catching-a-big-one-cve-2025-59419?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=2026Q1_newsletter_TLDRInfoSec&utm_content=secondary_placement&utm_term=blog_post",
+          "reading_time_minutes": null,
+          "source_domain": "depthfirst.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a10",
+          "order": 2,
+          "title": "patch. Read the blog",
+          "summary": "",
+          "url": "https://depthfirst.com/post/casting-a-net-ty-for-bugs-and-catching-a-big-one-cve-2025-59419?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=2026Q1_newsletter_TLDRInfoSec&utm_content=secondary_placement&utm_term=blog_post",
+          "reading_time_minutes": null,
+          "source_domain": "depthfirst.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a12",
+          "order": 3,
+          "title": "K8S-CUSTOM-DETECTIONS",
+          "summary": "k8s-custom-detections provides a curated collection of Falco detection rules, audit policies, and reproducible attack scripts for identifying real-world Kubernetes attack techniques, including RBAC abuse, service account token theft, CoreDNS manipulation, etcd unauthorized access, and certificate forgery. The repository includes ready-to-deploy lab setup scripts for Ubuntu 24.04 with Helm-based Falco integration and individual test scenarios that simulate attacker behavior against each detection category. Useful for security teams building Kubernetes runtime detection capabilities or validating existing monitoring coverage against common cluster compromise techniques.",
+          "url": "https://github.com/heilancoos/k8s-custom-detections?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a13",
+          "order": 4,
+          "title": "ZEN AI PENTEST",
+          "summary": "AI-Powered Penetration Testing Framework with automated vulnerability scanning, multi-agent system, and compliance reporting.",
+          "url": "https://github.com/SHAdd0WTAka/Zen-Ai-Pentest?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a14",
+          "order": 5,
+          "title": "NULLIFY (PRODUCT LAUNCH)",
+          "summary": "Nullify offers an AI workforce for product security that autonomously detects, triages, validates, prioritizes, and remediates vulnerabilities in codebases and cloud environments. It integrates with tools like Jira, generates exploit proofs, and automates issue fixes via merge-ready PRs, replacing manual security engineering.",
+          "url": "https://www.nullify.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "nullify.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-06:a15",
+          "order": 1,
+          "title": "THREAT ACTORS HIJACK WEB TRAFFIC AFTER EXPLOITING REACT2SHELL VULNERABILITY",
+          "summary": "Datadog Security Labs observed threat actors exploiting the React2Shell vulnerability (CVE-2025-55182) in React 19 server components to pivot into NGINX web servers managed via Boato Panel, deploying automated toolkits that modify configuration files to hijack web traffic. Targets predominantly include Asian organizations across .in, .id, .gov, and .edu domains, with attackers using compromised servers for traffic fingerprinting, malware delivery, and credential phishing via redirect pages. Defenders should monitor NGINX configuration file integrity, ensure React server components are patched, and audit web server access controls to detect unauthorized configuration changes.",
+          "url": "https://www.csoonline.com/article/4127554/threat-actors-hijack-web-traffic-after-exploiting-react2shell-vulnerability-report.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a16",
+          "order": 2,
+          "title": "1.5 MILLION AI AGENTS ARE AT RISK OF GOING ROGUE",
+          "summary": "",
+          "url": "https://www.csoonline.com/article/4127733/1-5-million-ai-agents-are-at-risk-of-going-rogue.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a17",
+          "order": 3,
+          "title": "SENATOR PRESSES AI TOY COMPANY ON CHILD DATA PRIVACY",
+          "summary": "Senator Maggie Hassan has shared a letter with bondu, a company that makes AI conversational toys for children, about their data privacy practices. This inquiry comes in the wake of a finding by security researchers that bondu accidentally exposed chat transcripts and personal data through a publicly accessible portal. Hassan's letter specifically asks bondu who has access to the portal, what steps have been taken to prevent future incidents, and whether AI coding practices were used to develop the portal.",
+          "url": "https://links.tldrnewsletter.com/Bv9R52",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-06:a18",
+          "order": 1,
+          "title": "CYBERSPY GROUP HACKED GOVERNMENTS AND CRITICAL INFRASTRUCTURE IN 37 COUNTRIES",
+          "summary": "A nation-state group tracked as TGR-STA-1030 has breached at least 70 organizations in 37 countries, targeting parliaments, telecoms, law enforcement, and critical infrastructure for espionage.",
+          "url": "https://links.tldrnewsletter.com/7Ia2eX",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a19",
+          "order": 2,
+          "title": "SPAIN'S MINISTRY OF SCIENCE SHUTS DOWN SYSTEMS AFTER BREACH CLAIMS",
+          "summary": "Spain's Ministry of Science partially shut down its IT systems after a threat actor claimed to have exploited a critical IDOR vulnerability to obtain admin-level access and exfiltrate sensitive personal records, passport scans, and financial data.",
+          "url": "https://www.bleepingcomputer.com/news/security/spains-ministry-of-science-shuts-down-systems-after-breach-claims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-06:a20",
+          "order": 3,
+          "title": "SUBSTACK DATA BREACH EXPOSED USERS' EMAILS AND PHONE NUMBERS",
+          "summary": "Substack disclosed that a hacker accessed its internal systems in October 2025, exposing user email addresses, phone numbers, and metadata, though passwords and payment data were not compromised.",
+          "url": "https://www.theverge.com/tech/874255/substack-data-breach-user-emails-phone-numbers?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

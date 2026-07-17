@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-crypto:2026-03-16",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-03-16",
+  "source_path": "TLDR Crypto/article_16-03-2026.md",
+  "source_content_hash": "sha256:8097348ce7d8b66d767c89602fa20d2bdedf33d679cd65fd196a20e0bf656389",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-03-16",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-03-16:a04",
+          "order": 1,
+          "title": "$50M TRADE INCIDENT ON AAVE AND COW PROTOCOL",
+          "summary": "A collateral swap executed through Aave v3's front end (powered by CoW Protocol) on March 12 resulted in a user selling ~$50M of aUSDT for ~324 aAAVE tokens at a catastrophic loss due to compounding failures: a fill-or-kill order on an illiquid pair at extreme size, a stale 12M gas ceiling that rejected better-priced solver quotes, and the winning solver failing to execute onchain twice before abandoning the order. The remaining solver's degraded bid executed with significant backrun activity capturing most of the lost value within the same block. CoW Protocol and Aave are now exploring mandatory cooling-off periods and split-order prompts for high-impact trades, while investigating a possible mempool leak from the private RPC submission.",
+          "url": "https://links.tldrnewsletter.com/TlgN6c",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a05",
+          "order": 2,
+          "title": "CIRCLE'S USDC VOLUMES TOP TETHER'S USDT FOR FIRST TIME SINCE 2019",
+          "summary": "Circle's USDC reached $2.2 trillion in 2026 transaction volume, capturing 64% market share and surpassing Tether's USDT for the first time since 2019. Mizuho raised its CRCL price target to $120, citing growth in prediction markets and agentic commerce as key drivers for stablecoin adoption.",
+          "url": "https://www.coindesk.com/markets/2026/03/13/circle-s-usdc-volumes-top-tether-s-usdt-for-first-time-since-2019-prompting-sell-side-price-target-hike?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-03-16:a06",
+          "order": 1,
+          "title": "ETHEREUM FOUNDATION RELEASES NEW MANDATE FOCUSED ON CROPS",
+          "summary": "Vitalik Buterin published the Ethereum Foundation's new mandate, defining Ethereum's role as \"sanctuary technology\" that preserves technological self-sovereignty and enables cooperation without coercion. The EF's focus centers on CROPS – censorship and capture resistance, open source, privacy, and security – at both protocol and application layers, with a commitment to making \"the zero option\" (maximally secure, private, intermediary-free UX) as high-quality as possible. The Foundation also reframes its position within a broader \"sanctuary tech community\" beyond Ethereum, signaling open-mindedness to new conceptions of natural allies.",
+          "url": "https://threadreaderapp.com/thread/2032469755614179700.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a07",
+          "order": 2,
+          "title": "STABLECOINS ARE THE SECRET TO AGENTIC FINANCE",
+          "summary": "Stablecoins like USDC provide the programmable infrastructure necessary for agentic finance, enabling high-frequency nano-payments between autonomous bots. While AI developers remain skeptical of crypto, industry leaders from Circle and Coinbase argue blockchain rails offer superior composability and auditability compared to traditional credit card networks.",
+          "url": "https://www.coindesk.com/business/2026/03/14/ai-developers-may-not-be-keen-on-crypto-but-stablecoins-are-the-secret-to-agentic-finance-crypto-insiders-say?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-03-16:a08",
+          "order": 1,
+          "title": "POLYMARKET ISN'T TRUSTLESS",
+          "summary": "Polymarket utilizes centralized order matching and admin-controlled emergency resolution functions. The UMA oracle proxy is managed by a 2-of-2 Gnosis Safe, enabling implementation changes. These architectural dependencies require user trust in operators, challenging the platform's claims of being a fully trustless prediction market.",
+          "url": "https://iter.ca/post/polymarket-trust/?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "iter.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a09",
+          "order": 2,
+          "title": "HOW A COVERT NETWORK FUNNELED CRYPTO TO SANCTIONED GROUPS",
+          "summary": "Internal records reveal that a Chinese Nexus used Binance accounts and Hong Kong intermediaries to move $1.7 billion to sanctioned Iranian entities. Over $1.1 billion of USDC stablecoins was utilized to fund groups like the IRGC. The scheme bypassed automated AML controls, highlighting persistent vulnerabilities in global crypto payment rails.",
+          "url": "https://techstory.in/how-a-covert-network-funneled-crypto-to-sanctioned-groups/?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "techstory.in",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-03-16:a10",
+          "order": 1,
+          "title": "GEN Z RISK HITS RECORD AS FINANCIAL HARDSHIP DRIVES SPECULATION",
+          "summary": "80% of Gen Z investors say they invest or plan to invest in high-risk speculative assets because they feel financially behind – the highest proportion among all generations, followed by 75% of Millennials. Roughly 33% of Gen Z are putting money into sports betting to reach financial goals faster, and 8 out of 10 believe speculative vehicles can accelerate wealth accumulation over traditional methods. Only 50% of those surveyed feel financially secure.",
+          "url": "https://threadreaderapp.com/thread/2032644382940422540.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a11",
+          "order": 2,
+          "title": "POAP ENTERS MAINTENANCE MODE, PIVOTS TO OPEN COLLECTIBLES STANDARD",
+          "summary": "POAP will move into maintenance mode starting March 16, halting new issuer access and active development while keeping existing collectibles and APIs functional. The team is pivoting to build an open collectibles standard and new platform. While POAP found a clear niche among crypto-native communities, it could not expand into the broader infrastructure the ecosystem needs. Existing issuers retain full access to their tools and collectibles.",
+          "url": "https://links.tldrnewsletter.com/7Hsqjn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-03-16:a12",
+          "order": 1,
+          "title": "BITHUMB FACES SIX-MONTH PARTIAL SUSPENSION FOR AML VIOLATIONS",
+          "summary": "South Korea's FIU warned Bithumb of \"heavy disciplinary action,\" including a potential six-month partial suspension, after the exchange allowed transfers to unregistered overseas platforms and failed KYC enforcement.",
+          "url": "https://www.dlnews.com/articles/regulation/bithumb-faces-heavy-disciplinary-action-for-aml-violations/?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "dlnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a13",
+          "order": 2,
+          "title": "SONIC LAUNCHES USSD STABLECOIN",
+          "summary": "USSD is a new stablecoin backed by tokenized treasuries from BlackRock, WisdomTree, and Superstate.",
+          "url": "https://threadreaderapp.com/thread/2032897024421666912.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a14",
+          "order": 3,
+          "title": "HOW SHIBA INU TOKENS BECAME A $1 BILLION AI POLICY WAR CHEST",
+          "summary": "Vitalik Buterin critiques the Future of Life Institute for using a $500 million SHIB donation to fund authoritarian AI political advocacy.",
+          "url": "https://www.coindesk.com/markets/2026/03/14/vitalik-buterin-recounts-how-shiba-inu-tokens-became-a-usd1-billion-ai-policy-war-chest?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-03-16:a15",
+          "order": 4,
+          "title": "AI AGENTS ARE QUIETLY REWRITING PREDICTION MARKET TRADING",
+          "summary": "Autonomous AI agents using the Olas protocol are gaining traction on Polymarket, with 30% of wallets now automated.",
+          "url": "https://www.coindesk.com/tech/2026/03/15/ai-agents-are-quietly-rewriting-prediction-market-trading?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

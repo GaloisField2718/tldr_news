@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-03-18",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-03-18",
+  "source_path": "TLDR Dev/article_18-03-2026.md",
+  "source_content_hash": "sha256:239bea859f951c89fd5deebc6267ffe45d7c014cff4d87b9247ac2d1827bcd27",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-03-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a04",
+          "order": 1,
+          "title": "",
+          "summary": "AI-generaated code is already in your production environment. The question is whether you know where, which tools are being used, and whether it's creating value or risk.",
+          "url": "https://crashoverride.com/demo",
+          "reading_time_minutes": null,
+          "source_domain": "crashoverride.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a04",
+          "order": 2,
+          "title": "✅ Automatically catalog every AI tool and AI-generated code",
+          "summary": "across your CI/CD pipeline",
+          "url": "https://crashoverride.com/demo",
+          "reading_time_minutes": null,
+          "source_domain": "crashoverride.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a04",
+          "order": 3,
+          "title": "Book a 30-minute demo →",
+          "summary": "",
+          "url": "https://crashoverride.com/demo",
+          "reading_time_minutes": null,
+          "source_domain": "crashoverride.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a05",
+          "order": 1,
+          "title": "WHY NODE.JS NEEDS A VIRTUAL FILE SYSTEM",
+          "summary": "Node.js has long struggled with the inability to virtualize its file system. The new `node:vfs` module addresses this by providing a core Virtual File System that hooks directly into both the `fs` API and Node.js's module resolver. This VFS allows applications to access in-memory or embedded assets, allowing for better isolated test environments, secure multi-tenant file access, and efficient handling of dynamically generated code.",
+          "url": "https://blog.platformatic.dev/why-nodejs-needs-a-virtual-file-system?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.platformatic.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a06",
+          "order": 2,
+          "title": "MINIONS: STRIPE'S ONE-SHOT, END-TO-END CODING AGENTS—PART 2",
+          "summary": "Stripe's Minions push 1,300+ PRs a week and they run on the same isolated cloud devboxes engineers already use, getting parallelism and safety for free. The core idea is blueprints: hybrid workflows that mix deterministic nodes (lint, push) with free-running agent loops, so LLMs only touch the unpredictable parts. They also built a centralized MCP server called Toolshed with 500 tools, shared across all agents.",
+          "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "stripe.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a07",
+          "order": 1,
+          "title": "IF YOU THOUGHT THE SPEED OF WRITING CODE WAS YOUR PROBLEM - YOU HAVE BIGGER PROBLEMS",
+          "summary": "Increasing code writing speed with AI coding assistants actively worsens software delivery by creating inventory and overwhelming non-bottleneck stages. Optimizing a non-bottleneck leads to more stalled reviews and decreased output quality. The real bottlenecks typically lie in areas like unclear requirements, extensive wait times post-coding, fear of releasing, lack of feedback loops, or organizational coordination issues.",
+          "url": "https://andrewmurphy.io/blog/if-you-thought-the-speed-of-writing-code-was-your-problem-you-have-bigger-problems?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "andrewmurphy.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a08",
+          "order": 2,
+          "title": "IF IT QUACKS LIKE A PACKAGE MANAGER",
+          "summary": "Any tool with transitive dependencies, where A depends on B, which depends on C, has effectively become a package manager, whether it calls itself one or not. GitHub Actions, Ansible Galaxy, Terraform modules, and Helm have all crossed this line and inherited the full set of supply chain problems, such as mutable tags, no lockfiles, and unverified transitive deps.",
+          "url": "https://nesbitt.io/2026/03/08/if-it-quacks-like-a-package-manager.html?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "nesbitt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a09",
+          "order": 3,
+          "title": "LESSONS FROM BUILDING CLAUDE CODE: HOW WE USE SKILLS",
+          "summary": "Skills in Claude Code are flexible, folder-based extensions that allow agents to discover, explore, and manipulate scripts, assets, and data, significantly accelerating development. Anthropic extensively uses these, categorizing them into types and various automation categories. Effective skill creation focuses on capturing \"gotchas,\" using the file system for progressive disclosure, and using scripts, configuration options, and memory within the skill's directory.",
+          "url": "https://links.tldrnewsletter.com/QafpsR",
+          "reading_time_minutes": 12,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a10",
+          "order": 1,
+          "title": "CODE AT AI SPEED WHILE TESTING WITH PRODUCTION CONFIDENCE",
+          "summary": "AI agents generate code in minutes, but without ever seeing actual API responses, database state, or how your services really behave. mirrord (5k GitHub stars [11]) gives your agent real-world context so it writes better code on the first try, and can instantly test it against your real staging environment. monday.com cut dev cycle time",
+          "url": "https://metalbear.com/mirrord/ai-agents/?utm_source=tldrdev&utm_medium=tldrnewsletter&utm_campaign=secn1-20260316&utm_content=std",
+          "reading_time_minutes": null,
+          "source_domain": "metalbear.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a10",
+          "order": 2,
+          "title": "by 70%. SEE HOW IT WORKS",
+          "summary": "",
+          "url": "https://metalbear.com/mirrord/ai-agents/?utm_source=tldrdev&utm_medium=tldrnewsletter&utm_campaign=secn1-20260316&utm_content=std",
+          "reading_time_minutes": null,
+          "source_domain": "metalbear.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a12",
+          "order": 3,
+          "title": "INTRODUCING GPT-5.4 MINI AND NANO",
+          "summary": "OpenAI has launched GPT-5.4 mini and nano, its latest small language models designed for speed and efficiency in high-volume workloads. These models outperform their GPT-5 mini and nano predecessors across tasks like coding, reasoning, and multimodal understanding, while running faster and at lower costs. GPT-5.4 mini is available across the API, Codex, and ChatGPT, while GPT-5.4 nano is an API-only option.",
+          "url": "https://links.tldrnewsletter.com/kHfx4k",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a13",
+          "order": 4,
+          "title": "EDGE.JS",
+          "summary": "Edge.js is a new JavaScript runtime designed to safely run Node.js workloads for AI and Edge computing. It differentiates itself from other edge runtimes by preserving full Node.js compatibility, isolating unsafe system calls and native modules through WebAssembly (WASIX) while running the JavaScript engine natively. This architecture allows existing Node.js applications and native modules to run unmodified in a secure, sandboxed, serverless environment.",
+          "url": "https://wasmer.io/posts/edgejs-safe-nodejs-using-wasm-sandbox?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "wasmer.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a14",
+          "order": 5,
+          "title": "CRUST",
+          "summary": "Crust is a beta-quality, TypeScript-first, Bun-native CLI framework that uses composable modules to build command-line applications.",
+          "url": "https://github.com/chenxin-yan/crust?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a15",
+          "order": 1,
+          "title": "RANKING ENGINEER AGENT (REA): THE AUTONOMOUS AI AGENT ACCELERATING META'S ADS RANKING INNOVATION",
+          "summary": "Meta's Ranking Engineer Agent (REA) is an autonomous AI agent designed to accelerate ads ranking innovation by managing the entire machine learning experimentation lifecycle for its ads ranking models. REA overcomes challenges like long-duration workflows and generating diverse hypotheses by using a hibernate-and-wake mechanism and a dual-source hypothesis engine, all within a three-phase planning framework. It operates with minimal human intervention, autonomously handling tasks, debugging failures, and adapting within predefined guardrails, with human oversight primarily at strategic decision points and for budget approvals.",
+          "url": "https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a16",
+          "order": 2,
+          "title": "DOES SPLITTING WORK ACROSS AI AGENTS ACTUALLY SAVE TIME? I TESTED IT",
+          "summary": "Five multi-agent setups were benchmarked on the same task. Cursor subagents won (12 min, all tests passing), Agent Teams cut cost 70% vs solo, and the OpenAI SDK finished in 90 seconds for $0.009 but failed every single test because the agent didn't read enough of the codebase before writing code. More agents only helps when the task genuinely parallelizes, and agents can agree on interfaces before work starts.",
+          "url": "https://blog.logrocket.com/splitting-across-ai-agents?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.logrocket.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-18:a17",
+          "order": 1,
+          "title": "KIP-1150: DISKLESS TOPICS APPROVED FOR APACHE KAFKA (BLOG)",
+          "summary": "Authored by 8 Aiven engineers, KIP-1150 introduces Diskless Topics — messages go directly to object storage like S3 or GCS, making broker disks optional. A big step toward cloud-native Kafka. Learn",
+          "url": "https://aiven.io/blog/kip-1150-accepted-and-the-road-ahead?utm_medium=sponsored&utm_campaign=core_service_inkless&utm_content=tldr-kip-1150&utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "aiven.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a18",
+          "order": 2,
+          "title": "more here.",
+          "summary": "",
+          "url": "https://aiven.io/blog/kip-1150-accepted-and-the-road-ahead?utm_medium=sponsored&utm_campaign=core_service_inkless&utm_content=tldr-kip-1150",
+          "reading_time_minutes": null,
+          "source_domain": "aiven.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a19",
+          "order": 3,
+          "title": "FINDING A CPU DESIGN BUG IN THE XBOX 360",
+          "summary": "A critical design bug was discovered in the Xbox 360 CPU where a special prefetch instruction (xdcbt) could cause memory corruption even when only speculatively executed.",
+          "url": "https://randomascii.wordpress.com/2018/01/07/finding-a-cpu-design-bug-in-the-xbox-360/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "randomascii.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a20",
+          "order": 4,
+          "title": "PYTHON 3.15'S JIT IS NOW BACK ON TRACK",
+          "summary": "Python 3.15's JIT is back on track and has hit early performance goals, thanks to a community-led effort, strategic \"lucky bets\" on technical solutions, and a dedicated team.",
+          "url": "https://fidget-spinner.github.io/posts/jit-on-track.html?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "fidget-spinner.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a21",
+          "order": 5,
+          "title": "GET SH*T DONE",
+          "summary": "Get Sh*t Done is a meta-prompting and context engineering system for AI coding assistants that enables reliable, spec-driven development by managing context and streamlining complex project workflows.",
+          "url": "https://github.com/gsd-build/get-shit-done?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-18:a22",
+          "order": 6,
+          "title": "TEMPORAL: THE 9-YEAR JOURNEY TO FIX TIME IN JAVASCRIPT",
+          "summary": "Temporal replaces Date with a suite of immutable, timezone- and calendar-aware types.",
+          "url": "https://bloomberg.github.io/js-blog/post/temporal/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "bloomberg.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

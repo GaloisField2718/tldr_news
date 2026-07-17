@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-03-24",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-03-24",
+  "source_path": "TLDR Dev/article_24-03-2026.md",
+  "source_content_hash": "sha256:7b8ce57c103fe7adc480f5cda6b233e77b3060e13d3af403fd5e0418332907e4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-03-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a04",
+          "order": 1,
+          "title": "SHOW?",
+          "summary": "AI doesn't necessarily mean developers are working less. Instead, many are paying the \"velocity tax\": spending 25% of their week fixing and securing AI-generated code. This hidden cost creates a verification bottleneck that stalls innovation.",
+          "url": "https://www.sonarsource.com/sem/solutions/ai-code-quality/?utm_medium=paid&utm_source=tldr&utm_campaign=ss-ai-code-quality26&utm_content=newsletter-dev-tldr-primary-aicodequality-260324-x&utm_term=ww-psp-utm_term%3Dww-psp-x&s_category=Paid&s_source=Paid+Other&s_origin=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "sonarsource.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a04",
+          "order": 2,
+          "title": "De-risk your vibes",
+          "summary": "",
+          "url": "https://www.sonarsource.com/sem/solutions/ai-code-quality/?utm_medium=paid&utm_source=tldr&utm_campaign=ss-ai-code-quality26&utm_content=newsletter-dev-tldr-primary-aicodequality-260324-x&utm_term=ww-psp-utm_term%3Dww-psp-x&s_category=Paid&s_source=Paid+Other&s_origin=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "sonarsource.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a05",
+          "order": 1,
+          "title": "5X SSR THROUGHPUT: PROFILING SSR HOT PATHS IN TANSTACK START",
+          "summary": "TanStack Start got a 5.5x increase in throughput and a 9.9x reduction in average latency under heavy load for their SSR (server-side rendering). This was done through a repeatable process involving measuring under load, CPU profiling to identify bottlenecks, and removing entire categories of cost from the server hot path. They avoided unnecessary URL construction/parsing, eliminated client-side reactivity overhead during SSR, and implemented server-only fast paths gated by build-time constants.",
+          "url": "https://tanstack.com/blog/tanstack-start-5x-ssr-throughput?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a06",
+          "order": 2,
+          "title": "FINDING ALL REGEX MATCHES HAS ALWAYS BEEN O(N²). EVEN IN THE ENGINES BUILT TO PREVENT IT",
+          "summary": "Most regex engines, despite advertising linear time for single matches, suffer from a quadratic (O(n²)) performance problem when finding all matches. RE# is a novel regex engine designed to resolve this by using a two-pass algorithm, a reverse and a forward DFA, to efficiently identify all leftmost-longest matches in guaranteed linear time. It has a \"hardened mode\" for linear performance against adversarial inputs, and its default mode is also quite fast.",
+          "url": "https://iev.ee/blog/the-quadratic-problem-nobody-fixed/?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "iev.ee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a07",
+          "order": 3,
+          "title": "CTRL-C IN PSQL GIVES ME THE HEEBIE-JEEBIES",
+          "summary": "The article uncovers a significant security vulnerability in how the `psql` command-line tool cancels PostgreSQL queries. When a user presses Ctrl-C, `psql` sends a `CancelRequest` over a new and separate connection that is always unencrypted, even if the main database connection is secured with TLS. This plaintext transmission creates a Denial-of-Service risk, as an attacker monitoring network traffic could intercept and replay these requests to cancel future queries on the same connection.",
+          "url": "https://neon.com/blog/ctrl-c-in-psql-gives-me-the-heebie-jeebies?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "neon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a08",
+          "order": 1,
+          "title": "HOW I'M PRODUCTIVE WITH CLAUDE CODE",
+          "summary": "This dev automated repetitive tasks like creating pull requests and delegated UI verification to agents, freeing up his mental overhead. By optimizing server rebuilds to sub-second speeds and enabling parallel work on multiple features without conflicts, he transformed his workflow.",
+          "url": "https://neilkakkar.com/productive-with-claude-code.html?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "neilkakkar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a09",
+          "order": 2,
+          "title": "I CREATED MY FIRST AI-ASSISTED PULL REQUEST AND I FEEL LIKE A FRAUD",
+          "summary": "The author used AI to create a valuable pull request for an open-source project but immediately felt like a fraud. While acknowledging that AI enables contributions they might not otherwise make due to mental fatigue, they felt empty and gained no personal satisfaction from these AI-generated results.",
+          "url": "https://nelson.cloud/i-created-my-first-ai-assisted-pull-request-and-i-feel-like-a-fraud/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "nelson.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a10",
+          "order": 3,
+          "title": "IS THE IDE DEAD?",
+          "summary": "The IDE isn't dying, but it's being de-centered. The loop of “open file, edit, build, debug” is giving way to “specify intent, delegate to agents, review diffs, merge.”",
+          "url": "https://addyo.substack.com/p/death-of-the-ide?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "addyo.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a11",
+          "order": 1,
+          "title": "CONTEXT SWITCHING IS WORSE THAN EVER. CAN AI HELP DEVELOPERS FIND FLOW?",
+          "summary": "Is deep work dead? Bugs, incidents, and project updates are still around - and now developers are also distracted by babysitting AI agents. In this guide by Atlassian [11], you'll see how to turn scattered context into project momentum with AI and video, focusing on two everyday workflows - bug triage and project updates. Get the ebook",
+          "url": "https://www.atlassian.com/software/loom/resources/from-context-switching-to-flow-state-ebook?utm_source=tldr&utm_medium=email&utm_campaign=P%3Aloom%2AO%3Agdc%2AF%3Aawareness%2AC%3Awpaper%2AH%3Afy26q3%2AI%3Atldr-dev-newsletter-secondary-mar-24%2AE%3Acloud%2A&utm_sfdc-campaign_id=701QB00000hJ2IPYA0",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a11",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.atlassian.com/software/loom/resources/from-context-switching-to-flow-state-ebook?utm_source=tldr&utm_medium=email&utm_campaign=P%3Aloom%2AO%3Agdc%2AF%3Aawareness%2AC%3Awpaper%2AH%3Afy26q3%2AI%3Atldr-dev-newsletter-secondary-mar-24%2AE%3Acloud%2A&utm_sfdc-campaign_id=701QB00000hJ2IPYA0",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a12",
+          "order": 3,
+          "title": "CQ",
+          "summary": "cq is an open-source \"Stack Overflow for agents\" designed to facilitate structured, reciprocal knowledge exchange among AI systems. cq allows agents to query a common knowledge base before tackling new tasks and contribute novel findings back, with information gaining trust through confirmed use by other agents.",
+          "url": "https://blog.mozilla.ai/cq-stack-overflow-for-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.mozilla.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a13",
+          "order": 4,
+          "title": "BOMBADIL",
+          "summary": "Bombadil is an experimental, property-based testing tool specifically designed for web user interfaces. It autonomously explores UIs, validates their correctness properties, and aims to find difficult bugs earlier in the development process.",
+          "url": "https://github.com/antithesishq/bombadil?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a14",
+          "order": 1,
+          "title": "THESE CODERS WANT AI TO TAKE THEIR JOBS",
+          "summary": "Vibe coding has gained traction among both experienced coders and novices. While it boosts productivity and allows for easy experimentation, developers are divided, with some embracing its \"fun\" and speed, while a minority strongly oppose it due to concerns about job displacement and de-skilling.",
+          "url": "https://www.vox.com/podcasts/483368/vibe-coding-ai-software-claude-codex-gemini-explained?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "vox.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a15",
+          "order": 2,
+          "title": "SOFTWARE ENGINEERING SPLITS IN THREE",
+          "summary": "AI has shifted the bottleneck from implementation to judgment, fracturing engineering into three tiers. The first is tech companies where senior engineers use AI as a force multiplier. The second is large enterprises leaning on platform guardrails and fractional consultants for judgment they can't hire, and the last is small businesses finally able to afford custom software.",
+          "url": "https://adventures.nodeland.dev/archive/software-engineering-splits-in-three?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "adventures.nodeland.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-24:a16",
+          "order": 1,
+          "title": "MORE INDEXES DO NOT ALWAYS IMPROVE PERFORMANCE.",
+          "summary": "Tiger Data's latest blog explains how too many indexes slow writes, turning one insert into multiple operations. Combat rising write",
+          "url": "https://fandf.co/4t1OiWt?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a17",
+          "order": 2,
+          "title": "latency. Learn more.",
+          "summary": "",
+          "url": "https://fandf.co/4t1OiWt",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a18",
+          "order": 3,
+          "title": "HOW I BUILT AN AI RECEPTIONIST FOR A LUXURY MECHANIC SHOP",
+          "summary": "To prevent thousands of dollars in lost revenue from missed calls, the author built \"Axle,\" a custom AI voice receptionist for her brother's luxury mechanic shop.",
+          "url": "https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "itsthatlady.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a19",
+          "order": 4,
+          "title": "TELLING AN AI MODEL THAT IT'S AN EXPERT MAKES IT WORSE",
+          "summary": "Researchers found that telling an AI model it's an expert improves performance for alignment and safety tasks but worsens factual accuracy and coding.",
+          "url": "https://www.theregister.com/2026/03/24/ai_models_persona_prompting/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a20",
+          "order": 5,
+          "title": "CLAUDE CODE CHEAT SHEET",
+          "summary": "A one-page cheat sheet on all of Claude Code's capabilities and commands.",
+          "url": "https://cc.storyfox.cz/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "cc.storyfox.cz",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-24:a21",
+          "order": 6,
+          "title": "PETITION TO NODE.JS TSC: NO AI CODE IN NODE.JS CORE",
+          "summary": "A community petition signed by Node.js core contributors asking the TSC to vote against allowing LLM-generated PRs in Node.js core.",
+          "url": "https://github.com/indutny/no-ai-in-nodejs-core?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

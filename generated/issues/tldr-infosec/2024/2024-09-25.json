@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-09-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-09-25",
+  "source_path": "TLDR InfoSec/article_25-09-2024.md",
+  "source_content_hash": "sha256:73d270d3b3b49db4a04933e4bfb677e923e41d356aec893e70daee79df8bd0c0",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-09-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a04",
+          "order": 1,
+          "title": "AT LEAST ONE CVE",
+          "summary": "Orca Security has published its new State of AI Security Report. This research report is based on findings from billions of cloud assets scanned by Orca's agentless cloud security platform [5] on AWS, Azure, Google Cloud, Oracle Cloud, and Alibaba Cloud.",
+          "url": "https://orca.security/lp/2024-state-of-ai-security-report/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q3-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a07",
+          "order": 1,
+          "title": "DELL INVESTIGATES DATA BREACH CLAIMS AFTER HACKER LEAKS EMPLOYEE INFO",
+          "summary": "Dell has announced that it is investigating a data breach after a hacker posted an alleged data dump to BreachForums. The data breach contains data of 10k employees' full names, unique identifiers, employee status, and internal identification strings. Neither Dell nor the hacker have disclosed how the data was stolen.",
+          "url": "https://www.bleepingcomputer.com/news/security/dell-investigates-data-breach-claims-after-hacker-leaks-employee-info/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a08",
+          "order": 2,
+          "title": "RESEARCHERS REVEAL CATASTROPHIC SECURITY FLAW IN THE ARC BROWSER",
+          "summary": "A security researcher has discovered a vulnerability in the Arc browser that could lead to RCE on other users. The Arc browser has a feature called Boosts that allows arbitrary CSS and JavaScript to run and modify websites in users' browsers. The vulnerability arises from improper ACLs on The Browser Company's Firebase data store, which allows attackers to apply Boosts to different users' browsers by changing the user ID that they are attached to. An update has been pushed and The Browser Company has committed to improving its security posture.",
+          "url": "https://www.theverge.com/2024/9/20/24249919/arc-browser-boost-firebase-vulnerability-patched?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a09",
+          "order": 3,
+          "title": "HOW THE NECRO TROJAN INFILTRATED GOOGLE PLAY, AGAIN",
+          "summary": "A new version of the Necro Trojan has infected popular apps on Google Play and unofficial sources, impacting over 100 million devices worldwide. The malware used obfuscation to evade detection and had the ability to display ads, download files, and execute JavaScript code. Google Play removed the malicious loader from affected apps following reports of the issue.",
+          "url": "https://securelist.com/necro-trojan-is-back-on-google-play/113881/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a10",
+          "order": 1,
+          "title": "DETECTING SCRIPTBLOCK SMUGGLING",
+          "summary": "PowerShell Script Block Logging is one of the types of PowerShell logs that records the content of all script blocks executed within PowerShell. ScriptBlock Smuggling is a technique whereby an attacker can hide a malicious script block within a benign script block. This post tests detections for this attack in a lab environment using a test script from AtomicRedTeam. The author notes that the full script, which contains the malicious command, can still be seen in the details pane and questions the usefulness of this attack.",
+          "url": "https://dfir.ch/posts/scriptblock_smuggling/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "dfir.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a11",
+          "order": 2,
+          "title": "6 TECHNIQUES I USE TO CREATE A GREAT USER EXPERIENCE FOR SHELL SCRIPTS",
+          "summary": "This author wrote a script that was praised for its UX to automate the evaluation steps in a competition. They argue for comprehensive error handling and input validation with detailed and actionable error messages, clear and colorful output, detailed progress reporting without overwhelming the user by using set -x, using set -x and set +x for fine grained and strategic error handling, making use of platform specific functionality, and using time stamped file outputs to make multiple runs easier to compare. Examples of each of these principles are included in the post.",
+          "url": "https://nochlin.com/blog/6-techniques-i-use-to-create-a-great-user-experience-for-shell-scripts?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "nochlin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a12",
+          "order": 3,
+          "title": "OPEN TO EXPLOITATION: THE SECURITY RISKS OF UNAUTHENTICATED PAGER NETWORKS",
+          "summary": "Many critical sectors still use vulnerable pager networks like POCSAG, which are easily exploited for message injection attacks via radio frequencies, for emergency communication. These networks lack encryption, allowing anyone with basic equipment to intercept and manipulate messages, posing serious security risks in sensitive environments. This blog post highlights the urgent need for stronger security measures in these outdated communication systems by demonstrating how easy it is to spoof messages.",
+          "url": "https://telescope.ac/petazzoni/kl9ki6zsn62bsb03l694dz?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "telescope.ac",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a13",
+          "order": 1,
+          "title": "[RESEARCH REPORT] STATE OF APPLICATION SECURITY",
+          "summary": "To better understand the current vulnerabilities and threats facing modern DevOps teams, Datadog evaluated real-world data [13] from thousands of organizations. Discover why only 3% of “critical” vulnerabilities are actually worth prioritizing, the problem with 3rd party dependencies, and why legacy risks are still a problem. Read the",
+          "url": "https://www.datadoghq.com/resources/state-of-application-security-2023/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-appsec-report-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a13",
+          "order": 2,
+          "title": "report",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/state-of-application-security-2023/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-appsec-report-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a14",
+          "order": 3,
+          "title": "CLOUD TESTING VM",
+          "summary": "Cloud Testing VM is a VM that contains a set of common cloud security testing tools. There are scripts to build it as an AWS AMI.",
+          "url": "https://github.com/WithSecureLabs/cloud-security-vm/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a15",
+          "order": 4,
+          "title": "UNDOCUMENTED-AWS-API-HUNTER",
+          "summary": "undocumented-aws-api-hunter is a tool for uncovering undocumented AWS APIs. It works by launching a headless Chrome browser that crawls through the AWS Console.",
+          "url": "https://github.com/DataDog/undocumented-aws-api-hunter?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a16",
+          "order": 5,
+          "title": "A SAFER INTERNET WITH CLOUDFLARE: FREE THREAT INTELLIGENCE, ANALYTICS, AND NEW THREAT DETECTIONS",
+          "summary": "Cloudflare has launched new free security features for website owners and network protection, including threat intelligence, analytics, and account takeover attack detection. Users can now access Security Analytics, API schema validation, and Page Shield script monitor to enhance their security. Cloudflare has also introduced new authentication options, such as signing up and logging in with Google, to simplify account access and reduce the risk of compromise.",
+          "url": "https://blog.cloudflare.com/a-safer-internet-with-cloudflare?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a17",
+          "order": 1,
+          "title": "GOOGLE ROLLS OUT AUTOMATIC PASSWORD SYNCING VIA PASSWORD MANAGER",
+          "summary": "Google has announced the ability for users to save passkeys to Password Manager, the password manager built into Chrome. Passkeys will automatically sync across computers and Android devices running the Password Manager app. Support for ChromeOS is in beta and support for iOS is planned.",
+          "url": "https://techcrunch.com/2024/09/19/google-rolls-out-automatic-passkey-syncing-via-password-manager/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a18",
+          "order": 2,
+          "title": "TCM SECURITY ACADEMY ANNOUNCES FREE TIER",
+          "summary": "TCM Security has announced that it will be launching a free tier to its academy. The initial offering will contain four courses: Practical Help Desk, Programming 100: Fundamentals, Linux 100: Fundamentals, and Soft Skills for the Job Market. The free tier launches today and users can access the content by signing up with only an email address.",
+          "url": "https://www.linkedin.com/pulse/tcm-security-academy-announces-free-course-content-tcm-security-inc-zgyic?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a19",
+          "order": 3,
+          "title": "CROWDSTRIKE OVERHAULS TESTING AND ROLLOUT PROCEDURES TO AVOID SYSTEM CRASHES",
+          "summary": "CrowdStrike has improved testing and rollout procedures to prevent system crashes like the one in July. It now deploys software updates gradually and has added new validation checks to prevent errors. Microsoft is also making changes to enhance security in Windows 11 following the global IT outage caused by a faulty CrowdStrike update.",
+          "url": "https://www.securityweek.com/crowdstrike-overhauls-testing-and-rollout-procedures-to-avoid-bsod-crashes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-25:a20",
+          "order": 1,
+          "title": "STAYING A STEP AHEAD: MITIGATING THE DPRK IT WORKER THREAT",
+          "summary": "This post shares how organizations can detect and disrupt these threats by implementing detection strategies and maintaining vigilance.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/mitigating-dprk-it-worker-threat?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a21",
+          "order": 2,
+          "title": "AI ADOPTION SET TO UNRAVEL YEARS OF CYBER RESILIENCE",
+          "summary": "A study by e2e-assure revealed a stark contrast between cyber risk owners' confidence in AI policies (85%) and employee awareness of such guidance (34%), indicating potential vulnerabilities in organizational cyber resilience despite increased adoption of AI technologies.",
+          "url": "https://www.itsecurityguru.org/2024/09/24/ai-adoption-set-to-unravel-years-of-cyber-resilience/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "itsecurityguru.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-25:a22",
+          "order": 3,
+          "title": "KANSAS WATER PLANT CYBERATTACK FORCES SWITCH TO MANUAL OPERATIONS",
+          "summary": "A cyberattack on a Kansas water treatment facility led to manual operations being implemented to ensure water safety.",
+          "url": "https://www.bleepingcomputer.com/news/security/kansas-water-plant-cyberattack-forces-switch-to-manual-operations/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

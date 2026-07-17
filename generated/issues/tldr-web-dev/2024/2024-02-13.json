@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-02-13",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-02-13",
+  "source_path": "TLDR Web Dev/article_13-02-2024.md",
+  "source_content_hash": "sha256:8ed083b78f8ffc76860bfc08930b99c0e08f1e8560c85d8108735e43c70e7c79",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-02-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a05",
+          "order": 1,
+          "title": "FRONT-END DEVELOPER KIT FROM DATADOG",
+          "summary": "If you’re dealing with complex front-end frameworks and single-page applications, your approach to monitoring needs to evolve. This free developer kit [5] is packed with helpful resources to adopt a user-centric approach.",
+          "url": "https://www.datadoghq.com/resources/frontend-developer-kit/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-infra-ww-frontend-dev-kit",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a05",
+          "order": 2,
+          "title": "➡️ Get the full kit from Datadog!",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/frontend-developer-kit/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-infra-ww-frontend-dev-kit",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a06",
+          "order": 1,
+          "title": "A CRASH COURSE ON DATABASE QUERY OPTIMIZATION BASICS",
+          "summary": "As databases grow, query optimization becomes more important to combat slow data retrieval and loading times. There are various strategies to optimize queries, including index creation, analyzing query execution plans, and understanding specific database engine optimization techniques. This article uses a real-world example to show how to optimize a query from start to finish.",
+          "url": "https://www.swequiz.com/learn/query-optimization-basics-relational-databases?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "swequiz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a07",
+          "order": 2,
+          "title": "THE ADVANTAGES OF QUEUES ON LOGS",
+          "summary": "While logs and queues share temporal ordering, they differ fundamentally. Queues adhere to a First-In-First-Out (FIFO) principle, allowing for sequential consumption from the head or tail. In contrast, logs require readers to maintain a pointer and read by position rather than by order of arrival. This distinction leads to advantages in scalability when implementing logs as queues, particularly in enabling parallel consumption and efficient load distribution among multiple consumers without necessitating knowledge of the internal structure. Additionally, queues offer benefits such as replay and durability, explored in detail in the article.",
+          "url": "https://jack-vanlightly.com/blog/2023/10/2/the-advantages-of-queues-on-logs?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "jack-vanlightly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a08",
+          "order": 3,
+          "title": "TOO DANGEROUS FOR C++",
+          "summary": "This article compares Rust's memory safety with C++ by illustrating a scenario involving an internal library written in Rust. Initially, the author used Rust's “Rc” type for reference counting but encountered thread safety issues. Upon switching to Rust's “Arc” type, which provides atomic reference counting, the compiler enforced thread safety, ensuring data race conditions were prevented at compile time. C++ lacks such safety features, relying on developers to manually handle thread safety, which can lead to subtle bugs and undefined behavior. Rust's borrow checker and type system statically prevents data races, making it unique among programming languages.",
+          "url": "https://blog.dureuill.net/articles/too-dangerous-cpp/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.dureuill.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a09",
+          "order": 1,
+          "title": "WHY WRITE SMALL DIFFS",
+          "summary": "Small diffs facilitate faster and more thorough code reviews, reduce the likelihood of introducing bugs, minimize merge conflicts, and make it easier to roll back changes if needed. While there may be exceptions for large diffs, such as when adding boilerplate or auto-generated code, the general rule is to aim for small, focused changes to codebases.",
+          "url": "https://www.developing.dev/p/why-write-small-diffs?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "developing.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a10",
+          "order": 2,
+          "title": "WHY ELIXIR IS THE BEST LANGUAGE FOR BUILDING A BOOTSTRAPPED, B2B SAAS IN 2024",
+          "summary": "Elixir is a great language for simplified web app development as it allows developers to collapse the tech stack through features like Phoenix LiveView, built-in concurrency and fault tolerance, and integration with familiar tools. The language also has a fairly stable ecosystem with mature tooling to speed up development, making it ideal for bootstrapped startups.",
+          "url": "https://www.sleepeasy.app/2024/01/21/elixir-best-language-for-bootstrapped-b2b-saas/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "sleepeasy.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a11",
+          "order": 3,
+          "title": "(ALMOST) EVERY INFRASTRUCTURE DECISION I ENDORSE OR REGRET AFTER 4 YEARS RUNNING INFRASTRUCTURE AT A STARTUP",
+          "summary": "An infrastructure lead had to make various infrastructure decisions for a startup over the past four years. He endorses choosing AWS, RDS, and Redis ElastiCache, but regrets opting for other things, like AWS’s premium support. He also recommends considering dependency management and identity platforms earlier rather than later in order to save the company from a painful migration later on.",
+          "url": "https://cep.dev/posts/every-infrastructure-decision-i-endorse-or-regret-after-4-years-running-infrastructure-at-a-startup/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "cep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a12",
+          "order": 1,
+          "title": "👉 80% AUTOMATED END-TO-END TEST COVERAGE IN 4 MONTHS OR LESS?",
+          "summary": "QA Wolf [12] offers a cost-effective approach to getting 80% test",
+          "url": "https://www.qawolf.com/lp/tldr?utm_campaign=QAWolfWill13022024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a12",
+          "order": 2,
+          "title": "coverage [12] in just 4 months. And they guarantee zero flakes.",
+          "summary": "They build and maintain your test suite in Playwright + include unlimited parallel test runs on their infrastructure.",
+          "url": "https://www.qawolf.com/lp/tldr?utm_campaign=QAWolfWill13022024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a12",
+          "order": 3,
+          "title": "Learn more about their 90-day pilot.",
+          "summary": "",
+          "url": "https://www.qawolf.com/lp/tldr?utm_campaign=QAWolfWill13022024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a13",
+          "order": 4,
+          "title": "STRACT",
+          "summary": "Stract is an open-source web search engine targeted towards tinkerers and developers. It features keyword search, advanced query syntax, a Wikipedia and StackOverflow sidebar, priority of personally-selected trusted websites, and more.",
+          "url": "https://github.com/StractOrg/stract?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a14",
+          "order": 5,
+          "title": "SAPLING",
+          "summary": "Sapling is a code editor that prioritizes editing speed, allowing users to edit code at the pace of their thoughts. It is similar to editors like Vim and supports editing in any language through plugins.",
+          "url": "https://github.com/kneasle/sapling?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a15",
+          "order": 6,
+          "title": "SWEEP ASSISTANT",
+          "summary": "Sweep Assistant, a locally operating developer tool, collaborates with you while coding. It prioritizes your security by exclusively transmitting code to your OpenAI endpoint. When using Azure OpenAI, all your code remains within the confines of your network.",
+          "url": "https://docs.sweep.dev/assistant?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "docs.sweep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a16",
+          "order": 1,
+          "title": "GOOGLE AND AI | ELON MUSK ON TESLA COMP",
+          "summary": "A Google engineer named Eric Lehman warned in 2018 that AI posed a serious threat to Google's search dominance. This concern stemmed from Google's BERT project, which achieved impressive results in web answers (featured snippets). Lehman urged proactive measures to avoid being blindsided by a potential competitor, even a startup, using a similar approach. While Google acknowledged the threat, Lehman eventually left the company in 2022. This internal email highlights Google's early concerns about AI disruption and foretells the rise of alternative search engines like Perplexity, which capitalize on unsupervised learning from raw text.",
+          "url": "https://www.techemails.com/p/google-ai-elon-musk-tesla-comp?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "techemails.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a17",
+          "order": 2,
+          "title": "DEVELOPERS ARE IN OPEN REVOLT OVER APPLE’S NEW APP STORE RULES",
+          "summary": "European app developers are expressing discontent with Apple's new App Store rules, criticizing Apple's fees and restrictions. Despite the potential for alternative app stores and payment systems, developers feel pressured to adhere to Apple's terms to avoid warnings and fees. Apple is defending its changes as compliant with regulations and necessary for user security.",
+          "url": "https://bit.ly/49yBfCd",
+          "reading_time_minutes": 6,
+          "source_domain": "bit.ly",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a18",
+          "order": 3,
+          "title": "IS THE \"MODERN DATA STACK\" STILL A USEFUL IDEA?",
+          "summary": "",
+          "url": "https://roundup.getdbt.com/p/is-the-modern-data-stack-still-a?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "roundup.getdbt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-13:a19",
+          "order": 1,
+          "title": "THE CASE FOR DESIGN ENGINEERS, PT. II",
+          "summary": "Design engineers are crucial for creating interactive features in web interfaces. They can design and code at the same time, ensuring that the final product feels intentional and well-designed.",
+          "url": "https://blog.jim-nielsen.com/2024/the-case-for-design-engineers-pt-ii/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a20",
+          "order": 2,
+          "title": "UNDERSTANDING COMPLEXITY LIKE AN ENGINEER – THE CASE OF THE LADYBIRD BROWSER",
+          "summary": "A group of volunteers led by a former Safari developer embarked on building SerenityOS and Ladybird browser from scratch to understand complexity. After encountering a crash while testing, the author of this article delved into the code, identified a CSS compliance issue, and collaborated with the developers to resolve it. The lesson for developers is that if you are motivated and skilled, you can single-handedly get very far. No complexity is too much to be understood.",
+          "url": "https://t-shaped.nl/understanding-complexity-like-an-engineer-the-case-of-the-ladybird-browser?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "t-shaped.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a21",
+          "order": 3,
+          "title": "BIG TECH JOBS HAVE LOST THEIR GLAMOR",
+          "summary": "Big Tech is losing its luster compared to the past due to layoffs, disillusionment among employees, and stagnant career growth.",
+          "url": "https://www.bbc.com/worklife/article/20240207-big-tech-layoffs-perks-cuts?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a22",
+          "order": 4,
+          "title": "I APPLIED FOR A SOFTWARE ROLE AT FEDEX AND WAS ASKED TO TAKE THIS BIZARRE PERSONALITY TEST (REDDIT POST)",
+          "summary": "A Reddit user had to take a personality test for FedEx’s software engineering role that had them pick whether characters in displayed images represented them or not.",
+          "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1ap1345/i_applied_for_a_software_role_at_fedex_and_was/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "old.reddit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-13:a23",
+          "order": 5,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

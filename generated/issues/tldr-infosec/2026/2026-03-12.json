@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-03-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-12",
+  "source_path": "TLDR InfoSec/article_12-03-2026.md",
+  "source_content_hash": "sha256:a1b4230f18998024d282e665c06fafb1bc2673da017c3c9473307efa34aace8f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a04",
+          "order": 1,
+          "title": "AD",
+          "summary": "If you're tired of clicking through dashboards, taking screenshots, labeling files, and then doing it all again for the next audit...",
+          "url": "https://delve.co/book-demo?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-primary-mar12-26",
+          "reading_time_minutes": null,
+          "source_domain": "delve.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a04",
+          "order": 2,
+          "title": "with code CUA1.5K. Claim your offer here",
+          "summary": "",
+          "url": "https://delve.co/book-demo?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-primary-mar12-26",
+          "reading_time_minutes": null,
+          "source_domain": "delve.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a05",
+          "order": 1,
+          "title": "UNCOVERING A NEW DEVICE CODE PHISHING CAMPAIGN",
+          "summary": "A phishing campaign exploited Microsoft's OAuth 2.0 device code flow by tricking victims into visiting Cloudflare Workers-hosted pages that imitate Adobe Acrobat Sign, using BEC-compromised sender domains. It automatically copied an attacker-generated device code to the clipboard and redirected victims to the legitimate microsoft.com/devicelogin portal to collect tokens. The attacker's backend polls Microsoft's device code endpoint every 3 seconds, exchanges the completed code for OAuth access and refresh tokens scoped to Microsoft Graph, and then silently redirects victims to adobe.com—leaving no signs of compromise. Indicators of compromise (IOCs) from 23 workers.dev subdomains, along with suspected sender addresses embedded in account names, are published. Defenders should look for device code authentication events in Entra SigninLogs by filtering for `AuthenticationProtocol == \"deviceCode\"`. They should also flag first-time device code authentications with no prior 30-day history (`ResultType == 0`) and alert on workers.dev URLs in inbound email that are linked to the same-user authentication events.",
+          "url": "https://newtonpaul.com/blog/device-code-phishing-campaign/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "newtonpaul.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a06",
+          "order": 2,
+          "title": "MICHELIN CONFIRMS DATA BREACH LINKED TO ORACLE EBS ATTACK",
+          "summary": "Tire maker Michelin has confirmed that attackers exploited an Oracle E-Business Suite zero-day as part of a wider Cl0p-led campaign tied to FIN11, accessing a small volume of non-sensitive data from its environment. Cl0p claims to have leaked over 315GB of Michelin files.",
+          "url": "https://links.tldrnewsletter.com/TLSNJt",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a07",
+          "order": 3,
+          "title": "235,000 AFFECTED BY CYBERATTACK ON LARGEST AMBULANCE PROVIDER IN WISCONSIN",
+          "summary": "Hackers hit Bell Ambulance in Wisconsin and stole sensitive data for about 238,000 people, including Social Security numbers, IDs, financial details, medical, and insurance information. The breach was detected in February 2025, with notifications rolling out from April as more victims were identified. The Medusa ransomware gang claimed the attack and tied it to a $400,000 ransom demand for 219 GB of data.",
+          "url": "https://therecord.media/235000-affected-cyberattack-ambulance-provider?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a08",
+          "order": 1,
+          "title": "HOW \"STRENGTHENING CRYPTO\" BROKE AUTHENTICATION: FRESHRSS AND BCRYPT'S 72-BYTE LIMIT",
+          "summary": "CVE-2025-68402 is an authentication bypass in the FreshRSS edge branch caused by changing the login nonce from a 40-character SHA-1 hex string to a 64-character SHA-256 hex string, which, combined with bcrypt's 72‑byte input limit, results in a vulnerability. The longer nonce pushed all password‑dependent bcrypt data past the truncation boundary, so password_verify() returned true for any password until the concatenation order was fixed.",
+          "url": "https://pentesterlab.com/blog/freshrss-bcrypt-truncation-auth-bypass?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pentesterlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a09",
+          "order": 2,
+          "title": "YOUR AI COPILOT IS THE NEWEST ATTACK SURFACE",
+          "summary": "Four 2026 incidents involving Excel Copilot, Chrome Gemini, Microsoft Copilot Personal, and Perplexity Comet revealed a common architectural issue: AI agents inherit extensive permissions (such as file access, network egress, credential autofill, and camera/microphone access) and cannot reliably distinguish legitimate user instructions from attacker-injected content, enabling zero-click exfiltration, session hijacking, and full credential vault takeover through indirect prompt injection (OWASP LLM01:2025). While all four vulnerabilities have been patched, the structural gap persists: 83% of organizations plan to deploy agentic AI, yet only 29% feel prepared to secure it. Security teams should enforce outbound network restrictions on AI-enabled applications, audit agent permission scopes to ensure least privilege, and treat untrusted data sources (documents, calendar invites, and URLs) as potential injection vectors in any agentic workflow.",
+          "url": "https://blog.barrack.ai/ai-copilot-attack-surface/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.barrack.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a10",
+          "order": 3,
+          "title": "PRODUCT SECURITY SCORECARDS: COUPLING SECURITY ISSUES WITH PREVENTATIVE CONTROLS TO DRIVE SECURITY MATURITY",
+          "summary": "Postman's application security team leveraged embedded security engineers to create a custom product security scorecard that teams and management can use to quickly surface security issues and their fixes across projects. The scorecards pair detected security issues with preventive controls, such as repo scanning, and can also incorporate more free-form “security asks” from Jira tickets. The security scorecard allowed teams to roll PR blocking out to their repos and use commit pre-checks to block noncompliant commits.",
+          "url": "https://links.tldrnewsletter.com/zB85vg",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a11",
+          "order": 1,
+          "title": "BLOODHOUND SCENTRY — IDENTITY ATTACK PATH MANAGEMENT, OPERATIONALIZED",
+          "summary": "Attackers chain identity relationships to reach critical assets. BloodHound Scentry pairs the BloodHound platform with SpecterOps experts to identify and disrupt identity attack paths across on-prem, cloud, and hybrid environments.",
+          "url": "https://specterops.io/BloodHoundScentry/?utm_medium=Advertisement&utm_source=TLDR&Latest_Campaign=701Uw00000fX3h6&source=Ad+-+Media+Sponsorship",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a12",
+          "order": 2,
+          "title": "JAZZ SECURITY (PRODUCT LAUNCH)",
+          "summary": "Jazz provides an AI-native data loss prevention platform that monitors how sensitive data is used across systems, infers user intent and context, and surfaces only high-risk incidents instead of noisy rule-based alerts.",
+          "url": "https://www.jazz.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "jazz.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a13",
+          "order": 3,
+          "title": "PROMPTFOO (PRODUCT LAUNCH)",
+          "summary": "Promptfoo embeds automated red-team tests into the build and release processes, provides actionable guidance for the identified issues, and feeds the results into the organization's existing vulnerability management workflows.",
+          "url": "https://github.com/promptfoo/promptfoo?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a14",
+          "order": 4,
+          "title": "NERVA",
+          "summary": "Nerva is a CLI application that provides fast service fingerprinting. It can identify 120+ network protocols and extract rich metadata.",
+          "url": "https://github.com/praetorian-inc/nerva?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a15",
+          "order": 1,
+          "title": "CHINESE NEXUS ACTORS SHIFT FOCUS TO QATAR AMID IRANIAN CONFLICT",
+          "summary": "Within one day of the US-Israeli \"Operation Epic Fury\" strikes against Iran, Camaro Dragon targeted Qatari entities with conflict-themed lures delivering a PlugX variant via DLL hijacking of a legitimate Baidu NetDisk binary, while a separate China-nexus campaign deployed Cobalt Strike through a novel Rust-based loader exploiting DLL hijacking of nvdaHelperRemote.dll — a component of the NVDA screen reader previously seen in only a handful of Chinese-nexus operations. Both attacks used AI-generated lures impersonating regional governments to blend into fast-moving crisis communications. The pivot reflects both opportunistic intelligence collection and a broader shift in collection priorities toward Qatar's position at the intersection of competing global powers. Defenders should treat the Iran conflict as an active geopolitical lure theme, reinforce EDR coverage and MFA, and review Check Point's published IoCs for both campaigns.",
+          "url": "https://links.tldrnewsletter.com/d26yZm",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a16",
+          "order": 2,
+          "title": "UNDERCOVER COP GENERATED AN AI TEENAGER TO CATCH PEDOPHILES",
+          "summary": "An undercover investigator with the Department of Homeland Security Investigations unit used AI-generated images of a 13-year-old girl to lure grown men into chatting with her. The investigator used the images to create a profile on the Kik social media platform and successfully caught a grown man who was distributing CSAM. These sting operations are not new, but previously, investigators needed to use pictures of themselves or coworkers that could pass for underage, potentially putting them at risk.",
+          "url": "https://links.tldrnewsletter.com/5N1ZBz",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a17",
+          "order": 3,
+          "title": "FOREIGN HACKER COMPROMISED EPSTEIN FILES HELD BY THE FBI IN 2023",
+          "summary": "Recently published Justice Department documents and an inside source detailed a breach of the FBI's New York office by a foreign hacker who accessed documents from the Epstein investigation. The hack happened after a special agent at the New York office inadvertently left a server vulnerable while trying to manage the bureau's complex procedures for handling digital evidence. The hacker hadn't realized they had infiltrated a law enforcement server, expressed disgust at the materials, and threatened to send the documents to the FBI before being reassured that the server belonged to the FBI.",
+          "url": "https://links.tldrnewsletter.com/RLF5BV",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-12:a18",
+          "order": 1,
+          "title": "CRASH OVERRIDE — EDR FOR YOUR SOFTWARE SUPPLY CHAIN",
+          "summary": "A CVE drops Friday afternoon. Can you prove what's exposed in minutes, not hours? Crash Override embeds provenance from commit to runtime — continuous visibility, no scramble. [See a demo [18] →]",
+          "url": "https://crashoverride.com/demo?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=QuickLink03122026",
+          "reading_time_minutes": null,
+          "source_domain": "crashoverride.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a19",
+          "order": 2,
+          "title": "DOGE EMPLOYEE STOLE SOCIAL SECURITY DATA AND PUT IT ON A THUMB DRIVE, REPORT SAYS",
+          "summary": "A former DOGE software engineer allegedly exfiltrated two highly restricted Social Security databases, including Numident and the Master Death File, onto a thumb drive and boasted about reusing them at a government contractor job.",
+          "url": "https://techcrunch.com/2026/03/10/doge-employee-stole-social-security-data-and-put-it-on-a-thumb-drive-report-says/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a20",
+          "order": 3,
+          "title": "IRAN-LINKED HANDALA HACKERS CLAIM MAJOR HACKS ON STRYKER AND VERIFONE",
+          "summary": "Iran-linked Handala Hack Team claimed attacks on Stryker Corporation and Verifone on March 11, with Stryker confirming a network incident while Verifone denied any breach despite screenshots of apparent internal admin panels released as evidence.",
+          "url": "https://hackread.com/iran-handala-hackers-verifone-stryker-hacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-12:a21",
+          "order": 4,
+          "title": "WHATSAPP INTRODUCES PARENT-MANAGED ACCOUNTS FOR PRE-TEENS",
+          "summary": "WhatsApp rolled out parent-managed accounts for children under 13, giving parents PIN-gated control over contacts, group membership, and activity alerts while preserving end-to-end encryption on all messages.",
+          "url": "https://links.tldrnewsletter.com/jWcJYI",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

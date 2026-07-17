@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-12-16",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-12-16",
+  "source_path": "TLDR InfoSec/article_16-12-2024.md",
+  "source_content_hash": "sha256:43858ddeba2772397f65c8795d9bbf2e6d1a402a21d9a22ca1cc848ce01203eb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-12-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a04",
+          "order": 1,
+          "title": "FRAUD",
+          "summary": "In 2024, Flashpoint identified 123 skimming breaches, which could have potentially cost companies $80 million in fraud losses [4].",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a04",
+          "order": 2,
+          "title": "Prevention_",
+          "summary": "",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a05",
+          "order": 1,
+          "title": "YEARLONG SUPPLY-CHAIN ATTACK TARGETING SECURITY PROS STEALS 390K CREDENTIALS",
+          "summary": "A sophisticated supply-chain attack has been targeting security and technical personnel for a year using Trojanized open-source software from GitHub and NPM to steal login credentials. The campaign employs infected packages and spear phishing techniques to infiltrate researchers' devices with a stealthy backdoor.",
+          "url": "https://arstechnica.com/security/2024/12/yearlong-supply-chain-attack-targeting-security-pros-steals-390k-credentials/?comments-page=1",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a06",
+          "order": 2,
+          "title": "RHODE ISLAND'S ONLINE BENEFITS SYSTEM SHUTS DOWN AFTER CYBERATTACK",
+          "summary": "Rhode Island's RIBridges public assistance system was taken offline after a cyberattack potentially exposing personal data of hundreds of thousands of people. The state plans to provide call center support, credit monitoring, and alternative application methods while investigating the breach.",
+          "url": "https://www.theverge.com/2024/12/14/24321065/rhode-island-cyberattack-ribridges-benefits-offline-personal-information-social-security-snap?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a07",
+          "order": 3,
+          "title": "390,000+ WORDPRESS CREDENTIALS STOLEN VIA MALICIOUS GITHUB REPOSITORY HOSTING POC EXPLOITS",
+          "summary": "A GitHub repository hosting a WordPress tool was used to steal over 390,000 credentials by a threat actor named MUT-1244. The attacker targeted security researchers and pentesters, exfiltrating sensitive data like SSH keys and AWS access keys. The malicious campaign involved phishing, trojanized GitHub repositories, and a cryptocurrency miner payload.",
+          "url": "https://thehackernews.com/2024/12/390000-wordpress-credentials-stolen-via.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a08",
+          "order": 1,
+          "title": "LINUX LKM PERSISTENCE",
+          "summary": "This post discusses different methods to establish persistence with a Linux loadable kernel module type rootkit. Two simple methods that are briefly touched upon are to use a user space persistence mechanism that runs with root privileges to load the module or add the module to /etc/modules. Instead, this author explores using a systemd-modules-load file with the Diamorphine LKM rootkit which will hide any file that contains a given magic string from the kernel to hide the configuration file. The author then describes how timestamps or checking for a tainted kernel can be used to detect this attack.",
+          "url": "https://righteousit.com/2024/11/18/linux-lkm-persistence/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "righteousit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a09",
+          "order": 2,
+          "title": "SUPPLY-CHAIN ATTACK ANALYSIS: ULTRALYTICS",
+          "summary": "The Ultralytics Python project was recently targeted in a supply-chain attack through compromised GitHub Actions workflows and PyPI API tokens. PyPI experts were able to analyze the attack and emphasize the importance of securing software forges and building workflows for open source projects. To improve PyPI security, developers are advised to use trusted publishers, audit workflows for security vulnerabilities, and follow best practices like using 2FA and rotating secrets.",
+          "url": "https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.pypi.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a10",
+          "order": 3,
+          "title": "DETECTING WIFI DUMPING VIA DIRECT WINAPI CALLS AND INTRODUCTION TO IMMUTABLE ARTIFACTS",
+          "summary": "Many detection rules rely on artifacts that are mutable by the attacker. This author sought to investigate detections that relied on immutable artifacts with the example of an attacker that enumerated WiFi networks and dumped passwords directly via the WinAPI as opposed to using tools such as netsh. The author initially ran into issues as the program they wrote to enumerate networks did not cause any obvious registry calls, spawn netsh, or read the Wlansvc\\Profiles\\Interfaces file. The only method that the author found to detect the attack was by enabling the noisy Sysmon Event ID 7 where a rule can be created by searching for an event where the ImageLoaded is wlanapi.dll and the Image contains an unfamiliar .exe.",
+          "url": "https://links.tldrnewsletter.com/awbmFW",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a11",
+          "order": 1,
+          "title": "📘 DATADOG RESEARCH REVEALS TOP CLOUD SECURITY RISKS: LONG-LIVED CREDENTIALS, INSECURE IAM ROLES, AND MORE",
+          "summary": "Datadog analyzed security posture data from thousands of organizations on AWS /Azure / GCP. The findings [11] suggest ongoing challenges with long-lived credentials and risks related to Kubernetes distributions, alongside adoption of proactive cloud security mechanisms such as S3 Public Access Block or IMDSv2 in AWS. Read the",
+          "url": "https://www.datadoghq.com/resources/state-of-cloud-security-2024/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-state-of-cloud-security-24-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a11",
+          "order": 2,
+          "title": "State of Cloud Security 2024 report",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/state-of-cloud-security-2024/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-state-of-cloud-security-24-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a12",
+          "order": 3,
+          "title": "SILENT PUSH (PRODUCT LAUNCH)",
+          "summary": "Silent Push proactively detects potential cyber threats using an automated global intelligence system to monitor and predict attack patterns, helping organizations defend against various digital threats through advanced monitoring and data enrichment techniques.",
+          "url": "https://www.silentpush.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "silentpush.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a13",
+          "order": 4,
+          "title": "VANIR",
+          "summary": "Vanir is a source code-based static analysis tool that automatically identifies the list of missing security patches in the target system. By default, Vanir pulls up-to-date CVEs from Open Source Vulnerabilities (OSV) together with their corresponding signatures so that users can transparently scan missing patches for an up-to-date list of CVEs.",
+          "url": "https://github.com/google/vanir?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a14",
+          "order": 5,
+          "title": "JWT-CLI",
+          "summary": "A CLI tool to encode and decode JWTs, written in Rust. It works as a pipe command and can be helpful to decode access tokens from other commands like curl.",
+          "url": "https://github.com/mike-engel/jwt-cli?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a15",
+          "order": 1,
+          "title": "UNITEDHEALTH'S OPTUM LEFT AN AI CHATBOT, USED BY EMPLOYEES TO ASK QUESTIONS ABOUT CLAIMS, EXPOSED TO THE INTERNET",
+          "summary": "Optum restricted access to an internal AI chatbot after it was found publicly accessible online. The chatbot, designed to help employees handle insurance claims, did not contain sensitive data but raised concerns about AI's role in claims processing.",
+          "url": "https://links.tldrnewsletter.com/fNLauu",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a16",
+          "order": 2,
+          "title": "GERMANY SINKHOLES BOTNET OF 30,000 BADBOX-INFECTED DEVICES",
+          "summary": "Germany's cybersecurity agency reported that 30,000 media devices were infected with BadBox malware before sale. The agency has sinkholed communication with command servers, advised internet providers, and recommended users disconnect and scan potentially compromised devices from pre-infected Android equipment.",
+          "url": "https://links.tldrnewsletter.com/3ZF6t9",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a17",
+          "order": 3,
+          "title": "CONFIDENTIAL COMPUTING AT 1PASSWORD",
+          "summary": "To ensure the security of its customers' secrets, 1Password utilizes end-to-end encryption to ensure that the data is not accessible by anyone, even at 1Password. To achieve this goal, 1Password utilizes AWS Nitro Enclaves to create a cryptographically verifiably, isolated confidential compute environment. 1Password publishes each enclave release to a public transparency log and then verifies the attestation when the client opens an encrypted channel. This ensures that no 1Password or AWS employees can access the code or communications running in the enclaves.",
+          "url": "https://links.tldrnewsletter.com/CQvmYB",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-12-16:a18",
+          "order": 1,
+          "title": "CISA WARNS WATER FACILITIES TO SECURE HMI SYSTEMS EXPOSED ONLINE",
+          "summary": "CISA and EPA urge water facilities to protect online interfaces for HMIs that help operators control industrial machines remotely from cyberattacks.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-water-facilities-to-secure-hmi-systems-exposed-online/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a19",
+          "order": 2,
+          "title": "SERBIAN POLICE USED CELLEBRITE TO UNLOCK, THEN PLANT SPYWARE, ON A JOURNALIST'S PHONE",
+          "summary": "Amnesty International has reported that Serbian authorities used Cellebrite to unlock a journalist's phone and plant spyware for surveillance.",
+          "url": "https://techcrunch.com/2024/12/15/serbian-police-used-cellebrite-to-unlock-then-plant-spyware-on-a-journalists-phone/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-12-16:a20",
+          "order": 3,
+          "title": "FTC WARNS OF ONLINE TASK JOB SCAMS HOOKING VICTIMS LIKE GAMBLING",
+          "summary": "The FTC warns about a rise in online job scams, called \"task scams,\" that resemble gambling, where victims are lured into earning money by completing simple tasks and depositing their own money for higher earnings.",
+          "url": "https://www.bleepingcomputer.com/news/security/ftc-warns-of-online-task-job-scams-hooking-victims-like-gambling/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-05-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-21",
+  "source_path": "TLDR InfoSec/article_21-05-2025.md",
+  "source_content_hash": "sha256:0269e28e4dda997c47ca47209fe6f8cfb5e36edb5076880d0ee374f65441b329",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Infosec and IT professionals experience the same concerns, but often hold them in silos. PDQ set out to break down the barriers and share insights amongst aligned allies.",
+          "url": "https://www.pdq.com/state-of-sysadmin/download/?utm_campaign=ct_cnt_dir_direct_tldr_sponsorship_2025_05_21&utm_medium=direct&utm_source=direct&campaign_id=701TU00000XcFpTYAV",
+          "reading_time_minutes": null,
+          "source_domain": "pdq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a04",
+          "order": 2,
+          "title": "Read key insights",
+          "summary": "",
+          "url": "https://www.pdq.com/state-of-sysadmin/download/?utm_campaign=ct_cnt_dir_direct_tldr_sponsorship_2025_05_21&utm_medium=direct&utm_source=direct&campaign_id=701TU00000XcFpTYAV",
+          "reading_time_minutes": null,
+          "source_domain": "pdq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a05",
+          "order": 1,
+          "title": "PROCOLORED PRINTER SOFTWARE CONTAINED MALWARE",
+          "summary": "After receiving a new direct-to-film printer from China-based Procolored, YouTuber Cameron Coward engaged with cybersecurity researcher Kirsten Hahn after his computer was infected by malware. Hahn discovered that 39 files for products on Procolored's Mega.nz account triggered malware detections for a cryptocurrency wallet stealer and an XRed backdoor for Windows PCs. Hahn suggested that the company may not have intentionally introduced the malicious files, as the C2 server for XRed backdoor is offline.",
+          "url": "https://links.tldrnewsletter.com/mVk0fQ",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a06",
+          "order": 2,
+          "title": "HAZY HAWK GANG EXPLOITS DNS MISCONFIGS TO HIJACK TRUSTED DOMAINS",
+          "summary": "A threat actor tracked as Hazy Hawk is hijacking abandoned DNS CNAME records pointing to abandoned cloud services to distribute scams, fake apps, and malicious apps. Hazy Hawk scans for domains with dangling CNAME records, then registers a new cloud resource with the same name as the abandoned CNAME, and finally creates hundreds of malicious URLS under it that redirect users to scam sites. It has hijacked subdomains from cdc[.]gov, ted[.]com, nyu[.]edu, and unicef[.]org among others.",
+          "url": "https://www.bleepingcomputer.com/news/security/hazy-hawk-gang-exploits-dns-misconfigs-to-hijack-trusted-domains/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a07",
+          "order": 3,
+          "title": "VIRGIN MEDIA O2 PATCHES HOLE THAT LET CALLERS SNOOP ON YOUR COORDINATES",
+          "summary": "UK telecom Virgin Media O2 fixed a security flaw in its 4G calling that revealed users' location data to callers. Researcher Daniel Williams discovered that call signaling messages contained IMSI, IMEI, and cell ID data that could pinpoint recipients' locations within 100 square meters in urban areas.",
+          "url": "https://www.theregister.com/2025/05/20/vmo2_fixes_4g_calling_issue/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a08",
+          "order": 1,
+          "title": "MALWARE ATTACK AND COUNTERATTACK",
+          "summary": "Artist Antoine Schmitt describes a phishing attack that he was a victim of which led to installing the AMOS infostealer. Schmitt was contacted by a threat actor masquerading as a very professional journalist for a magazine called Artscope Magazine. The journalist had Schmitt download and install a trojanized video app that executed an AppleScript payload to download and run the infostealer.",
+          "url": "https://www.antoineschmitt.com/malware-attack-and-counterattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "antoineschmitt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a09",
+          "order": 2,
+          "title": "RED TEAM GOLD: EXTRACTING CREDENTIALS FROM MDT SHARES",
+          "summary": "While SCCM gets security attention, Microsoft Deployment Toolkit (MDT) often exposes similar vulnerabilities. Misconfigured MDT deployment shares frequently allow unauthorized access to credentials stored in configuration files, task sequences, and scripts. These credentials can potentially grant domain admin access or control over deployed systems.",
+          "url": "https://trustedsec.com/blog/red-team-gold-extracting-credentials-from-mdt-shares?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "trustedsec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a10",
+          "order": 3,
+          "title": "INSECURE CREDENTIAL STORAGE PLAGUES MCP",
+          "summary": "Many MCP environments rely upon long-lived credentials such as API keys, but they store them incorrectly in world-readable files or get leaked via chat logs. The community-provided MCP server for Figma even stores its credentials in a world-readable and world-writeable file that attackers can use for session fixation attacks. OAuth should be implemented in MCP servers for apps that support it, and other MCP servers should consider using OS native credentials stores such as macOS Keychain and Windows' Credentials Storage API.",
+          "url": "https://blog.trailofbits.com/2025/04/30/insecure-credential-storage-plagues-mcp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a11",
+          "order": 1,
+          "title": "FROM COST CENTER TO TRUST CENTER - UNLOCK REVENUE WITH SMARTER GRC",
+          "summary": "Drata delivers the world's most advanced Trust Management platform – making risk and compliance accessible, continuous, and 10x more automated than ever before.",
+          "url": "https://try.drata.com/demo/?utm_source=TLDR_Infosec&utm_medium=display&utm_campaign=20250521_tldrinfosec_demo_DG_all_ALL",
+          "reading_time_minutes": null,
+          "source_domain": "try.drata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a11",
+          "order": 2,
+          "title": "See Drata in action",
+          "summary": "",
+          "url": "https://try.drata.com/demo/?utm_source=TLDR_Infosec&utm_medium=display&utm_campaign=20250521_tldrinfosec_demo_DG_all_ALL",
+          "reading_time_minutes": null,
+          "source_domain": "try.drata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a12",
+          "order": 3,
+          "title": "CLOUDSEK (PRODUCT LAUNCH)",
+          "summary": "CloudSEK scours the surface, dark, and deep web to identify cyber risks, data leaks, identity theft, and other threats and helps organizations assess their cybersecurity posture from the attacker's perspective.",
+          "url": "https://www.cloudsek.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "cloudsek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a13",
+          "order": 4,
+          "title": "PASSWORD-MONITOR",
+          "summary": "Ensure your password safety by scanning in real data breaches.",
+          "url": "https://github.com/StellarSand/Password-Monitor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a14",
+          "order": 5,
+          "title": "GHOSTLINE",
+          "summary": "GhostLine is an AI-powered vishing operative. When a user feeds it a phone number, GhostLine uses a cloned voice to build rapport, gather intel, and extract credentials.",
+          "url": "https://github.com/mbhatt1/GhostLine?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a15",
+          "order": 1,
+          "title": "NEW ATTACK CAN STEAL CRYPTOCURRENCY BY PLANTING FALSE MEMORIES IN AI CHATBOTS",
+          "summary": "Research reveals AI-powered crypto trading bots can be manipulated through prompt injection attacks on ElizaOS, an open-source framework. Attackers can plant false memories in the bot's database, causing it to redirect payments to their wallets.",
+          "url": "https://arstechnica.com/security/2025/05/ai-agents-that-autonomously-trade-cryptocurrency-arent-ready-for-prime-time/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a16",
+          "order": 2,
+          "title": "AWS DEFAULT IAM ROLES FOUND TO ENABLE LATERAL MOVEMENT AND CROSS-SERVICE EXPLOITATION",
+          "summary": "Researchers discovered dangerous default IAM roles in AWS services that grant excessive permissions like full S3 access. These roles enable attackers to escalate privileges and move laterally across services, potentially compromising entire AWS accounts. AWS has modified the AmazonS3FullAccess policy in response.",
+          "url": "https://links.tldrnewsletter.com/SNHAfs",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a17",
+          "order": 3,
+          "title": "KREBSONSECURITY HIT WITH NEAR-RECORD 6.3 TBPS DDOS",
+          "summary": "KrebsOnSecurity was hit by a huge 6.3 Tbps DDoS attack, likely as a test by a new botnet called Aisuru. The botnet uses hacked Internet of Things (IoT) devices and is linked to a person known as \"Forky\" who sells DDoS services online. Experts say releasing the botnet's code might weaken its power by creating more, smaller botnets.",
+          "url": "https://krebsonsecurity.com/2025/05/krebsonsecurity-hit-with-near-record-6-3-tbps-ddos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-21:a18",
+          "order": 1,
+          "title": "POWERSCHOOL HACKER PLEADS GUILTY TO STUDENT DATA EXTORTION SCHEME",
+          "summary": "A 19-year-old student was convicted of hacking PowerSchool, stealing data on millions, and extorting a ransom while threatening to leak the information.",
+          "url": "https://www.bleepingcomputer.com/news/security/powerschool-hacker-pleads-guilty-to-student-data-extortion-scheme/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-21:a19",
+          "order": 2,
+          "title": "LOCKBIT LEAK SHOWS AFFILIATES USE PRESSURE TACTICS, RARELY GET PAID",
+          "summary": "The LockBit ransomware gang operates like a business by using affiliates for attacks, but most victims don't pay ransoms, and affiliates often fail to achieve results despite employing threats and pressure.",
+          "url": "https://hackread.com/lockbit-leak-affiliates-pressure-tactics-rarely-paid/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

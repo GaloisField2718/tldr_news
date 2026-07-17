@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-10-30",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-10-30",
+  "source_path": "TLDR InfoSec/article_30-10-2023.md",
+  "source_content_hash": "sha256:aaf2af90f7b205e7a3f8dc1ad718168271aa8c92cd5b498f0d07c7062a6e8e19",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-10-30",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-30:a05",
+          "order": 1,
+          "title": "THREE NEW NGINX INGRESS CONTROLLER VULNERABILITIES REPORTED AND HOW THEY AFFECT KUBERNETES",
+          "summary": "Three new vulnerabilities related to the NGINX ingress component in Kubernetes (CVE-2023-5043, CVE-2023-5044, and CVE-2022-4886) were reported on October 27th. These vulnerabilities allow attackers who can control the configuration of the Ingress object to steal secret credentials from the cluster, including credentials for the Kubernetes API server with very high privileges.",
+          "url": "https://www.armosec.io/blog/cve-2023-5043-nginx-ingress/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "armosec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a06",
+          "order": 2,
+          "title": "IPHONES HAVE BEEN EXPOSING YOUR UNIQUE MAC",
+          "summary": "Apple introduced a feature in iOS 14 that claimed to display a unique, private MAC address for each SSID an iPhone connected to. Two security researchers discovered that this feature doesn’t work on iOS 17.1. They then tested all versions of the feature since it was released and learned that it had never worked. The researchers discovered that the iPhone would send the private MAC address in the source field in multicast messages upon joining a network but the real MAC address would still be sent in a different field.",
+          "url": "https://arstechnica.com/security/2023/10/iphone-privacy-feature-hiding-wi-fi-macs-has-failed-to-work-for-3-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a07",
+          "order": 3,
+          "title": "CITRIX WARNS ADMINS TO PATCH CITRIX BLEED",
+          "summary": "Citrix warns all admins of Netscaler ADC and Gateway appliances to immediately secure their systems from an actively exploited vulnerability dubbed Citrix Bleed (CVE-2023-4966). The 9.4 vulnerability allows unauthenticated attackers to launch a low complexity attack to remotely disclose session tokens and hijack authenticated sessions with no user interaction. This article includes commands to kill all sessions and details of the patched versions.",
+          "url": "https://www.bleepingcomputer.com/news/security/citrix-warns-admins-to-patch-netscaler-cve-2023-4966-bug-immediately/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-30:a08",
+          "order": 1,
+          "title": "TURNING A BORING FILE MOVE INTO A PRIVILEGE ESCALATION ON MAC",
+          "summary": "This little blog post walks through how you can turn a simple script that moves folders or files into a privilege escalation on a Mac.",
+          "url": "https://pwn.win/2023/10/28/file-move-privesc-mac.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "pwn.win",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a09",
+          "order": 2,
+          "title": "XSS ON THE OAUTH CALLBACK URL WITH CSP BYPASS LEADING TO ZERO-CLICK ACCOUNT TAKEOVER",
+          "summary": "This blog post goes into depth into how you can exploit an OAuth callback URL to create a zero-click account takeover.",
+          "url": "https://infosecwriteups.com/xss-on-the-oauth-callback-url-with-csp-bypass-leading-to-zero-click-account-takeover-c6c870b234bd?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "infosecwriteups.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a10",
+          "order": 3,
+          "title": "LEARNING ABOUT SIMULATED ADVERSARIES FROM HUMAN DEFENDERS USING INTERACTIVE CYBER-DEFENSE GAMES",
+          "summary": "This study looked at the behavior of human defenders against two different attack strategies, Beeline and Meander, and how it affected the emergence of defense strategies. The results showed that although human defenders initially had more difficulty stopping the Beeline adversary, they were able to learn to stop it by taking advantage of their attack strategy.",
+          "url": "https://academic.oup.com/cybersecurity/article/9/1/tyad022/7330894?login=false&utm_source=tldrinfosec",
+          "reading_time_minutes": 29,
+          "source_domain": "academic.oup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-30:a11",
+          "order": 1,
+          "title": "POSTLEAKS",
+          "summary": "Postleaks is a tool to search for exposed secrets in public Postman collections.",
+          "url": "https://github.com/cosad3s/postleaks?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a12",
+          "order": 2,
+          "title": "MALWAREBYTES IDENTITY THEFT PROTECTION (PRODUCT LAUNCH)",
+          "summary": "MalwareBytes has launched a new product, Identity Theft Protection, that is meant to help secure digital identities and defend against identity and online threats. It does this through identity monitoring and alerting, credit monitoring, breach analysis, and identity recovery tools.",
+          "url": "https://www.malwarebytes.com/identity-theft-protection?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a13",
+          "order": 3,
+          "title": "GSEC",
+          "summary": "Gsec is a web security scanner based on custom vulnerability scanners and Nuclei. It can do passive scans (DNS enumeration, subdomain generation) and aggressive scans (http code, web crawler, http traversal scan, and more).",
+          "url": "https://github.com/gotr00t0day/Gsec?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-30:a14",
+          "order": 1,
+          "title": "SOPHISTICATED STRIPEDFLY SPY PLATFORM MASQUERADED FOR YEARS AS CRYPTO MINER",
+          "summary": "The StripedFly malware was first discovered by Kaspersky researchers in 2017 and was initially believed to be a cryptocurrency miner. Researchers discovered that the miner was actually a cover for a highly sophisticated spy platform. The malware uses a custom TOR client to transmit communication and siphoned data between infected systems and the attackers' command and control server and has a ransomware component that has infected a small subset of victims.",
+          "url": "https://www.zetter-zeroday.com/p/sophisticated-stripedfly-spy-platform?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "zetter-zeroday.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a15",
+          "order": 2,
+          "title": "AMAZON RDS AND AURORA CERTIFICATES EXPIRING SOON",
+          "summary": "Amazon has released a notice that most Amazon RDS and Aurora SSL/TLS certificates will expire in 2024. After rotating the rds-ca-2019 CA certificates, the new CA certificates will expire in either 40 or 100 years. This article contains a tutorial on how to identify and rotate affected instances.",
+          "url": "https://aws.amazon.com/blogs/aws/rotate-your-ssl-tls-certificates-now-amazon-rds-and-amazon-aurora-expire-in-2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a16",
+          "order": 3,
+          "title": "SHINING A LIGHT IN THE DARK: MEASURING GLOBAL INTERNET SHUTDOWNS",
+          "summary": "Researchers at Censored Planet and Google’s Jigsaw have been tracking internet blackouts by governments, which impacted 35 countries across 187+ instances in 2022. Outages lasting hours to weeks cut access to vital information for work and family. This post outlines how the researchers built the analysis dashboard and data pipelines to understand the impact of these blackouts.",
+          "url": "https://cloud.google.com/blog/products/identity-security/shining-a-light-in-the-dark-measuring-global-internet-shutdowns?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-30:a17",
+          "order": 1,
+          "title": "OKTA CYBERSECURITY BREACH WIPES OUT MORE THAN $2 BILLION IN MARKET CAP",
+          "summary": "After Okta’s recent breach, its shares slumped more than 11% - reducing its market cap by more than $2 billion.",
+          "url": "https://www.cnbc.com/2023/10/23/okta-hack-wipes-out-more-than-2-billion-in-market-cap.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a18",
+          "order": 2,
+          "title": "THE FINANCIAL IMPLICATIONS OF CYBER SECURITY: HOW CATCH RATES IMPACT ORGANIZATIONAL RISK",
+          "summary": "Many organizations' expanding attack surfaces, from digital transformation and hybrid work, drive cyber risk, with threats rapidly evolving. Quantifying security solution efficacy through metrics like catch rate is challenging with the variables involved. This piece examines what catch rate indicates about financial risk mitigation.",
+          "url": "https://blog.checkpoint.com/security/the-financial-implications-of-cyber-security-how-catch-rates-impact-organizational-risk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-30:a19",
+          "order": 3,
+          "title": "CHATBOT HALLUCINATIONS ARE POISONING WEB SEARCH",
+          "summary": "A study of how generative AI chatbot “hallucinations”, or false information generated by AI chatbots, are harming search results. The study focuses on an example in which a researcher wrote a blog post that was meant to test how an LLM could be tricked into generating a summary using a fictional article. The researcher discovered that their fictional article was highlighted in Bing search results even after they added explicit text in the blog post to try and dissuade the Bing search results.",
+          "url": "https://www.wired.com/story/fast-forward-chatbot-hallucinations-are-poisoning-web-search/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "wired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

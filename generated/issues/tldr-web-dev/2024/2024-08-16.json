@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-08-16",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-16",
+  "source_path": "TLDR Web Dev/article_16-08-2024.md",
+  "source_content_hash": "sha256:cfb1c093512656d4e6afd7314e841214086508817d2f47cb435945488962e771",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-16",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-16:a04",
+          "order": 1,
+          "title": "REAL-TIME MOUSE POINTERS",
+          "summary": "Canva's collaboration team implemented real-time mouse pointers to make its whiteboard product better. Initially, they utilized a backend-centric architecture using WebSockets and Redis, which scaled to support hundreds of thousands of simultaneous users, but had limitations in update rate. Recognizing these limitations, the team migrated to a WebRTC-based architecture, which allowed direct peer-to-peer communication between clients, reducing latency and improving scalability.",
+          "url": "https://www.canva.dev/blog/engineering/realtime-mouse-pointers/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "canva.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a05",
+          "order": 2,
+          "title": "DEPENDENCY INJECTION IN REACT - HOW TO MANAGE DEPENDENCIES IN YOUR REACT APP FOR CLEANER AND EASIER TO MAINTAIN CODE",
+          "summary": "Dependency Injection (DI) is a design pattern that improves flexibility, testability, and maintainability by injecting external dependencies into your code rather than hard-coding them. In React applications, DI can be implemented using createContext and useContext to manage dependencies across components without prop drilling. This approach simplifies testing, makes code less coupled, and provides better separation of concerns, though it does add some complexity.",
+          "url": "https://codedrivendevelopment.com/posts/dependency-injection-in-react?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "codedrivendevelopment.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-16:a06",
+          "order": 1,
+          "title": "WHY I DON'T LIKE ENUMS",
+          "summary": "TypeScript's implementation of enums is counterintuitive and inconsistent with type-safe JavaScript. It has unexpected behavior when dealing with numerics, incompatibilities with nominal typing, and numerous bugs related to them in the TypeScript repository.",
+          "url": "https://www.totaltypescript.com/why-i-dont-like-typescript-enums?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "totaltypescript.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a07",
+          "order": 2,
+          "title": "DID TDD ACTUALLY IMPROVE YOUR PRODUCTIVITY? (REDDIT THREAD)",
+          "summary": "Many devs find that test-driven development doesn't really make them more productive. While they may have found it useful when they were newer to coding, it became less useful once they gained more experience.",
+          "url": "https://links.tldrnewsletter.com/W60UmO",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-16:a08",
+          "order": 1,
+          "title": "HIGH-PRECISION DATE/TIME IN SQLITE",
+          "summary": "Sqlean-time is a high-precision date/time extension for SQLite. It provides a structured API and a rich set of functions for working with Time and Duration values. The extension enables storing and manipulating dates for billions of years in the past and future with nanosecond precision.",
+          "url": "https://antonz.org/sqlean-time/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "antonz.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a09",
+          "order": 2,
+          "title": "HAMMING",
+          "summary": "Hamming is an end-to-end platform that streamlines the development and deployment of trustworthy AI voice apps by offering tools for prompt optimization, automated voice testing, monitoring, and more.",
+          "url": "https://www.hamming.ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "hamming.ai",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a10",
+          "order": 3,
+          "title": "KARDINAL",
+          "summary": "Kardinal is a framework for creating lightweight ephemeral development environments within a shared Kubernetes cluster.",
+          "url": "https://github.com/kurtosis-tech/kardinal?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-16:a11",
+          "order": 1,
+          "title": "CODING HORRORS: THE TALES OF CODEBASE COMPLEXITY",
+          "summary": "Daniel Beck, a seasoned developer, shares his personal experiences with XSLT, inefficient database connections, and disastrous refactoring efforts. His experience with horrific codebase complexity only reinforced how hard it can be to rectify human errors.",
+          "url": "https://digma.ai/coding-horrors-tales-of-codebase-complexity/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "digma.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a12",
+          "order": 2,
+          "title": "ACHIEVING FRUGAL ARCHITECTURE USING THE AWS WELL-ARCHITECTED FRAMEWORK GUIDANCE",
+          "summary": "The Frugal Architect mindset treats cost as a key design factor alongside security and performance. This approach aligns with the AWS Well-Architected Framework, which provides guidelines for optimizing cloud architecture by focusing on cost efficiency and sustainability. By continually evaluating and adjusting architectural decisions, organizations can balance innovation with responsible resource usage and drive maximum value from their investments.",
+          "url": "https://aws.amazon.com/blogs/architecture/achieving-frugal-architecture-using-the-aws-well-architected-framework-guidance/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-16:a13",
+          "order": 1,
+          "title": "CEOS ARE RUNNING COMPANIES FROM AFAR EVEN AS WORKERS RETURN TO OFFICE",
+          "summary": "Despite a push for employees to return to the office, a growing number of CEOs are being given the option to run their companies remotely, often living hundreds of miles away from their company headquarters.",
+          "url": "https://www.bloomberg.com/news/articles/2024-08-15/starbucks-victoria-s-secret-are-part-of-broader-trend-of-remote-ceos?embedded-checkout=true&utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "bloomberg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a14",
+          "order": 2,
+          "title": "SHOULD YOU START A STARTUP?",
+          "summary": "Starting a startup requires deep expertise in a problem and the ability to build a solution, whether through tech or distribution, so you should gauge your unique advantages and your desired outcome.",
+          "url": "https://open.substack.com/pub/hybridhacker/p/should-you-start-a-startup?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a15",
+          "order": 3,
+          "title": "RAILS 7.2 RELEASED",
+          "summary": "Rails 7.2 has better production defaults, performance boosts with YJIT enabled by default, optimized Puma settings, and easier setup with pre-configured development containers.",
+          "url": "https://rubyonrails.org/2024/8/10/Rails-7-2-0-has-been-released?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "rubyonrails.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a16",
+          "order": 4,
+          "title": "BEHOLD, DIABLO IS FULLY PLAYABLE IN YOUR BROWSER",
+          "summary": "",
+          "url": "https://arstechnica.com/gaming/2024/08/behold-diablo-is-fully-playable-in-your-browser/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-16:a17",
+          "order": 5,
+          "title": "KIOTA",
+          "summary": "Kiota is a command line tool for generating an API client to call any OpenAPI described API you are interested in.",
+          "url": "https://github.com/microsoft/kiota?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

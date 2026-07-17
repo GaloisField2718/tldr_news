@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-03-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-03-06",
+  "source_path": "TLDR InfoSec/article_06-03-2024.md",
+  "source_content_hash": "sha256:119985ea88057f4a85ee72ea81a11967d166216ead53302309e3e41f3777d2e6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-03-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a05",
+          "order": 1,
+          "title": "RIGHT NOW",
+          "summary": "Cloud attacks are fast, and operating in the cloud securely requires a new mindset. Sysdig has introduced the 5/5/5 Benchmark for Cloud Detection and Response [6] as a new standard for incident response: 5 seconds to detect, 5 minutes triage, and 5 minutes to respond. To meet this benchmark, security teams need to focus on what’s happening right now — deployed applications — not only pre-delivery scanning. Runtime Insights [5] are key to identifying in-use [5] packages, configs, permissions, and network connections that pose an active risk.",
+          "url": "https://sysdig.com/content/c/pf-runtime-insights-are-key-to-shift-left-security?x=47YpGS&utm_source=tldr.tech&utm_medium=referral&utm_campaign=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "sysdig.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a08",
+          "order": 1,
+          "title": "REPORT UNCOVERS MASSIVE SALE OF COMPROMISED CHATGPT CREDENTIALS",
+          "summary": "New research shows that over 225,000 logs containing compromised OpenAI ChatGPT credentials were sold on underground markets between January and October 2023. The data came from devices infected with information stealer malware like LummaC2 and RedLine. Over 130,000 unique hosts with ChatGPT access were infiltrated during June-October alone, a 36% rise from earlier 2023.",
+          "url": "https://www.hackread.com/massive-sale-of-compromised-chatgpt-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a09",
+          "order": 2,
+          "title": "AMERICAN EXPRESS CREDIT CARDS EXPOSED IN THIRD-PARTY DATA BREACH",
+          "summary": "Some of American Express' customers' credit card data was exposed after a merchant processor was hacked. American Express itself was not breached. The breach at the third-party service provider led to unauthorized access to customers' account numbers, names, and card expiration dates. It is unclear how many customers were impacted.",
+          "url": "https://www.bleepingcomputer.com/news/security/american-express-credit-cards-exposed-in-third-party-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a10",
+          "order": 3,
+          "title": "JETBRAINS RELEASES URGENT ADVISORY ON VULNERABILITIES AFFECTING TEAMCITY",
+          "summary": "JetBrains has advised users to urgently patch two vulnerabilities in TeamCity servers. The less severe vulnerability allows unauthenticated users to obtain a limited amount of information disclosure and modification while the more severe vulnerability allows for a total server compromise. Cloud instances have been patched and show no evidence of exploitation.",
+          "url": "https://therecord.media/jet-brains-advisory-teamcity-vulnerabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a11",
+          "order": 1,
+          "title": "UNLEASHING ZERO-CLICK WORMS THAT TARGET GENAI-POWERED APPLICATIONS",
+          "summary": "Researchers created a computer worm called Morris II that targets AI-powered applications by using adversarial self-replicating prompts. They demonstrated it against AI email assistants for spamming and data exfiltration across different models and input types. The worm replicates itself through prompts that make AI models engage in malicious activities and propagation.",
+          "url": "https://sites.google.com/view/compromptmized?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "sites.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a12",
+          "order": 2,
+          "title": "THE ELI5 GUIDE TO PROMPT INJECTION",
+          "summary": "An in-depth guide on different types of Prompt Injection attacks. The guide also includes real-world examples of some attacks, best practices for preventing prompt injection, and tools that can aid in defending against prompt injection.",
+          "url": "https://www.lakera.ai/blog/guide-to-prompt-injection?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "lakera.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a13",
+          "order": 3,
+          "title": "HOW TO MAKE NMAP RECOGNIZE NEW SERVICES",
+          "summary": "A guided tutorial on adding a new service detection to nmap. It walks through the process of cloning nmap, understanding the OPC UA specification, writing a script to capture the relevant probe, and adding the probe to nmap. It also includes details for testing and contributing the change to the official nmap project.",
+          "url": "https://shufflingbytes.com/posts/how-to-make-nmap-recognize-new-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "shufflingbytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a14",
+          "order": 1,
+          "title": "FIREWALL FOR AI FROM CLOUDFLARE (PRODUCT LAUNCH)",
+          "summary": "Cloudflare is launching Firewall for AI, a protection layer to identify abuses against large language models before they reach the models. It will include features like rate limiting, sensitive data detection, and prompt validation to detect exploits and data extraction attempts, leveraging Cloudflare's network to protect users and LLMs.",
+          "url": "https://blog.cloudflare.com/firewall-for-ai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a15",
+          "order": 2,
+          "title": "LME",
+          "summary": "Logging Made Easy (LME) is a no-cost and open logging and protective monitoring solution.",
+          "url": "https://github.com/cisagov/LME?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a16",
+          "order": 3,
+          "title": "FREE CERTIFICATE EXPIRY MONITORING VIA RSS",
+          "summary": "A free service that allows users to subscribe to TlS certificate expiry notifications via RSS. No sign-up is required and notifications are generated at 30 days, 7 days, and 1 day until expiration.",
+          "url": "https://raphting.dev/posts/monitor-rss/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "raphting.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a17",
+          "order": 1,
+          "title": "RAPID7 THROWS JETBRAINS UNDER THE BUS FOR 'UNCOORDINATED VULNERABILITY DISCLOSURE'",
+          "summary": "Security firm Rapid7 criticized JetBrains for silently patching two vulnerabilities in TeamCity before public disclosure, violating coordinated vulnerability disclosure norms. Despite Rapid7's policy against silent patching, JetBrains released patches without an advisory or notifying researchers. Rapid7 then published details of the vulnerabilities after JetBrains ignored inquiries.",
+          "url": "https://www.theregister.com/2024/03/05/rapid7_jetbrains_vuln_disclosure_dispute/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a18",
+          "order": 2,
+          "title": "FAKE RANSOMWARE GANG ADMITS IT MADE UP EPIC GAMES HACK",
+          "summary": "A fake ransomware group called Mogilevich admitted to lying about hacking Fortnite maker Epic Games in an attempt to trick hackers into buying tools from them. The group claimed to have accessed Epic's data but later revealed they fabricated the incident to quickly gain visibility and scam victims through their trafficking scheme.",
+          "url": "https://www.ign.com/articles/fake-ransomware-gang-admits-it-made-up-epic-games-hack?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "ign.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a19",
+          "order": 3,
+          "title": "RETIRED ARMY OFFICER CHARGED WITH SHARING CLASSIFIED INFORMATION ABOUT UKRAINE ON FOREIGN DATING SITE",
+          "summary": "A retired Army lieutenant colonel, David Slater, was arrested and accused of disclosing sensitive national defense information. Slater was the victim of a romance scam and disclosed information about Ukraine including details of officials and command centers. Some of the information provided was classified as secret.",
+          "url": "https://www.cbsnews.com/news/retired-army-officer-david-slater-sharing-ukraine-classified-information-dating-site/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cbsnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-06:a20",
+          "order": 1,
+          "title": "ANSWERS FOR AWS SURVEY RESULTS",
+          "summary": "Answers for AWS is an independent survey of AWS users on various AWS services. This year there were 426 respondents to questions in categories such as IaC, serverless, AI, and CI/CD.",
+          "url": "https://answersforaws.com/2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "answersforaws.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a21",
+          "order": 2,
+          "title": "BLACKCAT RANSOMWARE GROUP IMPLODES AFTER APPARENT $22M PAYMENT BY CHANGE HEALTHCARE",
+          "summary": "Change Healthcare reportedly made a $22 million payment to the BlackCat ransomware group. However, the FBI seized BlackCat's website and the group attempted an exit scam by withholding ransomware payment commissions and shutting down.",
+          "url": "https://krebsonsecurity.com/2024/03/blackcat-ransomware-group-implodes-after-apparent-22m-ransom-payment-by-change-healthcare/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-06:a22",
+          "order": 3,
+          "title": "THESE VIDEO DOORBELLS HAVE TERRIBLE SECURITY. AMAZON SELLS THEM ANYWAY",
+          "summary": "Many widely used internet-connected video doorbells have significant security flaws. These devices often expose sensitive information like home IP addresses and WiFi network names without encryption, leaving them vulnerable to cyber-attacks.",
+          "url": "https://www.consumerreports.org/home-garden/home-security-cameras/video-doorbells-sold-by-major-retailers-have-security-flaws-a2579288796/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "consumerreports.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

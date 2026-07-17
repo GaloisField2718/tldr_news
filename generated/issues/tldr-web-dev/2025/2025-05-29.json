@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-05-29",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-05-29",
+  "source_path": "TLDR Web Dev/article_29-05-2025.md",
+  "source_content_hash": "sha256:60cf09b0b3a0a7157513dadf4d31c91e139a6eec6908f44da9a3c960b93fcd6f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-05-29",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-29:a04",
+          "order": 1,
+          "title": "PORTING TERRARIA AND CELESTE TO WEBASSEMBLY",
+          "summary": "Terraria and Celeste were successfully ported to WebAssembly (WASM), allowing them to run in web browsers. The process involved decompiling the C# code, configuring it for WASM, and resolving compatibility issues with the FNA engine, audio libraries, and threading. To load mods, they made the game binary load at runtime instead of compiling it with the project and used the Everest mod loader.",
+          "url": "https://velzie.rip/blog/celeste-wasm?utm_source=tldrwebdev",
+          "reading_time_minutes": 22,
+          "source_domain": "velzie.rip",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a05",
+          "order": 2,
+          "title": "SLOW QUERY DEBUGGING WHAT BROKE OUR SAAS APP",
+          "summary": "A slow database query calculating user credit balances took down Placid.app when high-volume API requests triggered thousands of concurrent executions of an expensive query that should have been cached. Multiple workers tried to calculate the same user's balance simultaneously and the load ballooned. This caused a cascade of failures, timeouts, and blocked queries that eventually froze the system.",
+          "url": "https://blog.sentry.io/from-alert-to-fix-in-10-minutes-how-a-slow-query-took-down-placid-app/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a06",
+          "order": 3,
+          "title": "THE BEAUTY OF TANSTACK ROUTER",
+          "summary": "TanStack Router is a great routing solution for React apps due to its focus type safety and developer experience. The router has features like type-safe routing parameters, validated search params, and fine-grained subscriptions to prevent unnecessary re-renders. It supports both code-based and file-based routing and has integrated support for React Suspense.",
+          "url": "https://tkdodo.eu/blog/the-beauty-of-tan-stack-router?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "tkdodo.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-29:a07",
+          "order": 1,
+          "title": "HTAP IS DEAD",
+          "summary": "Database architectures have evolved from the unified systems of the 1970s to the specialized OLTP and OLAP systems that emerged due to conflicting workload demands. HTAP (Hybrid Transactional/Analytical Processing) became popular in the 2010s to bridge the gap between transactional and analytical systems. However, HTAP as a single database failed to gain widespread adoption due to the dominance of cloud data warehouses, faster hardware negating the need for distributed OLTP and organizational silos.",
+          "url": "https://www.mooncake.dev/blog/htap-is-dead?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "mooncake.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a08",
+          "order": 2,
+          "title": "AS A DEVELOPER, MY MOST IMPORTANT TOOLS ARE A PEN AND A NOTEBOOK",
+          "summary": "A pen and notebook are better for problem-solving and creative thinking than a computer. Stepping away from the computer allows for more thoughtful design, bug fixing, and understanding of code flow. Writing and sketching turn abstract ideas into tangible artifacts, revealing gaps in knowledge.",
+          "url": "https://hamatti.org/posts/as-a-developer-my-most-important-tools-are-a-pen-and-a-notebook/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "hamatti.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-29:a09",
+          "order": 1,
+          "title": "LEARN HOW TO QUICKLY MONETIZE YOUR SAAS WITH SUBSCRIPTIONS POWERED BY CLERK BILLING",
+          "summary": "Subscription plans boost SaaS revenue but are hard to build from scratch. Clerk Billing simplifies it—offering a polished UI and built-in tools to manage plans and gate premium features without custom logic. This article [10] shows how Clerk Billing works and how to implement it in your app.",
+          "url": "https://go.clerk.com/YtTKhXC?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a11",
+          "order": 2,
+          "title": "ZUSTAND EXPO DEVTOOLS",
+          "summary": "Zustand Expo DevTools is a DevTools plugin that integrates Zustand state debugging into the Expo DevTools environment. It has real-time state inspection, action tracking, and time-travel debugging for Zustand stores within Expo projects.",
+          "url": "https://github.com/csark0812/zustand-expo-devtools?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a12",
+          "order": 3,
+          "title": "FIREDBG",
+          "summary": "FireDBG is a time travel visual debugger for Rust programs. It has a VS Code extension.",
+          "url": "https://firedbg.sea-ql.org/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "firedbg.sea-ql.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a13",
+          "order": 4,
+          "title": "DEFUDDLE",
+          "summary": "Defuddle is a JavaScript library that extracts the main content from web pages by removing clutter, standardizing HTML, and providing a clean output suitable for HTML-to-Markdown conversion.",
+          "url": "https://github.com/kepano/defuddle?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-29:a14",
+          "order": 1,
+          "title": "HOW CODE REVIEWS ARE CHANGING WITH AI",
+          "summary": "While AI coding tools get most attention, AI code reviews are having more immediate impact by automating routine checks like coding conventions and test coverage. AI will become better at reviewing existing code before mastering autonomous creation of complex systems. The key shift is moving from \"approve first\" to \"possibly revert later\" workflows.",
+          "url": "https://refactoring.fm/p/ai-code-reviews?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "refactoring.fm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a15",
+          "order": 2,
+          "title": "GO CRYPTOGRAPHY SECURITY AUDIT",
+          "summary": "The core Go team contracted an external security firm to audit Go's core cryptography packages, resulting in only one low-severity finding. The results validate Go's strong cryptographic security practices and the team also explains other security enhancements coming to Go.",
+          "url": "https://go.dev/blog/tob-crypto-audit?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "go.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a16",
+          "order": 3,
+          "title": "LLM CODEGEN GO BRRR – PARALLELIZATION WITH GIT WORKTREES AND TMUX",
+          "summary": "AI coding agents can be parallelized using Git worktrees to improve throughput and control over a codebase. uzi is a CLI tool designed to automate the orchestration of multiple AI agent worktrees. It makes tasks like prompting, executing commands, and managing agents easier.",
+          "url": "https://www.skeptrune.com/posts/git-worktrees-agents-and-tmux/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "skeptrune.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-29:a17",
+          "order": 1,
+          "title": "A THOUGHT ON JAVASCRIPT \"PROOF OF WORK\" ANTI-SCRAPER SYSTEMS",
+          "summary": "JavaScript-based \"proof of work\" systems, used to deter LLM scrapers, pose a dilemma because while scrapers could dedicate CPU time to solve these challenges, doing so exposes them to potential exploitation by malicious actors injecting other JavaScript for purposes like cryptocurrency mining or CPU resource draining.",
+          "url": "https://utcc.utoronto.ca/~cks/space/blog/web/JavaScriptScraperObstacles?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "utcc.utoronto.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a18",
+          "order": 2,
+          "title": "OSV",
+          "summary": "OSV is a high-performance CSV parser for Ruby supporting both hash-based and array-based row formats with various configuration options.",
+          "url": "https://github.com/njaremko/osv?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a19",
+          "order": 3,
+          "title": "BEWARE OF FAST-MATH",
+          "summary": "Using \"fast-math\" compiler flags can speed up math computations at the cost of accuracy and potentially introduce subtle and hard-to-debug errors by violating IEEE 754 floating-point standards.",
+          "url": "https://simonbyrne.github.io/notes/fastmath/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "simonbyrne.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-29:a20",
+          "order": 4,
+          "title": "TEACHABLE MACHINE",
+          "summary": "Teachable Machine is a web-based tool that allows anyone to quickly and easily create machine learning models to recognize images, sounds, and poses in a no-code way.",
+          "url": "https://teachablemachine.withgoogle.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "teachablemachine.withgoogle.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2025-11-12",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-11-12",
+  "source_path": "TLDR Dev/article_12-11-2025.md",
+  "source_content_hash": "sha256:07688faa6d136aaae32151eb9afb0665d6df2e3051bfc2d4c993a19bd1f93a74",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-11-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a04",
+          "order": 1,
+          "title": "B2B AUTHENTICATION FOR ANY SITUATION - FULLY MANAGED OR BYO",
+          "summary": "What your sales team needs to close deals: SAML, SSO, SCIM provisioning, passkeys...",
+          "url": "https://www.propelauth.com/?utm_source=tldr&utm_medium=newsletter&utm_campaign=prinov12https%3A%2F%2Fbyo.propelauth.com%2F%3Futm_source%3Dtldr&utm_medium=newsletter&utm_campaign=prinov12",
+          "reading_time_minutes": null,
+          "source_domain": "propelauth.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a05",
+          "order": 2,
+          "title": "GOT SOMETHING IN PLACE? NO NEED TO RIP AND REPLACE. PropelAuth BYO",
+          "summary": "lets you quickly add advanced authentication features like Enterprise SSO, session management, and passkeys.",
+          "url": "https://byo.propelauth.com/?utm_source=tldr&utm_medium=newsletter&utm_campaign=prinov12",
+          "reading_time_minutes": null,
+          "source_domain": "byo.propelauth.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a07",
+          "order": 1,
+          "title": "DRAWING TEXT ON SCREEN - WHAT COULD BE SIMPLER?",
+          "summary": "This dev rewrote a text-based file manager in Go as a learning exercise, focusing on input and output handling. They used C# and explored different rendering methods, including console methods, GDI, DirectX, and Vulkan. They found that direct text drawing with DirectX performed the best for normal use, better than texture-based caching despite the latter's advantage in extreme stress test scenarios. However, efficient text rendering is more complex than it initially appears.",
+          "url": "https://cv.co.hu/csabi/drawing-text-performance-graphical-vs-console.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "cv.co.hu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a08",
+          "order": 2,
+          "title": "WE RAN OVER 600 IMAGE GENERATIONS TO COMPARE AI MODELS",
+          "summary": "A long-time developer of iOS photo apps compared the performance of OpenAI, Gemini, and Seedream AI models on various image editing tasks. They ran over 600 image generations using naive prompts and representative photos to assess the trade-offs between quality, prompt complexity, and pricing for each model. OpenAI was the best at transformative and creative edits, and Gemini was better for realistic edits and detail preservation, while Seedream was a good middle ground.",
+          "url": "https://latenitesoft.com/blog/evaluating-frontier-ai-image-generation-models/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "latenitesoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a09",
+          "order": 3,
+          "title": "USING ATOMIC STATE TO IMPROVE REACT PERFORMANCE IN DEEPLY NESTED COMPONENT TREES",
+          "summary": "Harbor solved React performance issues in its clinical trial data capture application by switching from vanilla React Context to atomic state management with Jotai. The traditional Context approach caused entire component trees to rerender when any single node's state changed, which became expensive in their deeply nested \"event → form → field group → field\" hierarchy. By using Jotai's atomic state system, it was able to create granular state atoms that only trigger rerenders in components that actually depend on the changed data.",
+          "url": "https://runharbor.com/blog/2025-10-26-improving-deeply-nested-react-render-performance-with-jotai-atomic-state?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "runharbor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a10",
+          "order": 1,
+          "title": "COLLABORATION SUCKS",
+          "summary": "Excessive collaboration slows progress in companies. Instead, the company should have a \"driver\" mentality where individuals take ownership and minimize unnecessary feedback. This means defaulting to shipping, seeking specific input, and prioritizing post-shipment feedback.",
+          "url": "https://newsletter.posthog.com/p/collaboration-sucks?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "newsletter.posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a11",
+          "order": 2,
+          "title": "VERTICAL INTEGRATION IS THE ONLY THING THAT MATTERS",
+          "summary": "Vertical integration, which means tight integration between different tools in a development stack, is necessary for developer productivity. Examples of such vertically integrated workflows include automated build artifact sharing and interactive debugging across languages. While building a vertically integrated development environment as a product is challenging, the glue code connecting different tools is where the real value lies.",
+          "url": "https://becca.ooo/blog/vertical-integration/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "becca.ooo",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a12",
+          "order": 1,
+          "title": "A COMPLETE PICTURE OF THE JWT SECURITY STACK FOR ENGINEERS AND ENGINEERING LEADERS",
+          "summary": "Looking to understand JSON Web Tokens? AUTH0 has you covered with full-stack learning resources. The JWT Guide for Product and Engineering Leaders [12] explains the strategic side: security risks, scalability concerns, and business impact. The JWT Handbook [13] goes into implementation: signing algorithms, JWS, JWE, JWK, and best practices to prevent common vulnerabilities.",
+          "url": "https://auth0.com/resources/whitepapers/jwt-guide-for-product-and-engineering-leaders/?utm_source=newsletter&utm_medium=thirdparty&utm_campaign=2025-07%7CINB%7CAuth0-JWTHandbookForLeaders-WPR%7CAMER&ocid=701KZ000000DNjRYAW-aPAKZ0000008OLT4A2&utm_id=aNKKZ00000004oA4AQ",
+          "reading_time_minutes": null,
+          "source_domain": "auth0.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a14",
+          "order": 2,
+          "title": "TUSK DRIFT",
+          "summary": "The Tusk Drift SDK enables deterministic API testing by recording and replaying API calls. It captures real-world API interactions and uses the Tusk CLI to replay them as tests, identifying regressions by intercepting outbound requests with recorded data. The SDK uses Node.js and supports various packages and versions, including HTTP/HTTPS, GRPC, PG, Firestore, and more.",
+          "url": "https://github.com/Use-Tusk/drift-node-sdk?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a15",
+          "order": 3,
+          "title": "ADK FOR GO",
+          "summary": "The Agent Development Kit (ADK) is an open-source, code-first Go toolkit designed for building, evaluating, and deploying AI agents. It applies software development principles to AI agent creation and makes the orchestration of agent workflows easier. It is model and deployment-agnostic, and has a tool ecosystem with modular multi-agent systems.",
+          "url": "https://github.com/google/adk-go?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a16",
+          "order": 4,
+          "title": "PERSPECTIVE",
+          "summary": "Perspective is an interactive analytics and data visualization component ideal for large, streaming datasets. It provides a fast, memory-efficient query engine written in C++ and a framework-agnostic User Interface as a Custom Element. Perspective can be used in the browser via WebAssembly or virtually via a WebSocket server using Python/Node.",
+          "url": "https://perspective-dev.github.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "perspective-dev.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a17",
+          "order": 1,
+          "title": "META'S CHIEF AI SCIENTIST YANN LECUN REPORTEDLY PLANS TO LEAVE TO BUILD HIS OWN STARTUP",
+          "summary": "Meta's chief AI scientist, Yann LeCun, is reportedly planning to leave the company in the coming months to start his own startup focused on world models. LeCun's departure comes at a challenging time for Meta, which has been restructuring its AI organization amid concerns it's falling behind competitors like OpenAI and Google.",
+          "url": "https://techcrunch.com/2025/11/11/metas-chief-ai-scientist-yann-lecun-reportedly-plans-to-leave-to-build-his-own-startup?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a18",
+          "order": 2,
+          "title": "A CATALOG OF SIDE EFFECTS",
+          "summary": "This blog post discusses different approaches compilers use to track the effects of Intermediate Representation (IR) instructions, focusing on how these effects influence optimizations like instruction re-ordering and dead code elimination. There are two main representation methods: bitsets, as used in Cinder and other compilers like HHVM and ART, and heap range lists, as implemented in JavaScriptCore. Bitsets are compact and precise, while range lists offer more long-term flexibility.",
+          "url": "https://bernsteinbear.com/blog/compiler-effects/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "bernsteinbear.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-12:a19",
+          "order": 1,
+          "title": "A FRIENDLY GUIDE TO FRONT-END DATE PICKERS",
+          "summary": "Simpler date selection methods are preferred over complex JavaScript date pickers due to better usability and accessibility.",
+          "url": "https://pikaday.dbushell.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "pikaday.dbushell.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a20",
+          "order": 2,
+          "title": "TYPESCRIPT'S RISE IN THE AI ERA",
+          "summary": "TypeScript became the most-used language on GitHub in 2025, surpassing JavaScript and Python, with over a million new developers contributing (a 66% year-over-year increase).",
+          "url": "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a21",
+          "order": 3,
+          "title": "LEARNING TO MODEL THE WORLD WITH LANGUAGE",
+          "summary": "Dynalang is an agent that learns to understand and uses multiple types of language by predicting future text, images, and rewards within a multimodal world model.",
+          "url": "https://dynalang.github.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "dynalang.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-12:a22",
+          "order": 4,
+          "title": "WHY EFFORT SCALES SUPERLINEARLY WITH THE PERCEIVED QUALITY OF CREATIVE WORK",
+          "summary": "Achieving higher perceived quality in creative work requires a disproportionately larger effort because the search space for acceptable refinements shrinks, verification latency increases, and the process involves a lot of exploration and exploitation.",
+          "url": "https://markusstrasser.org/creative-work-landscapes.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "markusstrasser.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

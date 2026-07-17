@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-09-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-09-11",
+  "source_path": "TLDR InfoSec/article_11-09-2023.md",
+  "source_content_hash": "sha256:f9d278d39b9941a4e90210766ac7ac39ba6e3a5c444dbbf6d6211ce7c8a3aac8",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-09-11",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-11:o001",
+          "order": 1,
+          "title": "ACTIVE NORTH KOREAN CAMPAIGN TARGETING SECURITY RESEARCHERS",
+          "summary": "North Korean threat actors have been targeting security researchers for the past two and a half years using 0-day exploits. Google’s Threat Analysis Group has tracked and disrupted campaigns from these actors and recently discovered a new campaign likely from the same actors. The threat actors used social media sites to build rapport with their targets before sending a malicious file that contained at least one 0-day in a popular software package.",
+          "url": "https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o002",
+          "order": 2,
+          "title": "SPYWARE",
+          "summary": "Several malicious Telegram clones for Android on Google Play were installed over 60,000 times, infecting people with spyware that steals user messages, contact lists, and other data.",
+          "url": "https://www.bleepingcomputer.com/news/security/evil-telegram-android-apps-on-google-play-infected-60k-with-spyware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o003",
+          "order": 3,
+          "title": "DEVICES",
+          "summary": "Advanced Persistent threat actors were found to have exploited two vulnerabilities, CVE-2022-47966 (Zoho Suite) and CVE-2022-42475 (FortiOS devices), to gain unauthorized access and establish persistence on an organization's network. The Cybersecurity and Infrastructure Security Agency and co-sealers have released a joint Cybersecurity Advisory to provide network defenders with tactics, techniques, and procedures, IOCs, and methods to detect and protect against similar exploitation.",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-250a?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-11:o004",
+          "order": 1,
+          "title": "7 WAYS TO ESCAPE A CONTAINER",
+          "summary": "A blog post containing 7 different techniques that an attacker could use to escape from a container boundary. Each technique includes a list of required Linux capabilities for the attack, a description of the attack, an example command to launch a vulnerable container, and an example command to escape the container.",
+          "url": "https://www.panoptica.app/research/7-ways-to-escape-a-container?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "panoptica.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o005",
+          "order": 2,
+          "title": "WORKFLOWS",
+          "summary": "The recommended method for pinning GitHub Actions per GitHub is to pin the action to a full commit hash which causes the tarball of the action to be downloaded. However, some actions can still be exploited through supply chain attacks if they depend upon unpinned external dependencies (docker containers, other actions, etc). A total of 32% of the top started actions were deemed unpinnable. This article concludes with advice to mitigate unpinnable action attacks",
+          "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/unpinnable-actions-github-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o006",
+          "order": 3,
+          "title": "CODE VULNERABILITIES PUT PROTONMAIL AT RISK",
+          "summary": "A blog post from the Sonar research team detailing their findings in Proton Mail. The post includes an in-depth breakdown of the vulnerability that they discovered and the patch that was issued.",
+          "url": "https://www.sonarsource.com/blog/code-vulnerabilities-leak-emails-in-proton-mail/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "sonarsource.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-11:o007",
+          "order": 1,
+          "title": "FLIGHTSIM",
+          "summary": "flightsim is a tool to help security teams generate malicious traffic to test security controls and network visibility. It can test for a variety of different malicious traffic patterns.",
+          "url": "https://github.com/alphasoc/flightsim?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o008",
+          "order": 2,
+          "title": "SEMGREP-RULES",
+          "summary": "A collection of Semgrep rules that apply to HashiCorp products. This repository is a work in progress and currently only includes rules for terraform.",
+          "url": "https://github.com/hashicorp-forge/semgrep-rules?utm_source=tldrcybersecurity",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o009",
+          "order": 3,
+          "title": "CHEPY",
+          "summary": "Chepy is a pure Python implementation of the features of Cyberchef utility. It preserves the ability to stack various actions together. While it lacks Cyberchef's magic function, it has a lot of features that could be desirable for security researchers.",
+          "url": "https://github.com/securisec/chepy?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-11:o010",
+          "order": 1,
+          "title": "MINUTE READ)",
+          "summary": "A U.S. review board tasked with investigating major cybersecurity incidents said it will begin looking at the recent intrusion of U.S. government email systems provided by Microsoft, whose handling of the incident drew ire and scrutiny from federal lawmakers and the wider security community.",
+          "url": "https://techcrunch.com/2023/08/11/cyber-security-review-board-microsoft-hack-government-emails/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o011",
+          "order": 2,
+          "title": "TWO REAL-LIFE EXAMPLES OF WHY LIMITING PERMISSIONS WORKS",
+          "summary": "A blog post from the AWS Customer Incident Response Team detailing two cases that they worked on. In both of these cases, real-world examples of least privilege are given in actual customer environments.",
+          "url": "https://aws.amazon.com/blogs/security/two-real-life-examples-of-why-limiting-permissions-works-lessons-from-aws-cirt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o012",
+          "order": 3,
+          "title": "CLOUD DETECTION AND RESPONSE NEEDS TO BREAK DOWN BOUNDARIES",
+          "summary": "A post that partially leverages the Crowdstrike “Nowhere to Hide” threat hunting report to analyze the current state of cloud detection and response. It notes that many modern attacks and breaches leverage credentials to pivot between systems (such as IDPs, cloud environments, and CI/CD environments). However, most tooling is siloed to a specific environment. The post argues that tooling needs to adapt to these more complex environments and provides advice for teams.",
+          "url": "https://permiso.io/blog/cloud-detection-and-response-needs-to-break-down-boundaries?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-11:o013",
+          "order": 1,
+          "title": "WEEK?",
+          "summary": "The University of Michigan was without internet for a large part of last week. CTO of SensCy Dave Kelly said that proactively taking down systems pointed to a security breach. Some sources said that the university found malware in its WiFi network.",
+          "url": "https://www.cbsnews.com/detroit/news/what-caused-the-internet-outage-at-university-of-michigan-this-week/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cbsnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o014",
+          "order": 2,
+          "title": "MINUTE READ)",
+          "summary": "Vitalik Buterin, Ethereum’s co-founder, allegedly had his X account compromised. According to prominent blockchain investigator ZachXBT, the incident has led to victims collectively losing over $691,000 after clicking on a malicious link.",
+          "url": "https://cointelegraph.com/news/ethereum-vitalik-buterin-x-hackers-drain?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-11:o015",
+          "order": 3,
+          "title": "MINUTE READ)",
+          "summary": "The International Criminal Court's lead prosecutor, Karim Khan, has announced that the Hague will investigate and prosecute cybercrimes that potentially violate the Rome Statute, including war crimes, crimes against humanity, and genocide. The ICC will collect and review evidence of hacking that impacts critical infrastructure such as medical facilities or control systems for power generation.",
+          "url": "https://arstechnica.com/information-technology/2023/09/the-international-criminal-court-will-now-prosecute-cyberwar-crimes/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

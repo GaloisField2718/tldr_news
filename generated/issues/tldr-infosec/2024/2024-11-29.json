@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-11-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-11-29",
+  "source_path": "TLDR InfoSec/article_29-11-2024.md",
+  "source_content_hash": "sha256:51298a2ce4cdf4046de89ccc086103f514ccc48ffb456578f8f28bee163dc490",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-11-29",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-29:a04",
+          "order": 1,
+          "title": "THE SOURCE CODE OF BANSHEE STEALER LEAKED ONLINE",
+          "summary": "Banshee Stealer, a macOS malware-as-a-service targeting browsers and crypto wallets, shut down after its source code leaked online. Developed by Russian hackers in August 2024, the malware's GitHub-published code may increase macOS cybersecurity threats.",
+          "url": "https://securityaffairs.com/171423/malware/the-source-code-of-banshee-stealer-leaked-online.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a05",
+          "order": 2,
+          "title": "NHS MAJOR 'CYBER INCIDENT' FORCES HOSPITALS TO USE PEN AND PAPER",
+          "summary": "A North West England NHS trust experienced a cybersecurity incident, forcing sites to revert to pen-and-paper operations. Systems were isolated and some appointments were affected. The trust is working with national cybersecurity services to restore normal operations.",
+          "url": "https://www.theregister.com/2024/11/28/wirral_nhs_cyber_incident/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-29:a06",
+          "order": 1,
+          "title": "RESEARCHERS DISCOVER FIRST UEFI BOOTKIT MALWARE FOR LINUX",
+          "summary": "Researchers at ESET discovered the first-ever UEFI bootkit (titled Bootkitty) targeting Linux devices when it was uploaded to VirusTotal. Bootkitty hooks UEFI security authentication protocols. It then hooks various GRUB functions to turn off kernel signature verification and intercepts the Linux kernel's decompression process to allow for loading malicious kernel modules. Bootkitty replaces the first environment variable to always load the malicious library at process startup. The bootkit relies on self-signed certificates, specific byte-pattern matching, and hardcoded offsets, so it will only work on specific GRUB and kernel versions. It is still likely in development.",
+          "url": "https://www.bleepingcomputer.com/news/security/researchers-discover-bootkitty-first-uefi-bootkit-malware-for-linux/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a07",
+          "order": 2,
+          "title": "GITFLOPS: THE DANGERS OF TERRAFORM AUTOMATION PLATFORMS",
+          "summary": "Terraform automation platforms like Atlantis and Terraform Cloud are very popular for creating pull-request based CI/CD workflows. The typical workflow involves opening a pull-request that will trigger a read-only terraform plan which will then be reviewed and can be applied by a more privileged user with a comment. A malicious user can either inject code via the entry point of a malicious provider or through a malicious data source to bypass the read-only protections of terraform plan. This vulnerability has been confirmed on five Terraform automation platforms.",
+          "url": "https://snyk.io/blog/gitflops-dangers-of-terraform-automation-platforms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "snyk.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-29:a08",
+          "order": 1,
+          "title": "CSA BLACK FRIDAY DISCOUNTS: GET CLOUD SECURITY CERTIFIED",
+          "summary": "Give your cloud security career the boost it deserves this Black Friday. The Cloud Security Alliance [9] is offering TLDR readers 50% off the CCSK + CCZT exam and online training bundle [8], or 50% off the exam-only bundle [10]. Use discount code TLDRDOUBLEDIP24 from today at 12am PST through 12am PST Tuesday, December 3. Don't miss out!",
+          "url": "https://knowledge.cloudsecurityalliance.org/path/ccsk-v5-cczt-bundle?utm_source=tldr&utm_medium=infosec_newsletter&utm_campaign=2024_black_friday",
+          "reading_time_minutes": null,
+          "source_domain": "knowledge.cloudsecurityalliance.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a11",
+          "order": 2,
+          "title": "VISIO TRUST (PRODUCT LAUNCH)",
+          "summary": "Visio Trust collects, analyzes, and monitors artifacts from vendors to deliver real-time, comprehensive assessments and provide security teams with the security intelligence needed to make informed decisions during procurement.",
+          "url": "https://visotrust.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "visotrust.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a12",
+          "order": 3,
+          "title": "CONTENT",
+          "summary": "Security automation content in SCAP, Bash, Ansible, and other formats.",
+          "url": "https://github.com/ComplianceAsCode/content?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a13",
+          "order": 4,
+          "title": "AM I ISOLATED",
+          "summary": "Am I Isolated is a security posture benchmarking tool that evaluates the isolation of a given container runtime.",
+          "url": "https://github.com/edera-dev/am-i-isolated?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-29:a14",
+          "order": 1,
+          "title": "AUTHORITIES CATCH ‘SMS BLASTER' GANG THAT DROVE AROUND BANGKOK SENDING THOUSANDS OF PHISHING MESSAGES",
+          "summary": "Thai authorities have arrested two organized fraud gangs, one of which used \"SMS blasting\" technology to send nearly 1 million malicious texts in Bangkok to trick recipients with fake prize messages and potential cyber threats.",
+          "url": "https://techcrunch.com/2024/11/25/authorities-catch-sms-blaster-gang-that-drove-around-bangkok-sending-thousands-of-phishing-messages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a15",
+          "order": 2,
+          "title": "NEW YORK FINES GEICO AND TRAVELERS $11 MILLION OVER DATA BREACHES",
+          "summary": "Geico and Travelers were fined $11 million by New York for data breaches affecting over 120,000 individuals. The attacks compromised insurance quoting tools to steal driver's license numbers. Some of the data was used to file fraudulent unemployment claims during COVID-19.",
+          "url": "https://www.securityweek.com/new-york-fines-geico-and-travelers-11-million-over-data-breaches/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-29:a16",
+          "order": 1,
+          "title": "UNISWAP UNVEILS $15.4M CORE CONTRACTS BUG BOUNTY AHEAD OF V4 LAUNCH",
+          "summary": "Uniswap has launched a new bug bounty with payouts ranging from $2K to $15.4M, which could potentially mark the highest bounty payout in history.",
+          "url": "https://cointelegraph.com/news/uniswap-unveils-core-contracts-bug-bounty-ahead-v4-launch?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-29:a17",
+          "order": 2,
+          "title": "AWS SECURITY GUARDRAILS AND TERRAFORM",
+          "summary": "One common implementation of the paved roads philosophy is through Terraform modules that employ secure defaults for common tasks (such as creating S3 buckets).",
+          "url": "https://naman16.github.io/cloud-security/AWS%20Security%20Guardrails%20%26%20Terraform/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "naman16.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

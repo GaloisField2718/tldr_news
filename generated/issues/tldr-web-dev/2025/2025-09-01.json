@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-09-01",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-01",
+  "source_path": "TLDR Web Dev/article_01-09-2025.md",
+  "source_content_hash": "sha256:880b8d3ef93b5d5a439d605a69e8c569da311bf9c6b54dddfe78d4fc184efd10",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-01",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-01:a04",
+          "order": 1,
+          "title": "WHY \"WHAT HAPPENED FIRST?\" IS ONE OF THE HARDEST QUESTIONS IN LARGE-SCALE SYSTEMS",
+          "summary": "Determining the precise order of events in large-scale distributed systems is challenging due to imperfect clock synchronization across computers. Network latency and clock drift make it impossible to rely on wall-clock time for accurate ordering. Instead, computer scientists use logical clocks to track the \"happened-before\" relationship between events, which assign increasing counters to events and messages, making sure that if event A caused event B, A's logical timestamp will be lower than B's.",
+          "url": "https://newsletter.scalablethread.com/p/why-what-happened-first-is-one-of?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "newsletter.scalablethread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a05",
+          "order": 2,
+          "title": "TERMINAL SESSIONS YOU CAN BOOKMARK: BUILDING ZELLIJ'S WEB CLIENT",
+          "summary": "Zellij's new built-in web client allows users to access terminal sessions from a browser. The web client uses a client/server architecture, with a Rust-based web server acting as a translation layer between the browser's websockets and the Zellij server's IPC channels. The web server supports unique URLs for each session, authentication using tokens, and separate WebSocket channels for terminal data and control messages. The client-side uses xterm.js for terminal emulation and incorporates custom integrations for features like mouse tracking and window titles.",
+          "url": "https://poor.dev/blog/building-zellij-web-terminal/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "poor.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-01:a06",
+          "order": 1,
+          "title": "YOU SHOULD DELETE TESTS",
+          "summary": "While automated tests are necessary for maintaining confidence when making code changes, they should be deleted when they are flaky. Tests that are flaky, too strict, too slow to run regularly, or outdated due to changed business requirements all harm developer productivity.",
+          "url": "https://andre.arko.net/2025/06/30/you-should-delete-tests/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "andre.arko.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a07",
+          "order": 2,
+          "title": "COGNITIVE LOAD IS WHAT MATTERS",
+          "summary": "Cognitive load refers to the mental effort required to understand and work with code. Excessive cognitive load can lead to confusion, errors, and delays. Developers should work on reducing extraneous cognitive load while working on code by avoiding overly complex conditionals, minimizing inheritance, and using clear, self-describing variable names.",
+          "url": "https://github.com/zakirullin/cognitive-load?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a08",
+          "order": 3,
+          "title": "USE ONE BIG SERVER",
+          "summary": "The conventional wisdom of scaling horizontally with distributed systems and microservices is not always true. Sometimes, using a single, powerful server is enough for most web services.",
+          "url": "https://specbranch.com/posts/one-big-server/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "specbranch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-01:a09",
+          "order": 1,
+          "title": "AGENT CLIENT PROTOCOL",
+          "summary": "The Agent Client Protocol standardizes communication between code editors and AI coding agents. The project provides libraries and schemas in Rust and TypeScript, along with a JSON schema.",
+          "url": "https://github.com/zed-industries/agent-client-protocol?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a10",
+          "order": 2,
+          "title": "SOSUMI.AI",
+          "summary": "Sosumi.ai is a service that converts Apple Developer documentation into AI-readable Markdown format, allowing LLMs to access and utilize this information for tasks like generating Swift code.",
+          "url": "https://links.tldrnewsletter.com/l0Jg9K",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-01:a11",
+          "order": 1,
+          "title": "THE DEFAULT TRAP: WHY ANTHROPIC'S DATA POLICY CHANGE MATTERS",
+          "summary": "Anthropic's recent policy change is that Claude user conversations are now used for training data by default unless users opt out. Users should stay informed and intentional about their data sharing.",
+          "url": "https://natesnewsletter.substack.com/p/the-default-trap-why-anthropics-data?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "natesnewsletter.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a12",
+          "order": 2,
+          "title": "VIBE SHIFT? SENIOR DEVELOPERS SHIP NEARLY 2.5X MORE AI CODE THAN JUNIOR COUNTERPARTS",
+          "summary": "A survey found that senior developers ship much more AI-generated code than junior developers. Senior developers also reported spending more time fixing AI code, but overall, they find that AI tools help them ship faster.",
+          "url": "https://www.fastly.com/blog/senior-developers-ship-more-ai-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "fastly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a13",
+          "order": 3,
+          "title": "WHAT EVERY ARGUMENT ABOUT SIDELOADING GETS WRONG",
+          "summary": "",
+          "url": "https://hugotunius.se/2025/08/31/what-every-argument-about-sideloading-gets-wrong.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "hugotunius.se",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-01:a14",
+          "order": 1,
+          "title": "WE NEED TO SERIOUSLY THINK ABOUT WHAT TO DO WITH C++ MODULES",
+          "summary": "C++ modules should be removed from the standard if they cannot demonstrate a large (5-10x) compilation time speedup across multiple open-source projects, as the current implementation is overly complex, lacks a clear product owner, and doesn't provide enough benefit to outweigh the disadvantages for the average developer.",
+          "url": "https://nibblestew.blogspot.com/2025/08/we-need-to-seriously-think-about-what.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "nibblestew.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a15",
+          "order": 2,
+          "title": "AI MODELS NEED A VIRTUAL MACHINE",
+          "summary": "A standardized virtual machine for AI models is useful to improve security, interoperability, and management by decoupling model logic from integration logic, similar to the Java Virtual Machine.",
+          "url": "https://blog.sigplan.org/2025/08/29/ai-models-need-a-virtual-machine/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "blog.sigplan.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a16",
+          "order": 3,
+          "title": "MY PHONE IS AN EREADER NOW",
+          "summary": "The Minimal Phone is an Android phone with an e-paper display and a physical keyboard.",
+          "url": "https://www.davepagurek.com/blog/minimal-phone/?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "davepagurek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-01:a17",
+          "order": 4,
+          "title": "IS IT POSSIBLE TO ALLOW SIDELOADING *AND* KEEP USERS SAFE?",
+          "summary": "There's a dilemma of balancing user freedom to sideload Android apps with the need to protect vulnerable users from scams, which makes the sideloading discussion with Android difficult.",
+          "url": "https://shkspr.mobi/blog/2025/08/is-it-possible-to-allow-sideloading-and-keep-users-safe/?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "shkspr.mobi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

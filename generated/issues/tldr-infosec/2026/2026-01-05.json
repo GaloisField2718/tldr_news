@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-05",
+  "source_path": "TLDR InfoSec/article_05-01-2026.md",
+  "source_content_hash": "sha256:73275626c03593e11b2c13b7630943ff0e575163f87129d44244394e9d8ec2fb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a04",
+          "order": 1,
+          "title": "",
+          "summary": "An active incident is the worst time to stitch together log data. Sumo Logic unifies logs from AWS, GCP, Azure, and 450+ other",
+          "url": "https://www.sumologic.com/lp/aws-logs-security?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a05",
+          "order": 2,
+          "title": "integrations into a single platform - powered by multi-agent AI",
+          "summary": "that surfaces root causes, prioritizes key events, and guides analysts through resolution. Investigations take seconds, response is instant.",
+          "url": "https://www.sumologic.com/blog/welcome-dojo-ai-agents-soc?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a07",
+          "order": 1,
+          "title": "CRITICAL VULNERABILITY IN IBM API CONNECT COULD ALLOW AUTHENTICATION BYPASS",
+          "summary": "IBM has disclosed CVE-2025-13915, a critical authentication bypass vulnerability with a CVSS score of 9.8 affecting API Connect versions 10.0.8.0 through 10.0.8.5 and 10.0.11.0, that allows remote attackers to gain unauthorized access without user interaction. The flaw, classified as CWE-305, breaks the architectural assumption that API gateways enforce identity and trust, causing downstream services to inherit unvalidated trust and enabling silent exposure propagation across connected systems. Organizations should immediately apply IBM's interim fixes or disable self-service sign-up on the Developer Portal while conducting inventory assessments of API dependencies and monitoring for abnormal behavior to identify which services implicitly trust the gateway.",
+          "url": "https://www.csoonline.com/article/4112265/critical-vulnerability-in-ibm-api-connect-could-allow-authentication-bypass-2.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a08",
+          "order": 2,
+          "title": "TOKYO FM DATA BREACH: HACKER CLAIMS OVER 3 MILLION RECORDS STOLEN",
+          "summary": "A threat actor using the alias \"victim\" claimed to have breached Tokyo FM Broadcasting Co., LTD. on January 1, allegedly exfiltrating over 3 million records containing names, email addresses, dates of birth, IP addresses, user agents, job-related information, and login IDs from multiple internal systems. The breach claims remain pending verification by security experts, though if validated, the exposed credentials and personal information pose significant risks for phishing attacks and credential stuffing. Potentially affected listeners should monitor their email for suspicious messages, implement unique passwords across services, and exercise heightened vigilance given the scope of compromised personally identifiable information.",
+          "url": "https://hackread.com/tokyo-fm-data-breach-hacker-3-million-records-stolen/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a09",
+          "order": 3,
+          "title": "BLUETOOTH HEADPHONE JACKING: FULL DISCLOSURE OF AIROHA RACE VULNERABILITIES",
+          "summary": "Researchers discovered a series of vulnerabilities in the Airoha Bluetooth SoCs used in many true wireless earbuds, including those from Sony, Bose, and Marshall. The vulnerabilities include a lack of authentication when connecting a device over Bluetooth Classic or BLE, as well as the devices implementing a custom protocol, called RACE, which allows for reading and writing RAM. An attacker could chain these vulnerabilities to impersonate a user's headphones and then issue commands via a device's virtual assistant or eavesdrop on calls.",
+          "url": "https://insinuator.net/2025/12/bluetooth-headphone-jacking-full-disclosure-of-airoha-race-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "insinuator.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a10",
+          "order": 1,
+          "title": "THE ROI PROBLEM IN ATTACK SURFACE MANAGEMENT",
+          "summary": "Attack Surface Management programs struggle to demonstrate ROI because they optimize for coverage metrics like asset counts and alerts generated rather than measuring actual risk reduction, creating a gap between effort and security outcomes. Traditional ASM implementations focus on discovery inputs while teams experience alert fatigue, long backlogs of unresolved assets, ownership confusion, and exposures that persist for months without clear evidence of improved security posture. Organizations should shift to outcome-based metrics, including mean time to asset ownership, reduction in unauthenticated state-changing endpoints, and time to decommission abandoned assets—measurements that directly correlate with exposure duration and demonstrate whether the attack surface is actually shrinking over time.",
+          "url": "https://thehackernews.com/2026/01/the-roi-problem-in-attack-surface.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a11",
+          "order": 2,
+          "title": "PALO ALTO NETWORKS SECURITY-INTEL BOSS CALLS AI AGENTS 2026'S BIGGEST INSIDER THREAT",
+          "summary": "AI agents are increasingly embedded deep within corporate systems, automating tasks such as code review, alert triage, approvals, and even financial decisions, effectively acting with human-like privileges at machine speed. This makes misconfigurations and over-permissive “superuser” access especially dangerous, because a single prompt injection or tool-misuse bug can turn an agent into a silent insider capable of approving fraudulent transactions, exfiltrating data, or deleting backups. At the same time, these tools help defenders scale, triage noise, and think more strategically, so security leaders must strike a balance: apply least-privilege access, robust monitoring, and strong controls around internal LLMs and task-specific agents to harness benefits without enabling catastrophic abuse.",
+          "url": "https://www.theregister.com/2026/01/04/ai_agents_insider_threats_panw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a12",
+          "order": 3,
+          "title": "PETLIBRO: YOUR PET FEEDER IS FEEDING DATA TO ANYONE WHO ASKS",
+          "summary": "Smart pet feeders from Petlibro had several serious security flaws that allowed attackers to log in to any account via a broken social-login flow, because the backend trusted client-supplied Google IDs rather than validating OAuth tokens. Attackers could then pull detailed pet profiles, enumerate devices, hijack feeders and cameras, and even harvest owners' recorded mealtime audio messages through poorly authorized APIs. The researcher disclosed six issues, received a small bounty and a post‑hoc NDA request, and criticized Petlibro for leaving the legacy authentication bypass live for weeks in the name of “compatibility” despite the risk to users and their pets.",
+          "url": "https://bobdahacker.com/blog/petlibro?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "bobdahacker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a13",
+          "order": 1,
+          "title": "CERTGREP",
+          "summary": "Certgrep is a Certificate Transparency Log search tool that allows you to search by regular expressions, wildcards, as well as suffix and prefix terms.",
+          "url": "https://certgrep.sh/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "certgrep.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a14",
+          "order": 2,
+          "title": "APISEC.AI (PRODUCT LAUNCH)",
+          "summary": "APISec is a dynamic, AI-powered API red team that continuously scans APIs for vulnerabilities. It includes a browser extension called Bolt that dynamically discovers APIs during user browsing without requiring a MitM proxy.",
+          "url": "https://www.apisec.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "apisec.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a15",
+          "order": 3,
+          "title": "WEB CHECK",
+          "summary": "Web Check is an all-in-one OSINT tool for analyzing websites. This repository includes information for deploying the tool on Netlify or Vercel, building from source, or using Docker. A live demo is also included.",
+          "url": "http://github.com/Lissy93/web-check?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a16",
+          "order": 1,
+          "title": "TWO US CYBERSECURITY PROFESSIONALS PLEAD GUILTY IN BLACKCAT/ALPHV RANSOMWARE CASE",
+          "summary": "Cybersecurity professionals Ryan Goldberg (former Sygnia incident response manager) and Kevin Martin (DigitalMint ransomware negotiator) pleaded guilty to deploying BlackCat/ALPHV ransomware against multiple US victims from April to December 2023, extorting approximately $1.2M in Bitcoin from a medical device company while sharing 20% of ransoms with operators. The defendants leveraged their cybersecurity expertise to conduct attacks against five companies, with Goldberg later fleeing to Paris after learning of FBI raids on co-conspirators and both facing potential 50-year sentences. The case highlights insider threat risks and the FBI's recommendation for organizations to exercise due diligence when engaging third-party incident response providers.",
+          "url": "https://securityaffairs.com/186446/cyber-crime/two-u-s-cybersecurity-professionals-plead-guilty-in-blackcat-alphv-ransomware-case.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a17",
+          "order": 2,
+          "title": "ON APPLES, ORANGES, AND CLASSICAL ML VERSUS LLM SECURITY PERFORMANCE",
+          "summary": "When classical ML-based security tools are compared against LLM-based security tools, the classical ML tools often have several advantages that skew the results. Classical ML tools are frequently trained on a portion of the dataset and then tested on the same data, whereas LLM tools are tested in a one-shot fashion. The ground truth may contain labeling errors that classical ML models replicate, and classical ML models require continuous retraining to maintain accuracy. Moving forward, we should develop security-focused foundational models to help overcome scalability issues and hallucinations.",
+          "url": "https://substack.com/inbox/post/183195226?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a18",
+          "order": 3,
+          "title": "PREDICTION: AI WILL MAKE FORMAL VERIFICATION GO MAINSTREAM",
+          "summary": "Formal verification is a highly specialized and time-consuming process of mathematically validating a system's behavior. The 8,700-line seL4 microkernel required 20 person-years and 200,000 lines of code in the Isabelle proof language, underscoring why formal verification remains largely an academic discipline at present. If we instead train users to write proper specifications for formal verification, it may be possible to use LLMs to generate proofs and reduce the barrier to formal verification.",
+          "url": "https://martin.kleppmann.com/2025/12/08/ai-formal-verification.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "martin.kleppmann.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-05:a19",
+          "order": 1,
+          "title": "RESECURITY SAYS SHINYHUNTERS FELL FOR HONEYPOT AFTER BREACH CLAIM",
+          "summary": "Resecurity has refuted ShinyHunters' breach claims, revealing that the threat actor interacted with a honeypot containing synthetic employee accounts and fake infrastructure rather than production systems.",
+          "url": "https://hackread.com/resecurity-shinyhunters-honeypot-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a20",
+          "order": 2,
+          "title": "CALIFORNIA RESIDENTS CAN USE NEW TOOL TO DEMAND BROKERS DELETE THEIR PERSONAL DATA",
+          "summary": "California's new Delete Requests and Opt-Out Platform (DROP) lets residents file a single verified request to force over 500 registered data brokers to delete their personal data and stop selling it.",
+          "url": "https://techcrunch.com/2026/01/03/california-residents-can-use-new-tool-to-demand-brokers-delete-their-personal-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-05:a21",
+          "order": 3,
+          "title": "COVENANT HEALTH DATA BREACH IMPACTS 478,000 INDIVIDUALS",
+          "summary": "Qilin ransomware actors breached Covenant Health's systems in May 2025, exfiltrating roughly 850 GB of data, including over 1.3 million files containing names, addresses, Social Security numbers, insurance details, and treatment information for 478,188 people across multiple US states.",
+          "url": "https://www.securityweek.com/covenant-health-data-breach-impacts-478000-individuals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

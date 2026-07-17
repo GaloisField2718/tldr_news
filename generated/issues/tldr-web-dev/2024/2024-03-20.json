@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-03-20",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-03-20",
+  "source_path": "TLDR Web Dev/article_20-03-2024.md",
+  "source_content_hash": "sha256:e1250324995fc7dc83416775153f2eee68c8936f99f2f16f81406d4da741b8ad",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-03-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a04",
+          "order": 1,
+          "title": "LEARN & LEVEL UP AT POST/CON 2024",
+          "summary": "POST/CON 24 will be this year’s huge event to network and gain new skills! Connect with the global API community and tech leaders, all as you come together to: 1️⃣ Learn [5]: Get first-hand knowledge from Postman experts James Q Quick, Shweta, Palande, Kedasha Kerr, and other global tech leaders!",
+          "url": "https://www.postman.com/postcon/?utm_source=tldr-webdev&utm_medium=email&utm_campaign=q1-newsletter-sponsorships&utm_term=march202024&utm_content=headline",
+          "reading_time_minutes": null,
+          "source_domain": "postman.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a12",
+          "order": 1,
+          "title": "THE ARCHITECTURE OF DOORDASH'S SEARCH ENGINE",
+          "summary": "Elasticsearch was not scaling well for DoorDash’s search engine and lacked customization for the company’s needs in modeling complex data and search ranking, so DoorDash built its own search engine using Apache Lucene, a core search library, and designed its own indexer and searcher to meet its specific requirements. The indexer processes documents into easily searchable formats, while the searcher replicates index data and uses Lucene's search functionality to match queries and rank results.",
+          "url": "https://blog.quastor.org/p/architecture-doordashs-search-engine?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a13",
+          "order": 2,
+          "title": "UNDERSTANDING GOOGLE’S FILE SYSTEM",
+          "summary": "When Google revealed its File System (GFS), it was a breakthrough in distributed storage. Designed for storing massive files across commodity hardware, GFS stored files in 64MB chunks replicated across machines for redundancy and performance. A central \"master\" managed metadata (file names, chunk locations, and versions) and coordinated reads/writes. To append data to files, the client would get write permission from the master, send data to multiple chunk servers, and have the designated \"primary\" server coordinate final writes.",
+          "url": "https://www.micahlerner.com/2020/03/22/understanding-googles-file-system.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "micahlerner.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a14",
+          "order": 3,
+          "title": "A BEGINNER'S GUIDE TO NODE.JS WORKER THREADS",
+          "summary": "Worker threads provide a way to create independent JavaScript execution threads that run in parallel. This post walks through an example of offloading CPU-intensive tasks to a worker thread in Node.js. Without offloading, tasks can block the event loop and prevent the server from processing other requests. The article shows an example of the server going from processing 7.3k requests to 0 tasks due to a CPU-intensive task.",
+          "url": "https://betterstack.com/community/guides/scaling-nodejs/nodejs-workers-explained/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "betterstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a15",
+          "order": 1,
+          "title": "HOW TO START GOOGLE",
+          "summary": "Paul Graham, the founder of Y Combinator, gives advice to people who want to create the next Google. They should be makers and work on their own passion projects to learn fast. The best ideas come from projects you build for yourself and your friends to use. Something you truly need is a great sign. Great co-founders come from working together on things.",
+          "url": "https://paulgraham.com/google.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "paulgraham.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a16",
+          "order": 2,
+          "title": "IS THE “AI DEVELOPER” A THREAT TO JOBS – OR A MARKETING STUNT?",
+          "summary": "AI tools like Devin claim to replace software engineers. These startups face an uphill battle against established AI coding assistants like GitHub Copilot, so their claims need to be bold to get attention. For decades, there have been attempts to automate away the need for programmers, yet software engineers remain high in demand. The future likely lies in improved versions of existing AI coding assistants, not standalone \"AI developers.\"",
+          "url": "https://newsletter.pragmaticengineer.com/p/is-the-ai-developera-threat-to-jobs?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a17",
+          "order": 3,
+          "title": "BUILD SYSTEM SCHISM: THE CURSE OF META BUILD SYSTEMS",
+          "summary": "Meta’s build systems follow a two-step process. The first step generates instructions for what to build and the second step executes the build. This separation makes them inflexible, as you can't add new files without re-running the first step. \"End-to-end\" (E2E) systems combine both steps, allowing for dynamic target discovery. In these systems, cloud caching, early cutoff, suspending schedulers, and minimal builds are all features easier to implement correctly.",
+          "url": "https://yzena.com/2024/03/build-system-schism-the-curse-of-meta-build-systems/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "yzena.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a18",
+          "order": 1,
+          "title": "FIND VULNERABILITIES FASTER",
+          "summary": "Web applications have critical vulnerabilities that only dynamic analysis can find. Rapidly find and fix runtime vulnerabilities with Veracode [18]: ✅ Scan hundreds of web apps and APIs simultaneously",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=webdev-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a18",
+          "order": 2,
+          "title": "Build fast, build secure. Try Veracode DAST Essentials free",
+          "summary": "",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=webdev-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a19",
+          "order": 3,
+          "title": "ETA",
+          "summary": "Eta is a lightweight and fast embedded JavaScript templating engine that works inside Node, Deno, and the browser. It is written in TypeScript and emphasizes great performance, configurability, and small bundle size.",
+          "url": "https://github.com/eta-dev/eta?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a20",
+          "order": 4,
+          "title": "CAPO.JS",
+          "summary": "How you order elements in the `head` tag can have an effect on the perceived performance of the page. Capo.js helps identify which elements are out of order in your `head` tag on a web page.",
+          "url": "https://github.com/rviscomi/capo.js?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a21",
+          "order": 5,
+          "title": "GARNET",
+          "summary": "Garnet is a remote cache store developed by Microsoft Research. It is compatible with standard Redis clients and features a wide range of APIs, custom server-side operations, a robust storage layer, security, and more.",
+          "url": "https://github.com/microsoft/garnet?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a22",
+          "order": 1,
+          "title": "WHY DOES AN EXTRANEOUS BUILD STEP MAKE MY ZIG APP 10X FASTER?",
+          "summary": "This author built a Zig implementation of an Ethereum virtual machine with the aim of making it faster than the official Go version. A seemingly unrelated change to a benchmarking script made the Zig app slower. This was because commands in bash pipelines run in parallel, so a Zig app, when freshly compiled, has to wait for input from preceding commands. The author limited memory usage at compile time and used buffered reads to make his implementation faster than the official Go version.",
+          "url": "https://mtlynch.io/zig-extraneous-build/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "mtlynch.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a23",
+          "order": 2,
+          "title": "INSIDE THE MASSIVE ALLEGED AT&T DATA BREACH",
+          "summary": "An alleged AT&T data breach leaked data on 70 million customers, including sensitive information like SSNs. AT&T maintains the data did not originate from its systems, leaving the source of the breach unclear. The accuracy of the leaked data, which has now been dumped publicly, has been verified.",
+          "url": "https://www.troyhunt.com/inside-the-massive-alleged-att-data-breach/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "troyhunt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a24",
+          "order": 3,
+          "title": "PARSING THE HN WHO IS HIRING THREAD WITH CHATGPT AND NODE.JS",
+          "summary": "This author built a tech job board based on Hacker News threads using Node.js and the ChatGPT API. They found that ChatGPT was good at converting unstructured job post text into structured JSON data. The input size for the OpenAI API calls was optimized to stay within token limits and concurrent requests were made to speed up the entire process. They then used Node.js, TypeScript, and SQLite to track and store data. Most work in building AI apps is in building the infrastructure around it and handling error cases.",
+          "url": "https://www.jbernier.com/p?id=hn-who-is-hiring-chatgpt&utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "jbernier.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-20:a25",
+          "order": 1,
+          "title": "WHO COMMITS CODE AND AT WHAT FREQUENCY?",
+          "summary": "The median active developer merges 2 PRs per week. 48% of active developers are responsible for 80% of PRs merged since 2023.",
+          "url": "https://graphite.dev/research/commit-frequency?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "graphite.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a26",
+          "order": 2,
+          "title": "JNV",
+          "summary": "jnv is designed for navigating JSON, offering an interactive JSON viewer and jq filter editor.",
+          "url": "https://github.com/ynqa/jnv?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a27",
+          "order": 3,
+          "title": "C++ CREATOR REBUTS WHITE HOUSE WARNING",
+          "summary": "Bjarne Stroustrup, the creator of C++, disagrees with the White House's recommendation to avoid C++ due to memory safety concerns, as the language has improved its safety over time.",
+          "url": "https://bit.ly/4ckp6mD",
+          "reading_time_minutes": 2,
+          "source_domain": "bit.ly",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-20:a28",
+          "order": 4,
+          "title": "JAVA 22 / JDK 22: GENERAL AVAILABILITY",
+          "summary": "Java 22 has been officially released.",
+          "url": "https://mail.openjdk.org/pipermail/jdk-dev/2024-March/008827.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "mail.openjdk.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

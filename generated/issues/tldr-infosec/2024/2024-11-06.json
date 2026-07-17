@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-11-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-11-06",
+  "source_path": "TLDR InfoSec/article_06-11-2024.md",
+  "source_content_hash": "sha256:78e6a9475c09bb892d3cb319595e55f6ec87cc6dcdf3d1a08159da56b79c36f4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-11-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a04",
+          "order": 1,
+          "title": "NETWORK PENETRATION TESTING, READY WHEN YOU ARE!",
+          "summary": "Need a year-end pentest to check those compliance boxes or put your security controls to the test?",
+          "url": "https://www.vonahi.io/vpentest/schedule-a-demo?utm_source=701Rp00000Boht4",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a04",
+          "order": 2,
+          "title": "Get a free demo of vPenTest >",
+          "summary": "",
+          "url": "https://www.vonahi.io/vpentest/schedule-a-demo?utm_source=701Rp00000Boht4",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a05",
+          "order": 1,
+          "title": "OKTA AD/LDAP DELEGATED AUTHENTICATION VULNERABILITY",
+          "summary": "Okta discovered a vulnerability in the DelAuth procedure for Okta AD/LDAP that allows users with usernames with a length equal to or greater than 52 characters to authenticate with only a username and a stored cache key of a previous authentication (no password needed). This issue was resolved in Okta's production systems on October 30. Okta recommends that customers review their logs from July 23 to October 30 for evidence of exploitation.",
+          "url": "https://trust.okta.com/security-advisories/okta-ad-ldap-delegated-authentication-username/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "trust.okta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a06",
+          "order": 2,
+          "title": "LASTPASS WARNS OF FAKE SUPPORT CENTERS TRYING TO STEAL CUSTOMER DATA",
+          "summary": "There is a new phishing campaign that targets users by posting reviews with a fake customer support number. When users call the number, a fake customer support agent instructs them to enter a code on a website that installs the ConnectWise SmartConnect software. The customer support agent then asks questions and attempts to troubleshoot the issue while an accomplice uses the SmartConnect software to steal data or install other malware. The same customer support number has been seen in attacks on Netflix, Amazon, iCloud, and others.",
+          "url": "https://www.bleepingcomputer.com/news/security/lastpass-warns-of-fake-support-centers-trying-to-steal-customer-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a07",
+          "order": 3,
+          "title": "RHYSIDA RANSOMWARE ATTACK ON COLUMBUS CLAIMED 500K VICTIMS",
+          "summary": "500,000 people in Columbus, Ohio were affected by a ransomware attack in July claimed by the Rhysida gang. The stolen personal information included names, addresses, bank details, and Social Security numbers. The city dropped a lawsuit against a security researcher who was accused of exposing sensitive data from the attack.",
+          "url": "https://packetstormsecurity.com/news/view/36561/Rhysida-Ransomware-Attack-On-Columbus-Claimed-500k-Victims.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "packetstormsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a08",
+          "order": 1,
+          "title": "BREACHING THE DATA PERIMETER: CLOUDTRAIL AS A MECHANISM IN DATA EXFILTRATION",
+          "summary": "AWS CloudTrail's behavior with VPC Endpoints allowed data exfiltration through denied cross-account requests. Exploiting the vulnerability requires creating a DynamoDB table with specific resource policies and using custom user-agents to smuggle data through CloudTrail logs. While now patched, the vulnerability demonstrates how CloudTrail's inconsistent logging behavior across services can be exploited for data exfiltration.",
+          "url": "https://tracebit.com/blog/breaching-the-data-perimeter-cloudtrail-as-a-mechanism-for-data-exfiltration?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "tracebit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a09",
+          "order": 2,
+          "title": "HOW WE USE DATADOG FOR DETECTION AS CODE",
+          "summary": "This blog post outlines DataDog's Detection as Code (DaC) workflow, Terraform repository structure, and testing strategy. The DataDog team's process involves defining a query in the UI, exporting the detection to Terraform from the UI, committing it to source code with tests based on Stratus Red Team, and then deploying via a GitLab CI/CD pipeline. The post provides samples of rules, suppressions, tests, and Terraform configurations.",
+          "url": "https://www.datadoghq.com/blog/datadog-detection-as-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a10",
+          "order": 3,
+          "title": "LEVERAGING WAZUH FOR ZERO TRUST SECURITY",
+          "summary": "Organizations can utilize Wazuh to build a zero trust security system that protects against cyber threats and compliance limitations of traditional security models. Zero Trust security changes how organizations handle security by continuously analyzing access requests and monitoring every device and user. Companies adopt Zero Trust security to protect against cyber threats and compliance limitations of traditional security models.",
+          "url": "https://thehackernews.com/2024/11/leveraging-wazuh-for-zero-trust-security.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a11",
+          "order": 1,
+          "title": "THE COMPLETE GUIDE TO CREDIT CARD FRAUD AND PREVENTION",
+          "summary": "",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=&utm_medium=&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a11",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://go.flashpoint.io/guide-to-credit-card-fraud-prevention?utm_campaign=Resource_RP_Guide_to_CC_FraudPrevention&utm_source=&utm_medium=&sfcampaign_id=701Rc00000G0nPOIAZ",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a12",
+          "order": 3,
+          "title": "PINGGY",
+          "summary": "Pinggy is a tool that can create SSH tunnels over the public Internet without the need to download any binaries. There is a free plan that allows for custom domains and free persistent URLs for 7 days.",
+          "url": "https://pinggy.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pinggy.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a13",
+          "order": 4,
+          "title": "VULNERABLE APPS",
+          "summary": "Vulnerable Apps is a sample repository that includes over 100 examples of vulnerable apps that can be used for educational or training purposes.",
+          "url": "https://github.com/vulnerable-apps?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a14",
+          "order": 5,
+          "title": "ISCARIOT SUITE (GITLAB REPO)",
+          "summary": "The Iscariot Suite is a collection of tools that enhances and augments trusted open-source and commercial Blue Team/Sysadmin products, turning them into traitor-ware to achieve offensive security goals.",
+          "url": "https://gitlab.com/badsectorlabs/iscariot-suite?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gitlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a15",
+          "order": 1,
+          "title": "HOW TO BUILD A SECURITY GUARDIANS PROGRAM TO DISTRIBUTE SECURITY OWNERSHIP",
+          "summary": "AWS has developed a Security Guardians program that empowers builders to make security decisions to enable security efforts (threat modeling, security reviews, etc) at scale. AWS has defined five steps to creating a security guardians program: set the program vision, identify innovators with a passion for security, define the behaviors that guardians will be expected to perform, maintain guardians' interest by providing opportunities to learn new skills and potential for career advancement, and measure the success of the program by gathering feedback as well as other metrics.",
+          "url": "https://aws.amazon.com/blogs/security/how-to-build-your-own-security-guardians-program/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a16",
+          "order": 2,
+          "title": "WHEN AI GETS HIJACKED: EXPLOITING HOSTED MODELS FOR DARK ROLEPLAYING",
+          "summary": "Attacks on GenAI infrastructure like AWS Bedrock have increased, with attackers hijacking models for dark roleplaying applications. Permiso discovered attackers hosting a sexual roleplaying chatbot using hijacked LLM infrastructure in AWS. The attacker bypassed content filters to enable sexual and violent content, including potentially illegal material.",
+          "url": "https://permiso.io/blog/exploiting-hosted-models?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a17",
+          "order": 3,
+          "title": "DOCUSIGN'S ENVELOPES API ABUSED TO SEND REALISTIC FAKE INVOICES",
+          "summary": "Threat actors are using DocuSign's Envelopes API to send fake invoices impersonating well-known brands like Norton and PayPal. Attackers are bypassing email security protections to trick recipients into e-signing these documents to authorize payments. This large-scale abuse of the API has been reported to DocuSign.",
+          "url": "https://www.bleepingcomputer.com/news/security/docusigns-envelopes-api-abused-to-send-realistic-fake-invoices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-06:a18",
+          "order": 1,
+          "title": "INTERPOL CYBER OPERATION TAKES DOWN 22,000 MALICIOUS IP ADDRESSES",
+          "summary": "A global INTERPOL operation involving law enforcement agencies from 95 countries took down 22,000 malicious IP addresses linked to cyber threats.",
+          "url": "https://www.interpol.int/News-and-Events/News/2024/INTERPOL-cyber-operation-takes-down-22-000-malicious-IP-addresses?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "interpol.int",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a19",
+          "order": 2,
+          "title": "GOOGLE CLOUD TO ENFORCE MULTI-FACTOR AUTHENTICATION BY 2025 FOR ALL USERS",
+          "summary": "Google Cloud will require all users to use multi-factor authentication by the end of 2025 to enhance security.",
+          "url": "https://thehackernews.com/2024/11/google-cloud-to-enforce-multi-factor.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-06:a20",
+          "order": 3,
+          "title": "FBI SEEKS PUBLIC HELP TO IDENTIFY CHINESE HACKERS BEHIND GLOBAL CYBER INTRUSIONS",
+          "summary": "The FBI is seeking the public's help to identify Chinese hackers responsible for cyber intrusions that targeted companies and government entities.",
+          "url": "https://thehackernews.com/2024/11/fbi-seeks-public-help-to-identify.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

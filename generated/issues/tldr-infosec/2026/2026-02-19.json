@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-02-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-19",
+  "source_path": "TLDR InfoSec/article_19-02-2026.md",
+  "source_content_hash": "sha256:2744fd882f51f7638cad59443fdd1c24a839473f1fbe4a130fbb3e4a5a837feb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a04",
+          "order": 1,
+          "title": "OPERATIONALIZED",
+          "summary": "Attackers don't go through your tools — they go around them, chaining identity relationships to reach critical assets.",
+          "url": "https://specterops.io/BloodHoundScentry/?utm_medium=Advertisement&utm_source=TLDR&Latest_Campaign=701Uw00000fX3h6&source=Ad+-+Media+Sponsorship",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a06",
+          "order": 2,
+          "title": "Register for the Feb 19 Scentry Webinar.",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/43zK4m",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a07",
+          "order": 1,
+          "title": "SUPPLY CHAIN ATTACK EMBEDS MALWARE IN ANDROID DEVICES",
+          "summary": "Keenadu is a firmware-level Android malware embedded via supply chain compromise that hijacks Android's Zygote process to inject itself into every app on infected devices. It affects 13,000 devices across Russia, Japan, Germany, Brazil, and the Netherlands. Operating as a multistage loader, Keenadu deploys modules targeting shopping platforms such as Amazon and Temu, monitors Chrome queries, and commits ad fraud. Organizations should cross-reference Kaspersky's published IoCs against managed Android fleets. Firmware-level infections require full firmware replacement, and system app infections are mitigated by disabling or replacing the compromised app.",
+          "url": "https://links.tldrnewsletter.com/AzF0rJ",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a08",
+          "order": 2,
+          "title": "SHINYHUNTERS ALLEGEDLY DROVE OFF WITH 1.7M CARGURUS RECORDS",
+          "summary": "Cybercrime gang ShinyHunters has claimed the theft of 1.7 million CarGurus corporate records, including personal and internal data, and is extorting the company with a February 20 deadline. The crew has chalked up 15 alleged breaches in 2026, hitting financial firms, retail brands, car marketplaces, and dating platforms, often via social engineering and SSO abuse.",
+          "url": "https://www.theregister.com/2026/02/18/shinyhunters_cargurus_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a09",
+          "order": 1,
+          "title": "STOP THE CAP: MAKING ENTRA ID CONDITIONAL ACCESS MAKE SENSE OFFLINE",
+          "summary": "CAPSlock is an offline Conditional Access Policy (CAP) analysis engine built on ROADrecon that simulates sign-in scenarios without generating tenant artifacts and distinguishes between definitively applied policies and signal-dependent ones. The tool addresses a critical gap in Entra ID assessments, overlapping CAPs create hard-to-reason enforcement behavior, particularly around MFA bypasses and platform-specific policy gaps, by modeling normalization, exclusion logic, and cumulative policy enforcement offline. Both red teamers and defenders should evaluate CAPSlock for CAP auditing workflows, with the caveat that pending AAD Graph deprecation will require elevated Microsoft Graph permissions for future policy collection.",
+          "url": "https://specterops.io/blog/2026/02/17/stop-the-cap-making-entra-id-conditional-access-make-sense-offline/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a10",
+          "order": 2,
+          "title": "CLICKFIX: STOPPED AT ⌘+V",
+          "summary": "This post details a lightweight macOS defense against ClickFix attacks — now integrated into BlockBlock v2.3.0 — that intercepts ⌘+V keystrokes via NSEvent global monitoring, pauses the terminal process with SIGSTOP, and prompts the user to review clipboard contents before execution. The approach works across major terminal emulators and is particularly effective given that most documented ClickFix campaigns — including recent campaigns by North Korean APT UNC1069 and LLM-propagated attacks — explicitly instruct victims to use the keyboard shortcut. Notable limitations include no coverage for right-click paste operations, a dependency on Accessibility permissions, and Apple's Endpoint Security framework lacking an equivalent ES_EVENT_TYPE_AUTH_PASTE event, making user-space interception the only practical approach.",
+          "url": "https://objective-see.org/blog/blog_0x85.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "objective-see.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a11",
+          "order": 3,
+          "title": "THE CURIOUS CASE OF THE TRITON MALWARE FORK",
+          "summary": "A suspicious fork of the Triton macOS omg.lol client turns out not to be simple plagiarism, but a clumsy malware delivery attempt hosted on GitHub. The attacker floods the README with links to a Windows-only malware ZIP hidden in an Xcode asset path, then pads the GitHub contribution graph with fake backdated commits to appear legitimate. Sandbox analysis shows a multistage Windows infection chain using 7zip, LuaJIT, anti-analysis tricks, and C2 traffic masquerading as Microsoft and blockchain traffic.",
+          "url": "https://brennan.day/the-curious-case-of-the-triton-malware-fork/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "brennan.day",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a12",
+          "order": 1,
+          "title": "ADWSDOMAINDUMP",
+          "summary": "ADWSDomainDump is an Active Directory domain dumper that uses ADWS (port 9389) instead of LDAP to enumerate AD objects, bypassing both Microsoft Defender for Endpoint and CrowdStrike Falcon detection.",
+          "url": "https://github.com/mverschu/adwsdomaindump?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a13",
+          "order": 2,
+          "title": "NONO",
+          "summary": "Nono is a secure, kernel-enforced sandbox for AI agents, MCP, and LLM workloads. It features capability-based isolation with secure key management and blocking of destructive actions in a zero-trust environment.",
+          "url": "https://github.com/always-further/nono?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a14",
+          "order": 3,
+          "title": "COGENT SECURITY (PRODUCT LAUNCH)",
+          "summary": "Cogent Security is an agentic AI platform for vulnerability management that autonomously investigates, prioritizes, and orchestrates remediation of security issues.",
+          "url": "https://www.cogent.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "cogent.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a15",
+          "order": 1,
+          "title": "PASSWORD MANAGERS LESS SECURE THAN PROMISED",
+          "summary": "ETH Zurich's Applied Cryptography Group demonstrated 25 total attacks across Bitwarden (12), LastPass (7), and Dashlane (6), collectively serving ~60 million users breaking their \"zero-knowledge encryption\" guarantees by operating a malicious server that deviates from expected client behavior during routine actions such as login, vault access, and sync. Attacks ranged from targeted vault integrity violations to full organizational vault compromise, requiring only lightweight server-impersonation tooling rather than significant computational resources, with the root cause attributed to feature-bloat complexity and reliance on obsolete 1990s-era cryptographic primitives. Security teams should evaluate password manager vendors against criteria of transparent vulnerability disclosure, third-party audits, and modern end-to-end encryption enabled by default, pending publication of full findings at USENIX Security 2026.",
+          "url": "https://ethz.ch/en/news-and-events/eth-news/news/2026/02/password-managers-less-secure-than-promised.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "ethz.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a16",
+          "order": 2,
+          "title": "DUTCH SECRETARY OF DEFENSE THREATENS TO 'JAILBREAK' NATION'S F-35 JET FIGHTERS",
+          "summary": "Dutch defense chief Gijs Tuinman suggests F-35 fighter software could be “jailbroken,” raising sharp questions about European dependence on US control systems and cloud services. The question is whether there are hidden kill switches or how Lockheed's update and logistics infrastructure can effectively ground fleets.",
+          "url": "https://www.tomshardware.com/tech-industry/dutch-secretary-of-defense-threatens-to-jailbreak-nations-f-35-jet-fighters-says-its-just-like-cracking-open-an-iphone-in-response-to-questions-over-software-independence?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a17",
+          "order": 3,
+          "title": "FROM BRICKSTORM TO GRIMBOLT: UNC6201 EXPLOITING A DELL RECOVERPOINT FOR VIRTUAL MACHINES ZERO-DAY",
+          "summary": "Mandiant and GTIG described how UNC6201 exploited CVE-2026-22769 (CVSS 10.0), a hardcoded admin credential in Dell RecoverPoint's Apache Tomcat configuration located at /home/kos/tomcat9/tomcat-users.xml. This enabled unauthenticated deployment of WAR files via/manager/text/deploy and allowed root-level code execution. Persistence was maintained by hijacking convert_hosts.sh, which is run at boot via rc.local. GRIMBOLT, a C# backdoor replacing BRICKSTORM in September 2025, is compiled with native AOT to remove CIL metadata, making static analysis more difficult. It shares C2 infrastructure with its predecessor and introduces new lateral movement techniques in VMware, such as using \"Ghost NICs\" and iptables-based Single Packet Authorization on compromised vCenter appliances. Defenders should review /home/kos/auditlog/fapi_cl_audit_log.log for requests to /manager, search for GRIMBOLT using published YARA rules and IOCs, immediately apply Dell's patch, and monitor for changes to convert_hosts.sh.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-19:a18",
+          "order": 1,
+          "title": "FROM TRAFFICKING VICTIM TO CYBERCRIME WHISTLEBLOWER",
+          "summary": "Join Huntress on 2/24 at 9am ET for a panel discussion with WIRED and Jen Easterly, featuring a survivor sharing scam tactics and how you can stay safe.",
+          "url": "https://www.huntress.com/trafficking-victim-to-cybercrime-whistleblower?utm_source=tldr&utm_medium=email&utm_campaign=cy26-q1-0224-web-brand-na-broad-all-x-x-comm_edu-whistleblower&hnt=69chp4kodqn4",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a18",
+          "order": 2,
+          "title": "Join the Event",
+          "summary": "",
+          "url": "https://www.huntress.com/trafficking-victim-to-cybercrime-whistleblower?utm_source=tldr&utm_medium=email&utm_campaign=cy26-q1-0224-web-brand-na-broad-all-x-x-comm_edu-whistleblower&hnt=69chp4kodqn4",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a19",
+          "order": 3,
+          "title": "ANTHROPIC'S LATEST SONNET GETS BETTER AT USING COMPUTERS, AMID BOUTS OF EXISTENTIAL ANGST",
+          "summary": "Claude Sonnet 4.6 features improved computer use, enhanced prompt injection resistance, and a 200K default context window.",
+          "url": "https://www.theregister.com/2026/02/18/anthropic_debuts_sonnet_4_6/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a20",
+          "order": 4,
+          "title": "NOTEPAD++ FIXES HIJACKED UPDATE MECHANISM USED TO DELIVER TARGETED MALWARE",
+          "summary": "Notepad++ 8.9.2 introduces a double-lock update design that verifies both signed installers and signed XML from its update server to prevent hijacked updates.",
+          "url": "https://thehackernews.com/2026/02/notepad-fixes-hijacked-update-mechanism.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-19:a21",
+          "order": 5,
+          "title": "POLISH AUTHORITIES ARREST ALLEGED PHOBOS RANSOMWARE AFFILIATE",
+          "summary": "A 47-year-old man was arrested in Poland's Małopolskie province as part of the Europol-led \"Phobos Aetor\" operation.",
+          "url": "https://cyberscoop.com/phobos-ransomware-affiliate-arrested-poland/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

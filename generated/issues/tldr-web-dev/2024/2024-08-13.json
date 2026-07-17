@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-08-13",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-13",
+  "source_path": "TLDR Web Dev/article_13-08-2024.md",
+  "source_content_hash": "sha256:b53cfe8798442b5d4f10eaef80f4535735bf955852b230de815b2397d9cadb44",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-13",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-13:a04",
+          "order": 1,
+          "title": "DON'T GET CAUGHT BY SURPRISE: UNDERSTANDING THE READ AFTER WRITE PROBLEM",
+          "summary": "The \"Read After Write\" problem arises when a service attempts to read data immediately after writing it, but the changes may not be reflected in all nodes of the database yet. This is a common problem in distributed systems. This article goes over different database replication strategies, in terms of latency and data consistency. It suggests potential solutions, such as retrying reads, reading from the primary node, and accepting occasional inconsistencies depending on the application's requirements.",
+          "url": "https://links.tldrnewsletter.com/vTBW8g",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a05",
+          "order": 2,
+          "title": "HOW TO BUILD SCALABLE AI APPLICATIONS",
+          "summary": "Building useful scalable AI applications requires developers to have good data preparation (data cleansing and management) and use retrieval-augmented generation. Models used should be pre-trained or fine-tuned. Custom models can be developed in-house, but usually will require a large amount of capital. Developers should be mindful of latency, memory, compute, caching, and other factors to make sure the user experience is good.",
+          "url": "https://vercel.com/blog/how-to-build-scalable-ai-applications?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-13:a06",
+          "order": 1,
+          "title": "GO IS MY HAMMER, AND EVERYTHING IS A NAIL",
+          "summary": "Markus, a solo developer, uses a single programming language, Go, for all his projects. This allows him to move faster as he has the deepest understanding of the language, and so doesn't have to context switch across languages as much. Furthermore, as he develops, he continues to specialize in Go, which gives him more opportunities in the future.",
+          "url": "https://www.maragu.dev/blog/go-is-my-hammer-and-everything-is-a-nail?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "maragu.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a07",
+          "order": 2,
+          "title": "DISTRIBUTED == RELATIONAL",
+          "summary": "Distributed systems are naturally relational. Function invocations in distributed systems can be implemented as triggers on relational tables, where data updates trigger function executions. This model allows for efficient parallel processing, eliminates the need for manual coordination between systems, and makes writing code easier.",
+          "url": "https://frest.substack.com/p/distributed-relational?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "frest.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a08",
+          "order": 3,
+          "title": "REPAIR AND REMAIN",
+          "summary": "Instead of always seeking new beginnings, it's useful to “repair and remain” by fixing what's broken first. It's not easy to just stay put, but embracing the slow, hard work of staying put can be useful.",
+          "url": "https://comment.org/repair-and-remain/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "comment.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-13:a09",
+          "order": 1,
+          "title": "AI CODE REVIEWS HAVE TAKEN WEB DEVELOPERS BY STORM",
+          "summary": "CodeRabbit [9] is now the most installed AI app on GitHub and GitLab [9], and developers are raving about its ability to catch bugs and cut code review time. Checkout examples on how to use an AI code reviewer [10]. CodeRabbit generates context-aware, line-by-line code reviews and 1-click fixes, while learning from user feedback in every",
+          "url": "https://coderabbit.ai/?utm_source=newsletter&utm_medium=TLDR-WebDev-July24",
+          "reading_time_minutes": null,
+          "source_domain": "coderabbit.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a09",
+          "order": 2,
+          "title": "interaction. Sign-up for Free!",
+          "summary": "",
+          "url": "https://coderabbit.ai/?utm_source=newsletter&utm_medium=TLDR-WebDev-July24",
+          "reading_time_minutes": null,
+          "source_domain": "coderabbit.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a11",
+          "order": 3,
+          "title": "POSTGRES.NEW: IN-BROWSER POSTGRES WITH AN AI INTERFACE",
+          "summary": "Supabase has launched postgres.new, an in-browser Postgres sandbox with AI assistance. This tool utilizes PGlite, a WASM version of Postgres, allowing users to spin up databases directly in their browser. postgres.new also has AI-powered features, such as drag-and-drop CSV import, report generation, charting, and ER diagram creation.",
+          "url": "https://supabase.com/blog/postgres-new?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "supabase.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a12",
+          "order": 4,
+          "title": "WHIRL",
+          "summary": "Whirl is a collection of CSS loading animations. It offers a variety of pre-made animations that you can easily incorporate into your web projects through copy-paste.",
+          "url": "https://links.tldrnewsletter.com/rcJV24",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a13",
+          "order": 5,
+          "title": "NOW IN BASELINE: ANIMATING ENTRY EFFECTS",
+          "summary": "Browser engines now support two new CSS features, `@starting-style` and `transition-behavior: allow-discrete`, that create entry animations for elements that animate from `display: none`, including those animating into the top layer.",
+          "url": "https://links.tldrnewsletter.com/klMFKu",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-13:a14",
+          "order": 1,
+          "title": "HISTORY OF HACKERNEWS SEARCH: FROM 2007 TO 2024",
+          "summary": "This blog post chronicles the evolution of HackerNews' search functionality from its inception in 2007 to the present. It highlights three distinct generations of search engines: early independent efforts, Octopart/ThriftDB-powered HNSearch, and the current Algolia-powered system.",
+          "url": "https://trieve.ai/history-of-hnsearch/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "trieve.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a15",
+          "order": 2,
+          "title": "PIECING TOGETHER AN ANCIENT EPIC WAS SLOW WORK. UNTIL A.I. GOT INVOLVED",
+          "summary": "Scholars have been working for over a century to piece together the Epic of Gilgamesh, one of the world's oldest literary texts, from fragments of clay tablets. The task is daunting, as there are hundreds of thousands of tablets and only a handful of experts in cuneiform. However, a new AI project called Fragmentarium is accelerating the process, allowing researchers to match fragments and discover new segments of Gilgamesh at a much faster rate. This has already led to the discovery of hundreds of missing words and lines.",
+          "url": "https://archive.ph/1uyq7?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a16",
+          "order": 3,
+          "title": "HERE'S HOW PEOPLE ARE ACTUALLY USING AI",
+          "summary": "AI companions may exploit emotional bonds in humans and become “addictive intelligence.” A lot of people are using AI as a companion, friend, or to act as characters. This creative usage for AI is booming, but also can be addictive, as seen in the Character.AI subreddit when the platform goes down.",
+          "url": "https://www.technologyreview.com/2024/08/12/1096202/how-people-actually-using-ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "technologyreview.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-13:a17",
+          "order": 1,
+          "title": "NODE.JS TOOLBOX",
+          "summary": "Node.js toolbox is a catalog of Node.js libraries.",
+          "url": "https://nodejstoolbox.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "nodejstoolbox.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a18",
+          "order": 2,
+          "title": "HISTORY OF HTTPS USAGE",
+          "summary": "A historical evolution of HTTPS usage on the web, from its origins and adoption challenges to its eventual widespread acceptance.",
+          "url": "https://www.jefftk.com/p/history-of-https-usage?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "jefftk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a19",
+          "order": 3,
+          "title": "HTML ATTRIBUTE TO ALLOW/DISALLOW HANDWRITING INPUT",
+          "summary": "This document proposes a new HTML attribute called `handwriting` that allows web developers to control whether an element or its subtree allows handwriting input.",
+          "url": "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Handwriting/explainer.md?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-13:a20",
+          "order": 4,
+          "title": "BOOKSHELF",
+          "summary": "A 3D animated bookshelf for ebooks.",
+          "url": "https://github.com/mawise/bookshelf?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

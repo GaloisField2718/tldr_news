@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-11-29",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-11-29",
+  "source_path": "TLDR Web Dev/article_29-11-2024.md",
+  "source_content_hash": "sha256:5952a88f928172000b0855f93066de26b2816b6c642399e25e2305f6a33266fd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-11-29",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-29:a04",
+          "order": 1,
+          "title": "MICROBENCHMARKS ARE EXPERIMENTS",
+          "summary": "A benchmark comparing Dart and JavaScript code initially showed JavaScript as faster, but this discrepancy was resolved by making sure equivalent data structures (Int64List in Dart) were used. Further investigation revealed that Dart's interrupt checks impacted performance negatively, while JavaScriptCore's optimizations, including modulo strength reduction, contributed to its speed advantage, which was negated by one-line code change in Dart that took advantage of Dart's compiler.",
+          "url": "https://mrale.ph/blog/2024/11/27/microbenchmarks-are-experiments.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "mrale.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a05",
+          "order": 2,
+          "title": "HOW LINKEDIN SCALED THEIR SYSTEM TO 5 MILLION QUERIES PER SECOND",
+          "summary": "LinkedIn scaled its restriction enforcement system to handle 5 million queries per second using a multi-faceted approach. It used BitSets for efficient boolean storage and Bloom Filters for probabilistic set membership checks. Its final architecture incorporated a Venice database as the central source of truth, Kafka for near real-time updates, and a client layer utilizing a REST API.",
+          "url": "https://blog.quastor.org/p/how-linkedin-scaled-their-system-to-5-million-queries-per-second?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a06",
+          "order": 3,
+          "title": "BUILDING REDDIT'S FRONTEND WITH VITE",
+          "summary": "Reddit was experiencing slow Rollup-based frontend build times, averaging nearly two minutes for initial builds and 40 seconds for incremental ones. To address this, it adopted Vite, a build tool using ESBuild's JIT compilation. The migration resulted in build times under one second for both initial and incremental builds.",
+          "url": "https://www.reddit.com/r/RedditEng/comments/1dhztk8/building_reddits_frontend_with_vite?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "reddit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-29:a07",
+          "order": 1,
+          "title": "HOW TO BURNOUT A SOFTWARE ENGINEER, IN 3 EASY STEPS",
+          "summary": "Burnout isn't always caused by working long hours. Often, it's caused by deeper issues during engineering. This author tells two stories about burning out in the same way at both a startup and a big tech company. The burnout was caused by micromanagement, a lack of trust in engineers, the introduction of unnecessary processes, not shipping code to customers, and overpromising.",
+          "url": "https://read.engineerscodex.com/p/how-to-burnout-a-software-engineer?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a08",
+          "order": 2,
+          "title": "7 QUESTIONS I GET ASKED FREQUENTLY AS AN EM",
+          "summary": "This engineering manager usually gets questions about project timelines, team performance (including metrics like MTTR and KTLO costs), and the impact of projects on key performance indicators. In this post, he provides practical advice on using project management tools, operational metrics dashboards, and BI tools to gather information quickly and efficiently.",
+          "url": "https://links.tldrnewsletter.com/sFjeCG",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-29:a09",
+          "order": 1,
+          "title": "SCREEN SHARING",
+          "summary": "Screen Sharing is a real-time screen-sharing application built with Next.js, WebRTC, and PeerJS. It has room-based sharing, cross-browser support, and a simple interface.",
+          "url": "https://github.com/tonghohin/screen-sharing?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a10",
+          "order": 2,
+          "title": "VINCE",
+          "summary": "Vince is a self-hosted, privacy-friendly alternative to Google Analytics that offers features like automatic TLS, outbound link tracking, and unlimited sites and events.",
+          "url": "https://github.com/vinceanalytics/vince?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a11",
+          "order": 3,
+          "title": "LITDB",
+          "summary": "LitDB is a TypeScript/JavaScript library that provides type-safe, parameterized SQL builders for SQLite, MySQL, and PostgreSQL. It lets developers write familiar SQL with better safety and portability.",
+          "url": "https://litdb.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "litdb.dev",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-29:a12",
+          "order": 1,
+          "title": "WEAPONIZING SSO FOR PROFIT",
+          "summary": "Many SaaS vendors are charging extra for Single Sign-On (SSO), which is increasingly mandated by regulations like NIS2 and DORA. This practice forces companies, particularly regulated ones, into higher, more expensive pricing tiers to meet security and compliance requirements, despite SSO's relatively low implementation cost.",
+          "url": "https://raz.sh/blog/2024-11-27_weaponizing_sso_for_profit?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "raz.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a13",
+          "order": 2,
+          "title": "DESIGNING (AND EVOLVING) A NEW WEB PERFORMANCE SCORE",
+          "summary": "CrRRUX is a relative-ranking score designed to simplify competitor analysis by aggregating Core Web Vitals data (LCP, INP, and CLS) into a single comparative score. The score accounts for “passingness”, continuity, and real user experiences. It can be automated through Google Sheets and the CrUX API.",
+          "url": "https://csswizardry.com/2024/11/designing-and-evolving-a-new-performance-score/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "csswizardry.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a14",
+          "order": 3,
+          "title": "STRUCTURED EDITING AND INCREMENTAL PARSING",
+          "summary": "Structured editing is a method where code editors understand a program's syntax, offering benefits like instant feedback and accurate selections. Structured editors often restrict non-structural editing, which frustrates many programmers who frequently edit code in ways that violate its syntax. A solution to this is incremental parsing, which allows for both structured understanding and free-form editing by maintaining a parse tree in the background, even if the code becomes temporarily invalid.",
+          "url": "https://links.tldrnewsletter.com/15ryRk",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-29:a15",
+          "order": 1,
+          "title": "HOW MUCH MEMORY DO YOU NEED IN 2024 TO RUN 1 MILLION CONCURRENT TASKS?",
+          "summary": "A 2024 benchmark comparing memory usage across various programming languages while running one million concurrent tasks showed C# (with NativeAOT) to be the most memory-efficient, followed closely by Rust, while Go performed significantly worse than expected.",
+          "url": "https://hez2010.github.io/async-runtimes-benchmarks-2024/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "hez2010.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a16",
+          "order": 2,
+          "title": "HETZNER CUTS TRAFFIC ON US VPSS, RAISES PRICES (HACKER NEWS THREAD)",
+          "summary": "Hetzner is reducing included data traffic and raising prices for its US-based virtual private servers (VPS), effective December 1, due to a need to balance costs based on regional conditions.",
+          "url": "https://news.ycombinator.com/item?id=42264427&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-29:a17",
+          "order": 3,
+          "title": "INTRODUCING SOME CHANGES TO OUR WEB API",
+          "summary": "Spotify is making changes to its Web API that will affect functionalities like related artists, recommendations, and audio analysis.",
+          "url": "https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "developer.spotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

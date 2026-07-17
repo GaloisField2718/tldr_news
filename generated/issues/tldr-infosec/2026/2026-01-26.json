@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-26",
+  "source_path": "TLDR InfoSec/article_26-01-2026.md",
+  "source_content_hash": "sha256:0dbafa98e54436c238e1f96e587fd2aae6c01d6bdc402a782ef765b4ca457cf7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-26",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-26:a04",
+          "order": 1,
+          "title": "POLAND'S ENERGY GRID WAS TARGETED BY NEVER-BEFORE-SEEN WIPER MALWARE",
+          "summary": "Poland's power grid faced a cyberattack in December that involved a new “DynoWiper” malware. Likely linked to Russia's Sandworm group, the attempt to disrupt electricity failed. The operation coincided with the 10th anniversary of Sandworm's landmark 2015 Ukraine blackout, and it fits a long pattern of Russian wiper use.",
+          "url": "https://arstechnica.com/security/2026/01/wiper-malware-targeted-poland-energy-grid-but-failed-to-knock-out-electricity/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a05",
+          "order": 2,
+          "title": "FORTINET ADMITS FORTIGATE SSO BUG STILL EXPLOITABLE DESPITE DECEMBER PATCH",
+          "summary": "Attackers can still exploit a critical FortiCloud SSO authentication vulnerability in FortiOS, even on systems fully patched in December, by abusing a new SAML-based SSO attack path. Recent campaigns involve automated reconfiguration of FortiGate firewalls, the creation of backdoor admin accounts, and the theft of configuration files. Fortinet has urged customers to monitor authentication logs, restrict management exposure, and track admin changes while it develops a new fix.",
+          "url": "https://www.theregister.com/2026/01/23/fortinet_fortigate_patch/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a06",
+          "order": 3,
+          "title": "ANCIENT TELNET BUG HAPPILY HANDS OUT ROOT TO ATTACKERS",
+          "summary": "A critical (CVSS 9.8) vulnerability in telnet could allow unauthenticated users to obtain root privileges on systems running InetUtils telnetd. To exploit the vulnerability, an attacker only needs to set their USER environment variable to “-f root” and pass the “-a” or “--login” flag to telnet. Experts recommend updating to the latest version of telnet or, ideally, switching to a more secure protocol such as SSH.",
+          "url": "https://www.theregister.com/2026/01/22/root_telnet_bug/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-26:a07",
+          "order": 1,
+          "title": "KUBERNETES V1.35: A BETTER WAY TO PASS SERVICE ACCOUNT TOKENS TO CSI DRIVERS",
+          "summary": "Kubernetes v1.35 added the ability for CSI drivers to opt-in to receiving service account tokens via the `secret` field in `NodePublishVolumeRequest`. Prior to this update, service account tokens were received via the `volume_context` field, which could lead to secrets being included in gRPC request logs if drivers did not implement custom sanitizer logic. To opt in to this feature, CSI drivers should implement the `serviceAccountTokenInSecrets' field as well as implement logic for backwards compatibility.",
+          "url": "https://kubernetes.io/blog/2026/01/07/kubernetes-v1-35-csi-sa-tokens-secrets-field-beta/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a08",
+          "order": 2,
+          "title": "BUILDING TAMPER-PROOF MEDIA APPS: C2PA VS CPP DEEP DIVE FOR DEVELOPERS",
+          "summary": "This technical deep dive compares C2PA (the industry standard backed by Adobe and Sony) with the emerging Content Provenance Protocol (CPP) for building tamper-proof media applications that prove content authenticity. CPP's key differentiator is its \"Completeness Invariant,\" which uses XOR hash sums to mathematically detect deleted evidence—a critical capability for legal proceedings, insurance claims, and regulatory compliance that C2PA cannot provide architecturally. The article provides Swift and Python implementations of cryptographic patterns, including Secure Enclave signing, Merkle tree construction, RFC 3161 timestamp anchoring, and privacy-preserving human attestation without storing biometric data.",
+          "url": "https://dev.to/veritaschain/building-tamper-proof-media-apps-c2pa-vs-cpp-deep-dive-for-developers-52g4?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a09",
+          "order": 3,
+          "title": "THE DUAL-USE DILEMMA OF AI: MALICIOUS LLMS",
+          "summary": "While LLMs can be a useful tool for defenders, they can also be used by attackers. WormGPT was the first malicious LLM that was released. It is still being developed. KawaiiGPT is an open-source malicious LLM. This article analyzes the efficacy of these models at producing ransomware notes, data exfiltration scripts, and lateral movement detection.",
+          "url": "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-26:a10",
+          "order": 1,
+          "title": "THE SO-CON 2026 AGENDA IS LIVE",
+          "summary": "SO-CON 2026 (April 13–14, Arlington, VA) brings together the community shaping the future of Attack Path Management [11]. Hear from Kevin Mandia, HD Moore, JPMorgan Chase, and leading APM practitioners—plus hands-on training led by real adversary experts. Training students get a free event pass. View the full agenda here [10].",
+          "url": "https://specterops.io/so-con/?utm_campaign=PAID_Advertisement_260101_TLDRJanuaryNew%5B%E2%80%A6%5D%3DAdvertisement&utm_source=TLDR&Latest_Campaign=701Uw00000ePhXU",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a12",
+          "order": 2,
+          "title": "AWESOME-BLACKHAT-ARSENAL",
+          "summary": "Whether you're in red teaming, blue teaming, appsec, or OSINT, this list helps you explore and leverage the best tools demonstrated live by security professionals across the world.",
+          "url": "https://github.com/elbraino/awesome-blackhat-arsenal?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a13",
+          "order": 3,
+          "title": "SECURITY DETECTIONS MCP",
+          "summary": "Security Detections MCP is an MCP server that enables LLMs to query a unified database of over 7,200 Sigma, Splunk ESCU, Elastic, and KQL security detection rules through natural language. The tool features SQLite FTS5-powered full-text search across detection fields, MITRE ATT&CK mapping, CVE coverage lookup, and process name filtering, with token-optimized analysis tools that reduce data transfer by 25x compared to traditional queries. Security teams can integrate this with Claude Desktop, Cursor IDE, or VS Code to perform coverage analysis, identify detection gaps against threat profiles, and generate ATT&CK Navigator layers directly from their AI assistant.",
+          "url": "https://github.com/MHaggis/Security-Detections-MCP?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a14",
+          "order": 4,
+          "title": "BANDJACKS",
+          "summary": "Bandjacks is a comprehensive Cyber Threat Intel system that quickly extracts MITRE ATT&CK techniques from threat reports, builds a knowledge graph of threat actors, and utilizes LLM response caching for faster extraction, among other features.",
+          "url": "https://github.com/Blevene/bandjacks?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-26:a15",
+          "order": 1,
+          "title": "MICROSOFT GAVE FBI A SET OF BITLOCKER ENCRYPTION KEYS TO UNLOCK SUSPECTS' LAPTOPS",
+          "summary": "The FBI has obtained a warrant compelling Microsoft to hand over BitLocker recovery keys for three seized laptops, allowing agents to decrypt the drives despite full‑disk encryption. BitLocker recovery keys are often stored in Microsoft's cloud, enabling lawful access but also raising privacy and security fears if the company or its keys are compromised.",
+          "url": "https://techcrunch.com/2026/01/23/microsoft-gave-fbi-a-set-of-bitlocker-encryption-keys-to-unlock-suspects-laptops-reports/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a16",
+          "order": 2,
+          "title": "MICROSOFT FLAGS MULTI-STAGE AITM PHISHING AND BEC ATTACKS TARGETING ENERGY FIRMS",
+          "summary": "Microsoft describes a layered phishing and BEC campaign against energy companies that abuses trusted services like SharePoint and OneDrive to deliver links leading to adversary-in-the-middle credential theft pages. Attackers then use stolen credentials and session cookies to set stealthy inbox rules, launch large internal and external phishing waves, and bypass MFA using tailored phishing kits and social engineering, prompting defenders to adopt phishing-resistant MFA, conditional access, continuous access evaluation, and robust anti-phishing controls.",
+          "url": "https://thehackernews.com/2026/01/microsoft-flags-multi-stage-aitm.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a17",
+          "order": 3,
+          "title": "IRELAND WANTS TO GIVE ITS COPS SPYWARE, ABILITY TO CRACK ENCRYPTION",
+          "summary": "Ireland has announced the release of a new communications bill that seeks to provide sweeping updates to its decades-old telecommunications legislation. Among the provisions in the bill, Ireland is looking to provide law enforcement with the ability to utilize spyware as well as the ability to intercept encrypted messages. Ireland is looking to follow the framework laid out by the EU Commission in 2024.",
+          "url": "https://www.theregister.com/2026/01/21/ireland_wants_to_give_police/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-26:a18",
+          "order": 1,
+          "title": "ANTHROPIC PREPARES TO RELEASE SECURITY CENTER FOR CLAUDE CODE",
+          "summary": "Anthropic is preparing to launch Security Center for Claude Code, a feature that will provide users with an overview of recent security scans, detected issues, and the ability to manually initiate repository scans.",
+          "url": "https://www.testingcatalog.com/anthropic-prepares-to-release-security-center-for-claude-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "testingcatalog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a19",
+          "order": 2,
+          "title": "GMAIL GLITCH APPEARS TO BREAK EMAIL FILTERING, TABBED INBOXES",
+          "summary": "Google resolved a Gmail glitch that caused marketing and promotional emails to flood users' Primary inboxes instead of being routed to the Promotions tab.",
+          "url": "https://links.tldrnewsletter.com/MR0VhV",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-26:a20",
+          "order": 3,
+          "title": "1PASSWORD ADDS POP-UP WARNINGS FOR SUSPECTED PHISHING SITES",
+          "summary": "1Password will now display pop-up warnings when users attempt to enter credentials on typosquatted or suspected malicious domains that don't match URLs stored in their vault.",
+          "url": "https://www.bleepingcomputer.com/news/security/1password-adds-pop-up-warnings-for-suspected-phishing-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

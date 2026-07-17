@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-03-01",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-03-01",
+  "source_path": "TLDR Web Dev/article_01-03-2024.md",
+  "source_content_hash": "sha256:aed6eb4dae29e92bb8b196f9934893a7960621ecff08c315fca6986be6f0bc24",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-03-01",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-01:a05",
+          "order": 1,
+          "title": "HAPPY LEAP DAY!",
+          "summary": "Software systems that don't properly account for Leap Days have a tendency to glitch or fail on February 29th. This year is no exception, with reports of failures in supermarket payment systems, airline ticketing, gas station payment terminals, smartwatches, and even a major video game. To prevent this from happening, software engineers should use framework-level date libraries wherever possible, be wary of edge cases, and not assume fixed durations for months and years.",
+          "url": "https://blog.pragmaticengineer.com/happy-leap-day/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a06",
+          "order": 2,
+          "title": "HOW APPLE BUILT ICLOUD TO STORE BILLIONS OF DATABASES",
+          "summary": "Apple's iCloud and CloudKit were built using a combination of Cassandra and FoundationDB. Cassandra, which is being actively improved by Apple engineers, handles exabytes of data and millions of queries. FoundationDB powers CloudKit, Apple’s cloud backend service. It provides key features like transactional guarantees and solves scalability issues that Cassandra alone could not address. Each iCloud user gets their own database, resulting in billions of databases. This is made possible by the Record Layer's stateless architecture and resource allocation using a “record store” abstraction.",
+          "url": "https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a07",
+          "order": 3,
+          "title": "INSIDE IMESSAGE EXTENSIONS — THE QUIRKY WORLD OF APPLE’S NICHE DEVELOPMENT TOOLS",
+          "summary": "Together To Do is an iMessage extension designed to replace comma-separated text messages with a checkable list. Its developer found it challenging to integrate SwiftUI into iMessage extensions as Apple doesn’t use SwiftUI by default yet. Adding to this, iMessage functionality in the iOS 17 simulator was broken, making testing difficult and necessitating workarounds with older simulators or physical devices. While the potential audience within the iMessage App Store is smaller than the regular App Store, Together To Do has achieved notable rankings and consistent organic downloads, suggesting that iMessage extensions may be a viable niche.",
+          "url": "https://bit.ly/4314VG6",
+          "reading_time_minutes": 12,
+          "source_domain": "bit.ly",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-01:a08",
+          "order": 1,
+          "title": "YOU'VE JUST INHERITED A LEGACY C++ CODEBASE, NOW WHAT?",
+          "summary": "When first starting work on a legacy C++ codebase, you should prioritize making the codebase manageable in terms of security, development experience, correctness, and performance by focusing on small, incremental changes. Aim for a passing test suite, remove dead code, enforce linters and code formatters, set up automated builds, and clearly document how to build and test the project. It’s also important to obtain buy-in from management by explaining the issues with the codebase and proposing solutions in non-technical terms.",
+          "url": "https://gaultier.github.io/blog/you_inherited_a_legacy_cpp_codebase_now_what.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "gaultier.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a09",
+          "order": 2,
+          "title": "WHERE I’M AT ON THE WHOLE CSS-TRICKS THING",
+          "summary": "The founder of the CSS-Tricks website sold the website in March 2022 to DigitalOcean, who promptly fired the content team and stopped publishing new content. He tried to regain control of CSS-Tricks and proposed running the site himself, but DigitalOcean ultimately declined the proposal due to a lack of internal support. Today, CSS-Tricks remains in a somewhat abandoned state.",
+          "url": "https://chriscoyier.net/2024/02/28/where-im-at-on-the-whole-css-tricks-thing/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "chriscoyier.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a10",
+          "order": 3,
+          "title": "NOTES FROM “WHY CAN’T WE MAKE SIMPLE SOFTWARE?”",
+          "summary": "It’s important to be “scale appropriate” when architecting software. Complexity multiplies with factors like supported browsers, platforms, and screen sizes. The tools that worked previously may no longer be suitable as you scale. Embrace the need to rebuild with new tools to manage the increased complexity.",
+          "url": "https://blog.jim-nielsen.com/2024/notes-on-making-software-by-peter-van-hardenberg/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-01:a11",
+          "order": 1,
+          "title": "NEW TO THE WEB PLATFORM IN FEBRUARY",
+          "summary": "The stable releases of Firefox 123 and Chrome 122 have updates including declarative shadow DOM, a new Storage Buckets API, and a feature that preloads resources with the 103 Early Hints HTTP code.",
+          "url": "https://web.dev/blog/web-platform-02-2024?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "web.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a12",
+          "order": 2,
+          "title": "PINGORA",
+          "summary": "Pingora is a Rust framework for building fast, reliable, and programmable networked systems. Cloudflare uses it to serve more than 40 million requests per second.",
+          "url": "https://github.com/cloudflare/pingora?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a13",
+          "order": 3,
+          "title": "AWS LAMBDA WEB ADAPTER",
+          "summary": "AWS Lambda Web Adapter is a tool for running web applications on AWS Lambda. It allows developers to build web apps that use an HTTP API with familiar frameworks like Express.js, Laravel, Next.js, Flask, and more on AWS Lambda.",
+          "url": "https://github.com/awslabs/aws-lambda-web-adapter?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-01:a14",
+          "order": 1,
+          "title": "HOW DO COMPANIES SHIP CODE TO PRODUCTION?",
+          "summary": "The typical code deployment process for companies starts with planning and development, where developers work in sprints while product owners refine requirements as user stories. Automated systems are then used to verify that the code passes tests. The code is deployed to dev and QA environments for testing before being deployed to production.",
+          "url": "https://x.com/alexxubyte/status/1762153984977162303?s=46&utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "x.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a15",
+          "order": 2,
+          "title": "ON GETTING PAID FOR OPEN SOURCE",
+          "summary": "Open source can be integrated into your job, but not every company offers these roles. This author's open source work began as part of their regular job, evolving into dedicated company time and side consulting gigs. Despite various funding models, including sponsorships and partnerships, they found it difficult to make a living solely from open source outside of a company.",
+          "url": "https://radekmie.dev/blog/on-getting-paid-for-open-source/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "radekmie.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a16",
+          "order": 3,
+          "title": "PREVENTING SQL INJECTION ATTACKS IN NODE.JS",
+          "summary": "SQL injection can occur when user input is used in SQL queries without validation, allowing attackers to manipulate queries for malicious purposes. To prevent SQL injection attacks, developers should use query placeholders or prepared statements to ensure user input is treated as data, not code. They should also validate and sanitize user input to enforce format and character restrictions.",
+          "url": "https://snyk.io/blog/preventing-sql-injection-attacks-node-js/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "snyk.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-01:a17",
+          "order": 1,
+          "title": "ASK HN: DID YOU ENCOUNTER ANY LEAP YEAR BUGS TODAY? (HACKER NEWS THREAD)",
+          "summary": "The author of this Hacker News thread mentions that their billing team just finished patching a bug on February 29th that erroneously charged monthly subscribers for an extra day. Other commenters share their stories.",
+          "url": "https://news.ycombinator.com/item?id=39554539&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a18",
+          "order": 2,
+          "title": "GOOGLE BRINGS STACK OVERFLOW’S KNOWLEDGE BASE TO GEMINI FOR GOOGLE CLOUD",
+          "summary": "Google Cloud and Stack Overflow have formed a strategic partnership to integrate their platforms, bringing AI-powered code assistance and trusted developer knowledge directly to both the Google Cloud Console and Gemini.",
+          "url": "https://techcrunch.com/2024/02/29/google-brings-stack-overflows-knowledge-base-to-gemini/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a19",
+          "order": 3,
+          "title": "LEARN CSS LAYOUT THE PEDANTIC WAY",
+          "summary": "In-depth, technically detailed chapters about CSS layout.",
+          "url": "https://book.mixu.net/css/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "book.mixu.net",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a20",
+          "order": 4,
+          "title": "WEB CHECK",
+          "summary": "An all-in-one OSINT tool for analyzing any website.",
+          "url": "https://github.com/Lissy93/web-check?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-01:a21",
+          "order": 5,
+          "title": "SERVING MY BLOG POSTS AS LINUX MANUAL PAGES",
+          "summary": "This author devised a system that allows readers to view their blog posts as Linux manual pages. The system generates roff formatted Linux manual pages, which users can specifically request using HTTP headers.",
+          "url": "https://jamesg.blog/2024/02/29/linux-manual-pages/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "jamesg.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-08-01",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-08-01",
+  "source_path": "TLDR Web Dev/article_01-08-2025.md",
+  "source_content_hash": "sha256:0441d16c37cfba43f7e497df62d586a50e0f554d0a3fc0223233782873704785",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-08-01",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-01:a04",
+          "order": 1,
+          "title": "HOW CURSOR SERVES BILLIONS OF AI CODE COMPLETIONS EVERY DAY",
+          "summary": "Cursor is an AI-first code editor that uses AI models like GPT-4 and Claude to provide features like real-time code autocompletion, complex multi-file tasks, inline editing, automated code review through \"BugBot,\" and background agents that can execute code in isolated cloud environments. These features are enabled by encrypting and sending code snippets to cloud servers for AI processing. Codebase indexing and semantic search also allows the AI to \"understand\" and answer questions about the entire codebase.",
+          "url": "https://blog.bytebytego.com/p/how-cursor-serves-billions-of-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a05",
+          "order": 2,
+          "title": "HOW GO 1.24'S SWISS TABLES SAVED US HUNDREDS OF GIGABYTES",
+          "summary": "Go 1.24 introduced Swiss Tables, a new map implementation that significantly improved memory efficiency for Datadog's services. While initially experiencing a memory regression from a separate mallocgc issue, Datadog discovered that its high-traffic services actually saw large memory reductions, up to 1 GiB saved in some cases, due to Swiss Tables' more compact storage format compared to Go 1.23's bucket-based maps.",
+          "url": "https://www.datadoghq.com/blog/engineering/go-swiss-tables?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-01:a06",
+          "order": 1,
+          "title": "STACK OVERFLOW DATA REVEALS THE HIDDEN PRODUCTIVITY TAX OF 'ALMOST RIGHT' AI CODE",
+          "summary": "A recent Stack Overflow survey found that while AI adoption among developers is rising, trust and favorability towards AI tools are declining. A major reason for this decline is the prevalence of \"almost right\" AI-generated code, which developers find frustrating and time-consuming to debug, negating potential productivity gains. This disrupts developer workflows and can introduce security risks.",
+          "url": "https://links.tldrnewsletter.com/YGrum2",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a07",
+          "order": 2,
+          "title": "I TRIED SERVO, THE UNDERCOVER WEB BROWSER ENGINE MADE WITH RUST",
+          "summary": "Servo is a web rendering engine built with Rust. It was a Mozilla project intended to potentially replace Gecko in Firefox, but Servo was later reorganized under the Linux Foundation after Mozilla layoffs. While not yet able to power a full-featured browser, Servo shows promise and continues development, with current efforts focusing on Shadow DOM and CSS Grid.",
+          "url": "https://www.spacebar.news/servo-undercover-web-browser-engine/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "spacebar.news",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-01:a08",
+          "order": 1,
+          "title": "STOP RE-RENDERING — TANSTACK DB, THE EMBEDDED CLIENT DATABASE FOR TANSTACK QUERY",
+          "summary": "TanStack DB is a new client-side database layer that integrates with TanStack Query to solve React performance issues by eliminating unnecessary re-renders during data updates. Using differential dataflow technology, it can update only what changed in under 1ms (e.g., updating one row in a 100k collection takes just 0.7ms), keeping normalized collections in memory and streaming incremental updates to live queries.",
+          "url": "https://tanstack.com/blog/tanstack-db-0.1-the-embedded-client-database-for-tanstack-query?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a09",
+          "order": 2,
+          "title": "MCP-USE",
+          "summary": "MCP-Use is an open-source Python library designed to connect LLMs to MCP servers for building custom agents with tool access. It supports various LLMs through LangChain, enabling agents to utilize tools like web browsing, file operations, and more, using standard I/O, SSE, or HTTP transports. The library also has features like dynamic server selection, multi-server support, tool restrictions, and the ability to create custom agents with a few lines of code.",
+          "url": "https://github.com/mcp-use/mcp-use?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a10",
+          "order": 3,
+          "title": "SOURCEBOT",
+          "summary": "Sourcebot is a self-hosted tool that helps devs understand their codebase with features like code search, navigation, and AI-powered question answering. It allows users to search across multiple repos, navigate code definitions, and explore files.",
+          "url": "https://github.com/sourcebot-dev/sourcebot?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-01:a11",
+          "order": 1,
+          "title": "HOW WE REVAMPED OUR DOCS FOR AI",
+          "summary": "Freestyle, a platform for running AI code, revamped its documentation to be more AI-friendly after noticing users were relying on AI to understand the docs but getting inaccurate information. The revamp included creating llms.txt files, adding AI buttons that link to AI chat platforms with pre-filled documentation context, and improving the descriptions of its MCP tools to encourage AI agents to use them effectively. It also added an in-docs AI chat that is connected to an MCP instructed to always reference relevant documentation.",
+          "url": "https://docs.freestyle.sh/blog/docs-revamp?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "docs.freestyle.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a12",
+          "order": 2,
+          "title": "TEST-DRIVEN DEVELOPMENT WITH AI",
+          "summary": "AI is turning test-driven development (TDD) from a tedious chore into something easier to do. TDD involves writing tests before code. While traditional TDD follows a \"Red, Green, Refactor\" cycle that can be slow and maintenance-heavy for humans, AI agents excel at quickly generating comprehensive tests and code, turning TDD's biggest weaknesses into strengths.",
+          "url": "https://www.builder.io/blog/test-driven-development-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "builder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a13",
+          "order": 3,
+          "title": "REPLACING CRON JOBS WITH A CENTRALIZED TASK SCHEDULER",
+          "summary": "Heartbeat transitioned from managing various tasks with individual cron scripts to a centralized task scheduler to improve efficiency and reliability. The new system uses a database table called `ScheduledTasks` to store task details and a single cron job to execute them based on priority and time. An SQS consumer processes tasks by reading the payload and calling the corresponding function, with retry logic and expiration settings to handle failures and prevent outdated tasks.",
+          "url": "https://mayhul.com/posts/scheduled-tasks/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mayhul.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-01:a14",
+          "order": 1,
+          "title": "AI IS A FLOOR RAISER, NOT A CEILING RAISER",
+          "summary": "AI acts as a \"floor raiser\" by lowering the barrier to entry for learning and performing certain tasks, particularly for those with some existing knowledge, but it doesn't necessarily lead to mastery or impact areas where high levels of skill, novelty, or existing specialized tools are already in place.",
+          "url": "https://elroy.bot/blog/2025/07/29/ai-is-a-floor-raiser-not-a-ceiling-raiser.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "elroy.bot",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a15",
+          "order": 2,
+          "title": "MACBOOK PRO INSOMNIA",
+          "summary": "A MacBook Pro user solved a battery drain issue by enabling the \"Wake for maintenance\" setting in the Sleep Aid app, which addresses frequent wake-up events.",
+          "url": "https://manuel.bernhardt.io/posts/2025-07-24-macbook-pro-insomnia?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "manuel.bernhardt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a16",
+          "order": 3,
+          "title": "BOOST YOUR REACT NATIVE APP START TIME: STOP SHIPPING LOTTIE JSON INCORRECTLY",
+          "summary": "To improve React Native app start time and reduce memory usage, avoid bundling unnecessary Lottie JSON files and i18n locales within the JavaScript bundle, and instead load them on demand as assets.",
+          "url": "https://dev.to/retyui/boost-your-react-native-app-start-time-stop-shipping-lottie-json-incorrectly-2074?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-01:a17",
+          "order": 4,
+          "title": "WHAT TO LOOK FOR IN CODE REVIEWS",
+          "summary": "Code reviewers should prioritize design considerations first (since design problems are most expensive to fix later), followed by functionality review to catch bugs and logic issues that automated tests might miss.",
+          "url": "https://open.substack.com/pub/francofernando/p/what-to-look-for-in-code-reviews?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

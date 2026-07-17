@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-ai:2023-09-01",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2023-09-01",
+  "source_path": "TLDR AI/article_01-09-2023.md",
+  "source_content_hash": "sha256:f3229fb7cfea0b721ba6a4bf3c8d5b897330dcbcfd0f3f5ddf22f3d576bd3653",
+  "format_family": "inline_url",
+  "parse_status": "partial",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'PREDICT VIDEO CONTENT BY SEPARATING MOTION AND APPEARANCE [https://arxiv.org/abs/2308.16154v1?utm_source=tldrai]' has no inline URL",
+      "line": 55
+    }
+  ],
+  "title": "TLDR AI 2023-09-01",
+  "sections": [
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-09-01:o001",
+          "order": 1,
+          "title": "META RELEASES FACET DATASET",
+          "summary": "Meta has released a new AI benchmark, FACET, designed to evaluate the “fairness” of AI models that classify and detect things in photos and videos, including people.",
+          "url": "https://techcrunch.com/2023/08/31/meta-releases-a-data-set-to-probe-computer-vision-models-for-biases/?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o002",
+          "order": 2,
+          "title": "BAIDU LAUNCHES ERNIE CHATBOT",
+          "summary": "Chinese tech giant Baidu officially launched its Ernie chatbot after the government approved its application.",
+          "url": "https://www.theverge.com/2023/8/31/23853878/baidu-launch-ernie-ai-chatbot-china?utm_source=tldrai",
+          "reading_time_minutes": 1,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o003",
+          "order": 3,
+          "title": "GOOGLE LAUNCHES TPU V5 AND H100 ENABLED VMS",
+          "summary": "Google is one of the few large organizations with hardware that can take on Nvidia. It has been challenging to use in the past with somewhat poor PyTorch support. Now, with even faster chips, and better software support - it seems like a compelling offering from the search giant.",
+          "url": "https://cloud.google.com/blog/products/compute/announcing-cloud-tpu-v5e-and-a3-gpus-in-ga?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "research-innovation",
+      "heading": "RESEARCH & INNOVATION",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-09-01:o004",
+          "order": 1,
+          "title": "EVALUATING THE FAIRNESS OF COMPUTER VISION MODELS",
+          "summary": "In its continued push to be an open source contributor for AI, Meta released their amazing DINO v2 model under a more permissive license that allows the community to build on top of it. In addition, they released a data set that helps determine and benchmark bias in various computer vision models.",
+          "url": "https://ai.meta.com/blog/dinov2-facet-computer-vision-fairness-evaluation/?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "ai.meta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o005",
+          "order": 2,
+          "title": "PREDICT VIDEO CONTENT BY SEPARATING MOTION AND APPEARANCE [https://arxiv.org/abs/2308.16154v1?utm_source=tldrai]",
+          "summary": "Predicting video content is tricky because the system must guess object movements and keep them looking consistent. This new system, MMVP, separately handles motion and appearance using special \"motion matrices\" that focus just on movement. This method is not only more accurate but also more efficient and compact than current top systems.",
+          "url": null,
+          "reading_time_minutes": 18,
+          "source_domain": null,
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o006",
+          "order": 3,
+          "title": "ENHANCING IMAGE GENERATION WITH TEXTURAL MODULATION",
+          "summary": "Producing diverse images from just a few examples is challenging. TexMod uses unique techniques to blend in details from various images and makes sure the created images have a logical layout.",
+          "url": "https://arxiv.org/abs/2308.16110v1?utm_source=tldrai",
+          "reading_time_minutes": 14,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-resources",
+      "heading": "ENGINEERING & RESOURCES",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-09-01:o007",
+          "order": 1,
+          "title": "IMPROVING IMAGE QUALITY WITH SMART DECODING TECHNIQUES",
+          "summary": "This project developed a method that adjusts how images are decoded, especially for unfamiliar datasets. This process updates certain settings in the decoder, ensuring high-quality images without using much data. The system also adapts on the fly, depending on the type of image, for optimal results.",
+          "url": "https://github.com/llvy21/duic?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o008",
+          "order": 2,
+          "title": "HOW FEEDBACK AFFECTS LLMS?",
+          "summary": "When training large language models to understand and match human values, do we use scores (rating) or comparisons (ranking) as feedback? This study found that the choice matters a lot. For instance, models trained with rankings are preferred when evaluated by comparison but not always by scoring. This shows that how we choose to give feedback has big implications for how well the model works in real-life situations.",
+          "url": "https://github.com/hritikbansal/sparse_feedback?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-09-01:o009",
+          "order": 1,
+          "title": "DO MOST PEOPLE REALLY WANT TO SLOW DOWN AI?",
+          "summary": "Despite what you may see in the media, there are a number of issues with the polls and surveys saying that a majority of people want to slow down AI development.",
+          "url": "https://learningfromexamples.substack.com/p/do-most-people-really-want-to-slow?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "learningfromexamples.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o010",
+          "order": 2,
+          "title": "OPENAI BASE MODELS ARE NOT SYCOPHANTIC",
+          "summary": "Inverse scaling problems are things that get worse as model size increases. Sycophancy is when a model tends to agree with a human regardless of the truth. Anthropic released great work recently that showed larger models are more sycophantic. However, recent experiments show that OpenAI models don’t suffer from this same problem.",
+          "url": "https://www.lesswrong.com/posts/3ou8DayvDXxufkjHD/openai-api-base-models-are-not-sycophantic-at-any-size?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "lesswrong.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-09-01:o011",
+          "order": 1,
+          "title": "",
+          "summary": "Bia uses neurofeedback to measure, control, and improve your sleep by guiding your brain through the sleep stages — making it the most advanced, cutting-edge Sleep Mask ever made. Unlock your most restful sleep from $379",
+          "url": "https://getbia.com/?utm_source=newsletter&utm_medium=startup_placement&utm_campaign=TLDR_AI",
+          "reading_time_minutes": null,
+          "source_domain": "getbia.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o012",
+          "order": 2,
+          "title": "HIGH-SPEED AI DRONE BEATS WORLD CHAMPION RACERS",
+          "summary": "A team of researchers from the University of Zürich and Intel announced the development of an autonomous drone system named Swift that can beat human champions in first-person view (FPV) drone racing.",
+          "url": "https://arstechnica.com/information-technology/2023/08/high-speed-ai-drone-beats-world-champion-racers-for-the-first-time/?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-09-01:o013",
+          "order": 3,
+          "title": "ANGUILLA HAS AN .AI GOLDMINE",
+          "summary": "Anguilla, a tiny British island territory in the Caribbean, may bring in up to $30 million in revenue this year thanks to its \".ai\" domain name.",
+          "url": "https://arstechnica.com/information-technology/2023/08/ai-fever-turns-anguillas-ai-domain-into-a-digital-gold-mine/?utm_source=tldrai",
+          "reading_time_minutes": 1,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

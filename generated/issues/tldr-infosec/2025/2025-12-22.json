@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-12-22",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-22",
+  "source_path": "TLDR InfoSec/article_22-12-2025.md",
+  "source_content_hash": "sha256:ccd7bdb948975dcf06c0df17f090914449e129856111d4fea1cdff482435a433",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-22",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-22:a04",
+          "order": 1,
+          "title": "CRACKED SOFTWARE AND YOUTUBE VIDEOS SPREAD COUNTLOADER AND GACHILOADER MALWARE",
+          "summary": "CountLoader 3.2 and GachiLoader malware are spreading via cracked software sites and 100+ compromised YouTube videos (220K views from 39 accounts), deploying ACR Stealer and Rhadamanthys through multi-stage attacks. CountLoader uses trojanized Python interpreters that execute via mshta.exe, create persistence with fake Google scheduled tasks that run every 30 minutes, detect CrowdStrike Falcon to adapt its execution, and spread via USB drives. GachiLoader employs Node.js with novel Vectored Exception Handling PE injection techniques and kills SecHealthUI.exe to disable Windows Defender. Security teams should monitor for mshta.exe abuse, suspicious scheduled tasks that mimic legitimate software, WMI queries for AV detection, and modifications to system folders that exclude Defender, and implement application whitelisting to block execution of unauthorized Python interpreters and Node.js scripts.",
+          "url": "https://thehackernews.com/2025/12/cracked-software-and-youtube-videos.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a05",
+          "order": 2,
+          "title": "NEW UEFI FLAW ENABLES PRE-BOOT ATTACKS FROM GIGABYTE, MSI, ASUS, ASROCK",
+          "summary": "Researchers from Riot Games discovered a UEFI flaw that could allow for Direct Memory Access (DMA) capable devices to load before the operating system. DMA allows for PCIe devices to read and write RAM without going through the CPU and relies upon IOMMU for protection. A physically present attacker would need to attach a rogue PCIe device before boot to exploit this vulnerability.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-uefi-flaw-enables-pre-boot-attacks-on-motherboards-from-gigabyte-msi-asus-asrock/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a06",
+          "order": 3,
+          "title": "NEW CRITICAL WATCHGUARD FIREBOX FIREWALL FLAW EXPLOITED IN ATTACKS",
+          "summary": "WatchGuard is warning users to patch a critical, actively exploited remote code execution vulnerability in its Firebox firewalls. The vulnerability is caused by an out-of-bounds write that allows unauthenticated attackers to execute remote code. Firebox firewalls are only vulnerable if they are configured to use IKEv2, or in some circumstances, even if the configuration was deleted.",
+          "url": "https://www.bleepingcomputer.com/news/security/watchguard-warns-of-new-rce-flaw-in-firebox-firewalls-exploited-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-22:a07",
+          "order": 1,
+          "title": "TP-LINK TAPO C200: HARDCODED KEYS, BUFFER OVERFLOWS AND PRIVACY IN THE ERA OF AI ASSISTED REVERSE ENGINEERING",
+          "summary": "A security researcher documented AI-assisted firmware analysis of TP-Link Tapo C200 cameras using tools including Grok, GhidraMCP, and Claude Sonnet 4. They discovered hardcoded SSL private keys that enabled HTTPS traffic decryption, pre-authentication memory overflows, integer overflow crashes, and unauthenticated WiFi hijacking, affecting approximately 25,000 internet-exposed devices. The vulnerabilities enabled remote attackers to decrypt camera traffic, crash devices, force connections to malicious networks, and enumerate nearby WiFi BSSIDs for precise geolocation via Apple's location services API. TP-Link delayed patching beyond its 90-day commitment despite being a CVE Numbering Authority, raising concerns about vendor conflicts of interest when controlling their own vulnerability disclosure pipeline while marketing low CVE counts as a competitive advantage.",
+          "url": "https://www.evilsocket.net/2025/12/18/TP-Link-Tapo-C200-Hardcoded-Keys-Buffer-Overflows-and-Privacy-in-the-Era-of-AI-Assisted-Reverse-Engineering/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "evilsocket.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a08",
+          "order": 2,
+          "title": "MISTRUSTED ADVISOR: EVADING DETECTION WITH PUBLIC S3 BUCKETS AND POTENTIAL DATA EXFILTRATION IN AWS",
+          "summary": "Researchers from Fog Security discovered three methods to bypass AWS Trusted Advisor and expose S3 buckets without triggering alerts. The three methods are to create a bucket policy that denies s3:GetBucketPolicyStatus, s3:GetBucketPublicAccessBlock, and s3:GetBucketAcl. Fog Security coordinated disclosure with AWS, but noted that it took AWS two attempts to fix the vulnerability and felt that AWS's communication downplayed the severity.",
+          "url": "https://www.fogsecurity.io/blog/mistrusted-advisor-public-s3-buckets?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "fogsecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a09",
+          "order": 3,
+          "title": "HOW GOOGLE DOES IT: BUILDING AGENTS FOR CYBERSECURITY AND DEFENSE",
+          "summary": "When introducing agentic AI to its cybersecurity teams, Google began by building trust in generative AI by adding chat interfaces to existing tools. Google security then identified initial use cases for distillation and translation, focusing on bottlenecks that AI could alleviate. The team then established and monitored KPIs as they scaled their program.",
+          "url": "https://cloud.google.com/transform/how-google-does-it-building-ai-agents-cybersecurity-defense/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-22:a10",
+          "order": 1,
+          "title": "WHAT HAPPENS WHEN YOU APPROACH INFOSEC LIKE A MARTIAL ARTIST?",
+          "summary": "In a dojo, agents train to avoid wasted motion, to anticipate, and to endure. Sumo Logic [10] brings dojo thinking to the SOC. Automation delivers repeatable discipline, machine learning detects anomalies, and it's all orchestrated through natural language. See how analysts",
+          "url": "https://www.sumologic.com/blog/welcome-dojo-ai-agents-soc?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a10",
+          "order": 2,
+          "title": "can move with agility",
+          "summary": "",
+          "url": "https://www.sumologic.com/blog/welcome-dojo-ai-agents-soc?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a11",
+          "order": 3,
+          "title": "ANNOUNCING GOTATUN, THE FUTURE OF WIREGUARD AT MULLVAD VPN",
+          "summary": "Mullvad's GotaTun is a Rust-based WireGuard implementation forked from Cloudflare's BoringTun that replaces wireguard-go, eliminating 85% of Android app crashes attributed to the Go implementation's FFI complexity and opaque runtime debugging challenges. The Android rollout in November reduced the user-perceived crash rate from 0.40% to 0.01%, with zero GotaTun-originated crashes, while improving connection speeds and battery efficiency through safe multithreading and zero-copy memory strategies. Mullvad plans a third-party security audit in early 2026 before expanding the GotaTun deployment to desktop and iOS platforms, maintaining full WireGuard protocol compatibility while supporting privacy features, including DAITA and Multihop.",
+          "url": "https://mullvad.net/en/blog/announcing-gotatun-the-future-of-wireguard-at-mullvad-vpn?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "mullvad.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a12",
+          "order": 4,
+          "title": "KANIDM",
+          "summary": "Kanidm is a simple and secure identity management platform that provides a full identity provider, covering the broadest possible set of requirements and integrations.",
+          "url": "https://github.com/kanidm/kanidm?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a13",
+          "order": 5,
+          "title": "DEDSEC",
+          "summary": "The DedSec Project is a comprehensive cybersecurity toolkit designed for educational purposes. It provides 50+ powerful tools that cover everything from network security analysis to ethical hacking education. Everything is completely free and designed to help you shift from being a target to being a defender.",
+          "url": "https://github.com/dedsec1121fk/DedSec?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-22:a14",
+          "order": 1,
+          "title": "DISMANTLING DEFENSES: TRUMP 2.0 CYBER YEAR IN REVIEW",
+          "summary": "The Trump administration systematically dismantled federal cybersecurity infrastructure: CISA lost 1/3 of its workforce and faces $491M budget cuts, the Cyber Safety Review Board was dissolved mid-investigation of Chinese telecom intrusions, and both NSA and Cyber Command have operated without leadership since April. DOGE accessed sensitive federal databases from SSA, DHS, OPM, and Treasury by circumventing security controls and audit mechanisms, with data exfiltration coinciding with Russian login attempts using valid DOGE credentials. Security professionals should prepare for degraded federal threat intelligence sharing after the elimination of CIPAC and MS-ISAC funding, reduced public-private coordination as agencies canceled meetings with infrastructure operators, and increased foreign intelligence recruitment of laid-off federal employees with security clearances.",
+          "url": "https://krebsonsecurity.com/2025/12/dismantling-defenses-trump-2-0-cyber-year-in-review/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a15",
+          "order": 2,
+          "title": "DEFENSE BILL ADDRESSES SECURE PHONES, AI TRAINING, CYBER TROOPS' MENTAL HEALTH",
+          "summary": "In addition to $901B in funding, the 2026 National Defense Authorization Act (NDAA) also includes a series of new cybersecurity policies. The NDAA includes a provision that secure phones provided to senior leaders meet a set of security requirements, such as data encryption. The act also includes increased mental health provisions and training initiatives around AI security.",
+          "url": "https://cyberscoop.com/2026-ndaa-cybersecurity-secure-phones-ai-training-cyber-troop-mental-health/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a16",
+          "order": 3,
+          "title": "MINISTERS CONFIRM BREACH AT UK FOREIGN OFFICE BUT DETAILS REMAIN MURKY",
+          "summary": "UK ministers acknowledge a confirmed cyberattack on the Foreign Office, first reported by The Sun and widely linked in the media to Chinese state-backed hackers, though officials stress those claims are speculative. They say a technical flaw at one site was quickly closed and insist there is currently low risk to individuals, despite concerns about possible exposure of visa application data and growing warnings over China's broader cyber-espionage activity in Europe.",
+          "url": "https://www.theregister.com/2025/12/19/uk_foreign_office_hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-22:a17",
+          "order": 1,
+          "title": "2025 LLM YEAR IN REVIEW",
+          "summary": "Six paradigm shifts occurred with LLMs during 2025.",
+          "url": "https://karpathy.bearblog.dev/year-in-review-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "karpathy.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a18",
+          "order": 2,
+          "title": "UKRAINIAN NATIONAL PLEADS GUILTY TO CONSPIRACY TO USE NEFILIM RANSOMWARE TO ATTACK COMPANIES IN THE UNITED STATES AND OTHER COUNTRIES",
+          "summary": "Ukrainian national Artem Stryzhak pleaded guilty to conspiracy charges for deploying Nefilim ransomware against US companies.",
+          "url": "https://links.tldrnewsletter.com/DsoWhX",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-22:a19",
+          "order": 3,
+          "title": "UNIVERSITY OF SYDNEY DATA BREACH AFFECTS 27,000 INDIVIDUALS",
+          "summary": "Hackers accessed an online code library at the University of Sydney that contained historical test data files.",
+          "url": "https://www.securityweek.com/university-of-sydney-data-breach-affects-27000-individuals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

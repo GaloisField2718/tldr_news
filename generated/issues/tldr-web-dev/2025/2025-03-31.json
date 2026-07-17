@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-03-31",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-31",
+  "source_path": "TLDR Web Dev/article_31-03-2025.md",
+  "source_content_hash": "sha256:66e558d39c38aa4e894fdae1108804ad7ec56eccfee9fdd2f281b5b6c9294615",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-31",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-31:a04",
+          "order": 1,
+          "title": "WE HACKED GOOGLE'S AI, GEMINI AND LEAKED ITS SOURCE CODE (AT LEAST SOME PART)",
+          "summary": "In March, Roni Carta (Lupin) and team disclosed they hacked Google's AI, Gemini, during the 2024 LLM bugSWAT event, winning the Most Valuable Hacker award. They discovered a vulnerability within Gemini's Python sandbox that allowed them to rewrite Python code and map the filesystem, enabling them to extract a 579MB binary file. Analyzing this binary revealed internal source code, including sensitive Google proto files containing metadata descriptions used to classify user data and internal security proto definitions.",
+          "url": "https://links.tldrnewsletter.com/vBmrWs",
+          "reading_time_minutes": 21,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a05",
+          "order": 2,
+          "title": "COMPONENTS ARE JUST SPARKLING HOOKS",
+          "summary": "Components and hooks are closely related in React. Components are a subtype of hooks since they inherit the Rules of Hooks and must return a ReactNode. By converting a component into a hook, there is more flexibility in managing state and behaviors separately from UI rendering, allowing for patterns like headless components.",
+          "url": "https://www.bbss.dev/posts/sparkling-hooks/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "bbss.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a06",
+          "order": 3,
+          "title": "POSTMORTEM ON NEXT.JS MIDDLEWARE BYPASS",
+          "summary": "Vercel has published a postmortem on CVE-2025-29927, a critical vulnerability in Next.js related to Middleware bypass. The timeline outlines the vulnerability's disclosure, investigation, patching, and public announcement. The vulnerability involved an internal `x-middleware-subrequest` header and impacted self-hosted Next.js applications, but not Vercel, Netlify, or Cloudflare Workers.",
+          "url": "https://vercel.com/blog/postmortem-on-next-js-middleware-bypass?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-31:a07",
+          "order": 1,
+          "title": "KARPATHY'S ‘VIBE CODING' MOVEMENT CONSIDERED HARMFUL",
+          "summary": "Andrej Karpathy's \"vibe coding\" advocates relying on AI tools without fully understanding the generated code. However, this approach leads to technical debt, security vulnerabilities, and a loss of intellectual ownership over systems. It's better to have a balanced approach of using AI assistance while maintaining engineering quality through architectural vision, focused code generation, thorough review, and comprehensive testing.",
+          "url": "https://nmn.gl/blog/dangers-vibe-coding?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "nmn.gl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a08",
+          "order": 2,
+          "title": "THE WAY WE'RE THINKING ABOUT BREAKING CHANGES IS REALLY SILLY",
+          "summary": "Compilers currently lack the concept of time, treating code as if it always existed in its current state, which leads to unnecessary breaking changes when dependencies are updated. Instead, we should focus on preserving the behavior of existing code rather than strictly following the old syntax during updates. This means having automatic code migrations, similar to database migrations, that apply transformations to call sites when dependencies are updated.",
+          "url": "https://welltypedwitch.bearblog.dev/the-way-were-thinking-about-breaking-changes-is-really-silly/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "welltypedwitch.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a09",
+          "order": 3,
+          "title": "HOW TO WRITE BLOG POSTS THAT DEVELOPERS READ",
+          "summary": "Good blog posts for devs get straight to the point, expand the target audience, strategically plan how readers will discover the post, use visuals, and accommodate skimmers to maximize engagement.",
+          "url": "https://refactoringenglish.com/chapters/write-blog-posts-developers-read/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "refactoringenglish.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-31:a10",
+          "order": 1,
+          "title": "JSON-EDIT-REACT",
+          "summary": "Json-edit-react is a highly configurable React component for editing and viewing JSON/object data, with features like inline editing, granular control over edits, JSON Schema validation, customizable UI, and search/filtering. The component is self-contained with no external UI library dependencies and supports custom components, localization, drag-n-drop reordering, and keyboard customization.",
+          "url": "https://github.com/CarlosNZ/json-edit-react?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a11",
+          "order": 2,
+          "title": "PG-MCP",
+          "summary": "PG-MCP is a PostgreSQL Model Context Protocol server for better AI agent interaction with databases. It extends the reference Postgres MCP implementation with features like multi-database support, rich catalog information, extension context, and query explanation. The server has connection management and query tools, along with schema discovery and data access resources.",
+          "url": "https://github.com/stuzero/pg-mcp?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-31:a12",
+          "order": 1,
+          "title": "WHY APPLE'S SEVERANCE GETS EDITED OVER REMOTE DESKTOP SOFTWARE",
+          "summary": "Apple's promotional video for \"Severance\" inadvertently revealed a flawed workflow for professional video editors. The video showed editors using Macs for remote editing via Jump Desktop, a screen-sharing tool. This means that the Mac's local horsepower is not as important as a fast internet connection and a powerful remote server.",
+          "url": "https://tedium.co/2025/03/29/severance-apple-remote-editing-weirdness/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "tedium.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a13",
+          "order": 2,
+          "title": "THE STATE OF THE FRONT-END AND FULL-STACK JOB MARKET",
+          "summary": "React and Next.js are highly sought after, along with Javascript and Typescript. AWS is the dominant cloud provider and PostgreSQL remains a popular database. Despite some technologies correlating with higher compensation, there are minimal salary increases with experience. Education beyond a bachelor's degree is rarely required.",
+          "url": "https://tsev.dev/posts/2025-03-26-the-state-of-the-frontend-and-fullstack-job-market/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "tsev.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a14",
+          "order": 3,
+          "title": "EVERYONE KNOWS ALL THE APPS ON YOUR PHONE",
+          "summary": "Indian Android apps have privacy issues as many apps circumvent Google's privacy policies to collect data on installed apps. Swiggy and Zepto were found to have extensive lists of apps they query, while personal loan apps like KreditBee and Moneyview query an excessive number of apps. A significant privacy loophole exists through the \"ACTION_MAIN\" filter, allowing apps to see all installed apps with a user interface. Zepto's READ_SMS permission request shows how apps access personal data, potentially sharing it with brokers and affecting user pricing.",
+          "url": "https://peabee.substack.com/p/everyone-knows-what-apps-you-use?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "peabee.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-31:a15",
+          "order": 1,
+          "title": "WHAT TO DO",
+          "summary": "Creating valuable and original things is necessary, as it's uniquely human to be able to think deeply and clearly, which results in the best products, ideas, companies, and art made.",
+          "url": "https://paulgraham.com/do.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "paulgraham.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a16",
+          "order": 2,
+          "title": "MALWARE IN LISP? NOW YOU'RE JUST BEING CRUEL",
+          "summary": "Malware authors are increasingly using less common programming languages like Delphi, Haskell, and Rust, along with less popular compilers, to evade detection by traditional static analysis methods.",
+          "url": "https://www.theregister.com/2025/03/29/malware_obscure_languages/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a17",
+          "order": 3,
+          "title": "IT'S FIVE GRAND A DAY TO MISS OUR S3 EXIT",
+          "summary": "37signals' upcoming exit from AWS S3 to its own Pure Storage hardware will save millions over five years, but it will have to pay $5,000 per day if the data migration isn't completed by June 30.",
+          "url": "https://world.hey.com/dhh/it-s-five-grand-a-day-to-miss-our-s3-exit-b8293563?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "world.hey.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-31:a18",
+          "order": 4,
+          "title": "WHY IS THIS SITE BUILT WITH C",
+          "summary": "This developer built their website with C to have fast, dependency-free, and long-lasting static site generation using the md4c markdown parser after being frustrated with the complexity and maintenance burden of previous attempts using Django and Nuxt.js.",
+          "url": "https://marcelofern.com/posts/c/why-is-this-site-built-with-c/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "marcelofern.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

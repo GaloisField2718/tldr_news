@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-01-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-09",
+  "source_path": "TLDR InfoSec/article_09-01-2025.md",
+  "source_content_hash": "sha256:73479ad8faefd0df53f634b6c1c01c878266ce9ab986df7d7f8b2bc9caac303b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-09",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-09:a04",
+          "order": 1,
+          "title": "CASIO SAYS HACKERS STOLE PERSONAL DATA OF 8,500 PEOPLE DURING OCTOBER RANSOMWARE ATTACK",
+          "summary": "Casio confirmed that an October ransomware attack by the Underground gang compromised the personal data of 8,500 people, including 6,500 employees and 1,900 business partners. The attack stole 200GB of data, though customer credit card information remained secure.",
+          "url": "https://techcrunch.com/2025/01/08/casio-says-hackers-stole-personal-data-of-8500-people-during-october-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a05",
+          "order": 2,
+          "title": "TURBULENCE AT UN AVIATION AGENCY AS PROBE INTO POTENTIAL DATA THEFT BEGINS",
+          "summary": "The UN's International Civil Aviation Organization (ICAO) is investigating a potential data breach after cybercriminal \"Natohub\" claimed to have stolen 42,000 documents containing personal information. ICAO previously faced a 2016 cyberattack that they allegedly attempted to cover up.",
+          "url": "https://www.theregister.com/2025/01/07/icao_data_theft_investigation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a06",
+          "order": 3,
+          "title": "MISCONFIGURED LICENSE PLATE READERS ARE LEAKING DATA IN REAL TIME",
+          "summary": "Security Researcher Matt Brown purchased and reverse engineered the firmware of a Motorola automated license plate reader (ALPR) system. Brown used a unique error page to find 150 Internet exposed Motorola ALPR systems that did not implement any form of authentication. Wired journalists confirmed that these cameras are deployed by law enforcement and are leaking license plate number, car location, make and model, and other metadata from thousands of cars in just 20 minutes of sample time.",
+          "url": "https://arstechnica.com/security/2025/01/misconfigured-license-plate-readers-are-leaking-data-and-video-in-real-time/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-09:a07",
+          "order": 1,
+          "title": "USING THE MACH-O MODULE IN YARA-X",
+          "summary": "This post introduces some of the improvements that the new Yara-X Mach-O module makes over the original. The new Mach-O module parses many of the core structures that are used in Mach-O binaries including the symbol table, imports, exports, entitlements, remote paths, and dylibs. The module also allows for calculating binary similarities by hashing the above structures.",
+          "url": "https://virustotal.github.io/yara-x/blog/using-the-mach-o-module-in-yara-x/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "virustotal.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a08",
+          "order": 2,
+          "title": "ATTACKING ENTRA METAVERSE: PART 1",
+          "summary": "Part 1 of a series of blog posts exploring the Entra metaverse and demonstrating attacks against it. It introduces the concept of the Entra metaverse and demonstrates how the compromise of an Entra user can be used to fully compromise an on-premise AD user. The following posts explore cross-domain attacks and argue that the Entra Tenant is your trust boundary when using Entra.",
+          "url": "https://posts.specterops.io/attacking-entra-metaverse-part-1-c9cf8c4fb4ee?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "posts.specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a09",
+          "order": 3,
+          "title": "CROSS CACHE ATTACK CHEATSHEET",
+          "summary": "This article describes a technique called \"cross-cache attack\" in Linux kernel exploitation that allows transferring a Use-After-Free (UAF) vulnerability from one object to another, even if they're allocated from different slabs. The attack involves a five-step process: spraying object-A sharing a slab with object-V, allocating a victim object-V, freeing object-V, freeing specific objects to trigger slab recycling through the buddy system, and finally spraying object-B to overlap with the freed object-V's memory. The article provides detailed code examples and experimental results, including a timing-based technique called SLUBStick that helps determine the state of slab allocation in the kernel.",
+          "url": "https://u1f383.github.io/linux/2025/01/03/cross-cache-attack-cheatsheet.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "u1f383.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-09:a10",
+          "order": 1,
+          "title": "CYBERBRO",
+          "summary": "A simple application that extracts your IoCs from garbage input and checks their reputation using multiple CTI services.",
+          "url": "https://github.com/stanfrbd/cyberbro?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a11",
+          "order": 2,
+          "title": "ELEMENT SECURITY (PRODUCT LAUNCH)",
+          "summary": "Element is designed to proactively identify and mitigate risks by continuously discovering and mapping assets, and feeding identified assets into a proprietary exploit engine to assess exploitability.",
+          "url": "https://element.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "element.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a12",
+          "order": 3,
+          "title": "CONVOC2",
+          "summary": "ConvoC2 provides C2 infrastructure that allows for executing system commands via Microsoft Teams.",
+          "url": "https://github.com/cxnturi0n/convoC2?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-09:a13",
+          "order": 1,
+          "title": "11 THOUGHTS ON “A DAY IN THE LIFE OF A PROLIFIC VOICE PHISHING CREW”",
+          "summary": "Brian Krebs has notes on a sophisticated voice phishing operation called \"Crypto Chameleon\" that is exploiting Apple and Google's legitimate services to scam cryptocurrency owners, using a coordinated team approach and phishing panels to steal millions from victims including billionaire Mark Cuban, while operating openly on messaging platforms like Discord and Telegram where the criminals frequently betray each other.",
+          "url": "https://krebsonsecurity.com/2025/01/a-day-in-the-life-of-a-prolific-voice-phishing-crew/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a14",
+          "order": 2,
+          "title": "800+ “POTENTIAL VULNERABILITIES AND BIASES” MAY AFFLICT AI-INFUSED MEDICAL SERVICES",
+          "summary": "The Chief Digital and Artificial Intelligence Office (CDAO) led an effort in coordination with the Crowdsourced AI Red-Teaming Assurance Program and healthcare agencies to evaluate the usage of LLMs in military medical services. The over 200 participants evaluated three popular LLMs for a clinical note summarization and advisory Chatbot. The effort was concluded with over 800 potential vulnerabilities and biases identified with suggested improvements to reduce the number in future efforts.",
+          "url": "https://www.defenseone.com/technology/2025/01/dod-announces-completion-pilot-identify-medical-ai-vulnerabilities/401982/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "defenseone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a15",
+          "order": 3,
+          "title": "BACKDOORING YOUR BACKDOORS - ANOTHER $20 DOMAIN, MORE GOVERNMENTS",
+          "summary": "WatchTowr Labs researchers discovered over 4,000 active web backdoors that were hijacked by registering expired domains. The backdoors allowed unauthorized access to high-profile targets like government and university systems. The domains are now managed by The Shadowserver Foundation to prevent misuse by cybercriminals.",
+          "url": "https://labs.watchtowr.com/more-governments-backdoors-in-your-backdoors/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-09:a16",
+          "order": 1,
+          "title": "MAGIC/TRAGIC EMAIL LINKS: DON'T MAKE THEM THE ONLY OPTION",
+          "summary": "While magic links in emails are being promoted for easier logins, they can be problematic for users with multiple devices and slower connections.",
+          "url": "https://recyclebin.zip/posts/annoyinglinks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "recyclebin.zip",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a17",
+          "order": 2,
+          "title": "APPLE'S NEW AI FEATURE REWORDS SCAM MESSAGES TO MAKE THEM LOOK MORE LEGIT",
+          "summary": "Apple's new AI feature is rephrasing scam messages to look more legitimate on iPhones and Macs, potentially leading to more people falling for scams.",
+          "url": "https://www.crikey.com.au/2025/01/08/apple-new-artificial-intelligence-rewords-scam-messages-look-legitimate/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "crikey.com.au",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-09:a18",
+          "order": 3,
+          "title": "HOW WE CRACKED A 512-BIT DKIM KEY FOR LESS THAN $8 IN THE CLOUD",
+          "summary": "Researchers successfully cracked a 512-bit RSA key in the cloud for less than $8, demonstrating the importance of using secure key lengths in email security measures.",
+          "url": "https://dmarcchecker.app/articles/crack-512-bit-dkim-rsa-key?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "dmarcchecker.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

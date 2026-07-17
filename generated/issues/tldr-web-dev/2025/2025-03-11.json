@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-03-11",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-11",
+  "source_path": "TLDR Web Dev/article_11-03-2025.md",
+  "source_content_hash": "sha256:c15d9aa1e52b7ba0f51539d4409c55e99c7feb8cdfdea1c27b58f89ab423ad52",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-11",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-11:a04",
+          "order": 1,
+          "title": "FULLY IN-BROWSER GRAPH RAG WITH KUZU-WASM",
+          "summary": "Kuzu-Wasm and WebLLM can be used to create a fully in-browser chatbot, as shown by this article, that answers questions over LinkedIn data using Graph Retrieval-Augmented Generation (Graph RAG). This implementation uses WebAssembly's ability to run complex apps serverlessly within a browser. The architecture involves converting natural language questions to Cypher queries, retrieving relevant graph data, and generating natural language answers with an LLM.",
+          "url": "https://blog.kuzudb.com/post/kuzu-wasm-rag/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.kuzudb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a05",
+          "order": 2,
+          "title": "SERVER ACTIONS WITH TOAST (USEEFFECT)",
+          "summary": "This tutorial goes over how to display toast notifications for React Server Actions using the `useActionState` Hook. It shows how to adjust the Server Action to return a timestamped response object and then use React's `useEffect` Hook in a client component to trigger toast messages based on the action's state, status, and timestamp to prevent duplicate notifications. It also covers scenarios such as successful actions, errors, pending states, and how to integrate these with toast notifications.",
+          "url": "https://www.robinwieruch.de/react-server-actions-useactionstate-toast/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "robinwieruch.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a06",
+          "order": 3,
+          "title": "WHAT'S THE DEAL WITH RACTORS?",
+          "summary": "Ractors were introduced in Ruby to enable true in-process parallelism while still maintaining some level of the Global VM Lock (GVL). However, due to limitations like restricted shared state, lack of essential concurrent data structures, and critical implementation issues, they are impractical for running full web applications. Despite this, Ractors could still be useful for parallelizing background tasks in libraries.",
+          "url": "https://byroot.github.io/ruby/performance/2025/02/27/whats-the-deal-with-ractors.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "byroot.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-11:a07",
+          "order": 1,
+          "title": "I QUIT MY FAANG JOB BECAUSE IT'LL BE AUTOMATED BY THE END OF 2025",
+          "summary": "Jasper Gilley was a former machine learning engineer at a FAANG company who quit his job because he believes advancements in AI coding agents will make his position obsolete by the end of 2025. AI's increasing ability to automate tasks like debugging and context gathering will diminish the demand for human engineers. The future of engineering roles will shift towards infrastructure management and AI agent supervision.",
+          "url": "https://jagilley.github.io/faang-blog.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "jagilley.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a08",
+          "order": 2,
+          "title": "SOFTWARE FALSEHOODS: YOU CAN BUILD IT CHEAP, FAST, AND GOOD - PICK TWO",
+          "summary": "\"Cheap, fast, good - pick two\" fails in software development because price is not correlated to either quality or speed. Overpaying for developers or services doesn't guarantee better outcomes, and hiring more people can actually slow down development due to increased communication overhead. True software quality involves understanding user needs, measuring key metrics, and organizational fit.",
+          "url": "https://aaronstannard.com/software-price-speed-quality/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "aaronstannard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a09",
+          "order": 3,
+          "title": "THE DATA SHOULD JUST FLOW",
+          "summary": "React memoization techniques, like `useMemo` and `useEffect`, can lead to stale data if dependencies are incorrectly specified, creating a \"clog\" in the data flow. This is because of closures in JavaScript, where outdated values are captured if dependencies are omitted. The React compiler hopes to solve this by automatically handling dependencies.",
+          "url": "https://www.felgus.dev/blog/data-should-flow?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "felgus.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-11:a10",
+          "order": 1,
+          "title": "WHY AND HOW TO MAKE SECURITY KNOWLEDGE ASSESSMENTS PART OF YOUR ROUTINE",
+          "summary": "Developers — not tools — are the first line of defense in securing applications. But most organizations don't know where gaps exist and how to build effective training programs. The solution? Instilling a culture of developer security knowledge assessments. Read the blog by Security Journey [11] to learn more, or try a free assessment here [12].",
+          "url": "https://hubs.ly/Q038RDRr0?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.ly",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a13",
+          "order": 2,
+          "title": "KIBO UI",
+          "summary": "Kibo UI is an open-source library of composable, accessible components built on shadcn/ui. It's a set of building blocks that wrap logic from various headless libraries.",
+          "url": "https://www.kibo-ui.com/overview?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "kibo-ui.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a14",
+          "order": 3,
+          "title": "CODETRACER",
+          "summary": "CodeTracer is an open-source, time-traveling debugger. It records program execution into a shareable trace file, allowing devs to step forward and backward in time to examine memory history via a GUI. CodeTracer has features like omniscience, tracepoints, call trace, state and history explorer, event log, and a CLI for creating and replaying traces.",
+          "url": "https://github.com/metacraft-labs/codetracer?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a15",
+          "order": 4,
+          "title": "EVOLVING AGENTS",
+          "summary": "The Evolving Agents Framework makes the creation, management, and evolution of AI agents easier. It features intelligent agent evolution, semantic search, YAML workflows, multi-framework support, and governance through firmware. The framework supports the Agent Communication Protocol and includes a comprehensive example showcasing agent collaboration, evolution, and semantic search.",
+          "url": "https://github.com/matiasmolinas/evolving-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-11:a16",
+          "order": 1,
+          "title": "PERFORMANCE OF THE PYTHON 3.14 TAIL-CALL INTERPRETER",
+          "summary": "Within the performance improvements of the Python 3.14 tail-call interpreter, a significant portion of the gains were due to a regression in LLVM 19 that inadvertently optimized the previous interpreter implementation. While the tail-call interpreter still offers a modest speedup, these gains show the challenges in benchmarking properly and how software dependencies are tough to deal with.",
+          "url": "https://blog.nelhage.com/post/cpython-tail-call/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.nelhage.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a17",
+          "order": 2,
+          "title": "THE TRAP OF THE TOP-DOWN APPROACH",
+          "summary": "Security consultants often need to quickly understand codebases without extensive coding, but playing with the code is helpful for deeper understanding. A top-down approach to code auditing is flawed because it's a time sink with diminishing returns. Instead, a bottom-up approach is recommended, where focusing on mastering small, self-contained parts of the codebase leads to a more comprehensive understanding and bug discovery.",
+          "url": "https://www.cryptologie.net/article/625/the-trap-of-the-top-down-approach/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "cryptologie.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a18",
+          "order": 3,
+          "title": "JAVASCRIPT",
+          "summary": "There is an increasing reliance on JavaScript in web dev and its impact on performance. Key findings include a rise in JavaScript volume and requests, alongside the growing use of optimization techniques like Brotli compression and dynamic imports. However, challenges remain with mobile performance, legacy code, and third-party scripts, highlighting the need for developers to prioritize efficiency and user experience.",
+          "url": "https://almanac.httparchive.org/en/2024/javascript?utm_source=tldrwebdev",
+          "reading_time_minutes": 26,
+          "source_domain": "almanac.httparchive.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-11:a19",
+          "order": 1,
+          "title": "PEOPLE ARE JUST AS BAD AS MY LLMS",
+          "summary": "Both large language models and humans have biases in pairwise comparison ranking tasks, with LLMs showing preference for the first item presented and humans showing preference for the item on the right.",
+          "url": "https://wilsoniumite.com/2025/03/10/people-are-just-as-bad-as-my-llms/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "wilsoniumite.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a20",
+          "order": 2,
+          "title": "STACK TRACES ARE UNDERRATED",
+          "summary": "Stack traces are necessary for debugging, and their absence or inconsistency in modern programming languages and distributed architectures makes debugging tougher.",
+          "url": "https://www.karl.berlin/stacktraces.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "karl.berlin",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a21",
+          "order": 3,
+          "title": "WITH AI YOU NEED TO THINK MUCH BIGGER!",
+          "summary": "Advancements in AI and better tools have simplified complex tasks, so devs can now tackle much bigger and more ambitious projects.",
+          "url": "https://rodyne.com/?p=1828&utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "rodyne.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-11:a22",
+          "order": 4,
+          "title": "HOW TO USE AI TO INCREASE SOFTWARE DEVELOPMENT PRODUCTIVITY",
+          "summary": "AI tools should be used for code generation, testing automation, improved code reviews, documentation, and sometimes full product rebuilds.",
+          "url": "https://open.substack.com/pub/gregorojstersek/p/how-to-use-ai-to-increase-software?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

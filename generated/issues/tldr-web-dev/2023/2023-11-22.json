@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2023-11-22",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-11-22",
+  "source_path": "TLDR Web Dev/article_22-11-2023.md",
+  "source_content_hash": "sha256:c25d0ab57147ce73491925e51892a21a38bc2f7fefd3745aef7ac7583111c6f6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-11-22",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-22:a05",
+          "order": 1,
+          "title": "THE ROOTS OF TODAY'S MODERN BACKEND ENGINEERING PRACTICES",
+          "summary": "Backend practices in software engineering have seen significant changes over the years. In the early days of the internet, backend development involved rudimentary tools like shell scripting, Perl, and hand-rolled C-code, with version control systems like CVS. Amazon, then a startup, ran its entire operation on a single DEC AlphaServer, using basic methods like symlink flipping for code updates. Eventually, as tech companies started growing faster and getting larger, it was necessary to start implementing distributed systems to handle increasing demand.",
+          "url": "https://blog.pragmaticengineer.com/the-roots-of-modern-backend-engineering-practices/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a06",
+          "order": 2,
+          "title": "HOW A 3RD PARTY API CAN RUIN YOUR WEEKEND",
+          "summary": "This is a story of how a critical microservice that depends on a 3rd-party API failed and caused a disruption for over two weeks. The API suddenly failed one day, and because the handling of API events was not done in real time, the failed events piled up, reaching the API limit and causing many events to be dropped. The post dives into the lessons learned from the incident, such as automating re-runs of failed jobs, involving other teams more, and establishing an on-call rotation earlier.",
+          "url": "https://open.substack.com/pub/zaidesanton/p/how-a-3rd-party-api-can-ruin-you?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a07",
+          "order": 3,
+          "title": "CREATING A BESPOKE LLM FOR AI-LARGENERATED DOCUMENTATION",
+          "summary": "Databricks recently announced an AI-generated documentation feature, using large language models (LLMs) to automate documentation for tables and columns, with over 80% of the company’s table metadata updates now AI-assisted. A bespoke LLM was developed by two Databricks engineers in one month for under $1,000 in compute costs, resulting in high quality, fast throughput, and low costs. This new model, MPT-7B, fine-tuned on around 3,600 examples, addresses issues of documentation in data platforms and demonstrates the feasibility and efficiency of creating custom LLMs for specific tasks.",
+          "url": "https://www.databricks.com/blog/creating-bespoke-llm-ai-generated-documentation?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-22:a08",
+          "order": 1,
+          "title": "HOW LARGE PULL REQUESTS SLOW DOWN DEVELOPMENT",
+          "summary": "Complex codebases lead to change amplification, where simple changes require modifications in multiple places, slowing down the process. Research on 1.5 million pull requests showed that the number of files changed in a pull request (PR) correlates with the time taken to merge it. To minimize complexity and enhance efficiency, it's recommended to keep PRs small, limit them to three or fewer file changes, and use strategies like stacking if possible.",
+          "url": "https://graphite.dev/blog/how-large-prs-slow-down-development?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "graphite.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a09",
+          "order": 2,
+          "title": "TAKE YOUR TIME MAKING DECISIONS",
+          "summary": "It’s important to take time to make consequential decisions, rather than responding under pressure or panic. While quick action has its place, big decisions rarely require instant responses. Instead, be prepared, consider the best alternatives, and make decisions with a substantial amount of information rather than wait for perfect information.",
+          "url": "https://blog.matt-rickard.com/p/take-your-time-making-decisions?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.matt-rickard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-22:a10",
+          "order": 1,
+          "title": "TRACE",
+          "summary": "Trace allows developers to create SwiftUI components and screens for mobile apps with natural language. The application allows for the iterative development of iOS apps in the browser, along with the ability to export files to Xcode for further development.",
+          "url": "https://www.trace.zip/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "trace.zip",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a11",
+          "order": 2,
+          "title": "INTRODUCING THE NEXT GENERATION OF AWS AMPLIFY’S FULLSTACK DEVELOPMENT EXPERIENCE",
+          "summary": "A new generation of AWS Amplify, an AWS backend platform, has been released. It transitions Amplify to a code-first DX, allowing developers to succinctly express app requirements like data models, business logic, and authorization rules in TypeScript. Core new features include Typescript and monorepo support, per-developer cloud sandbox environments, a unified Amplify console, and the ability to use AWS CDK code inline.",
+          "url": "https://aws.amazon.com/blogs/mobile/introducing-amplify-gen2/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a12",
+          "order": 3,
+          "title": "INTRODUCING STABLE VIDEO DIFFUSION",
+          "summary": "StabilityAI has released Stable Video Diffusion as open-source. Stable Video Diffusion can create videos using generative AI. This post shows various demos of the model in action.",
+          "url": "https://stability.ai/news/stable-video-diffusion-open-ai-video-model?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "stability.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-22:a13",
+          "order": 1,
+          "title": "SAM ALTMAN TO RETURN AS CEO OF OPENAI",
+          "summary": "Sam Altman is returning as CEO of OpenAI five days after an attempted coup by the company’s board. The OpenAI board is being overhauled and now seats Bret Taylor (former CEO of Salesforce), Larry Summers (Former United States Secretary of the Treasury), and Adam D'Angelo (CEO of Quora and already a current member of the OpenAI board).",
+          "url": "https://www.theverge.com/2023/11/22/23967223/sam-altman-returns-ceo-open-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a14",
+          "order": 2,
+          "title": "HOW I (KIND OF) KILLED MERCURIAL AT MOZILLA",
+          "summary": "Firefox is transitioning from Mercurial to Git for version control. The Mozilla source code, initially stored in a CVS repository since 1998, moved to Mercurial in 2007, a time when distributed version control systems (DVCS) like Git and Mercurial were just emerging. The choice of Mercurial was largely influenced by Git's subpar performance on Windows at the time. Over the years, as Git gained popularity and GitHub became a major platform for open-source projects, more Mozilla developers began using Git. As a result, Mozilla decided to finally move over to Git to keep up with current developer trends.",
+          "url": "https://glandium.org/blog/?p=4346&utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "glandium.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-22:a15",
+          "order": 1,
+          "title": "INTRODUCING AMAZON CODEWHISPERER FOR COMMAND LINE",
+          "summary": "Amazon CodeWhisperer for the command line includes IDE-style completions for 500+ CLIs and natural language-to-bash translation.",
+          "url": "https://aws.amazon.com/blogs/devops/introducing-amazon-codewhisperer-for-command-line/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a16",
+          "order": 2,
+          "title": "RESUMING THE TRANSITION TO MANIFEST V3",
+          "summary": "Chrome Extensions using Manifest V2 will start being disabled as early as June 2024.",
+          "url": "https://developer.chrome.com/blog/resuming-the-transition-to-mv3/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "developer.chrome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-22:a17",
+          "order": 3,
+          "title": "HOW TO FORTIFY YOUR DOCKER CONTAINERS: A GUIDE TO ADVANCED SECURITY PRACTICES",
+          "summary": "A deep dive into advanced techniques and best practices for securing Docker containers against cyber attacks.",
+          "url": "https://blog.coderco.io/p/how-to-fortify-your-docker-containers?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.coderco.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

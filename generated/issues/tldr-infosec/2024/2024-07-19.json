@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-07-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-07-19",
+  "source_path": "TLDR InfoSec/article_19-07-2024.md",
+  "source_content_hash": "sha256:95331398518d71188abf79e2f4ecef8463590e847908bf79bb06eef51ec47b9d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-07-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a04",
+          "order": 1,
+          "title": "HOW BIGID BECAME A LEADER IN THE CROWDED DSPM MARKET",
+          "summary": "These days, DSPM (data security posture management) is a must. But BigID [4] isn't just jumping on the bandwagon – they're leading the pack when it comes to coverage, classification, risk management, and integrations.",
+          "url": "https://home.bigid.com/dspm-demo?utm_source=tldr&utm_medium=infosec&utm_campaign=primary",
+          "reading_time_minutes": null,
+          "source_domain": "home.bigid.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a07",
+          "order": 1,
+          "title": "MICROSOFT PATCHES ZERO-CLICK OUTLOOK REMOTE CODE EXECUTION VULNERABILITY",
+          "summary": "Morphisec discovered an unauthenticated, zero-click (for trusted senders) RCE vulnerability in Microsoft Outlook. It has warned that this vulnerability could lead to data breaches, unauthorized access, and other malicious activities if abused. A patch for the vulnerability was included in July's Patch Tuesday patches. The researchers will be presenting more technical details at DEFCON.",
+          "url": "https://blog.morphisec.com/cve-2024-38021-microsoft-outlook-moniker-rce-vulnerability?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.morphisec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a08",
+          "order": 2,
+          "title": "CRITICAL CISCO BUG LETS HACKERS ADD ROOT USERS ON SEG DEVICES",
+          "summary": "Cisco has fixed a critical vulnerability that allows hackers to add root users and crash SEG devices using malicious email attachments. The flaw involves an absolute path traversal weakness in SEG content scanning, enabling attackers to replace files on the system. Cisco advises updating vulnerable appliances to prevent exploitation and contacting its Technical Assistance Center for assistance.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-cisco-bug-lets-hackers-add-root-users-on-seg-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a09",
+          "order": 3,
+          "title": "CROWDSTRIKE UPDATE CAUSES MAJOR IT OUTAGE, TAKING OUT BANKS, AIRLINES, AND BUSINESSES ACROSS THE WORLD",
+          "summary": "Businesses all over the world, from hospitals to banks and other companies, are reporting IT outages. Microsoft started noting issues on its Service Health page in the early hours of today. Shortly thereafter, outages became widespread. CrowdStrike says that a faulty update is causing crashes in Windows systems - Mac and Linux devices are unaffected. The issue stems from invalidly formatted .sys files causing the top level driver to crash. Recovery will be very difficult.",
+          "url": "https://techcrunch.com/2024/07/19/banks-airlines-brokerage-houses-report-widespread-outages-across-the-globe/",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a10",
+          "order": 4,
+          "title": "LINUX KERNEL: VULNERABILITY IN THE EBPF VERIFIER REGISTER LIMIT TRACKING",
+          "summary": "A bug in the Linux Kernel's eBPF verifier can lead to a system compromise by allowing attackers to manipulate register values. The vulnerability was fixed in July after being reported in June. It requires specific permissions and is not widespread among applications or containers.",
+          "url": "https://github.com/google/security-research/security/advisories/GHSA-hfqc-63c7-rj9f",
+          "reading_time_minutes": 4,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a11",
+          "order": 1,
+          "title": "ARE MY AWS RESOURCES ENCRYPTED OR UNENCRYPTED BY DEFAULT?",
+          "summary": "Fog Security investigated 51 different AWS resources and found that only 76% of them were encrypted by default, with 22 of those being encrypted with AWS Owned Keys by default. Even when encrypted by default, services that used AWS Owned Keys were shared between AWS accounts and don't typically offer more access controls. AWS Managed Keys are controlled by AWS and typically implicitly grant access to IAM principals in the same account, so they may offer less protection than expected. Fog Security recommends enabling encryption by default where possible and also opting for the use of AWS Customer Managed Keys where possible.",
+          "url": "https://www.fogsecurity.io/blog/are-my-aws-resources-encrypted-or-unencrypted-by-default?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "fogsecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a12",
+          "order": 2,
+          "title": "HOW TO ANALYZE MALICIOUS MSI INSTALLER FILES",
+          "summary": "This blog post discusses in detail how to analyze malicious MSI files used for software installation on Windows. MSI installers can hide malicious code within legitimate packages to avoid detection by security tools. Threat actors often use custom actions in MSI files to execute harmful code during installation.",
+          "url": "https://intezer.com/blog/incident-response/how-to-analyze-malicious-msi-installer-files/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "intezer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a13",
+          "order": 3,
+          "title": "LEVERAGING AUTOMATED FIRMWARE ANALYSIS WITH THE OPEN-SOURCE FIRMWARE ANALYZER EMBA",
+          "summary": "This blog post discusses how automated firmware analysis tools like EMBA enhance security by scanning for vulnerabilities in device firmware. EMBA's open-source approach allows for deep analysis, detection of unknown threats, and customized testing. Leveraging EMBA can significantly improve product security, protect critical devices, and streamline the firmware analysis process.",
+          "url": "https://links.tldrnewsletter.com/HT8jnb",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a14",
+          "order": 1,
+          "title": "SEC MATERIALITY FRAMEWORK",
+          "summary": "What defines a “material” cybersecurity incident?",
+          "url": "https://www.lacework.com/resource/sec-materiality-framework.html?utm_source=tldr&utm_medium=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "lacework.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a15",
+          "order": 2,
+          "title": "WHISPERS",
+          "summary": "Whispers is an information security analysis tool designed to identify hardcoded secrets in structured text and static code.",
+          "url": "https://github.com/adeptex/whispers?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a16",
+          "order": 3,
+          "title": "LEMMA",
+          "summary": "Lemma is a Python-based AWS Lambda package and client designed to execute packaged command-line tools in a scalable, remote environment. It makes use of Lambda's response streaming to stream real-time stdout to the client.",
+          "url": "https://github.com/defparam/lemma?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a17",
+          "order": 4,
+          "title": "PUMPKIN",
+          "summary": "Pumbin is an implant generation platform written in Rust that supports the Extism plugin system. It populates implants with randomized data so that each generated implant is unique.",
+          "url": "https://github.com/pumpbin/pumpbin?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a18",
+          "order": 1,
+          "title": "AWS SECRETS MANAGER ANNOUNCES OPEN SOURCE RELEASE OF SECRETS MANAGER AGENT",
+          "summary": "AWS has released a language agnostic local HTTP service that can be installed in compute environments to read and cache secrets from Secrets Manager. TTL, cache size, maximum connections, and HTTP port can be configured in the agent. The agent also includes SSRF protections by default.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2024/07/aws-secrets-manager-open-source-secrets-manager-agent/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a19",
+          "order": 2,
+          "title": "HACKER JAILED FOR CREATING MALWARE THAT TARGETED BRAINTREE SITE",
+          "summary": "A university student created malware to disrupt government websites and made £45,000 from selling it. He targeted a Jobcentre in Braintree, Essex, and was sentenced to 21 months in jail for computer misuse. The malware caused websites to go offline by overwhelming them with internet traffic.",
+          "url": "https://www.bbc.com/news/articles/cg3exzpd5yjo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a20",
+          "order": 3,
+          "title": "NULLBULGE | THREAT ACTOR MASQUERADES AS HACKTIVIST GROUP REBELLING AGAINST AI",
+          "summary": "NullBulge is a cybercriminal group that targets AI and gaming entities. This post talks about how NullBulge distributes malware through GitHub and Hugging Face, posing a threat to software supply chains. NullBulge has shifted towards hacktivist motives for financial gain.",
+          "url": "https://www.sentinelone.com/labs/nullbulge-threat-actor-masquerades-as-hacktivist-group-rebelling-against-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "sentinelone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-19:a21",
+          "order": 1,
+          "title": "NVIDIA TRANSITIONS FULLY TOWARDS OPEN-SOURCE GPU KERNEL MODULES",
+          "summary": "With the release of its R560 GPU drivers, NVIDIA is recommending users on newer GPU models to switch to the open-source drivers.",
+          "url": "https://developer.nvidia.com/blog/nvidia-transitions-fully-towards-open-source-gpu-kernel-modules/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "developer.nvidia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a22",
+          "order": 2,
+          "title": "CISA PUBLISHES RESILIENCE-PLANNING PLAYBOOK FOR CRITICAL INFRASTRUCTURE",
+          "summary": "CISA has released a new playbook to help improve security and resilience in critical infrastructure.",
+          "url": "https://statescoop.com/cisa-cybersecurity-resilience-planning-playbook-critical-infrastructure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "statescoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-19:a23",
+          "order": 3,
+          "title": "WAZIRX CRYPTOCURRENCY EXCHANGE LOSES $230 MILLION IN MAJOR SECURITY BREACH",
+          "summary": "WazirX, an Indian cryptocurrency exchange, suffered a security breach resulting in the theft of $230 million in crypto assets.",
+          "url": "https://thehackernews.com/2024/07/wazirx-cryptocurrency-exchange-loses.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

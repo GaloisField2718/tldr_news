@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-01-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-10",
+  "source_path": "TLDR InfoSec/article_10-01-2025.md",
+  "source_content_hash": "sha256:f13eba3a8a2fedb80fac88c4ccebe5d2e3c7b2ec040c28c8579f28cad6b6dab2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a04",
+          "order": 1,
+          "title": "ENVIRONMENT",
+          "summary": "Microsoft offers more than 2000 customizable policies for Office applications… but its security baseline covers just 137 by default. Haven't set these policies? Then you're potentially giving threat actors hundreds of ways to target your organization.",
+          "url": "https://www.threatlocker.com/ebooks/securing-m365?utm_source=tldr&utm_medium=sponsor&utm_campaign=m365_q1_25&utm_content=m365&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a04",
+          "order": 2,
+          "title": "Download now",
+          "summary": "",
+          "url": "https://www.threatlocker.com/ebooks/securing-m365?utm_source=tldr&utm_medium=sponsor&utm_campaign=m365_q1_25&utm_content=m365&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a05",
+          "order": 1,
+          "title": "IVANTI WARNS OF NEW ZERO-DAY ATTACKS HITTING CONNECT SECURE PRODUCT",
+          "summary": "Ivanti has announced two high severity vulnerabilities in Ivanti Secure Connect appliances. The first vulnerability is a stack-based buffer overflow that allows unauthenticated, remote attackers to execute arbitrary code. The second vulnerability is a privilege escalation vulnerability for local, authenticated attackers. Ivanti says that the first vulnerability is being actively exploited and urges customers to update vulnerable devices.",
+          "url": "https://www.securityweek.com/ivanti-warns-of-new-zero-day-attacks-hitting-connect-secure-product/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a06",
+          "order": 2,
+          "title": "DATABASE TABLES OF STUDENT, TEACHER INFO STOLEN FROM POWERSCHOOL IN CYBERATTACK",
+          "summary": "PowerSchool, which serves 60 million K-12 students and teachers, suffered a data breach where hackers accessed personal information, including some Social Security Numbers and medical data, using stolen credentials. The company claims the data won't be shared publicly, though security firm Cyble suggests the breach may span years.",
+          "url": "https://www.theregister.com/2025/01/09/powerschool_school_data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a07",
+          "order": 3,
+          "title": "EXCELSIOR ORTHOPAEDICS FILES NOTICE OF DATA BREACH AFFECTING AN ESTIMATED 357,000",
+          "summary": "Excelsior Orthopaedics reported a data breach discovered in June 2024, exposing sensitive patient and employee data including Social Security numbers, medical records, and financial information. The company notified affected individuals on December 31, 2024, after investigating the unauthorized network access with cybersecurity experts.",
+          "url": "https://www.jdsupra.com/legalnews/excelsior-orthopaedics-files-notice-of-7215960/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "jdsupra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a08",
+          "order": 1,
+          "title": "HIDING LINUX PROCESSES WITH BIND MOUNTS",
+          "summary": "This post refines a methodology for hiding Linux processes by using a bind mount to mount a different directory on top of /proc/PID for the malicious process. The author was looking to refine the original methodology by creating a more realistic directory to overlay but realized that they could instead overlay the proc directory of a spontaneous process which is usually ignored by sysadmins. They note that this method would still be easy to detect if you are aware of the technique and provide a command to do so.",
+          "url": "https://righteousit.com/2024/07/24/hiding-linux-processes-with-bind-mounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "righteousit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a09",
+          "order": 2,
+          "title": "IMPLEMENTING SECURITY INVARIANTS IN AN AWS MANAGEMENT ACCOUNT",
+          "summary": "A Permission Boundary defines the maximum permissions that can be applied to a given principal. In an AWS management account, permissions boundaries are necessary because SCPs cannot be applied. This post introduces a set of security invariants that should be true in an AWS management account and provides an IAM policy to enforce them. It also links to a Lambda function that can be used to attach the policy to all newly created IAM principals.",
+          "url": "https://www.chrisfarris.com/post/payer-invariants/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "chrisfarris.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a10",
+          "order": 3,
+          "title": "HERE'S HOW HUCKSTERS ARE MANIPULATING GOOGLE TO PROMOTE SHADY CHROME EXTENSIONS",
+          "summary": "Google Chrome's Web Store policy prohibits developers from manipulating extension search results, yet hundreds violate this rule. Developers exploit language translation features to hide thousands of misleading keywords in alternative language descriptions, affecting search results and promoting unrelated or potentially abusive extensions.",
+          "url": "https://arstechnica.com/security/2025/01/googles-chrome-web-store-has-a-serious-spam-problem-promoting-shady-extensions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a11",
+          "order": 1,
+          "title": "FIREWALL TESTS EXPOSE CRITICAL GAPS IN AWS, AZURE, AND GCP",
+          "summary": "In November 2024, CyberRatings[dot]org - a non-profit that evaluates cybersecurity products - released independent test results [11] on the effectiveness of cloud vendors' firewalls. The findings demonstrate variability in protection across the three major cloud platforms - with AWS Firewall blocking only 0.3% of exploits tested. Read more",
+          "url": "https://blog.checkpoint.com/securing-the-cloud/independent-test-results-of-cloud-vendor-firewall-performance-a-closer-look-at-cyberratings-orgs-findings/?utm_source=other-display-tldr-news-jan10&utm_medium=advertising&utm_campaign=cm_cs_25q1_ww_all_tldr-newsletter-cyberratings-blog-jan-10-aw_en",
+          "reading_time_minutes": null,
+          "source_domain": "blog.checkpoint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a11",
+          "order": 2,
+          "title": "about the implications on the Check Point blog",
+          "summary": "",
+          "url": "https://blog.checkpoint.com/securing-the-cloud/independent-test-results-of-cloud-vendor-firewall-performance-a-closer-look-at-cyberratings-orgs-findings/?utm_source=other-display-tldr-news-jan10&utm_medium=advertising&utm_campaign=cm_cs_25q1_ww_all_tldr-newsletter-cyberratings-blog-jan-10-aw_en",
+          "reading_time_minutes": null,
+          "source_domain": "blog.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a12",
+          "order": 3,
+          "title": "SLACK JACK",
+          "summary": "Slack Jack is a tool that allows penetration testers to hijack a Slack bot using its token to perform various exploitation and enumeration functions.",
+          "url": "https://github.com/adelapazborrero/slack_jack?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a13",
+          "order": 4,
+          "title": "SYZKALLER",
+          "summary": "Syzkaller is a kernel fuzzer that finds bugs in various operating systems like Linux and Windows. Originally for Linux, it now supports other OS kernels. It is a coverage-guided tool developed by Google but is not an official product.",
+          "url": "https://github.com/google/syzkaller?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a14",
+          "order": 5,
+          "title": "WAFW00F",
+          "summary": "WAFW00F is a tool that helps identify and fingerprint Web Application Firewall products protecting websites. It works by sending HTTP requests and analyzing responses to determine the type of WAF in place. Users can easily install WAFW00F from PyPI, run it in a Docker container, or build it from the source code available on GitHub.",
+          "url": "https://github.com/EnableSecurity/wafw00f?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a15",
+          "order": 1,
+          "title": "100 DAYS OF YARA",
+          "summary": "100 Days of YARA is a community challenge to write a YARA rule every day for 100 days. This repository hosts individuals' YARA rules for the challenge as well as any tools or tips that users post.",
+          "url": "https://github.com/100DaysofYARA/2025/tree/main?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a16",
+          "order": 2,
+          "title": "SCHEMING REASONING EVALUATIONS",
+          "summary": "Apollo Research tested 6 popular LLMs to determine how they would react when given a prompt that gave them a goal, instructed them to achieve their goal at all costs, and then gave them a task to review files that contain proof that the developers have a different goal. 5 out of the 6 models tested would attempt to circumvent hurdles or safeguards to their goals and in some cases, models would lie about the actions on consultations. The researchers found that some models could deliberately underperform or otherwise scheme to attempt to achieve their goals.",
+          "url": "https://www.apolloresearch.ai/research/scheming-reasoning-evaluations?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "apolloresearch.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a17",
+          "order": 3,
+          "title": "EU COURT FINES EUROPEAN COMMISSION FOR BREACHING ITS OWN DATA PRIVACY LAWS",
+          "summary": "The EU General Court fined the European Commission €400 for violating GDPR by transferring a German citizen's personal data to U.S. companies through a conference registration system using Facebook login, marking the Commission's first such penalty.",
+          "url": "https://techcrunch.com/2025/01/08/eu-court-fines-european-commission-for-breaching-its-own-data-privacy-laws/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-10:a18",
+          "order": 1,
+          "title": "2024 CYBER SECURITY VENDOR FUNDING REPORT",
+          "summary": "Report on cyber security vendor funding, with funding raised by cybersecurity firms increasing to $9.5 billion in 2024 a decrease in funding volume.",
+          "url": "https://pinpointsearchgroup.com/2024-cyber-security-vendor-funding-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "pinpointsearchgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a19",
+          "order": 2,
+          "title": "SPACE BEARS RANSOMWARE: WHAT YOU NEED TO KNOW",
+          "summary": "Space Bears is a new Moscow-based ransomware group that emerged in April 2024, notable for its unique corporate-style presentation and professional marketing approach, which includes using business-like stock images and offering \"guarantees\" to victims while operating as part of the Phobos ransomware-as-a-service organization.",
+          "url": "https://www.tripwire.com/state-of-security/space-bears-ransomware-what-you-need-know?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "tripwire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-10:a20",
+          "order": 3,
+          "title": "OWASP TOP 10 NON-HUMAN IDENTITY RISKS FOR 2025: WHAT YOU NEED TO KNOW",
+          "summary": "The OWASP Top 10 Non-Human Identity Risks for 2025 focuses on the growing challenges of managing Non-Human Identities (NHIs) in enterprise cybersecurity.",
+          "url": "https://blog.gitguardian.com/owasp-top-10-non-human-identity-risks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

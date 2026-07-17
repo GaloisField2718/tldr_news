@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-02-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-02-05",
+  "source_path": "TLDR InfoSec/article_05-02-2025.md",
+  "source_content_hash": "sha256:580a593d0e2917cfcb75fe76c54947334552044e0ad97243bca9c016d2d6c047",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-02-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a04",
+          "order": 1,
+          "title": "FOUND",
+          "summary": "Security researchers from Check Point's open-appsec tested the efficacy of several leading WAF solutions using a comprehensive dataset: 1,040,242 legitimate HTTP requests from 692 real websites [4], and 73,924 malicious payloads from common attack vectors.",
+          "url": "https://www.openappsec.io/post/best-waf-solutions-in-2024-2025-real-world-comparison?utm_source=tldr&utm_medium=advertising&utm_campaign=cm_cs_25q1_ww_all_tldr-newsletter-waf-comparison-feb-5-aw_en+&utm_term=newsletter&utm_content=blog",
+          "reading_time_minutes": null,
+          "source_domain": "openappsec.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a05",
+          "order": 1,
+          "title": "GRUBHUB CONFIRMS DATA BREACH AFFECTING CUSTOMERS AND DRIVERS",
+          "summary": "Grubhub reported a data breach through a third-party provider that affects customers, merchants, and drivers. Hackers accessed personal information including names, emails, phone numbers, and partial payment data for some campus diners. While hashed passwords were exposed, bank details and Social Security numbers weren't compromised.",
+          "url": "https://techcrunch.com/2025/02/04/grubhub-confirms-data-breach-affecting-customers-and-drivers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a06",
+          "order": 2,
+          "title": "ZYXEL WON'T PATCH NEWLY EXPLOITED FLAWS IN END-OF-LIFE ROUTERS",
+          "summary": "Zyxel has issued a security advisory about actively exploited flaws in CPE series devices that it has no plans to fix. VulnCheck released the full details of two CVEs - one is for insecure default passwords and the other is for improper command validation leading to command injection. According to FOFA and Censys, there are over 1,500 potentially vulnerable devices that are internet exposed.",
+          "url": "https://www.bleepingcomputer.com/news/security/zyxel-wont-patch-newly-exploited-flaws-in-end-of-life-routers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a07",
+          "order": 3,
+          "title": "AMD SEV-SNP VULNERABILITY ALLOWS MALICIOUS MICROCODE INJECTION WITH ADMIN ACCESS",
+          "summary": "A security flaw in AMD's SEV could allow an attacker to inject malicious CPU microcode with admin access. The vulnerability, tracked as CVE-2024-56161, has a high severity score of 7.2 and could lead to loss of confidentiality and integrity in a virtual machine environment. Google researchers discovered the flaw and AMD is working on a fix to address the issue.",
+          "url": "https://links.tldrnewsletter.com/mcH1cn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a08",
+          "order": 1,
+          "title": "WHAT DOES IT MEAN TO BUILD IN SECURITY FROM THE GROUND UP?",
+          "summary": "Security has a unique position as a systems requirement. While \"building security from the ground up\" is a popular way of starting, using established security mechanisms and following best practices might be more practical.",
+          "url": "https://www.theregister.com/2025/02/02/security_design_choices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a09",
+          "order": 2,
+          "title": "PHISHING FOR REFRESH TOKENS",
+          "summary": "This article examines an Attacker-in-the-Middle technique for stealing access and refresh tokens from the OAuth 2.0 authorization flow. The attacker first allows the user to go through the initial steps of the OAuth 2.0 flow until a response from the upstream server that has a header containing “nativeclient?code=“ is seen. This code can be used to request access and refresh tokens from the /oauth2/token endpoint.",
+          "url": "https://zolder.io/blog/phishing-for-refresh-tokens/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "zolder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a10",
+          "order": 3,
+          "title": "8 MILLION REQUESTS LATER, WE MADE THE SOLARWINDS SUPPLY CHAIN ATTACK LOOK AMATEUR",
+          "summary": "Watchtowr Labs researchers discovered abandoned Amazon S3 buckets and monitored incoming requests to them. They found vulnerabilities in how these abandoned buckets were accessed and used by organizations, highlighting security risks. They registered and monitored the abandoned buckets to raise awareness and improve internet security.",
+          "url": "https://labs.watchtowr.com/8-million-requests-later-we-made-the-solarwinds-supply-chain-attack-look-amateur/?utm_source=tldrinfosec",
+          "reading_time_minutes": 38,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a11",
+          "order": 1,
+          "title": "SCOPE",
+          "summary": "An automated GitHub Actions-based crawler that fetches and updates public scopes from popular bug bounty platforms (like HackerOne, Bugcrowd, and Intigriti, etc) that updates every 10 minutes.",
+          "url": "https://github.com/rix4uni/scope?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a12",
+          "order": 2,
+          "title": "SECCOMP-DIFF",
+          "summary": "Seccomp-Diff is a tool that analyzes binaries and containers to extract and disassemble seccomp-bpf profiles. It includes a CLI tool for comparing seccomp profiles between containers and a web interface for visually comparing system calls within a Kubernetes cluster. The project is open-source under the MIT License but has limitations regarding architecture support and Kubernetes deployment.",
+          "url": "https://github.com/antitree/seccomp-diff?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a13",
+          "order": 3,
+          "title": "PEOPLE-RESEARCHER",
+          "summary": "The People Researcher Agent from Langchain AI searches the web for information about a person and organizes it based on a JSON schema provided by the user. The agent follows a multi-step process to research, extract, and evaluate data, allowing for thorough information collection. Users can customize the schema for the structured data output and evaluate the agent's performance using a provided dataset and evaluation script.",
+          "url": "https://github.com/langchain-ai/people-researcher?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a14",
+          "order": 1,
+          "title": "ANTHROPIC DARES YOU TO JAILBREAK ITS NEW AI MODEL",
+          "summary": "Anthropic has released Constitutional Classifiers, a new system for preventing AI model jailbreaks. The system uses natural language rules and extensive training data to detect and block prohibited content requests. It has withstood 3,000+ hours of bug bounty testing. Anthropic invites public testing through to February 10.",
+          "url": "https://arstechnica.com/ai/2025/02/anthropic-dares-you-to-jailbreak-its-new-ai-model/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a15",
+          "order": 2,
+          "title": "INDEXED FINANCE HACKER CHARGED IN US FOR ALLEGED $65M THEFT",
+          "summary": "US prosecutors charged Andean Medjedovic, 22, for allegedly hacking Indexed Finance ($16M) in 2021 and KyberSwap ($48M) in 2023. The Canadian math prodigy, who's been a fugitive since 2021, faces fraud, money laundering, and extortion charges.",
+          "url": "https://www.dlnews.com/articles/defi/indexed-finance-hacker-charged-in-us-over-kyberswap-exploit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "dlnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a16",
+          "order": 3,
+          "title": "REVERSE ENGINEERING CALL OF DUTY ANTI-CHEAT",
+          "summary": "An in-depth look at the user-mode Treyarch Anti-Cheat (TAC) system used in Call of Duty Black Ops Cold War. The system uses Arxan as an obfuscation/protection tool which includes features such as runtime executable decryption, continuous executable checksum monitoring, Jmp and entry point obfuscation, and pointer encryption. Layered on top of this is TAC, which features various anti-cheat systems like network monitoring, API hook detection, debug register detection, anti-debugging capabilities, visuals detection, and custom syscall encryption, among others, and terminates the process on detection.",
+          "url": "https://ssno.cc/posts/reversing-tac-1-4-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 39,
+          "source_domain": "ssno.cc",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-05:a17",
+          "order": 1,
+          "title": "GOOGLE PLAY, APPLE APP STORE APPS CAUGHT STEALING CRYPTO WALLETS",
+          "summary": "Android and iOS apps from Google Play and Apple App Store have a malicious SDK that steals cryptocurrency wallet recovery phrases using image recognition.",
+          "url": "https://www.bleepingcomputer.com/news/mobile/google-play-apple-app-store-apps-caught-stealing-crypto-wallets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a18",
+          "order": 2,
+          "title": "EXPLOITATION OF OVER 700 VULNERABILITIES CAME TO LIGHT IN 2024",
+          "summary": "Over 700 vulnerabilities were publicly reported as exploited for the first time in 2024, a significant increase from the previous year.",
+          "url": "https://www.securityweek.com/exploitation-of-over-700-vulnerabilities-came-to-light-in-2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-05:a19",
+          "order": 3,
+          "title": "NEW VALLEYRAT MALWARE VARIANT SPREADING VIA FAKE CHROME DOWNLOADS",
+          "summary": "A new ValleyRAT malware variant is spreading through fake Chrome downloads, targeting high-value individuals in organizations like finance and sales to steal sensitive data.",
+          "url": "https://hackread.com/valleyrat-malware-variant-fake-chrome-downloads/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

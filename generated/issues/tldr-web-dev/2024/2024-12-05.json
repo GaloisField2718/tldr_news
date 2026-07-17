@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-12-05",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-12-05",
+  "source_path": "TLDR Web Dev/article_05-12-2024.md",
+  "source_content_hash": "sha256:51bf3da1b61a2c0873dd5bfd726f4b92747a575cbab22f52b1ae17035589239a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-12-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a04",
+          "order": 1,
+          "title": "TO PRINCIPAL ENGINEER",
+          "summary": "Most coding copilots generate brittle code that lacks the full context of your codebase.",
+          "url": "https://www.augmentcode.com/?utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "augmentcode.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a06",
+          "order": 2,
+          "title": "👉Join a live demo session of Augment →",
+          "summary": "",
+          "url": "https://get.augmentcode.com/augment-code-in-action-webinar-dec11?utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "get.augmentcode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a07",
+          "order": 1,
+          "title": "HOW CHROME DOUBLED ITS SPEEDOMETER SCORES ON ANDROID",
+          "summary": "Chrome's Speedometer scores on Android have more than doubled since Chrome M112. These improvements came from build optimizations, including a 64-bit Arm build and profile-guided optimization, and enhancements to the V8 JavaScript and Blink rendering engines. There were also optimizations to Chrome's interaction with the operating system and hardware.",
+          "url": "https://blog.chromium.org/2024/12/doubling-speedometer-scores-android.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.chromium.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a08",
+          "order": 2,
+          "title": "BETTER CODE RENDERING THROUGH VIRTUALIZATION",
+          "summary": "Sentry rebuilt Codecov's code renderer to handle extremely large files that previously caused crashes. The root cause of the crashes was due to React struggling to render a massive number of elements, so the team implemented virtualization using the `@tanstack/react-virtual` library. This improved performance by only rendering visible lines, and after some additional work, the renderer was capable of handling files with up to 500,000 lines of code.",
+          "url": "https://sentry.engineering/blog/better-code-rendering-through-virtualization?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "sentry.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a09",
+          "order": 3,
+          "title": "DSQL VIGNETTE: READS AND COMPUTE",
+          "summary": "Aurora DSQL, AWS's new scalable SQL database, achieves scalability by independently scaling compute, read/write throughput, and storage using a disaggregated architecture that separates compute and storage. This architecture uses Firecracker MicroVMs for each transaction, resulting in dynamic scaling and optimized latency through proximity to clients. Reads are implemented using multiversion concurrency control allowing for strongly consistent, snapshot-isolated transactions without inter-node coordination.",
+          "url": "https://brooker.co.za/blog/2024/12/04/inside-dsql.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "brooker.co.za",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a10",
+          "order": 1,
+          "title": "WASHING YOUR CODE: DON'T MAKE ME THINK",
+          "summary": "Clean, readable code prioritizes clarity over brevity. Overly concise code snippets are difficult to understand. Devs should avoid obscure operators, unnecessary conditions, and shorthand properties that hinder readability.",
+          "url": "https://sapegin.me/blog/dont-make-me-think/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "sapegin.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a11",
+          "order": 2,
+          "title": "TRY...CATCH AS LITTLE AS POSSIBLE",
+          "summary": "This blog post explains why `try...catch` statements should be minimized in code reviews. Instead of using `try...catch` to handle expected errors, potential issues should be proactively checked for and handled before they cause exceptions.",
+          "url": "https://www.joshuakgoldberg.com/blog/try-catch-as-little-as-possible/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "joshuakgoldberg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a12",
+          "order": 1,
+          "title": "✂️ CUT YOUR QA CYCLES DOWN FROM HOURS TO MINUTES",
+          "summary": "If slow QA processes bottleneck you or your software engineering team and you're releasing slower because of it — you need to check out QA Wolf.",
+          "url": "https://www.qawolf.com/?utm_campaign=CutQACycles20241205&utm_source=tldr_webdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a12",
+          "order": 2,
+          "title": "Schedule a demo to learn more 🐺",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_campaign=CutQACycles20241205&utm_source=tldr_webdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a14",
+          "order": 3,
+          "title": "ASTRO 5",
+          "summary": "Astro 5.0 has been released, featuring a new Content Layer for managing content from various sources with a unified API and improved performance, and Server Islands to combine static and dynamic content for optimized caching and personalized experiences. The release also simplifies prerendering by merging hybrid and static options into a default static mode and includes a type-safe `astro:env` module for managing environment variables.",
+          "url": "https://astro.build/blog/astro-5/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "astro.build",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a15",
+          "order": 4,
+          "title": "OUTERBASE",
+          "summary": "Outerbase Studio is a browser-based GUI for managing various SQL databases, including SQLite, MySQL, PostgreSQL, and others. It has features like a query editor, data editor, schema editor, and connection manager, with both web and desktop app versions available.",
+          "url": "https://github.com/outerbase/studio?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a16",
+          "order": 5,
+          "title": "UNDICI",
+          "summary": "Undici is a high-performance HTTP/1.1 client for Node.js. It has various request methods, body mixins, and benchmark results better than other popular clients.",
+          "url": "https://github.com/nodejs/undici?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a17",
+          "order": 1,
+          "title": "EDGEPIPES: THE ALTERNATIVE TO SSR AND RSCS",
+          "summary": "EdgePipes is an alternative to server-side rendering (SSR) and React Server Components (RSCs) that focuses on optimizing network requests, rather than generating complete pages. It works by moving fetch hooks and routing logic to an Edge Function or SharedWorker, creating a \"pipe\" for streamable responses. This approach uses the improved network conditions between edge servers and backend data centers. Unlike SSR and RSCs, EdgePipes are resource-efficient, avoid rehydration issues, and are compatible with various application architectures.",
+          "url": "https://runspired.com/2024/12/01/edge-pipes.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "runspired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a18",
+          "order": 2,
+          "title": "USING GENERATIVE AI TO PARSE WEB PAGES INTO DATA",
+          "summary": "",
+          "url": "https://www.raymondcamden.com/2024/11/27/using-generative-ai-to-parse-web-pages-into-data?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "raymondcamden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-05:a19",
+          "order": 1,
+          "title": "GENIE 2: A LARGE-SCALE FOUNDATION WORLD MODEL",
+          "summary": "Google DeepMind's Genie 2 is a large-scale foundation world model that generates diverse, playable 3D environments from single image prompts for training and evaluating embodied AI agents.",
+          "url": "https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "deepmind.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a20",
+          "order": 2,
+          "title": "THE CLOUD CONTAINER ICEBERG",
+          "summary": "This guide explores the range of options for running containers, from mainstream cloud providers to highly specialized and experimental platforms.",
+          "url": "https://www.pulumi.com/blog/cursed-container-iceberg/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "pulumi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-05:a21",
+          "order": 3,
+          "title": "THOUGHTS ON TAILWIND 4",
+          "summary": "Tailwind CSS v4 has great improvements like the switch to LightningCSS and native CSS cascade layers, but the author has concerns about the performance implications of CSS variables, the potential for abuse with new descendant variants, and the lack of clarity in some class names.",
+          "url": "https://nmn.sh/blog/2024-11-30-thoughts-on-tailwind-4?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "nmn.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

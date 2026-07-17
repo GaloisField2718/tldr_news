@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-03-03",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-03-03",
+  "source_path": "TLDR Dev/article_03-03-2026.md",
+  "source_content_hash": "sha256:a7c3d432883cdf5c625171214118751cfe56d6d4d644cbe9a1243b7d8b2e2f9e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-03-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a04",
+          "order": 1,
+          "title": "YOUR STACK TRACE IS LYING BY OMISSION",
+          "summary": "You know the bug broke. You can see it broke. But the stack trace won't tell you why.",
+          "url": "https://blog.sentry.io/not-everything-that-breaks-is-an-error-a-logs-and-next-js-story/?utm_source=tldr&utm_medium=paid-community&utm_campaign=nextjs-fy27q1-nextjs&utm_content=newsletter-primary-logs-nextjs-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a04",
+          "order": 2,
+          "title": "➡️",
+          "summary": "",
+          "url": "https://blog.sentry.io/not-everything-that-breaks-is-an-error-a-logs-and-next-js-story/?utm_source=tldr&utm_medium=paid-community&utm_campaign=nextjs-fy27q1-nextjs&utm_content=newsletter-primary-logs-nextjs-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a05",
+          "order": 1,
+          "title": "INSIDE THE M4 APPLE NEURAL ENGINE, PART 1: REVERSE ENGINEERING",
+          "summary": "This dev collaboratively reverse-engineered Apple's M4 Neural Engine (ANE), bypassing CoreML to directly program the hardware and understand its undocumented architecture. They successfully mapped the software stack, discovered private APIs, cracked the binary format, and developed a method for direct compilation and execution on the ANE.",
+          "url": "https://maderix.substack.com/p/inside-the-m4-apple-neural-engine?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "maderix.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a06",
+          "order": 2,
+          "title": "FRONTEND MEMORY LEAKS: A 500-REPOSITORY STATIC ANALYSIS AND FIVE-SCENARIO BENCHMARK STUDY",
+          "summary": "A researcher scanned 500 popular open-source frontend repos and found that 86% have at least one missing-cleanup pattern. This includes things like useEffect without a cleanup return or .subscribe() without .unsubscribe(). They then ran controlled benchmarks showing each unhandled pattern leaks about 8 KB per mount/unmount cycle, which compounds fast in long-lived sessions like dashboards or Electron apps.",
+          "url": "https://stackinsight.dev/blog/memory-leak-empirical-study/?utm_source=tldrdev",
+          "reading_time_minutes": 32,
+          "source_domain": "stackinsight.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a07",
+          "order": 3,
+          "title": "HOW I BUILT A SUB-500MS LATENCY VOICE AGENT FROM SCRATCH",
+          "summary": "This dev built a custom voice agent from scratch that achieved sub-500ms latency, outperforming off-the-shelf platforms. Voice agents are fundamentally an orchestration challenge, requiring real-time coordination of Speech-to-Text (STT), Large Language Models (LLM), and Text-to-Speech (TTS) with precise turn-taking logic. Some optimizations he made included pipelining the agent's response, aggressively canceling in-flight generation during user interruptions, selecting LLMs with fast time-to-first-token (like Groq), and making sure all services are geographically co-located.",
+          "url": "https://www.ntik.me/posts/voice-agent?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "ntik.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a08",
+          "order": 1,
+          "title": "HOW I RUN 4–8 PARALLEL CODING AGENTS WITH TMUX AND MARKDOWN SPECS",
+          "summary": "A lightweight system using tmux, Markdown-based Feature Designs (FDs), and custom slash commands is described in this article to run 4-8 parallel coding agents. FDs serve as detailed specs of problems, solutions, implementation plans, and verification steps, which agents like Planners, Workers, and PMs use for design, implementation, and backlog management. The system tracks FDs through an 8-stage lifecycle.",
+          "url": "https://schipper.ai/posts/parallel-coding-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "schipper.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a09",
+          "order": 2,
+          "title": "GO IS THE BEST LANGUAGE FOR AI AGENTS",
+          "summary": "Go is the best language for developing AI agents. Go's compiled nature, with its strong typing and faster compilation than alternatives like Rust, allows AI agents to iterate quickly and produce syntactically correct code.",
+          "url": "https://getbruin.com/blog/go-is-the-best-language-for-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "getbruin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a10",
+          "order": 3,
+          "title": "DEVELOPING TASTE",
+          "summary": "Now that AI lets anyone ship working software, the real differentiator is taste: how a product looks, feels, and flows. Taste isn't just personal preference but a trainable instinct, and boils it down to three things: immerse yourself in great work, analyze why something feels good instead of just reacting, and keep practicing even when your output doesn't match your standards yet.",
+          "url": "https://emilkowal.ski/ui/developing-taste?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "emilkowal.ski",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a11",
+          "order": 1,
+          "title": "ORCHESTRATE 500+ CLAUDE CODE INSTANCES - OPEN SOURCE",
+          "summary": "What if 500+ Claude Code instances could self-organize into an engineering team? SWE-AF [12] makes it real: PM, architect, parallel coders, QA, reviewers, all autonomous. Vibe coding gives you drafts. This gives you production-ready, tested, reviewed code. 10x your engineering velocity.",
+          "url": "https://umami-production-286d.up.railway.app/q/1j6wlXxdF?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "umami-production-286d.up.railway.app",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a12",
+          "order": 2,
+          "title": "Start on GitHub",
+          "summary": "",
+          "url": "https://umami-production-286d.up.railway.app/q/1j6wlXxdF",
+          "reading_time_minutes": null,
+          "source_domain": "umami-production-286d.up.railway.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a13",
+          "order": 3,
+          "title": "EXPO SKILLS",
+          "summary": "The Expo team has published official AI skills for building, deploying, and debugging Expo apps.",
+          "url": "https://github.com/expo/skills?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a14",
+          "order": 4,
+          "title": "GIGGLES",
+          "summary": "Giggles is a batteries-included React framework designed for building rich terminal user interface (TUI) applications. It makes development easier by handling essential plumbing like focus, input routing, screen navigation, and theming out of the box.",
+          "url": "https://github.com/zion-off/giggles?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a15",
+          "order": 5,
+          "title": "APPLE INTRODUCES THE NEW IPAD AIR, POWERED BY M4",
+          "summary": "Apple has introduced a new iPad Air with an M4 chip for blazing performance, advanced AI capabilities, and better connectivity.",
+          "url": "https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/?utm_source=tldrdev",
+          "reading_time_minutes": 26,
+          "source_domain": "apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a16",
+          "order": 1,
+          "title": "LLMS CAN NOW FIGURE OUT WHO'S BEHIND ANY PSEUDONYM — FOR JUST $4",
+          "summary": "Researchers have found that LLM agents can effectively deanonymize pseudonymous online accounts at scale for just $1-4 per person. This capability breaks the long-held assumption that posting under a pseudonym offers privacy protection. The technique uses a four-stage LLM pipeline (ESRC) that extracts identity-relevant features from unstructured text, embeds them, and uses advanced reasoning to match profiles across various platforms.",
+          "url": "https://www.engineerscodex.com/llm-deanonymization-pseudonymity?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a17",
+          "order": 2,
+          "title": "IS AI KILLING SOFTWARE ENGINEERING JOBS?",
+          "summary": "AI is not eliminating software engineering jobs. Rather, the job market shifts are due to economic factors, specifically excessive hiring during the pandemic due to low interest rates, followed by sharp interest rate increases that began in early 2022.",
+          "url": "https://codemanship.wordpress.com/2026/03/02/is-ai-killing-software-engineering-jobs/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "codemanship.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-03:a18",
+          "order": 1,
+          "title": "STOP THE QA BOTTLENECK 🐢",
+          "summary": "Delegate QA to AI agents that validate every release.",
+          "url": "https://qa.tech/try-now/tldr?utm_source=tldr&utm_medium=newsletter&utm_campaign=2602tldr3",
+          "reading_time_minutes": null,
+          "source_domain": "qa.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a19",
+          "order": 2,
+          "title": "THE ARCHITECTURE BEHIND OPEN-SOURCE LLMS",
+          "summary": "Open-weight LLMs are converging on Mixture-of-Experts (MoE) transformer architectures, but primarily differentiate through strategies in attention mechanisms, expert sparsity, and increasingly varied post-training methodologies.",
+          "url": "https://blog.bytebytego.com/p/the-architecture-behind-open-source?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a20",
+          "order": 3,
+          "title": "GIT'S MAGIC FILES",
+          "summary": "This article explains various committed \"magic files\" and conventions within a repository, such as `.gitignore` and `.gitattributes`, and how they control Git's behavior.",
+          "url": "https://nesbitt.io/2026/02/05/git-magic-files.html?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "nesbitt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a21",
+          "order": 4,
+          "title": "SMALL TEAMS WIN, AGAIN",
+          "summary": "Small teams are faster because they naturally avoid the decision-making bottlenecks of larger organizations.",
+          "url": "https://www.lukew.com/ff/entry.asp?2143=&utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "lukew.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-03:a22",
+          "order": 5,
+          "title": "STACK OVERFLOW ADDS NEW FEATURES (INCLUDING AI ASSIST), RETHINKS 'LOOK AND FEEL'",
+          "summary": "Stack Overflow is launching a major redesign and AI Assist features following a 78 percent decline in question volume.",
+          "url": "https://developers.slashdot.org/story/26/03/02/069217/stack-overflow-adds-new-features-including-ai-assist-rethinks-look-and-feel?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "developers.slashdot.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

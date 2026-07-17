@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-03-15",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-03-15",
+  "source_path": "TLDR Web Dev/article_15-03-2024.md",
+  "source_content_hash": "sha256:5afcf1fab0979061f1f9cb725e88b76db7c71d961b90b5c9314af77aa9ac1b5a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-03-15",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-15:a04",
+          "order": 1,
+          "title": "HOW FIGMA'S DATABASES TEAM LIVED TO TELL THE SCALE",
+          "summary": "Figma's database team had to deal with hypergrowth that was starting to outpace their database's capacity. To address this, they first focused on vertical partitioning, which bought them time but was not a long-term solution. They then embarked on a complex nine-month project to implement horizontal sharding, tailoring their approach to Figma's specific needs. To manage their horizontally sharded databases, they built a service in Golang to support load-shedding, transaction support, database topology management, and more.",
+          "url": "https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "figma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a05",
+          "order": 2,
+          "title": "COMPARING JAVASCRIPT FRAMEWORKS PART 1: TEMPLATES",
+          "summary": "This is a thorough comparison of the template languages used by React, Vue, Angular, and Svelte. It looks at how the frameworks define and use components, event handling, and more advanced techniques like slotting. While all four frameworks can do everything that was tested, React still feels most natural to the author.",
+          "url": "https://www.maartenhus.nl/blog/comparing-javascript-frameworks-part-1-templates/?utm_source=tldrwebdev",
+          "reading_time_minutes": 30,
+          "source_domain": "maartenhus.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a06",
+          "order": 3,
+          "title": "HTTP/2 AND HTTP/3 EXPLAINED",
+          "summary": "HTTP is the backbone of the web, and it is constantly evolving. HTTP/1.1 introduced persistent connections and headers for better efficiency. HTTP/2 improved performance with multiplexing (sending multiple requests over one connection) and binary formatting. HTTP/3 is built on the QUIC protocol for enhanced performance on unstable networks, overcoming issues with TCP and TLS. Currently, both HTTP/2 and HTTP/3 are widely used.",
+          "url": "https://alexandrehtrb.github.io/posts/2024/03/http2-and-http3-explained/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "alexandrehtrb.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-15:a07",
+          "order": 1,
+          "title": "THE CURSE OF THE SENIOR SOFTWARE ENGINEER",
+          "summary": "Staying in a senior position for too long can hinder your future job prospects. This is known as the \"Curse of the Senior Software Engineer\" – you become too experienced for typical Senior roles, but lack the leadership experience necessary for higher-level positions. To avoid this curse, either proactively pursue promotions and leadership opportunities within your company or seek out companies that offer less structured career paths.",
+          "url": "https://www.yieldcode.blog/post/the-curse-of-the-senior-engineer/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "yieldcode.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a08",
+          "order": 2,
+          "title": "WHY SOFTWARE PROJECTS FAIL",
+          "summary": "Software projects often fail due to hidden complexities and human factors rather than technical shortcomings. Overconfident developers can underestimate task complexity and the challenges of using new technologies or third-party dependencies. Inexperienced managers may prioritize personal ambitions over project success, lack firm leadership, or cave to every change imposed by higher-ups. Projects can become zombies, draining resources without delivering value, as stakeholders become reluctant to admit defeat due to fear or embarrassment.",
+          "url": "https://vadimkravcenko.com/shorts/why-software-projects-fail/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "vadimkravcenko.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a09",
+          "order": 3,
+          "title": "QUIETLY GOING INSANE WITH TOOLS & AUTOMATION",
+          "summary": "This author started a project of automating a simple Unreal Engine task, but it quickly spiraled into an overly complex solution. His first attempt was a PowerShell script to delete specific project folders, but this evolved into a full-blown Windows installer using GitHub Actions to build a release. Eventually, he decided to use the language Zig to build an executable for the script, but Zig’s low-level nature proved hard to work with.",
+          "url": "https://jerkytreats.dev/letsgo/building-a-music-engine/quietly-going-insane-with-tools-automation?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "jerkytreats.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-15:a10",
+          "order": 1,
+          "title": "PSD",
+          "summary": "PSD is a lightweight parser for Adobe Photoshop PSD and PSB files. It can be used both in web browsers and Node.js, uses WebAssembly to speed up decoding image data, and pulls in zero dependencies.",
+          "url": "https://github.com/webtoon/psd?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a11",
+          "order": 2,
+          "title": "LAVAGUE",
+          "summary": "LaVague is a framework that transforms natural language instructions into browser interactions.",
+          "url": "https://github.com/lavague-ai/LaVague?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a12",
+          "order": 3,
+          "title": "SKYVERN",
+          "summary": "Skyvern automates browser-based tasks using LLMs and computer vision. It is able to handle unfamiliar websites and changes in website layout without breaking.",
+          "url": "https://github.com/Skyvern-AI/skyvern?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-15:a13",
+          "order": 1,
+          "title": "ONBOARDING ROULETTE: DELETING OUR EMPLOYEE ACCOUNTS DAILY",
+          "summary": "While automated testing is crucial for quality software and preventing regressions, complex features can be difficult and time-consuming to test, leading to situations where teams prioritize building features over writing robust tests. In cases like this, developers should consider alternative strategies like canary releases, beta testing, and dogfooding. The startup in this article decided to start automatically deleting an engineer's account daily. This forced them to experience the onboarding process firsthand, uncovering bugs and building empathy for the user experience.",
+          "url": "https://graphite.dev/blog/onboarding-roulette?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "graphite.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a14",
+          "order": 2,
+          "title": "THE MESSY REALITY BEHIND A SILICON VALLEY UNICORN",
+          "summary": "A VC-funded startup aiming to disrupt the local services industry experienced rapid growth fueled by pressure from investors. To keep up with demand, the company hired Filipino contractors to perform routine tasks that software could technically handle. This allowed engineers in San Francisco to focus on strategic initiatives and experimentation, leading to significant user growth. The story highlights how automation is not necessarily a reality for a lot of engineering companies today.",
+          "url": "https://spectrum.ieee.org/unicorn-startup?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "spectrum.ieee.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a15",
+          "order": 3,
+          "title": "WINNING A HACKATHON, LOSING MY SANITY",
+          "summary": "Students created a \"Spotify Wrapped\" for student dining habits for a hackathon by scraping data from Tufts University's outdated meal plan portal. The project found numerous security flaws in the portal's design, for example, session keys were stored in URL parameters and guest access permissions were easily circumvented.",
+          "url": "https://jero.zone/posts/meal-plan-wrapped?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "jero.zone",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-15:a16",
+          "order": 1,
+          "title": "ECSS",
+          "summary": "Simple but comprehensive list of rules for efficient CSS.",
+          "url": "https://ecss.info/en/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ecss.info",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a17",
+          "order": 2,
+          "title": "PERFORMANCE-AWARE PROGRAMMING SERIES",
+          "summary": "This course teaches experienced programmers the fundamentals of modern CPU architecture, enabling them to write faster code through performance estimation and optimization techniques.",
+          "url": "https://www.computerenhance.com/p/table-of-contents?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "computerenhance.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a18",
+          "order": 3,
+          "title": "SPREADSHEETS ARE ALL YOU NEED",
+          "summary": "Learn how AI works from a real LLM implemented entirely in Excel.",
+          "url": "https://spreadsheets-are-all-you-need.ai/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "spreadsheets-are-all-you-need.ai",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a19",
+          "order": 4,
+          "title": "MAKE YOUR FUNCTIONS MORE REUSABLE WITH GENERICS",
+          "summary": "TypeScript generics enable developers to create type-safe, reusable functions by allowing them to infer the type of a promised return value, removing the need for the overly broad 'any' type.",
+          "url": "https://www.totaltypescript.com/make-your-functions-more-reusable-with-generics?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "totaltypescript.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-15:a20",
+          "order": 5,
+          "title": "APPLE BUYS DARWINAI AHEAD OF MAJOR GENERATIVE AI UPDATES COMING IN IOS 18",
+          "summary": "Apple acquired DarwinAI to focus on smaller, more efficient AI systems and potentially integrate generative AI into products like Siri and Messages.",
+          "url": "https://www.macrumors.com/2024/03/14/apple-acquires-darwinai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "macrumors.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

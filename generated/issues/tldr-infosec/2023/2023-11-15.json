@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-11-15",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-11-15",
+  "source_path": "TLDR InfoSec/article_15-11-2023.md",
+  "source_content_hash": "sha256:597adeee73b001404a93e81b147b2d5fb54a63e35adecc30926203c270311707",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-11-15",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-15:a05",
+          "order": 1,
+          "title": "POLONIEX CRYPTO EXCHANGE SUFFERS $100M BREACH",
+          "summary": "$100M was transferred from a crypto wallet belonging to the Poloniex exchange. Blockchain security firm CertiK suggests that the incident was likely the result of a compromised private key. Poloniex is committed to reimbursing customers and has offered a 5% bug bounty to the hacker upon return of the funds.",
+          "url": "https://cointelegraph.com/news/poloniex-exchange-hack-60-million-drained-5-percent-bounty?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a06",
+          "order": 2,
+          "title": "CRYPTOGRAPHIC KEYS PROTECTING SSH CONNECTIONS STOLEN IN NEW ATTACK",
+          "summary": "The private key material of cryptographic keys can be leaked due to naturally occurring errors in SSH connections. Researchers were able to reconstruct private key material using lattice-based cryptography by comparing faulty signatures generated as part of the connection setup with successful signatures. The attack only affects RSA keys and can be mitigated by error correction in many common implementations of SSH.",
+          "url": "https://arstechnica.com/security/2023/11/hackers-can-steal-ssh-cryptographic-keys-in-new-cutting-edge-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a07",
+          "order": 3,
+          "title": "CACHEWARP AMD CPU ATTACK LETS HACKERS GAIN ROOT IN LINUX VMS",
+          "summary": "Researchers have discovered a new exploit in AMD’s SEV protection. SEV is designed to protect against malicious hypervisors by encrypting VM data and protecting against its modification. This attack exploits the ability to modify cache lines to a previous state which can allow for manipulating authentication variables or return addresses.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-cachewarp-amd-cpu-attack-lets-hackers-gain-root-in-linux-vms?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-15:a08",
+          "order": 1,
+          "title": "GPTS AND ASSISTANTS API: DATA EXFILTRATION AND BACKDOOR RISKS IN CODE INTERPRETER",
+          "summary": "This article talks about the new tools introduced by OpenAI on DevDay and how they can be used to exfiltrate data and files, as well as perform backdoor insertion using the Code Interpreter. Attackers may be able to access personal files and manipulate code through malicious prompts on websites, posing a threat to large populations.",
+          "url": "https://evren.ninja/code-interpreter-security.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "evren.ninja",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a09",
+          "order": 2,
+          "title": "PYTHON OBFUSCATION TRAPS",
+          "summary": "Developers have been targeted by malicious Python packages disguised as legitimate obfuscation tools, with the most recent package being \"pyobfgood\". The package has a destructive payload, \"BlazeStealer\", that retrieves an additional malicious script from an external source, enabling a Discord bot that gives attackers complete control over the victim's computer.",
+          "url": "https://checkmarx.com/blog/python-obfuscation-traps/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a10",
+          "order": 3,
+          "title": "TERRAFORM SECURITY BEST PRACTICES",
+          "summary": "This post provides an overview of Terraform and some common security best practices. It covers auditing terraform manifest files (using scanning tools), managing credentials and secrets, and creating and using modules.",
+          "url": "https://sysdig.com/blog/terraform-security-best-practices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "sysdig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-15:a11",
+          "order": 1,
+          "title": "AWS LAUNCHES BLOCK PUBLIC SHARING OF EBS SNAPSHOTS",
+          "summary": "AWS has launched a new feature that allows for blocking of all or new public sharing of EBS snapshots. EBS snapshots could be heavily sensitive as they contain the full content of EBS disks. The setting must be applied per region and per account.",
+          "url": "https://aws.amazon.com/blogs/aws/new-block-public-sharing-of-amazon-ebs-snapshots/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a12",
+          "order": 2,
+          "title": "SSO-SYNC-TO-AMAZON-RDS",
+          "summary": "A project for syncing users from AWS IAM Identity Center to an Amazon RDS cluster. The project creates an Eventbridge rule that watches for new users in IAM Identity Center that belong to a configured group and then runs a Lambda function to create a new user in the RDS cluster. The user will then be able to login to the database with their IAM credentials.",
+          "url": "https://github.com/aws-samples/sso-sync-to-amazon-rds?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a13",
+          "order": 3,
+          "title": "CVE-HALF-DAY-WATCHER",
+          "summary": "CVE Half Day Watcher is a tool for viewing vulnerabilities in the public domain where the fix hasn't been released yet. This tool intends to highlight the risk of early exposure of Common Vulnerabilities and Exposures (CVEs) in the public domain.",
+          "url": "https://github.com/Aqua-Nautilus/CVE-Half-Day-Watcher?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-15:a14",
+          "order": 1,
+          "title": "ACSC AND CISA RELEASE BUSINESS CONTINUITY IN A BOX",
+          "summary": "The Australian Cyber Security Centre (ACSC) and the Cybersecurity and Infrastructure Security Agency (CISA) have jointly launched Business Continuity in a Box, a tool designed to help organizations quickly and securely set up critical business functions during or after a cyber attack.",
+          "url": "https://www.cisa.gov/news-events/alerts/2023/11/13/acsc-and-cisa-release-business-continuity-box?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a15",
+          "order": 2,
+          "title": "POST-QUANTUM CRYPTOGRAPHY: IT’S ALREADY HERE AND IT’S NOT AS SCARY AS IT SOUNDS",
+          "summary": "This article talks about the various approaches to Post-Quantum Cryptography (PQC). PQC algorithms have been specially designed to ensure information is kept safe in the future. There are currently four main types of PQC algorithms: lattice-based, code-based, multivariate polynomial, and hash-based. The article talks about how lattice-based cryptography is straightforward but adds complexity.",
+          "url": "https://medium.com/@dave1010/post-quantum-cryptography-its-already-here-and-it-s-not-as-scary-as-it-sounds-cb8ea70e8f1c?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a16",
+          "order": 3,
+          "title": "NEW REPTAR CPU FLAW IMPACTS INTEL DESKTOP AND SERVER SYSTEMS",
+          "summary": "Intel has patched CVE-2023-23583, also called a 'Redundant Prefix Issue' or 'Reptar' by teams within Google that also independently discovered it. CVE-2023-23583 can be exploited by attackers to escalate privileges, gain access to sensitive information, or trigger a denial of service state.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-reptar-cpu-flaw-impacts-intel-desktop-and-server-systems/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-15:a17",
+          "order": 1,
+          "title": "POLICE TAKES DOWN BULLETPROFTLINK",
+          "summary": "The Malaysian police managed to dismantle the BulletProftLink Phishing-as-a-service company in collaboration with the FBI and the Australian Federal Police. As of April 2023, BulletProftLink was estimated to have 8,138 subscribers with 327 phishing page templates.",
+          "url": "https://www.bleepingcomputer.com/news/security/police-takes-down-bulletproftlink-large-scale-phishing-provider/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a18",
+          "order": 2,
+          "title": "USE THESE CHEAT SHEETS TO INCREASE YOUR CTF SPEED",
+          "summary": "This cheat sheet provides essential commands for use in CTFs, THM boxes, and cybersecurity.",
+          "url": "https://infosecwriteups.com/use-these-cheatsheets-to-increase-your-ctf-speed-ca12a01d396a?source=rss----7b722bfd1b8d---4&utm_source=infosec",
+          "reading_time_minutes": 2,
+          "source_domain": "infosecwriteups.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-15:a19",
+          "order": 3,
+          "title": "ETHEREUM FEATURE ABUSED TO STEAL $60 MILLION FROM 99K VICTIMS",
+          "summary": "Malicious actors exploited Ethereum's Create2 function to bypass wallet security alerts and steal $60 million worth of cryptocurrency from 99,000 people in six months.",
+          "url": "https://www.bleepingcomputer.com/news/security/ethereum-feature-abused-to-steal-60-million-from-99k-victims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

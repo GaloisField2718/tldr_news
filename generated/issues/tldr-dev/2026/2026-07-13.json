@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-07-13",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-07-13",
+  "source_path": "TLDR Dev/article_13-07-2026.md",
+  "source_content_hash": "sha256:37d055b947817ef060ff3f2de6f6e41334819d7f6d78bb9ca2ecea280c94f5ff",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-07-13",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-07-13:a04",
+          "order": 1,
+          "title": "THE FOUR HORSEMEN BEHIND THOUSANDS OF POSTGRES OUTAGES",
+          "summary": "Postgres outages are common due to issues like vacuum processes, transaction ID wraparound, connection limits, bad query plans, and challenges with JSON data storage. These problems get worse in environments without dedicated database personnel, leading to downtime. A new project called pgrust tries to address these issues through architectural improvements such as 64-bit transaction IDs, a threaded model instead of processes, an adaptive query planner, and enhanced statistics and compression for JSON data.",
+          "url": "https://malisper.me/the-four-horsemen-behind-thousands-of-postgres-outages/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "malisper.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a05",
+          "order": 2,
+          "title": "CLAUDE CODE IS WAY MORE TOKEN-HUNGRY THAN OPENCODE. WE MEASURED EXACTLY HOW MUCH",
+          "summary": "Claude Code has been found to consume more tokens and have less cache efficiency compared to OpenCode when performing the same tasks, with differences measured in the requests sent and the overhead associated with prompt caching. While both systems manage to produce correct outputs, Claude Code sends 33k tokens before reading the prompt, while OpenCode sends 7k.",
+          "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "systima.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a06",
+          "order": 3,
+          "title": "A HITCHHIKER'S GUIDE TO AI",
+          "summary": "This is a guide on coding with LLMs, such as generating code based on context and prompting correctly. It also goes over best practices, including constraining agents, utilizing strongly typed languages, and the necessity of writing tests by developers rather than relying on agents.",
+          "url": "https://vhyrro.neorg.org/posts/a-hitchhikers-guide-to-ai/?utm_source=tldrdev",
+          "reading_time_minutes": 17,
+          "source_domain": "vhyrro.neorg.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-07-13:a07",
+          "order": 1,
+          "title": "OLD AND NEW APPS, VIA MODERN CODING AGENTS",
+          "summary": "AI has made the process of updating and creating mathematical applets much faster, allowing for the successful migration of older Java applets to JavaScript with minimal bugs. Additionally, AI tools have made the creation of new visualization apps, including those for complex concepts like special relativity.",
+          "url": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "terrytao.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a08",
+          "order": 2,
+          "title": "I LOVE LLMS, I HATE HYPE",
+          "summary": "While AI and LLMs are exciting, the pervasive negativity and hype suggesting a looming catastrophe or an impending singularity makes AI have a worse reputation. AI's progress is driven by foundational improvements in computing rather than influenced by specific entities.",
+          "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "geohot.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a09",
+          "order": 3,
+          "title": "WHY VANILLA JS",
+          "summary": "This dev built a complex web app for music instructors using only vanilla JavaScript and Web Components, arguing against the artificial complexity introduced by modern frameworks. The browser already provides solid tools for development.",
+          "url": "https://guseyn.com/html/posts/why-vanilla-js.html?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "guseyn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-07-13:a10",
+          "order": 1,
+          "title": "OPEN-INSPECT",
+          "summary": "Open-Inspect is an open-source background coding agent system designed for single-tenant deployment, allowing users to perform tasks in a shared development environment while collaborating in real time. Features include multi-repository session handling, automated task scheduling, and support for various AI models, enabling seamless integration with platforms like Slack, GitHub, and Linear.",
+          "url": "https://github.com/ColeMurray/background-agents?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a11",
+          "order": 2,
+          "title": "MINDWALK",
+          "summary": "Mindwalk is a visualization tool designed to replay coding-agent sessions on a 3D map of the codebase, allowing users to see how an agent understood and interacted with a repository. It has a local server that displays a unique citymap for each repository, indicating the agent's activity through visual elements.",
+          "url": "https://github.com/cosmtrek/mindwalk?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-07-13:a12",
+          "order": 1,
+          "title": "TIL - ALGOLIA MAKES CREATING AN MCP SERVER STUPID EASY",
+          "summary": "Algolia has introduced a feature that makes turning search indexes into MCP servers easy, allowing devs to integrate AI capabilities for querying and interacting with documentation. The process has a UI where one can create and customize an MCP server to help with API interactions and improve user engagement with content.",
+          "url": "https://www.raymondcamden.com/2026/07/11/til-algolia-makes-creating-an-mcp-server-stupid-easy?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "raymondcamden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a13",
+          "order": 2,
+          "title": "BASECAMP BENCH",
+          "summary": "Recent testing compared the performance of GPT-5.6 Sol, Fable 5, and Grok 4.5 in solving a complex software problem, showing Fable 5 as the top performer in both frontend and backend development, while Grok 4.5 did great in terms of speed and cost. The benchmark, Basecamp Bench, showed that Grok 4.5 completed tasks quickly but lacked polish, whereas Fable 5 closely aligned with the expected output but required more time and expense.",
+          "url": "https://smw.ai/blog/basecamp-bench?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "smw.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-07-13:a14",
+          "order": 1,
+          "title": "SHIREI",
+          "summary": "Shirei is a cross-platform GUI framework for Go that uses an immediate mode API to make UI development easier without maintaining widget states.",
+          "url": "https://github.com/hasenj/go-shirei/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a15",
+          "order": 2,
+          "title": "SOFTWARE HAS CHANGED",
+          "summary": "Software development with AI can now be produced much faster, but code quality has gotten worse.",
+          "url": "https://www.abeautifulsite.net/posts/software-has-changed/?utm_source=tldrdev",
+          "reading_time_minutes": 1,
+          "source_domain": "abeautifulsite.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a16",
+          "order": 3,
+          "title": "YOUR AGENTS ARE STUCK IN YOUR ORG CHART",
+          "summary": "Many organizations struggle to implement AI solutions well due to a lack of clear ownership and accountability for data products.",
+          "url": "https://joereis.substack.com/p/your-agents-are-stuck-in-your-org?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "joereis.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-07-13:a17",
+          "order": 4,
+          "title": "GOOD TOOLS ARE INVISIBLE",
+          "summary": "The ideal tool should be invisible and ergonomic, allowing users to focus entirely on their work rather than on configuring or navigating the flaws of their software.",
+          "url": "https://www.gingerbill.org/article/2026/07/10/good-tools-are-invisible/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "gingerbill.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

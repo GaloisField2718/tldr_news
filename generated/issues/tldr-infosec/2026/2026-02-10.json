@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-02-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-10",
+  "source_path": "TLDR InfoSec/article_10-02-2026.md",
+  "source_content_hash": "sha256:a00c056d0e9d8128398ef241ae89fea03e7b61ecee303ce7d7c7cd43f4fcfe29",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a04",
+          "order": 1,
+          "title": "THE DARK SIDE OF AI: 2.6MM UNDERGROUND MESSAGES ANALYZED",
+          "summary": "Flashpoint just released a massive study of the AI threat landscape. Analysts monitored over 2.6 MILLION AI-RELATED POSTS across Telegram, the dark web, and underground LLM forums.",
+          "url": "https://go.flashpoint.io/ai-and-threat-intelligence-guide?utm_campaign=Resource_RP_AI_Threat_Intelligence&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000RZE8cIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a05",
+          "order": 1,
+          "title": "BREAKING DOWN CVE-2026-25049: HOW TYPESCRIPT TYPES FAILED N8N'S SECURITY",
+          "summary": "CVE-2026-25049 (CVSS 9.4) exploits a type confusion flaw in n8n's expression evaluator, bypassing a prior security patch by sending object inputs instead of strings — since TypeScript types are stripped at compile-time, the runtime sanitizer never executed. Attackers use JavaScript destructuring to access the Function constructor and achieve unauthenticated RCE via public webhook endpoints, exposing stored credentials, API keys, and internal network access. Users should upgrade to n8n versions 1.123.17 or 2.5.2 and implement runtime type validation using typeof checks or a schema validation library such as Zod.",
+          "url": "https://hetmehta.com/posts/n8n-type-confusion-rce?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "hetmehta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a06",
+          "order": 2,
+          "title": "EUROPEAN COMMISSION DISCLOSES BREACH THAT EXPOSED STAFF DATA",
+          "summary": "The European Commission is investigating a breach after finding evidence that its mobile device management (MDM) platform was hacked. It has not found any evidence that mobile devices were compromised, but confirmed that attackers have accessed some staff members' personal information, such as names and phone numbers. The European Commission did not disclose how the attackers compromised its MDM system, but the attack shows similarities with other attacks on European institutions that exploit vulnerabilities in Ivanti Endpoint Manager Mobile software.",
+          "url": "https://www.bleepingcomputer.com/news/security/european-commission-discloses-breach-that-exposed-staff-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a07",
+          "order": 3,
+          "title": "BEYONDTRUST WARNS OF CRITICAL RCE FLAW IN REMOTE SUPPORT SOFTWARE",
+          "summary": "BeyondTrust warned customers to patch a critical vulnerability in its Remote Support and Privileged Remote Access software that could allow unauthenticated attackers to execute arbitrary code via OS command injection. The vulnerability can be exploited by unauthenticated attackers without requiring user interaction by sending specially crafted client requests. BeyondTrust has secured all cloud systems and advises all on-premises customers to patch their systems manually if they haven't enabled auto updates.",
+          "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-warns-of-critical-rce-flaw-in-remote-support-software/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a08",
+          "order": 1,
+          "title": "THE PHANTOM FILE SYSTEM: INSIDE THE WINDOWS PROJFS",
+          "summary": "The Windows Projected File System (ProjFS) operates as a minifilter (prjflt.sys) rather than a true filesystem, using reparse points and filter communication ports to project virtual files on demand. Offensively, medium-integrity users can launch ProjFS providers without admin privileges, prevent higher-privileged processes from deleting files, and serve different file contents per process — all potential avenues for evasion and persistence. Defensively, ProjFS offers a lightweight alternative to custom minifilters for deploying canary files with rich callback data, including triggering process ID and image path, particularly relevant as Microsoft moves toward reducing kernel-mode dependencies.",
+          "url": "https://www.huntress.com/blog/windows-projected-file-system-mechanics?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a09",
+          "order": 2,
+          "title": "HOW TO RECOGNIZE A DEEPFAKE: ATTACK OF THE CLONES",
+          "summary": "",
+          "url": "https://www.kaspersky.com/blog/how-to-recognize-a-deepfake/55247/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "kaspersky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a10",
+          "order": 3,
+          "title": "UNCOVERING THREATS THROUGH WAF LOGS: A THREAT HUNTER'S LENS",
+          "summary": "WAF logs are often overlooked in threat hunting because every request must pass through them. Defenders can look for potential reconnaissance patterns, including using non-standard HTTP methods on public pages, CMS helper endpoint exposure, systematic enumeration across multiple sites, and infrastructure-based anomalies such as TOR exit nodes. The article also includes KQL queries for practical threat detection.",
+          "url": "https://links.tldrnewsletter.com/4Wtq3h",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a11",
+          "order": 1,
+          "title": "PHANTOMFS",
+          "summary": "PhantomFS is a Windows ProjFS-based tool that projects virtual files whose content varies by the requesting process, serving AES-256-CBC-encrypted payloads to allowed processes (e.g., cmd.exe) while returning decoy bytes to all others. Inspired by Huntress' recent ProjFS research, the tool runs at medium integrity without admin privileges and blocks delete/rename attempts from non-allowed processes. Detection is possible via ProjFS reparse points, the PrjFlt minifilter at filter altitude 189800, and the Microsoft-Windows-ProjFS ETW provider.",
+          "url": "https://github.com/S1lkys/PhantomFS?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a12",
+          "order": 2,
+          "title": "EVILNEKO",
+          "summary": "EvilNeko is a project to automate container orchestration and operationalize Browser in Browser attacks for red teams.",
+          "url": "https://github.com/CorvraLabs/EvilNeko?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a13",
+          "order": 3,
+          "title": "IDONTLIKEFILELOCKS",
+          "summary": "IDontLikeFileLocks is a tool that dumps locked browser databases.",
+          "url": "https://github.com/EvilBytecode/IDontLikeFileLocks?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a14",
+          "order": 1,
+          "title": "17% OF 3RD-PARTY ADD-ONS FOR OPENCLAW USED IN CRYPTO THEFT AND MACOS MALWARE",
+          "summary": "17% of third-party \"skills\" for the popular open-source AI tool OpenClaw, which has over 160,000 GitHub stars, are malicious. Over half (54%) of these threats target cryptocurrency users with fake wallet trackers, DEX tools, and Solana/Phantom utilities. One user account, sakaen736jih, is associated with 199 malicious skills that steal private wallet keys and deploy AMOS Stealer malware on macOS. The malware campaign has extended into corporate settings, leading Bitdefender to develop a free AI Skills Checker tool to help users vet add-ons before installing.",
+          "url": "https://hackread.com/openclaw-add-ons-crypto-theft-macos-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a15",
+          "order": 2,
+          "title": "MY TOP 5 RECOMMENDATIONS ON OT CYBERSECURITY STUDENT UPSCALING",
+          "summary": "A guide from Lesley Carhart, aka hacks4pancakes, on the skills prospective Operational Technology (OT) students should focus on. Students should focus more on processes and systems of systems rather than hacking individual devices. Start with one process, consider safety and process continuity, since most OT engagements involve critical systems, and get comfortable with older computers. The post also includes a list of free learning resources.",
+          "url": "https://tisiphone.net/2026/01/04/my-top-5-recommendations-on-ot-cybersecurity-student-upskilling/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "tisiphone.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-10:a16",
+          "order": 1,
+          "title": "ROMANIA'S OIL PIPELINE OPERATOR CONFIRMS CYBERATTACK AS HACKERS CLAIM DATA THEFT",
+          "summary": "Romania's national oil pipeline operator, Conpet, confirmed that a cyberattack disrupted its IT infrastructure.",
+          "url": "https://therecord.media/romania-conpet-oil-pipeline-ransomware-attack?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a17",
+          "order": 2,
+          "title": "CHINESE CYBERSPIES BREACH SINGAPORE'S FOUR LARGEST TELCOS",
+          "summary": "Chinese threat actor UNC3886 breached all four of Singapore's major telcos (Singtel, StarHub, M1, and Simba) using a zero-day firewall exploit and rootkits for persistence, prompting Singapore to deploy \"Operation Cyber Guardian.\"",
+          "url": "https://www.bleepingcomputer.com/news/security/chinese-cyberspies-breach-singapores-four-largest-telcos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-10:a18",
+          "order": 3,
+          "title": "OPENCLAW INTEGRATES VIRUSTOTAL MALWARE SCANNING AS SECURITY FIRMS FLAG ENTERPRISE RISKS",
+          "summary": "OpenClaw integrated VirusTotal malware scanning into its ClawHub skills marketplace after security researchers discovered 341 malicious skills in a campaign dubbed \"ClawHavoc.\"",
+          "url": "https://www.csoonline.com/article/4129393/openclaw-integrates-virustotal-malware-scanning-as-security-firms-flag-enterprise-risks.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

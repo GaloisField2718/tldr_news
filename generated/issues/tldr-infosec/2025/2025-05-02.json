@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-05-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-02",
+  "source_path": "TLDR InfoSec/article_02-05-2025.md",
+  "source_content_hash": "sha256:f47751cc9cc0454eb658cc339d1ec49c293d2408a86b26026999f6f6ebc37732",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a04",
+          "order": 1,
+          "title": "CYBERSECURITY",
+          "summary": "When the AI boom began, organizations raced to automate fastest and implement AI into every workflow.",
+          "url": "https://us02web.zoom.us/webinar/register/3217424147025/WN_1YN7YaaCThCIXLNthgm1Tw",
+          "reading_time_minutes": null,
+          "source_domain": "us02web.zoom.us",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a04",
+          "order": 2,
+          "title": "final installment in WethosAI's groundbreaking webinar series",
+          "summary": "about separating AI noise from reality. This session goes deeper than ever to reveal the cybersecurity realities behind AI's glamorous façade – and what your organization must know to stay safe and effective.",
+          "url": "https://us02web.zoom.us/webinar/register/3217424147025/WN_1YN7YaaCThCIXLNthgm1Tw",
+          "reading_time_minutes": null,
+          "source_domain": "us02web.zoom.us",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a04",
+          "order": 3,
+          "title": "💺 Save your virtual seat",
+          "summary": "",
+          "url": "https://us02web.zoom.us/webinar/register/3217424147025/WN_1YN7YaaCThCIXLNthgm1Tw",
+          "reading_time_minutes": null,
+          "source_domain": "us02web.zoom.us",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a05",
+          "order": 1,
+          "title": "WINDOWS RDP LETS YOU LOG IN USING REVOKED PASSWORDS. MICROSOFT IS OK WITH THAT",
+          "summary": "A security researcher discovered a vulnerability where Windows RDP would accept a revoked password without raising any alerts. This vulnerability occurs because when a user logs in using a Microsoft or Azure account, Windows validates the password and then caches it in an encrypted local storage, which is used for all further authentication attempts. Microsoft has responded that this is an intentional design decision to prevent users from getting locked out of a device.",
+          "url": "https://arstechnica.com/security/2025/04/windows-rdp-lets-you-log-in-using-revoked-passwords-microsoft-is-ok-with-that/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a06",
+          "order": 2,
+          "title": "ASCENSION DISCLOSES NEW DATA BREACH AFTER THIRD-PARTY HACKING INCIDENT",
+          "summary": "Ascension, one of the largest private healthcare systems in the US, is notifying patients that their data was stolen in a breach in December 2024. Ascension stated that the breach was caused by them inadvertently disclosing data to a business partner which the attacker then stole the data from via a vulnerability in third-party software used by the business partner. The disclosed data includes names, addresses, phone numbers, email addresses, dates of birth, race, gender, and Social Security numbers.",
+          "url": "https://www.bleepingcomputer.com/news/security/ascension-discloses-new-data-breach-after-third-party-hacking-incident/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a07",
+          "order": 3,
+          "title": "EMERA, NOVA SCOTIA POWER RESPOND TO CYBERSECURITY BREACH; INCIDENT RESPONSE TEAMS MOBILIZED",
+          "summary": "Emera Inc. and Nova Scotia Power reported unauthorized access to their Canadian network. They have isolated the affected systems, engaged cybersecurity experts, and notified law enforcement. No disruption to power operations has occurred.",
+          "url": "https://industrialcyber.co/utilities-energy-power-water-waste/emera-nova-scotia-power-respond-to-cybersecurity-breach-incident-response-teams-mobilized/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "industrialcyber.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a08",
+          "order": 1,
+          "title": "PWNING THE LADYBIRD BROWSER",
+          "summary": "Ladybird browser has a bug that allows use-after-free exploitation via a constructor and a malicious handler. Attackers can manipulate the argument buffer to trigger a heap-use-after-free condition, leaking object addresses and potentially achieving code execution by overwriting return pointers. Exploiting this bug involves crafting memory structures to control the renderer and executing malicious code, which requires careful data and pointer manipulation within the browser environment.",
+          "url": "https://jessie.cafe/posts/pwning-ladybirds-libjs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "jessie.cafe",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a09",
+          "order": 2,
+          "title": "MY SIEM-AGNOSTIC CREATIVE PROCESS TO DETECTION ENGINEERING",
+          "summary": "This post describes a process for understanding a new data source and creating detections for malicious behaviors. The first steps involve reading the documentation to understand the service and brainstorming ideas for what a malicious user might do. Then, examine the logs to determine what is considered regular or anomalous behavior, often utilizing event counts. Finally, plan out what type of detection they will write, write the detection, and then test for success, failure, and edge cases.",
+          "url": "https://www.cyberseccafe.com/p/my-siem-agnostic-creative-process?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "cyberseccafe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a10",
+          "order": 3,
+          "title": "VIBE HACKING: FINDING AUTH BYPASS AND RCE IN OPEN GAME PANEL",
+          "summary": "Eddie Zhang vibe-hacked his way to discovering vulnerabilities in Open Game Panel, including a PHP type juggling authentication bypass and two local file inclusion flaws that enable remote code execution when chained with game configuration files. His \"vibe hacking\" approach combined AI tools with manual analysis, demonstrating both the potential and limitations of AI-assisted security research.",
+          "url": "https://projectblack.io/blog/vibe-hacking-open-game-panel-rce/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "projectblack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a11",
+          "order": 1,
+          "title": "GRC DOESN'T HAVE TO BE A BOTTLENECK",
+          "summary": "With Drata, GRC is a growth enabler. Automate governance, risk and compliance with access to 25+ frameworks & 300+ integrations. Eliminate manual security reviews and speed up vendor assessments. Build trust faster with real-time monitoring and AI-powered automation. Join leading companies like Superhuman, Notion and Kandji, who have transformed their GRC programs with Drata: schedule a live demo today [11].",
+          "url": "https://try.drata.com/demo/?utm_source=TLDR_Infosec&utm_medium=display&utm_campaign=20250428_tldrinfosec_demo_DG_all_ALL",
+          "reading_time_minutes": null,
+          "source_domain": "try.drata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a12",
+          "order": 2,
+          "title": "SANTA",
+          "summary": "Santa is a binary and file access authorization system for macOS. It consists of a system extension that monitors executions and file access to determine whether to allow or deny the execution.",
+          "url": "https://github.com/northpolesec/santa?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a13",
+          "order": 3,
+          "title": "PISTACHIO (PRODUCT LAUNCH)",
+          "summary": "Pistachio's platform can send simulations and scenarios to employees via email, Microsoft Teams, or Slack. It runs in the background to help them identify and respond to threats in real time. It also observes user behavior and learning patterns, adapting the security education accordingly.",
+          "url": "https://pistachioapp.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pistachioapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a14",
+          "order": 4,
+          "title": "GPGFRONTEND",
+          "summary": "A free, open-source, robust yet user-friendly, compact, and cross-platform tool for OpenPGP encryption. It stands out as an exceptional GUI frontend for the modern GnuPG (gpg).",
+          "url": "https://github.com/saturneric/GpgFrontend?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a15",
+          "order": 1,
+          "title": "HOW US DEFENSE SECRETARY HEGSETH CIRCUMVENTS THE OFFICIAL DOD COMMUNICATIONS EQUIPMENT",
+          "summary": "This post walks through the various communications equipment that has been available to US Defense Secretary Pete Hegseth since the Obama administration. Hegseth initially would shift his chair to the back of his office to get a better Wi-Fi signal to use the Signal app but later requested a direct line to the public internet be run to a personal computer at his desk with Signal and another app for sending text messages installed. Hegseth also has access to SecDef Cables, which is a communications center dedicated to the office of the Secretary of Defense.",
+          "url": "https://www.electrospaces.net/2025/04/how-us-defense-secretary-hegseth.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "electrospaces.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a16",
+          "order": 2,
+          "title": "TAG YOUR WAY IN: NEW PRIVILEGE ESCALATION TECHNIQUE IN GCP",
+          "summary": "A new privilege escalation technique in Google Cloud Platform (GCP) exploits IAM Conditions and tagBindings to elevate access for attackers with low-risk roles. By attaching specific tags to resources, attackers can bypass restrictions and gain elevated privileges without directly modifying IAM policies. Organizations should prioritize securing tag permissions to prevent this overlooked escalation path in GCP.",
+          "url": "https://www.mitiga.io/blog/tag-your-way-in-new-privilege-escalation-technique-in-gcp?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "mitiga.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a17",
+          "order": 3,
+          "title": "THE WORDPRESS SECURITY TEAM IS HIDING THAT THEY ARE FAILING TO FIX KNOWN SECURITY ISSUES IN WORDPRESS",
+          "summary": "WordPress' Security Team is not effectively fixing known security issues, lacking transparency and accountability. Despite claims of a large team, details about their members remain hidden. Some security issues, like SSRF vulnerability, have gone unaddressed for years without clear plans for resolution.",
+          "url": "https://links.tldrnewsletter.com/S6oWnN",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-02:a18",
+          "order": 1,
+          "title": "2025 APPLICATION SECURITY BENCHMARK",
+          "summary": "95–98% of AppSec alerts do not require action and may be harming organizations more than helping.",
+          "url": "https://www.ox.security/wp-content/uploads/2025/03/Application-Security-Benchmark-Report-1.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "ox.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a19",
+          "order": 2,
+          "title": "SCAMMERS USE SPAIN-PORTUGAL BLACKOUT FOR TAP AIR REFUND PHISHING SCAM",
+          "summary": "Scammers are posing as TAP Air Portugal in fraudulent emails to deceive victims into providing personal and financial information by offering fake refunds for flight issues linked to recent power outages in Spain and Portugal.",
+          "url": "https://hackread.com/spain-portugal-blackout-tap-air-refund-phishing-scam/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-02:a20",
+          "order": 3,
+          "title": "APPLE MUST PAY OPTIS $502M IN UK PATENT DISPUTE",
+          "summary": "Apple has been ordered to pay Optis $502 million in a UK patent dispute over 4G technology used in iPhones and iPads.",
+          "url": "https://links.tldrnewsletter.com/A7CXyz",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

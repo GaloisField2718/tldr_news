@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-01-31",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-01-31",
+  "source_path": "TLDR Web Dev/article_31-01-2025.md",
+  "source_content_hash": "sha256:4d29d8916ae4bc5a76a0143f580e3f1f43eba374caef45a6a361dba625f06298",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-01-31",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a04",
+          "order": 1,
+          "title": "DEVELOPMENT",
+          "summary": "There's a lot of BS about AI coding agents...",
+          "url": "https://sourcegraph.com/?utm_medium=sponsored&utm_source=tldrnewsletter&utm_campaign=webdev",
+          "reading_time_minutes": null,
+          "source_domain": "sourcegraph.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a06",
+          "order": 1,
+          "title": "SCALING OUR RATE LIMITS TO PREPARE FOR A BILLION ACTIVE CERTIFICATES",
+          "summary": "Let's Encrypt, a free certificate authority, faced challenges scaling its rate-limiting system to handle over 550 million websites and 340,000 certificate requests per hour. Its initial MariaDB-based system wasn't enough, as it caused slowdowns and frustrated users with long wait times. To address this, the company migrated to a Redis-based system that used the Generic Cell Rate Algorithm (GCRA), allowing it to handle a billion active certificates and even addressing the issue of \"zombie clients\" making repeated failed requests.",
+          "url": "https://letsencrypt.org/2025/01/30/scaling-rate-limits/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "letsencrypt.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a07",
+          "order": 2,
+          "title": "OPEN-CLOSED PRINCIPLE IN REACT: BUILDING EXTENSIBLE COMPONENTS",
+          "summary": "In React, the Open-Closed Principle (OCP) means that components should be designed in a way that allows them to be extended with new functionality without modifying their existing code. As an example, the article shows the contrast between a closed, modification-heavy button component with an open, composition-based approach that uses base components and extending variants. There's an alignment between OCP and React's \"composition over inheritance\" philosophy, where OCP leads to more flexibility.",
+          "url": "https://cekrem.github.io/posts/open-closed-principle-in-react/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "cekrem.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a08",
+          "order": 1,
+          "title": "PAUSE – DECISION-MAKING SUPERPOWER",
+          "summary": "One should pause before making a decision, since taking time allows for better perspective and the chance to avoid regrettable actions. This author shares personal anecdotes that illustrate how pausing prevents rushed estimations and impulsive responses to emails.",
+          "url": "https://read.perspectiveship.com/p/pause?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "read.perspectiveship.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a09",
+          "order": 2,
+          "title": "RUST'S WORST FEATURE*",
+          "summary": "This developer criticizes Rust's nightly `core::io::BorrowedBuf` feature, arguing it's a complex and flawed solution to the problem of unnecessary buffer initialization in I/O operations. The feature aims to allow reading into uninitialized memory, but its integration with existing code is poor and requires explicit support from various APIs, which could lead to potential misuse.",
+          "url": "https://mina86.com/2025/rusts-worst-feature/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "mina86.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a10",
+          "order": 3,
+          "title": "REACT ROUTER V7 HAS TO BE A PSYOP (REDDIT THREAD)",
+          "summary": "React Router v7 makes routing more complex and unintuitive.",
+          "url": "https://links.tldrnewsletter.com/A7OcSP",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a11",
+          "order": 1,
+          "title": "AHEY",
+          "summary": "Ahey is a free, unlimited pub-sub service that uses web push technology to send real-time notifications to any browser via HTTP POST requests.",
+          "url": "https://ahey.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ahey.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a12",
+          "order": 2,
+          "title": "GREENMASK",
+          "summary": "Greenmask is an open-source tool for PostgreSQL database backup, anonymization, synthetic data generation, and restoration. It has features like deterministic transformers, dynamic parameters, and parallel execution, and it supports various storage options.",
+          "url": "https://github.com/GreenmaskIO/greenmask?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a13",
+          "order": 3,
+          "title": "RUCK",
+          "summary": "Ruck is an open-source, buildless React framework for Deno that uses ESM, dynamic imports, and import maps to create React web apps without build steps. It has features like dynamic routing, server-side rendering with component-level data fetching, and declarative CSS management.",
+          "url": "https://github.com/jaydenseric/ruck?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a14",
+          "order": 1,
+          "title": "HOW WE ACCIDENTALLY BUILT A BETTER BUILD SYSTEM FOR OCAML",
+          "summary": "Jane Street initially created Jenga, an OCaml build system, but its limited reach and platform incompatibility led to its un-open-sourcing. It then developed Jbuilder, a simpler, cross-platform tool, which unexpectedly gained popularity due to its speed. Jbuilder evolved into Dune, a more robust build system, after a name change and significant community contributions.",
+          "url": "https://blog.janestreet.com/how-we-accidentally-built-a-better-build-system-for-ocaml-index/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.janestreet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a15",
+          "order": 2,
+          "title": "DECOMPILING 2024: A YEAR OF RESURGENCE IN DECOMPILATION RESEARCH",
+          "summary": "2024 saw a resurgence in decompilation research, with nearly 30% of all top-tier publications in the field's history appearing that year. This surge included advancements in defining \"good\" decompilation, the incorporation of AI techniques for tasks like symbol prediction, and a significant increase in open-source implementations of academic work.",
+          "url": "https://mahaloz.re/dec-progress-2024?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mahaloz.re",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a16",
+          "order": 3,
+          "title": "WHY AREN'T YOU IDEMPOTENT?",
+          "summary": "Idempotency is important in distributed systems, particularly for low-latency APIs. It makes sure that repeated requests produce the same outcome as a single request, preventing unintended side effects from retries in unreliable networks. This author details techniques for creating idempotent endpoints, including client-supplied identifiers and timestamps and calibrated counters, using Apache Cassandra as a case study.",
+          "url": "https://lightfoot.dev/why-arent-you-idempotent/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "lightfoot.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-31:a17",
+          "order": 1,
+          "title": "STATS",
+          "summary": "Stats is a macOS system monitor app that provides CPU, GPU, memory, disk, network, battery, sensor, and Bluetooth monitoring in the menu bar.",
+          "url": "https://github.com/exelban/stats?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a18",
+          "order": 2,
+          "title": "WRITING BRITTLE CODE",
+          "summary": "Writing \"brittle\" code - code that breaks rather than bends under stress - is a better approach to maintainability, especially in large organizations where generalists maintain code written by specialists.",
+          "url": "https://blog.waleedkhan.name/writing-brittle-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.waleedkhan.name",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a19",
+          "order": 3,
+          "title": "FIND THE OLDEST LINE IN YOUR REPO",
+          "summary": "This developer created a bash script to find the oldest lines in a Git repository by using `git blame` and filtering for lines committed before 2030.",
+          "url": "https://milofultz.com/2025-01-26-find-the-oldest-line-in-your-repo.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "milofultz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-31:a20",
+          "order": 4,
+          "title": "THE SPEED TRIFECTA: 11TY, BROTLI 11, AND CSS FINGERPRINTING",
+          "summary": "This blog post details how to optimize CSS delivery using Eleventy, Brotli compression (level 11), and CSS fingerprinting, which results in smaller file sizes and better caching.",
+          "url": "https://nooshu.com/blog/2025/01/23/the-speed-trifecta-11ty-brotli-11-and-css-fingerprinting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "nooshu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

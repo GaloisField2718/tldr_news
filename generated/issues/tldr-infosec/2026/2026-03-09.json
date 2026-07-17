@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-03-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-09",
+  "source_path": "TLDR InfoSec/article_09-03-2026.md",
+  "source_content_hash": "sha256:265e2871f5d847e26471b7b3153aed5759ccea3504a3f9a06630a1e9b15a3bde",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-09",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-09:a04",
+          "order": 1,
+          "title": "TRIZETTO NOTIFYING 3.4M OF 2024 HACK DETECTED IN 2025",
+          "summary": "TriZetto Provider Solutions discovered in October that attackers had been abusing a client web portal since November 2024 to access insurance eligibility data for over 3.4 million individuals, exposing extensive identifiers and health information, but no financial data.",
+          "url": "https://www.bankinfosecurity.com/trizetto-notifying-34m-2024-hack-detected-in-2025-a-30928?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bankinfosecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a05",
+          "order": 2,
+          "title": "CYBERSTRIKEAI TOOL ADAPTED BY ATTACKERS FOR AI-POWERED ATTACKS",
+          "summary": "Security researchers are warning that attackers are using AI-powered tools to hunt for and exploit vulnerable Fortinet FortiGate firewalls. The researchers note that the attackers are using the security orchestration tool CyberStrikeAI, which features a full security platform with over 100 tools that AI agents can use for hunting. The developer behind the tool is believed to have ties to China and possibly other Chinese security organizations.",
+          "url": "https://links.tldrnewsletter.com/kkJqa8",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a06",
+          "order": 3,
+          "title": "A RACE WITHIN A RACE: EXPLOITING CVE-2025-38617 IN LINUX PACKET SOCKETS",
+          "summary": "CVE-2025-38617 is a 20-year-old use-after-free in the Linux kernel's AF_PACKET subsystem (net/packet/af_packet.c), present since Linux 2.6.12 and fixed in 6.16, exploitable by any unprivileged user with CAP_NET_RAW (obtainable via user namespaces) to achieve full privilege escalation and container escape. The root cause is a conditional WRITE_ONCE(po->num, 0) that only zeroes the protocol number when the socket was already running, leaving a window where a NETDEV_UP event can re-register the protocol hook while packet_set_ring() is mid-free. The exploit stretches this nanosecond race to a deterministic one-second window by pre-acquiring pg_vec_lock via a sleeping tpacket_snd() call, then uses a BPF filter delay and a 720,000-entry timerfd wait queue interrupt to win the second race. The resulting five-stage exploit chains a page overflow into simple_xattr corruption, heap read/write via pgv array overlap, arbitrary page read/write through a master-puppet ring buffer pair, KASLR bypass via anon_pipe_buf_ops pointer recovery, and final privilege escalation via syscall patching, defeating both CONFIG_RANDOM_KMALLOC_CACHES and CONFIG_SLAB_VIRTUAL mitigations.",
+          "url": "https://blog.calif.io/p/a-race-within-a-race-exploiting-cve?utm_source=tldrinfosec",
+          "reading_time_minutes": 21,
+          "source_domain": "blog.calif.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-09:a07",
+          "order": 1,
+          "title": "MALICIOUS PACKAGIST PACKAGES DISGUISED AS LARAVEL UTILITIES DEPLOY ENCRYPTED RAT",
+          "summary": "Three Packagist packages published by the threat actor nhattuanbl deliver a fully functional PHP RAT via src/helper.php, encrypted with AES-128-CTR and sent to a C2 at helper[.]leuleu[.]net:2096, with commands supporting remote shell execution, file upload/download, and screen capture across Windows, macOS, and Linux. A third package, lara-swagger, carries no malicious code itself but pulls in the RAT as a hard Composer dependency pinned to dev-master, allowing the operator to update the payload at any time without modifying the clean-looking package. Laravel teams should audit transitive Composer dependencies, treat dev-master constraints as high-risk in production, rotate all secrets accessible from affected application environments, and block outbound traffic to the C2 host.",
+          "url": "https://socket.dev/blog/malicious-packagist-packages-disguised-as-laravel-utilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a08",
+          "order": 2,
+          "title": "HOW TO AVOID CONFIDENTIALITY GAPS IN EARLY-STAGE STARTUPS",
+          "summary": "Early-stage startups routinely expose proprietary information during funding, hiring, and partnership discussions by delaying legal protections until sensitive details have already been shared, a pattern that contributes to the 61% breach rate cited in the 2025 Panaseer Security Leaders Report. Startups should deploy NDAs and confidentiality agreements selectively but proactively: before contractor access to code or design assets, during deep technical diligence with non-standard investors, and via a two-deck pitch strategy that gates the confidential technical appendix behind a signed NDA. Lightweight tooling with e-signature audit trails, a single document owner, and quarterly reviews is sufficient for pre-seed teams. Complexity should scale with contract volume, not be front-loaded.",
+          "url": "https://hackread.com/avoid-confidentiality-gaps-early-stage-startups/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a09",
+          "order": 3,
+          "title": "CARELESSNESS VS CRAFTSMANSHIP IN CRYPTOGRAPHY",
+          "summary": "Trail of Bits researchers discovered that the widely used pyaes and aes-js packages used default IVs in their documentation, which can lead to vulnerable applications. The team contacted both projects and received no response, but found that the maintainers behind pyaes had dismissed a ticket raised about the vulnerability in 2022. The team contrasted this with StrongMan VPN's response to the team contacting them about their use of the vulnerable pyaes library. The maintainer fully replaced the library and migrated to the more secure GCM-SIV mode of AES.",
+          "url": "https://blog.trailofbits.com/2026/02/18/carelessness-versus-craftsmanship-in-cryptography/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-09:a10",
+          "order": 1,
+          "title": "IRFLOW TIMELINE",
+          "summary": "IRFlow Timeline is a native macOS DFIR timeline analysis app built on Electron and SQLite designed to ingest large forensic artifacts, including CSV, TSV, XLSX, EVTX, and Plaso output, without performance degradation. Inspired by Eric Zimmerman's Timeline Explorer for Windows, it fills the gap for macOS-native incident responders.",
+          "url": "https://github.com/r3nzsec/irflow-timeline?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a11",
+          "order": 2,
+          "title": "SONARQUBE CLI",
+          "summary": "SonarQube CLI is a beta command-line tool for interacting with SonarQube Cloud and self-hosted SonarQube instances. It supports secrets scanning, issue querying, project listing, and Claude Code integration via MCP server hooks installable globally or per-project.",
+          "url": "https://github.com/SonarSource/sonarqube-cli?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a12",
+          "order": 3,
+          "title": "EVERVAULT (PRODUCT LAUNCH)",
+          "summary": "Evervault provides a developer-first platform to encrypt and orchestrate sensitive data - especially payment card data - so companies can process, share, and route it end-to-end without handling it in plaintext, simplifying PCI compliance and reducing breach risk.",
+          "url": "https://evervault.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "evervault.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-09:a13",
+          "order": 1,
+          "title": "SEEDWORM: IRANIAN APT ON NETWORKS OF US BANK, AIRPORT, SOFTWARE COMPANY",
+          "summary": "Symantec's Threat Hunter Team has detected Seedworm (MuddyWater) activity on networks of a US bank, airport, defense-adjacent software company, and NGOs in the US and Canada since February, deploying two newly identified backdoors: Dindoor, a Deno-based JavaScript/TypeScript backdoor, and Fakeset, a Python backdoor, both signed with certificates previously linked to the group. The intrusions follow US and Israeli military strikes on Iran and coincide with escalating activity from aligned hacktivist groups, including Handala and DieNet, raising the threat of destructive wiper attacks, DDoS campaigns, and hack-and-leak operations against critical infrastructure. Defenders should prioritize MFA enforcement, Rclone/cloud-exfiltration monitoring, DDoS protection for public-facing services, and immutable offline backups, given Iran's demonstrated history of deploying destructive payloads, such as Shamoon, during geopolitical escalation windows.",
+          "url": "https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "security.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a14",
+          "order": 2,
+          "title": "HARDENING FIREFOX WITH ANTHROPIC'S RED TEAM",
+          "summary": "Anthropic's Frontier Red Team applied AI-assisted vulnerability detection to the Firefox codebase, surfacing 14 high-severity bugs and 22 CVEs, plus 90 additional lower-severity issues, all shipped with reproducible test cases that allowed Mozilla engineers to validate and patch the findings within hours ahead of Firefox 148. Notably, the model identified distinct classes of logic errors that decades of fuzzing and static analysis had not previously uncovered, suggesting a significant backlog of latent bugs across mature, well-audited codebases. As a result, Mozilla has begun integrating AI-assisted analysis into its internal security workflows.",
+          "url": "https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a15",
+          "order": 3,
+          "title": "OPENAI CODEX SECURITY SCANNED 1.2 MILLION COMMITS AND FOUND 10,561 HIGH-SEVERITY ISSUES",
+          "summary": "OpenAI's Codex Security is an AI agent that creates project context, threat models, and verifies vulnerabilities to reduce false positives while suggesting ready-to-review fixes. In beta, it analyzed 1.2 million commits, identifying thousands of critical and high‑severity issues across major open‑source projects.",
+          "url": "https://thehackernews.com/2026/03/openai-codex-security-scanned-12.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-09:a16",
+          "order": 1,
+          "title": "TRANSPORT FOR LONDON SAYS 2024 BREACH AFFECTED 7M CUSTOMERS, NOT 5,000",
+          "summary": "TfL has disclosed that attackers accessed systems containing data on over 7 million customers, far beyond the 5,000 high‑risk users first flagged with exposed bank details.",
+          "url": "https://www.theregister.com/2026/03/06/tfl_2024_breach_numbers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a17",
+          "order": 2,
+          "title": "FBI INVESTIGATING HACK ON ITS WIRETAP AND SURVEILLANCE SYSTEMS: REPORT",
+          "summary": "Hackers breached an FBI network used to manage wiretaps and foreign intelligence surveillance warrants, prompting an internal investigation and technical incident response by the bureau.",
+          "url": "https://techcrunch.com/2026/03/05/fbi-investigating-hack-on-its-wiretap-and-surveillance-systems-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-09:a18",
+          "order": 3,
+          "title": "MISSISSIPPI MEDICAL CENTER REOPENS CLINICS HIT BY RANSOMWARE ATTACK",
+          "summary": "The University of Mississippi Medical Center resumed normal operations nine days after a ransomware attack blocked access to electronic medical records and forced the cancellation of outpatient procedures, ambulatory surgeries, and imaging appointments across its seven hospitals and 35 clinics.",
+          "url": "https://links.tldrnewsletter.com/4Myq1O",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

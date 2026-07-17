@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-11-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-11-11",
+  "source_path": "TLDR InfoSec/article_11-11-2024.md",
+  "source_content_hash": "sha256:e0acc3a4060a8a0be275e22317a78a23e6b738aa5dddfef5fa83fcbcaaba04b0",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-11-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a04",
+          "order": 1,
+          "title": "& TRUST CENTER",
+          "summary": "Companies are paying much closer attention to how vendors handle their data. For security leaders, this means more time spent on security reviews, which end up becoming a daily time sink.",
+          "url": "https://www.vanta.com/webinars/vanta-in-action-save-time-on-security-reviews-with-questionnaire-automation-trust-center?utm_campaign=questionnaire_automation&utm_source=tldr-infosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "vanta.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a06",
+          "order": 2,
+          "title": "",
+          "summary": "* Turn security and compliance into a revenue accelerator",
+          "url": "https://links.tldrnewsletter.com/fGXQ3I",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a04",
+          "order": 3,
+          "title": "Watch the recorded session here",
+          "summary": "",
+          "url": "https://www.vanta.com/webinars/vanta-in-action-save-time-on-security-reviews-with-questionnaire-automation-trust-center?utm_campaign=questionnaire_automation&utm_source=tldr-infosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "vanta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a07",
+          "order": 1,
+          "title": "D-LINK WON'T FIX CRITICAL FLAW AFFECTING 60,000 OLDER NAS DEVICES",
+          "summary": "Over 60,000 older D-Link NAS devices are at risk due to a critical security flaw that won't be fixed by the company. The vulnerability allows attackers to inject commands using specially crafted HTTP requests. D-Link has advised users to retire these vulnerable products or restrict their internet access.",
+          "url": "https://www.bleepingcomputer.com/news/security/d-link-wont-fix-critical-flaw-affecting-60-000-older-nas-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a08",
+          "order": 2,
+          "title": "CISCO BUG LETS HACKERS RUN COMMANDS AS ROOT ON UWRB ACCESS POINTS",
+          "summary": "Cisco has disclosed a new critical CVE that allows for RCE on Ultra-Reliable Wireless Backhaul (URWB) access points. Attackers can exploit improper input validation on the web-based management interface of vulnerable devices by sending crafted requests to execute arbitrary commands. The vulnerability only affects URWB devices running vulnerable software with the URWB operating mode enabled which can be checked by seeing if the show mpls-config CLI command is available.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-bug-lets-hackers-run-commands-as-root-on-uwrb-access-points/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a09",
+          "order": 3,
+          "title": "CISA WARNS OF CRITICAL PALO ALTO NETWORKS BUG EXPLOITED IN ATTACKS",
+          "summary": "The CISA warned that attackers are actively exploiting a critical missing authentication vulnerability in Palo Alto Networks Expedition, a tool for migrating firewall configurations from other vendors to PanOS. The vulnerability allows attackers with network access to takeover Expedition admin accounts and potentially access configuration secrets, credentials, and other data. All Expedition usernames, passwords, API keys, and any firewalls processed by Expedition should be rotated after upgrading. Various proof-of-concept attack chains that exploit the vulnerability to obtain admin access to Palo Alto Networks firewalls are available in the article.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-palo-alto-networks-bug-exploited-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a10",
+          "order": 1,
+          "title": "A NEW ERA OF MACOS SANDBOX ESCAPES: DIVING INTO AN OVERLOOKED ATTACK SURFACE AND UNCOVERING 10+ NEW VULNERABILITIES",
+          "summary": "Researchers have discovered multiple vulnerabilities in macOS sandbox escapes that allow attackers to bypass app sandbox restrictions and execute arbitrary system commands. Exploiting overlooked XPC services in system frameworks can lead to full sandbox escapes where dropped files are not quarantined, enabling attackers to escape sandbox restrictions. Apple addressed some of these vulnerabilities in macOS Ventura 13.3 by implementing checks on incoming XPC clients to prevent unauthorized sandbox escapes.",
+          "url": "https://jhftss.github.io/A-New-Era-of-macOS-Sandbox-Escapes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "jhftss.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a11",
+          "order": 2,
+          "title": "BEYOND RCE: AUTONOMOUS CODE EXECUTION IN AGENTIC AI",
+          "summary": "Anthropic's Computer Use is a new feature of Claude that allows Claude to use a virtual environment to complete tasks on the user's computer. Claude can be deceived into running malicious web content in computer use mode. The model does include some protections against hijacking as well as some protections against running some malicious commands but can still be “phished” to execute arbitrary commands. Claude can be convinced to curl an arbitrary file and pipe it to bash by a document telling it that it was a necessary codec. The model can be fooled into opening the calculator application by a remote PDF.",
+          "url": "https://www.securityrunners.io/post/beyond-rce-autonomous-code-execution-in-agentic-ai?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securityrunners.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a12",
+          "order": 3,
+          "title": "DELEGATING SECURITY REMEDIATIONS TO EMPLOYEES VIA SLACK",
+          "summary": "Slack interactions come in four categories: remind, alert, delegate, and respond. Remind and alert actions are more commonplace. Remind interactions remind users to take an action (such as mandatory training) and alert actions alert the security team to various alerts from other sources. There are two new categories in SlackSecOps called delegate and respond. Delegate actions involve an alert asking a user if a behavior was intentional (adding a contractor to a sensitive permission, sharing documents, etc) and only alerts the security team based on the response. Respond interactions are when a security team receives a request and can respond to it directly via Slack such as approving an access request and granting the access directly in Slack.",
+          "url": "https://mayakaczorowski.com/blogs/slacksecops?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "mayakaczorowski.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a13",
+          "order": 1,
+          "title": "FLASK-VAULT",
+          "summary": "Flask-Vault is a robust library that empowers Flask applications to securely store and manage sensitive credentials.",
+          "url": "https://github.com/multiversecoder/Flask-Vault?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a14",
+          "order": 2,
+          "title": "ACSECURITY",
+          "summary": "AcSecurity is a Python module designed to scan applications for common security vulnerabilities. It checks for hardcoded secrets, dependency vulnerabilities, and code quality issues.",
+          "url": "https://github.com/austincabler13/AcSecurity?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a15",
+          "order": 3,
+          "title": "SAFE-HTTPX",
+          "summary": "safe-httpx is a small Python library that helps developers protect their applications from SSRF by implementing a wrapper around httpx.AsynchronousClient.get(), which performs DNS validation on the supplied URL and protects against DNS rebinding attacks.",
+          "url": "https://github.com/gradio-app/safehttpx?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a16",
+          "order": 1,
+          "title": "DISCORD TERRORIST KNOWN AS “RABID” GETS 30 YEARS FOR PREYING ON KIDS",
+          "summary": "Richard Densmore was sentenced to 30 years for running online chat rooms that targeted children through gaming sites. As part of terrorist network 764, he coerced minors into self-harm, sexual acts, and violence.",
+          "url": "https://arstechnica.com/tech-policy/2024/11/discord-terrorist-known-as-rabid-gets-30-years-for-preying-on-kids/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a17",
+          "order": 2,
+          "title": "A NEW IOS 18 SECURITY FEATURE MAKES IT HARDER FOR POLICE TO UNLOCK IPHONES",
+          "summary": "Apple's iOS 18 reportedly includes a new security feature that automatically reboots inactive iPhones after four days, resetting them to a more secure \"Before First Unlock\" state. This makes it harder for law enforcement to break into locked devices.",
+          "url": "https://www.theverge.com/2024/11/9/24292092/ios-18-security-inactivity-reboot-police-complain-unlocking-iphone-difficult?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a18",
+          "order": 3,
+          "title": "OPENAI LOSES ANOTHER LEAD SAFETY RESEARCHER, LILIAN WENG",
+          "summary": "OpenAI's VP of research and safety, Lilian Weng, is leaving the company after 7 years. She will leave on November 15, joining several other AI safety researchers and executives who have left the company recently. This continues a pattern of departures amid concerns about OpenAI's prioritization of commercial products over safety.",
+          "url": "https://techcrunch.com/2024/11/08/openai-loses-another-lead-safety-researcher-lilian-weng/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-11-11:a19",
+          "order": 1,
+          "title": "‘STEELFOX' MINER AND INFORMATION STEALER BUNDLE EMERGES",
+          "summary": "A crimeware bundle called SteelFox, active since early 2023, impersonates legitimate software like Foxit PDF Editor and AutoCAD.",
+          "url": "https://www.securityweek.com/steelfox-miner-and-information-stealer-bundle-emerges/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a20",
+          "order": 2,
+          "title": "BUILDING A RESILIENT CLOUD: ESSENTIAL AWS SECURITY SERVICES EXPLAINED",
+          "summary": "AWS offers a suite of security tools to boost any company's security.",
+          "url": "https://links.tldrnewsletter.com/Y4cG2v",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-11-11:a21",
+          "order": 3,
+          "title": "HACKERS ARE STEALING TICKETS FROM TICKETMASTER ACCOUNTS",
+          "summary": "Hackers are stealing tickets from Ticketmaster accounts, causing concertgoers to lose access to their purchased tickets.",
+          "url": "https://packetstormsecurity.com/news/view/36576/Hackers-Are-Stealing-Tickets-From-Ticketmaster-Accounts.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "packetstormsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

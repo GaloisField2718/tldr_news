@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-09-04",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-04",
+  "source_path": "TLDR Web Dev/article_04-09-2025.md",
+  "source_content_hash": "sha256:2ac9fb0ac552a072eb13869ddfb61c811fe1542486fe259b4ae6cd4ab4af1d29",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-04",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-04:a04",
+          "order": 1,
+          "title": "PROMISES FROM THE GROUND UP",
+          "summary": "Promises in JavaScript aren't always intuitive to use, but they're required to be productive with JavaScript. Promises are needed because JavaScript is single-threaded, which can cause issues when blocking operations like window.prompt() are used. This post dives into the mechanics of Promises, their states (pending, fulfilled, and rejected), and how to work with them using the .then() and .catch() methods. It also covers creating custom Promises, chaining them together, passing data between them, and the modern async/await syntax for a more synchronous-like experience.",
+          "url": "https://www.joshwcomeau.com/javascript/promises?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a05",
+          "order": 2,
+          "title": "HOW RUBYGEMS.ORG PROTECTS OUR COMMUNITY'S CRITICAL OSS INFRASTRUCTURE",
+          "summary": "RubyGems.org uses a multi-layered security approach including automated detection, risk scoring, and retroactive scanning to proactively identify malicious gems, successfully detecting 70-80% of threats before they're publicly reported. In a recent incident involving credential-stealing gems discovered by Socket.dev, the RubyGems security team had already flagged and removed nearly all malicious packages within days of detection in July.",
+          "url": "https://blog.rubygems.org/2025/08/25/rubygems-security-response.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.rubygems.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a06",
+          "order": 3,
+          "title": "SAY BYE WITH JAVASCRIPT BEACON",
+          "summary": "The JavaScript Beacon API provides a reliable way to send data to servers when users leave a website. This is unlike traditional methods like XMLHttpRequest or fetch in “beforeunload” events, which often fail because browsers don't wait for JavaScript execution when navigating away. The Beacon API works as a \"fire-and-forget\" mechanism with a simple syntax (`navigator.sendBeacon()`), allowing the browser to send the request immediately without waiting for a response, though it's limited to small amounts of data and only supports POST requests.",
+          "url": "https://hemath.dev/blog/say-bye-with-javascript-beacon?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "hemath.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-04:a07",
+          "order": 1,
+          "title": "HOW TO GIVE A GOOD TALK",
+          "summary": "Good talks should inform the audience about the work's value, educate them with portable insights, and entertain them to hold their attention. It's important to understand the audience's shared values and frame the work in terms of efficiency and correctness.",
+          "url": "https://blog.sigplan.org/2025/03/31/how-to-give-a-good-talk/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.sigplan.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a08",
+          "order": 2,
+          "title": "THE BITTER LESSON IS MISUNDERSTOOD",
+          "summary": "The Bitter Lesson has been misinterpreted as prioritizing computation above all else. Scaling laws show that data is equally, if not more, crucial, as compute power is wasted without sufficient data. AI progress now depends on either finding ways to wring more value from existing data through improved model architectures or creating entirely new data through innovative \"alchemical\" methods like self-play.",
+          "url": "https://obviouslywrong.substack.com/p/the-bitter-lesson-is-misunderstood?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "obviouslywrong.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a09",
+          "order": 3,
+          "title": "HOW MUCH SHOULD YOU SPEND ON ACCESSIBILITY?",
+          "summary": "Digital accessibility should be treated as a core compliance investment. Companies generally spend 3-10% of annual revenue on compliance overall, making accessibility investments range from 0.1-0.5% of total revenue for most organizations. The cost of non-compliance is nearly three times higher than compliance costs, making proactive accessibility investment both a legal necessity and a good opportunity to reach over 1 billion people with disabilities worldwide.",
+          "url": "https://karlgroves.com/how-much-should-you-spend-on-accessibility?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "karlgroves.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-04:a10",
+          "order": 1,
+          "title": "TEAMS ARE ADOPTING AI AT BREAKNECK SPEED - BUT INEFFICIENCIES ARE GROWING",
+          "summary": "Atlassian asked 3,500 developers and managers about their day-to-day experience - from new tools to ongoing sources of frustration. The State of Developer Experience 2025 report [10] looks at how developer teams are working with AI, where friction still exists - and how you can increase productivity, developer satisfaction, and long-term success.",
+          "url": "https://www.atlassian.com/teams/software-development/state-of-developer-experience-2025?utm_source=tldr&utm_medium=email&utm_campaign=P%3Aatlassian%2AO%3Aclm%2AC%3Agated-pdf%2AH%3Afy26q1%2AI%3Atldr-webdev-sept4%2A&utm_sfdc-campaign_id=701QB00000WfgP6YAJ",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a10",
+          "order": 2,
+          "title": "Download the report ⬇️",
+          "summary": "",
+          "url": "https://www.atlassian.com/teams/software-development/state-of-developer-experience-2025?utm_source=tldr&utm_medium=email&utm_campaign=P%3Aatlassian%2AO%3Aclm%2AC%3Agated-pdf%2AH%3Afy26q1%2AI%3Atldr-webdev-sept4%2A&utm_sfdc-campaign_id=701QB00000WfgP6YAJ",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a11",
+          "order": 3,
+          "title": "CLAUDE CODE: NOW IN BETA IN ZED",
+          "summary": "Zed has released a beta version of Claude Code integrated directly into the Zed editor via the new Agent Client Protocol (ACP). This allows developers to use Claude Code's features like real-time code editing and custom workflows within the Zed environment. ACP is an open standard designed to allow any AI agent to connect with Zed and other compatible editors.",
+          "url": "https://zed.dev/blog/claude-code-via-acp?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "zed.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a12",
+          "order": 4,
+          "title": "AGENTSCOPE",
+          "summary": "AgentScope is a framework for building LLM apps with a focus on agent-oriented programming. It prioritizes transparency, real-time steering, agentic features like tool management and long-term memory, and model agnostic design. The framework offers modules for models, tools, MCP (Model Context Protocol), agents, tracing, memory, evaluation, and formatting, all highly customizable and modular.",
+          "url": "https://github.com/agentscope-ai/agentscope?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a13",
+          "order": 5,
+          "title": "REGEXP EQUIVALENCE CHECKER",
+          "summary": "This tool checks the equivalence of two JavaScript regular expressions (excluding global, local, unicode, backreferences, lookbehind, and word boundary syntax), showing if they match the exact same strings or providing example strings that demonstrate their differences.",
+          "url": "https://gruhn.github.io/regex-utils/equiv-checker.html?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "gruhn.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-04:a14",
+          "order": 1,
+          "title": "AUTOLINKING'S BROKEN PROMISE",
+          "summary": "Dependency management is complex in Expo and React Native apps, partly due to the \"broken promise\" of autolinking to simplify native module dependencies. Expo SDK 54 has several fixes, including direct Metro dependencies, removing implicit dependencies, consistent autolinking, and a CLI fallback resolver, to address these challenges and support various package managers and monorepos. The updated autolinking system now discovers transitive dependencies, allowing `expo-doctor` to proactively report duplicate modules and potential conflicts for developers to resolve.",
+          "url": "https://kitten.sh/blog/autolinkings-broken-promise?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "kitten.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a15",
+          "order": 2,
+          "title": "MIT STUDY FINDS ARTIFICIAL INTELLIGENCE USE REPROGRAMS THE BRAIN, LEADING TO COGNITIVE DECLINE",
+          "summary": "A recent MIT study investigated the cognitive effects of using ChatGPT for essay writing. The study found that students who relied on ChatGPT experienced weakened brain connectivity, impaired memory recall, and a diminished sense of authorship. EEG scans revealed decreased neural activity, especially in areas related to attention and visual processing.",
+          "url": "https://publichealthpolicyjournal.com/mit-study-finds-artificial-intelligence-use-reprograms-the-brain-leading-to-cognitive-decline/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "publichealthpolicyjournal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-04:a16",
+          "order": 1,
+          "title": "FOR ALL THAT'S HOLY, CAN YOU JUST LEVERAGE THE WEB, PLEASE?",
+          "summary": "This dev went through a convoluted and frustrating offline customer service process for registering a washing machine warranty, contrasting it with the efficient and modern online option of uploading a photo for AI-powered product number extraction.",
+          "url": "https://blog.tomayac.com/2025/09/03/for-all-thats-holy-can-you-just-leverage-the-web-please/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.tomayac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a17",
+          "order": 2,
+          "title": "101 REAL-WORLD GEN AI USE CASES WITH TECHNICAL BLUEPRINTS",
+          "summary": "Google Cloud shows 101 architectural blueprints with corresponding tech stacks to help developers and business leaders implement generative AI across 10 major industries.",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/real-world-gen-ai-use-cases-with-technical-blueprints?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a18",
+          "order": 3,
+          "title": "TUFTE CSS",
+          "summary": "Tufte CSS provides a CSS framework to style web articles with a focus on simplicity, sidenotes, tight integration of graphics, and careful typography.",
+          "url": "https://edwardtufte.github.io/tufte-css/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "edwardtufte.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-04:a19",
+          "order": 4,
+          "title": "USING CLAUDE CODE FROM ANYWHERE",
+          "summary": "Web-based workflows exist that solve the limitations of current methods for using Claude Code by providing on-demand, ephemeral sandboxes, live interactive sessions, and automated chat management with persistence.",
+          "url": "https://blog.matt-rickard.com/p/using-claude-code-from-anywhere?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.matt-rickard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

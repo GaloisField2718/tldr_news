@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-04-07",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-04-07",
+  "source_path": "TLDR Web Dev/article_07-04-2025.md",
+  "source_content_hash": "sha256:1025c19aa6677a76eef00e966c6fcaee551c91505325cc468d94b8b3039b5ea9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-04-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a04",
+          "order": 1,
+          "title": "WHY JAVASCRIPT NEEDS DEBUG IDS",
+          "summary": "In 99% of cases, the JavaScript that you run on a website isn't what you wrote — it's been minified, transformed, polyfilled, etc. This makes tracing errors back to code challenging.",
+          "url": "https://blog.sentry.io/javascript-needs-debug-ids/",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a04",
+          "order": 2,
+          "title": "READ THE BLOG → JavaScript needs Debug IDs",
+          "summary": "SEE THE VALUE OF DEBUG IDS → play with Sentry's interactive sandbox",
+          "url": "https://blog.sentry.io/javascript-needs-debug-ids/",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a05",
+          "order": 3,
+          "title": "",
+          "summary": "",
+          "url": "https://sandbox.sentry.io",
+          "reading_time_minutes": null,
+          "source_domain": "sandbox.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a06",
+          "order": 1,
+          "title": "REACT.MEMO DEMYSTIFIED: WHEN IT HELPS AND WHEN IT HURTS",
+          "summary": "React's memoization tools like `React.memo`, `useMemo`, and `useCallback` cache values or components and prevent unnecessary re-renders based on dependency changes. A common misconception is addressed that memoizing props alone doesn't prevent child component re-renders, but rather when the prop is used in a hook or the child is wrapped with `React.memo`. There are also a few common pitfalls to watch out for, like prop spreading, the children prop, and nested memo components that can silently break memoization.",
+          "url": "https://cekrem.github.io/posts/react-memo-when-it-helps-when-it-hurts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "cekrem.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a07",
+          "order": 2,
+          "title": "HIDING ELEMENTS THAT REQUIRE JAVASCRIPT WITHOUT JAVASCRIPT",
+          "summary": "Hiding HTML elements that require JavaScript when JavaScript is disabled is possible. There are three methods: using JavaScript to enable a class, overriding styles with `noscript`, and lastly, the preferred approach of using a `d-js-required` class. This class is combined with `noscript` and CSS hides elements by default unless JavaScript is active.",
+          "url": "https://0xda.de/blog/2025/04/hiding-elements-that-require-javascript-without-javascript/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "0xda.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a08",
+          "order": 3,
+          "title": "ITEM FLOW, PART 1: A NEW UNIFIED CONCEPT FOR LAYOUT",
+          "summary": "\"Item Flow\" is a proposed unified CSS system designed to control layout flow, wrapping, packing, and spacing in both Flexbox and Grid. It will consolidate the functionality of flex-flow and grid-auto-flow into a new shorthand property, item-flow, along with longhand properties like item-direction, item-wrap, item-pack, and item-slack.",
+          "url": "https://webkit.org/blog/16587/item-flow-part-1-a-new-unified-concept-for-layout/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "webkit.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a09",
+          "order": 1,
+          "title": "DATABASE PROTOCOLS ARE UNDERWHELMING",
+          "summary": "Database protocols like those of MySQL and PostgreSQL are underwhelming in terms of their developer experience. Since they use a mutable connection state, it requires complex connection management and makes error recovery difficult. Also, there aren't safe retry mechanisms for queries due to the uncertainty of idempotency.",
+          "url": "https://byroot.github.io/performance/2025/03/21/database-protocols.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "byroot.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a10",
+          "order": 2,
+          "title": "THE INSANITY OF BEING A SOFTWARE ENGINEER",
+          "summary": "Software engineers are expected to constantly learn new frameworks, languages, and tools in both front-end and back-end dev. This burden extends to DevOps responsibilities like infrastructure management and deployment. Even promotions to management don't necessarily reduce the technical workload, especially since managers often still have to be technically competent.",
+          "url": "https://0x1.pt/2025/04/06/the-insanity-of-being-a-software-engineer/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "0x1.pt",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a11",
+          "order": 3,
+          "title": "HOW SOFTWARE ENGINEERS CAN PREPARE FOR LEADERSHIP ROLES",
+          "summary": "Software engineers can develop leadership skills by focusing on soft skills instead of just coding prowess. They can do this by mentoring others, leading meetings, filling gaps within teams, and tracking the impact of their work to showcase leadership qualities.",
+          "url": "https://strategizeyourcareer.com/p/how-software-engineers-can-prepare-for-leadership-roles?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "strategizeyourcareer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a12",
+          "order": 1,
+          "title": "THE LLAMA 4 HERD: THE BEGINNING OF A NEW ERA OF NATIVELY MULTIMODAL AI INNOVATION",
+          "summary": "Meta has released the Llama 4 herd, a collection of AI models that features advanced multimodal AI models designed for personalized experiences. The collection includes Llama 4 Scout, which has a 10M token context length, and Llama 4 Maverick, which outperforms models like GPT-4o in multiple benchmarks. The models were codistilled from Llama 4 Behemoth, a large, powerful teacher model.",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "ai.meta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a13",
+          "order": 2,
+          "title": "REACT NATIVE FADE WRAPPER",
+          "summary": "This is a React Native component that adds customizable fade gradients to the edges of content, which indicates overflow to the user in scrollable views on both iOS and Android.",
+          "url": "https://github.com/pioner92/rn-fade-wrapper?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a14",
+          "order": 3,
+          "title": "RUBY UI",
+          "summary": "RubyUI is a collection of customizable and accessible UI components built with Phlex that can be copied and pasted into your Ruby on Rails apps.",
+          "url": "https://github.com/ruby-ui/ruby_ui?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a15",
+          "order": 1,
+          "title": "THE “S” IN MCP STANDS FOR SECURITY",
+          "summary": "MCP (Model Context Protocol) is a new standard for integrating LLMs with tools and data that allows AI agents to connect to APIs, maintain sessions, run commands, and share context. However, MCP doesn't have built-in security, making it vulnerable to attacks like command injection, tool poisoning, silent redefinition, and cross-server tool shadowing. Devs and platform builders need to put security measures in place, such as input validation, version pinning, integrity checks, and careful monitoring.",
+          "url": "https://links.tldrnewsletter.com/OaEUir",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a16",
+          "order": 2,
+          "title": "IS PYTHON CODE SENSITIVE TO CPU CACHING?",
+          "summary": "CPU caching affects Python code performance despite Python's high-level nature. Experiments comparing sequential and random list access show that random access is significantly slower, especially with larger lists exceeding cache sizes. This means that cache-aware programming is relevant even in interpreted environments like CPython.",
+          "url": "https://lukasatkinson.de/2024/python-cpu-caching/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "lukasatkinson.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a17",
+          "order": 3,
+          "title": "THE SLOW COLLAPSE OF CRITICAL THINKING IN OSINT DUE TO AI",
+          "summary": "The increasing reliance on AI tools in OSINT is leading to a decline in critical thinking and tradecraft. A study showed that confidence in AI reduces critical thinking and independent verification. Analysts are shifting from investigators to operators, trusting AI outputs without proper scrutiny, which leads to errors and manipulation.",
+          "url": "https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "dutchosintguy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-04-07:a18",
+          "order": 1,
+          "title": "[PITCH] A VISION FOR WEBASSEMBLY SUPPORT IN SWIFT",
+          "summary": "This pitch outlines a vision for improved WebAssembly support in Swift, focusing on improving the standard library, cross-compilation, the Component Model, interoperability, debugging, and concurrency.",
+          "url": "https://forums.swift.org/t/pitch-a-vision-for-webassembly-support-in-swift/79060?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "forums.swift.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a19",
+          "order": 2,
+          "title": "WHY THE LATEST JAVASCRIPT FRAMEWORKS ARE A WASTE OF TIME",
+          "summary": "Chasing the latest JavaScript frameworks is a waste of time because it prioritizes relearning syntax and superficial differences over building actual apps and developing fundamental skills.",
+          "url": "https://dev.to/holasoymalva/why-the-latest-javascript-frameworks-are-a-waste-of-time-52pc?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a20",
+          "order": 3,
+          "title": "THE BLISSFUL ZEN OF A GOOD SIDE PROJECT",
+          "summary": "Part of the good feelings of working on a side project is the act of creating it itself, with the freedom it provides.",
+          "url": "https://joshcollinsworth.com/blog/the-blissful-zen-of-a-good-side-project?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "joshcollinsworth.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-04-07:a21",
+          "order": 4,
+          "title": "HAS THE VSCODE C/C++ EXTENSION BEEN BLOCKED?",
+          "summary": "Microsoft has released its own Agent mode so it has blocked VSCode-derived editors (like Cursor) from using MS extensions.",
+          "url": "https://github.com/getcursor/cursor/issues/2976?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

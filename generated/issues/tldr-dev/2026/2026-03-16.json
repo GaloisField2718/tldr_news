@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-03-16",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-03-16",
+  "source_path": "TLDR Dev/article_16-03-2026.md",
+  "source_content_hash": "sha256:57a4670eafc08fa370200189e0cf5457651c72df862a37a987a34a7fc295150d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-03-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a04",
+          "order": 1,
+          "title": "CODE",
+          "summary": "Vague AI promises.",
+          "url": "https://coderemix.ai/?utm_source=tldr_dev&utm_medium=email&utm_campaign=26_crs&utm_content=lp&utm_term=register",
+          "reading_time_minutes": null,
+          "source_domain": "coderemix.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a04",
+          "order": 2,
+          "title": "Register for Code Remix Summit →",
+          "summary": "",
+          "url": "https://coderemix.ai/?utm_source=tldr_dev&utm_medium=email&utm_campaign=26_crs&utm_content=lp&utm_term=register",
+          "reading_time_minutes": null,
+          "source_domain": "coderemix.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a05",
+          "order": 1,
+          "title": "HOW KERNEL ANTI-CHEATS WORK: A DEEP DIVE INTO MODERN GAME PROTECTION",
+          "summary": "Modern kernel anti-cheat systems, like BattlEye and Vanguard, operate at the highest privilege level in Windows, necessitated by the failure of user-mode protections against advanced kernel-level cheats. They have a three-component architecture, using kernel callbacks for real-time system monitoring, memory scanning, and advanced anti-injection and hook detection methods.",
+          "url": "https://s4dbrd.github.io/posts/how-kernel-anti-cheats-work/?utm_source=tldrdev",
+          "reading_time_minutes": 54,
+          "source_domain": "s4dbrd.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a06",
+          "order": 2,
+          "title": "WHAT WE LEARNED FROM A 22-DAY STORAGE BUG (AND HOW WE FIXED IT)",
+          "summary": "Mux experienced a 22-day storage bug between January 8 and February 4, during which 0.33% of audio and video segments were served in a corrupted state. An optimization to use fewer, larger storage nodes created bottlenecks that amplified pre-existing issues like remote read cancellations, a race condition in file deletions, and a bug where partially written segments were treated as complete. To fix this, Mux addressed the deletion purge path, resolved remote read context cancellation, and increased storage node counts, then regenerated all affected segments and purged CDN caches.",
+          "url": "https://www.mux.com/blog/22-day-storage-bug?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "mux.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a07",
+          "order": 3,
+          "title": "FRONTEND MEMORY LEAKS: A 500-REPOSITORY STATIC ANALYSIS AND FIVE-SCENARIO BENCHMARK STUDY",
+          "summary": "A study analyzed 500 public React, Vue, and Angular repositories and conducted five benchmark scenarios to understand the prevalence and impact of frontend memory leaks caused by missing cleanup patterns. The static analysis found that 86% of repositories had at least one missing-cleanup pattern, with timers and event listeners being the most common offenders. Controlled benchmarks consistently showed that each unhandled pattern resulted in approximately 8 KB of retained heap growth per component mount/unmount cycle.",
+          "url": "https://stackinsight.dev/blog/memory-leak-empirical-study/?utm_source=tldrdev",
+          "reading_time_minutes": 32,
+          "source_domain": "stackinsight.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a08",
+          "order": 1,
+          "title": "GRIEF AND THE AI SPLIT",
+          "summary": "AI-assisted coding has revealed a pre-existing split among developers: one group mourns the loss of the craft and artistry of writing code, while the other prioritizes making computers achieve desired outcomes. AI tools are a natural progression of software engineering though, shifting the puzzle-solving aspect of it to a more abstract, architectural level.",
+          "url": "https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.lmorchard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a09",
+          "order": 2,
+          "title": "18 MONTHS OF CODE, GONE. HERE'S WHAT WE LEARNED.",
+          "summary": "",
+          "url": "https://tompiagg.io/posts/we-threw-away-1-5-years-of-code?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "tompiagg.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a10",
+          "order": 3,
+          "title": "OPTIMIZING CONTENT FOR AGENTS",
+          "summary": "Content should be optimized for AI agents, similar to how it's optimized for human users. This is necessary because AI agents, particularly frontier models, have specific behaviors and constraints, such as only reading parts of files or responding differently to direct information versus self-discovery. The recommended implementation involves content negotiation, where an `Accept: text/markdown` header signals an agent request, prompting the server to deliver specialized content.",
+          "url": "https://cra.mr/optimizing-content-for-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "cra.mr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a11",
+          "order": 1,
+          "title": "CLERK EXPO 3.1: NATIVE AUTH COMPONENTS FOR IOS AND ANDROID",
+          "summary": "Clerk Expo 3.1 ships prebuilt sign-in, user button, and profile views rendered natively via SwiftUI and Jetpack Compose. Native Google Sign-In uses platform APIs instead of a browser OAuth flow. Read the",
+          "url": "https://go.clerk.com/iEacNgP?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a12",
+          "order": 2,
+          "title": "Clerk Expo 3.1 changelog",
+          "summary": "",
+          "url": "https://go.clerk.com/iEacNgP",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a13",
+          "order": 3,
+          "title": "1M CONTEXT IS NOW GENERALLY AVAILABLE FOR OPUS 4.6 AND SONNET 4.6",
+          "summary": "Claude Opus 4.6 and Sonnet 4.6 now provide a 1M context window at standard pricing, eliminating long-context premiums and expanding media limits to 600 images/pages.",
+          "url": "https://claude.com/blog/1m-context-ga?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "claude.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a14",
+          "order": 4,
+          "title": "TUI STUDIO",
+          "summary": "TUIStudio is a Figma-like visual editor for designing terminal user interfaces using drag-and-drop components, advanced layouts, and real-time previews.",
+          "url": "https://tui.studio/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "tui.studio",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a15",
+          "order": 5,
+          "title": "GITAGENT",
+          "summary": "GitAgent is an open standard for defining, versioning, and running AI agents natively within Git repositories, treating agent configurations and components like traditional software code. It uses a git-native file system structure for defining agent \"soul,\" skills, memory, and deterministic workflows.",
+          "url": "https://www.gitagent.sh/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "gitagent.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a16",
+          "order": 1,
+          "title": "MCP IS DEAD; LONG LIVE MCP!",
+          "summary": "When comparing CLIs vs MCPs for coding agents, MCPs are better for enterprise and organizational adoption. MCP over streamable HTTP provides advantages such as centralization, robust security, comprehensive telemetry, and standardized, dynamic delivery of tools, prompts, and resources. For well-known tools, CLIs do provide more token savings.",
+          "url": "https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "chrlschn.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a17",
+          "order": 2,
+          "title": "TWENTY YEARS OF AMAZON S3 AND BUILDING WHAT'S NEXT",
+          "summary": "Amazon S3 launched in 2006, unexpectedly shaping the internet infrastructure by offering developers highly scalable, reliable, and inexpensive web-scale storage. Over two decades, S3 has grown from petabytes to hundreds of exabytes and trillions of objects. Looking forward, S3 is evolving beyond simple storage to become a universal foundation for AI and data workloads, introducing capabilities like S3 Tables, Vectors, and Metadata to directly support complex applications on stored data.",
+          "url": "https://links.tldrnewsletter.com/qcMe1Q",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a18",
+          "order": 3,
+          "title": "THE 49MB WEB PAGE",
+          "summary": "Modern news websites are bloated, slow, and usually have a lot of ads covering their UIs. Publishers prioritize short-term ad revenue (CPMs) over reader retention, resulting in massive data downloads, constant surveillance, and a high cognitive burden on users. This also shows up in the download size of web pages, some being slow to load because of all the data being downloaded.",
+          "url": "https://thatshubham.com/blog/news-audit?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "thatshubham.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-16:a19",
+          "order": 1,
+          "title": "FULLY REMOTE)",
+          "summary": "As the first engineer on TLDR's new Applied AI team, you'll build AI agents and composable Claude Skills to let non-technical teammates create their own AI workflows. Learn more [20].",
+          "url": "https://jobs.ashbyhq.com/tldr.tech/3b21aaf8-dea5-4127-be71-602d30e5001e?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "jobs.ashbyhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a21",
+          "order": 2,
+          "title": "ASK HN: HOW IS AI-ASSISTED CODING GOING FOR YOU PROFESSIONALLY? (HACKER NEWS THREAD)",
+          "summary": "Software engineers in the industry find that AI-assisted coding boosts productivity for boilerplate tasks, testing, debugging, and learning new technologies, yet it struggles with complex design, often producing flawed code requiring rigorous human review.",
+          "url": "https://news.ycombinator.com/item?id=47388646&utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a22",
+          "order": 3,
+          "title": "XML IS A CHEAP DSL",
+          "summary": "XML, despite its perceived obsolescence, is a uniquely cheap and effective choice for building declarative domain-specific languages to model complex systems like the tax code, due to its structured handling of nested expressions and universal tooling ecosystem.",
+          "url": "https://unplannedobsolescence.com/blog/xml-cheap-dsl/?utm_source=tldrdev",
+          "reading_time_minutes": 17,
+          "source_domain": "unplannedobsolescence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a23",
+          "order": 4,
+          "title": "YOUR PHONE IS AN ENTIRE COMPUTER",
+          "summary": "iPhones, which share powerful hardware with MacBooks, are artificially restricted by Apple.",
+          "url": "https://medhir.com/blog/your-phone-is-an-entire-computer?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "medhir.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-16:a24",
+          "order": 5,
+          "title": "SUPERPOWERS 5",
+          "summary": "Superpowers 5 introduces \"Visual Brainstorming,\" which enables agents to generate interactive web-based mockups and diagrams instead of relying on ASCII art.",
+          "url": "https://blog.fsck.com/2026/03/09/superpowers-5/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.fsck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

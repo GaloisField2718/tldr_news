@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-05-22",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-22",
+  "source_path": "TLDR InfoSec/article_22-05-2025.md",
+  "source_content_hash": "sha256:118e409c097b3e375df88eecda3ca509cb8995cf29c91ec685a580bebdb381a9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-22",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a04",
+          "order": 1,
+          "title": "SCATTERED SPIDER THREAT BRIEFING",
+          "summary": "Heard of LUCR-3 — AKA Scattered Spider, UNC3944, or Roasted Oktapus? You should: this threat actor has recently infiltrated the cloud environments of multiple Fortune 1000s.",
+          "url": "https://hero.permiso.io/lucr-3-scattered-spider-threat-briefing?utm_campaign=13195649-SS2025&utm_source=email&utm_medium=email&utm_content=tldrinfosec052225",
+          "reading_time_minutes": null,
+          "source_domain": "hero.permiso.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a04",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://hero.permiso.io/lucr-3-scattered-spider-threat-briefing?utm_campaign=13195649-SS2025&utm_source=email&utm_medium=email&utm_content=tldrinfosec052225",
+          "reading_time_minutes": null,
+          "source_domain": "hero.permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a05",
+          "order": 1,
+          "title": "DDOSECRETS PUBLISHES 410 GB OF HEAP DUMPS, HACKED FROM TELEMESSAGE'S ARCHIVE SERVER",
+          "summary": "Distributed Denial of Secrets published 410 GB of data that it stole from TeleMessage, an Israeli firm that makes modified versions of chat apps such as Signal and centrally archives messages. Some heap dumps include plaintext metadata, while others only include metadata, including sender and recipient information, timestamps, and group names. Due to the sensitive nature and PII in the messages, DDoSecrets only shared the data with journalists and researchers.",
+          "url": "https://micahflee.com/ddosecrets-publishes-410-gb-of-heap-dumps-hacked-from-telemessages-archive-server/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "micahflee.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a06",
+          "order": 2,
+          "title": "VANHELSING RANSOMWARE BUILDER LEAKED ON HACKING FORUM",
+          "summary": "After a former developer for the Ransomware-as-a-Service operator VanHelsing attempted to sell the source code for the VanHelsing affiliate panel, data leak Tor sites, and builders for the Windows and Linux encryptors, VanHelsing proactively released the source code itself. The leaked source code includes the Windows encryptor, which will require modifications for other threat actors, and the source code for the affiliate panel and blog site, which can be run as is. The data VanHelsing leaked was only a subset of what the former developer attempted to sell, as it did not include any databases or the Linux builder.",
+          "url": "https://www.bleepingcomputer.com/news/security/vanhelsing-ransomware-builder-leaked-on-hacking-forum/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a07",
+          "order": 3,
+          "title": "COINBASE SAYS ITS DATA BREACH AFFECTS AT LEAST 69,000 CUSTOMERS",
+          "summary": "Coinbase reported that 69,461 customers had personal and financial data stolen during a six-month breach. Hackers bribed support staff, stealing names, addresses, ID documents, account balances, and transaction histories. Despite a $20 million ransom demand, Coinbase refused to pay.",
+          "url": "https://techcrunch.com/2025/05/21/coinbase-says-its-data-breach-affects-at-least-69000-customers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a08",
+          "order": 1,
+          "title": "WHY RECREATING AN IAM ROLE DOESN'T RESTORE TRUST: A GOTCHA IN ROLE ARNS",
+          "summary": "In AWS IAM, trust policies reference ARNs in their JSON but reference an underlying, immutable principal ID, so if a role is deleted and recreated, the trust policy will also need to be recreated, even if the ARN is unchanged. This provides a security benefit in that if a role is deleted but the trust policy is unintentionally not updated, the role cannot be stealthily recreated and assume the same level of trust. Users can get around this issue by using a complete account as the principal in a trust policy with a condition block that restricts access to the specific role ARN.",
+          "url": "https://hackingthe.cloud/aws/general-knowledge/why_recreating_an_iam_role_doesnt_restore_trust_a_gotcha_in_role_arns/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackingthe.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a09",
+          "order": 2,
+          "title": "FORGET IPS: USING CRYPTOGRAPHY TO VERIFY BOT AND AGENT TRAFFIC",
+          "summary": "In the era of AI agents, not all bot traffic is malicious. Cloudflare proposed two mechanisms for “good bots” to self-identify. The first is HTTP Message Signatures, which adds a Signature-Input header with a signature, validity period, usage tag, and a Signature-Agent header to locate the key. The second option is a new TLS flag, req_mTLS, which allows clients to indicate support for mutual TLS and identify the bot.",
+          "url": "https://blog.cloudflare.com/web-bot-auth/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a10",
+          "order": 3,
+          "title": "SECURING CI/CD WORKFLOWS WITH WAZUH",
+          "summary": "CI/CD pipelines automate software development but introduce security risks like supply chain attacks and misconfigurations. Wazuh, an open-source security platform, enhances CI/CD security through log collection, file integrity monitoring, custom security rules, and more. This post dives into how to use it.",
+          "url": "https://links.tldrnewsletter.com/k3dQ2G",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a11",
+          "order": 1,
+          "title": "ICS SECURITY RESOURCES BY THE SANS COMMUNITY",
+          "summary": "Keep up to date with the latest developments, threats, and solutions in Industrial Control Security: Register for 3 days of immersive content at ICS Security Summit & Training [11] ($795 for in-person, FREE online), then download the free white paper to learn about the Five ICS Cybersecurity Critical Controls [12] - your field-tested framework for building a stronger, threat-informed defense strategy.",
+          "url": "https://www.sans.org/cyber-security-training-events/ics-security-summit-2025/?utm_source=TLDR&utm_medium=Sponsored_Content&utm_content=ICS_Summit_TLDR_5.22.25_Newsletter&utm_campaign=ICS_OT_Malware_Ransomware_2025&utm_type=Global_Campaign&utm_goal=Leads&utm_rDetail=Global",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a13",
+          "order": 2,
+          "title": "OKTA SECURITY DETECTION CATALOG",
+          "summary": "A collection of detection rules for security monitoring with detailed descriptions of log fields used for threat analysis within Okta environments.",
+          "url": "https://github.com/okta/customer-detections?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a14",
+          "order": 3,
+          "title": "WPAUDIT",
+          "summary": "WPAUDIT is a hyper-configurable, modular WordPress security auditing suite engineered to automate and streamline identifying vulnerabilities and security weaknesses in WordPress installations.",
+          "url": "https://github.com/ihuzaifashoukat/wpaudit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a15",
+          "order": 4,
+          "title": "POCKET ID",
+          "summary": "Pocket ID is a simple OIDC provider that allows users to authenticate services with their passkeys.",
+          "url": "https://github.com/pocket-id/pocket-id?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a16",
+          "order": 1,
+          "title": "SECURITY IS A NEGOTIATION PROBLEM",
+          "summary": "This post reflects on budgeting issues with security products and shares an experience with negotiating vendors down to under 10% of initial quotes. It recommends using Google Ads to uncover competitor concerns and obtain competing quotes while downplaying the proposed solution's value. The post also highlights tactics like applying pressure and providing the sales rep with the hope of a purchase.",
+          "url": "https://securityis.substack.com/p/security-is-a-negotiation-problem?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "securityis.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a17",
+          "order": 2,
+          "title": "M&S WARNS OF £300M DENT IN PROFITS FROM CYBERATTACK",
+          "summary": "Marks & Spencer expects a £300 million hit to next year's profits from its ongoing cyberattack, partially offset by insurance and cost mitigation. The month-long breach will force online sales offline until July, impacting food availability and operations.",
+          "url": "https://www.theregister.com/2025/05/21/ms_cyberattack_disruption/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a18",
+          "order": 3,
+          "title": "CELLCOM SERVICE DISRUPTION CAUSED BY CYBERATTACK",
+          "summary": "",
+          "url": "https://www.securityweek.com/cellcom-service-disruption-caused-by-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-22:a19",
+          "order": 1,
+          "title": "GOOGLE CHROME WILL BE ABLE TO AUTOMATICALLY CHANGE YOUR BAD PASSWORDS",
+          "summary": "With user consent, Chrome will soon automatically change weak passwords, helping improve security on supported websites without requiring manual updates.",
+          "url": "https://www.theverge.com/news/670208/google-chrome-passwords-auto-update-io-2025?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a20",
+          "order": 2,
+          "title": "MICROSOFT DISMANTLES LUMMA STEALER NETWORK, SEIZES 2,000+ DOMAINS",
+          "summary": "Microsoft and global law enforcement dismantled Lumma Stealer, a significant malware, by seizing over 2,300 web domains to prevent it from accessing infected devices.",
+          "url": "https://hackread.com/microsoft-dismantle-lumma-stealer-domain-seized/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-22:a21",
+          "order": 3,
+          "title": "RUSSIA TO ENFORCE LOCATION TRACKING APP ON ALL FOREIGNERS IN MOSCOW",
+          "summary": "Russia intends to require foreign residents in Moscow to install a tracking app on their phones to gather data such as location, fingerprints, and facial images.",
+          "url": "https://www.bleepingcomputer.com/news/government/russia-to-enforce-location-tracking-app-on-all-foreigners-in-moscow/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

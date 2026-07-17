@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-06-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-06-07",
+  "source_path": "TLDR InfoSec/article_07-06-2024.md",
+  "source_content_hash": "sha256:e8fe5bb6ebb06858f80e158e8ebf5a430c8785358da1a42bc2b7ea0b0e16741f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-06-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a04",
+          "order": 1,
+          "title": "AWS GAMEDAY: YOUR QUEST BEGINS ON JUNE 18!",
+          "summary": "In this virtual GameDay [4], you will complete a series of cloud security quests using Lacework and AWS [4].",
+          "url": "https://www.lacework.com/resource/webinar/june-aws-gameday?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20240607",
+          "reading_time_minutes": null,
+          "source_domain": "lacework.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a04",
+          "order": 2,
+          "title": "Save your spot ↗️",
+          "summary": "",
+          "url": "https://www.lacework.com/resource/webinar/june-aws-gameday?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20240607",
+          "reading_time_minutes": null,
+          "source_domain": "lacework.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a05",
+          "order": 1,
+          "title": "TIKTOK FIXES 0-DAY BUG USED TO HIJACK HIGH-PROFILE ACCOUNTS",
+          "summary": "TikTok has fixed a 0-day vulnerability that allowed attackers to take over accounts. The vulnerability required the attacker to send a DM to the victim and the victim to open the message but did not require any further interaction such as clicking links. TikTok has not given details as to the number of accounts that were compromised.",
+          "url": "https://www.bleepingcomputer.com/news/security/tiktok-fixes-zero-day-bug-used-to-hijack-high-profile-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a06",
+          "order": 2,
+          "title": "AUSTRALIAN FOOD SERVICE PROVIDER'S INTERNAL RECORDS AND INVOICES EXPOSED IN THIRD PARTY DATA BREACH",
+          "summary": "Security researcher Jeremiah Fowler discovered an unprotected database belonging to Patties Food Limited that was internet accessible. The database contained nearly 500K internal logs which exposed internal, customer, and vendor emails. The database also contained over 25K invoices which included vendors, contacts, emails, and banking information. The databases were managed by a third party known as Proveno.ai, which has responded to the responsible disclosure and protected the databases.",
+          "url": "https://www.websiteplanet.com/news/pattiesfoods-breach-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "websiteplanet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a07",
+          "order": 3,
+          "title": "UNCLE SAM SEEKS TO CLAW BACK $5M+ STOLEN FROM TRADE UNION THROUGH SPOOFED EMAIL",
+          "summary": "The US Justice Department filed a civil forfeiture action seeking to recover over $5 million stolen from a Massachusetts trade union. The funds, part of a $6.4 million theft, have been traced to seven bank accounts which are currently seized. The legal action aims to enable the recovery of the stolen money held in those accounts",
+          "url": "https://www.theregister.com/2024/06/06/union_bec_scam/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a08",
+          "order": 1,
+          "title": "SECURITY FIRST: DEVSECOPS EMPOWERMENT WITH TERRASCAN",
+          "summary": "Terrascan is an IaC scanner by Tenable that can be used to scan Terraform files, Helm Charts, Dockerfiles, and other IaC files. This post walks through the steps to install Terrascan and run it against Terraform files. It provides the full output of the sample run and walks through the found vulnerabilities.",
+          "url": "https://blog.devops.dev/security-first-devsecops-empowerment-with-terrascan-0434d365a2ff?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.devops.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a09",
+          "order": 2,
+          "title": "SECURE YOUR TAILSCALE INFRASTRUCTURE FURTHER WITH MUTUAL TLS",
+          "summary": "Viktor Petersson, co-founder of Screenly, walks through the process of utilizing certificates generated by Tailscale for Mutual TLS to provide an added layer of security to sensitive applications or those that don't require authentication. Petersson first generates a client certificate with Tailscale and exports it to a PKCS#12 bundle, then he imports that to a browser, and finally deploys a ghostunnel server to reverse proxy traffic on the server.",
+          "url": "https://blog.viktorpetersson.com/2024/05/29/tailscale-and-mutual-tls.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.viktorpetersson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a10",
+          "order": 3,
+          "title": "WHY SAST + DAST CAN'T BE ENOUGH",
+          "summary": "Static and dynamic app testing are important but not enough to fully secure modern software. New automated testing procedures are needed to address evolving threats and vulnerabilities. Detection in source code is crucial for enhancing application security beyond traditional methods.",
+          "url": "https://blog.gitguardian.com/why-sast-dast-cant-be-enough/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a11",
+          "order": 1,
+          "title": "KITEWORKS MFT: WHEN YOU ABSOLUTELY, POSITIVELY NEED THE MOST SECURE MANAGED FILE TRANSFER SOLUTION",
+          "summary": "If you need managed file transfer (MFT) you can trust, choose the only MFT platform tough enough for FedRAMP and IRAP [11]. Kiteworks is regularly audited against 325 security controls for NIST 800-53, built on a hardened virtual appliance, and offers enterprise scale-out and high availability [11] — in the cloud, on-premises, or hybrid. Get a",
+          "url": "https://www.kiteworks.com/platform/simple/managed-file-transfer/?utm_campaign=2024+Platform+Pages&utm_source=TLDR&utm_content=TLDR-platform-mft",
+          "reading_time_minutes": null,
+          "source_domain": "kiteworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a12",
+          "order": 2,
+          "title": "demo here",
+          "summary": "",
+          "url": "https://info.kiteworks.com/demo-request?utm_campaign=Get+A+Demo&utm_source=TLDR&utm_content=TLDR-newsletter-demorequest",
+          "reading_time_minutes": null,
+          "source_domain": "info.kiteworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a13",
+          "order": 3,
+          "title": "VULNCHECK (PRODUCT LAUNCH)",
+          "summary": "VulnCheck provides exploit intelligence for vulnerability prioritization and an early-warning system for in-the-wild software exploitation activity.",
+          "url": "https://vulncheck.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "vulncheck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a14",
+          "order": 4,
+          "title": "OXO",
+          "summary": "OXO is a security scanning framework that combines specialized tools to work cohesively to find vulnerabilities and perform actions like recon, enumeration, fingerprinting, and more.",
+          "url": "https://github.com/Ostorlab/oxo?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a15",
+          "order": 5,
+          "title": "TOTALRECALL",
+          "summary": "TotalRecall is a tool that extracts and displays data from the new Recall feature in Windows 11. The tool demonstrates how the local Recall database can be abused by an attacker. It was developed using an Azure VM with access to the feature as Copilot+ devices have not shipped yet.",
+          "url": "https://github.com/xaitax/TotalRecall?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a16",
+          "order": 1,
+          "title": "UK RETAILERS FILE A £1.1B COLLECTIVE ACTION AGAINST AMAZON OVER CLAIMS OF DATA MISUSE",
+          "summary": "The British Independent Retailers Association filed a damages claim against Amazon in a £1.1 billion ($1.3 billion) collective action, alleging illegal misuse of members' proprietary data for competitive purposes and manipulation of the coveted \"Buy Box\" feature.",
+          "url": "https://techcrunch.com/2024/06/06/uk-retailers-file-a-1-1b-collective-action-against-amazon-over-claims-of-data-misuse/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a17",
+          "order": 2,
+          "title": "HACKERS EXPLOIT LEGITIMATE PACKER SOFTWARE TO SPREAD MALWARE UNDETECTED",
+          "summary": "Threat actors are increasingly abusing legitimate packer software like BoxedApp to evade detection and distribute malware such as remote access trojans and information stealers, primarily targeting financial institutions and government sectors.",
+          "url": "https://thehackernews.com/2024/06/hackers-exploit-legitimate-packer.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a18",
+          "order": 3,
+          "title": "MICROSOFT DEPRECATES WINDOWS NTLM AUTHENTICATION PROTOCOL",
+          "summary": "Microsoft announced that it has officially deprecated the outdated NTLM authentication protocol in favor of more secure alternatives. NTLM will still work in the next release of Windows server and the next annual release of Windows. Administrators are encouraged to audit their use of NTLM and users are encouraged to transition to Negotiate which attempts authentication with Kerberos before falling back to NTLM.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-deprecates-windows-ntlm-authentication-protocol/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-07:a19",
+          "order": 1,
+          "title": "FBI OBTAINS 7,000 LOCKBIT RANSOMWARE DECRYPTION KEYS",
+          "summary": "The FBI obtained 7,000 decryption keys from the LockBit ransomware group. Victims can now unlock their data for free.",
+          "url": "https://statescoop.com/fbi-obtains-7000-lockbit-ransomware-decryption-keys/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "statescoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a20",
+          "order": 2,
+          "title": "225,000 MORE CYBERSECURITY WORKERS NEEDED IN US: CYBERSEEK",
+          "summary": "There are more than 1.2 million cybersecurity workers in the United States, but 225,200 more people are needed.",
+          "url": "https://www.securityweek.com/225000-more-cybersecurity-workers-needed-in-us-cyberseek/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-07:a21",
+          "order": 3,
+          "title": "GOOGLE MAPS TIMELINE DATA TO BE STORED LOCALLY ON YOUR DEVICE FOR PRIVACY",
+          "summary": "Google plans to store Maps Timeline data on users' devices instead of in their Google account starting December 1.",
+          "url": "https://thehackernews.com/2024/06/google-maps-timeline-data-to-be-stored.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

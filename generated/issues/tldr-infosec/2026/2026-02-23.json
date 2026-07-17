@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-02-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-23",
+  "source_path": "TLDR InfoSec/article_23-02-2026.md",
+  "source_content_hash": "sha256:456353c5551cb66c6e99881be12e9d593f0017424b929c77c795f9ca5e444104",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a04",
+          "order": 1,
+          "title": "SECURE AWS WORKLOADS WITHOUT SLOWING DEPLOYMENTS",
+          "summary": "Your security stack is growing, but so are your attack surfaces. Containers, microservices, remote teams, and data lakes—each adds complexity.",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security?trk=c3c3e8cb-1e63-4564-bea5-305d719c1045&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a04",
+          "order": 2,
+          "title": "Teams building on AWS are solving this with hands-on tutorials",
+          "summary": "that show exactly how to implement modern security patterns, including:",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security?trk=c3c3e8cb-1e63-4564-bea5-305d719c1045&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a04",
+          "order": 3,
+          "title": "Explore security tutorials and tools",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security?trk=c3c3e8cb-1e63-4564-bea5-305d719c1045&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a05",
+          "order": 1,
+          "title": "NEW CLICKFIX ATTACK TARGETS CRYPTO WALLETS AND 25+ BROWSERS WITH INFOSTEALER",
+          "summary": "An evolved ClickFix campaign uses fake CAPTCHA pages to trick users into executing PowerShell commands that download an infostealer via the Donut shellcode loader, which runs entirely in memory using VirtualAlloc and CreateThread to evade file-based detection. The malware targets cryptocurrency wallets, including MetaMask and Exodus, harvests credentials from over 25 browsers, and exfiltrates VPN configurations, Steam accounts, and FTP credentials, while persisting through RunMRU registry key modifications. Organizations should monitor for suspicious PowerShell execution chains, block known C2 IPs, and note that Microsoft Defender detects the payload as Behavior:Win32/SuspClickFix.C.",
+          "url": "https://hackread.com/clickfix-attack-crypto-wallets-browsers-infostealer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a06",
+          "order": 2,
+          "title": "AI-ASSISTED THREAT ACTOR COMPROMISES 600+ FORTIGATE DEVICES IN 55 COUNTRIES",
+          "summary": "A Russian-speaking, financially motivated threat actor leveraged commercial generative AI tools to compromise over 600 FortiGate devices across 55 countries by targeting exposed management interfaces and weak single-factor credentials, according to Amazon Threat Intelligence. Post-exploitation activity included Active Directory compromise, credential harvesting via pass-the-hash/pass-the-ticket and NTLM relay attacks, and targeting Veeam Backup servers using CVE-2023-27532 and CVE-2024-40711, consistent with pre-ransomware operations. Organizations should immediately restrict exposure of the FortiGate management interface, enforce MFA for all administrative and VPN access, rotate SSL-VPN credentials, and isolate backup infrastructure from general network access.",
+          "url": "https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a07",
+          "order": 3,
+          "title": "ATTACKERS HAVE 16-DIGIT CARD NUMBERS, EXPIRY DATES, BUT NOT NAMES. NOW ORG GETS £500K FINE",
+          "summary": "The UK Court of Appeal has backed the ICO's £500k fine on DSG Retail over a 2017 breach that exposed 5.6 million card details and data on 14 million people, even though attackers lacked cardholder names. The ruling confirms that payment card numbers and expiry dates are personal data from the controller's perspective, stresses jigsaw identification risk, and strengthens regulators' ability to penalize weak security in future cyberattacks.",
+          "url": "https://www.theregister.com/2026/02/20/ico_wins_battle_in_protracted_fight/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a08",
+          "order": 1,
+          "title": "AI IN THE MIDDLE: TURNING WEB-BASED AI SERVICES INTO C2 PROXIES & THE FUTURE OF AI-DRIVEN ATTACKS",
+          "summary": "AI assistants with web-browsing capabilities, specifically Grok and Microsoft Copilot, can be abused as covert C2 relays by using anonymous web access to fetch attacker-controlled URLs and return embedded commands, all without API keys or registered accounts. This PoC uses a WebView2-based C++ implant to create a bidirectional channel in which victim data is exfiltrated via URL query parameters and commands are returned via AI-generated responses, with simple encoding sufficient to bypass model-side safeguards. The research outlines a near-term evolution toward AI-Driven malware where implants shift from static logic to prompt-driven behavior, enabling AI-assisted anti-sandbox detection, intelligent victim triage, and targeted ransomware that prioritizes high-value files to evade volume-based detection thresholds.",
+          "url": "https://research.checkpoint.com/2026/ai-in-the-middle-turning-web-based-ai-services-into-c2-proxies-the-future-of-ai-driven-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a09",
+          "order": 2,
+          "title": "TESTING ACCESS TO AWS RESOURCES WITHOUT ANGERING THE PEOPLE THAT PAY THE BILLS",
+          "summary": "This post details a methodology for empirically verifying AWS resource exposure without reading sensitive data or altering the resource state. It employs four techniques: comparing unsigned and signed requests, conducting metadata-only reads, performing no-op operations like untagging nonexistent keys, and sending malformed request probes that leverage AWS' sequence where authorization checks occur before parameter validation. The \"3-topic method\" ensures probe safety by testing identical changes across allowed, denied, and nonexistent resources — if only denied and nonexistent targets return 403 errors and allowed ones return 400, it confirms authorization without executing the action. This method is implemented in the open-source sns-buster tool for SNS and is adaptable to other AWS services for CSPM, bug bounty, and IAM policy validation.",
+          "url": "https://www.plerion.com/blog/testing-access-to-aws-resources?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a10",
+          "order": 3,
+          "title": "EBPF RING BUFFER VS PERF BUFFER",
+          "summary": "Ring buffer, introduced in Linux 5.8, replaced the legacy perf buffer as the recommended mechanism for kernel-to-userspace data transfer in eBPF programs. It uses a single shared circular buffer across all CPUs instead of per-CPU buffers, eliminating cross-CPU event ordering complexity and reducing copy overhead. This article walks through both implementations in C and Go using cilium/ebpf, demonstrating how the ring buffer's reserve-and-submit model via bpf_ringbuf_reserve and bpf_ringbuf_submit provides a simpler, higher-throughput path compared to perf buffer's bpf_perf_event_output approach. For security tooling built on eBPF tracing, the ring buffer is now the default choice for structured event streaming from kernel-level monitors to usersp.",
+          "url": "https://kubefront.net/system/ebpf/ring-buffer-vs-perf-buffer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "kubefront.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a11",
+          "order": 1,
+          "title": "DON'T TRUST THE CODE",
+          "summary": "AI coding assistants create security risks at machine speed and massive scale. Checkmarx Developer Assist embeds an AI-native AppSec agent directly in AI IDEs, preventing vulnerabilities in real time before commit. It enforces policy, validates AI-generated code, and secures the modern Agentic Development Lifecycle (ADLC). Explore the",
+          "url": "https://checkmarx.com/resources/dont-trust-the-code/?utm_source=tldr_email&utm_medium=email&utm_campaign=tldr_InfoSec_Newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "checkmarx.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a12",
+          "order": 2,
+          "title": "guide [11] or visit us at RSAC 2026.",
+          "summary": "",
+          "url": "https://checkmarx.com/rsac-2026/?utm_source=tldr_email&utm_medium=email&utm_campaign=tldr_newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a13",
+          "order": 3,
+          "title": "ANTHROPIC LAUNCHES CLAUDE CODE SECURITY FOR AI-POWERED VULNERABILITY SCANNING",
+          "summary": "Anthropic launched Claude Code Security in limited research preview for Enterprise and Team customers, offering AI-powered codebase vulnerability scanning that goes beyond static analysis by reasoning about component interactions and tracing data flows. Findings undergo a multi-stage verification process to filter false positives, with each vulnerability assigned a severity and confidence rating alongside suggested patches. The feature employs a human-in-the-loop approach where developers review and approve all remediation before any changes are applied.",
+          "url": "https://thehackernews.com/2026/02/anthropic-launches-claude-code-security.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a14",
+          "order": 4,
+          "title": "CVEMAPPING",
+          "summary": "This repository gathers all available CVE exploits from GitHub and publishes them on a public website.",
+          "url": "https://github.com/rix4uni/cvemapping?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a15",
+          "order": 5,
+          "title": "CLAUDE-CODE-CONFIG",
+          "summary": "Trail of Bits released an opinionated configuration repository for Claude Code covering sandboxing, permissions, hooks, skills, MCP servers, and workflow patterns refined through security audits and development. The repository includes pre-built slash commands for autonomous PR review, issue resolution, and Dependabot merging using parallel agents, alongside sandbox hardening that blocks access to SSH keys, cloud credentials, crypto wallets, and shell configs. It also documents context management strategies, local model integration via LM Studio, and a multi-layered security model combining OS-level sandboxing, devcontainers, and disposable cloud droplets for safe bypass-permissions operation.",
+          "url": "https://github.com/trailofbits/claude-code-config?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a16",
+          "order": 1,
+          "title": "CLOUDFLARE OUTAGE ON FEBRUARY 20, 2026",
+          "summary": "Cloudflare experienced a 6-hour outage after a cleanup sub-task in its Addressing API queried with an empty `pending_delete` parameter, causing the system to interpret all 4,306 BYOIP prefixes as queued for deletion and systematically withdrawing ~1,100 BGP prefixes across customer networks. The bug rendered services including Magic Transit, Spectrum, and a subset of 1.1.1.1 unreachable. Recovery was complicated by varying states of impact, where some customers lost both prefix advertisements and service bindings. Cloudflare is implementing circuit breakers for large-scale BGP withdrawal actions, separating operational and configured state in the Addressing API, and deploying health-mediated configuration snapshots as part of their Code Orange: Fail Small initiative.",
+          "url": "https://blog.cloudflare.com/cloudflare-outage-february-20-2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a17",
+          "order": 2,
+          "title": "WIKIPEDIA BLACKLISTS ARCHIVE.TODAY, STARTS REMOVING 695,000 ARCHIVE LINKS",
+          "summary": "English Wikipedia is banning Archive.today after discovering the site used its CAPTCHA to DDoS a critic's blog and secretly altered archived pages to smear him, undermining trust in its snapshots. Editors will replace roughly 695,000 Archive.today links with alternatives like the Internet Archive.",
+          "url": "https://arstechnica.com/tech-policy/2026/02/wikipedia-bans-archive-today-after-site-executed-ddos-and-altered-web-captures/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a18",
+          "order": 3,
+          "title": "FBI SAYS ATM ‘JACKPOTTING' ATTACKS ARE ON THE RISE, AND NETTING HACKERS MILLIONS IN STOLEN CASH",
+          "summary": "ATM jackpotting, first showcased by researcher Barnaby Jack, has become a lucrative cybercrime, with over 700 attacks in 2025 netting at least $20 million in cash. Criminals use physical access, generic keys, and Ploutus malware to hijack Windows-based ATMs via XFS software, directly commanding dispensers to spew banknotes without touching customer accounts and often evading detection until long after cash-out.",
+          "url": "https://techcrunch.com/2026/02/19/fbi-says-atm-jackpotting-attacks-are-on-the-rise-and-netting-hackers-millions-in-stolen-cash/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-23:a19",
+          "order": 1,
+          "title": "UKRAINIAN GETS 5 YEARS FOR HELPING NORTH KOREANS INFILTRATE US FIRMS",
+          "summary": "Ukrainian national Oleksandr Didenko was sentenced to five years in prison for providing 871 proxy identities and operating laptop farms across multiple countries to help North Korean IT workers fraudulently secure jobs at 40 US companies.",
+          "url": "https://www.bleepingcomputer.com/news/security/ukrainian-gets-5-years-for-helping-north-koreans-infiltrate-us-firms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a20",
+          "order": 2,
+          "title": "SUPPLY CHAIN ATTACK SECRETLY INSTALLS OPENCLAW FOR CLINE USERS",
+          "summary": "A prompt-injection flaw in Cline allowed an attacker to steal an npm publish token and ship a version that silently installed OpenClaw on users' systems for about eight hours.",
+          "url": "https://links.tldrnewsletter.com/ELrYKu",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-23:a21",
+          "order": 3,
+          "title": "CHINESE HACKERS BYPASSED A U.S. GOVERNMENT VPN, RAISING NEW CYBERSECURITY CONCERNS",
+          "summary": "Chinese state-sponsored hackers repeatedly exploited Ivanti Connect Secure VPN zero-days to compromise federal agencies like the Pentagon, NASA, and CISA itself, prompting a mass government exodus from the platform.",
+          "url": "https://www.yahoo.com/news/articles/chinese-hackers-bypassed-u-government-170949079.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "yahoo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

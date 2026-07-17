@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-02-19",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-02-19",
+  "source_path": "TLDR Dev/article_19-02-2026.md",
+  "source_content_hash": "sha256:22135b787934873a1652d8b782dbebd8e7e6a6272527daaf5046bce5ab4c1144",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-02-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a04",
+          "order": 1,
+          "title": "YOUR AI WRITES CODE FASTER THAN YOU CAN REVIEW IT",
+          "summary": "Code review is the bottleneck. Reviews are slow, inconsistent, and noisy. AI tools flag everything or miss critical issues.",
+          "url": "https://www.qodo.ai/features/qodo-git/?utm_source=tldr&utm_medium=newsletter&utm_campaign=Primary02192026",
+          "reading_time_minutes": null,
+          "source_domain": "qodo.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a04",
+          "order": 2,
+          "title": "Try Qodo free →",
+          "summary": "",
+          "url": "https://www.qodo.ai/features/qodo-git/?utm_source=tldr&utm_medium=newsletter&utm_campaign=Primary02192026",
+          "reading_time_minutes": null,
+          "source_domain": "qodo.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a07",
+          "order": 1,
+          "title": "POSTGRESQL BLOAT IS A FEATURE, NOT A BUG",
+          "summary": "PostgreSQL bloat is a fundamental design feature where databases grow and queries slow down due to the accumulation of old data versions. This occurs because the database's Multi-Version Concurrency Control (MVCC) creates new physical tuples for every update and only marks old ones as obsolete upon deletion, rather than overwriting or erasing them. These \"dead tuples\" consume disk space, force the system to perform unnecessary I/O by scanning full pages, and contribute to index bloat.",
+          "url": "https://rogerwelin.github.io/2026/02/11/postgresql-bloat-is-a-feature-not-a-bug/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "rogerwelin.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a08",
+          "order": 2,
+          "title": "VIRTUAL SCROLLING FOR BILLIONS OF ROWS — TECHNIQUES FROM HIGHTABLE",
+          "summary": "HighTable is a React component that lets you scroll through billions of rows in a browser table smoothly. It only loads and renders the ~30 rows you can actually see at any given time. The tricky part is that browsers cap element heights at ~17M pixels, so the creative solution is to use a downscaled scrollbar plus a dual scrolling mode (small gestures scroll locally with pixel precision, big ones jump globally).",
+          "url": "https://rednegra.net/blog/20260212-virtual-scroll/?utm_source=tldrdev",
+          "reading_time_minutes": 30,
+          "source_domain": "rednegra.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a09",
+          "order": 3,
+          "title": "WE RALPH WIGGUMED WEBSTREAMS TO MAKE THEM 10X FASTER",
+          "summary": "Vercel found that WebStreams were a huge bottleneck in Next.js server rendering. The streams were burning CPU on Promise allocations for every chunk. Vercel built fast-webstreams, a drop-in replacement that collapses piping chains into a single Node.js pipeline() call with zero Promises per chunk, with the end goal of merging this package into Node.js itself soon.",
+          "url": "https://vercel.com/blog/we-ralph-wiggumed-webstreams-to-make-them-10x-faster?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a10",
+          "order": 1,
+          "title": "WHEN INTERFACES BECOME DISPOSABLE",
+          "summary": "A new parent used AI coding to create a custom interface for his Fitbit data, addressing his unique sleep tracking needs that the standard app couldn't fulfill. This bespoke tool is an example of disposable software. AI agents are increasingly enabling users to bypass traditional interfaces and directly access product capabilities via APIs, creating a fragmented landscape where custom solutions are easily generated.",
+          "url": "https://chrisloy.dev/post/2026/02/14/when-interfaces-become-disposable?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "chrisloy.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a11",
+          "order": 2,
+          "title": "WHAT IS HAPPENING TO WRITING?",
+          "summary": "There's widespread acceptance of AI-generated slop in writing. Despite the allure of AI's efficiency, genuine writing is an irreplaceable process of solitary thought, labor, and public engagement. It's good to be aware of cognitive debt from over-reliance on AI.",
+          "url": "https://resobscura.substack.com/p/what-is-happening-to-writing?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "resobscura.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a12",
+          "order": 1,
+          "title": "😓 TRYING TO DEBUG A REQUEST THAT TOUCHED 5 SERVICES?",
+          "summary": "Distributed systems help you move faster…until you have to debug them. This guide [12] shows how to use Sentry tracing and logging to follow a request end to end. You don't need prior microservices",
+          "url": "https://blog.sentry.io/monitoring-microservices-distributed-systems-with-sentry/?utm_source=tldr&utm_medium=paid-community&utm_campaign=nextjs-fy27q1-nextjs&utm_content=newsletter-secondary-dev-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a12",
+          "order": 2,
+          "title": "experience to follow these steps. Read the blog and start fixing",
+          "summary": "",
+          "url": "https://blog.sentry.io/monitoring-microservices-distributed-systems-with-sentry/?utm_source=tldr&utm_medium=paid-community&utm_campaign=nextjs-fy27q1-nextjs&utm_content=newsletter-secondary-dev-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a13",
+          "order": 3,
+          "title": "REACT DOCTOR",
+          "summary": "React Doctor is an open-source tool designed to help coding agents diagnose and fix issues in React codebases. It scans projects for security, performance, correctness, and architecture problems, outputting a 0-100 score with actionable diagnostics.",
+          "url": "https://github.com/millionco/react-doctor?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a14",
+          "order": 4,
+          "title": "ELECTROBUN V1",
+          "summary": "Electrobun v1 is a new desktop application framework for building ultra-fast, tiny, and cross-platform apps with TypeScript. It has first-class support for macOS, Windows, and Ubuntu, providing automatic installers, robust auto-updates, and advanced features like true process-isolated webviews (OOPIF).",
+          "url": "https://blackboard.sh/blog/electrobun-v1/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blackboard.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a15",
+          "order": 5,
+          "title": "SLOWMO",
+          "summary": "Slowmo is a tool designed to universally control the time of web content, allowing users to slow down, pause, or speed up animations and other time-based elements. It has purposes such as debugging animations, studying interactive web demos, and adjusting the difficulty of web games.",
+          "url": "https://github.com/seflless/slowmo?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a16",
+          "order": 1,
+          "title": "GRANDPA LISSAJOUS – A 13-AGENT AI ORCHESTRATION LOOP",
+          "summary": "The Grandpa Loop uses 13 Simpsons-themed AI agents to automate software development through non-linear feedback loops. It has adversarial spec reviews, automated builds, and manual-style UX testing. A central observer agent monitors performance data to tune the pipeline, making sure the system self-corrects and improves cycle times.",
+          "url": "https://blog.sauhsoj.wtf/posts/the-grandpa-loop/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.sauhsoj.wtf",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a17",
+          "order": 2,
+          "title": "YOU ONLY THINK THEY WORK FOR YOU",
+          "summary": "External vendors prioritize industry relationships over individual clients. To maximize value, leaders should treat consultants as educators to gain strategic knowledge. This shift is especially important as AI agents begin automating PR and distribution, potentially creating \"black box\" processes that muddy operational insights.",
+          "url": "https://steveblank.substack.com/p/you-only-think-they-work-for-you?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "steveblank.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a18",
+          "order": 3,
+          "title": "SPELL CHECKING A YEAR'S WORTH OF HACKER NEWS",
+          "summary": "Using Claude Haiku 4.5 and Gemini 3 Flash, the author identified 1,430 errors across 7,000 Hacker News blogs. After manual validation, 404 emails were sent, with a 50% response rate. This is an example of AI's potential for automated kindness and the need for human-in-the-loop verification.",
+          "url": "https://fi-le.net/spell/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "fi-le.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-19:a19",
+          "order": 1,
+          "title": "YOU SHOULDN'T NEED A FINANCE AND COMPLIANCE TEAM TO SELL SOFTWARE GLOBALLY. USE CREEM",
+          "summary": "CREEM is a Merchant of Record that handles payments, taxes, compliance, and payouts for small and efficient human teams. Dev-first: Next.js adaptor, webhooks, license keys built in, agentic onboarding, and agent skills for integration.",
+          "url": "https://creem.io/join/tldr?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "creem.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a20",
+          "order": 2,
+          "title": "Try it and integrate in under 5 minutes: creem.io/join/tldr",
+          "summary": "",
+          "url": "https://creem.io/join/tldr",
+          "reading_time_minutes": null,
+          "source_domain": "creem.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a21",
+          "order": 3,
+          "title": "COSMOLOGICALLY UNIQUE IDS",
+          "summary": "Probabilistic random IDs offer a practical and efficient solution with negligible collision risk, while deterministic hierarchical schemes, despite guaranteeing absolute uniqueness, become impractically large for a universe-spanning civilization.",
+          "url": "https://jasonfantl.com/posts/Universal-Unique-IDs/?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "jasonfantl.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a22",
+          "order": 4,
+          "title": "HOW AI IS AFFECTING PRODUCTIVITY AND JOBS IN EUROPE",
+          "summary": "AI adoption increases labor productivity by 4% without short-term job losses, but its benefits are unevenly distributed, favoring larger firms and those investing in complementary assets like human capital.",
+          "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "cepr.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a23",
+          "order": 5,
+          "title": "MINECRAFT JAVA IS SWITCHING FROM OPENGL TO VULKAN FOR THE VIBRANT VISUALS UPDATE",
+          "summary": "Minecraft Java Edition will transition from OpenGL to Vulkan for its \"Vibrant Visuals\" update.",
+          "url": "https://www.gamingonlinux.com/2026/02/minecraft-java-is-switching-from-opengl-to-vulkan-for-the-vibrant-visuals-update/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "gamingonlinux.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-19:a24",
+          "order": 6,
+          "title": "NEW STUDY: BUSINESSES ARE REPLACING FREELANCERS WITH AI AT A 97% COST SAVINGS",
+          "summary": "Businesses are quickly replacing freelance labor with AI tools, leading to cost savings of up to 97%.",
+          "url": "https://www.engineerscodex.com/ramp-ai-replacing-freelancers?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

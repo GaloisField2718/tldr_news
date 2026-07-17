@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-02-05",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-02-05",
+  "source_path": "TLDR Dev/article_05-02-2026.md",
+  "source_content_hash": "sha256:5ad8c8d6d069ce28bcf571cf3aea0783b8400890c2964707317f6284208dd972",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-02-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a04",
+          "order": 1,
+          "title": "",
+          "summary": "If QA is a bottleneck on your software engineering team and you're releasing slowly because of it, you must check out QA Wolf.",
+          "url": "https://www.qawolf.com/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20260205-None_Experiment-FALSE&utm_term=headline-CutYourQACyclesDownToMinutesWithAutomatedTesting&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20260205_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a08",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20260205-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20260205_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a09",
+          "order": 1,
+          "title": "POSTGRES POSTMASTER DOES NOT SCALE",
+          "summary": "Recall.ai, a company recording millions of meetings weekly, encountered perplexing 10-15 second connection delays to its Postgres database during peak loads. Investigations revealed the bottleneck was in Postgres's single-threaded \"postmaster\" process, which is responsible for spawning new connections and background workers. High rates of new connections and background worker churn during synchronized meeting “starts” saturated this core process, so the company implemented jitter in its EC2 connection bursts and removed parallel query spikes.",
+          "url": "https://www.recall.ai/blog/postgres-postmaster-does-not-scale?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "recall.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a10",
+          "order": 2,
+          "title": "BUILDING VOLTRA: RENDERER",
+          "summary": "Voltra is a library for building native Live Activities and Widgets using standard React Native components. Voltra needed a single-pass, stateless process to convert JSX into a specific JSON structure, so it built its own custom renderer. The custom renderer functions by traversing the JSX tree, processing different node types into a platform-native JSON format, and hacking React's internal dispatcher.",
+          "url": "https://www.chmal.it/blog/building-voltra-renderer?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "chmal.it",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a11",
+          "order": 3,
+          "title": "HOW WE BUILT A REAL-WORLD BENCHMARK FOR AI CODE REVIEW",
+          "summary": "Qodo has developed a new, rigorous code review benchmark to objectively evaluate AI systems. This benchmark intentionally injects diverse defects, including functional bugs and best practice violations, into genuine, merged pull requests from production-grade open-source repositories. The methodology allows for the simultaneous evaluation of code correctness and quality at a larger scale.",
+          "url": "https://www.qodo.ai/blog/how-we-built-a-real-world-benchmark-for-ai-code-review/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "qodo.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a12",
+          "order": 1,
+          "title": "OPENCLAW IS WHAT APPLE INTELLIGENCE SHOULD HAVE BEEN",
+          "summary": "Apple squandered a huge opportunity with \"Apple Intelligence\" by failing to develop a truly agentic AI capable of automating computer use, a capability users are now achieving with open-source frameworks like OpenClaw on Mac Minis. This widespread adoption of headless AI agents shows a clear demand for powerful automation beyond simple summaries.",
+          "url": "https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "jakequist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a13",
+          "order": 2,
+          "title": "AI IS KILLING B2B SAAS",
+          "summary": "AI is an existential threat to traditional B2B SaaS, causing market devaluation and customer churn as some users vibe code their own custom internal tools. Customers are now demanding more flexibility and dropping expensive SaaS solutions that don't perfectly fit their unique workflows. To survive, SaaS companies must evolve by becoming foundational \"Systems of Record” and adapt to customer needs rather than dictating them.",
+          "url": "https://nmn.gl/blog/ai-killing-b2b-saas?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "nmn.gl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a14",
+          "order": 3,
+          "title": "I DON'T BUY SQLITE IN THE CLOUD",
+          "summary": "Hosted SQLite services like Turso and Cloudflare D1 introduce network latency and billing complexities that destroy SQLite's primary advantages. For cloud-scale needs requiring concurrent writers or advanced SQL features, Managed PostgreSQL is still better than complex SQLite sidecar configurations.",
+          "url": "https://monroeclinton.com/i-dont-buy-sqlite-in-the-cloud/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "monroeclinton.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a15",
+          "order": 1,
+          "title": "FLUID",
+          "summary": "Fluid is a terminal agent that helps AI agents manage and debug production infrastructure like VMs and Kubernetes clusters. It operates by creating sandbox clones of the production environment, allowing AI agents to safely explore, run commands, test connections, and edit files without directly impacting live systems.",
+          "url": "https://www.fluid.sh/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "fluid.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a16",
+          "order": 2,
+          "title": "SQLDEF",
+          "summary": "SQLDef is a CLI tool designed to diff two SQL schemas and manage RDBMS migrations using regular SQL DDLs. It generates the necessary `ALTER` statements to transition a database schema from its current state to a desired one, or vice-versa.",
+          "url": "https://sqldef.github.io/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "sqldef.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a17",
+          "order": 1,
+          "title": "EXPLORING SOLUTIONS TO TACKLE LOW-QUALITY CONTRIBUTIONS ON GITHUB",
+          "summary": "GitHub is tackling the flood of low-quality, AI-generated pull requests overwhelming maintainers. It is rolling out short-term fixes like the ability to disable PRs entirely, restrict them to collaborators only, and delete spam PRs from the UI. Long-term, the company is exploring AI-powered triage tools, better permission controls, and a requirement to be transparent when AI is used.",
+          "url": "https://github.com/orgs/community/discussions/185387?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a18",
+          "order": 2,
+          "title": "CODE SMELLS FOR AI AGENTS: Q&A WITH ENO REYES OF FACTORY",
+          "summary": "Building good coding agents isn't just about the model, but also about the infrastructure layer that manages context, tools, and hundreds of validation signals like linters and tests. Stanford research found that AI agent adoption doesn't predict productivity, but code quality does. High-quality codebases accelerate with AI, while low-quality ones actually decelerate.",
+          "url": "https://stackoverflow.blog/2026/02/04/code-smells-for-ai-agents-q-and-a-with-eno-reyes-of-factory/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a19",
+          "order": 3,
+          "title": "CLAUDE IS A SPACE TO THINK",
+          "summary": "Anthropic has announced that Claude will remain entirely ad-free as advertising is incompatible with its vision for AI. The company aims for Claude to be a genuinely helpful tool for deep thinking and work free from the commercial incentives that could influence responses or erode user trust.",
+          "url": "https://www.anthropic.com/news/claude-is-a-space-to-think?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-05:a20",
+          "order": 1,
+          "title": "CLAUDE CODE: CONNECT TO A LOCAL MODEL WHEN YOUR QUOTA RUNS OUT",
+          "summary": "Claude Code can connect to a local open-source AI model, using LM Studio, as a backup solution to continue coding when Anthropic's API quota is exhausted.",
+          "url": "https://boxc.net/blog/2026/claude-code-connecting-to-local-models-when-your-quota-runs-out/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "boxc.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a21",
+          "order": 2,
+          "title": "A FEW CPU HARDWARE BUGS",
+          "summary": "This article goes over various CPU hardware bugs, from Intel's embarrassing cosmetic misspellings in CPUIDs to a more serious pipeline flaw in an ITE RISC-V embedded processor.",
+          "url": "https://www.taricorp.net/2026/a-few-cpu-bugs/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "taricorp.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a22",
+          "order": 3,
+          "title": "BUN QUEUE",
+          "summary": "Bunqueue is a high-performance, BullMQ-compatible job queue designed for the Bun runtime, with SQLite persistence and zero external dependencies.",
+          "url": "https://github.com/egeominotti/bunqueue?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a23",
+          "order": 4,
+          "title": "CLIPBOARDY",
+          "summary": "Clipboardy is a cross-platform Node.js module that provides both synchronous and asynchronous APIs to access the system clipboard for text and image copy/paste operations.",
+          "url": "https://github.com/sindresorhus/clipboardy?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-05:a24",
+          "order": 5,
+          "title": "STAYING ENGAGED WITH AI PLANS: GIVE INLINE FEEDBACK",
+          "summary": "AI coding agent performance can be improved by editing Claude Code markdown plans directly and providing feedback inline in the markdown files that Claude Code generates.",
+          "url": "https://huonw.github.io/blog/2026/02/ai-plan/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "huonw.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

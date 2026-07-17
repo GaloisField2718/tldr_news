@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-09-23",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-23",
+  "source_path": "TLDR Web Dev/article_23-09-2025.md",
+  "source_content_hash": "sha256:0b00faa6432d0b11c940fac5e46165069546e8f44876edb84ca2d8ad2a8de63c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-23",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-23:a04",
+          "order": 1,
+          "title": "OPENPOKE: RECREATING POKE'S ARCHITECTURE",
+          "summary": "This dev reverse-engineered Poke, a popular iMessage assistant chatbot, and developed OpenPoke, a working prototype of its multi-agent architecture. OpenPoke uses an Interaction Agent to manage specialized Execution Agents that handle tasks like email management and setting reminders. The system incorporates multi-tiered memory, including conversation logs, agent logs, and email as external truth. The assistant separates personality from execution, while recognizing personality as an important product element.",
+          "url": "https://www.shloked.com/writing/openpoke?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "shloked.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a05",
+          "order": 2,
+          "title": "NPM SECURITY BEST PRACTICES",
+          "summary": "This is a consolidated list of best practices for securing against incidents in the NPM ecosystem, covering npm, bun, deno, pnpm, and yarn. For devs, important best practices include pinning dependency versions, including lockfiles in repos, disabling lifecycle scripts, and reducing external dependencies. Maintainers should enable 2FA, create tokens with limited access, generate provenance statements, and always review published files.",
+          "url": "https://github.com/bodadotsh/npm-security-best-practices?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a06",
+          "order": 3,
+          "title": "FINE-GRAINED HTTP FILTERING FOR CLAUDE CODE",
+          "summary": "httpjail is a tool designed to mitigate security risks associated with increasingly powerful coding agents by implementing fine-grained HTTP(S) filtering. It works by intercepting HTTP requests and applying user-defined JavaScript or shell script rules to control agent access to external resources, focusing on preventing destructive actions, data leaks, and excessive authority. It has both a \"weak\" mode that relies on environment variables and a \"strong\" mode that uses network namespaces, including TLS interception for HTTPS traffic inspection.",
+          "url": "https://ammar.io/blog/httpjail?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "ammar.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-23:a07",
+          "order": 1,
+          "title": "DEAR GITHUB: NO YAML ANCHORS, PLEASE",
+          "summary": "This dev isn't a fan of GitHub's recent addition of YAML anchor support to GitHub Actions. YAML anchors are redundant, complicate workflow comprehension for both humans and machines, and don't have any unique utility due to the absence of merge key support in GitHub Actions. This change makes it harder to analyze workflows for vulnerabilities, thereby worsening GitHub Actions' security.",
+          "url": "https://blog.yossarian.net/2025/09/22/dear-github-no-yaml-anchors?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.yossarian.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a08",
+          "order": 2,
+          "title": "WHAT HAPPENS WHEN CODING AGENTS STOP FEELING LIKE DIALUP?",
+          "summary": "Current coding agents' speed and performance is similar to the slow and unreliable dial-up era of the internet. There are issues with reliability and a strain on infrastructure due to exploding AI token usage. However, with time, there will be faster token processing speeds, which will enable more unsupervised and efficient coding agent workflows.",
+          "url": "https://martinalderson.com/posts/what-happens-when-coding-agents-stop-feeling-like-dialup/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "martinalderson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a09",
+          "order": 3,
+          "title": "WHY I'M SPOILED BY APPLE SILICON (BUT STILL LOVE FRAMEWORK)",
+          "summary": "The battery life of a MacBook M1 Pro is much better than that of a Framework 13 laptop. Even after weeks of inactivity, the M1 MacBook still holds a charge well. In contrast, this author's Framework laptop, despite running Fedora Silverblue, has a lot of battery drain in suspend mode.",
+          "url": "https://simonhartcher.com/posts/2025-09-22-why-im-spoiled-by-apple-silicon-but-still-love-framework/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "simonhartcher.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-23:a10",
+          "order": 1,
+          "title": "NATIVE INTEGRATIONS; BUILD VS. BUY GUIDE BY PRISMATIC",
+          "summary": "Integrations are part of the project if you're building a B2B app in 2025. However, building them in-house provides the illusion of control while leading to resource inefficiencies and a mountain of tech debt. Read [10] what building in-house actually requires, common concerns with buying an integration platform, and the benefits of an embedded",
+          "url": "https://prismatic.io/build-vs-buy-guide/?utm_medium=ContentSyndication&utm_source=eblast&utm_campaign=&utm_content=TLDR-build-v-buy&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "prismatic.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a10",
+          "order": 2,
+          "title": "iPaaS. Get the guide",
+          "summary": "",
+          "url": "https://prismatic.io/build-vs-buy-guide/?utm_medium=ContentSyndication&utm_source=eblast&utm_campaign=&utm_content=TLDR-build-v-buy&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "prismatic.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a11",
+          "order": 3,
+          "title": "CAP'N WEB: A NEW RPC SYSTEM FOR BROWSERS AND WEB SERVERS",
+          "summary": "Cap'n Web is a new, open-source RPC system for JavaScript environments for facilitating communication between applications over a network. Unlike traditional RPC, Cap'n Web supports bidirectional calling, object-capability security, and promise pipelining, aiming for a developer experience similar to native JavaScript APIs. It makes setup easier, integrates with TypeScript, and uses human-readable JSON serialization.",
+          "url": "https://blog.cloudflare.com/capnweb-javascript-rpc-library/?utm_source=tldrwebdev",
+          "reading_time_minutes": 21,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a12",
+          "order": 4,
+          "title": "REACT OLD ICONS",
+          "summary": "React Old Icons is a React component library with over 2,300 vintage icons from classic operating systems and software. It provides an interactive icon browser with search, filtering, and code copying, and supports TypeScript.",
+          "url": "https://github.com/gsnoopy/react-old-icons?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-23:a13",
+          "order": 1,
+          "title": "COMPILEBENCH: CAN AI COMPILE 22-YEAR-OLD CODE?",
+          "summary": "CompileBench is a new benchmark created to test the ability of LLMs to handle complex software development tasks like dependency management and legacy code compilation. The benchmark tested 19 LLMs on 15 real-world tasks, including cross-compiling and resurrecting old code, showing varying levels of success and identifying issues like cheating. Anthropic models performed best in overall success and speed, while OpenAI models were the most cost-efficient.",
+          "url": "https://quesma.com/blog/introducing-compilebench/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "quesma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a14",
+          "order": 2,
+          "title": "WHY LOCAL-FIRST APPS HAVEN'T BECOME POPULAR?",
+          "summary": "Local-first apps have adoption challenges due to the complexity of syncing data across devices, especially offline. The key to successful local-first apps lies in achieving eventual consistency, making sure all devices converge to the same state without data loss. This happens through techniques like Hybrid Logical Clocks (HLCs) for reliable ordering and Conflict-Free Replicated Data Types (CRDTs) to handle data conflicts.",
+          "url": "https://marcobambini.substack.com/p/why-local-first-apps-havent-become?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "marcobambini.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a15",
+          "order": 3,
+          "title": "AI-GENERATED “WORKSLOP” IS DESTROYING PRODUCTIVITY",
+          "summary": "\"Workslop\" is AI-generated content that lacks substance but appears polished. Due to AI being used more, there's more low-effort AI slop at work, leading to worse productivity overall, as it shifts the burden of real effort to the receivers of the AI slop. This \"workslop tax\" has financial and interpersonal costs, bringing down trust and collaboration.",
+          "url": "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "hbr.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-23:a16",
+          "order": 1,
+          "title": "TESTING IS BETTER THAN DSA",
+          "summary": "Instead of excessively focusing on Data Structures and Algorithms, software engineers should also prioritize learning software testing, as it's a more practical, valuable, and frequently used skill in real-world software development.",
+          "url": "https://nedbatchelder.com/blog/202509/testing_is_better_than_dsa.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "nedbatchelder.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a17",
+          "order": 2,
+          "title": "MY NEW GIT UTILITY `WHAT-CHANGED-TWICE` NEEDS A NEW NAME",
+          "summary": "A new Perl utility named \"what-changed-twice\" is designed to identify files modified in multiple commits within a git log.",
+          "url": "https://blog.plover.com/2025/09/21/",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.plover.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a18",
+          "order": 3,
+          "title": "HOW I, A NON-DEVELOPER, READ THE TUTORIAL YOU, A DEVELOPER, WROTE FOR ME, A BEGINNER",
+          "summary": "This dev goes over her struggle to follow a developer's tutorial filled with jargon and complex instructions, showing the disconnect between the expert's knowledge and a beginner's comprehension.",
+          "url": "https://anniemueller.com/posts/how-i-a-non-developer-read-the-tutorial-you-a-developer-wrote-for-me-a-beginner?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "anniemueller.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-23:a19",
+          "order": 4,
+          "title": "QWEN3-OMNI",
+          "summary": "Qwen3-Omni is a newly released, multilingual, omni-modal foundation model by Alibaba Cloud's Qwen team capable of processing and generating text, images, audio, and video in real time, with state-of-the-art performance across modalities.",
+          "url": "https://github.com/QwenLM/Qwen3-Omni?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-08-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-08-21",
+  "source_path": "TLDR InfoSec/article_21-08-2024.md",
+  "source_content_hash": "sha256:33effc6d0bb2df6e7e2e8812546594b4a397c421c7599c592d2231b67ff47f9a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-08-21",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-21:a04",
+          "order": 1,
+          "title": "100,000 IMPACTED BY JEWISH HOME LIFECARE DATA BREACH",
+          "summary": "Jewish Home Lifecare, a New York City healthcare nonprofit, disclosed a data breach impacting over 104,000 individuals. Hackers accessed personal and medical information, including Social Security numbers and financial details.",
+          "url": "https://www.securityweek.com/100000-impacted-by-jewish-home-lifecare-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a05",
+          "order": 2,
+          "title": "OREGON ZOO HACK IMPACTS OVER 100K",
+          "summary": "The Oregon Zoo disclosed a payment skimming malware attack that exfiltrated personal and credit card data of 100K individuals over 6 months. The breach follows similar incidents at other zoos. The stolen card data has been found for sale on dark web carding shops.",
+          "url": "https://www.scmagazine.com/brief/oregon-zoo-hack-impacts-over-100k?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "scmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a06",
+          "order": 3,
+          "title": "TOYOTA CONFIRMS BREACH AFTER 240GB OF STOLEN DATA LEAKS ON HACKING FORUMS",
+          "summary": "Toyota has confirmed a breach of 240GB of data but has not provided details on what the data contains or how many people are affected by it. The leaker claims that the data contains contacts, financials, customers, employees, photos, DBs, network infrastructure, emails, and more. The files were stolen or created on December 25, 2022, which suggests that the data may have been a backup.",
+          "url": "https://www.bleepingcomputer.com/news/security/toyota-confirms-breach-after-stolen-data-leaks-on-hacking-forum/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-21:a07",
+          "order": 1,
+          "title": "EXECUTION GUARDRAILS: NO ONE LIKES UNINTENTIONAL EXPOSURE",
+          "summary": "A post from TrustedSec's Brandon McGrath which begins with a discussion of an engagement where his implant got caught by a member of the blue team. McGrath details how he uses a key ring consisting of host based checks, network checks, and external checks as an execution guardrail. In the example, the implant first checked the hostname of the system, then network shares, and finally a TXT record before downloading and launching the payload.",
+          "url": "https://trustedsec.com/blog/execution-guardrails-no-one-likes-unintentional-exposure?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "trustedsec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a08",
+          "order": 2,
+          "title": "ENABLING TRUSTED TYPES IN A COMPLEX WEB APPLICATION: A CASE STUDY OF APPSHEET",
+          "summary": "Trusted Types is a defense-in-depth mechanism that protects against DOM XSS by implementing type systems to ensure that only safely constructed values can reach injection sinks. To rollout Trusted Types in AppSheet, the Google team followed a five stage process: report-only mode, collect and triage violations, refactor blockers, repeat the previous two steps, and enforcement. When investigating a Trusted Types violation, a report contains the source file where the violation occurred, the document URI which is the URI where the violation occurred, and the script-sample which includes the underlying API call that caused the violation and a prefix of the input that caused the violation.",
+          "url": "https://bughunters.google.com/blog/6037890662793216/enabling-trusted-types-in-a-complex-web-application-a-case-study-of-appsheet?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "bughunters.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a09",
+          "order": 3,
+          "title": "GITHUB ACTIONS EXPLOITATION: DEPENDABOT",
+          "summary": "Synacktiv discovered a novel GitHub Actions exploitation technique leveraging Dependabot to compromise repositories and push arbitrary code. The vulnerability stems from workflows using the 'pull_request_target' event with weak access controls based on the 'github.actor' context, which can be manipulated by triggering Dependabot actions on a forked repository. Synacktiv demonstrated successful exploits against the spring-security and trpc projects, highlighting the importance of careful workflow configuration and the use of tools like octoscan for detecting such vulnerabilities.",
+          "url": "https://www.synacktiv.com/en/publications/github-actions-exploitation-dependabot?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "synacktiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-21:a10",
+          "order": 1,
+          "title": "FOR MOBILE BANKING APPS, SECURE SDKS AREN'T ENOUGH",
+          "summary": "Banking apps are a prime target for attacks. Secure SDKs (e.g. for KYC or payments) are good, but they can create a false sense of security and leave unaddressed vulnerabilities. Learn how to protect mobile bank apps [11] against real-world threat scenarios using a multi-layered approach [11] that includes obfuscation, encryption, and real-time application self-protection (RASP). Join the live session",
+          "url": "https://hubs.la/Q02KMG1q0?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a11",
+          "order": 2,
+          "title": "with Guardsquare",
+          "summary": "",
+          "url": "https://hubs.la/Q02KMG1q0",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a12",
+          "order": 3,
+          "title": "LINX SECURITY (PRODUCT LAUNCH)",
+          "summary": "Linx uses analytics and AI to scan and understand the landscape of an organization's system to link all identities together and to actual, active employees. In the process, it also finds IDs that are no longer connected to active users so that they can be removed.",
+          "url": "https://www.linx.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "linx.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a13",
+          "order": 4,
+          "title": "GRAPHQLER",
+          "summary": "GraphQLer is a dependency-aware API fuzzer that uses relationships between objects and mutations to inform its testing",
+          "url": "https://github.com/omar2535/GraphQLer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a14",
+          "order": 5,
+          "title": "GRIMOIRE",
+          "summary": "Grimoire is a tool that generates datasets of cloud audit logs for detection engineering. The tool currently supports the ability to detonate Stratus Red Team or AWS CLI commands and stream the CloudTrail logs to an output file.",
+          "url": "https://github.com/dataDog/grimoire?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-21:a15",
+          "order": 1,
+          "title": "NATIONAL PUBLIC DATA PUBLISHED ITS OWN PASSWORDS",
+          "summary": "",
+          "url": "https://krebsonsecurity.com/2024/08/national-public-data-published-its-own-passwords/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a16",
+          "order": 2,
+          "title": "MICROSOFT SAYS ALL AZURE SIGN-INS WILL NOW NEED TO USE MULTI-FACTOR AUTHENTICATION TO ENHANCE ACCOUNT SECURITY",
+          "summary": "Microsoft will soon require multi-factor authentication for all Azure sign-ins to enhance account security. The rollout will happen in two phases, first for the Azure portal and admin centers, then for Azure CLI, PowerShell, and other tools.",
+          "url": "https://www.techradar.com/pro/all-azure-sign-ins-to-use-multi-factor-authentication-to-enhance-account-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a17",
+          "order": 3,
+          "title": "POST-QUANTUM CRYPTOGRAPHY: WHAT COMES NEXT?",
+          "summary": "In the wake of NIST releasing the first set of post-quantum cryptography standards, the UK's NCSC has started a series of posts on how organizations should respond. Implementations and protocols like TLS still need to be updated to make use of post-quantum cryptography which will likely take years. NCSC advises that the key actions that organizations can take now are to inventory the use of cryptography in their own environments and in their supply chains.",
+          "url": "https://www.ncsc.gov.uk/blog-post/post-quantum-cryptography-what-comes-next?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-21:a18",
+          "order": 1,
+          "title": "WINDOWS 0-DAY WAS EXPLOITED BY NORTH KOREA TO INSTALL ADVANCED ROOTKIT",
+          "summary": "Hackers linked to North Korea exploited a Windows zero-day vulnerability to install advanced malware.",
+          "url": "https://arstechnica.com/security/2024/08/windows-0-day-was-exploited-by-north-korea-to-install-advanced-rootkit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a19",
+          "order": 2,
+          "title": "DESIGN FLAW HAS MICROSOFT AUTHENTICATOR OVERWRITING MFA ACCOUNTS, LOCKING USERS OUT",
+          "summary": "Microsoft Authenticator has a design flaw that can overwrite accounts, causing users to be locked out unexpectedly.",
+          "url": "https://www.csoonline.com/article/3480918/design-flaw-has-microsoft-authenticator-overwriting-mfa-accounts-locking-users-out.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-21:a20",
+          "order": 3,
+          "title": "PHRACK 71 RELEASED (EZINE)",
+          "summary": "The 71st issue of beloved hacker e-zine Phrack has been released after nearly 2 years since the last issue.",
+          "url": "https://phrack.org/issues/71/1.html?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "phrack.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

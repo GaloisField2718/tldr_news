@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-09-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-09-04",
+  "source_path": "TLDR InfoSec/article_04-09-2024.md",
+  "source_content_hash": "sha256:3113c243dc3d85860a2be59805c1a991a13ef9e2a947055056234410502d9659",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-09-04",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-04:a04",
+          "order": 1,
+          "title": "TRANSPORT FOR LONDON CONFIRMS CYBERATTACK, ASSURES US ALL IS WELL",
+          "summary": "Transport for London (TfL) is addressing a cybersecurity incident affecting its internal systems. While no customer data breach or service disruption has been reported, TfL is working with government agencies to respond.",
+          "url": "https://www.theregister.com/2024/09/03/tfl_cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a05",
+          "order": 2,
+          "title": "THOUSANDS EXPOSED IN FOTA WILDLIFE PARK BREACH",
+          "summary": "Fota Wildlife Park is notifying customers who bought tickets on the park's website since May 12 of a breach. Users are being advised to change any passwords associated with the site, be aware of phishing attempts to their email, and notably to cancel any debit or credit cards used. The park has not revealed exact details on what data was stolen, how the data was stolen, or the number of customers impacted",
+          "url": "https://www.infosecurity-magazine.com/news/microsoft-365-copilot-flaw-exposes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a06",
+          "order": 3,
+          "title": "YUBIKEYS ARE VULNERABLE TO CLONING ATTACKS THANKS TO NEWLY DISCOVERED SIDE CHANNEL",
+          "summary": "The YubiKey 5 hardware token for two-factor authentication has a cryptographic flaw that makes it vulnerable to cloning attacks when physically accessed by an attacker. Yubico has confirmed that all YubiKey 5 models are susceptible to cloning due to a side channel vulnerability in the Infineon microcontroller used in various authentication devices. Updating firmware on affected YubiKeys is not possible, leaving them permanently vulnerable to potential attacks.",
+          "url": "https://arstechnica.com/security/2024/09/yubikeys-are-vulnerable-to-cloning-attacks-thanks-to-newly-discovered-side-channel/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-04:a07",
+          "order": 1,
+          "title": "AWS IAM: A COMPREHENSIVE GUIDE TOWARDS LEAST PRIVILEGE",
+          "summary": "This article provides a comprehensive overview of the various tools that are available to fine tune AWS IAM access. It suggests some important SCPs such as limiting access to specific regions and blocking root user access, establishing zones of trust, utilizing permissions boundaries, using IAM Access Analyzer, and separating humans and non-human identities. The article suggests starting with a more permissive set of permissions to understand how your team utilizes AWS and then limit permissions from there.",
+          "url": "https://cyscale.com/blog/aws-iam-least-privilege/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "cyscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a08",
+          "order": 2,
+          "title": "LINUX DETECTION ENGINEERING WITH AUDITD",
+          "summary": "The first part in a series on Linux detection engineering from Elastic Labs, which focuses on installing and configuring auditd. The first part of the article lists installation methods for auditd and explains the types of rules that auditd supports. Control type rules configure the auditd process, file system rules watch files for read, write, and execute actions, and system call rules are the powerhouse of auditd and specify which syscalls to monitor and log. The second part focuses on how to use the Auditd Manager Elastic integration to install and configure auditd at scale and presents Elastic alerts for various scenarios.",
+          "url": "https://www.elastic.co/security-labs/linux-detection-engineering-with-auditd?utm_source=tldrinfosec",
+          "reading_time_minutes": 28,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a09",
+          "order": 3,
+          "title": "PLAYING AROUND WITH AWS-VAULT FOR FUN & PROFIT",
+          "summary": "This post explains how to use AWS Vault to securely store AWS credentials leveraging the AWS Session Token Service to provide temporary, limited-privilege access to AWS resources in typical AWS account patterns, reducing credential exposure risk.",
+          "url": "https://www.jit.io/blog/playing-around-with-aws-vault-for-fun-profit?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "jit.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-04:a10",
+          "order": 1,
+          "title": "🆕 MICROSOFT COPILOT IS SPREADING LIKE WILDFIRE. PROMPT SECURITY WANTS TO PREVENT IT FROM LEAKING YOUR DATA",
+          "summary": "The rapid adoption of M365 Copilot and other enterprise LLMs requires new security approaches. Prompt Security inspects each prompt and model response to prevent sensitive data leaks, block harmful content, and secure against GenAI-specific attacks. Today the company has announced comprehensive protection for M365 Copilot. Read more [11] or join the webinar [12].",
+          "url": "https://www.prompt.security/press/prompt-security-announces-complete-security-and-governance-for-microsoft-365-copilot?utm_source=tldr-infosec&utm_medium=email&utm_campaign=m365copilot",
+          "reading_time_minutes": null,
+          "source_domain": "prompt.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a13",
+          "order": 2,
+          "title": "WINDOWS API FUNCTION CHEATSHEETS",
+          "summary": "A comprehensive reference of Windows API functions divided by use case.",
+          "url": "https://github.com/7etsuo/windows-api-function-cheatsheets?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a14",
+          "order": 3,
+          "title": "SENTRYPEER",
+          "summary": "SentryPeer is a fraud detection tool. It lets bad actors try to make phone calls and saves the IP address they came from and the number they tried to call.",
+          "url": "https://github.com/SentryPeer/SentryPeer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a15",
+          "order": 4,
+          "title": "TRACEESHARK",
+          "summary": "Traceeshark allows users to do Linux runtime security monitoring and advanced system tracing using Wireshark. It also has the ability to capture events using Tracee directly from Wireshark and have them stream in like a network capture. This can be done either locally on a Linux machine running Wireshark, semi-locally using Docker Desktop's VM on Windows and Mac, or even remotely over SSH.",
+          "url": "https://github.com/aquasecurity/traceeshark?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-04:a16",
+          "order": 1,
+          "title": "CHANGES TO THE OSCP",
+          "summary": "Offsec has announced changes to the exam format of the OSCP exam including the elimination of bonus points and an assumed breach model for the Active Directory portion. It has also introduced the OSCP+ designation, which will require recipients to renew their certification via CPEs, retake the exam, or earn a higher level cert every 3 years to maintain the + distinction. The community is split on reactions to the announcement, with some feeling that the OSCP+ is a cash grab and that the AD changes are too easy, while others are celebrating that the certification will now fulfill DoD requirements.",
+          "url": "https://links.tldrnewsletter.com/NordZz",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a17",
+          "order": 2,
+          "title": "EX-ENGINEER CHARGED IN MISSOURI FOR FAILED $750,000 BITCOIN EXTORTION ATTEMPT",
+          "summary": "A 57-year-old former core infrastructure engineer from Missouri was arrested for attempting to extort his ex-employer. He allegedly sent emails threatening network lockouts, data deletion, and server shutdowns unless paid 20 bitcoin ($750,000). He faces charges of extortion, computer damage, and wire fraud.",
+          "url": "https://thehackernews.com/2024/09/ex-engineer-charged-in-missouri-for.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a18",
+          "order": 3,
+          "title": "MICROSOFT COPILOT: FROM PROMPT INJECTION TO EXFILTRATION OF PERSONAL INFORMATION",
+          "summary": "This blog post discusses a vulnerability in Microsoft 365 Copilot that allowed personal information theft through prompt injection. The exploit chain involves techniques like prompt injection, automatic tool invocation, and ASCII smuggling to exfiltrate data without user consent. The author responsibly disclosed the exploit to Microsoft, leading to fixes implemented to prevent further exploitation.",
+          "url": "https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "embracethered.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-04:a19",
+          "order": 1,
+          "title": "2025 BUDGET PLANNING GUIDE FOR SECURITY AND RISK LEADERS",
+          "summary": "Forrester advises CISOs to prioritize 2025 budgets on key areas including software supply chain, API security, and IoT/OT threat detection.",
+          "url": "https://go.forrester.com/wp-content/uploads/2024/07/Forrester-Budget-Planning-Guide-2025-Security-And-Risk.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "go.forrester.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a20",
+          "order": 2,
+          "title": "FBI WARNS CRYPTO FIRMS OF AGGRESSIVE SOCIAL ENGINEERING ATTACKS",
+          "summary": "The FBI warns that North Korean hackers are targeting cryptocurrency companies using sophisticated social engineering tactics to steal crypto assets.",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-crypto-firms-of-aggressive-social-engineering-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-04:a21",
+          "order": 3,
+          "title": "SEXTORTION SCAMS NOW INCLUDE PHOTOS OF YOUR HOME",
+          "summary": "",
+          "url": "https://krebsonsecurity.com/2024/09/sextortion-scams-now-include-photos-of-your-home/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

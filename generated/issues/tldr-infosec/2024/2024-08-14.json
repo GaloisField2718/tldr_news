@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-08-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-08-14",
+  "source_path": "TLDR InfoSec/article_14-08-2024.md",
+  "source_content_hash": "sha256:83f048bbe9d11aee490b54735319653af1882579e86688333d6255ba3e5a5733",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-08-14",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-14:a04",
+          "order": 1,
+          "title": "RANSOMWARE HITS AUSTRALIAN GOLD MINING FIRM EVOLUTION MINING",
+          "summary": "Evolution Mining, an Australian gold mining company, reported a ransomware attack on August 8. It believes the incident is contained and is working with cyber forensic experts. The company doesn't expect a material impact on operations. The group responsible for the attack remains unidentified.",
+          "url": "https://www.securityweek.com/ransomware-hits-australian-gold-mining-firm-evolution-mining/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a05",
+          "order": 2,
+          "title": "THREAT ACTOR IMPERSONATES GOOGLE VIA FAKE AD FOR AUTHENTICATOR",
+          "summary": "MalwareBytes detected a malware campaign that used Google ads to pose as a download page for the Google authenticator app. The downloaded file was hosted on GitHub and was actually the DeerStealer infostealer. This post includes screenshots showing how the attacker was able to make the ad look legitimate by registering a verified advertiser profile.",
+          "url": "https://www.malwarebytes.com/blog/news/2024/07/threat-actor-impersonates-google-via-fake-ad-for-authenticator?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a06",
+          "order": 3,
+          "title": "CRITICAL SAP FLAW ALLOWS REMOTE ATTACKERS TO BYPASS AUTHENTICATION",
+          "summary": "SAP released security patches for 17 vulnerabilities, including a critical flaw allowing remote attackers to bypass authentication and compromise systems. The flaw impacts SAP BusinessObjects Business Intelligence Platform versions 430 and 440. Hackers target such flaws to access valuable corporate networks, so it's crucial to apply updates promptly.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-sap-flaw-allows-remote-attackers-to-bypass-authentication/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-14:a07",
+          "order": 1,
+          "title": "COMPROMISING MICROSOFT'S AI HEALTHCARE CHATBOT SERVICE",
+          "summary": "Azure Health Bot Service, a platform for AI health assistants, had critical vulnerabilities allowing cross-tenant access. Microsoft has applied mitigations across affected services and regions. No customer action is required.",
+          "url": "https://www.tenable.com/blog/compromising-microsofts-ai-healthcare-chatbot-service?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "tenable.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a08",
+          "order": 2,
+          "title": "LISTEN TO THE WHISPERS: WEB TIMING ATTACKS THAT ACTUALLY WORK",
+          "summary": "James Kettle presented at DEFCON on how he exploited timing attacks with delays as low as 200 microseconds. To reduce noise, Kettle utilized HTTP/2 to send multiple requests that arrived at the same time and interleaved a ping packet to force HTTP header coalescing, trying to hit slow code paths. He was able to effectively demonstrate the efficacy of this technique in discovering hidden parameters, server-side injections, and reverse-proxy misconfigurations.",
+          "url": "https://portswigger.net/research/listen-to-the-whispers-web-timing-attacks-that-actually-work?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a09",
+          "order": 3,
+          "title": "SECURE CODE REVIEW: FINDING XML VULNERABILITIES IN CODE [1/2]",
+          "summary": "This text discusses the importance of code security and the vulnerabilities that can arise when working with XML parsers in C++ code. It covers the XXE vulnerability and provides examples of insecure and secure code implementations to prevent such vulnerabilities. The author aims to help beginners improve their security code review skills by understanding and mitigating common XML vulnerabilities.",
+          "url": "https://www.muqsitbaig.com/blog/security-code-review-finding-xxes-in-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "muqsitbaig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-14:a10",
+          "order": 1,
+          "title": "LEAKSIGNAL (PRODUCT LAUNCH)",
+          "summary": "LeakSignal's platform allows customers to block sensitive data before it is logged, observe and redact it during calls to outbound third-party application programming interfaces (APIs), and observe and set limits on internal API data access.",
+          "url": "https://www.leaksignal.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "leaksignal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a11",
+          "order": 2,
+          "title": "PANIX - PERSISTENCE AGAINST *NIX",
+          "summary": "PANIX is a highly customizable Linux persistence tool for security researchers, detection engineers, and penetration testers. It prioritizes functionality over stealth and is easily detectable.",
+          "url": "https://github.com/Aegrah/PANIX?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a12",
+          "order": 3,
+          "title": "APPLOCKERGEN (WEBAPP)",
+          "summary": "AppLockerGen is a tool that simplifies the process for generating AppLocker XML policies. The webapp features prebuilt policies as well as GUIs for merging or generating policies.",
+          "url": "https://applockergen.streamlit.app/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "applockergen.streamlit.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-14:a13",
+          "order": 1,
+          "title": "FBI SHUTS DOWN DOZENS OF RADAR/DISPOSSESSOR RANSOMWARE SERVERS",
+          "summary": "The FBI has dismantled servers and domains associated with the Radar/Dispossessor ransomware group, which evolved from piggybacking on LockBit's stolen data to becoming an independent operation. The takedown involved international collaboration with UK and German law enforcement agencies.",
+          "url": "https://www.darkreading.com/cyberattacks-data-breaches/fbi-shuts-down-dozens-of-radar-dispossessor-ransomware-servers?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a14",
+          "order": 2,
+          "title": "WHO USES LLM PROMPT INJECTION ATTACKS IRL? MOSTLY UNSCRUPULOUS JOB SEEKERS, JOKESTERS, AND TROLLS",
+          "summary": "Research reveals prompt injection attacks on LLMs are primarily used by job seekers bypassing HR screeners and AI protesters, not criminals. The technique overrides initial instructions given to AI models. While direct injections are common, indirect injections via web pages or documents also occur.",
+          "url": "https://www.theregister.com/2024/08/13/who_uses_llm_prompt_injection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a15",
+          "order": 3,
+          "title": "INTRODUCING HTTP REQUEST TRAFFIC INSIGHTS ON CLOUDFLARE RADAR",
+          "summary": "Cloudflare Radar now includes insights on HTTP request traffic, allowing users to compare bytes with requests for better traffic analysis. New graphs have been added to show HTTP request-based traffic data on the Overview and Traffic sections of Cloudflare Radar. These new metrics offer a clearer view of user behavior and traffic patterns.",
+          "url": "https://blog.cloudflare.com/http-requests-on-cloudflare-radar?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-14:a16",
+          "order": 1,
+          "title": "UPDATES TO RUNTIME PROTECTION IN MACOS SEQUOIA",
+          "summary": "Apple will be disabling the ability to override Gatekeeper with Control-click when opening software that isn't properly signed or notarized.",
+          "url": "https://developer.apple.com/news/?id=saqachfa&utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "developer.apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a17",
+          "order": 2,
+          "title": "WHAT WE KNOW ABOUT SUSPECTED IRANIAN CYBER INTRUSION IN THE US PRESIDENTIAL RACE",
+          "summary": "A suspected Iranian cyber intrusion targeted the Trump and Biden campaigns, with stolen documents leaked to media outlets.",
+          "url": "https://www.securityweek.com/what-we-know-about-suspected-iranian-cyber-intrusion-in-the-us-presidential-race/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-14:a18",
+          "order": 3,
+          "title": "NIST RELEASES FIRST 3 FINALIZED POST-QUANTUM ENCRYPTION STANDARDS",
+          "summary": "NIST has released new encryption standards to protect against quantum computer attacks.",
+          "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "nist.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

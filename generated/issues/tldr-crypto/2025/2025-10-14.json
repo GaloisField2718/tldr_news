@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-crypto:2025-10-14",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2025-10-14",
+  "source_path": "TLDR Crypto/article_14-10-2025.md",
+  "source_content_hash": "sha256:acaa902ff99a6353f63809a7c4be274e59785949a8844ec96523ffd33a845179",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2025-10-14",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2025-10-14:a04",
+          "order": 1,
+          "title": "CENTRALIZED EXCHANGES FACE CLAIMS OF LIQUIDATION UNDERCOUNTS",
+          "summary": "Hyperliquid CEO Jeff Yan and crypto data platform CoinGlass alleged that centralized exchanges like Binance significantly undercount liquidations due to their reporting methodology, which only captures one liquidation per second in order snapshot streams despite processing over 100 liquidations per pair per second during mass events. The claims emerged after Friday's market crash produced the largest liquidation event in crypto history at $16.7 billion in long liquidations, though Yan suggested actual figures could be 100x higher. Binance faced multiple technical issues during the crash, including module lags, depegging events requiring over $280 million in user compensation, and display anomalies showing $0 prices for some trading pairs, while the platform's CEO acknowledged \"brief lags\" in some functional modules. In contrast, DeFi platforms demonstrated greater resilience, with Hyperliquid reporting zero downtime and Ethena's USDe stablecoin maintaining its peg on Curve while depegging severely to under $0.70 on Binance.",
+          "url": "https://cointelegraph.com/news/centralized-crypto-exchanges-undrerreport-liquidadations-even-100x-hyperliquid-ceo?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a05",
+          "order": 2,
+          "title": "TRADER WHO MADE $192M SHORTING THE CRASH IS SHORT AGAIN",
+          "summary": "The wallet identified as 0xb317 on Hyperliquid has opened a new $163 million short position on Bitcoin with 10x leverage and $125,500 liquidation level, already showing $3.5 million profit as the same trader who gained nearly $200 million by shorting 30 minutes before Trump's surprise 100% China tariff announcement that triggered the largest-ever crypto liquidation day. The perfectly timed initial bet sparked widespread speculation about insider knowledge and earned the address the \"insider whale\" designation from onchain analysts, with some arguing the position itself accelerated the crash that erased over $19 billion in crypto market value. Hyperliquid's Auto-Deleveraging mechanism hit over 6,000 wallets and wiped $1.2 billion in trader capital during the weekend flush, forcibly closing profitable positions to cover losses from bankrupt accounts and preventing bad debt but potentially worsening selloffs as the safety mechanism rebalances the system.",
+          "url": "https://www.coindesk.com/markets/2025/10/13/trader-who-made-usd192m-shorting-the-crypto-crash-is-betting-against-bitcoin-again?utm_source=tldrcrypto",
+          "reading_time_minutes": 6,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2025-10-14:a06",
+          "order": 1,
+          "title": "INTRODUCING ONCHAIN STOREFRONTS",
+          "summary": "Rarible has launched onchain storefronts, enabling brands and creators to own their presence with fully branded spaces for launching and selling digital collectibles, with VeeFriends as the first implementation, bringing Gary Vaynerchuk's 250+ character universe together in one hub. The VeeFriends storefront integrates Privy wallet for email login onboarding, Crossmint checkout for credit card, Apple Pay, and Google Pay payments, and RARI Foundation rewards program for trading and collecting activity, combining digital assets, collector spotlights, and media features in a unified commerce experience. The platform positions itself as \"Shopify, but onchain\" for storytelling, discovery, and community building beyond basic marketplace functionality, with more major brands and creators preparing to launch their own storefronts as the next chapter of onchain commerce takes shape.",
+          "url": "https://threadreaderapp.com/thread/1975924765065167100.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a07",
+          "order": 2,
+          "title": "ENSV2 OVERVIEW",
+          "summary": "ENSv2 introduces hierarchical registries where each name provides its own registry implementation for subnames rather than ENSv1's single flat registry, giving name owners direct control over ownership and transfer rules while enabling entire subtrees to be deleted or reassigned in single operations. Changes include native Layer 2 support with Namechain and cross-chain resolution built on CCIP-Read, contract factories where every name gets its own resolver and registry rather than relying on large multi-user contracts enabled by low L2 transaction costs, role-based permissions integrating Name Wrapper functionality into the core protocol, and elimination of grace periods where names immediately enter premium periods upon expiration. The hierarchical structure enables advanced features like aliasing multiple domains to identical records by reusing the same subregistry across names, while standardized registries implement ERC1155 tokens with sophisticated permissions models using Open Zeppelin-style roles, where each name has roles like resolver setting with corresponding admin roles for granting or revoking permissions.",
+          "url": "https://docs.ens.domains/contracts/ensv2/overview/?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "docs.ens.domains",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2025-10-14:a08",
+          "order": 1,
+          "title": "INSIDE CRYPTO'S $19B LIQUIDATION CASCADE",
+          "summary": "Trump's 100% tariff announcement triggered a $19B crypto liquidation spiral because of leverage and structural flaws in exchange infrastructure. Binance's margin engine mispriced wrapped assets like wBETH and BNSOL, marking collateral to distressed spot prices instead of underlying value. As liquidity vanished, auto-liquidations fed a self-reinforcing doom loop while market makers pulled back, unable to hedge. Synthetic assets like USDe remained solvent but were liquidated anyway because of faulty pricing logic.",
+          "url": "https://x.com/yq_acc/status/1977057301673787716?utm_source=tldrcrypto",
+          "reading_time_minutes": 6,
+          "source_domain": "x.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a09",
+          "order": 2,
+          "title": "“DEPEG-GATE” AND THE SEMANTICS OF STABLECOIN STABILITY",
+          "summary": "“Depeg” has become an overused, misleading label for any price dislocation, even when the stablecoin issuer isn't at fault. We should recognize the nuances between local depegs (venue-level liquidity or routing issues like USDe's recent event), widespread redemption stress (temporary withdrawal uncertainty like USDC during SVB), and collateral loss (true issuer failure like Terra/Luna). Most “depegs” reflect market dysfunction, not issuer collapse, and using the term loosely conflates unrelated issues, causing unnecessary reputational damage.",
+          "url": "https://threadreaderapp.com/thread/1977510426268029339.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2025-10-14:a10",
+          "order": 1,
+          "title": "LESSONS FROM BINANCE'S DEPEG CHAOS",
+          "summary": "Exchanges must margin collateral based on their own liquidity and solvency, not global parity, just as commodities trade differently across local markets like Dalian or Chicago. While Ethena's USDe remained solvent, Binance couldn't assume recovery without taking market risk. The episode demonstrates that DeFi and cross-chain systems depend on local liquidity realities, and oracles tied to mainnet prices may not reflect true collateral value on frontier chains or isolated venues, a challenge that extends to tokenized RWAs as well.",
+          "url": "https://threadreaderapp.com/thread/1977386218103959954.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a11",
+          "order": 2,
+          "title": "THE MORAL FOUNDATIONS OF CRYPTO NETWORKS",
+          "summary": "Enduring crypto networks succeed because they're built on moral conviction, not convenience. Bitcoin stands for separating money from the state, Ethereum for decentralization, and Zcash for privacy. Similarly, Base's mantra, “Base is for everyone”, reflects a mission to build an open, global economy rather than chase speculative profits. Moral values impose real tradeoffs like Bitcoin sacrifices speed, Ethereum scalability, and Base short-term revenue. However, these principled constraints, guided by founder-led vision, are what ultimately enable networks to evolve into true network states.",
+          "url": "https://threadreaderapp.com/thread/1977380988956115373.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2025-10-14:a12",
+          "order": 1,
+          "title": "THE SWEET SPOT FOR NEW PREDICTION MARKETS",
+          "summary": "Next-gen prediction markets should focus on high-frequency, high-leverage events with meaningful real-world outcomes.",
+          "url": "https://threadreaderapp.com/thread/1977353803536982082.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a13",
+          "order": 2,
+          "title": "ETHEREUM COULD HOLD AN ADDITIONAL $850B OF STABLECOINS BY 2028",
+          "summary": "US Treasury Secretary Scott Bessent projects the dollar-backed stablecoin market could exceed $2 trillion within three years.",
+          "url": "https://threadreaderapp.com/thread/1977447614166835685.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a14",
+          "order": 3,
+          "title": "BINANCE TO COMPENSATE USERS AFFECTED BY CRASH IN WRAPPED TOKENS",
+          "summary": "Binance is taking partial blame for the market crash on Friday, and is recompensating users who lost money from holding Binance-wrapped ETH, SOL, or USDe.",
+          "url": "https://www.coindesk.com/markets/2025/10/12/binance-to-compensate-users-affected-by-crash-in-wbeth-bnsol-and-ethena-s-usde?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2025-10-14:a15",
+          "order": 4,
+          "title": "X402 EXPLANATION FOR BEGINNERS",
+          "summary": "This video outlines how the x402 protocol works for machine-to-machine payments using stablecoins.",
+          "url": "https://threadreaderapp.com/thread/1977579430634832061.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 6,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

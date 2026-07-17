@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-07-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-08",
+  "source_path": "TLDR InfoSec/article_08-07-2025.md",
+  "source_content_hash": "sha256:6fe2d96d76858795b89d658a8748aca78f3fbcec49fc07496f73585d9a57f4e7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-08",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-08:a04",
+          "order": 1,
+          "title": "COLUMBIA UNIVERSITY STUDENT DATA STOLEN BY POLITICALLY MOTIVATED HACKER",
+          "summary": "A politically motivated hacker recently breached Columbia University's systems, locking students out of their coursework, email accounts, and video conferencing services. The hacker also stole around 460GB of data, some of which they provided to Bloomberg to showcase that the university employed discriminatory admissions practices. The data includes the Social Security Numbers of students, faculty, staff, applicants, and their families, as well as university ID numbers, citizenship status, admissions decisions, and the program to which they applied.",
+          "url": "https://www.columbiaspectator.com/news/2025/07/01/columbia-data-stolen-in-cyberattack-that-caused-dayslong-it-outage-university-says/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "columbiaspectator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a05",
+          "order": 2,
+          "title": "EU BORDER SYSTEM HAS THOUSANDS OF CRITICAL VULNERABILITIES",
+          "summary": "Thousands of vulnerabilities were discovered in the Schengen Information System II (SIS II), which is used by EU border agencies to track illegal migrants and suspected criminals. An audit by the European Data Protection Supervisor (EDPS) found that the system contained an excessive amount of accounts with administrative privileges, was vulnerable to hacker overload and unauthorized access, and that 69 external employees had access without proper clearance. The EDPS found no evidence of a breach but warned that a breach could be catastrophic.",
+          "url": "https://mezha.media/en/news/sis-ii-has-thousands-of-bugs-303074/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "mezha.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a06",
+          "order": 3,
+          "title": "CMS NOTIFIES 103K MEDICARE BENEFICIARIES ABOUT UNAUTHORIZED ACCOUNT CREATION",
+          "summary": "The HHS Centers for Medicare and Medicaid Services (CMS) was recently alerted that Medicare.gov accounts had been created for 103K individuals without their knowledge. The investigation determined that the accounts were created using information gathered from external sources. The unknown threat actor could use their access to view the user's Medicare beneficiary ID, coverage start date, birth date, and zip code.",
+          "url": "https://www.hipaajournal.com/cms-unauthorized-medicare-gov-account-creation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hipaajournal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-08:a07",
+          "order": 1,
+          "title": "THE GPS LEAK NO ONE TALKED ABOUT: UFFIZIO'S SILENT EXPOSURE",
+          "summary": "DeepSpecter exposed a five-year data breach involving Uffizio's GPS fleet management platform, leaking sensitive data from police, ambulances, and critical infrastructure across 12 countries. Despite claims of GDPR compliance and CVE disclosure, the exposure persisted through global resellers, underscoring that regulatory compliance alone does not provide adequate security protection.",
+          "url": "https://reporter.deepspecter.com/the-gps-leak-no-one-talked-about-uffizios-silent-exposure-03b5dfb23556?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "reporter.deepspecter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a08",
+          "order": 2,
+          "title": "ROLES HERE? ROLES THERE? ROLES ANYWHERE: EXPLORING THE SECURITY OF AWS IAM ROLES ANYWHERE",
+          "summary": "AWS IAM Roles Anywhere is a method for authenticating to AWS using certificates signed by a configured trust anchor. By default, the Roles Anywhere policy does not include any conditions, and any role attached to it could be assumed by any request signed by any trust anchor in that region. Unit 42 recommends specifying an ARN using conditions in the default policy, utilizing ACM-PCA for the trust anchor, and adhering to the principle of least privilege.",
+          "url": "https://unit42.paloaltonetworks.com/aws-roles-anywhere/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a09",
+          "order": 3,
+          "title": "HIJACKING AMAZON EVENTBRIDGE FOR LAUNCHING CROSS-ACCOUNT ATTACKS",
+          "summary": "Attackers exploit AWS EventBridge's cross-account features using six MITRE ATT&CK attack patterns: establishing persistent backdoors via check-in events, creating bidirectional command and control channels, conducting reconnaissance by capturing all events, exfiltrating data in small chunks disguised as telemetry, lateral movement exploiting trust relationships, and exploiting vulnerable Lambda functions for unintended AWS API calls. These bypass traditional controls and evade detection because EventBridge PutEvents API calls aren't logged in CloudTrail. Defenses include Service Control Policies, specific event patterns, input validation, and monitoring CloudWatch for unusual activities.",
+          "url": "https://developer.squareup.com/blog/hijacking-amazon-eventbridge-for-launching-cross-account-attacks?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "developer.squareup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-08:a10",
+          "order": 1,
+          "title": "FORTRA'S UNIQUE APPROACH TO DSPM",
+          "summary": "Cloud data protection is messier than ever, and most DSPM tools are just throwing more alerts without giving you an actionable way to address risks. Learn how Fortra [11] can protect your organization's sensitive data thanks to its unique architecture, which combines data protection (DLP, network access) with discovery and classification.",
+          "url": "https://www.fortra.com/products/data-security-posture-management?code=cmp-0000016264&ls=717710006&utm_source=tldr&utm_medium=email&utm_campaign=cdp-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fortra.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a11",
+          "order": 2,
+          "title": "Get a demo",
+          "summary": "",
+          "url": "https://www.fortra.com/solutions/data-protection/endpoint-cloud-protection/demo?code=cmp-0000016264&ls=717710006&utm_source=tldr&utm_medium=email&utm_campaign=cdp-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fortra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a12",
+          "order": 3,
+          "title": "REPOAUDIT",
+          "summary": "RepoAudit is a repo-level bug detector for general bugs. Currently, it supports the detection of diverse bug types (such as Null Pointer Dereference, Memory Leak, and Use After Free) in multiple programming languages (including C/C++, Java, Python, and Go).",
+          "url": "https://github.com/PurCL/RepoAudit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a13",
+          "order": 4,
+          "title": "OBJECTIVE-C HELPER",
+          "summary": "An IDA plugin that helps decompile Objective-C code by removing superfluous runtime calls related to ARC.",
+          "url": "https://github.com/synacktiv/objc-helper?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a14",
+          "order": 5,
+          "title": "CARACAL",
+          "summary": "Caracal is a Rust-based implementation of eBPF techniques. It can hide target BPF programs and maps, making them invisible to tools like bpftop and bpftool. Additionally, it can conceal processes, rendering them undetectable by commands such as ps, top, and ls /proc, and is resistant to certain brute-force methods for uncovering them.",
+          "url": "https://github.com/adgaultier/caracal?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-08:a15",
+          "order": 1,
+          "title": "“NO HONOR AMONG THIEVES”: M&S HACKING GROUP STARTS TURF WAR",
+          "summary": "DragonForce and RansomHub, two major ransomware groups behind attacks on UK retailers like M&S and Harrods, are engaged in a turf war that could increase cyber risks for companies. The conflict began after DragonForce rebranded as a \"cartel\" and attacked RansomHub's site, potentially leading to double extortion of victims.",
+          "url": "https://arstechnica.com/security/2025/07/no-honor-among-thieves-ms-hacking-group-starts-turf-war/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a16",
+          "order": 2,
+          "title": "PHISHING PLATFORMS, INFOSTEALERS BLAMED AS IDENTITY ATTACKS SOAR",
+          "summary": "Identity-based cyberattacks increased 156% due to advanced phishing kits such as Tycoon 2FA and info-stealing malware. Phishing-as-a-service platforms, which cost $200-$300 monthly, make sophisticated attacks accessible, now comprising 59% of security investigations, often resulting in business email compromise (BEC) and ransomware.",
+          "url": "https://www.theregister.com/2025/07/07/phishing_platforms_infostealers_blamed_for/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a17",
+          "order": 3,
+          "title": "POLICE IN BRAZIL ARREST A SUSPECT OVER $100M BANKING HACK",
+          "summary": "Brazilian police have arrested João Roque, an employee of C&M, for allegedly selling his credentials to hackers. This breach facilitated a cyberattack that diverted $100 million from Brazil's PIX payment system and impacted several financial institutions with fake transactions in a single night. Authorities have since frozen $50 million in assets and are pursuing four more suspects.",
+          "url": "https://www.securityweek.com/police-in-brazil-arrest-a-suspect-over-100m-banking-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-08:a18",
+          "order": 1,
+          "title": "CALL OF DUTY TAKES PC GAME OFFLINE AFTER MULTIPLE REPORTS OF RCE ATTACKS ON PLAYERS",
+          "summary": "The makers of Call of Duty: World War 2 took the PC game offline after reports of hackers taking over players' computers during matches.",
+          "url": "https://cyberscoop.com/call-of-duty-remote-code-execution-pc-game-offline/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a19",
+          "order": 2,
+          "title": "AT&T AGREED TO A $177 MILLION SETTLEMENT FOR DATA BREACHES OCCURRING IN 2019 AND 2024",
+          "summary": "AT&T has agreed to pay $177 million to settle lawsuits related to two major data breaches in 2019 and 2024, which exposed the personal and call data of millions of current and former customers.",
+          "url": "https://hackread.com/att-reaches-deal-over-2019-2024-data-breaches/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-08:a20",
+          "order": 3,
+          "title": "QANTAS IS BEING EXTORTED IN RECENT DATA-THEFT CYBERATTACK",
+          "summary": "Qantas suffered a cyberattack that exposed the data of 6 million customers, with police investigating and the attackers seeking extortion.",
+          "url": "https://www.bleepingcomputer.com/news/security/qantas-is-being-extorted-in-recent-data-theft-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-03-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-03-04",
+  "source_path": "TLDR InfoSec/article_04-03-2024.md",
+  "source_content_hash": "sha256:ae632d1b6e934e7de13d8d5ef69a0375d069b76646f4dc0cce7564fd90af3997",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-03-04",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-04:a05",
+          "order": 1,
+          "title": "GITHUB BESIEGED BY MILLIONS OF MALICIOUS REPOSITORIES IN ONGOING ATTACK",
+          "summary": "GitHub is struggling to contain an ongoing attack that is flooding the site with millions of malicious code repositories mimicking legitimate ones. The fake repositories contain hidden malware that steals passwords and cryptocurrency from developers. Removing the repositories is like playing whack-a-mole as some malicious forks are surviving and getting re-forked, compounding the problem.",
+          "url": "https://arstechnica.com/security/2024/02/github-besieged-by-millions-of-malicious-repositories-in-ongoing-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a06",
+          "order": 2,
+          "title": "A LEAKY DATABASE SPILLED 2FA CODES FOR THE WORLD’S TECH GIANTS",
+          "summary": "A database belonging to YX International, which routes millions of SMS messages daily, was left exposed online without a password. The database contained sensitive one-time passcodes that grant access to accounts on Facebook, Google, and TikTok. The company secured the database after being contacted by a security researcher.",
+          "url": "https://techcrunch.com/2024/02/29/leaky-database-two-factor-codes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a07",
+          "order": 3,
+          "title": "HACKERS STOLE ‘SENSITIVE’ DATA FROM TAIWAN TELECOM GIANT: MINISTRY",
+          "summary": "Taiwan's defense ministry has confirmed that hackers stole sensitive military and government documents from Chunghwa Telecom and sold them online. The breach, initially reported by TVBS, included 1.7TB of data that the hackers claim contains contracts and information from the armed forces, foreign ministry, and coast guard.",
+          "url": "https://www.securityweek.com/hackers-stole-sensitive-data-from-taiwan-telecom-giant-ministry/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-04:a08",
+          "order": 1,
+          "title": "A KILLSWITCH FOR AI … DAISY, DAISY?",
+          "summary": "As AI advances, serious questions arise about its potential impacts on society. Could it destroy civilization, turn us into zombies, or view humans as we view dogs? While AI poses risks, thoughtful regulation and ethical development can help realize benefits and avoid pitfalls depicted in sci-fi like 2001: A Space Odyssey with HAL. This post dives into the current ways we are preparing against AI as a society.",
+          "url": "https://medium.com/asecuritysite-when-bob-met-alice/a-killswitch-for-ai-daisy-daisy-fe3dda060e96?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a09",
+          "order": 2,
+          "title": "HACKING TERRAFORM STATE FOR PRIVILEGE ESCALATION",
+          "summary": "Terraform can be configured to store state files in a remote backend. This post looks at how attackers can leverage compromised state files. It begins by demonstrating how an attacker could cause AWS resource deletion by confusing a Terraform user into applying a modified state file that results in resource deletion. It then goes on to demonstrate the process of writing and publishing a malicious Terraform provider that can execute code upon Terraform plan or apply and then demonstrates how this can be combined with state file modification to hijack CI/CD systems.",
+          "url": "https://blog.plerion.com/hacking-terraform-state-privilege-escalation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a10",
+          "order": 3,
+          "title": "PASSKEYS: THREAT MODELING AND IMPLEMENTATION CONSIDERATIONS",
+          "summary": "This post begins with an overview of what passkeys are and how they work. The post then discusses threat models around phishing, stolen credentials, and MFA as they relate to passkeys. It concludes with a warning not to implement WebAuthn manually before providing some implementation considerations for passkeys.",
+          "url": "https://slashid.com/blog/passkeys-security-implementation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "slashid.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-04:a11",
+          "order": 1,
+          "title": "FIND VULNERABILITIES FASTER",
+          "summary": "Web applications have critical vulnerabilities that only dynamic",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=infosec-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a11",
+          "order": 2,
+          "title": "analysis can find. Rapidly find and fix runtime vulnerabilities",
+          "summary": "with Veracode [11]: ✅ <5% false positive rate",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=infosec-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a11",
+          "order": 3,
+          "title": "Build fast, build secure. Try Veracode DAST Essentials free",
+          "summary": "",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=infosec-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a12",
+          "order": 4,
+          "title": "MATRIX",
+          "summary": "My Privacy DNS' \"Matrix\" project is a handcrafted and completely self-managed DNS Firewall through Response Policy Zones.",
+          "url": "https://github.com/mypdns/matrix?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a13",
+          "order": 5,
+          "title": "RECONFTW",
+          "summary": "reconFTW is a tool designed to perform automated recon on target domains by running the best set of tools for scanning and finding vulnerabilities",
+          "url": "https://github.com/six2dez/reconftw?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a14",
+          "order": 6,
+          "title": "BLEEP-TOOL",
+          "summary": "The Bluetooth Landscape Exploration & Enumeration Platform (BLEEP) can be used for enumerating Bluetooth devices. It can also be used to automate Bluetooth vulnerability discovery.",
+          "url": "https://github.com/Mauddib28/bleep-tool?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-04:a15",
+          "order": 1,
+          "title": "BIDEN EXECUTIVE ORDER ON SENSITIVE PERSONAL INFORMATION DOES LITTLE FOR NOW TO CURB DATA MARKET – BUT SPOTLIGHTS THE THREAT THE MARKET POSES",
+          "summary": "The Biden administration issued an executive order on February 28th identifying \"countries of concern\" that exploit Americans' personal data as a national emergency. The order aims to prevent these unspecified countries from accessing bulk sensitive data about Americans. It cites the vast commercial data market selling people's information as a crisis necessitating action.",
+          "url": "https://theconversation.com/biden-executive-order-on-sensitive-personal-information-does-little-for-now-to-curb-data-market-but-spotlights-the-threat-the-market-poses-224702?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theconversation.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a16",
+          "order": 2,
+          "title": "PRODUCTS ON YOUR PERIMETER CONSIDERED HARMFUL",
+          "summary": "With security improvements to endpoints, cyber threats have shifted to the perimeter. Many perimeter devices are not built to be secure by design and therefore are ripe targets for exploitation.",
+          "url": "https://www.ncsc.gov.uk/blog-post/products-on-your-perimeter?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-04:a17",
+          "order": 1,
+          "title": "THE STATE OF ABAC ON AWS IN 2024",
+          "summary": "Attribute-based access control can be implemented in AWS via tags that store attributes on both Principals and Resources. This post looks at improvements to ABAC since 2020 as well as issues that remain.",
+          "url": "https://ramimac.me/abac?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ramimac.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a18",
+          "order": 2,
+          "title": "U.S. COURT ORDERS NSO GROUP TO HAND OVER PEGASUS SPYWARE CODE TO WHATSAPP",
+          "summary": "A U.S. judge has ordered NSO Group to hand over its source code for Pegasus and other products to Meta as part of the social media giant's ongoing litigation against the Israeli spyware vendor.",
+          "url": "https://thehackernews.com/2024/03/us-court-orders-nso-group-to-hand-over.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-04:a19",
+          "order": 3,
+          "title": "SEMGREP CODE BRINGS MODERN STATIC ANALYSIS TO C/C++",
+          "summary": "Semgrep Code now supports static analysis for C and C++. Exclusive to the platform, static analysis parses source code before macro expansion, bypassing the complexities associated with C/C++ analysis.",
+          "url": "https://semgrep.dev/blog/2024/modernizing-static-analysis-for-c/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

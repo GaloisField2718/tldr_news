@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-01-03",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-03",
+  "source_path": "TLDR InfoSec/article_03-01-2025.md",
+  "source_content_hash": "sha256:ab358b867ee27dfb1df7badcabe8c0d14b44d725203b4588cf711f3ba2b31d0d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a04",
+          "order": 1,
+          "title": "RANSOMWARE THREATS",
+          "summary": "Flashpoint identified 4,500+ ransomware attacks in 2024, with 53% targeting U.S. companies. Ransomware operations have grown more sophisticated — strategically combining phishing, infostealers, and vulnerability exploits to breach defenses.",
+          "url": "https://go.flashpoint.io/ransomware-survival-guide?utm_campaign=Resource_RP_Ransomware_Survival_Guide&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000IJOp4IAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a04",
+          "order": 2,
+          "title": "📥 Download the report",
+          "summary": "",
+          "url": "https://go.flashpoint.io/ransomware-survival-guide?utm_campaign=Resource_RP_Ransomware_Survival_Guide&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000IJOp4IAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a05",
+          "order": 1,
+          "title": "CRITICAL VULNERABILITY IN ITERM2",
+          "summary": "The popular macOS terminal emulator iTerm2 released a critical security fix for versions 3.5.6-3.5.10. The vulnerability arises from a bug in the SSH integration feature which causes input and output to be logged to a file /tmp/framer.txt on the remote host. Users are advised to upgrade and remove any /tmp/framer.txt files that may have been created.",
+          "url": "https://links.tldrnewsletter.com/8SJRRM",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a06",
+          "order": 2,
+          "title": "NEW DOUBLECLICKJACKING ATTACK EXPLOITS DOUBLE-CLICKS TO HIJACK ACCOUNTS",
+          "summary": "Clickjacking attacks are when an attacker utilizes an iframe to trick a user into clicking on content from a legitimate page that an attacker is hiding from the user and is largely prevented by modern browser defenses. A security researcher has introduced a new technique called DoubleClickjacking where the attacker launches a new window that covers the original page and prompts the user to double click to solve a captcha or the like. The page will then listen for the first click and close itself while having the parent navigate to the target site and capture the second click, bypassing browser defenses.",
+          "url": "https://links.tldrnewsletter.com/mpTkAb",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a07",
+          "order": 3,
+          "title": "OVER 3 MILLION MAIL SERVERS WITHOUT ENCRYPTION EXPOSED TO SNIFFING ATTACKS",
+          "summary": "Scans from the ShadowServer security threat monitoring platform Shadowserver has shown that around 3.3 million hosts are running POP3/IMAP services without TLS encryption enabled and expose usernames and passwords in plain text when transmitted over the Internet. IMAP is recommended for accessing emails on multiple devices, while POP3 downloads emails to a single device. Enabling TLS encryption can protect usernames and passwords from being exposed in plain text during email exchanges.",
+          "url": "https://links.tldrnewsletter.com/eBqSfd",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a08",
+          "order": 1,
+          "title": "THE DARK CLOUD AROUND GCP SERVICE ACCOUNTS",
+          "summary": "Dave Bogle of Red Canary steps through the process of investigating a strange behavior in GCP where a service account's access to GCP wasn't revoked when the access key was deleted. Bogle discovered that the token that GCP creates for service account's access access is not revocable but ultimately this is mentioned in the GCP documentation. In this post, Bogle walks through how he created detection logic around this behavior based on his research.",
+          "url": "https://redcanary.com/blog/threat-detection/gcp-service-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "redcanary.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a09",
+          "order": 2,
+          "title": "IMPLEMENTING TLSH BASED DETECTION TO IDENTIFY MALWARE VARIANTS",
+          "summary": "TLSH is a locality-sensitive, fuzzy hashing mechanism that can be used to compare two files to determine how similar they are. In this post, Target's security team walks through how they utilize TLSH for hunting malware variants of known malware families using Strelka. This approach requires files to be over 50 bytes in length, regularly updating a list of known malicious TLSH values, carefully tuning similarity thresholds, and may not work on packed or obfuscated malware.",
+          "url": "https://tech.target.com/blog/implementing_TLSH_based_detection?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "tech.target.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a10",
+          "order": 3,
+          "title": "NON-INTRUSIVE WEB RECON: TECHNIQUES FROM CHROME DEVTOOLS RECORDER",
+          "summary": "The article discusses how Chrome DevTools Recorder enables non-intrusive web reconnaissance by isolating its scripts from the application's environment. By capturing user interactions without interference, the Recorder provides valuable insights for building secure and reliable tools. Lessons from DevTools can guide the design of tools that support security researchers in uncovering vulnerabilities without disrupting normal application behavior.",
+          "url": "https://flatt.tech/research/posts/non-intrusive-web-recon-techniques-from-chrome-devtools-recorder/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "flatt.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a11",
+          "order": 1,
+          "title": "TOOLS EVERY SOC ANALYST SHOULD KNOW",
+          "summary": "A collection of tools that can be useful for a SOC Analyst, divided by category. Categories include: network traffic, analysis, and detection tools, system logs collection and analysis tools, disk imaging, live analysis, and offline analysis tools, memory capture and analysis tools, and threat intelligence tools.",
+          "url": "https://www.linkedin.com/pulse/tools-every-soc-analyst-should-know-tcm-security-inc-hstbc?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a12",
+          "order": 2,
+          "title": "CF-HERO",
+          "summary": "CF-Hero is a tool that uncovers the real IP addresses of Cloudflare-protected websites through DNS reconnaissance and intelligence sources like Censys and Shodan. It distinguishes between domains protected by Cloudflare and those that are not to help validate findings and minimize false positives. The tool offers advanced features like custom JA3 fingerprint support, concurrent scanning, and proxy support for comprehensive analysis.",
+          "url": "https://github.com/musana/CF-Hero?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a13",
+          "order": 3,
+          "title": "OGP-CTF 2024",
+          "summary": "OGP-CTF is a series of 13 challenges ranging from easy to hard aimed towards training developers in bug hunting and secure coding. The CTF is built on Vercel + NextJS, CTFd, and Cloudflare Access.",
+          "url": "https://github.com/spaceraccoon/ogp-ctf-2024?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a14",
+          "order": 1,
+          "title": "EXPLORING AWS STS ASSUMEROOT",
+          "summary": "AWS introduced the AssumeRoot API operation that allows for an IAM user in a management account of an organization to gain temporary credentials to the root user of a member account. The Elastic security team showcases how this privilege can be abused by an attacker to elevate compromised credentials in a management account to full compromise of a member account. The post includes Terraform code to setup the testing environment and detections to detect the attack.",
+          "url": "https://www.elastic.co/security-labs/exploring-aws-sts-assumeroot?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a15",
+          "order": 2,
+          "title": "BIGGEST PRIVACY EROSION IN 10 YEARS? ON GOOGLE'S POLICY CHANGE TOWARDS FINGERPRINTING",
+          "summary": "Lukasz Olejnik raises concerns about how Google's policy change to allow device fingerprinting for advertising leads to privacy erosion. This shift contradicts previous commitments to user privacy, potentially setting a new standard for data collection in the online ecosystem. The use of fingerprinting raises questions about transparency, user control, and the future of internet privacy.",
+          "url": "https://blog.lukaszolejnik.com/biggest-privacy-erosion-in-10-years-on-googles-policy-change-towards-fingerprinting/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.lukaszolejnik.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a16",
+          "order": 3,
+          "title": "FROM REMEDIATION TO MITIGATION: ADDRESSING INSECURE-BY-DESIGN FLAWS",
+          "summary": "Vectra's Kat Trexler writes about \"insecure by design\" flaws in cloud and contrasts them against traditional bugs and feature abuse. Insecure-by-design flaws in cloud services often stem from fundamental design issues, requiring more than simple patches for remediation. Mitigating these vulnerabilities involves a holistic strategy that involves implementing preventative controls like guardrails and focusing on detection and response measures.",
+          "url": "https://www.vectra.ai/blog/remediation-to-mitigation-addressing-insecure-by-design-flaws?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "vectra.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-03:a17",
+          "order": 1,
+          "title": "38C3 VIDEOS (VIDEO PLAYLIST)",
+          "summary": "All the videos from the 38th Chaos Communication Congress (38C3) have been posted.",
+          "url": "https://media.ccc.de/b/congress/2024?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "media.ccc.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a18",
+          "order": 2,
+          "title": "LUMEN REPORTS THAT IT HAS LOCKED OUT THE SALT TYPHOON GROUP FROM ITS NETWORK",
+          "summary": "Lumen has reported that it has locked out the Salt Typhoon hacking group from its network after targeting U.S. telecom firms.",
+          "url": "https://securityaffairs.com/172544/apt/lumen-locked-out-salt-typhoon.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-03:a19",
+          "order": 3,
+          "title": "U.S. ARMY SOLDIER ARRESTED IN AT&T, VERIZON EXTORTIONS",
+          "summary": "A 20-year-old U.S. Army soldier named Cameron Wagenius has been arrested for allegedly selling and leaking confidential phone records from AT&T and Verizon.",
+          "url": "https://krebsonsecurity.com/2024/12/u-s-army-soldier-arrested-in-att-verizon-extortions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

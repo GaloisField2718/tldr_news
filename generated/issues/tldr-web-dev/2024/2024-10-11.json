@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-10-11",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-11",
+  "source_path": "TLDR Web Dev/article_11-10-2024.md",
+  "source_content_hash": "sha256:e13f4511348f8b24e2377ef8f57dbc79456f1d6d8197904fdba23ffb69ab114c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-11",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-11:a04",
+          "order": 1,
+          "title": "BENCHMARKING THE PERFORMANCE OF CSS @PROPERTY",
+          "summary": "This article benchmarks the performance of CSS @property, a new feature that allows developers to register custom CSS properties. PerfTestRunner was used to measure the performance of different types of properties, including regular properties, unregistered custom properties, and registered custom properties with different inheritance settings. The results show that registering a custom property with @property comes at a slight performance cost, but using `inherits: false` when registering a custom property can significantly improve performance.",
+          "url": "https://web.dev/blog/at-property-performance?hl=en&utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "web.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a05",
+          "order": 2,
+          "title": "SERVERLESS SERVERS AND THE CHALLENGE OF NEW REACT ARCHITECTURE",
+          "summary": "Vercel's new \"serverless server\" feature optimizes Node.js concurrency within Vercel Functions, allowing multiple requests to be handled by a single function instance. This improvement addresses a key challenge of React's new full-stack architecture, where increased server traffic and async calls are needed to handle server-side rendering and data fetching.",
+          "url": "https://bobaekang.com/blog/serverless-servers-and-the-challenge-of-new-react-architecture/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "bobaekang.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-11:a06",
+          "order": 1,
+          "title": "TYPEDDICTS ARE BETTER THAN YOU THINK",
+          "summary": "TypedDict, introduced in Python 3.8, provides a powerful way to type-annotate dictionaries. While initially overlooked in favor of dataclasses and Pydantic, TypedDict works best in scenarios where not all fields are required, such as for representing PATCH operations in APIs.",
+          "url": "https://blog.changs.co.uk/typeddicts-are-better-than-you-think.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.changs.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a07",
+          "order": 2,
+          "title": "AUTOMATING PROCESSES WITH SOFTWARE IS HARD",
+          "summary": "Automating processes is far more complex than most people realize. The difficulty stems from handling exceptions, not routine tasks. Most automations are defined by their ability to manage unexpected inputs and situations, making them fragile and requiring a lot of effort.",
+          "url": "https://hardcoresoftware.learningbyshipping.com/p/222-automating-processes-with-software?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "hardcoresoftware.learningbyshipping.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a08",
+          "order": 3,
+          "title": "MY NEGATIVE VIEWS ON RUST",
+          "summary": "Rust has a reliance on \"magical sugar\" constructs, which lead to cryptic compile errors and make the language harder to learn. The language's focus on efficient memory representation and its insistence on no garbage collection are also detrimental, as it forces developers to grapple with low-level details that don't always translate to real-world performance gains.",
+          "url": "https://chrisdone.com/posts/rust/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "chrisdone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-11:a09",
+          "order": 1,
+          "title": "A GIFT FOR TLDR READERS: DEVTOOLS BUNDLED INTO EVERY BUG REPORT",
+          "summary": "A full trace of a bug in every bug report - even if a bad PM reported it. Use the code BUGCATCHER to get free Jam for your team [9] & never hop on a debugging call again.",
+          "url": "https://jam.dev/?utm_source=newsletter&utm_medium=paid&utm_campaign=2024_10_TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "jam.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a10",
+          "order": 2,
+          "title": "SOFTWARE ENGINEER PAY HEATMAP ACROSS THE US",
+          "summary": "An interactive heatmap that allows users to explore software engineer salary ranges across the US by DMA region.",
+          "url": "https://www.levels.fyi/heatmap/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "levels.fyi",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a11",
+          "order": 3,
+          "title": "SETUP CI",
+          "summary": "Setup-CI is a command-line tool that generates GitHub workflows for common CI tasks in React Native projects.",
+          "url": "https://github.com/software-mansion/setup-ci?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-11:a12",
+          "order": 1,
+          "title": "THE AI STARTUP DRAMA THAT'S DAMAGING Y COMBINATOR'S REPUTATION",
+          "summary": "PearAI, a Y Combinator startup, launched an AI code editor that turned out to be a forked clone of an existing open-source project, Continue.dev. The controversy stemmed from PearAI's attempt to misrepresent its code origins and change the open-source Apache license to a closed one. The incident raises questions about Y Combinator's vetting process and investment strategy.",
+          "url": "https://www.indiehackers.com/post/starting-up/the-ai-startup-drama-thats-damaging-y-combinator-s-reputation-GQKuTmpGV2uWOCoxtHBn?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "indiehackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a13",
+          "order": 2,
+          "title": "THE PROMIND STORY LOOKING BACKWARDS",
+          "summary": "A developer created an application that offered personalized AI assistants for various professional tasks. Eventually, rapid growth led to infrastructure issues, causing service disruptions and user churn. They rebuilt their application with scalable infra. They go through the process in this article.",
+          "url": "https://blog.chinaza.dev/the-promind-story-looking-backwards?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.chinaza.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a14",
+          "order": 3,
+          "title": "THE EMERGING ECONOMY OF LLMS",
+          "summary": "The key resource in the new \"LLM economy” is computational power, mainly GPUs. Tokens, the smallest units of text processed by LLMs, are the new currency of this economy. The cost of using LLMs is typically determined by the number of tokens processed.",
+          "url": "https://links.tldrnewsletter.com/SeZF89",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-11:a15",
+          "order": 1,
+          "title": "10 TAILWIND TECHNIQUES",
+          "summary": "Shadcn, the creator of shadcn/ui, provides 10 techniques for using Tailwind CSS to create better dynamic UIs.",
+          "url": "https://threadreaderapp.com/thread/1842329158879420864.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a16",
+          "order": 2,
+          "title": "BEHIND THE PRODUCT: NOTEBOOKLM (50 MINUTE PODCAST)",
+          "summary": "This is a podcast interview with Raiza Martin, a senior product manager at Google Labs, about the development and success of NotebookLM, Google's AI-powered research tool with a unique \"Audio Overviews\" feature.",
+          "url": "https://www.lennysnewsletter.com/p/googles-notebooklm-raiza-martin?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "lennysnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a17",
+          "order": 3,
+          "title": "JAVASCRIPT STRUCTS: FIXED LAYOUT OBJECTS AND SOME SYNCHRONIZATION PRIMITIVES",
+          "summary": "This ECMA proposal introduces JavaScript structs, a new object type with a fixed layout that enables shared memory multithreading, synchronization primitives like mutex and condition, and unsafe blocks for managing memory access.",
+          "url": "https://github.com/tc39/proposal-structs?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a18",
+          "order": 4,
+          "title": "THE ULTIMATE GUIDE TO DEVELOPER HAPPINESS",
+          "summary": "Five strategies for increasing developer happiness: create a great developer experience, use AI to secure code, customize LLMs, prepare repositories for teamwork, and invest in learning opportunities.",
+          "url": "https://github.blog/engineering/engineering-principles/the-ultimate-guide-to-developer-happiness/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-11:a19",
+          "order": 5,
+          "title": "DESKPAD",
+          "summary": "DeskPad is a virtual monitor for screen sharing that creates a dedicated, easily shareable workspace by mirroring your main display within its application window.",
+          "url": "https://github.com/Stengo/DeskPad?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

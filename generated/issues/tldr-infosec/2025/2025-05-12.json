@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-05-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-12",
+  "source_path": "TLDR InfoSec/article_12-05-2025.md",
+  "source_content_hash": "sha256:2d95f78a8f6601de98a2876289e7147f218d9768dab149d4712af39b8ad34601",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a04",
+          "order": 1,
+          "title": "ENGINEERING",
+          "summary": "Your SOC team has a ransomware playbook… but your OT engineers live in a different universe. Meanwhile, attackers exploit this gap daily—with 45% of ICS compromises starting in IT networks before crossing into industrial systems. At $4.73M per incident, that's an expensive disconnect!",
+          "url": "https://www.sans.org/industrial-control-systems-security/?utm_source=TLDR&utm_medium=Sponsored_Content&utm_content=ICS_Security_TLDR_5.12.25_Newsletter&utm_campaign=ICS_OT_Malware_Ransomware_2025&utm_type=Global_Campaign&utm_goal=Leads&utm_rDetail=Global",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a08",
+          "order": 1,
+          "title": "ASCENSION REVEALS PERSONAL DATA OF 437,329 PATIENTS EXPOSED IN CYBERATTACK",
+          "summary": "Ascension, the second-largest private healthcare system in the US, suffered a data breach that exposed the personal and health information of 437,329 patients through a former partner's compromise. In December 2024, the partner faced a security incident due to a vulnerability in third-party software, leading to the theft of sensitive data, including names, contact details, SSNs, and medical visit records. This marks Ascension's second major cybersecurity incident, following a Black Basta ransomware attack in May 2024, prompting the company to offer affected patients two years of free identity monitoring.",
+          "url": "https://securityaffairs.com/177676/data-breach/ascension-reveals-personal-data-of-437329-patients-exposed-in-cyberattack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a09",
+          "order": 2,
+          "title": "160,000 IMPACTED BY VALSOFT DATA BREACH",
+          "summary": "AllTrust (Valsoft Corporation) is notifying 160,000+ people of a February data breach at its subsidiary, Aspire USA. Unauthorized access occurred February 12-15, with security teams interrupting an in-progress file transfer. Potentially compromised data includes names, driver's licenses, Social Security numbers, and financial details. No misuse has been reported.",
+          "url": "https://www.securityweek.com/160000-impacted-by-valsoft-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a10",
+          "order": 3,
+          "title": "A TIMELINE OF SOUTH KOREAN TELCO GIANT SKT'S DATA BREACH",
+          "summary": "SK Telecom suffered a massive cyberattack in April 2025 that compromised the personal data of 23 million South Koreans. This article navigates the timeline, highlighting potential losses of $5 billion if cancellation fees are waived. The malware was found in SKT's home subscriber server.",
+          "url": "https://techcrunch.com/2025/05/08/a-timeline-of-south-korean-telco-giant-skts-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a11",
+          "order": 1,
+          "title": "TUTORIAL: SLIVER C2 WITH BALLISKIT MACROPACK AND SHELLCODEPACK",
+          "summary": "This tutorial shows how to use BallisKit tools (ShellcodePack and MacroPack Pro) to deploy Sliver C2 implants while evading security measures. It demonstrates how to set up a Sliver server on Linux, generate implant types, and weaponize them with ShellcodePack to bypass EDRs. It also explains how to create initial access payloads like LNK files and ClickOnce applications to deploy the obfuscated Sliver implants on target Windows machines.",
+          "url": "https://blog.balliskit.com/tutorial-sliver-c2-with-balliskit-macropack-and-shellcodepack-452e94c24b19?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.balliskit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a12",
+          "order": 2,
+          "title": "BREAKING THE SOUND BARRIER PART I: FUZZING COREAUDIO WITH MACH MESSAGES",
+          "summary": "This blog post explains how Google's Project Zero created a custom fuzzing harness to identify vulnerabilities in macOS's CoreAudio system by targeting Mach IPC messages, using a \"knowledge-driven fuzzing\" approach that merges automation with reverse engineering. Through iterative enhancements to the harness, including proper system initialization, API call chaining for stateful operations, mocking out problematic functionality, and refining message structures, the author identified a type confusion vulnerability (CVE-2024-54529) in the CoreAudio daemon. This vulnerability arose because several message handlers did not verify object types before function calls, allowing arbitrary code execution via crafted Mach messages sent from a sandboxed process.",
+          "url": "https://googleprojectzero.blogspot.com/2025/05/breaking-sound-barrier-part-i-fuzzing.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 23,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a13",
+          "order": 1,
+          "title": "HOW MATURE IS YOUR DEVSECOPS PRACTICE?",
+          "summary": "This white paper outlines a DevSecOps maturity model [13] based on Datadog's work with thousands of organizations. The model maps key competencies and practices across culture, development, testing, deployment, operations, and incident response - with clear definitions that help you understand where you are today, and where you should aim",
+          "url": "https://www.datadoghq.com/resources/devsecops-maturity-model/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-devsecops-maturity-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a13",
+          "order": 2,
+          "title": "to be. Get your free copy",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/devsecops-maturity-model/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-devsecops-maturity-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a14",
+          "order": 3,
+          "title": "NOMADSCANNER",
+          "summary": "NomadScanner is a stealthy Windows port scanner designed for red teamers and penetration testers. It operates in-memory to avoid leaving disk artifacts and sends randomized HTTP probes for maximum stealth.",
+          "url": "https://github.com/django-88/NomadScanner?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a15",
+          "order": 4,
+          "title": "VALERIAN (PRODUCT LAUNCH)",
+          "summary": "Valarian's platform, ACRA, segments data and communications into tightly controlled “compartments” to enforce environment isolation.",
+          "url": "https://www.valarian.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "valarian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a16",
+          "order": 5,
+          "title": "VAPI",
+          "summary": "vAPI is a Vulnerable Adversely Programmed Interface, a Self-Hostable API that mimics the OWASP API's Top 10 scenarios through exercises.",
+          "url": "https://github.com/roottusk/vapi?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a17",
+          "order": 1,
+          "title": "BLUETOOTH 6.1 ENHANCES PRIVACY WITH RANDOMIZED RPA TIMING",
+          "summary": "The Bluetooth Special Interest Group (SIG) has announced Bluetooth Core Specification 6.1, which includes key improvements to the wireless communication protocol. One new feature is increased device privacy through randomized Resolvable Private Addresses (RPA) updates. The SIG states that varying the timing of address changes significantly complicates third parties' ability to monitor or relate device activities over time.",
+          "url": "https://www.bleepingcomputer.com/news/security/bluetooth-61-enhances-privacy-with-randomized-rpa-timing/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a18",
+          "order": 2,
+          "title": "OPERATION MOONLANDER DISMANTLED THE BOTNET BEHIND ANYPROXY AND 5SOCKS CYBERCRIMINALS SERVICES",
+          "summary": "Law enforcement dismantled a 20-year-old botnet behind Anyproxy and 5socks services, arresting four suspects, including three Russians. The U.S. Justice Department charged them with operating illegal proxy networks and exploiting infected routers for profit. The FBI warned about these malicious services targeting vulnerable end-of-life routers, urging users to replace compromised devices to prevent cyberattacks.",
+          "url": "https://securityaffairs.com/177664/malware/operation-moonlander-dismantled-the-botnet-behind-anyproxy-and-5socks-cybercriminals-services.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a19",
+          "order": 3,
+          "title": "SENATORS MOVE TO QUASH THE USE OF CHINESE AI SYSTEM BY FEDERAL CONTRACTORS",
+          "summary": "A bipartisan Senate bill from Senators Bill Cassidy (R-La.) and Jacky Rosen (D-Nev.) seeks to ban federal contractors from using DeepSeek, a Chinese-made language model whose hosted version transmits data to China. This legislation addresses national security fears about sensitive data access by the Chinese government while allowing case-by-case waivers for national security or research reasons. The bill contributes to a broader initiative to limit Chinese AI in government, complementing a House bill prohibiting DeepSeek on government devices and similar laws in Texas, New York, and Virginia.",
+          "url": "https://cyberscoop.com/deepseek-ban-congress-cassidy-rosen-contractors/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-12:a20",
+          "order": 1,
+          "title": "GOOGLE WILL PAY A $1.375 BILLION SETTLEMENT TO TEXAS OVER PRIVACY VIOLATIONS",
+          "summary": "Google has agreed to pay Texas $1.375 billion to settle privacy violation claims related to geolocation tracking and data collection, reflecting a significant increase compared to earlier settlements.",
+          "url": "https://www.theverge.com/news/664663/google-texas-settlement-1-billion-data-privacy-violations?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a21",
+          "order": 2,
+          "title": "MICROSOFT TEAMS WILL SOON BLOCK SCREEN CAPTURE DURING MEETINGS",
+          "summary": "Microsoft Teams is introducing a screen capture blocking feature for meetings, ensuring sensitive information is protected - users on unsupported platforms will be switched to audio-only mode.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-will-soon-block-screen-capture-during-meetings/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-12:a22",
+          "order": 3,
+          "title": "FBI WARNS THAT END OF LIFE DEVICES ARE BEING ACTIVELY TARGETED BY THREAT ACTORS",
+          "summary": "Cybercriminals target old routers that no longer receive updates, exploiting vulnerabilities to install malware and create botnets.",
+          "url": "https://www.csoonline.com/article/3982368/fbi-warns-that-end-of-life-devices-are-being-actively-targeted-by-threat-actors.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

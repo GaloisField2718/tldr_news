@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-03-31",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-03-31",
+  "source_path": "TLDR InfoSec/article_31-03-2025.md",
+  "source_content_hash": "sha256:70a72a353199f498c0719afd9aff3918cc7052dad98bae1659abbeec30abe341",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-03-31",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Your Google Workspace [5] or Microsoft 365 platform is where your company works, communicates, and collaborates — it's your business's critical infrastructure. Protecting it with a patchwork of native security and point solutions leaves gaps – the biggest being visibility _after_ an attacker has made it inside.",
+          "url": "https://material.security/lp-cloud-office-security?utm_source=third-party&utm_medium=email&utm_campaign=20250331-tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "material.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a04",
+          "order": 2,
+          "title": "See Material in action now!",
+          "summary": "",
+          "url": "https://material.security/lp-cloud-office-security?utm_source=third-party&utm_medium=email&utm_campaign=20250331-tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "material.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a06",
+          "order": 1,
+          "title": "X HIT BY DATA LEAK OF 2.8 BILLION USERS; ALLEGEDLY AN INSIDER JOB",
+          "summary": "A data leak on X, possibly due to a disgruntled employee, exposed information from 2.87 billion users. The leaked data includes a wealth of profile details but does not contain email addresses. Despite the massive breach, X has not acknowledged the incident publicly.",
+          "url": "https://links.tldrnewsletter.com/komtAt",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a07",
+          "order": 2,
+          "title": "SECURITY FIRM HACKS RANSOMWARE GANG, CRIPPLES OPERATIONS",
+          "summary": "After discovering a vulnerability on BlackLock's data leak site, Resecurity researchers have been covertly acquiring information since late 2024. The researchers exploited a Local File Inclusion vulnerability to retrieve server-side configuration details and credentials along with plain text server logs, SSH credentials, and command-line histories. Resecurity researchers utilized their position to warn law enforcement and potential victims before leaks occurred.",
+          "url": "https://links.tldrnewsletter.com/yIjf2Z",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a08",
+          "order": 3,
+          "title": "NEW UBUNTU LINUX SECURITY BYPASSES REQUIRE MANUAL MITIGATIONS",
+          "summary": "Researchers at Qualys have discovered three new vulnerabilities in Ubuntu 23.10 and 24.04 that could allow a local attacker to create user namespaces with full administrative privileges. The bypass mechanisms utilize aa-exec, busybox, or LD_PRELOAD. Canonical has shared that they will be treating these vulnerabilities as limitations of a defense-in-depth mechanism and shared recommended hardening steps to address them.",
+          "url": "https://links.tldrnewsletter.com/8tylpd",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a09",
+          "order": 1,
+          "title": "TCCING IS BELIEVING",
+          "summary": "Apple has added a new feature called Endpoint Security events for TCC modifications in MacOS 15.4. Exposed with ES_EVENT_TYPE_NOTIFY_TCC_MODIFY flag, this feature allows security tools to detect and possibly override user decisions on granting access to protected resources. The events will provide information on when a TCC permission is granted or revoked, helping users monitor and control access to their system.",
+          "url": "https://objective-see.org/blog/blog_0x7F.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "objective-see.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a10",
+          "order": 2,
+          "title": "COMPROMISING THREAT ACTOR COMMUNICATIONS",
+          "summary": "Many threat actors utilize Telegram bots as a method of establishing C2 communication. In this technique, a threat actor creates a new Telegram bot, embeds a token for the bot in their malware and deploys it, then malware then periodically polls Telegram's servers to check for new commands sent to the bot and executes any commands that are sent while relaying the results back to the Telegram server. This post deep dives into a case study in which a malware that was discovered on VirusTotal was hijacked by the author, who discovered data from the malware developer's system which they used for testing.",
+          "url": "https://polygonben.github.io/malware%20analysis/Compromising-Threat-Actor-Communications/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "polygonben.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a11",
+          "order": 1,
+          "title": "LANDRUN",
+          "summary": "Use Linux Landlock to run any Linux process in a secure, unprivileged sandbox. This tool is like firejail, but lightweight, user-friendly, and baked into the kernel.",
+          "url": "https://github.com/Zouuup/landrun?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a12",
+          "order": 2,
+          "title": "BRUTESPRAY",
+          "summary": "Brutespray serves as a utility for executing password spraying attacks by utilizing outputs from scanners like nmap or Nexpose.",
+          "url": "https://github.com/x90skysn3k/brutespray?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a13",
+          "order": 3,
+          "title": "GOLAPS",
+          "summary": "goLAPS is a tool to retrieve LAPS passwords from an Active Directory domain.",
+          "url": "https://github.com/sensepost/goLAPS?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a14",
+          "order": 1,
+          "title": "BROWSER-NATIVE RANSOMWARE MAY BE THE NEXT BILLION-DOLLAR THREAT",
+          "summary": "Browser-native ransomware could target data stored in browsers, bypassing traditional security measures. This type of ransomware is hard to detect and can lead to severe consequences, such as compromising email services and stealing sensitive company files.",
+          "url": "https://links.tldrnewsletter.com/lvclgL",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a15",
+          "order": 2,
+          "title": "PROTECTING ANDROID, WINDOWS, AND LINUX DEVICES AGAINST BEING TRACKED VIA THE FIND MY NETWORK",
+          "summary": "Malicious actors can track Android, Windows, or Linux devices through an Apple Find My network vulnerability using malware that mimics AirTag signals. They can monitor movements remotely, affecting smartphones, computers, smart TVs, etc. Apple has issued patches, and users should disable Bluetooth when not in use and keep devices updated.",
+          "url": "https://www.kaspersky.com/blog/protecting-from-tracking-via-findmy-airtag/53245/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "kaspersky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a16",
+          "order": 3,
+          "title": "ZHOU SHUAI: A HACKER'S ROAD TO APT27",
+          "summary": "Zhou Shuai is a Chinese hacker that first started hacking in his senior year of high school in 1996. Shuai's early motivations as a founding member of Green Army were idealistic as he sought to be a hacktivist vigilante. Shuai eventually ended up becoming more commercial and less idealistic and is now designated as APT27 and sanctioned by the U.S. Department of the Treasury.",
+          "url": "https://nattothoughts.substack.com/p/zhou-shuai-a-hackers-road-to-apt27?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "nattothoughts.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-31:a17",
+          "order": 1,
+          "title": "RUST ADOPTING FERROCENE LANGUAGE SPECIFICATION",
+          "summary": "The Rust project has announced that it will adopt the Ferrocene Language Specification (FLS) developed by Ferrous Systems and maintain it as part of the core project.",
+          "url": "https://lwn.net/Articles/1015636/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "lwn.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-31:a18",
+          "order": 2,
+          "title": "NORTH KOREA RAMPS UP CYBER OFFENSIVE",
+          "summary": "North Korea has opened a new research center to focus on AI-powered hacking.",
+          "url": "https://www.dailynk.com/english/n-korea-ramps-up-cyber-offensive-new-research-center-to-focus-on-ai-powered-hacking/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "dailynk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

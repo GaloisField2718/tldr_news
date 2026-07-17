@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-29",
+  "source_path": "TLDR InfoSec/article_29-01-2026.md",
+  "source_content_hash": "sha256:7d86740343636de65682b40096fdb06669db5af79db0996575959ed099a5e151",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-29",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a04",
+          "order": 1,
+          "title": "ATTACK PATHS DON'T PAUSE",
+          "summary": "Misconfigurations and excessive privileges quietly chain together into routes attackers can use to reach your critical assets — and they don't wait. Attack Path Management (APM) shows identity risk the way adversaries see it, mapping relationships across identities, systems, and permissions so you can prioritize what truly matters.",
+          "url": "https://specterops.io/apm-maturity-model-assessment-tool/?utm_campaign=PAID_Adverti%5B%E2%80%A6%5D%3DAdvertisement&utm_source=TLDR&Latest_Campaign=701Uw00000ePhXU",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a06",
+          "order": 1,
+          "title": "SIX JAVASCRIPT ZERO-DAY BUGS LEAD TO FEARS OF SUPPLY CHAIN ATTACK",
+          "summary": "Researchers from Koi discovered six zero-day vulnerabilities dubbed \"PackageGate\" across four major JavaScript package managers (npm, pnpm, vlt, and Bun) that bypass protections against script execution and lockfile integrity designed to prevent malicious code from running automatically. While pnpm, vlt, and Bun patched the flaws, npm (now owned by Microsoft) declined to fix the vulnerabilities, stating that the behavior \"works as expected,\" leaving gaps in defenses adopted after the Shai-Hulud supply chain attack that affected over 25,000 repositories. The bypasses vary by tool—npm's weakness lies in Git dependencies with malicious .npmrc files, pnpm and vlt have lockfile gaps enabling tarball swapping, vlt has a tar extraction path traversal flaw, and Bun's trust allowlist can be spoofed—raising concerns about potential install-time code execution at scale even in hardened environments.",
+          "url": "https://links.tldrnewsletter.com/WFLzri",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a07",
+          "order": 2,
+          "title": "CRITICAL GRIST-CORE VULNERABILITY ALLOWS RCE ATTACKS VIA SPREADSHEET FORMULAS",
+          "summary": "CVE-2026-24002 (CVSS 9.1) is a critical Pyodide sandbox escape vulnerability dubbed \"Cellbreak\" in Grist-Core that allows attackers to execute arbitrary OS commands or host-runtime JavaScript through malicious spreadsheet formulas. The flaw stems from Grist's blocklist-style sandbox approach that permits traversal through Python's class hierarchy and leaves ctypes available, enabling attackers to access database credentials, API keys, and sensitive files while creating lateral movement opportunities. The vulnerability was patched in version 1.7.9, released January 9, with users advised to update immediately or temporarily mitigate by setting GRIST_SANDBOX_FLAVOR to \"gvisor,\" while avoiding the GRIST_PYODIDE_SKIP_DENO flag that reintroduces the risk.",
+          "url": "https://thehackernews.com/2026/01/critical-grist-core-vulnerability.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a08",
+          "order": 3,
+          "title": "NEW SANDBOX ESCAPE FLAW EXPOSES N8N INSTANCES TO RCE ATTACKS",
+          "summary": "Researchers from JFrog discovered two new vulnerabilities in the n8n workflow automation platform that could allow for RCE, one of which received a CVSS score of 9.9. The two vulnerabilities are AST sandbox escapes in both Python and JavaScript sandboxes that could allow for arbitrary code execution on the underlying nodes. The vulnerability has been fixed in the n8n cloud platform, but users running self-hosted versions should update to fix it.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-sandbox-escape-flaw-exposes-n8n-instances-to-rce-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a09",
+          "order": 1,
+          "title": "THE EVOLUTION OF FIDO EXPERIENCES ON ANDROID",
+          "summary": "Google detailed Android's evolution from password-based authentication to FIDO2 passkeys, starting with Universal Second Factor (U2F) in 2014 as a phishing-resistant second factor and advancing to passwordless passkeys built on WebAuthn and CTAP2 standards that use device biometrics, PINs, or patterns for authentication. Android announced FIDO2 specifications over USB with PIN support in November 2023, featuring streamlined user experiences with Material3 Design bottomsheets, Credential Manager APIs for easier developer integration, and secure PIN protocol algorithms that avoid storing actual PINs on devices or security keys. Google plans continued FIDO enhancements, including NFC support, native credential management for physical security keys, and post-quantum cryptographic algorithms to ensure passkey security remains robust against emerging threats like quantum computers.",
+          "url": "https://bughunters.google.com/blog/fido?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "bughunters.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a10",
+          "order": 2,
+          "title": "ON THE COMING INDUSTRIALIZATION OF EXPLOIT GENERATION WITH LLMS",
+          "summary": "The author of this post discovered a novel zero-day in QuickJS using Opus 4.5 and GPT-5.2. They set up a testbed in which the agents were tasked with achieving different objectives across systems with varying protections. The author succeeded in generating over 40 distinct exploits, including complex exploit chains. Experiments such as this demonstrate that tasks like exploit generation are increasingly solvable by LLMs with enough tokens.",
+          "url": "https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "sean.heelan.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a11",
+          "order": 3,
+          "title": "GENERAL GRABOIDS: WORMS AND REMOTE CODE EXECUTION IN COMMAND & CONQUER",
+          "summary": "Security researchers analyzed Command & Conquer: Generals' newly released source code and uncovered three major multiplayer flaws: a filename stack overflow, arbitrary file writes, and an out-of-bounds write during packet fragmentation. By chaining these bugs, they achieved reliable remote code execution, then built a self-spreading worm that drops a malicious DLL, hooks legacy Windows socket APIs, listens for “magic” packets or chat messages, executes OS commands, and manipulates local game actions such as camera and UI effects.",
+          "url": "https://www.atredis.com/blog/2026/1/26/generals?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "atredis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a12",
+          "order": 1,
+          "title": "INTRODUCING IDE-SHEPHERD: YOUR SHIELD AGAINST THREAT ACTORS LURKING IN YOUR IDE",
+          "summary": "IDE-SHEPHERD is a free open-source security extension for VS Code and Cursor that addresses trust-based security model vulnerabilities by integrating into the Node.js runtime of the extension host process. The tool uses a require-in-the-middle layer to patch critical modules like child_process, http, and https, enabling real-time interception and blocking of malicious operations, including process execution, network communications, and workspace task execution against a growing ruleset. IDE-SHEPHERD provides granular per-extension behavior analysis rather than publisher-based trust, includes heuristic detection for suspicious extension metadata (wildcard activations, obfuscation, and missing repository links), and offers optional Datadog Agent integration for centralized monitoring while keeping all data local by default.",
+          "url": "https://securitylabs.datadoghq.com/articles/ide-shepherd-release-article/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a13",
+          "order": 2,
+          "title": "A FIRST LOOK AT APERTURE BY TAILSCALE (PRIVATE ALPHA)",
+          "summary": "Aperture is an alpha-stage AI gateway that offers insights into coding agent usage within organizations. It eliminates the need to share API keys by using Tailscale's built-in identity system for authenticating users and machines. The tool supports CLI and VS Code-based AI coding agents such as Claude Code, Codex, and Gemini CLI, providing centralized monitoring of usage, cost tracking across different models and providers, and SIEM integration via S3 exports, all while linking API usage to specific users and devices. Aperture is free for up to three users, similar to Tailscale's Personal plan. It features an extensible platform, starting with a partnership with Oso to enhance security controls, alerts, and audits, with future plans to extend beyond coding agents to other AI workloads.",
+          "url": "https://tailscale.com/blog/aperture-private-alpha?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a14",
+          "order": 3,
+          "title": "DUMPBROWSERSECRETS",
+          "summary": "DumpBrowserSecrets is an improved version of the DumpChromeSecrets program that can extract browser-stored data such as refresh tokens, cookies, saved credentials, credit cards, autofill entries, browsing history, and bookmarks from modern Chromium-based and Gecko-based browsers.",
+          "url": "https://github.com/Maldev-Academy/DumpBrowserSecrets?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a15",
+          "order": 1,
+          "title": "VIBE-CODED 'SICARII' RANSOMWARE CAN'T BE DECRYPTED",
+          "summary": "The Sicarii ransomware, which emerged as a RaaS offering in December, contains a critical design flaw that makes decryption impossible even if victims pay, as the malware regenerates new RSA key pairs locally during each execution and discards the private key needed for recovery. The ransomware's suspicious \"Israeli/Jewish\" branding with Hebrew language and historical symbols appears to be a false flag, given its primarily Russian-language operations and machine-translated Hebrew content with errors. It was likely that inexperienced developers used AI-assisted tooling to create the poorly coded ransomware. Organizations affected are advised to abandon ransom negotiations and focus on alternate recovery pathways, including backups and incident response services.",
+          "url": "https://links.tldrnewsletter.com/nFLude",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a16",
+          "order": 2,
+          "title": "TRUMP'S ACTING CYBERSECURITY CHIEF UPLOADED SENSITIVE GOVERNMENT DOCS TO CHATGPT",
+          "summary": "Acting CISA director Madhu Gottumukkala, a Trump appointee, uploaded internal “for official use only” contracting documents to ChatGPT, triggering federal security alerts and a DHS review of potential damage. Officials had previously granted him a special exemption to use ChatGPT, even as other staff were barred. His tenure has already been controversial after an unsanctioned polygraph and suspensions of career staff.",
+          "url": "https://techcrunch.com/2026/01/28/trumps-acting-cybersecurity-chief-uploaded-sensitive-government-docs-to-chatgpt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a17",
+          "order": 3,
+          "title": "THERE'S A RASH OF SCAM SPAM COMING FROM A REAL MICROSOFT ADDRESS",
+          "summary": "A legitimate Microsoft Power BI email address is being abused to send fake $399 billing alerts that push victims to call a number and install remote-access tools, handing attackers control of their computers. Scammers exploit Power BI's subscription feature so messages come from a trusted Microsoft domain with no malicious links, bypassing filters until Microsoft temporarily disabled the abused feature.",
+          "url": "https://arstechnica.com/information-technology/2026/01/theres-a-rash-of-scam-spam-coming-from-a-real-microsoft-address/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-29:a18",
+          "order": 1,
+          "title": "GOOGLE WARNS OF ACTIVE EXPLOITATION OF WINRAR VULNERABILITY CVE-2025-8088",
+          "summary": "Russian, Chinese, and financially motivated actors are abusing CVE-2025-8088 in outdated WinRAR to gain persistence via Windows Startup, delivering malware.",
+          "url": "https://thehackernews.com/2026/01/google-warns-of-active-exploitation-of.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a19",
+          "order": 2,
+          "title": "PARANOID WHATSAPP USERS REJOICE: ENCRYPTED APP GETS ONE-CLICK PRIVACY TOGGLE",
+          "summary": "WhatsApp is rolling out Strict Account Settings, a one-tap lockdown that hides activity and profile details, blocks high-volume unknown messages, enforces two-step verification, and enables security alerts.",
+          "url": "https://www.theregister.com/2026/01/27/whatsapp_strict_account_settings_meta_rust/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-29:a20",
+          "order": 3,
+          "title": "UK PLANS SWEEPING OVERHAUL OF POLICING AMID SURGE IN ONLINE CRIMES",
+          "summary": "The UK government unveiled plans to create a new National Police Service to centralize the fight against cybercrime and fraud.",
+          "url": "https://therecord.media/uk-national-policing-overhaul-cybercrime?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

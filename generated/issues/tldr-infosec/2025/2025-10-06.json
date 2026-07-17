@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-10-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-06",
+  "source_path": "TLDR InfoSec/article_06-10-2025.md",
+  "source_content_hash": "sha256:41a1ffb1def6c6fb5b82bb250dd842695a6dcf21abb8d111babc7d2f8977cf7d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Your threat intelligence is only as good as the data that feeds into it - and no amount of AI will change that. If you're relying on the same static data feeds as everyone else, you're likely to fall into the same traps.",
+          "url": "https://go.flashpoint.io/get-the-primary-source-advantage?utm_campaign=Resource_RP_ThreatIntel_SourceAdvantage&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000UeNEMIA3",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a04",
+          "order": 2,
+          "title": "Learn more about PSC in this guide by Flashpoint",
+          "summary": "",
+          "url": "https://go.flashpoint.io/get-the-primary-source-advantage?utm_campaign=Resource_RP_ThreatIntel_SourceAdvantage&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000UeNEMIA3",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a05",
+          "order": 1,
+          "title": "DISCORD DISCLOSES DATA BREACH AFTER HACKERS STEAL SUPPORT TICKETS",
+          "summary": "Discord suffered a data breach on September 20. The Scattered Lapsus$ Hunters threat group compromised a third-party Zendesk customer service system, stealing personal data, including names, government IDs, partial payment information, and support communications from users who contacted Discord's support teams. The attackers demanded a ransom payment and threatened to leak the stolen data, which security experts warn could be valuable for solving cryptocurrency-related crimes, as many scammers use Discord without proper anonymization. Organizations should review their third-party vendor access controls, implement additional monitoring for customer service platforms, and ensure incident response procedures include immediate isolation of compromised third-party systems.",
+          "url": "https://www.bleepingcomputer.com/news/security/discord-discloses-data-breach-after-hackers-steal-support-tickets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a06",
+          "order": 2,
+          "title": "HACKING GROUP CLAIMS THEFT OF 1 BILLION RECORDS FROM SALESFORCE CUSTOMER DATABASES",
+          "summary": "A hacking group known by several names, including Scattered Spider and ShinyHunters, claims to have stolen approximately a billion records from companies using Salesforce cloud databases. The group is extorting victims with threats to leak stolen data unless ransoms are paid. Multiple major companies are affected. Salesforce denies any breach of its platform or vulnerabilities in its systems.",
+          "url": "https://techcrunch.com/2025/10/03/hacking-group-claims-theft-of-1-billion-records-from-salesforce-customer-databases/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a07",
+          "order": 3,
+          "title": "RESEARCHERS WARN OF SELF-SPREADING WHATSAPP MALWARE NAMED SORVEPOTEL",
+          "summary": "SORVEPOTEL is a self-propagating malware campaign targeting Brazilian users that spreads through WhatsApp by exploiting social trust and sending malicious ZIP file attachments disguised as receipts or health app files. The attack chain begins with phishing messages from compromised contacts, which leads victims to open Windows shortcut files that execute PowerShell scripts to download payloads from external servers and establish persistence via the Windows Startup folder. Once installed, the malware automatically detects active WhatsApp Web sessions and mass-distributes the malicious ZIP files to all contacts and groups, prioritizing rapid propagation over data theft and frequently resulting in account bans due to spam violations.",
+          "url": "https://thehackernews.com/2025/10/researchers-warn-of-self-spreading.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a08",
+          "order": 1,
+          "title": "POINTER LEAKS THROUGH POINTER-KEYED DATA STRUCTURES",
+          "summary": "Google Project Zero demonstrated a novel technique to remotely leak memory addresses without memory safety violations by exploiting pointer-keyed data structures in Apple's NSKeyedArchiver serialization. The attack works by crafting specific NSDictionary objects with carefully chosen NSNumber keys to control hash bucket placement, then using the serialized ordering of an NSNull singleton (whose hash is its memory address) to determine its location in the shared cache. While theoretical and requiring a deserialize-reserialize attack surface, this technique demonstrates how pointer-based hashing in keyed data structures can leak addresses even without timing attacks. Organizations should audit serialization endpoints and consider using keyed hash functions instead of raw pointer addresses for object hashing.",
+          "url": "https://googleprojectzero.blogspot.com/2025/09/pointer-leaks-through-pointer-keyed.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a09",
+          "order": 2,
+          "title": "SIGNAL PROTOCOL AND POST-QUANTUM RATCHETS",
+          "summary": "Signal's Sparse Post Quantum Ratchet (SPQR) is part of a new \"Triple Ratchet\" protocol that combines its existing Double Ratchet with quantum-resistant ML-KEM cryptography to protect against future quantum computing threats while maintaining forward secrecy and post-compromise security. The implementation uses erasure coding and state machines to efficiently transmit large ML-KEM keys (over 1,000 bytes) in small chunks, includes a graceful downgrade mechanism for backward compatibility during rollout, and employs formal verification using ProVerif and F* to ensure protocol correctness. Security professionals should note that this represents a practical approach to post-quantum migration, which preserves existing security guarantees while introducing quantum resistance. The protocol automatically upgrades conversations without requiring user intervention.",
+          "url": "https://signal.org/blog/spqr/?utm_source=tldrinfosec",
+          "reading_time_minutes": 23,
+          "source_domain": "signal.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a10",
+          "order": 3,
+          "title": "VED 2026: AFTER CFI - DATA ONLY",
+          "summary": "Modern kernel privilege escalation attacks have shifted from traditional control flow methods like ROP to more stealthy, stable data-only attacks that bypass Control Flow Integrity (CFI), prompting the development of advanced defense systems like VED (Vault Exploit Defense). Novel techniques, such as DirtyPipe, cred-jar heap spray, and pipe primitives, exploit weaknesses in kernel memory handling to corrupt authentication data or page buffers, directly overwriting critical structures, including credential jars and pipe buffers, while evading detection by typical CFI solutions. VED counters these threats through multiple integrity measures, including shadow data tracking, hash monitoring, slab poisoning, and specialized protections for core patterns and pipe buffers, aiming to detect stealthy modifications and strengthen kernel security against increasingly sophisticated data-centric exploits while minimizing performance impact.",
+          "url": "https://hardenedvault.net/blog/2025-09-17-dfi-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "hardenedvault.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a11",
+          "order": 1,
+          "title": "DEFENDING ON-DEVICE AI WORKLOADS: MODERN DEVICES AND AN ADVERSARIAL MINDSET",
+          "summary": "When you're running your AI workloads locally, cyber adversaries can target both the physical devices and the models you're running or training. Learn how to mitigate risk [12] by using secure AI PCs and smart endpoint security. Read the ebook by Dell, Intel, CrowdStrike",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a12",
+          "order": 2,
+          "title": "and Absolute",
+          "summary": "",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a13",
+          "order": 3,
+          "title": "GULP",
+          "summary": "Gulp is a Python-based incident response platform that accelerates security analysis through high-speed data ingestion from multiple sources, SIGMA rule querying across thousands of detection rules simultaneously, and collaborative investigation features with zoomable timelines for event visualization. The tool leverages OpenSearch and Elastic Common Scheme (ECS) formatting for compatibility while providing scalable multiprocessing capabilities that can grow with organizational needs. Security teams can use Gulp to ingest, query rapidly, and collaboratively analyze security events in a unified platform explicitly designed for incident response workflows.",
+          "url": "https://github.com/mentat-is/gulp?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a14",
+          "order": 4,
+          "title": "SEND GMAIL END-TO-END ENCRYPTED EMAILS TO ANYONE",
+          "summary": "",
+          "url": "https://workspaceupdates.googleblog.com/2025/10/send-gmail-end-to-end-encrypted-emails-in-gmail.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "workspaceupdates.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a15",
+          "order": 5,
+          "title": "MOKN (PRODUCT LAUNCH)",
+          "summary": "MokN provides identity protection based on honeypots, with ultra-realistic decoy access points, including VPNs and email servers, that replicate the organization's environment. If an attacker attempts to log in to one of these honeypots using a stolen identity, the security team is alerted and can take appropriate action.",
+          "url": "https://www.mokn.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "mokn.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a16",
+          "order": 1,
+          "title": "GREYNOISE DETECTS 500% SURGE IN SCANS TARGETING PALO ALTO NETWORKS PORTALS",
+          "summary": "GreyNoise detected a 500% surge in scanning activity targeting Palo Alto Networks login portals on October 3, with over 1,285 IP addresses (93% suspicious and 7% malicious) conducting coordinated reconnaissance that mirrors previous Cisco ASA scanning patterns and shares TLS fingerprints linked to Netherlands infrastructure, potentially signaling upcoming vulnerability disclosures since historical patterns show Palo Alto scan spikes often precede new flaw announcements within six weeks.",
+          "url": "https://securityaffairs.com/182939/hacking/greynoise-detects-500-surge-in-scans-targeting-palo-alto-networks-portals.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a17",
+          "order": 2,
+          "title": "COMETJACKING: ONE CLICK CAN TURN PERPLEXITY'S COMET AI BROWSER INTO A DATA THIEF",
+          "summary": "CometJacking affects Perplexity's Comet AI browser by allowing attackers to use a malicious link to inject hidden prompts and steal sensitive user data, such as emails and calendars, by exploiting the browser's own access. Experts warn that this demonstrates the broader risks of AI-driven browsers and have urged stricter agent prompt security to prevent future data theft campaigns",
+          "url": "https://thehackernews.com/2025/10/cometjacking-one-click-can-turn.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a18",
+          "order": 3,
+          "title": "HOW WE'RE MAKING APPLICATION SECURITY SMARTER",
+          "summary": "Wealthsimple was faced with the common dilemma of having a small security team tasked with reviewing code written by a much larger engineering team in a highly regulated environment. It introduced Semgrep AI to create custom fixes for the specific code under review, augmenting its security team. Semgrep remembers previous decisions on findings and uses that information to auto-triage future findings",
+          "url": "https://engineering.wealthsimple.com/how-were-making-app-security-smarter?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "engineering.wealthsimple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-06:a19",
+          "order": 1,
+          "title": "NEW STUDY WARNS SEVERAL FREE IOS AND ANDROID VPN APPS LEAK DATA",
+          "summary": "Nearly 800 free VPN apps have serious security flaws, including old Heartbleed bugs, excessive permissions for surveillance, and missing privacy info, posing risks for BYOD policies that should focus on app allowlisting and data protection over just VPN security.",
+          "url": "https://hackread.com/studyfree-ios-android-vpn-apps-leak-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a20",
+          "order": 2,
+          "title": "PARKMOBILE PAYS... $1 EACH FOR 2021 DATA BREACH THAT HIT 22 MILLION",
+          "summary": "ParkMobile settled a class action lawsuit over its 2021 data breach, which affected 22 million users, by offering victims a meager $1 in-app credit (dispensed as four 25-cent discounts) that must be manually claimed with a promo code and expires in October 2026.",
+          "url": "https://www.bleepingcomputer.com/news/security/parkmobile-pays-1-each-for-2021-data-breach-that-hit-22-million/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-06:a21",
+          "order": 3,
+          "title": "SHINYHUNTERS LAUNCHES DATA LEAK SITE: TRINITY OF CHAOS ANNOUNCES NEW RANSOMWARE VICTIMS",
+          "summary": "The Trinity of Chaos ransomware group, associated with Lapsus$, Scattered Spider, and ShinyHunters, launched a TOR leak site exposing 39 major firms, including Google, Cisco, and Stellantis, after exploiting Salesforce vulnerabilities via vishing and stolen OAuth tokens, threatening to release over 1.5 billion records if ransoms aren't paid.",
+          "url": "https://securityaffairs.com/182918/cyber-crime/shinyhunters-launches-data-leak-site-trinity-of-chaos-announces-new-ransomware-victims.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-09-30",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-30",
+  "source_path": "TLDR InfoSec/article_30-09-2025.md",
+  "source_content_hash": "sha256:d5564a20f5c483fe14cfc79333101d9d2770faa870285a856b4090b54411cb3c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-30",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a04",
+          "order": 1,
+          "title": "HACKERS ❤️ MISCONFIGURATIONS",
+          "summary": "Misconfigurations are the main way attackers break through your defeneses, and they know it. That's why ThreatLocker® built DAC – Defense Against Configuration [4].",
+          "url": "https://www.threatlocker.com/platform/defense-against-configuration?utm_source=tldr&utm_medium=sponsor&utm_campaign=dac_q3_2025&utm_content=dac&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a04",
+          "order": 2,
+          "title": "ThreatLocker DAC",
+          "summary": "",
+          "url": "https://www.threatlocker.com/platform/defense-against-configuration?utm_source=tldr&utm_medium=sponsor&utm_campaign=dac_q3_2025&utm_content=dac&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a05",
+          "order": 1,
+          "title": "CYBERATTACK ON CO-OP LEAVES SHELVES EMPTY, DATA STOLEN, AND $275M IN LOST REVENUE",
+          "summary": "The DragonForce cybercrime group's April attack on UK retailer Co-op resulted in $275 million in lost revenue, weeks of empty shelves, and the theft of data from 6.5 million members, including names, contact details, and dates of birth (though passwords and payment information were not compromised). Co-op initially claimed no customer data was affected, but later confirmed the breach after hackers contacted executives via Microsoft Teams and phone, claiming to possess data on 20 million membership scheme participants. In July, the UK's National Crime Agency arrested four suspects aged 17-20 in London and the West Midlands on charges including Computer Misuse Act offenses, blackmail, money laundering, and organized crime participation, with DragonForce also claiming responsibility for attacks on M&S and an attempted breach of Harrods.",
+          "url": "https://securityaffairs.com/182713/security/cyberattack-on-co-op-leaves-shelves-empty-data-stolen-and-275m-in-lost-revenue.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a06",
+          "order": 2,
+          "title": "MICROSOFT UNCOVERS NEW VARIANT OF XCSSET MACOS MALWARE IN TARGETED ATTACKS",
+          "summary": "Microsoft has discovered a new XCSSET macOS malware variant being used in targeted attacks. It builds on the 2020 threat with advanced features, including stealing Firefox credentials via a modified HackBrowserData, hijacking cryptocurrency clipboard addresses using regular expressions, and increasing persistence through LaunchDaemon entries with AppleScripts and AES-encrypted C2 configurations. The four-stage infection chain uses modular payloads for info theft (vexyeqj/bnk), file exfiltration (neq_cdyd_ilvcmwx), persistence (xmyyeqjx creates fake System Settings apps and disables updates), and browser data extraction (iewmilh_cdyd targets passwords, cookies, and credit cards in Firefox). Security teams should review Xcode projects before use, deploy Microsoft Defender on macOS with cloud protection and PUA blocking, verify clipboard content before pasting sensitive information, and monitor for malicious LaunchDaemon entries (e.g., com.google.plists) and unusual creation of the ~/.root folder.",
+          "url": "https://securityaffairs.com/182662/malware/microsoft-uncovers-new-variant-of-xcsset-macos-malware-in-targeted-attacks.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a07",
+          "order": 3,
+          "title": "HACKERS CONTACT HARRODS AFTER 430K CUSTOMER RECORDS HIT BY IT BREACH",
+          "summary": "Luxury department store Harrods was approached by attackers who stole 430,000 customer records. The compromised data contains only basic personal details like names and contact information, along with marketing information such as loyalty card data. Importantly, it does not include passwords or financial information. Harrods has announced that it will not pay the ransom.",
+          "url": "https://www.bbc.com/news/articles/cpq5w324pd3o?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a08",
+          "order": 1,
+          "title": "APT35 PLAYS THE SAME MUSIC AGAIN",
+          "summary": "Stormshield's CTI team discovered two previously unreported servers (84.200.193[.]20 and 79.132.131[.]184) linked to Iranian APT35 (Charming Kitten) by hunting for a distinctive HTML loading page pattern using ssdeep fuzzy hashing and queries in SilentPush and VirusTotal. The servers, active since July, host 49+ phishing domains impersonating video conferencing services, such as Google Meet, with typosquatting tactics (e.g., meet.go0gle[.]online), primarily targeting Israeli victims based on URL submission patterns. Defenders can track ongoing APT35 infrastructure using simple VirusTotal queries, such as \"entity:url url:online/?invitation\" or \"entity:domain domain:viliam.*\", to identify phishing domains that follow consistent naming conventions despite the campaign being publicly documented.",
+          "url": "https://www.stormshield.com/news/apt35-plays-the-same-music-again/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "stormshield.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a09",
+          "order": 2,
+          "title": "SILENT PUSH EXAMINES THE DARK SIDE OF DYNAMIC DNS PROVIDERS",
+          "summary": "Silent Push identified around 70,000 domains offering rentable subdomains (Dynamic DNS providers) exploited by threat actors due to minimal oversight, cryptocurrency payments, no KYC, and ignoring takedown requests. Major APT groups like APT28, APT29, APT33, Gamaredon, and Scattered Spider extensively use these for C2 infrastructure. While individual malicious subdomains can be blocklisted, parent domains often remain active and spawn new threats. The team created data exports (from the Public Suffix List, afraid[.]org, DuckDNS, NoIP) to help security teams implement risk-based blocking or alerting, balancing security with avoiding disruption to legitimate access.",
+          "url": "https://www.silentpush.com/blog/dynamic-dns-providers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "silentpush.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a10",
+          "order": 3,
+          "title": "BUILDING AN AWS GUARDDUTY ALERT TRIAGE AGENT",
+          "summary": "This article explores how to create a GuardDuty triage agent using PydanticAI and Discord. A user can call the agent using !triage in a Discord channel, and it will investigate a specific alert, IAM user, etc, and provide additional context as well as a verdict. The author was impressed with how well the LLM could triage alerts, but definitely felt that there was a lot of engineering effort in creating the tools and fine-tuning the agent.",
+          "url": "https://dev.to/aws-builders/building-an-aws-guardduty-alert-triage-agent-51e9?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a11",
+          "order": 1,
+          "title": "THE ATTACK SURFACE OF ON-DEVICE AI",
+          "summary": "Running AI on your PC is transforming productivity - but like all emerging tech, it comes with some security risk. Learn about the tactics attackers use to gain entry [12] to your endpoints, and how",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a12",
+          "order": 2,
+          "title": "you can stay secure. Read the eBook by Dell and Intel",
+          "summary": "",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a13",
+          "order": 3,
+          "title": "AIDR BASTION",
+          "summary": "AIDR Bastion is an open-source GenAI security system that defends against malicious prompts using five detection methods: regex, vector similarity, static analysis, ML classification, and LLM analysis. It supports standard and custom rules, integrating with SigmaHQ, SOC Prime, and mapping to MITRE ATLAS and OWASP Top 10, enabling configurable blocking, notifications, and logging. Built on FastAPI, it offers real-time protection and attack diagnostics, with tools for converting rules for enhanced detection.",
+          "url": "https://github.com/0xAIDR/AIDR-Bastion?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a14",
+          "order": 4,
+          "title": "ENUMEDR",
+          "summary": "EnumEDR is a tool that enumerates EDRs running on a system by enumerating current processes and loaded drivers.",
+          "url": "https://github.com/0xJs/EnumEDRs?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a15",
+          "order": 5,
+          "title": "HOUND",
+          "summary": "Hound is a language-agnostic AI code auditor that autonomously builds and refines adaptive knowledge graphs for deep, interactive code reasoning.",
+          "url": "https://github.com/scabench-org/hound?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a16",
+          "order": 1,
+          "title": "HARDENING GOOGLE CLOUD: INSIGHTS FROM THE LATEST CLOUD VRP BUGSWAT",
+          "summary": "Google Cloud's record-breaking bugSWAT event brought together 20 elite security researchers who submitted 130 reports, uncovering 91 vulnerabilities across the platform. The event resulted in approximately $1.6 million in bounty rewards (with 100% bonuses applied), pushing Google's total Cloud VRP payouts to ~$2.5M for 2025. High-severity findings included a network egress filter bypass that enabled SSRF attacks and SQL injection vulnerabilities in database connectors, both of which have now been patched.",
+          "url": "https://bughunters.google.com/blog/5364401980899328/hardening-google-cloud-insights-from-the-latest-cloud-vrp-bugswat?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "bughunters.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a17",
+          "order": 2,
+          "title": "DOD ISSUES REPLACEMENT FOR RISK MANAGEMENT FRAMEWORK",
+          "summary": "The Department of Defense (DoD) unveiled a new Cybersecurity Risk Management Construct to replace its previous risk management system. The new system defines a five-phased lifecycle which includes: a design phase which incorporates security from the outset, a build phase where secure designs are implemented to achieve Initial Operating Capacity, a test phase where validation and stress testing are performed before Full Operating Capacity, an onboarding phase where automated continuous monitoring is activated, and finally an operations phase where real-time dashboards and alerting mechanisms provide immediate detection and response.",
+          "url": "https://breakingdefense.com/2025/09/dod-issues-replacement-for-risk-management-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "breakingdefense.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a18",
+          "order": 3,
+          "title": "MICROSOFT FORCED TO MAKE WINDOWS 10 EXTENDED SECURITY UPDATES TRULY FREE IN EUROPE",
+          "summary": "Windows 10 will reach end-of-life on October 14. Microsoft had previously announced that users who enabled Windows Backup would be entitled to a year of free extended security updates. This move drew some controversy due to its requiring the use of OneDrive to receive security updates. Following pressure from the Euroconsumers consumer advocacy group, Microsoft has dropped the Windows Backup requirement for European users, but will still require the use of a Microsoft account.",
+          "url": "https://www.theverge.com/news/785544/microsoft-windows-10-extended-security-updates-free-europe-changes?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-30:a19",
+          "order": 1,
+          "title": "AI-POWERED APPSEC",
+          "summary": "Predicts which of your websites and applications are most likely to be vulnerable to attacks. Correlates runtime-validated DAST findings with broader ASPM data, evaluating exploitability, reachability, and",
+          "url": "https://www.invicti.com/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=quick-link-demo",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a19",
+          "order": 2,
+          "title": "business and compliance impact. GET A DEMO →",
+          "summary": "",
+          "url": "https://www.invicti.com/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=quick-link-demo",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a20",
+          "order": 3,
+          "title": "DATACENTER FIRE TAKES 647 SOUTH KOREAN GOVERNMENT SERVICES OFFLINE",
+          "summary": "The fire at South Korea's National Information Resources Service datacenter was sparked by a lithium-ion battery replacement gone wrong.",
+          "url": "https://www.theregister.com/2025/09/28/asia_tech_news_roundup/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a21",
+          "order": 4,
+          "title": "MICROSOFT EDGE TO BLOCK MALICIOUS SIDELOADED EXTENSIONS",
+          "summary": "Microsoft Edge will introduce malware detection in November to automatically identify and revoke malicious sideloaded extensions installed via Developer Mode.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-edge-to-block-malicious-sideloaded-extensions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-30:a22",
+          "order": 5,
+          "title": "UK CONVICTS \"BITCOIN QUEEN\" IN WORLD'S LARGEST CRYPTOCURRENCY SEIZURE",
+          "summary": "The UK Metropolitan Police secured a conviction against Zhimin Qian, also known as \"Bitcoin Queen,\" for a multibillion-pound Bitcoin fraud scheme that defrauded 128,000 Chinese investors between 2014 and 2017 by promising 100 to 300 percent returns.",
+          "url": "https://www.bleepingcomputer.com/news/security/uk-convicts-bitcoin-queen-in-worlds-largest-cryptocurrency-seizure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

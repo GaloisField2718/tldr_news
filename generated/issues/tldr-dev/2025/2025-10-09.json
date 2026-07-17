@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2025-10-09",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-10-09",
+  "source_path": "TLDR Dev/article_09-10-2025.md",
+  "source_content_hash": "sha256:3e391f8e6116a53bcea2ed32516c6e853e762f81e80566c4a68dc732208ba2bd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-10-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a04",
+          "order": 1,
+          "title": "AI, THEN VERIFY",
+          "summary": "You've embraced AI for a speed boost, but what about quality? The \"engineering productivity paradox\" is a real challenge: fast code generation and growing code volume, but limited by a manual review process.",
+          "url": "https://www.sonarsource.com/sem/vibe-then-verify/?utm_medium=paid&utm_source=tldr&utm_campaign=ss-vibethenverify25&utm_content=newsletter-webdev-primary-251009-x&utm_term=ww-psp-x&s_category=Paid&s_source=Paid+Other&s_origin=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "sonarsource.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a06",
+          "order": 1,
+          "title": "I'M BUILDING A BROWSER FOR REVERSE ENGINEERS",
+          "summary": "This article goes over the process of building a custom browser for web reverse-engineering to streamline the process of analyzing browser fingerprinting and anti-bot techniques. The project started with a simple browser extension for hooking JavaScript functions but evolved to use the Chrome Devtools Protocol for deeper access. Eventually, Chromium was forked to create custom events for stealthier instrumentation. The final browser includes features like deobfuscation, property overrides, and automated decryption of fingerprinting payloads.",
+          "url": "https://nullpt.rs/reverse-engineering-browser?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "nullpt.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a07",
+          "order": 2,
+          "title": "HOW WE FOUND A BUG IN GO'S ARM64 COMPILER",
+          "summary": "Cloudflare discovered a race condition bug in Go's arm64 compiler due to high traffic volume. The bug caused sporadic panics on arm64 machines related to stack unwinding, which were initially thought to be rare stack memory corruption. Through deep investigation and debugging, it was found that async preemption during stack pointer adjustments in the `(*NetlinkSocket).Receive` function led to an invalid stack pointer during garbage collection, causing the unwinder to crash.",
+          "url": "https://blog.cloudflare.com/how-we-found-a-bug-in-gos-arm64-compiler/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a08",
+          "order": 3,
+          "title": "SVELTE REALLY IS THAT FAST",
+          "summary": "A study compared the rendering performance of Angular, React, Vue, Svelte, and Blazor JavaScript frameworks. It found that Svelte consistently outperformed the other frameworks in various benchmarks, especially at creating and updating elements. Svelte's performance is due to its reactivity system, optimizing compiler, and binding-based rendering.",
+          "url": "https://chuniversiteit.nl/papers/svelte-is-fast?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "chuniversiteit.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a09",
+          "order": 1,
+          "title": "SEEING LIKE A SOFTWARE COMPANY",
+          "summary": "Large software companies prioritize legibility (measurability and predictability) over efficiency. While small companies can thrive with illegible, engineer-driven work, large companies require legibility for planning, enterprise deals, and coordination, even if it slows down individual engineers. To balance this, companies create temporary \"zones of illegibility\" for urgent problems and rely on informal backchannels.",
+          "url": "https://www.seangoedecke.com/seeing-like-a-software-company/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "seangoedecke.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a10",
+          "order": 2,
+          "title": "HOW TO *ACTUALLY* TEST YOUR README",
+          "summary": "Devs should test their software's installation instructions on a fresh virtual machine. When doing so, they should document every step taken during the installation process, including installing dependencies, and then transferring that documented history to the README file to guarantee accuracy and completeness.",
+          "url": "https://shkspr.mobi/blog/2025/10/how-to-actually-test-your-readme/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "shkspr.mobi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a11",
+          "order": 3,
+          "title": "THE PROGRAMMER IDENTITY CRISIS",
+          "summary": "The rise of AI and LLMs threatens the core identity of programmers as craftspeople. Vibe-coding and specification engineering have turned programmers into operators rather than creative problem-solvers. This shift removes a lot of the joy and fulfillment of programming.",
+          "url": "https://hojberg.xyz/the-programmer-identity-crisis/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "hojberg.xyz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a12",
+          "order": 1,
+          "title": "ELEVENLABS UI",
+          "summary": "ElevenLabs UI is an open-source collection of customizable agent and audio components. It provides interactive visualizations like agent orbs that reflect agent states (idle, listening, and talking) and real-time audio visualizations with smooth scrolling waveforms. The UI also includes components for voice chat, music playback with controls, and a conversation interface with text and voice input options.",
+          "url": "https://ui.elevenlabs.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ui.elevenlabs.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a13",
+          "order": 2,
+          "title": "FLEETCODE",
+          "summary": "FleetCode is a desktop terminal application for running multiple CLI coding agents like Claude or Codex in isolated Git worktrees, allowing for parallel and persistent sessions. It has terminal theming, setup commands, and MCP server management, all configurable through a settings panel.",
+          "url": "https://github.com/built-by-as/FleetCode?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a14",
+          "order": 3,
+          "title": "UT",
+          "summary": "ut is a fast and lightweight CLI utility toolkit for devs. It provides a variety of tools for encoding, hashing, data generation, text processing, development, web and network tasks, color manipulation, and Unicode reference.",
+          "url": "https://github.com/ksdme/ut?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a15",
+          "order": 1,
+          "title": "MY FIRST CONTRIBUTION TO LINUX",
+          "summary": "This dev's first contribution to the Linux kernel was adding support for the hotkeys on their 2005 Fujitsu Lifebook S2110 laptop. They go over the process of identifying the relevant driver, studying the code to understand how it handles key events, and modifying it to recognize the media keys. They submitted their patch through the traditional email workflow and saw that it merged into the upstream kernel.",
+          "url": "https://vkoskiv.com/first-linux-patch/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "vkoskiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a16",
+          "order": 2,
+          "title": "WHY WE NEED SIMD (THE REAL REASON)",
+          "summary": "SIMD (Single Instruction, Multiple Data) instructions give performance gains at a relatively low cost by reusing existing CPU infrastructure. This lets a single instruction perform multiple operations simultaneously. The adoption of SIMD has been hampered by the need for software updates to use new instructions. However, recent advancements are helping increase adoption.",
+          "url": "https://parallelprogrammer.substack.com/p/why-we-need-simd-the-real-reason?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "parallelprogrammer.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a17",
+          "order": 3,
+          "title": "THE EMAIL THEY SHOULDN'T HAVE READ",
+          "summary": "This dev helped Agency B and C transition to an open-source mail stack, angering their current provider, who used hidden clauses in their contract to retaliate. The provider potentially spied on their emails and threatened legal action, preventing the agencies from switching and ultimately raising their costs. Despite the ethical issues, the agencies were unable to break free, showing the challenges of escaping vendor lock-in.",
+          "url": "https://it-notes.dragas.net/2025/10/08/the-email-they-shouldnt-have-read/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "it-notes.dragas.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-09:a18",
+          "order": 1,
+          "title": "NOW OPEN FOR BUILDING: INTRODUCING GEMINI CLI EXTENSIONS",
+          "summary": "The Gemini CLI now offers extensions, letting devs personalize their command-line experience by connecting Gemini to their ideal tools and workflows through integrations.",
+          "url": "https://blog.google/technology/developers/gemini-cli-extensions/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a19",
+          "order": 2,
+          "title": "CSS HAS 42 UNITS",
+          "summary": "The increasing number of CSS units is a positive evolution driven by specific needs.",
+          "url": "https://www.irrlicht3d.org/index.php?t=1627&utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "irrlicht3d.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a20",
+          "order": 3,
+          "title": "RECALL",
+          "summary": "Recall is a Redis-powered memory extension for Claude that provides persistent context across sessions.",
+          "url": "https://github.com/joseairosa/recall?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-09:a21",
+          "order": 4,
+          "title": "YOU'RE DOING RAILS WRONG",
+          "summary": "Instead of adding and using numerous JavaScript tools and frameworks, you can just use Rails.",
+          "url": "https://www.bananacurvingmachine.com/articles/you-re-doing-rails-wrong?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "bananacurvingmachine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

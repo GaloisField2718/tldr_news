@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-09-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-09-18",
+  "source_path": "TLDR InfoSec/article_18-09-2024.md",
+  "source_content_hash": "sha256:606a89fda5023ee1c726c28acd431e0af28504b24af0132e302a3919fd74cb5c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-09-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Most compliance mandates require you to define your risk tolerance before putting controls in place. To do so, you first need to have a good understanding of cybersecurity risk, and how it impacts your compliance posture.",
+          "url": "https://links.tldrnewsletter.com/SnBnin",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a04",
+          "order": 2,
+          "title": "Download the PDF from Drata",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/SnBnin",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a05",
+          "order": 1,
+          "title": "TEMU DENIES BREACH AFTER HACKER CLAIMS THEFT OF 87 MILLION DATA RECORDS",
+          "summary": "Temu denied being hacked or having a data breach after a threat actor claimed to have stolen 87 million customer records. It says the stolen data does not match the company's own data. Users should take precautionary steps like enabling two-factor authentication and changing passwords.",
+          "url": "https://www.bleepingcomputer.com/news/security/temu-denies-breach-after-hacker-claims-theft-of-87-million-data-records/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a06",
+          "order": 2,
+          "title": "VMWARE VCENTER SERVER VULNERABILITIES LET ATTACKERS EXECUTE REMOTE CODE",
+          "summary": "Two critical vulnerabilities in VMware vCenter Server and Cloud Foundation products allow attackers to execute remote code and escalate privileges. VMware has advised customers to patch affected systems immediately by upgrading to specific versions or applying the async patch. These flaws impact versions 7.0 and 8.0 of vCenter Server and versions 4.x and 5.x of Cloud Foundation.",
+          "url": "https://cybersecuritynews.com/vmware-vcenter-server-remote-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a07",
+          "order": 3,
+          "title": "THE MAIDS INTERNATIONAL NOTIFIES CONSUMERS OF THE JANUARY 2024 DATA BREACH",
+          "summary": "The Maids International experienced a data breach that exposed sensitive consumer information like Social Security numbers and health data. It took steps to investigate and notify affected individuals. Consider seeking help to protect yourself from potential fraud or identity theft.",
+          "url": "https://www.jdsupra.com/legalnews/the-maids-international-notifies-6771655/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "jdsupra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a08",
+          "order": 1,
+          "title": "CONFUSION ATTACKS: EXPLOITING HIDDEN AMBIGUITY IN APACHE HTTP SERVER",
+          "summary": "Apache's HTTP server's modular design opens it up to vulnerabilities as the request_rec structure gets passed around to different modules, which may mutate it and interfere with how a module further downstream expects it to be, leading to confusion attacks. Most modules treat the filename parameter as a system path but some treat it as a URL. This leads to path truncation vulnerabilities in mod_rewrite and ACL bypass in mod_proxy. mod_rewrite will always load the path from both the DocumentRoot and root directory, which can lead to source code disclosure or LFI, XSS, and even RCE via local gadget abuse and jailbreak. A legacy code snippet that allows for the Content-Type to override the Handler causes handler confusion, which can lead to SSRF, information disclosure, and RCE.",
+          "url": "https://blog.orange.tw/posts/2024-08-confusion-attacks-en/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.orange.tw",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a09",
+          "order": 2,
+          "title": "ENHANCING LINKEDIN'S SECURITY POSTURE MANAGEMENT WITH AI-DRIVEN INSIGHTS",
+          "summary": "LinkedIn developed a tool called Security Posture Platform (SPP), which provides a graph database and GraphQL API to answer questions about security posture in the organization. To enhance usability by allowing for natural language querying, LinkedIn added an AI layer to SPP. This post describes the process and data engineering used to achieve 85-90% accuracy with LinkedIn's AI.",
+          "url": "https://www.linkedin.com/blog/engineering/security/enhancing-linkedins-security-posture-management-with-ai-driven-insights?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a10",
+          "order": 3,
+          "title": "EXPLORING DESERIALIZATION ATTACKS AND THEIR EFFECTS",
+          "summary": "This blog post explores deserialization attacks, focusing on how to identify and exploit vulnerabilities in applications that handle serialized data. It provides a step-by-step guide on how attackers can inject malicious code through deserialization, ultimately gaining control over the application's functionality. The author emphasizes the importance of understanding these attacks to enhance security practices during code review engagements.",
+          "url": "https://haymiz.dev/security/2024/09/07/deserialization-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "haymiz.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a11",
+          "order": 1,
+          "title": "FIND AN AFFORDABLE ONLINE DEGREE IN INFORMATION SECURITY",
+          "summary": "You don't have to put your career on hold to get a high quality education. With 100% online classes, and six 8-week terms a year, SNHU offers the flexibility you need to take the next step. Find your InfoSec degree today [11] (US based students only)",
+          "url": "https://degrees.snhu.edu/programs/bs-in-computer-science-information-security?utm_source=TLDR&utm_medium=PPL&utm_campaign=PROS_Email&utm_content=TLDR-InfoSec&snhu_segment=OL",
+          "reading_time_minutes": null,
+          "source_domain": "degrees.snhu.edu",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a12",
+          "order": 2,
+          "title": "URL VALIDATION BYPASS CHEAT SHEET (WEBAPP)",
+          "summary": "This resource provides a list of configurable payloads for bypassing URL validations.",
+          "url": "https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a13",
+          "order": 3,
+          "title": "FIBRATUS",
+          "summary": "Fibratus detects, protects, and eradicates advanced adversary tradecraft by scrutinizing and asserting a wide spectrum of system events against a behavior-driven rule engine and YARA memory scanner. Events can be shipped to a wide array of output sinks or dumped to capture files for local inspection and forensics analysis. Users can use filaments to extend Fibratus with their own arsenal of tools and so leverage the power of the Python ecosystem.",
+          "url": "https://github.com/rabbitstack/fibratus?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a14",
+          "order": 4,
+          "title": "OPAL",
+          "summary": "OPAL is an administration layer for Policy Engines, such as Open Policy Agent (OPA) and AWS' Cedar Agent. It detects changes to both policy and policy data in real time and pushes live updates to agents. OPAL brings open-policy up to the speed needed for live applications.",
+          "url": "https://github.com/permitio/opal?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a15",
+          "order": 1,
+          "title": "REDEFINING CNAPP: A COMPLETE GUIDE TO THE FUTURE OF CLOUD SECURITY",
+          "summary": "This post provides a comprehensive look at the cloud security and CNAPP landscape. It begins with a history of cloud security before diving into the agent vs agentless debate. Agent based scammers can provide more granular insights and provide runtime protection but can be difficult to deploy and may have performance issues. Agentless scanners are quick to deploy but generate a lot of false positives and are not suited to containerized workloads. CNAPP stifles innovation while being too bloated to be useful due to trying to cater to cloud security engineers and developers, who are both looking for fundamentally different things. The future of CNAPP is a convergence between vulnerability management, posture scanning, runtime detection, and response.",
+          "url": "https://softwareanalyst.substack.com/p/redefining-cnapp-a-complete-guide?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "softwareanalyst.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a16",
+          "order": 2,
+          "title": "MICROSOFT IS BUILDING NEW WINDOWS SECURITY FEATURES TO PREVENT ANOTHER CROWDSTRIKE INCIDENT",
+          "summary": "In the wake of the disastrous CrowdStrike outage, Microsoft met with industry leaders to discuss security features that could be added to Windows to enable endpoint security vendors to move their products out of the kernel. Many vendors championed this as a productive endeavor and appreciated the collaboration from Microsoft. Others, like Cloudflare CEO Matthew Prince, cautioned the move as potentially leading to an unfair market where only Microsoft has access to the kernel. Microsoft has not mentioned locking vendors out of the kernel since 2006.",
+          "url": "https://www.theverge.com/2024/9/12/24242947/microsoft-windows-security-kernel-access-features-crowdstrike?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a17",
+          "order": 3,
+          "title": "HACKING THE PLANET - A DEFCON ICS CTF 2024 RETROSPECTIVE",
+          "summary": "Maxwell Dulin's team won the Industrial Control Systems (ICS) Capture the Flag (CTF) competition this year with a 37% lead over the next team. In this blog post, Dulin shares the team's winning strategies, which include focusing on in-person challenges during the day and solving offline challenges at night. Dulin's favorite challenge was turning on the lights for a smart city, which involved spoofing a device to control the lights.",
+          "url": "https://maxwelldulin.com/BlogPost/DEFCON-ICS-CTF-2024-Retrospective?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "maxwelldulin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-18:a18",
+          "order": 1,
+          "title": "APPLE IS WELL ON ITS WAY TO MAKING IPHONES THEFT-PROOF",
+          "summary": "Apple has announced that it will extend Activation Lock to iPhone parts in iOS 18 to deter theft.",
+          "url": "https://9to5mac.com/2024/09/13/making-iphones-theft-proof/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "9to5mac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a19",
+          "order": 2,
+          "title": "TICKETMASTER BOSS WHO REPEATEDLY HACKED RIVAL FIRM SENTENCED",
+          "summary": "A former Ticketmaster boss has been sentenced after pleading guilty to illegally accessing computer servers of a rival company and stealing sensitive business information.",
+          "url": "https://www.bitdefender.com/blog/hotforsecurity/ticketmaster-boss-who-repeatedly-hacked-rival-firm-sentenced/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-18:a20",
+          "order": 3,
+          "title": "CHINESE MAN CHARGED FOR SPEAR-PHISHING AGAINST NASA AND US GOVERNMENT",
+          "summary": "A Chinese man, Song Wu, used fake emails to steal sensitive information from NASA and other U.S. government agencies.",
+          "url": "https://securityaffairs.com/168514/cyber-crime/chinese-man-spear-phishing-nasa-us-government.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

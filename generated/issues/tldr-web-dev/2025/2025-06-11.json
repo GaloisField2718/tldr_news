@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-06-11",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-06-11",
+  "source_path": "TLDR Web Dev/article_11-06-2025.md",
+  "source_content_hash": "sha256:a2f6cf33e44110535bbec6a5c83a2cd7aeea12d303c5dc25b11f5232fa4f44d3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-06-11",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-11:a04",
+          "order": 1,
+          "title": "HOW GITHUB ENGINEERS TACKLE PLATFORM PROBLEMS",
+          "summary": "GitHub engineers tackle platform problems by focusing on understanding their domain, bridging concepts with platform-specific skills, and focusing on knowledge sharing. Due to the wide impact radius of platform changes, they make sure to test deeply with Infrastructure as Code, end-to-end testing, and self-healing capabilities.",
+          "url": "https://github.blog/engineering/infrastructure/how-github-engineers-tackle-platform-problems/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a05",
+          "order": 2,
+          "title": "THE CONCURRENCY TRAP: HOW AN ATOMIC COUNTER STALLED A PIPELINE",
+          "summary": "Conviva's streaming analytics platform experienced a P99 latency spike for a single customer due to a bottleneck in a shared type registry used by its DAG engine. The issue was due to a high contention on an atomic counter within a concurrent hash map used for read operations. The solution was to switch from flashmap to ArcSwap, which uses a read-copy-update approach, eliminating the counter contention issues by atomically swapping the entire data structure.",
+          "url": "https://www.conviva.com/platform/the-concurrency-trap-how-an-atomic-counter-stalled-a-pipeline/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "conviva.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-11:a06",
+          "order": 1,
+          "title": "IT'S THE END OF OBSERVABILITY AS WE KNOW IT (AND I FEEL FINE)",
+          "summary": "Traditional observability tools are becoming obsolete due to the rise of LLMs, which can analyze telemetry data as effectively as human experts. This is shown by an AI agent successfully diagnosing latency spikes in a demo environment. This means that in the future, AI will assist in various development and operational tasks, from suggesting code improvements to autonomously addressing system behavior issues.",
+          "url": "https://www.honeycomb.io/blog/its-the-end-of-observability-as-we-know-it-and-i-feel-fine?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "honeycomb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a07",
+          "order": 2,
+          "title": "BEING AN ENGINEERING MANAGER TODAY HAS NEVER BEEN HARDER - BUT WHY?",
+          "summary": "Engineering Management has become increasingly difficult due to layoffs, shrinking teams, and budget freezes. Companies now expect EMs to handle people management, technical vision, and some coding, often for multiple teams. At the same time, EMs don't have any control over resources like budget and headcount.",
+          "url": "https://www.blog4ems.com/p/being-an-engineering-manager-today-has-never-been-harder?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog4ems.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a08",
+          "order": 3,
+          "title": "ZIG-STYLE GENERICS ARE NOT WELL-SUITED FOR MOST LANGUAGES",
+          "summary": "Zig-style generics, which are templates without upfront constraints, are not universally suitable for all languages. This approach can lead to complex compiler errors, increased burden on library authors, and limitations in type inference.",
+          "url": "https://typesanitizer.com/blog/zig-generics.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "typesanitizer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-11:a09",
+          "order": 1,
+          "title": "BUILDING A GENAI APP? LET AUTH0 HELP YOU SECURE IT.",
+          "summary": "Auth0's Auth for GenAI is now available in Developer Preview. Use your agentic app to securely authenticate users, call APIs on their behalf, fetch documents based on access rights, and request approval",
+          "url": "https://auth0.com/signup?onboard_app=genai&ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM%3Futm_source%3Dtldr&utm_campaign=global_mult_mult_all_ciam-dev_aw-plg_auth0_native_tldr_newsletter_aud_TLDR-GenAI-Jun11_utm2&utm_medium=cpc&utm_id=aNKKZ000000028g4AA",
+          "reading_time_minutes": null,
+          "source_domain": "auth0.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a09",
+          "order": 2,
+          "title": "when needed. TRY IT FOR FREE TODAY.",
+          "summary": "",
+          "url": "https://auth0.com/signup?onboard_app=genai&ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM%3Futm_source%3Dtldr&utm_campaign=global_mult_mult_all_ciam-dev_aw-plg_auth0_native_tldr_newsletter_aud_TLDR-GenAI-Jun11_utm2&utm_medium=cpc&utm_id=aNKKZ000000028g4AA",
+          "reading_time_minutes": null,
+          "source_domain": "auth0.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a10",
+          "order": 3,
+          "title": "TZ-LOOKUP",
+          "summary": "tz-lookup is a fast but approximate JavaScript library for determining time zones from latitude and longitude.",
+          "url": "https://github.com/photostructure/tz-lookup?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a11",
+          "order": 4,
+          "title": "RUBYLLM",
+          "summary": "RubyLLM is a Ruby gem that provides a unified interface for interacting with AI models like OpenAI, Anthropic, and Gemini. It makes tasks like chatting, image generation, embedding creation, and using AI tools within Ruby applications easier. It also has features like streaming responses, file analysis, and easy Rails integration for persistent conversations.",
+          "url": "https://github.com/crmne/ruby_llm?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a12",
+          "order": 5,
+          "title": "MASTRA COURSE",
+          "summary": "This is a course where you can learn to build and deploy AI agents with tools, memory, and MCP. The course itself is delivered within an agentic code editor and guided by a code agent who helps you build real agents from scratch.",
+          "url": "https://mastra.ai/course?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "mastra.ai",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-11:a13",
+          "order": 1,
+          "title": "“LOCALHOST TRACKING” EXPLAINED. IT COULD COST META 32 BILLION",
+          "summary": "Meta developed a sneaky \"localhost tracking\" system that bypassed Android's security to identify users across different browsers and apps, even with VPNs and incognito mode enabled. This involved the Facebook/Instagram app secretly communicating with Meta's tracking scripts on websites to link browsing activity to user accounts. Meta now faces potential cumulative fines potentially reaching €32 billion under GDPR, DSA, and DMA due to this privacy violation.",
+          "url": "https://www.zeropartydata.es/p/localhost-tracking-explained-it-could?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "zeropartydata.es",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a14",
+          "order": 2,
+          "title": "CONTAINERS SHOULD BE AN OPERATING SYSTEM RESPONSIBILITY",
+          "summary": "Containerization is an overweight solution that operating systems should address. Alternatives to containerization include installing dependencies directly, self-contained deployments, and ahead-of-time compilation to mitigate fragile dependency trees.",
+          "url": "https://alexandrehtrb.github.io/posts/2025/06/containers-should-be-an-operating-system-responsibility/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "alexandrehtrb.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-11:a15",
+          "order": 1,
+          "title": "OPENAI'S O3 COST DROPS BY 80%",
+          "summary": "The cost of using the OpenAI o3 model's API has been cut down by 80%.",
+          "url": "https://threadreaderapp.com/thread/1932434606558462459.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a16",
+          "order": 2,
+          "title": "SMART PEOPLE DON'T CHASE GOALS; THEY CREATE LIMITS",
+          "summary": "Instead of chasing specific goals, smart people focus on creating constraints on purpose, as this can actually lead to a more focused, meaningful path overall.",
+          "url": "https://www.joanwestenberg.com/smart-people-dont-chase-goals-they-create-limits/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "joanwestenberg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a17",
+          "order": 3,
+          "title": "HOW WE'RE ADAPTING SEO FOR LLMS AND AI SEARCH",
+          "summary": "As search is starting to be dominated by AI, companies and content creators need to adapt their SEO strategies to focus on producing clear, deep, structured, and original content that both LLMs and traditional search engines can understand and surface.",
+          "url": "https://vercel.com/blog/how-were-adapting-seo-for-llms-and-ai-search?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-11:a18",
+          "order": 4,
+          "title": "ANDROID 16 IS HERE",
+          "summary": "Android 16 is launching with streamlined notifications, better hearing device support, stronger security, improved tablet productivity features, and a new Material 3 Expressive design.",
+          "url": "https://blog.google/products/android/android-16/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

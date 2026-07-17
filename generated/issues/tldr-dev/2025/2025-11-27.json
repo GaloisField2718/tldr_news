@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2025-11-27",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-11-27",
+  "source_path": "TLDR Dev/article_27-11-2025.md",
+  "source_content_hash": "sha256:80c31742bf205a7aef1a6a3f8b92c036d78bdefcd05f95b763deb10c937338f2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-11-27",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-27:a04",
+          "order": 1,
+          "title": "BUILDING A 64-BIT OS FROM SCRATCH WITH CLAUDE CODE",
+          "summary": "SimplicityOS, a real x86_64 OS with a working Forth interpreter, was developed with Claude Code. Claude did all of the heavy lifting in the project, including writing all of the assembly code, debugging boot issues, managing git commits, and creating all of the documentation. The OS currently has a PS/2 keyboard driver with shift support, interactive REPL, colon definitions with nesting, variables, comments and strings, and introspection. The complete development narrative - every prompt, response, and struggle - is provided in the article.",
+          "url": "https://isene.org/2025/11/SimplicityOS.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "isene.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a05",
+          "order": 2,
+          "title": "RUNNING UNSUPPORTED IOS ON DEPRECATED DEVICES",
+          "summary": "This dev successfully ran iOS 6 on an iPod touch 3, a device officially limited to iOS 5.1.1, by reverse engineering and modifying various iOS components. This involved patching the DeviceTree and iBoot, creating a kernelcache by adapting macOS tools, and making many changes to the root filesystem, including Bluetooth and Wi-Fi firmware adjustments.",
+          "url": "https://nyansatan.github.io/run-unsupported-ios/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "nyansatan.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-27:a06",
+          "order": 1,
+          "title": "RELEASING PACKAGES WITH A VALET KEY: NPM, PYPI, AND BEYOND",
+          "summary": "Publishing packages to registries requires access tokens. Whoever has these tokens can publish anything under that organization's name. This can be an issue if those tokens were stolen. One way to secure against this is to create a separate repository dedicated entirely to publishing. This limits write access while still allowing people to contribute.",
+          "url": "https://byk.im/posts/releasing-packages/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "byk.im",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a07",
+          "order": 2,
+          "title": "CLOUDFLARE OUTAGE SHOULD NOT HAVE HAPPENED, AND THEY SEEM TO BE MISSING THE POINT ON HOW TO AVOID IT IN THE FUTURE",
+          "summary": "",
+          "url": "https://ebellani.github.io/blog/2025/cloudflare-outage-should-not-have-happened-and-they-seem-to-be-missing-the-point-on-how-to-avoid-it-in-the-future/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "ebellani.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-27:a08",
+          "order": 1,
+          "title": "A VERY FAST 64–BIT DATE ALGORITHM: 30–40% FASTER",
+          "summary": "This article presents a very fast date conversion algorithm that provides accurate results over a period of ±1.89 trillion years. The algorithm uses only 4 multiplications, compared to other fast date algorithms, which have always used 7 or more expensive computations. It calculates years backwards, which removes various intermediate steps. The algorithm uses a year-modulus-bit shift technique to calculate day-of-year, removing a division. It uses the 'Julian Map' technique to speed up 100/400 year calculation, removing two more hardware multiplications.",
+          "url": "https://www.benjoffe.com/fast-date-64?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "benjoffe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a09",
+          "order": 2,
+          "title": "SAFE NPM",
+          "summary": "`safe-npm` is a security-focused npm installer that prevents supply chain attacks by only installing package versions that have been publicly available for a minimum time (default 90 days). It works by querying the npm registry, filtering out recent versions, and installing the newest safe version that meets semver and age requirements.",
+          "url": "https://github.com/kevinslin/safe-npm?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-27:a10",
+          "order": 1,
+          "title": "GEMINI CLI TIPS AND TRICKS",
+          "summary": "Gemini CLI is an open-source AI assistant that brings Google's Gemini model to the terminal. This is a guide of 30 pro tips for using Gemini CLI correctly that covers topics like persistent context, custom commands, extending functionality with MCP servers, memory management, checkpointing, file referencing, on-the-fly tool creation, system troubleshooting, automation, and IDE integration. The guide also describes how to use it with GitHub Actions and custom extensions.",
+          "url": "https://github.com/addyosmani/gemini-cli-tips?utm_source=tldrwebdev",
+          "reading_time_minutes": 92,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a11",
+          "order": 2,
+          "title": "WHY (SENIOR) ENGINEERS STRUGGLE TO BUILD AI AGENTS",
+          "summary": "A mind trained on strict interfaces will find the transition from deterministic systems to probabilistic agents uncomfortable because it requires trading certainty for semantic flexibility. The exact execution path can no longer be known or owned as the control flow has been handed to a non-deterministic model and application state is stored in natural language. Agents need to be managed through evals and self-correction because probability can't be coded away. Systems need to be engineered to be resilient enough to handle ambiguity.",
+          "url": "https://www.philschmid.de/why-engineers-struggle-building-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "philschmid.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-27:a12",
+          "order": 1,
+          "title": "UNIFYING OUR MOBILE AND DESKTOP DOMAINS",
+          "summary": "The Wikimedia Foundation unified its mobile and desktop domains, eliminating redirects, improving mobile response times by 20%, and reducing infrastructure load by streamlining CDN purges.",
+          "url": "https://techblog.wikimedia.org/2025/11/21/unifying-mobile-and-desktop-domains/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "techblog.wikimedia.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a13",
+          "order": 2,
+          "title": "AWS LAMBDA ROADMAP",
+          "summary": "This repository contains information about products AWS is working on so customers can give direct feedback.",
+          "url": "https://github.com/aws/aws-lambda-roadmap?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a14",
+          "order": 3,
+          "title": "WHAT NOW? HANDLING ERRORS IN LARGE SYSTEMS",
+          "summary": "Error handling should be a global property of the system and needs to be built into the system from the beginning.",
+          "url": "https://brooker.co.za/blog/2025/11/20/what-now?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "brooker.co.za",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a15",
+          "order": 4,
+          "title": "ONE CANVAS TO RULE THEM ALL: HOW INK GAMES' NEW SITE HANDLES COMPLEX 3D",
+          "summary": "ToyFight created a dynamic website for INK Games using layered 3D, scroll-driven animations, and a unified WebGL canvas.",
+          "url": "https://tympanus.net/codrops/2025/11/21/one-canvas-to-rule-them-all-how-ink-games-new-site-handles-complex-3d/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "tympanus.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-27:a16",
+          "order": 5,
+          "title": "ATHAS",
+          "summary": "Athas Code Editor is a lightweight code editor with features like Vim mode and Git integration.",
+          "url": "https://athas.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "athas.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

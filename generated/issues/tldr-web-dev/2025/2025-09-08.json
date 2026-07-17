@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-09-08",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-08",
+  "source_path": "TLDR Web Dev/article_08-09-2025.md",
+  "source_content_hash": "sha256:b5c7756104f9f6f02ce1a5c3506e14d10aa9426a53201a4d17573aee349c4936",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-08",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-08:a04",
+          "order": 1,
+          "title": "VIDEO GAME BLURS (AND HOW THE BEST ONE WORKS)",
+          "summary": "There are different ways to implement blurs in video games, from basic box blur to the efficient Dual Kawase Blur. This article goes over their mathematical principles and performance trade-offs. It even shows interactive visualizations and benchmarks to help understand the impact of different blur algorithms on visual quality and GPU performance.",
+          "url": "https://blog.frost.kiwi/dual-kawase/?utm_source=tldrwebdev",
+          "reading_time_minutes": 41,
+          "source_domain": "blog.frost.kiwi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a05",
+          "order": 2,
+          "title": "KEEPING SECRETS OUT OF LOGS",
+          "summary": "It can be challenging to prevent secrets from being logged. There's no single solution - instead, one can use multiple imperfect methods for defense-in-depth. This article covers these methods: better data architecture, transformations, domain primitives, log formatters, tests, scanners, and pre-processors.",
+          "url": "https://allan.reyes.sh/posts/keeping-secrets-out-of-logs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 36,
+          "source_domain": "allan.reyes.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a06",
+          "order": 3,
+          "title": "THE WHOP CHOP: HOW WE CUT A RAILS TEST SUITE AND CI TIME IN HALF",
+          "summary": "Whop's Rails test suite runtime was cut in half by using TestProf and StackProf to identify performance bottlenecks. The biggest win came from disabling Rails' verbose SQL logging and query log tags in the test environment, which eliminated I/O overhead from thousands of database queries being written to disk. Additional optimizations included disabling Sentry logging during tests and addressing FactoryBot overhead, reducing single process test runs from ~25 minutes to ~12 minutes and CI runs from ~4 minutes to ~2 minutes.",
+          "url": "https://evilmartians.com/chronicles/the-whop-chop-how-we-cut-a-rails-test-suite-and-ci-time-in-half?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "evilmartians.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-08:a07",
+          "order": 1,
+          "title": "BEING GOOD ISN'T ENOUGH",
+          "summary": "Being technically skilled is a good start to advancing your career, but eventually, it will not be enough to stand out, as everyone becomes skilled. Expanding your impact requires combining technical skills with product thinking, project execution, and people skills. The most important trait is agency: taking initiative to make things happen and continually improving in the open.",
+          "url": "https://joshs.bearblog.dev/being-good-isnt-enough/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "joshs.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a08",
+          "order": 2,
+          "title": "STOP SHIPPING PNGS IN YOUR GAMES",
+          "summary": "Using PNGs for game textures is suboptimal. There are better alternatives like KTX2 and DDS. These formats are designed for texture data, such as features like pregenerated mipmaps, cubemaps, and GPU-compatible compression (like BCn) for improved storage, VRAM usage, and performance. Tools like Zex can help export to these formats, as most image editors lack native support.",
+          "url": "https://gamesbymason.com/blog/2025/stop-shipping-pngs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "gamesbymason.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a09",
+          "order": 3,
+          "title": "SWITCHING FROM DOCKER TO PODMAN",
+          "summary": "Podman is a better containerization tool than Docker due to its daemonless architecture. It is better for security and reduces single points of failure.  Podman integrates well with systemd and Kubernetes, making deployment and management easier.",
+          "url": "https://codesmash.dev/why-i-ditched-docker-for-podman-and-you-should-too?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "codesmash.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-08:a10",
+          "order": 1,
+          "title": "THE 4 DRIVERS OF BETTER CX",
+          "summary": "Everyone claims to be customer-centric. How can dev teams actually deliver on this promise? This Datadog eBook [10] looks at 4 key drivers: technology, analytics, security, and collaboration. Get your",
+          "url": "https://www.datadoghq.com/resources/improving-customer-experience-ebook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-coreplatform-ww-customer-experience-ebook-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a10",
+          "order": 2,
+          "title": "copy",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/improving-customer-experience-ebook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-coreplatform-ww-customer-experience-ebook-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a11",
+          "order": 3,
+          "title": "CK",
+          "summary": "Ck is a semantic grep tool that makes code search better by understanding meaning rather than just keywords. It offers drop-in grep compatibility with added features like semantic, hybrid, and JSON output search modes. The tool indexes code once for fast semantic searches and automatically excludes common build and cache directories.",
+          "url": "https://github.com/BeaconBay/ck?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a12",
+          "order": 4,
+          "title": "REACT SERVER COMPONENTS SUPPORT WITHOUT A FRAMEWORK",
+          "summary": "Forket is a tool that enables the use of React Server Components (RSC) without requiring a specific framework like Next.js. It works by splitting code into client and server versions, building a component dependency graph, and managing the serialization and hydration of components. To use it, run Forket during the build process to transform the code and then integrate runtime glue code into the HTTP server to handle component streaming and hydration.",
+          "url": "https://krasimirtsonev.com/blog/article/vanilla-react-server-components-with-no-framework?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "krasimirtsonev.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-08:a13",
+          "order": 1,
+          "title": "WHY LANGUAGE MODELS HALLUCINATE",
+          "summary": "This research paper from OpenAI investigates why language models like ChatGPT hallucinate. Current training and evaluation methods inadvertently reward guessing over admitting uncertainty, as accuracy-focused scoreboards prioritize correct answers, even if obtained through chance. This incentivizes models to guess instead of abstaining when unsure, leading to confident errors on low-frequency facts that are difficult to predict.",
+          "url": "https://links.tldrnewsletter.com/KukoOd",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a14",
+          "order": 2,
+          "title": "CLAUDE CODE FRAMEWORK WARS",
+          "summary": "Providing structure to AI coding workflows improves output and shifts developer roles towards higher-level tasks. For example, devs can use markdown backlogs, role simulation, and custom tool libraries to improve Claude Code's capabilities.",
+          "url": "https://shmck.substack.com/p/claude-code-framework-wars?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "shmck.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a15",
+          "order": 3,
+          "title": "GOOGLE CHROME AT 17 - A HISTORY OF OUR BROWSER",
+          "summary": "Google Chrome launched on September 2, 2008, with a multi-process architecture that isolated tabs into separate processes for better stability, along with the V8 JavaScript engine that improved web app performance. Over its 17-year history, Chrome has continuously focused on four core principles: speed, security, stability, and simplicity. The browser evolved from a small skunkworks project by ex-Firefox engineers at Google into a platform used by billions. It pioneered technologies like SPDY (which became HTTP/2) and QUIC (which became HTTP/3).",
+          "url": "https://addyosmani.com/blog/chrome-17th?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "addyosmani.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-08:a16",
+          "order": 1,
+          "title": "SERVERLESS HORRORS",
+          "summary": "A simple blog where you can read all the horror stories of serverless.",
+          "url": "https://serverlesshorrors.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "serverlesshorrors.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a17",
+          "order": 2,
+          "title": "WHY ML NEEDS A NEW PROGRAMMING LANGUAGE",
+          "summary": "This is an interview with Chris Lattner, creator of LLVM and Swift, about his new programming language Mojo, which is designed to address the performance and portability challenges of modern AI hardware by combining Python-like syntax with metaprogramming and type system features.",
+          "url": "https://signalsandthreads.com/why-ml-needs-a-new-programming-language/?utm_source=tldrwebdev",
+          "reading_time_minutes": 86,
+          "source_domain": "signalsandthreads.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a18",
+          "order": 3,
+          "title": "THE MATHS YOU NEED TO START UNDERSTANDING LLMS",
+          "summary": "This guide goes over the necessary high-school-level math concepts like vectors, matrices, and projections, essential for understanding LLM inference.",
+          "url": "https://www.gilesthomas.com/2025/09/maths-for-llms?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "gilesthomas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-08:a19",
+          "order": 4,
+          "title": "KRUCI: POST-MORTEM OF A UI LIBRARY",
+          "summary": "This dev tried to create a new terminal UI library in Rust, but ultimately concluded that the potential gains in performance were outweighed by the increased complexity and development challenges, leading them to abandon the project.",
+          "url": "https://pwy.io/posts/kruci-post-mortem/?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "pwy.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

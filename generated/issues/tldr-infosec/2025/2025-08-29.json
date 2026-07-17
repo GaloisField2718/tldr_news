@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-08-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-29",
+  "source_path": "TLDR InfoSec/article_29-08-2025.md",
+  "source_content_hash": "sha256:482542360496167d9be00aa807d80156eced6e6a92ab913685712d445b936c21",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-29",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a04",
+          "order": 1,
+          "title": "EMAIL IS STILL BUSINESS-CRITICAL. THE DATA BACKS IT UP.",
+          "summary": "Forget the idea that email is fading. Nearly 9 IN 10 IT LEADERS say direct email is still critical to how their business communicates—more than Slack, Teams, or even collaboration tools. Why? Because email is auditable, reliable, and built for messages that matter.",
+          "url": "https://exclaimer.com/research/state-of-email-report-2025/?utm_medium=via-campaign-referral&utm_source=tldr_newsletter&utm_campaign=tldr&utm_content=state_of_email_report",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a04",
+          "order": 2,
+          "title": "→ [4]Read the full report",
+          "summary": "",
+          "url": "https://exclaimer.com/research/state-of-email-report-2025/?utm_medium=via-campaign-referral&utm_source=tldr_newsletter&utm_campaign=tldr&utm_content=state_of_email_report",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a06",
+          "order": 3,
+          "title": "→ [6]See the key stats",
+          "summary": "",
+          "url": "https://exclaimer.com/white-papers-ebooks/the-state-of-email-2025-infographic/?utm_medium=via-campaign-referral&utm_source=tldr_newsletter&utm_campaign=tldr&utm_content=state_of_email_report_infographic",
+          "reading_time_minutes": null,
+          "source_domain": "exclaimer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a07",
+          "order": 1,
+          "title": "FREEPBX SERVERS HACKED VIA ZERO-DAY, EMERGENCY FIX RELEASED",
+          "summary": "There is an actively exploited zero-day vulnerability affecting systems with exposed Administrator Control Panel (ACP). Hackers have exploited it since August 21, compromising servers and affecting thousands of SIP extensions, allowing attackers to run commands as the Asterisk user. Sangoma has released emergency EDGE module fixes. It recommends blocking ACP access, restoring from pre-August 21 backups if compromised, and rotating all credentials.",
+          "url": "https://www.bleepingcomputer.com/news/security/freepbx-servers-hacked-via-zero-day-emergency-fix-released/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a08",
+          "order": 2,
+          "title": "TRANSUNION SAYS HACKERS STOLE 4.4 MILLION CUSTOMERS' PERSONAL INFORMATION",
+          "summary": "Hackers accessed the personal data of over 4.4 million TransUnion customers through a breach in a third-party application, although the credit data itself was not compromised. Stolen information included names, birth dates, and Social Security numbers. This incident is part of a recent wave of major corporate data breaches in the US. Companies like Google and Allianz Life were also affected.",
+          "url": "https://techcrunch.com/2025/08/28/transunion-says-hackers-stole-4-4-million-customers-personal-information/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a09",
+          "order": 1,
+          "title": "SLIDING INTO YOUR DMS: ABUSING MICROSOFT TEAMS FOR MALWARE DELIVERY",
+          "summary": "Attackers are increasingly using Microsoft Teams for the delivery of malware. Impersonating IT support, they send direct messages or calls from fake or compromised accounts, tricking users into installing remote access tools or running malicious PowerShell payloads. These sophisticated campaigns leverage social engineering, exploit the trust in Teams' internal messaging, and use advanced techniques to steal credentials, maintain persistence, and evade detection. Defenders are advised to remain vigilant for unusual Teams activity and impersonation attempts and to recognize the signs of such malware attacks for improved response and mitigation.",
+          "url": "https://permiso.io/blog/sliding-into-your-dms-abusing-microsoft-teams-for-malware-delivery?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a10",
+          "order": 2,
+          "title": "AWS DETECTION ENGINEERING: MASTERING LOG SOURCES FOR THREAT DETECTION",
+          "summary": "This post provides an overview of how to utilize CloudTrail, VPC Flow Logs, GuardDuty, ALB Logs, and AWS Config for threat detection in AWS. It lists sample alerts for each data source, as well as cross-service alerts, and demonstrates how these alerts can inform automated enforcement actions. Continuous validation is important for ensuring that rules remain consistent with an organization's environment.",
+          "url": "https://links.tldrnewsletter.com/iVsGgd",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a11",
+          "order": 3,
+          "title": "THE AGENTIC THREAT HUNTER",
+          "summary": "Threat hunting follows the scientific method in which analysts observe logs, develop hypotheses, test the hypotheses, and iterate, but this model is crumbling under the vast amount of logs present in modern environments. To augment security teams, AI agents can be used to monitor vast amounts of logs and develop initial hypotheses to augment security teams. SOCs can begin leveraging agentic AI by developing explicit hypotheses, pairing with AI for investigations, centralizing data in a SIEM or data lake, setting appropriate guardrails for the agents, and then automating repetitive tasks.",
+          "url": "https://dispatch.thorcollective.com/p/the-agentic-threat-hunter?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "dispatch.thorcollective.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a12",
+          "order": 1,
+          "title": "RITA",
+          "summary": "Real Intelligence Threat Analytics (RITA) is a framework for detecting command and control communication through network traffic analysis.",
+          "url": "https://github.com/activecm/rita?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a13",
+          "order": 2,
+          "title": "ATEAM",
+          "summary": "The Azure Tenant Enumeration and Attribution Module (ATEAM) is a reconnaissance tool that discovers Azure services and attributes tenant ownership based on their responses.",
+          "url": "https://github.com/NetSPI/ATEAM?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a14",
+          "order": 3,
+          "title": "PYGHIDRA-MCP: HEADLESS GHIDRA MCP SERVER FOR PROJECT-WIDE, MULTI-BINARY ANALYSIS",
+          "summary": "pyghidra-mcp is a headless Model Context Protocol (MCP) server for Ghidra that enables LLMs to perform project-wide analysis across multiple interconnected binaries in a single session, moving beyond traditional single-file reverse engineering. The tool demonstrates ecosystem-aware analysis by tracing function calls across entire application stacks, such as following a file creation operation from notepad.exe through kernel32.dll to ntdll.dll and the Windows kernel. Built for automation and CI/CD integration, pyghidra-mcp leverages Ghidra's project management capabilities to expose entire software ecosystems for AI-powered reverse engineering workflows.",
+          "url": "https://clearbluejar.github.io/posts/pyghidra-mcp-headless-ghidra-mcp-server-for-project-wide-multi-binary-analysis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "clearbluejar.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a15",
+          "order": 1,
+          "title": "STORM-0501 DEBUTS A BRUTAL HYBRID RANSOMWARE ATTACK CHAIN",
+          "summary": "Storm-0501 has developed a sophisticated hybrid ransomware attack that exploits privileged accounts to move between on-premises and cloud environments, utilizing techniques such as DCSync attacks to gain domain control and leveraging federated domains as backdoors. The threat actor not only encrypts data, but also mass-deletes cloud resources, including backups, creating a \"no-win situation\" where organizations cannot recover without paying ransom. CISOs should implement least privilege access, audit on-premises environments for cloud migration opportunities, and regularly practice ransomware response playbooks to defend against this brutal attack chain.",
+          "url": "https://www.csoonline.com/article/4046438/storm-0501-debuts-a-brutal-hybrid-ransomware-attack-chain.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a16",
+          "order": 2,
+          "title": "MICROSOFT WORD WILL SAVE YOUR FILES TO THE CLOUD BY DEFAULT",
+          "summary": "Microsoft will start automatically saving any Word documents in OneDrive. Users will be able to change how new files are created in the Save page in the Word options. The feature was included in the latest Microsoft 365 Insiders Beta Channel update.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-word-will-save-your-files-to-the-cloud-by-default/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a17",
+          "order": 3,
+          "title": "SKT HIT WITH $97M PENALTY FOR SECURITY LAPSES",
+          "summary": "South Korea fined SK Telecom 134.8 billion won ($97.2 million) after a SIM data breach exposed the personal data of all customers due to poor security and delayed reporting. The breach affected 23 million users, causing significant financial losses and a decline in SKT's profit and customer base. Authorities ordered audits and improvements as SKT invests heavily in new security systems.",
+          "url": "https://www.mobileworldlive.com/operators/skt-hit-with-97m-penalty-for-security-lapses/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "mobileworldlive.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-29:a18",
+          "order": 1,
+          "title": "RANSOMWARE CROOKS KNOCK SWEDISH MUNICIPALITIES OFFLINE FOR MEASLY SUM OF $168K",
+          "summary": "An attack on Miljödata, a key IT provider for most Swedish municipalities, disrupted HR and reporting systems for over 200 councils.",
+          "url": "https://www.theregister.com/2025/08/28/sweden_council_ransomware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a19",
+          "order": 2,
+          "title": "PASSWORDSTATE DEV URGES USERS TO PATCH AUTH BYPASS VULNERABILITY",
+          "summary": "There is a high-severity auth bypass in Passwordstate, used by 390K IT professionals, that allows attackers to exploit a malicious URL to access the admin area via the Emergency Access page.",
+          "url": "https://www.bleepingcomputer.com/news/security/passwordstate-dev-urges-users-to-patch-auth-bypass-vulnerability-as-soon-as-possible/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-29:a20",
+          "order": 3,
+          "title": "GOOGLE PREVIEWS CYBER 'DISRUPTION UNIT' AS U.S. GOVERNMENT, INDUSTRY WEIGH GOING HEAVIER ON OFFENSE",
+          "summary": "Google plans to create a new cyber \"disruption unit\" focused on \"legal and ethical disruption\" of threat campaigns.",
+          "url": "https://cyberscoop.com/google-cybersecurity-disruption-unit-active-defense-hack-back/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

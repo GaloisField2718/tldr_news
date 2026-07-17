@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-12",
+  "source_path": "TLDR InfoSec/article_12-01-2026.md",
+  "source_content_hash": "sha256:eebbb478795af4c215075287221d28cd4898ccd61f37321347f1749af9f61027",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a04",
+          "order": 1,
+          "title": "WHEN YOUR CEO CALLS, WILL YOU KNOW IT'S REAL?",
+          "summary": "Today's phishing attacks involve AI-generated voices, videos, and interactive deepfakes of company executives. They fool 99% of people.",
+          "url": "https://www.adaptivesecurity.com/demo/security-awareness-training?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20251210",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a06",
+          "order": 1,
+          "title": "CHINA-LINKED HACKERS EXPLOIT VMWARE ESXI ZERO-DAYS TO ESCAPE VIRTUAL MACHINES",
+          "summary": "Huntress observed Chinese-speaking threat actors exploiting three VMware ESXi zero-days (CVE-2025-22224, CVE-2025-22225, and CVE-2025-22226) to escape virtual machine isolation and gain full hypervisor control. Evidence suggests the exploit toolkit was developed as early as February 2024, over a year before Broadcom's March 2025 disclosure. The multi-stage attack chain used a compromised SonicWall VPN for initial access and deployed the VSOCKpuppet backdoor, which communicates over VSOCK to bypass traditional network monitoring entirely. Organizations should prioritize patching these vulnerabilities and monitor for unusual VMCI/VSOCK activity between guest VMs and hypervisors.",
+          "url": "https://thehackernews.com/2026/01/chinese-linked-hackers-exploit-vmware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a07",
+          "order": 2,
+          "title": "BREACHFORUMS HACKING FORUM DATABASE LEAKED, EXPOSING 324K ACCOUNTS",
+          "summary": "The latest version of the infamous BreachForums suffered a data breach that leaked a database of user accounts. The breached data includes display names, registration dates, IP addresses, and other internal information. Many of the breached users' IPs route to loop back, but over 70k records contain public IPs.",
+          "url": "https://www.bleepingcomputer.com/news/security/breachforums-hacking-forum-database-leaked-exposing-324-000-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a08",
+          "order": 3,
+          "title": "INSTAGRAM DATA LEAK EXPOSES SENSITIVE INFO OF 17.5M ACCOUNTS",
+          "summary": "Malwarebytes raised concerns about a trove of Instagram user information being sold on the dark web. The breached data includes usernames, emails, phone numbers, and partial location data. Instagram has stated that there was no data breach, but rather an issue that allowed external parties to send unrequested password reset emails.",
+          "url": "https://cybersecuritynews.com/instagram-data-leak-exposes-sensitive-info-of-17-5m-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a09",
+          "order": 1,
+          "title": "ORM LEAKING MORE THAN YOU JOINED FOR",
+          "summary": "ORM Leak vulnerabilities extend beyond susceptible ORMs such as Django and Prisma to any application that implements robust filtering capabilities. This article details practical examples, including Harbor CVE-2025-30086 (Beego ORM) and authentication bypasses via Prisma operator injection via type coercion, and discusses multiple techniques for bypassing naive protections, including exploiting Beego's broken expression parsing, where non-relational fields in filter expressions are overwritten by subsequent fields. Semgrep detection rules for Django, Prisma, Beego, and Entity Framework ORMs have been published to help identify these commonly overlooked vulnerabilities.",
+          "url": "https://www.elttam.com/blog/leaking-more-than-you-joined-for/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "elttam.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a10",
+          "order": 2,
+          "title": "TWO CVES, ZERO EGO: A MAILPIT STORY",
+          "summary": "Mailpit is a lightweight email testing tool used in development that recently had two notable security issues uncovered: a server-side request forgery (SSRF) and a cross-site WebSocket hijacking (CSWSH) flaw. The SSRF bug allowed attackers to abuse a proxy endpoint to access internal services such as cloud metadata, while the WebSocket issue allowed any website to connect and stream all captured emails without authentication. The maintainer quickly fixed both issues in new releases and coordinated CVEs, showing how respectful communication, GitHub Security Advisories, and low-ego collaboration between researchers and developers lead to fast, effective vulnerability remediation.",
+          "url": "https://rosecurify.com/two-cves-zero-ego-a-mailpit-story/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "rosecurify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a11",
+          "order": 3,
+          "title": "ATTACKERS LOVE YOUR GITHUB ACTIONS TOO",
+          "summary": "GitHub ranks as the second most used CI/CD tool, but it also exposes a large attack surface to attackers. GitHub Actions can unintentionally expose secrets or overprovision tokens. Actions are vulnerable to supply chain compromise via poisoned dependencies and injection attacks.",
+          "url": "https://orca.security/resources/blog/github-actions-security-risks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "orca.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a12",
+          "order": 1,
+          "title": "TAILSNITCH",
+          "summary": "Tailsnitch is a security auditing tool for Tailscale configurations that scans tailnets for 50+ misconfigurations, overly permissive access controls, and security best practice violations across seven categories, including ACLs, authentication keys, and network exposure. The tool supports severity filtering, interactive remediation mode, JSON export for CI/CD integration, and SOC 2 evidence generation with Common Criteria control mappings. Checks range from critical issues like default allow-all policies and overly broad tagOwners to informational items covering logging and DNS settings.",
+          "url": "https://github.com/Adversis/tailsnitch?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a13",
+          "order": 2,
+          "title": "GIXY-NEXT",
+          "summary": "Gixy-Next (Gixy) is an open-source NGINX configuration security scanner and hardening tool that statically analyzes nginx.conf files to detect security misconfigurations, hardening gaps, and common performance pitfalls before they reach production. It is an actively maintained fork of Yandex's Gixy.",
+          "url": "https://github.com/MegaManSec/Gixy-Next?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a14",
+          "order": 3,
+          "title": "BINYARS",
+          "summary": "BinYars is a Binary Ninja plugin that integrates YARA-X into Binary Ninja.",
+          "url": "https://github.com/xorhex/BinYars?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a15",
+          "order": 1,
+          "title": "MUDDYWATER LAUNCHES RUSTYWATER RAT VIA SPEAR-PHISHING ACROSS MIDDLE EAST SECTORS",
+          "summary": "Iranian threat actor MuddyWater has been attributed to spear-phishing campaigns targeting diplomatic, maritime, financial, and telecom entities in the Middle East using a new Rust-based implant called RustyWater (also known as Archer RAT/RUSTRIC). The malware, delivered via malicious Word documents with VBA macros, establishes registry persistence and supports asynchronous C2 communication for file operations and command execution. This marks MuddyWater's continued evolution away from PowerShell and VBS loaders toward more structured, modular RAT capabilities.",
+          "url": "https://thehackernews.com/2026/01/muddywater-launches-rustywater-rat-via.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a16",
+          "order": 2,
+          "title": "EUROPOL ARRESTS 34 BLACK AXE MEMBERS IN SPAIN OVER €5.9M FRAUD AND ORGANIZED CRIME",
+          "summary": "Europol and Spanish police have dismantled a major Black Axe cell in Spain, arresting 34 suspects across Seville, Madrid, Málaga, and Barcelona for cyber-enabled fraud and violent organized crime. Authorities link the Nigerian-origin syndicate to scams like business email compromise and romance fraud, with losses over €5.93 million, and report cash and bank account seizures alongside prior global crackdowns on the group.",
+          "url": "https://thehackernews.com/2026/01/europol-arrests-34-black-axe-members-in.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a17",
+          "order": 3,
+          "title": "CYBERSECURITY CHANGES I EXPECT IN 2026",
+          "summary": "The primary cybersecurity question of 2026 will be whether an attacker's or defender's AI is more effective. Agentic security will encourage teams to build products rather than buy them, devalue junior employees, and lead to workplace upheaval. AI will also improve the efficacy of common security program weak points, such as secure code training and asset management.",
+          "url": "https://danielmiessler.com/blog/cybersecurity-ai-changes-2026?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "danielmiessler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-12:a18",
+          "order": 1,
+          "title": "ANTHROPIC: VIRAL CLAUDE \"BANNED AND REPORTED TO AUTHORITIES\" MESSAGE ISN'T REAL",
+          "summary": "Anthropic confirmed that a viral screenshot claiming Claude permanently banned a user and reported them to authorities is fake, noting the recurring hoax doesn't match any actual system messages.",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-viral-claude-banned-and-reported-to-authorities-message-isnt-real/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a19",
+          "order": 2,
+          "title": "MICROSOFT MAY SOON ALLOW IT ADMINS TO UNINSTALL COPILOT",
+          "summary": "Microsoft is testing a new RemoveMicrosoftCopilotApp group policy in Windows 11 Insider builds that allows IT administrators to uninstall the Copilot app on managed devices via Intune or SCCM.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-may-soon-allow-it-admins-to-uninstall-copilot-on-managed-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-12:a20",
+          "order": 3,
+          "title": "INSTAGRAM SAYS IT FIXED THE ISSUE THAT LET SOMEONE SEND ALL THOSE PASSWORD RESET EMAILS",
+          "summary": "Instagram acknowledges that an external party exploited a flaw to trigger mass password reset emails, but insists there was no breach and that accounts remain secure, advising users to ignore the notifications",
+          "url": "https://www.theverge.com/news/860337/instagram-fixed-password-reset-emails?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

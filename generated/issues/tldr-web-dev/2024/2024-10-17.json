@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-10-17",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-17",
+  "source_path": "TLDR Web Dev/article_17-10-2024.md",
+  "source_content_hash": "sha256:97838ef8e85e2a04bd3a59e95d99f7af2380888fc9655bcec6c26ca532549fb7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-17",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-17:a04",
+          "order": 1,
+          "title": "DRAG TO SELECT",
+          "summary": "This blog post goes over the end-to-end process of implementing a drag-to-select functionality in React, with code examples and challenges faced along the way. For example, one of the challenges of implementing this functionality was representing user interactions when handling drag selections in multiple directions. To fix this, create a DOMVector class, a custom data type that captures both magnitude and direction, which removes the need for complex state management.",
+          "url": "https://www.joshuawootonn.com/react-drag-to-select?utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "joshuawootonn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a05",
+          "order": 2,
+          "title": "WHAT I LEARNED FROM MAKING THE PYTHON BACKEND FOR YOUTUBE TRANSCRIPT OPTIMIZER",
+          "summary": "When building a Python backend for a transcript optimizer app, this developer used FastAPI, SQLmodel, and Whisper for transcript generation, along with LLMs for text optimization and quiz generation. GPT4o-mini and Claude 3 Haiku were cheaper for this task, especially when combined with chunking input text and creating pipelines to handle complex transformations. SQLite was used as the database solution.",
+          "url": "https://youtubetranscriptoptimizer.com/blog/02_what_i_learned_making_the_python_backend_for_yto?utm_source=tldrwebdev",
+          "reading_time_minutes": 28,
+          "source_domain": "youtubetranscriptoptimizer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a06",
+          "order": 3,
+          "title": "REAL-TIME MOUSE POINTERS",
+          "summary": "Canva's collaboration team implemented real-time mouse pointers to make its whiteboard product better. Initially, they utilized a backend-centric architecture using WebSockets and Redis, which scaled to support hundreds of thousands of simultaneous users, but had limitations in update rate. Recognizing these limitations, the team migrated to a WebRTC-based architecture, which allowed direct peer-to-peer communication between clients, reducing latency and improving scalability.",
+          "url": "https://www.canva.dev/blog/engineering/realtime-mouse-pointers/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "canva.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-17:a07",
+          "order": 1,
+          "title": "REFLECTIONS ON PALANTIR",
+          "summary": "This is a detailed retrospective from a former Palantir employee who spent eight years at the company. Palantir is unique in that it has \"forward deployed engineers\" (FDEs) who work directly with clients and engineers who work on the core product (away from clients). The company also has a \"messianic cult\" culture, characterized by intellectual intensity and a focus on achieving real-world outcomes, and deals with the moral complexities of working with clients in the \"grey areas\" of government and defense.",
+          "url": "https://nabeelqu.substack.com/p/reflections-on-palantir?utm_source=tldrwebdev",
+          "reading_time_minutes": 32,
+          "source_domain": "nabeelqu.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a08",
+          "order": 2,
+          "title": "BE SUSPICIOUS OF SUCCESS",
+          "summary": "Success in programs or applications due to flawed tests or incorrect models can lead to unexpected real-world failures. Even if tests pass and/or a model seems to work, it's still useful for developers to be “suspicious” by testing both \"happy paths\" (ideal scenarios) and \"sad paths\" (error handling).",
+          "url": "https://buttondown.com/hillelwayne/archive/be-suspicious-of-success/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "buttondown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a09",
+          "order": 3,
+          "title": "THE BIG \"SERVER WATERFALL PROBLEM\" WITH RSCS",
+          "summary": "React Server Components can cause a \"server waterfall” problem, which is when a component's data fetching causes a delay in rendering due to dependencies. However, this problem also exists on the client-side. The benefit of server-side waterfalls over client-side waterfalls is that the server environment offers more control over the network and caching.",
+          "url": "https://www.epicreact.dev/server-waterfall-problem-rscs?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "epicreact.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-17:a10",
+          "order": 1,
+          "title": "CLOUD-SCALE MONITORING WITH AWS AND DATADOG",
+          "summary": "Learn how to migrate and monitor any AWS workload at any scale - from on-prem lift and shift, to serverless applications:",
+          "url": "https://www.datadoghq.com/resources/aws-ebook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-coreplatform-ww-aws-ebook-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a10",
+          "order": 2,
+          "title": "Get the ebook →",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/aws-ebook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-coreplatform-ww-aws-ebook-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a11",
+          "order": 3,
+          "title": "NEXT.JS 15 RC 2",
+          "summary": "The new Next.js 15 Release Candidate 2 introduces Turbopack for development, which improves cold compilation performance and reduces memory usage. There are also Async Request APIs, a breaking change that makes rendering and caching better by making data-dependent APIs asynchronous. The release also includes a new Static Route Indicator, a 'Form' component for client-side navigation, and TypeScript support for the Next.js configuration file.",
+          "url": "https://nextjs.org/blog/next-15-rc2?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "nextjs.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a12",
+          "order": 4,
+          "title": "TINYWIDGETS",
+          "summary": "TinyWidgets is a collection of lightweight, reusable UI components for building local-first applications fast. It provides layout features like headers, sidebars, and dark mode along with a variety of components like buttons, cards, and metrics.",
+          "url": "https://tinywidgets.org/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "tinywidgets.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a13",
+          "order": 5,
+          "title": "EXPRESS V5",
+          "summary": "Express.js v5 has security updates, updated path matching and regular expressions, support for rejected promises, and body parser enhancements.",
+          "url": "https://expressjs.com/2024/10/15/v5-release.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "expressjs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-17:a14",
+          "order": 1,
+          "title": "WHY STRIPE WON",
+          "summary": "Stripe is immensely successful for a few reasons. It strategically rode the wave of e-commerce growth by focusing on developer-friendly solutions. The company diversified its product offering early on, expanding into adjacent markets and launching successful products like Stripe Connect, which allows businesses to create their own payment platforms. It also prioritized software solutions, particularly in the billing and tax software space, to overcome financial challenges.",
+          "url": "https://github.com/getlago/lago/wiki/Why-Stripe-won?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a15",
+          "order": 2,
+          "title": "HOW WE OUTSMARTED CSGO CHEATERS WITH IDENTITYLOGGER",
+          "summary": "A CSGO community server struggled with cheaters until someone developed IdentityLogger, a system that fingerprints players based on their IP address, Steam ID, and a unique Tracking ID derived from a persistent cookie stored on the player's computer via the game's built-in web browser. This third identifier is tied to the player's Steam installation directory and prevents ban evasion by requiring cheaters to change their Steam ID, IP address, and Steam installation folder simultaneously.",
+          "url": "https://mobeigi.com/blog/gaming/how-we-outsmarted-csgo-cheaters-with-identitylogger/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "mobeigi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a16",
+          "order": 3,
+          "title": "WORDPRESS RETALIATION IMPACTS COMMUNITY",
+          "summary": "Automattic's retaliatory actions against WP Engine have negatively impacted the WordPress community, leading to contributor bans, a hostile fork of a popular plugin, and a growing perception of WordPress as a risky platform. This has led to many contributors questioning the Automattic CEO's leadership along with raising concerns about the commercialization of open-source projects.",
+          "url": "https://lwn.net/SubscriberLink/993895/c0438e0ee9382c5f/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "lwn.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-17:a17",
+          "order": 1,
+          "title": "WHAT ARE YOUR FAVORITE RESOURCES ON DEALING WITH SOFTWARE COMPLEXITY? (REDDIT THREAD)",
+          "summary": "A discussion on fighting software complexity with references to talks, papers like \"Out of the Tar Pit\", books like \"A Philosophy of Software Design\", and languages.",
+          "url": "https://links.tldrnewsletter.com/WbXjMo",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a18",
+          "order": 2,
+          "title": "MACOS SOMETIMES LEAKS TRAFFIC AFTER SYSTEM UPDATES",
+          "summary": "macOS may leak traffic through the firewall after system updates - this requires a reboot to resolve.",
+          "url": "https://mullvad.net/en/blog/macos-sometimes-leaks-traffic-after-system-updates?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "mullvad.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a19",
+          "order": 3,
+          "title": "NUMBER FLOW",
+          "summary": "Number Flow is a React component that provides animation, formatting, and localization for numbers.",
+          "url": "https://github.com/barvian/number-flow?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-17:a20",
+          "order": 4,
+          "title": "GREENMASK",
+          "summary": "Greenmask is an open-source tool for anonymizing, transforming, and generating synthetic data for PostgreSQL databases with features like deterministic transformations and dynamic parameters.",
+          "url": "https://github.com/GreenmaskIO/greenmask?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

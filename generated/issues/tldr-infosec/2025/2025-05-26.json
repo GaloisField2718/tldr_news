@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-05-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-26",
+  "source_path": "TLDR InfoSec/article_26-05-2025.md",
+  "source_content_hash": "sha256:996fb85253c0bc0e1a62981986b5ecb599df01efd907bd347275114c32b1371a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a04",
+          "order": 1,
+          "title": "HOW LOVABLE, BLAND AI, AND 11X ARE CRUSHING COMPLIANCE",
+          "summary": "Is compliance the final boss standing between your startup and the next big enterprise deal?",
+          "url": "https://delve.co/book-demo?utm_source=tldr&utm_medium=newsletter&utm_campaign=primary-infosec-may26",
+          "reading_time_minutes": null,
+          "source_domain": "delve.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a04",
+          "order": 2,
+          "title": "Ditch the slog. Get compliant the smart way.",
+          "summary": "TLDR readers get $2000 off [4] AND a free custom Arc'teryx jacket.",
+          "url": "https://delve.co/book-demo?utm_source=tldr&utm_medium=newsletter&utm_campaign=primary-infosec-may26",
+          "reading_time_minutes": null,
+          "source_domain": "delve.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a05",
+          "order": 1,
+          "title": "CISA WARNS OF SUSPECTED BROADER SAAS ATTACKS EXPLOITING APP SECRETS AND CLOUD MISCONFIGS",
+          "summary": "Hackers broke into Commvault's cloud backup system and stole secret passwords that let them access customers' Microsoft 365 accounts. The attackers used a security flaw to sneak into the system. U.S. cybersecurity officials are helping investigate and have advised companies on how to protect themselves from similar attacks.",
+          "url": "https://links.tldrnewsletter.com/gNxMA8",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a06",
+          "order": 2,
+          "title": "RANSOMWARE SCUM LEAKED NOVA SCOTIA POWER CUSTOMERS' INFO",
+          "summary": "Nova Scotia Power confirmed a ransomware attack that started in March affected 280,000 customers. Hackers stole personal data, including names, addresses, billing details, and some bank account numbers, then leaked it online. The power company refused to pay ransom and is offering free credit monitoring to affected customers.",
+          "url": "https://www.theregister.com/2025/05/23/novia_scotia_power_customers_info_leaked/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a07",
+          "order": 3,
+          "title": "DATA-STEALING CHROME EXTENSIONS IMPERSONATE FORTINET, YOUTUBE, VPNS",
+          "summary": "Researchers at DomainTools identified a malware campaign that uses a collection of over 100 malicious websites offering fake VPNs or masquerading as legitimate services to trick users into installing Chrome extensions. The extensions serve different malware variants, such as info stealers and backdoors. DomainTools reported the malicious extensions to Google Chrome, which removed some but not all of them.",
+          "url": "https://www.bleepingcomputer.com/news/security/data-stealing-chrome-extensions-impersonate-fortinet-youtube-vpns/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a08",
+          "order": 1,
+          "title": "BADUSB ATTACK EXPLAINED: FROM PRINCIPLES TO PRACTICE AND DEFENSE",
+          "summary": "This post dives into BadUSB, an attack method introduced in 2014 where hackers reprogram USB device firmware to disguise it as a keyboard. When plugged in, the fake USB device automatically types malicious commands into the computer. Antivirus software cannot detect these attacks since they appear as legitimate keyboard input.",
+          "url": "https://insbug.medium.com/badusb-attack-explained-from-principles-to-practice-and-defense-3bfe88ec2eeb?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "insbug.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a09",
+          "order": 2,
+          "title": "DISSECTING THE MACOS 'APPLEPROCESSHUB' STEALER: TECHNICAL ANALYSIS OF A MULTI-STAGE ATTACK",
+          "summary": "This analysis looks at the macOS \"AppleProcessHub\" stealer, which was discovered on May 15. It appears as a dynamic library file (libsystd.dylib) but is actually an executable written in Objective-C. The malware employs AES-128 encryption to decrypt hardcoded strings that form the command and control server URL (appleprocesshub[.]com), then downloads and runs a bash script to steal sensitive data like keychain passwords, SSH keys, shell history, and cryptocurrency wallets. The stolen data is compressed and sent to the attacker's server. The malware can run any script on the C2 infrastructure, making it a versatile tool for data exfiltration targeted at macOS users.",
+          "url": "https://www.kandji.io/blog/macos-appleprocesshub-stealer?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "kandji.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a10",
+          "order": 3,
+          "title": "ROOT IN PROD: THE MOST IMPORTANT SECURITY ANALYSIS YOU WILL NEVER DO ON YOUR AWS ACCOUNTS",
+          "summary": "This blog post explains how to identify all principals with root-level access in AWS production environments, which organizations rarely audit comprehensively. It provides code snippets to discover AWS accounts, map IAM roles/users with administrative privileges, analyze SSO permissions, and visualize trust relationships that allow privilege escalation through role assumption chains. The analysis reveals that production access often extends beyond intended administrators to include CI/CD pipelines, forgotten legacy roles, and external accounts through overly permissive trust policies, creating massive attack surfaces that most organizations don't realize exist.",
+          "url": "https://www.plerion.com/blog/root-in-prod?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a11",
+          "order": 1,
+          "title": "HOW TO ADAPT YOUR ACCESS CONTROL POLICIES FOR LLMS AND AGENTS",
+          "summary": "AI workloads are tricky for security teams as they often require broader and more flexible permissions. Learn how to enforce fine-grained access control policies for enterprise search, RAG pipelines, and agentic workflows - and why authorization is the",
+          "url": "https://www.osohq.com/llm-access-control?utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "osohq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a11",
+          "order": 2,
+          "title": "missing link. Browse Oso's resources on LLM Access Control.",
+          "summary": "",
+          "url": "https://www.osohq.com/llm-access-control?utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "osohq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a12",
+          "order": 3,
+          "title": "BREACHRX (PRODUCT LAUNCH)",
+          "summary": "The BreachRx platform is a browser-based workspace for every stakeholder in an organization. It is designed to coordinate and streamline cybersecurity incident response management.",
+          "url": "https://www.breachrx.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "breachrx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a13",
+          "order": 4,
+          "title": "NOVOPS",
+          "summary": "Novops is a cross-platform secret and config manager for development and CI environments.",
+          "url": "https://github.com/PierreBeucher/novops?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a14",
+          "order": 5,
+          "title": "CAN YOU BLOCK IT? (WEB APP)",
+          "summary": "This ad blocker test site offers three different levels with different categories of ads to test the effectiveness of a browser's ad-blocking protection.",
+          "url": "https://canyoublockit.com?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "canyoublockit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a15",
+          "order": 1,
+          "title": "OOPS: DANABOT MALWARE DEVS INFECTED THEIR OWN PCS",
+          "summary": "The U.S. government arrested 16 people who created and sold computer viruses called DanaBot. These viruses have stolen passwords and money from over 300,000 computers worldwide since 2018, causing $50 million in damage. The criminals charged $3,000-4,000 monthly for access to their virus software before being caught.",
+          "url": "https://krebsonsecurity.com/2025/05/oops-danabot-malware-devs-infected-their-own-pcs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a16",
+          "order": 2,
+          "title": "MYSTERIOUS HACKING GROUP CARETO WAS RUN BY THE SPANISH GOVERNMENT, SOURCES SAY",
+          "summary": "Researchers discovered an alleged Spanish government hacking group called \"Careto\" that has been secretly spying on other countries since 2007. The hackers mainly targeted Cuba, looking for information about terrorists hiding there. They used very advanced computer viruses to steal passwords, conversations, and government secrets from 31 countries worldwide.",
+          "url": "https://techcrunch.com/2025/05/23/mysterious-hacking-group-careto-was-run-by-the-spanish-government-sources-say/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a17",
+          "order": 3,
+          "title": "UK PIONEERING GLOBAL MOVE AWAY FROM PASSWORDS",
+          "summary": "The UK Government announced that it plans to roll out passkey support for all its digital services this year as an alternative to the current SMS-based verification system. The UK's NCSC views passkeys as vital for transforming national cyber resilience.",
+          "url": "https://www.ncsc.gov.uk/news/government-adopt-passkey-technology-digital-services?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-26:a18",
+          "order": 1,
+          "title": "FBI WARNS OF SILENT RANSOM GROUP TARGETING LAW FIRMS VIA SCAM CALLS",
+          "summary": "The FBI alerts that the Silent Ransom Group is attacking law firms with scam calls and phishing emails to steal sensitive information.",
+          "url": "https://hackread.com/fbi-silent-ransom-group-law-firms-via-scam-calls/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a19",
+          "order": 2,
+          "title": "OPERATION ENDGAME DISRUPTED GLOBAL RANSOMWARE INFRASTRUCTURE",
+          "summary": "Operation ENDGAME shut down major ransomware systems worldwide, removing 300 servers and 650 domains.",
+          "url": "https://securityaffairs.com/178245/cyber-crime/operation-endgame-disrupted-global-ransomware-infrastructure.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-26:a20",
+          "order": 3,
+          "title": "BEIJING MAY HAVE BREACHED US GOVERNMENT SYSTEMS BEFORE CITYWORKS PLUGGED A CRITICAL FLAW",
+          "summary": "Chinese hackers took advantage of a critical vulnerability in Cityworks software used by U.S. local governments, allowing them to execute malicious code and remain undetected in affected systems.",
+          "url": "https://www.csoonline.com/article/3994082/beijing-may-have-breached-us-government-systems-before-cityworks-plugged-a-critical-flaw.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

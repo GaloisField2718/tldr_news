@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-04-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-04-17",
+  "source_path": "TLDR InfoSec/article_17-04-2024.md",
+  "source_content_hash": "sha256:7b5b33216154ad971a3fb4f84d15af20dfb71b1b7a682e6a1ccbcead67543b05",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-04-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Can GenAI solve some of the most persistent industry challenges and help reduce cloud risk? This blog post by Orca Security [4] shows how AI is being used to tackle the cloud security skills shortage, reduce alert fatigue, break down organizational silos, and tackle other pressing industry issues.",
+          "url": "https://orca.security/resources/blog/how-ai-powered-cloud-security-solves-industry-problems/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a04",
+          "order": 2,
+          "title": "↗️ Read the full article on the Orca Blog",
+          "summary": "↗️ Find out how AI-driven cloud security [5] simplifies investigations and accelerates remediation",
+          "url": "https://orca.security/resources/blog/how-ai-powered-cloud-security-solves-industry-problems/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a06",
+          "order": 3,
+          "title": "↗️ Get a demo of Orca Security",
+          "summary": "",
+          "url": "https://orca.security/demo/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a07",
+          "order": 1,
+          "title": "PUTTY SSH CLIENT FLAW ALLOWS RECOVERY OF CRYPTOGRAPHIC PRIVATE KEYS",
+          "summary": "A vulnerability in PuTTY 0.68-0.80 could allow attackers with access to 60 cryptographic signatures from a user to compute the private keys offline. These signatures could come from an attacker-controlled SSH server or signed git commits. The vulnerability arises from the way that PuTTY generates ECDSA nonces, which lacks robust cryptographic random number generators on specific Windows versions.",
+          "url": "https://www.bleepingcomputer.com/news/security/putty-ssh-client-flaw-allows-recovery-of-cryptographic-private-keys/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a08",
+          "order": 2,
+          "title": "IVANTI WARNS OF CRITICAL FLAWS IN ITS AVALANCHE MDM SOLUTION",
+          "summary": "Ivanti fixed 27 vulnerabilities in its Avalanche MDM solution, including critical flaws that allowed remote attackers to execute commands. These security updates are crucial for protecting over 100,000 mobile devices from potential attacks. It is recommended that customers update to the latest Avalanche 6.4.3 version to stay secure.",
+          "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-critical-flaws-in-its-avalanche-mdm-solution/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a09",
+          "order": 3,
+          "title": "OPENJS FOUNDATION TARGETED IN POTENTIAL JAVASCRIPT PROJECT TAKEOVER ATTEMPT",
+          "summary": "Security researchers discovered a takeover attempt targeting the OpenJS Foundation similar to a recent incident with the XZ Utils project. Suspicious emails urged OpenJS to update a JavaScript project and designate new maintainers without proper involvement. Maintainers of open-source projects should be cautious of social engineering attacks targeting their sense of duty and community.",
+          "url": "https://thehackernews.com/2024/04/openjs-foundation-targeted-in-potential.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a10",
+          "order": 1,
+          "title": "“ALL YOUR SECRETS ARE BELONG TO US” - A DELINEA SECRET SERVER AUTHN/AUTHZ BYPASS",
+          "summary": "Delinea Secret Server is a PAM that helps organizations secure, manage, and monitor privileged accounts. This post delves through the process of hunting for an AuthN/AuthZ bypass, decompiling the relevant code sections, and crafting the exploit. It includes detailed reproduction steps and a proof of concept for obtaining admin access.",
+          "url": "https://straightblast.medium.com/all-your-secrets-are-belong-to-us-a-delinea-secret-server-authn-authz-bypass-adc26c800ad3?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "straightblast.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a11",
+          "order": 2,
+          "title": "DEPLOYING TAILSCALE FOR A REMOTE ONLY COMPANY",
+          "summary": "This post describes the reasoning and process followed to deploy Tailscale for a fully remote company. It goes over the motivation for this deployment, its advantages, and some tips and potential pitfalls in this setup. The post concludes with some features that were introduced since the original deployment that would have been helpful for future deployments.",
+          "url": "https://angrydome.com/posts/2024-tailscale-deploy/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "angrydome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a12",
+          "order": 3,
+          "title": "UNRAVELING SIEM CORRELATION TECHNIQUES",
+          "summary": "This post provides an overview of SIEM correlation techniques. It begins by defining correlation, introducing the MITRE ATT&CK framework, and presenting an example of a simple correlation rule. The post then continues to work through an example of detecting a Brute Force Okta Login, while combining multiple TTPs and log sources.",
+          "url": "https://jacknaglieri.substack.com/p/siem-correlation-techniques?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "jacknaglieri.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a13",
+          "order": 1,
+          "title": "AWESOME-SECURE-DEFAULTS",
+          "summary": "A repository of libraries in different languages that provide secure-by-default functions to eliminate bug classes.",
+          "url": "https://github.com/tldrsec/awesome-secure-defaults?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a14",
+          "order": 2,
+          "title": "CVENOTIFIER",
+          "summary": "CVENotifier is a customizable notifier for CVEs based on keywords. This tool scrapes the CVE feed from vuldb.com, filters it based on keywords, and notifies via Slack about the latest CVEs only for the technology or the products you have listed as keywords.",
+          "url": "https://github.com/dark-warlord14/CVENotifier?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a15",
+          "order": 3,
+          "title": "CLOUD-KEY-ROTATOR",
+          "summary": "Cloud-Key-Rotator is a program written in Golang that helps manage cloud service account key rotation. Not only does it support many different services, the tool also attempts to verify its actions as much as possible and aborts immediately if it encounters an error.",
+          "url": "https://github.com/ovotech/cloud-key-rotator?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a16",
+          "order": 1,
+          "title": "AWS TOOK 6 MONTHS TO FIX STS BUG - IAM POLICY INADEQUATE",
+          "summary": "Stedi discovered a vulnerability in AWS STS that arose from its usage of IAM role trust policies that relied upon resource tags and request tags. AWS first denied the issue, then found that the scope of the problem was larger than initially believed, but still took 6 months to deploy a fix. A major issue is that the AWS IAM Policy Simulator lacks many IAM features, which makes it difficult and time consuming to properly test IAM policies.",
+          "url": "https://www.thestack.technology/aws-sts-bug-stedi/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thestack.technology",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a17",
+          "order": 2,
+          "title": "A QUICK POST ON CHEN'S ALGORITHM",
+          "summary": "Cryptographer and Professor Matthew Green addresses the new e-print authored by Yilei Chen, “Quantum Algorithms for Lattice Problems,\" which could potentially threaten current lattice-based encryption schemes. Despite the significance of this discovery, it may not immediately affect widely used schemes like Kyber or Dilithium. The cryptography community is closely monitoring this development for potential implications for future encryption security.",
+          "url": "https://blog.cryptographyengineering.com/2024/04/16/a-quick-post-on-chens-algorithm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.cryptographyengineering.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a18",
+          "order": 3,
+          "title": "FTC FINES MENTAL HEALTH STARTUP CEREBRAL $7 MILLION FOR MAJOR PRIVACY VIOLATIONS",
+          "summary": "The FTC fined Cerebral $7 million for sharing users' sensitive health data with third parties without consent. Cerebral misled consumers about its privacy practices and failed to protect their information. The company must now improve its privacy policies and delete unnecessary consumer data.",
+          "url": "https://thehackernews.com/2024/04/ftc-fines-mental-health-startup.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-04-17:a19",
+          "order": 1,
+          "title": "CHIRP SYSTEMS VULNERABILITY",
+          "summary": "Chirp Systems' smart locks have a security flaw allowing remote access to 50,000 homes - the company hasn't fixed it despite being notified in 2021.",
+          "url": "https://krebsonsecurity.com/2024/04/crickets-from-chirp-systems-in-smart-lock-key-leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a20",
+          "order": 2,
+          "title": "NSA PUBLISHES GUIDANCE FOR STRENGTHENING AI SYSTEM SECURITY",
+          "summary": "The NSA has released guidance aimed at national security and defense companies deploying AI systems for securing AI systems to prevent malicious activities.",
+          "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3741371/nsa-publishes-guidance-for-strengthening-ai-system-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "nsa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-04-17:a21",
+          "order": 3,
+          "title": "DDOS THREAT REPORT FOR 2024 Q1",
+          "summary": "Cloudflare's DDOS Threat Report for 2024 Q1 contains interesting tidbits like how Sweden experienced a 466% surge in DDoS attacks following its acceptance to the NATO alliance.",
+          "url": "https://blog.cloudflare.com/ddos-threat-report-for-2024-q1?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

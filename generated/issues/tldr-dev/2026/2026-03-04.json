@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-03-04",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-03-04",
+  "source_path": "TLDR Dev/article_04-03-2026.md",
+  "source_content_hash": "sha256:b101d424b36e3cbdee75c5d16fcfc24ebdf9b123477233375bbbd5dae92ce287",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-03-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a04",
+          "order": 1,
+          "title": "DON'T BUILD ENTERPRISE SOFTWARE ON VIBES",
+          "summary": "Most teams are letting AI decide how they build software. Then they wonder why AI agents don't follow their rules.",
+          "url": "https://packmind.com/?utm_source=tldr&utm_medium=paid_newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "packmind.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a04",
+          "order": 2,
+          "title": "Try Packmind (Managed or Open Source)",
+          "summary": "",
+          "url": "https://packmind.com/?utm_source=tldr&utm_medium=paid_newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "packmind.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a05",
+          "order": 1,
+          "title": "SEVEN YEARS TO TYPESCRIPT: MIGRATING 11,000 FILES AT PATREON",
+          "summary": "Patreon successfully completed a seven-year migration (2019-2026) of its entire 11,000-file, 1 million-line frontend codebase from JavaScript to TypeScript. The process evolved from an initial grassroots adoption to a dedicated infrastructure development phase, establishing foundational types and CI checks. The final and most accelerated phase, starting in 2025, used AI-powered codemods and advanced workflows to tackle complex legacy code.",
+          "url": "https://www.patreon.com/posts/seven-years-to-typescript-152144830?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "patreon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a06",
+          "order": 2,
+          "title": "SCALING REDIRECTS TO INFINITY ON VERCEL",
+          "summary": "Vercel had latency and cost challenges scaling web redirects to millions using existing routing rules and middleware. Their initial solution involved sharding redirect data into JSONL files and using Bloom filters for fast \"no redirect\" checks, but parsing entire JSON shards for positive matches still caused performance bottlenecks. To overcome this, they implemented a binary search over sorted redirect keys within each shard, allowing them to retrieve individual redirect data without parsing the entire shard.",
+          "url": "https://vercel.com/blog/scaling-redirects-to-infinity-on-vercel?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a07",
+          "order": 3,
+          "title": "HALVING NODE.JS MEMORY USAGE",
+          "summary": "Platformatic figured out how to cut Node.js memory usage in half by enabling V8's pointer compression, a feature that shrinks internal pointers from 64 to 32 bits. It required zero code changes and just a Docker image swap. Their AWS benchmarks showed 50% less memory with only ~2.5% latency overhead, and P99 latency improved because garbage collection had less work to do.",
+          "url": "https://blog.platformatic.dev/we-cut-nodejs-memory-in-half?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.platformatic.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a08",
+          "order": 1,
+          "title": "DON'T BECOME AN ENGINEERING MANAGER",
+          "summary": "Senior engineers shouldn't accept an Engineering Manager (EM) promotion. It's a poor time to step away from hands-on tech due to rapid changes and AI's impact. The EM career ladder has become flattened and highly competitive.",
+          "url": "https://newsletter.manager.dev/p/dont-become-an-engineering-manager?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "newsletter.manager.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a09",
+          "order": 2,
+          "title": "WHEN AI WRITES THE WORLD'S SOFTWARE, WHO VERIFIES IT?",
+          "summary": "AI is generating a substantial and increasing portion of the world's software, but this unverified code often contains subtle bugs and security vulnerabilities, creating systemic risks. Mathematical proof and formal verification may be the solution, enabling AI to not just write code but to simultaneously generate machine-checked proofs of its correctness.",
+          "url": "https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "leodemoura.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a10",
+          "order": 3,
+          "title": "NOBODY GETS PROMOTED FOR SIMPLICITY",
+          "summary": "Engineering cultures often reward complexity over simplicity, creating an incentive for engineers to over-engineer solutions. This occurs because elaborate systems offer more compelling narratives for promotions and impress interviewers or design review panels, while straightforward, simple implementations are often overlooked.",
+          "url": "https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "terriblesoftware.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a11",
+          "order": 1,
+          "title": "⚒️ BUILD SOMETHING COOL WITH #AIVENFREETIER AND COMPETE FOR A $1,000 PRIZE",
+          "summary": "Do you have mad Kafka, PostgreSQL, MySQL, or Valkey skills? Show the world what you can do [12] - and you might win a $1,000 cash prize! Aiven is offering this reward to whoever can build the most compelling project using its free tier - which offers managed versions of popular",
+          "url": "https://aiven.io/blog/the-aiven-free-tier-competition?utm_medium=sponsored&utm_campaign=core_service_pg&utm_content=tldr-free-tier-competition&utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "aiven.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a12",
+          "order": 2,
+          "title": "open source technologies. Join the contest",
+          "summary": "",
+          "url": "https://aiven.io/blog/the-aiven-free-tier-competition?utm_medium=sponsored&utm_campaign=core_service_pg&utm_content=tldr-free-tier-competition",
+          "reading_time_minutes": null,
+          "source_domain": "aiven.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a13",
+          "order": 3,
+          "title": "GEMINI 3.1 FLASH-LITE: BUILT FOR INTELLIGENCE AT SCALE",
+          "summary": "Google has introduced Gemini 3.1 Flash-Lite, its fastest and most cost-efficient Gemini 3 series model. This new model has good performance and much lower pricing, outperforming its predecessor, 2.5 Flash, in speed and maintaining high quality for its tier.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a14",
+          "order": 4,
+          "title": "GPT-5.3 INSTANT: SMOOTHER, MORE USEFUL EVERYDAY CONVERSATIONS",
+          "summary": "OpenAI has released GPT-5.3 Instant, an update to ChatGPT's most-used model aimed at making everyday conversations more consistently helpful and fluid. This new version delivers more accurate answers, richer and better-contextualized results from web searches, and reduces unnecessary refusals and preachy disclaimers.",
+          "url": "https://links.tldrnewsletter.com/YDxZ8h",
+          "reading_time_minutes": 21,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a15",
+          "order": 5,
+          "title": "REACT NATIVE VIBE CODE SDK",
+          "summary": "React Native Vibe Code is an open-source IDE that allows users to create React Native applications with AI. The platform uses Claude for AI, E2B and Daytona SDK for secure code sandboxing, and is built with Next.js, React Native, and Expo.",
+          "url": "https://github.com/react-native-vibe-code/react-native-vibe-code-sdk?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a16",
+          "order": 1,
+          "title": "HOW TO KILL THE CODE REVIEW",
+          "summary": "Code reviews are already a bottleneck. PRs sit for days, reviewers skim massive diffs, and bugs still slip through. Now that AI is generating more code at a much faster rate, the human checkpoint should be moved upstream to define specs and acceptance criteria, then let layered automated verification (tests, guardrails, and adversarial agents) handle the rest.",
+          "url": "https://www.latent.space/p/reviews-dead?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "latent.space",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a17",
+          "order": 2,
+          "title": "XCODEGEN AND THE QUEST TO MODULARIZE THE WEALTHFRONT IOS APP",
+          "summary": "Wealthfront's decade-old iOS app, a monolithic structure, faced challenges like merge conflicts, opaque build configurations, and slow build times due to its single module design. To address this, the team adopted XcodeGen, an open-source command-line tool that generates Xcode project files from declarative YAML, eliminating the `.xcodeproj` file from source control. This immediately resolved merge conflicts and made build configurations human-readable and auditable.",
+          "url": "https://eng.wealthfront.com/2026/03/02/xcodegen-and-the-quest-to-modularize-the-wealthfront-ios-app/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "eng.wealthfront.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a18",
+          "order": 3,
+          "title": "I PUT A FULL JVM INSIDE A BROWSER TAB. IT \"WORKS\". TECHNICALLY. EVENTUALLY",
+          "summary": "JavaBox is a project that runs a full OpenJDK Java Virtual Machine entirely within a web browser tab, without requiring any server-side processing. This system involves a 227MB WebAssembly blob that emulates a Linux environment via QEMU, which then hosts OpenJDK, with a custom \"CompileServer\" daemon improving compile times. While technically functional, the system is slow, taking approximately 55 seconds to display \"Hello World\" from page load.",
+          "url": "https://bmarti44.substack.com/p/i-put-a-full-jvm-inside-a-browser?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "bmarti44.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-03-04:a19",
+          "order": 1,
+          "title": "FFMPEG AT META: MEDIA PROCESSING AT SCALE",
+          "summary": "Meta deprecated its internal FFmpeg fork by collaborating with open-source developers to upstream key features like multi-lane transcoding and real-time quality metrics, improving its large-scale media processing efficiency and reliability.",
+          "url": "https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a20",
+          "order": 2,
+          "title": "APPLE INTRODUCES MACBOOK PRO WITH ALL-NEW M5 PRO AND M5 MAX",
+          "summary": "Apple has launched its latest MacBook Pro models, equipped with the new M5 Pro and M5 Max chips to deliver breakthrough professional performance and advanced on-device AI capabilities.",
+          "url": "https://www.apple.com/newsroom/2026/03/apple-introduces-macbook-pro-with-all-new-m5-pro-and-m5-max/?utm_source=tldrdev",
+          "reading_time_minutes": 27,
+          "source_domain": "apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a21",
+          "order": 3,
+          "title": "YOU CAN USE NEWLINE CHARACTERS IN URLS",
+          "summary": "Newline characters can be acceptably used within various types of URLs, especially data URLs for embedding content like images.",
+          "url": "https://lemire.me/blog/2026/02/28/you-can-use-newline-characters-in-urls/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "lemire.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-03-04:a22",
+          "order": 4,
+          "title": "THE TWO KINDS OF ERROR",
+          "summary": "Expected errors occur during normal operation and should be handled gracefully, and \"unexpected\" errors are developer faults that should cause the program to crash.",
+          "url": "https://evanhahn.com/the-two-kinds-of-error/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "evanhahn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

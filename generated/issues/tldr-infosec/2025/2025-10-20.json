@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-10-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-20",
+  "source_path": "TLDR InfoSec/article_20-10-2025.md",
+  "source_content_hash": "sha256:c64252e4396de11762dccd63bbb9e7bc5b97aa019ee6404cc86755d77ee456d7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a04",
+          "order": 1,
+          "title": "DISTRIBUTED WORKFORCES",
+          "summary": "As your company grows, you're forced to deal with more devices, more tools, and more complexity - often with the same limited resources.",
+          "url": "https://rippling.registration.goldcast.io/webinar/9b867911-e70c-49e4-8f59-dc2ce0fa76e0?utm_source=tldr&utm_medium=newsletter&utm_campaign=10%2F22+distributed+defense+webinar&utm_content=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "rippling.registration.goldcast.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a04",
+          "order": 2,
+          "title": "Register here →",
+          "summary": "💡 WHILE YOU WAIT FOR WEDNESDAY'S WEBINAR, check out RIPPLING IT'S",
+          "url": "https://rippling.registration.goldcast.io/webinar/9b867911-e70c-49e4-8f59-dc2ce0fa76e0?utm_source=tldr&utm_medium=newsletter&utm_campaign=10%2F22+distributed+defense+webinar&utm_content=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "rippling.registration.goldcast.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a06",
+          "order": 1,
+          "title": "TWO NEW WINDOWS ZERO-DAYS EXPLOITED IN THE WILD - ONE AFFECTS EVERY VERSION EVER SHIPPED",
+          "summary": "Microsoft fixed three actively exploited vulnerabilities as part of the final Patch Tuesday for Windows 10. One of the vulnerabilities is a secure boot bypass, whereas the other two are privilege escalation vulnerabilities. Notably, a vulnerable legacy modem driver could allow for privilege escalation in every version of Windows.",
+          "url": "https://thehackernews.com/2025/10/two-new-windows-zero-days-exploited-in.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a07",
+          "order": 2,
+          "title": "GOOGLE ADS FOR FAKE HOMEBREW, LOGMEIN SITES PUSH INFOSTEALERS",
+          "summary": "Researchers at threat hunting company Hunt.io have uncovered a new malware campaign that uses ClickFix tactics and impersonates popular software to distribute malware. The campaign uses Google Ads to impersonate software like Homebrew, LogMeIn, and TradingView and requests users to copy commands they run in Terminal. The malware then downloads either Odyssey or AMOS infostealers to harvest credentials.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-ads-for-fake-homebrew-logmein-sites-push-infostealers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a08",
+          "order": 3,
+          "title": "PROSPER DATA BREACH IMPACTS 17.6 MILLION ACCOUNTS",
+          "summary": "",
+          "url": "https://www.securityweek.com/prosper-data-breach-impacts-17-6-million-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a09",
+          "order": 1,
+          "title": "HACKING A BANNED CHINESE SECURITY CAMERA",
+          "summary": "A security researcher successfully conducted man-in-the-middle attacks against a banned Chinese security camera, demonstrating that the device fails to verify certificate signing chains properly and transmits unencrypted video data over UDP. While these vulnerabilities are concerning, the real security issue driving the US ban is the camera's automatic firmware update capability, which could allow manufacturers to push malicious software updates in the future. The analysis highlights how even devices with multiple security flaws may pose their most significant risk through remote update mechanisms that users cannot control or audit.",
+          "url": "https://hackaday.com/2025/10/18/hacking-a-banned-chinese-security-camera/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "hackaday.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a10",
+          "order": 2,
+          "title": "DEFENDERWRITE: ABUSING WHITELISTED PROGRAMS FOR ARBITRARY WRITES",
+          "summary": "Antivirus folders typically block file writes to prevent attacks, but some whitelisted Windows programs can bypass these restrictions. DefenderWrite is a tool that identifies which executables can write files into protected antivirus folders without elevated privileges or exploits. By scanning all .exe files and testing their capabilities, the tool reveals weak points in Windows Defender and other major AVs, showing that even protected folders can be compromised for stealthy persistence.",
+          "url": "https://www.zerosalarium.com/2025/10/defenderwrite-abusing-whitelisted-programs-arbitrary-write.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "zerosalarium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a11",
+          "order": 3,
+          "title": "REVISITING BROWSER CACHE SMUGGLING",
+          "summary": "Browser cache smuggling is a technique that abuses how web browsers store files to sneak malicious code onto victims' systems. The method leverages browser caching to download files, then uses COM Hijacking (a way of loading malicious DLLs via Windows registry settings) to achieve persistent code execution each time the browser starts. Steganography is also used to hide additional payloads within cached images, making detection harder. By combining these approaches, attackers can reliably trigger their code from the browser cache without external downloads or easily detectable file changes, bypassing many modern endpoint protections and leaving few obvious traces.",
+          "url": "https://medium.com/@dnem__/revisiting-browser-cache-smuggling-1a8ab374d55e?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a12",
+          "order": 1,
+          "title": "EVERYONE PROMISES TO REDUCE APPSEC ALERT NOISE. HERE'S HOW SEMGREP ACTUALLY ACHIEVES IT",
+          "summary": "",
+          "url": "https://semgrep.dev/resources/semgrep-vs-snyk?utm_source=tldr&utm_medium=paidsocial",
+          "reading_time_minutes": null,
+          "source_domain": "semgrep.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a12",
+          "order": 2,
+          "title": "SEMGREP'S AI ISN'T JUST AN API CALL TO AN LLM - IT CONFIDENTLY HANDLES AROUND 60% OF SAST TRIAGE FOR CUSTOMERS, WITH A 96% HUMAN-AGREE RATE. THIS MEANS SECURITY TEAMS CAN SPEND ALL OF THEIR TIME ON THE ISSUES THAT MATTER, WITHOUT WORRYING THAT THEY'VE MISSED OUT ON ANY REAL ISSUES. See how Semgrep compares to competitors.",
+          "summary": "",
+          "url": "https://semgrep.dev/resources/semgrep-vs-snyk?utm_source=tldr&utm_medium=paidsocial",
+          "reading_time_minutes": null,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a13",
+          "order": 3,
+          "title": "KIEMPOSSIBLE",
+          "summary": "KIEMPossible is a Kubernetes Infrastructure Entitlement Management tool from Palo Alto Networks that provides visibility into permissions and their actual usage across clusters by analyzing RBAC configurations and audit logs from AWS EKS, Azure AKS, GCP GKE, and local Kubernetes environments. The tool flattens complex permission structures into granular entries, correlates them with audit logs to identify last usage timestamps, and stores the results in a MySQL database to help security teams enforce least privilege by identifying unused or risky permissions. It supports workload identity mapping and group inheritance tracking and generates reports on entities with dangerous unused permissions, making reducing attack surface without breaking legitimate access easier.",
+          "url": "https://github.com/PaloAltoNetworks/KIEMPossible?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a14",
+          "order": 4,
+          "title": "KNIGHTER",
+          "summary": "KNighter is an automated static analysis tool from UIUC that uses Large Language Models to synthesize custom code checkers by learning from historical patch commits in C/C++ codebases like the Linux kernel. The tool employs a three-stage pipeline of generation, refinement, and triage to create LLVM-based checkers that identify bug patterns, focusing on finding real-world vulnerabilities in large-scale systems. It integrates with OpenAI, Claude, Google, and DeepSeek models to automatically generate static analysis rules from git commit history, enabling security teams to discover previously unknown bugs based on patterns from past fixes.",
+          "url": "https://github.com/ise-uiuc/KNighter?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a15",
+          "order": 5,
+          "title": "FUZZFORGE AI",
+          "summary": "AI-powered workflow automation and AI Agents platform for AppSec, Fuzzing, and Offensive Security. Automate vulnerability discovery with intelligent fuzzing, AI-driven analysis, and a marketplace of security tools.",
+          "url": "https://github.com/FuzzingLabs/fuzzforge_ai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a16",
+          "order": 1,
+          "title": "EUROPOL DISMANTLES SIM FARM NETWORK POWERING 49 MILLION FAKE ACCOUNTS WORLDWIDE",
+          "summary": "Europol's Operation SIMCARTEL dismantled a sophisticated cybercrime-as-a-service platform that operated SIM farms with 40,000 active SIM cards, enabling the creation of over 49 million fake online accounts used for phishing, investment fraud, and other criminal activities. The operation resulted in seven arrests, seizure of 1,200 SIM box devices, takedown of two websites, and freezing of nearly €700,000 in assets across multiple countries. Security professionals should monitor for SIM farm indicators in their threat detection systems and implement stronger verification processes that go beyond SMS-based authentication, as these operations demonstrate how easily criminals can bypass phone number verification on a massive scale.",
+          "url": "https://thehackernews.com/2025/10/europol-dismantles-sim-farm-network.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a17",
+          "order": 2,
+          "title": "NORTH KOREAN HACKERS COMBINE BEAVERTAIL AND OTTERCOOKIE INTO ADVANCED JS MALWARE",
+          "summary": "North Korean threat actors behind the Contagious Interview campaign have merged functionality from their BeaverTail and OtterCookie malware families, creating a more sophisticated JavaScript-based information stealer with enhanced keylogging, screenshot capture, and cryptocurrency wallet theft capabilities. The evolved malware uses legitimate npm packages and supply chain compromises to distribute through fake job interview processes, with new variants like OtterCandy combining remote access trojan functionality and utilizing blockchain-based command-and-control infrastructure via Ethereum and BNB Smart Chain. Security professionals should monitor for suspicious npm packages, implement stronger validation for job applicant technical assessments, and watch for the specific malware indicators, including the \"node-nvm-ssh\" package and associated file patterns used in these supply chain attacks.",
+          "url": "https://thehackernews.com/2025/10/north-korean-hackers-combine-beavertail.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a18",
+          "order": 3,
+          "title": "VANILLA TEMPEST'S RHYSIDA RANSOMWARE ATTACKS FOILED",
+          "summary": "Microsoft dismantled an attack campaign by Vanilla Tempest (also called Vice Society), which used fake Microsoft Teams installers and over 200 fraudulent certificates to spread the Rhysida ransomware. The attackers used malicious ads and SEO techniques to lure users, delivering malware that enabled data theft and additional payload delivery.",
+          "url": "https://links.tldrnewsletter.com/tZEIcc",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-20:a19",
+          "order": 1,
+          "title": "STOP MANAGING FIREWALL RULES",
+          "summary": "Looking for advanced threat protection with a lean team? Intrusion Shield for AWS draws on 30 years of IP and domain reputation history to write its own network rules in real time. Start your free trial.",
+          "url": "https://www.intrusion.com/intrusion-shield-cloud-for-aws-tldr/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_medium=102025",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a19",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.intrusion.com/intrusion-shield-cloud-for-aws-tldr/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_medium=102025",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a20",
+          "order": 3,
+          "title": "BEIJING ALLEGES “IRREFUTABLE EVIDENCE” LINKING US TO MAJOR CYBERATTACK ON CHINESE AGENCY",
+          "summary": "China's State Security Ministry claims the NSA has been exploiting vulnerabilities in employees' mobile devices to gain unauthorized access to the National Time Service Center since 2022, using stolen credentials and 42 types of cyberattack tools to target the facility's timing systems and internal networks.",
+          "url": "https://links.tldrnewsletter.com/PKsHwp",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-20:a21",
+          "order": 4,
+          "title": "COLLINS AEROSPACE ATTACK CLAIMED BY EVEREST, LINKING RANSOMWARE GROUP TO LAST MONTH'S EUROPEAN AIRPORT CHAOS",
+          "summary": "The Everest ransomware group claims responsibility for breaching Collins Aerospace's MUSE check-in software in September, allegedly exfiltrating 50GB of data and causing days of disruption at major European airports, including Heathrow, Brussels, Berlin, and Dublin, by forcing manual check-in operations.",
+          "url": "https://links.tldrnewsletter.com/VBFkKX",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

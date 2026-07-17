@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-07-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-07-29",
+  "source_path": "TLDR InfoSec/article_29-07-2024.md",
+  "source_content_hash": "sha256:cd80acedfc9584d67de0583b923aafe21c128d97c4a59e139dc2ecd08bc59afb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-07-29",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a04",
+          "order": 1,
+          "title": "PROBABLY OVERPAYING FOR IT",
+          "summary": "Manual penetration testing will only get you so far, and most companies rarely find the time and resources to do it regularly.",
+          "url": "https://www.vonahi.io/vpentest-it-teams?utm_source=701Rp00000Boht4",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a04",
+          "order": 2,
+          "title": "Start for free now →",
+          "summary": "",
+          "url": "https://www.vonahi.io/vpentest-it-teams?utm_source=701Rp00000Boht4",
+          "reading_time_minutes": null,
+          "source_domain": "vonahi.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a05",
+          "order": 1,
+          "title": "MALICIOUS PYTHON PACKAGE TARGETS MACOS DEVELOPERS TO ACCESS THEIR GCP ACCOUNTS",
+          "summary": "A Python package named \"lr-utils-lib\" was found to have hidden malicious code targeting macOS systems to steal Google Cloud Platform credentials. The malware sends harvested credentials to a remote server and is linked to a fake LinkedIn profile, raising concerns about social engineering tactics and AI verification challenges. This incident highlights the importance of cybersecurity practices, such as vetting third-party packages and critically evaluating information from AI sources, in preventing potential security risks for individuals and enterprises.",
+          "url": "https://checkmarx.com/blog/malicious-python-package-targets-macos-developers-to-access-their-gcp-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a06",
+          "order": 2,
+          "title": "CRYPTO EXCHANGE GEMINI DISCLOSES THIRD-PARTY DATA BREACH",
+          "summary": "Gemini cryptocurrency exchange disclosed a data breach involving banking information of some customers. The breach was caused by a cyberattack on a third-party service provider. Gemini is advising impacted individuals to stay vigilant and take measures to protect their bank accounts from potential fraud.",
+          "url": "https://www.bleepingcomputer.com/news/security/crypto-exchange-gemini-discloses-third-party-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a07",
+          "order": 3,
+          "title": "CRITICAL BUG IN DOCKER ENGINE ALLOWED ATTACKERS TO BYPASS AUTHORIZATION PLUGINS",
+          "summary": "A critical bug in Docker Engine lets attackers bypass authorization plugins in certain versions by sending API requests with no content, leading to potential unauthorized actions like privilege escalation. The vulnerability, tracked as CVE-2024-41110, affects specific versions of Docker Engine up to v27.1.0 and Docker Desktop up to version 4.32.0. It can be mitigated by updating to the latest patched versions, avoiding AuthZ plugins, and restricting access to the Docker API.",
+          "url": "https://securityaffairs.com/166160/hacking/docker-engine-critical-flaw.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a08",
+          "order": 1,
+          "title": "MAPPING THE ATTACK SURFACE FROM THE INSIDE",
+          "summary": "The Mercari Security team discusses its process for creating a tool to map an attack surface. The first iteration of the tool sought to scan IaC for domains and scan them using the Burp Enterprise API. This strategy failed, as their IaC did not contain all domains. The next iteration involved directly querying asset inventories from AWS and GCP and then spinning up a GCR task to utilize a Chromium browser to take screenshots and then visualize the hostnames and IP addresses found.",
+          "url": "https://engineering.mercari.com/en/blog/entry/20240722-mapping-the-attack-surface-from-the-inside/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "engineering.mercari.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a09",
+          "order": 2,
+          "title": "THREAT HUNTING - SUSPICIOUS NAMED PIPES",
+          "summary": "This blog post discusses how Named Pipes can be used by attackers for Command and Control and how defenders like EDRs can detect these usages. Attackers can exploit named pipes to move laterally within a network. Monitoring named pipe creation and communication patterns can help detect malicious activities.",
+          "url": "https://links.tldrnewsletter.com/TDG4nl",
+          "reading_time_minutes": 17,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a10",
+          "order": 3,
+          "title": "NVIDIA EMBRACES LLMS & COMMONSENSE CYBERSECURITY STRATEGY",
+          "summary": "Nvidia's team will be sharing insights from red-teaming the company's AI systems. While AI applications pose significant enterprise risks due to their privileged status, existing security practices can be adapted to address these new threats.",
+          "url": "https://www.darkreading.com/cyber-risk/nvidia-embraces-llms-and-commonsense-cybersecurity-strategy?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a11",
+          "order": 1,
+          "title": "HOW TO FIX 53 OPEN SOURCE SECURITY ISSUES WITH 1 PACKAGE UPGRADE",
+          "summary": "",
+          "url": "https://fossa.com/?utm_campaign=free_launch&utm_medium=tldr&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "fossa.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a11",
+          "order": 2,
+          "title": "Tired of endlessly triaging open source vulnerabilities? FOSSA",
+          "summary": "cuts through the noise by identifying package upgrades that resolve multiple security issues at once. Now you can knock out dozens of vulnerabilities with one fix, instead of chasing CVEs one at a time.",
+          "url": "https://fossa.com/?utm_campaign=free_launch&utm_medium=tldr&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "fossa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a12",
+          "order": 3,
+          "title": "Ready to work smarter? Try FOSSA free today",
+          "summary": "",
+          "url": "https://app.fossa.com/auth/register?utm_campaign=free_launch&utm_medium=tldr&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "app.fossa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a13",
+          "order": 4,
+          "title": "ASKJOE",
+          "summary": "AskJOE is a Ghidra script that calls OpenAI's API to add meaning to decompiled functions.",
+          "url": "https://github.com/securityjoes/AskJOE?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a14",
+          "order": 5,
+          "title": "INTRODUCING SIGMA FILTERS",
+          "summary": "Sigma Filters are a new tool that helps Security Operations Centers manage threat detection more effectively. They allow for the creation of specific filters separate from detection rules, improving rule management and reducing false positives. By using Sigma Filters, SOC analysts can better tailor detection rules to their unique environments and avoid detection evasion by attackers.",
+          "url": "https://links.tldrnewsletter.com/aAp8Be",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a15",
+          "order": 6,
+          "title": "ZEROTIER (PRODUCT LAUNCH)",
+          "summary": "Zerotier creates secure connections between devices such as routers or IoT devices and has them talking away as if they're on a local network to secure them.",
+          "url": "https://www.zerotier.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "zerotier.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a16",
+          "order": 1,
+          "title": "BUILDING A SECURITY PLATFORM ENGINEERING TEAM",
+          "summary": "Kane Narraway, a security manager at Canva, writes about the benefits of a Security Platform Engineering team that can develop new solutions to scale security as well as build secure-by-default systems with other teams. Narraway reflects on the reality that in many organizations, security engineers form this function as another part of their role which can lead to complications when employees leave or maintain the system. Narraway suggests that this function should come after a security team is fully staffed and should ideally be composed of at least two software engineers and a manager.",
+          "url": "https://kanenarraway.com/posts/building-a-security-platform-engineering-team/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "kanenarraway.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a17",
+          "order": 2,
+          "title": "DAGGERFLY: ESPIONAGE GROUP MAKES MAJOR UPDATE TO TOOLSET",
+          "summary": "The Macma backdoor is linked to the Daggerfly toolkit. Symantec has shared code and infrastructure with other known Daggerfly malware. A new Windows backdoor named Suzafk, capable of using TCP or OneDrive for command and control purposes, has been added to the Daggerfly toolkit. Daggerfly is a sophisticated espionage group with a wide range of tools targeting various operating systems and the ability to quickly update its toolset to evade detection.",
+          "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/daggerfly-espionage-updated-toolset?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "symantec-enterprise-blogs.security.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a18",
+          "order": 3,
+          "title": "CHECK POINT RESEARCH REPORTS HIGHEST INCREASE OF GLOBAL CYBER ATTACKS SEEN IN LAST TWO YEARS – A 30% INCREASE IN Q2 2024 GLOBAL CYBER ATTACKS",
+          "summary": "There was a 30% YoY increase in global cyberattacks in Q2 2024, averaging 1,636 attacks per organization weekly. Education/Research, Government/Military, and Healthcare were the most targeted sectors with Latin America, Africa, and Europe seeing the largest increase in attacks.",
+          "url": "https://links.tldrnewsletter.com/YPkOOX",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-29:a19",
+          "order": 1,
+          "title": "X BEGINS TRAINING GROK AI WITH YOUR POSTS, HERE'S HOW TO DISABLE",
+          "summary": "X quietly started using public posts to train its Grok AI chat platform without notifying users - this post discusses how this can be disabled.",
+          "url": "https://www.bleepingcomputer.com/news/security/x-begins-training-grok-ai-with-your-posts-heres-how-to-disable/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a20",
+          "order": 2,
+          "title": "CHROME WILL NOW PROMPT SOME USERS TO SEND PASSWORDS FOR SUSPICIOUS FILES",
+          "summary": "Google is extending Enhanced mode feature for Safe Browsing in Chrome to allow users to upload password-protected executable files for deep scanning for malware detection.",
+          "url": "https://arstechnica.com/security/2024/07/google-overhauls-chromes-safe-browsing-protection-to-scan-password-protected-files/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-29:a21",
+          "order": 3,
+          "title": "US DOJ INDICTS NORTH KOREAN HACKER FOR RANSOMWARE ATTACKS ON HOSPITALS",
+          "summary": "The US Department of Justice indicted a North Korean hacker for ransomware attacks on healthcare facilities, linking the funds to illicit activities in North Korea.",
+          "url": "https://thehackernews.com/2024/07/us-doj-indicts-north-korean-hacker-for.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

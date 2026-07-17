@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-07-01",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-01",
+  "source_path": "TLDR Web Dev/article_01-07-2025.md",
+  "source_content_hash": "sha256:e04e5cb72d5b4a916458606ee266d8fb26be303b794e4a87e6d2cbe3455f8d08",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-01",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a04",
+          "order": 1,
+          "title": "HOW TO ACTUALLY USE CODING AGENTS",
+          "summary": "Autonomous coding agents are everywhere: Devin, Codex, Jules, etc. But how do you actually use them?",
+          "url": "https://devin.ai/agents101?utm_medium=newsletter&utm_source=tldr-webdev&utm_campaign=20250701",
+          "reading_time_minutes": null,
+          "source_domain": "devin.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a07",
+          "order": 1,
+          "title": "REVERSE ENGINEERING VERCEL'S BOTID",
+          "summary": "Vercel's BotID is an anti-bot solution, which in its Basic mode uses client-side signals to detect bots. Basic mode uses obfuscated JavaScript to collect browser fingerprints and detect automation frameworks, but the current implementation appears to be passive, collecting data rather than actively blocking bots. Deep Analysis mode uses an anti-bot system by Kasada, which is a software security company.",
+          "url": "https://www.nullpt.rs/reversing-botid?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "nullpt.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a08",
+          "order": 2,
+          "title": "FINDING PERFORMANCE PROBLEMS BY DIFFING TWO GO PROFILES",
+          "summary": "The DoltHub team had a mysterious 3x performance regression while working on Doltgres (a version-controlled Postgres-compatible database) compatibility with SQLAlchemy. They used Go's pprof tool to diff performance profiles between branches, which revealed that a hard-coded parameter was unnecessarily calling an expensive method to generate system table names on every table lookup.",
+          "url": "https://dolthub.com/blog/2025-06-20-go-pprof-diffing?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "dolthub.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a09",
+          "order": 1,
+          "title": "THERE ARE NO NEW IDEAS IN AI… ONLY NEW DATASETS",
+          "summary": "Major AI breakthroughs aren't driven by novel ideas, but rather by unlocking new datasets. The core mechanisms behind recent advancements have existed for a while, so major progress happens when AI can learn from previously untapped sources like ImageNet, the internet, human feedback, and verifiers. The next paradigm shift won't come from better algorithms, but from harnessing data from video or embodied systems like robots.",
+          "url": "https://blog.jxmo.io/p/there-are-no-new-ideas-in-ai-only?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.jxmo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a10",
+          "order": 2,
+          "title": "THE NEW SKILL IN AI IS NOT PROMPTING, IT'S CONTEXT ENGINEERING",
+          "summary": "Unlike prompt engineering, context engineering designs dynamic systems that deliver the right information and tools at the right time for LLMs to accomplish tasks. This means structuring various forms of context, like instructions, short and long-term memory, retrieved data, and available tools, into a properly detailed input. The quality of this context is necessary to better AI agents.",
+          "url": "https://www.philschmid.de/context-engineering?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "philschmid.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a11",
+          "order": 3,
+          "title": "REACT STILL FEELS INSANE AND NO ONE IS TALKING ABOUT IT",
+          "summary": "React has become overly complex and confusing to use. The components-based architecture coupled with features like React Hooks leads to convoluted state management and hard-to-parse code. Part of this complexity is due to the inherent challenge of building reactive UIs with many inputs and outputs, rather than it being a React-specific problem.",
+          "url": "https://mbrizic.com/blog/react-is-insane/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "mbrizic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a12",
+          "order": 1,
+          "title": "CLAUDE CODE HOOKS",
+          "summary": "Claude Code hooks are user-defined shell commands that extend Claude Code's behavior by executing at specific points in its lifecycle. These hooks offer control over actions like notifications, code formatting, logging, feedback, and custom permissions. They can be configured in JSON settings files (user, project, and local) and can be organized by event type (PreToolUse, PostToolUse, Notification, and Stop) and matchers.",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/hooks?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "docs.anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a13",
+          "order": 2,
+          "title": "REACT NATIVE NITRO IMAGE",
+          "summary": "React Native Nitro Image is a high-performance image processing library built with Nitro. It provides an instance-based Image type with pixel data access and supports in-memory operations like resizing and cropping. The library has fast web image loading and caching using SDWebImage (iOS) and Coil (Android), along with ThumbHash support for placeholders.",
+          "url": "https://github.com/mrousavy/react-native-nitro-image?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a14",
+          "order": 3,
+          "title": "CERTMATE",
+          "summary": "CertMate is an open-source SSL certificate management system designed for modern infra, with multi-DNS provider support, Docker containerization, and a REST API. It automates certificate renewal.",
+          "url": "https://github.com/fabriziosalmi/certmate?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a15",
+          "order": 1,
+          "title": "TESTING OPENAI CODEX AND COMPARING IT TO CLAUDE CODE",
+          "summary": "OpenAI Codex and Claude Code can both be used as command-line AI coding assistants. This developer tested them on a JSON file merging task. Codex successfully completed the task with detailed explanations, while Claude Code wasn't able to. Though Codex was less transparent about its process, it was powerful and successful, which means it may be more useful for experienced devs over vibe coders.",
+          "url": "https://thenewstack.io/testing-openai-codex-and-comparing-it-to-claude-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a16",
+          "order": 2,
+          "title": "RELIABILITY FOR UNRELIABLE LLMS",
+          "summary": "As generative AI becomes more integrated into software, these systems will end up inheriting the unreliable, non-deterministic nature of LLMs. This isn't great for enterprise software that requires reliable, predictable results, which means companies need to implement guardrails on inputs/outputs, filtering mechanisms, and specialized observability tools to monitor AI behavior.",
+          "url": "https://stackoverflow.blog/2025/06/30/reliability-for-unreliable-llms?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-01:a17",
+          "order": 1,
+          "title": "I WRITE TYPE SAFE GENERIC DATA STRUCTURES IN C",
+          "summary": "Unions and macros in C can be used to create type-safe generic data structures like linked lists, maps, and arrays, which allows for compile-time type checking and better memory management.",
+          "url": "https://danielchasehooper.com/posts/typechecked-generic-c-data-structures/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "danielchasehooper.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a18",
+          "order": 2,
+          "title": "PREFER GAPS TO MARGINS",
+          "summary": "Gaps in CSS are better than margins for spacing elements in layouts because gaps are applied by parent containers (using Flexbox or Grid) to space their children, while margins are applied to individual elements, requiring more manual code management.",
+          "url": "https://kyleshevlin.com/prefer-gaps-to-margins?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "kyleshevlin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a19",
+          "order": 3,
+          "title": "DON'T BE ASHAMED TO SAY \"I DON'T KNOW\": THE QUIET POWER OF HONESTY",
+          "summary": "Admitting \"I don't know\" is better for creating trust with others and is better for learning.",
+          "url": "https://www.thecoder.cafe/p/i-dont-know?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "thecoder.cafe",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-01:a20",
+          "order": 4,
+          "title": "SNAPAI",
+          "summary": "SnapAI is an AI-powered CLI tool for React Native & Expo devs to generate app icons quickly using OpenAI's image generation models.",
+          "url": "https://github.com/betomoedano/snapai?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-05-13",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-05-13",
+  "source_path": "TLDR Dev/article_13-05-2026.md",
+  "source_content_hash": "sha256:6254c70ed0c36f4d48dae17656f6b8bef68633027ced682bf5816872ed687801",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-05-13",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-13:a05",
+          "order": 1,
+          "title": "WHEN \"IDLE\" ISN'T IDLE: HOW A LINUX KERNEL OPTIMIZATION BECAME A QUIC BUG",
+          "summary": "A performance bug in the quiche implementation of the CUBIC congestion controller caused the congestion window to get stuck at its minimum due to a Linux kernel optimization for idle periods, inadvertently triggering a \"death spiral\" that prevented data transfer rate increase. The issue was resolved by adjusting the code to measure idle time from the most recent acknowledgment instead of the last packet sent, allowing the controller to properly distinguish between true idleness and network congestion.",
+          "url": "https://blog.cloudflare.com/quic-death-spiral-fix/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a06",
+          "order": 2,
+          "title": "HOW DISCORD AUTOMATES SCYLLADB CLUSTERS AT SCALE",
+          "summary": "",
+          "url": "https://discord.com/blog/how-discord-automates-scylladb-clusters-at-scale?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "discord.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-13:a07",
+          "order": 1,
+          "title": "WHY SENIOR DEVELOPERS FAIL TO COMMUNICATE THEIR EXPERTISE",
+          "summary": "Senior developers struggle to communicate effectively because their focus on managing system complexity conflicts with the business priority of market speed. Experts can bridge this gap by framing technical caution as a resourceful path to faster business goal achievement.",
+          "url": "https://www.nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "nair.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a08",
+          "order": 2,
+          "title": "WHEN LIFE GIVES YOU LEMONS, WRITE BETTER ERROR MESSAGES",
+          "summary": "Wix launched a massive initiative to replace thousands of generic error messages with empathetic, user-centered communication that avoids jargon and offers clear, actionable resolution steps.",
+          "url": "https://links.tldrnewsletter.com/KPPfjm",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a09",
+          "order": 3,
+          "title": "TREAT AGENT OUTPUT LIKE COMPILER OUTPUT",
+          "summary": "Discomfort with “lights-out” AI-generated codebases mirrors a question already solved for compilers: nobody reviews compiler output because upstream apparatus (type systems and specs) and downstream apparatus (tests, monitoring, and rollback) made reading the artifact unnecessary. The equivalent doesn't yet exist for coding agents — prompts aren't formal specs, test suites can't catch plausible-but-wrong code at 50x human rate, and AI-checks-AI pipelines are bolt-on rather than first-class CI. Lights-out codebases should be treated as a design target that specifies what verification infrastructure must be built, not an inevitability to brace for.",
+          "url": "https://skiplabs.io/blog/codegen_as_compiler?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "skiplabs.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-13:a10",
+          "order": 1,
+          "title": "CLERK CLI: ADD AUTH TO YOUR PROJECT FROM THE TERMINAL",
+          "summary": "Run clerk init and Clerk detects your framework, scaffolds auth, and gets everything ready to configure. Manage sign-in methods, redirects, and session policies via clerk config — no dashboard required. Open source and available today.",
+          "url": "https://go.clerk.com/ykRzhoK?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a11",
+          "order": 2,
+          "title": "GET STARTED",
+          "summary": "",
+          "url": "https://go.clerk.com/ykRzhoK",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a12",
+          "order": 3,
+          "title": "STATEWRIGHT",
+          "summary": "Statewright uses state machine guardrails to regulate an AI agent's tool access during workflow phases like planning and testing, preventing errors and inefficient usage. This deterministic approach increases success rates on coding benchmarks by narrowing the problem space.",
+          "url": "https://github.com/statewright/statewright?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a13",
+          "order": 4,
+          "title": "AGENTMEMORY",
+          "summary": "Agentmemory provides persistent, long-term memory for AI coding agents like Claude Code and Cursor, using a hybrid search system for high retrieval accuracy across development sessions. This centralized server architecture integrates with various agents, reducing token consumption by over 90%.",
+          "url": "https://github.com/rohitg00/agentmemory?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-13:a14",
+          "order": 1,
+          "title": "INSTRUCTURE PAYS RANSOM TO CANVAS HACKERS",
+          "summary": "Instructure paid an undisclosed ransom to ShinyHunters following two breaches of its Canvas learning management system, which compromised the personal data of approximately 275 million users and caused service disruptions. Though the company received a guarantee that the stolen data was destroyed, experts caution that paying the ransom incentivizes future attacks and offers no absolute certainty that the information will not be leaked.",
+          "url": "https://www.insidehighered.com/news/tech-innovation/administrative-tech/2026/05/11/instructure-pays-ransom-canvas-hackers?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "insidehighered.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a15",
+          "order": 2,
+          "title": "BUILDING A NATURAL LANGUAGE INTERFACE TO THE SPOTIFY ADS API WITH CLAUDE CODE PLUGINS",
+          "summary": "The Spotify Ads API plugin for Claude Code allows users to manage complex Spotify advertising campaigns using simple natural language, which the tool translates into multi-step API sequences. This open-source system ensures transparent execution by using a Markdown-based architecture built on the raw OpenAPI spec.",
+          "url": "https://engineering.atspotify.com/2026/5/spotify-ads-api-claude-plugins?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "engineering.atspotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-13:a16",
+          "order": 1,
+          "title": "MOBILE OBSERVABILITY SHOULDN'T SUCK",
+          "summary": "Query reality with real-time, accurate views of your user experience across billions of devices, no sampling. 52M+ concurrent streams, 1B+",
+          "url": "https://bitdrift.io/signup?utm_campaign=sp&utm_medium=cpc&utm_source=tldr-dev-ql",
+          "reading_time_minutes": null,
+          "source_domain": "bitdrift.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a16",
+          "order": 2,
+          "title": "installs. Try bitdrift.",
+          "summary": "",
+          "url": "https://bitdrift.io/signup?utm_campaign=sp&utm_medium=cpc&utm_source=tldr-dev-ql",
+          "reading_time_minutes": null,
+          "source_domain": "bitdrift.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a17",
+          "order": 3,
+          "title": "SOFTWARE INTERNALS BOOK CLUB",
+          "summary": "The Software Internals Book Club is a global, email-based community where developers of all levels engage in expert-led discussions on high-caliber technical books covering databases, distributed systems, and software performance.",
+          "url": "https://eatonphil.com/bookclub.html?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "eatonphil.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a18",
+          "order": 4,
+          "title": "SHAPING THE FUTURE OF AI INTERACTION BY REIMAGINING THE MOUSE POINTER",
+          "summary": "A new AI-enhanced pointer reimagines human-computer interaction by using context-aware technology to allow users to navigate, edit, and command digital elements through intuitive gestures and natural language instead of complex text prompts.",
+          "url": "https://deepmind.google/blog/ai-pointer/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "deepmind.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a19",
+          "order": 5,
+          "title": "LEARNING SOFTWARE ARCHITECTURE",
+          "summary": "Mastering software architecture depends on gaining practical experience and recognizing that organizational incentives and social dynamics shape a system's design far more than formal education or the code itself.",
+          "url": "https://matklad.github.io/2026/05/12/software-architecture.html?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "matklad.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-13:a20",
+          "order": 6,
+          "title": "REPLACING A 3 GB SQLITE DATABASE WITH A 10 MB FST (FINITE STATE TRANSDUCER) BINARY",
+          "summary": "Transitioning a Finnish-English dictionary from a 3 GB SQLite database to a 10 MB finite state transducer reduced its storage requirements by 300x by using the data structure's ability to efficiently compress the frequent prefix and suffix patterns found in such languages.",
+          "url": "https://til.andrew-quinn.me/posts/replacing-a-3-gb-sqlite-database-with-a-7-mb-fst-finite-state-trandsucer-binary/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "til.andrew-quinn.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

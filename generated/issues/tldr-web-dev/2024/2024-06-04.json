@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-06-04",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-06-04",
+  "source_path": "TLDR Web Dev/article_04-06-2024.md",
+  "source_content_hash": "sha256:65eb58065d51622f18b2062e351a962b0fce4bd69869596dff6e3cd87778526a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-06-04",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-04:a04",
+          "order": 1,
+          "title": "PROMISES FROM THE GROUND UP",
+          "summary": "Promises in JavaScript aren't always intuitive to use, but they're required to be productive with JavaScript. Promises are needed because JavaScript is single-threaded, which can cause issues when blocking operations like window.prompt() are used. This post dives into the mechanics of Promises, their states (pending, fulfilled, rejected), and how to work with them using the .then() and .catch() methods. It also covers creating custom Promises, chaining them together, passing data between them, and the modern async/await syntax for a more synchronous-like experience.",
+          "url": "https://www.joshwcomeau.com/javascript/promises/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a05",
+          "order": 2,
+          "title": "THE ARCHITECTURE OF GRAB'S DATA LAKE",
+          "summary": "Grab manages its data using a data lake, using different storage formats for high and low throughput data. For high-throughput data, which is frequently updated, it uses Apache Avro with a Merge on Read (MOR) strategy, appending new data to log files for efficient writes and periodically compacting them for manageable reads. For low-throughput data with infrequent updates, it uses Parquet with Copy on Write (CoW), creating new file versions for each write.",
+          "url": "https://blog.quastor.org/p/architecture-grabs-data-lake?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a06",
+          "order": 3,
+          "title": "PARSING JSON IS A MINEFIELD",
+          "summary": "Parsing JSON, despite its seemingly simple format, is actually quite challenging because there are so many specifications that can be interpreted in different ways. This has led to inconsistencies in how different JSON parsers handle edge cases, extreme values, and maliciously crafted payloads, resulting in potential bugs, crashes, and denial-of-service vulnerabilities. This article goes into detail about this issue with examples of different types of objects (arrays, objects, numbers, and strings) combined with different types of parsers (C Parsers, Regex, and more).",
+          "url": "https://seriot.ch/projects/parsing_json.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 33,
+          "source_domain": "seriot.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-04:a07",
+          "order": 1,
+          "title": "WHY I RETIRED FROM THE TECH CRUSADES",
+          "summary": "The creator of Ruby on Rails, David Heinemeier Hansson, realized that the success of the framework was not due to his attempts to convince others, but rather by showcasing its capabilities and letting others decide for themselves. He now believes in respecting the various preferences of programmers and encouraging them to find the language that best suits their individual style and needs.",
+          "url": "https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "world.hey.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a08",
+          "order": 2,
+          "title": "PLEASE SUPPORT “SKIP TO MAIN CONTENT” ON YOUR DOCS SITE",
+          "summary": "The \"Skip to main content\" link in website accessibility for keyboard-based navigation is really useful for a lot of users. Adding it to documentation sites should be standard.",
+          "url": "https://technicalwriting.dev/a11y/skip.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "technicalwriting.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a09",
+          "order": 3,
+          "title": "SCIENTISTS SHOULD USE AI AS A TOOL, NOT AN ORACLE",
+          "summary": "",
+          "url": "https://www.aisnakeoil.com/p/scientists-should-use-ai-as-a-tool?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "aisnakeoil.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-04:a10",
+          "order": 1,
+          "title": "😘 KISS BUGS GOODBYE",
+          "summary": "QA Wolf [10] gets web apps to 80% automated end-to-end test coverage in just 4 months — and it requires zero effort (your team will thank you).",
+          "url": "https://www.qawolf.com/?utm_campaign=KissBugsGoodbye06042024&utm_source=tldrwebdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a11",
+          "order": 2,
+          "title": "NEW TO THE WEB PLATFORM IN MAY",
+          "summary": "Several new features were added to web browsers in May 2024, including CSS anchor positioning and stepped value functions in Chrome 125, the Screen Wake Lock API in Firefox 126, and the Compute Pressure API in Chrome 125.",
+          "url": "https://web.dev/blog/web-platform-05-2024?hl=en&utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "web.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a12",
+          "order": 3,
+          "title": "ANNOUNCING BRIOCHE!",
+          "summary": "Brioche is a new package manager and build tool inspired by Nix, Homebrew, and Cargo. It is a flexible and easy-to-use tool for managing software projects across different platforms and languages.",
+          "url": "https://brioche.dev/blog/announcing-brioche/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "brioche.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a13",
+          "order": 4,
+          "title": "QSTUDIO 3.0",
+          "summary": "QStudio 3.0 is an SQL editor that supports DuckDB as a local database. It has a Parquet file viewer and can convert a query result from any database to store it locally.",
+          "url": "https://www.timestored.com/qstudio/release-version-3?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "timestored.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-04:a14",
+          "order": 1,
+          "title": "RADIAL MENUS IN VIDEO GAMES",
+          "summary": "Radial menus, also known as pie menus, are circular context menus used in video games to provide a smooth way for players to select options through directional input. They originated in console RPGs like \"Secret of Mana\" to streamline actions during battles, but have since evolved to be used in various ways, such as for quick actions in games or for selecting dialogue options in conversations.",
+          "url": "https://champicky.com/2022/01/21/radial-menus-in-video-games/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "champicky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a15",
+          "order": 2,
+          "title": "PYTHON'S MANY COMMAND-LINE UTILITIES",
+          "summary": "Python modules can be run as command-line tools using the \"-m\" argument, providing functionality like starting web servers, opening URLs, formatting JSON data, and managing Python environments. This article goes through a bunch of examples, such as using libraries to read email, unzip files, and more.",
+          "url": "https://www.pythonmorsels.com/cli-tools/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "pythonmorsels.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a16",
+          "order": 3,
+          "title": "WINDOWS AI FEATURE THAT SCREENSHOTS EVERYTHING LABELED A SECURITY ‘DISASTER'",
+          "summary": "Microsoft's new AI-powered Recall feature, which screenshots everything on a user's PC, has been criticized by cybersecurity experts due to potential security flaws in its data storage. It could potentially be exploited by malware or attackers.",
+          "url": "https://www.theverge.com/2024/6/3/24170305/microsoft-windows-recall-ai-screenshots-security-privacy-issues?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-04:a17",
+          "order": 1,
+          "title": "DO NEW DEVS RELY ON AI TOO MUCH? (REDDIT THREAD)",
+          "summary": "Developers have been copy-pasting code from various sources even before AI existed, so it's up to new developers who want to be good at their job to use AI productively while still understanding the code being produced.",
+          "url": "https://links.tldrnewsletter.com/IiQmr2",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a18",
+          "order": 2,
+          "title": "“JUST” ONE LINE",
+          "summary": "The phrase \"it's just one line of code\" is misleading because it often hides the actual cost of the code, which can be massive in terms of complexity and performance impact on the end user.",
+          "url": "https://blog.jim-nielsen.com/2024/just-one-line/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a19",
+          "order": 3,
+          "title": "I'M FORKING LADYBIRD AND STEPPING DOWN AS SERENITYOS BDFL",
+          "summary": "Andreas Kling, creator of SerenityOS, is forking Ladybird (a web browser project) from SerenityOS and stepping back a bit from SerenityOS to allow both projects to focus on their main interests.",
+          "url": "https://awesomekling.substack.com/p/forking-ladybird-and-stepping-down-serenityos?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "awesomekling.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-04:a20",
+          "order": 4,
+          "title": "CROSS-BROWSER LOCAL LLM INFERENCE USING WEBASSEMBLY",
+          "summary": "This article covers a cross-browser local LLM inference engine that uses a new quantization technique and WebAssembly to deliver fast LLM inference.",
+          "url": "https://picovoice.ai/blog/cross-browser-local-llm-inference-using-webassembly/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "picovoice.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

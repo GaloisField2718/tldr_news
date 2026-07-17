@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-06-16",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-06-16",
+  "source_path": "TLDR InfoSec/article_16-06-2025.md",
+  "source_content_hash": "sha256:1c9c1b9b019d2fd8f9f75a446ad842a9ecc22f40578acf297c8b97bf8c29a3e4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-06-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a04",
+          "order": 1,
+          "title": "DATA PRIVATE",
+          "summary": "Worried Big Tech is using your business data to train AI?",
+          "url": "https://proton.me/l/business/drive/cloud-storage-for-business?utm_source=newsletter&utm_medium=referral&utm_campaign=tldrprimary",
+          "reading_time_minutes": null,
+          "source_domain": "proton.me",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a04",
+          "order": 2,
+          "title": "Time to switch to Proton Drive.",
+          "summary": "✅ Unlike Google and Microsoft, Proton uses END-TO-END ENCRYPTION, which means nobody—no tech company, no governments, not even Proton—can access your files. No scanning, no sharing, no AI training.",
+          "url": "https://proton.me/l/business/drive/cloud-storage-for-business?utm_source=newsletter&utm_medium=referral&utm_campaign=tldrprimary",
+          "reading_time_minutes": null,
+          "source_domain": "proton.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a04",
+          "order": 3,
+          "title": "Get started for $7.99/user/month with 1 TB per user",
+          "summary": "",
+          "url": "https://proton.me/l/business/drive/cloud-storage-for-business?utm_source=newsletter&utm_medium=referral&utm_campaign=tldrprimary",
+          "reading_time_minutes": null,
+          "source_domain": "proton.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a05",
+          "order": 1,
+          "title": "PALO ALTO NETWORKS FIXED MULTIPLE PRIVILEGE ESCALATION FLAWS",
+          "summary": "Palo Alto Networks fixed seven privilege escalation vulnerabilities in its products, the most severe of which was CVE-2025-4232 (CVSS 7.1), which allows non-administrative macOS users to escalate privileges to root through a wildcard vulnerability in GlobalProtect's log collection feature. The company also patched two authenticated admin command injection flaws in PAN-OS (CVE-2025-4231 and CVE-2025-4230) that enabled authenticated administrators to execute commands as root users. Palo Alto also integrated 11 Chrome security patches and addressed a cache vulnerability in Prisma Access Browser. There were no known active exploits of these vulnerabilities.",
+          "url": "https://securityaffairs.com/179000/security/palo-alto-networks-fixed-multiple-privilege-escalation-flaws.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a06",
+          "order": 2,
+          "title": "DISCORD INVITE LINK HIJACKING DELIVERS ASYNCRAT AND SKULD STEALER TARGETING CRYPTO WALLETS",
+          "summary": "Attackers are exploiting Discord's invite system by hijacking expired vanity links to redirect users from trusted sources to malicious servers distributing AsyncRAT and Skuld Stealer malware targeting cryptocurrency wallets. The attack, designed to harvest credentials from Exodus and Atomic wallets via injection techniques, employs ClickFix social engineering to trick users into running PowerShell commands that download multi-stage payloads, followed by Skuld Stealer. The campaign targets users in the US, Vietnam, France, Germany, and other countries using trusted cloud services like GitHub, Bitbucket, and Pastebin to blend malicious traffic with legitimate communications.",
+          "url": "https://links.tldrnewsletter.com/VWNjaP",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a07",
+          "order": 3,
+          "title": "PARAGUAY SUFFERED DATA BREACH: 7.4 MILLION CITIZEN RECORDS LEAKED ON DARK WEB",
+          "summary": "Hackers leaked the personal data of 7.4 million people in Paraguay on the dark web. A cybercriminal group called \"Cyber PMC\" demanded $7.4 million, blaming government corruption and poor security.",
+          "url": "https://securityaffairs.com/178970/data-breach/paraguay-suffered-data-breach-7-4-million-citizen-records-leaked-on-dark-web.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a08",
+          "order": 1,
+          "title": "HUNTING THROUGH APIS",
+          "summary": "This blog compares three Microsoft security APIs for threat hunting: Azure Monitor API, which queries Sentinel data only; Graph API, which queries both Defender XDR and Sentinel data, and Defender ATP API, which is limited to Defender for Endpoint data. The Graph API is recommended as it offers unified access to both platforms and supports more data types, while the Defender ATP API has notable limitations, such as a 30-day query timeframe restriction. Each API needs specific permissions and has different rate limits, with the Graph API allowing over 45 calls per minute based on tenant size.",
+          "url": "https://kqlquery.com/posts/hunting-api-kql/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "kqlquery.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a09",
+          "order": 2,
+          "title": "BUILDING UBER'S MULTI-CLOUD SECRETS MANAGEMENT PLATFORM TO ENHANCE SECURITY",
+          "summary": "Uber initially employed various secrets management practices and vaults for different teams and clouds, which it consolidated into six vaults under the purview of its Secrets team. The Secrets team created scanners to perform real-time scanning and scheduled scanning to identify secrets usage in chat apps and code, as well as built APIs for automated secrets rotation from the centralized secrets vaults. The team also developed a secrets exchange system to distribute secrets to third-party vendors.",
+          "url": "https://www.uber.com/en-AU/blog/building-ubers-multi-cloud-secrets-management-platform/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "uber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a10",
+          "order": 3,
+          "title": "WHY IS NO ONE TALKING ABOUT MAINTENANCE IN DETECTION ENGINEERING?",
+          "summary": "With the movement of detection engineering towards a detection-as-code model, detection engineers must also embrace software maintenance requirements. Maintenance can be broken down into four categories: corrective maintenance, which directly fixes an issue that is occurring; adaptive maintenance, which adapts the detection to changing requirements such as a new API; perfective maintenance, which focuses on improving the query, documentation, or adding new features; and preventative maintenance, which proactively seeks to address issues before clients identify them. Although all detection engineering teams must perform maintenance, there is a dearth of information and posts discussing it.",
+          "url": "https://medium.com/falconforce/why-is-no-one-talking-about-maintenance-in-detection-engineering-ebb5820564dc?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a11",
+          "order": 1,
+          "title": "PROTECTING HIGH-PROFILE INDIVIDUALS USING OSINT",
+          "summary": "Online threats against high-profile individuals can escalate into real-world harassment or even physical harm. This is growing more urgent due to geopolitical tensions, AI-powered deepfakes [11], and exploitable vulnerabilities. Learn how to use OSINT to identify these threats and take preventive action in Flashpoint's Complete Guide to OSINT for Executive Protection [11].",
+          "url": "https://go.flashpoint.io/guide-to-osint-executive-protection?utm_campaign=Resource_RP_OSINT_Executive_Protection&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000Lo4xBIAR",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a12",
+          "order": 2,
+          "title": "PRIVADO",
+          "summary": "Privado is an open-source static scanning tool that detects data flows in your code, identifies data security vulnerabilities, and generates Play Store Data Safety Reports. It identifies over 110 personal data elements and maps their flow from collection points to \"sinks\" like external third parties, databases, logs, and internal APIs.",
+          "url": "https://github.com/Privado-Inc/privado?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a13",
+          "order": 3,
+          "title": "CLOUDPEASS",
+          "summary": "The Cloud Privilege Escalation Awesome Script Suite (CloudPEASS) is a one-stop solution for enumerating permissions, sensitive data, and privilege escalation vectors across AWS, GCP, and Azure.",
+          "url": "https://github.com/carlospolop/CloudPEASS?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a14",
+          "order": 4,
+          "title": "AWESOME CYBERSECURITY AGENTIC AI",
+          "summary": "Awesome Cybersecurity Agentic AI is a collection of resources and tools for learning and using agentic AI.",
+          "url": "https://github.com/raphabot/awesome-cybersecurity-agentic-ai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a15",
+          "order": 1,
+          "title": "UNUSUAL TOOLSET USED IN RECENT FOG RANSOMWARE ATTACK",
+          "summary": "Fog ransomware operators attacked an Asian financial firm in May using Syteca monitoring and pentesting tools GC2, Adaptix, and Stowaway. They stayed in the network for two weeks before deploying ransomware. The attackers maintained persistence post-attack and utilized tools often linked to espionage, suggesting intelligence-gathering motives with ransomware as a secondary goal. Since May 2024, Fog ransomware has evolved from targeting US schools through compromised VPNs to exploiting Veeam vulnerabilities and shifted to email infections featuring provocative ransom notes mocking Elon Musk's DOGE agency.",
+          "url": "https://links.tldrnewsletter.com/oaczqe",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a16",
+          "order": 2,
+          "title": "COMING TO APPLE OSES: A SEAMLESS WAY TO IMPORT AND EXPORT PASSKEYS",
+          "summary": "Apple previewed a new import/export feature for passkeys at the most recent WWDC. The new mechanism will fundamentally differ from current credentials exports that utilize JSONs or CSVs, as it happens directly between participating credentials manager apps without creating insecure files. Data miners have discovered artifacts in newer releases of the Google Authenticator app, suggesting that Google is working on similar functionality for the Android ecosystem, but Google has not announced the feature yet.",
+          "url": "https://links.tldrnewsletter.com/Or23G6",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a17",
+          "order": 3,
+          "title": "MENSTRUAL TRACKING APP DATA IS A ‘GOLD MINE' FOR ADVERTISERS THAT RISKS WOMEN'S SAFETY",
+          "summary": "Researchers from the University of Cambridge highlight the risks associated with cycle tracking apps (CTAs) and broad data collection practices. CTAs regularly collect and sell sensitive data on women's cycles to advertisers and tech giants without user consent. The researchers are calling on governments to create non-profit, public CTAs or at least require CTAs to offer fine-grained data collection approvals.",
+          "url": "https://links.tldrnewsletter.com/lyy766",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-16:a18",
+          "order": 1,
+          "title": "WESTJET INVESTIGATES CYBERATTACK DISRUPTING INTERNAL SYSTEMS",
+          "summary": "WestJet is probing a cyberattack that temporarily hindered its internal systems and app, impacting user login, although access has since been restored.",
+          "url": "https://www.bleepingcomputer.com/news/security/westjet-investigates-cyberattack-disrupting-internal-systems/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a19",
+          "order": 2,
+          "title": "DUTCH POLICE IDENTIFY USERS AS YOUNG AS 11-YEAR-OLD ON CRACKED.IO HACKING FORUM",
+          "summary": "Dutch police found children as young as 11 using a hacking forum called Cracked.io.",
+          "url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/dutch-police-cracked-io-hacking-forum?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-16:a20",
+          "order": 3,
+          "title": "MICROSOFT CONFIRMS AUTH ISSUES AFFECTING MICROSOFT 365 USERS",
+          "summary": "Microsoft 365 users are experiencing sign-in and password reset issues due to recent multi-factor authentication (MFA) enhancements, but Microsoft is addressing the problem and has already implemented some improvements.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-auth-issues-affecting-microsoft-365-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

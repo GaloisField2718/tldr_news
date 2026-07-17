@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-09-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-09-02",
+  "source_path": "TLDR InfoSec/article_02-09-2024.md",
+  "source_content_hash": "sha256:2ca913354d0af19ccce8c48dacc1f5d8708e638c65bb1a0f1b188448e107e35a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-09-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-02:a04",
+          "order": 1,
+          "title": "NGATE ANDROID MALWARE RELAYS NFC TRAFFIC TO STEAL CASH",
+          "summary": "A threat actor operating in Czechia evolved from utilizing PWAs and WebAPKs to utilizing the NGate malware to attack Android users of major Czech banks. The NGate malware is delivered via smishing, where attackers alert users to either an issue in their banking app or a way to get tax returns faster. The malware then utilizes NFCGate to relay any NFC payments from the device, which allows the attackers to duplicate the cards and withdraw money from an ATM. This attack does not require the victim's device to be rooted.",
+          "url": "https://www.welivesecurity.com/en/eset-research/ngate-android-malware-relays-nfc-traffic-to-steal-cash/?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "welivesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a05",
+          "order": 2,
+          "title": "RANSOMHUB HITS 210 VICTIMS IN JUST 6 MONTHS",
+          "summary": "US agencies have issued a warning about RansomHub, a rapidly growing ransomware group formed in February with at least 210 victims across various sectors, including critical infrastructure. RansomHub exploits vulnerabilities with common hacking tools.",
+          "url": "https://www.theregister.com/2024/08/30/ransomhub/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a06",
+          "order": 3,
+          "title": "CRITICAL FLAWS IN PROGRESS SOFTWARE WHATSUP GOLD EXPOSE SYSTEMS TO FULL COMPROMISE",
+          "summary": "Critical vulnerabilities in Progress Software's WhatsUp Gold, an enterprise network monitoring solution, could allow full system compromise. Over 1,200 internet-accessible instances may be affected by CVE-2024-4885, a critical flaw allowing remote code execution. A proof-of-concept is available.",
+          "url": "https://www.securityweek.com/critical-flaws-in-progress-software-whatsup-gold-expose-systems-to-full-compromise/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-02:a07",
+          "order": 1,
+          "title": "EXPOSING SECURITY OBSERVABILITY GAPS IN AWS NATIVE SECURITY TOOLING",
+          "summary": "SecurityRunners' Jonathan Walker provides an analysis of the coverage of IAM Access Analyzer for detecting public or cross-account access to resources. Walker puts coverage at about 65% and lists a few notable gaps. AWS Glue and SES are fundamental services that Walker believes should have coverage. Secrets Manager currently only alerts if a KMS key and secret are public but Walker believes that it should alert on just a public secret in case a method of accessing it becomes apparent. Walker also notes that Elemental MediaStore certainly should have coverage but is fairly obscure so may be a backlog item. He also highly encourages deploying IAM Access Analyzer as it is simple to manage and cost-effective.",
+          "url": "https://www.securityrunners.io/post/exposing-security-observability-gaps-in-aws?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "securityrunners.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a08",
+          "order": 2,
+          "title": "UNPROTECTED CONTAINER REGISTRIES",
+          "summary": "Unprotected container registries are easily detectable on the web through tools like Shodan or scanning for common endpoints. This post demonstrates the ease with which an attacker can locate an unprotected container registry and upload or replace an existing image. The author located over 10k unprotected registries across the full IP space and was able to push a benign, PoC image to over 4,500 of them. They only uploaded a dummy image under an easily detectable name due to ethical considerations, but a motivated attacker could upload a malicious image just as easily.",
+          "url": "https://dreher.in/blog/unprotected-container-registries?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "dreher.in",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a09",
+          "order": 3,
+          "title": "SET-TOP BOX RE: 6-PART SERIES (1 OF 6)",
+          "summary": "This blog series examines the security of six set-top boxes to determine if they're compromised or part of botnets. The research involves hardware triage, filesystem extraction, and malware analysis. It also explores how easily these devices could be exploited.",
+          "url": "https://www.cc-sw.com/set-top-box-re-6-part-series-1-of-6/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cc-sw.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-02:a10",
+          "order": 1,
+          "title": "DALEC",
+          "summary": "Dalec provides a declarative format for building system packages and containers from those packages. It is designed for building containers for Azure and supports Azure Linux 2 and 3 and Windows containers.",
+          "url": "https://github.com/Azure/dalec?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a11",
+          "order": 2,
+          "title": "UNIQKEY (PRODUCT LAUNCH)",
+          "summary": "Uniqkey's password and access management solution allows employees to use mobile applications when logging into enterprise systems while keeping passwords encrypted.",
+          "url": "https://www.uniqkey.eu/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "uniqkey.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a12",
+          "order": 3,
+          "title": "NETTACKER",
+          "summary": "OWASP Nettacker project was created to automate information gathering, vulnerability scanning, and eventually generating a report for networks. It includes information on services, bugs, vulnerabilities, misconfigurations, and other topics.",
+          "url": "https://github.com/OWASP/Nettacker?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-02:a13",
+          "order": 1,
+          "title": "ADVANCING THREAT INTELLIGENCE: JA4 FINGERPRINTS AND INTER-REQUEST SIGNALS",
+          "summary": "JA3 Fingerprints were first introduced in 2017 as a method to fingerprint browsers by taking a hash of the TLS ClientHello message, but they have lost efficacy due to differences in how tools handle various extensions and modern browsers scrambling TLS extensions. To combat this, FoxIO introduced JA4, which introduces other protocol elements into the fingerprint and is resilient to randomization of TLS extensions by first sorting them before hashing. To make JA4 fingerprints more useful to customers, Cloudflare aggregates data across its network on JA4 fingerprints into signals that can be used in Workers and rules. This post includes a breakdown of the different fields in a JA4 fingerprint, the statistics available via JA4 signals for a fingerprint, and a script demonstrating how to utilize signals in a Worker.",
+          "url": "https://blog.cloudflare.com/ja4-signals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a14",
+          "order": 2,
+          "title": "DON'T FORCE YOURSELF TO BECOME A BUG BOUNTY HUNTER",
+          "summary": "Sam Curry, a hacker and bug bounty hunter, reflects on a common mentality of setting up extensive goals and plans for getting into bug bounty hunting. Curry compares this with his experience and failure doing the same with his studies in high school. Ultimately, Curry suggests that the fundamental issue in many hackers that set out these goals and fail is that they aren't actually interested in bug bounty hunting and should instead not force themselves to do it.",
+          "url": "https://samcurry.net/dont-force-yourself-to-become-a-bug-bounty-hunter?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "samcurry.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a15",
+          "order": 3,
+          "title": "CITY OF COLUMBUS SUES MAN AFTER HE DISCLOSES SEVERITY OF RANSOMWARE ATTACK",
+          "summary": "An Ohio judge has issued a restraining order against a security researcher who contradicted Columbus officials' claims about a recent ransomware attack. The researcher presented evidence that sensitive data stolen in the attack was intact and accessible, contrary to the mayor's statement. The city sued the researcher, claiming his actions made dark web data publicly available.",
+          "url": "https://arstechnica.com/security/2024/08/city-of-columbus-sues-man-after-he-discloses-severity-of-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-09-02:a16",
+          "order": 1,
+          "title": "AN AIR TRANSPORT SECURITY SYSTEM FLAW ALLOWED TO BYPASS AIRPORT SECURITY SCREENINGS",
+          "summary": "A security flaw in air transport systems allowed unauthorized people to bypass airport security screenings.",
+          "url": "https://securityaffairs.com/167862/hacking/air-transport-security-systems-critical-flaw.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a17",
+          "order": 2,
+          "title": "GARTNER FORECASTS GLOBAL INFORMATION SECURITY SPENDING TO GROW 15% IN 2025",
+          "summary": "Gartner predicts that by 2027, 17% of total cyberattacks/data leaks will involve generative AI.",
+          "url": "https://links.tldrnewsletter.com/2y1hma",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-09-02:a18",
+          "order": 3,
+          "title": "NORTH KOREAN HACKERS DEPLOY FUDMODULE ROOTKIT VIA CHROME ZERO-DAY EXPLOIT",
+          "summary": "North Korean hackers known as Citrine Sleet used a zero-day exploit in Google Chrome to deliver the FudModule rootkit.",
+          "url": "https://thehackernews.com/2024/08/north-korean-hackers-deploy-fudmodule.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

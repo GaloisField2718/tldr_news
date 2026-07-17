@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-02-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-05",
+  "source_path": "TLDR InfoSec/article_05-02-2026.md",
+  "source_content_hash": "sha256:755c9256bd24d3fa716b3fdfd6c5fcff515feb107118cc98b7552d5ca0048a73",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-05",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-05:a04",
+          "order": 1,
+          "title": "EVEREST RANSOMWARE CLAIMS 90GB DATA THEFT INVOLVING LEGACY POLYCOM SYSTEMS",
+          "summary": "The Everest ransomware group claimed to have exfiltrated 90GB of internal data from systems linked to Polycom, now owned by HP Inc., including engineering build environments, source code, and technical documentation for the RMX and RealPresence conferencing platforms. Evidence suggests the data originated in legacy Polycom environments from 2017–2019, predating HP's acquisition, though it remains unclear when the systems were accessed. HP Inc. has not confirmed the breach.",
+          "url": "https://hackread.com/everest-ransomware-data-theft-legacy-polycom-system/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a05",
+          "order": 2,
+          "title": "VULNERABILITIES ALLOWED FULL COMPROMISE OF GOOGLE LOOKER INSTANCES",
+          "summary": "Tenable researchers uncovered LookOut, two flaws in Google Looker that allow attackers with developer rights to run remote code, steal secrets, and exfiltrate the internal MySQL database via an auth bypass and error-based SQL injection. Google patched cloud-hosted instances in September 2025, but self-hosted deployments must update, though no active exploitation has been detected.",
+          "url": "https://links.tldrnewsletter.com/vv3zjV",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a06",
+          "order": 3,
+          "title": "BIG BREACH OR SMOOTH SAILING? MEXICAN GOV'T FACES LEAK ALLEGATIONS",
+          "summary": "Hacktivist collective Chronus claims to have leaked 2.3TB of data from at least 25 Mexican government bodies, potentially exposing personal and healthcare records of 36 million citizens. Mexico's ATDT argues the dump repackages old breaches from obsolete third‑party systems, not fresh sensitive data.",
+          "url": "https://links.tldrnewsletter.com/t50Bqt",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-05:a07",
+          "order": 1,
+          "title": "GATEWAYTOHEAVEN: FINDING A CROSS-TENANT VULNERABILITY IN GCP'S APIGEE",
+          "summary": "A cross-tenant vulnerability (CVE-2025-13292) discovered in Google Cloud's Apigee allowed attackers to chain SSRF via the GKE metadata endpoint, to escalate privileges via Dataflow JAR poisoning, and to abuse autoscaling to access analytics data across all Apigee tenants, including plaintext OAuth access tokens. The attack exploited shared cross-tenant metadata buckets lacking tenant-specific path isolation and overly permissive service account permissions within tenant projects. Organizations using managed multi-tenant cloud services should audit tenant isolation boundaries, restrict access to metadata endpoints from workloads, and ensure that shared infrastructure components enforce strict per-tenant scoping.",
+          "url": "https://omeramiad.com/posts/gatewaytoheaven-gcp-cross-tenant-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "omeramiad.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a08",
+          "order": 2,
+          "title": "BUILDING SECURITY TO UNLOCK ENGINEERING VELOCITY",
+          "summary": "Robinhood built SERA (Secure Enhanced Remote Approval), an internal platform that replaces VPN-dependent access approvals with passkey-based biometric authentication, enabling engineers to securely approve requests from any device. The system uses trusted enrollment on corporate devices to bootstrap credentials and then enables flexible remote approvals with tamper-evident audit trails, reducing approval times by over 20%. This approach demonstrates how organizations can reduce friction in security incident response and off-hours workflows without weakening authentication guarantees.",
+          "url": "https://www.linkedin.com/pulse/building-security-unlock-engineering-velocity-shreyas-sriram-deiic/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a09",
+          "order": 3,
+          "title": "EXPLOITING AWS IAM EVENTUAL CONSISTENCY",
+          "summary": "AWS is a highly distributed system, which can lead to delays as changes propagate across the system. This is known as eventual consistency. This window can be exploited to recreate deleted or disabled AWS access keys within a nearly four-second window while the changes propagate. Disallow the principal from accessing via an SCP, wait 4 seconds, and then use the standard deletion process to prevent an attacker from exploiting eventual consistency. Other IAM operations, such as policy attachment and detachment, and role assumption, share this vulnerability.",
+          "url": "https://www.offensai.com/blog/aws-iam-eventual-consistency-persistence?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "offensai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-05:a10",
+          "order": 1,
+          "title": "CLAUDE-CODE-TRANSCRIPTS",
+          "summary": "claude-code-transcripts is a Python CLI tool that converts Claude Code sessions into detailed, shareable HTML pages capturing prompts, tool calls, thinking traces, and commits. The tool supports both local Claude Code sessions and Claude Code for web via a reverse-engineered private API. It is useful for maintaining audit trails of AI-assisted development decisions and evaluating prompting strategies across coding agent workflows.",
+          "url": "https://simonwillison.net/2025/Dec/25/claude-code-transcripts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a11",
+          "order": 2,
+          "title": "ORION SECURITY (PRODUCT LAUNCH)",
+          "summary": "Orion provides an AI-driven data protection platform that maps how sensitive information moves across an organization, detects risky or abnormal data flows in real time, and automatically prevents leaks and insider-driven data loss across modern cloud environments.",
+          "url": "https://www.orionsec.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "orionsec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a12",
+          "order": 3,
+          "title": "SPICEDB",
+          "summary": "Spicedb is an open-source, Google Zanzibar-inspired database for scalably storing and querying fine-grained authorization data.",
+          "url": "https://github.com/authzed/spicedb?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-05:a13",
+          "order": 1,
+          "title": "MOZILLA ANNOUNCES SWITCH TO DISABLE ALL FIREFOX AI FEATURES",
+          "summary": "Following user backlash, Mozilla announced that it will be adding a toggle to delay current and future AI features. Along with this toggle, there will be an AI control panel where users can selectively enable or disable specific features. Features will begin enabled in the AI control panel until users choose to disable them if they do not use the “Block AI Enhancements” toggle.",
+          "url": "https://www.bleepingcomputer.com/news/software/mozilla-will-let-you-turn-off-all-firefox-ai-features/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a14",
+          "order": 2,
+          "title": "APPLE'S NEW IPHONE AND IPAD SECURITY FEATURE LIMITS CELL NETWORKS FROM COLLECTING PRECISE LOCATION DATA",
+          "summary": "Apple has announced a new feature for select iPhones and cellular-enabled iPads that limits the precision of location data shared with a customer's cell carrier. Applications that a user has granted precise location data and emergency calls will still have access to the user's precise location.",
+          "url": "https://techcrunch.com/2026/01/29/apples-new-iphone-and-ipad-security-feature-limits-cell-networks-from-collecting-precise-location-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a15",
+          "order": 3,
+          "title": "NITROGEN RANSOMWARE IS SO BROKEN EVEN THE CROOKS CAN'T UNLOCK YOUR FILES",
+          "summary": "Ransomware gang Nitrogen shipped an ESXi encryptor with a fatal bug that corrupted its own Curve25519 public key, making decryption mathematically impossible even if victims pay. The slipup turns a profit-driven campaign into pure destruction: criminals earn nothing while organizations are left with unrecoverable hypervisors and costly rebuilds.",
+          "url": "https://www.theregister.com/2026/02/04/nitrogen_ransomware_broken_decryptor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-05:a16",
+          "order": 1,
+          "title": "STEP FINANCE SAYS COMPROMISED EXECS' DEVICES LED TO $40M CRYPTO THEFT",
+          "summary": "Solana-based DeFi platform Step Finance lost $40 million in digital assets after hackers compromised executives' devices and drained multiple treasury wallets.",
+          "url": "https://www.bleepingcomputer.com/news/security/step-finance-says-compromised-execs-devices-led-to-40m-crypto-theft/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a17",
+          "order": 2,
+          "title": "SUDO MAINTAINER, HANDLING UTILITY FOR MORE THAN 30 YEARS, IS LOOKING FOR SUPPORT",
+          "summary": "Sudo's sole maintainer, Todd C. Miller, has been seeking sponsorship since losing corporate backing in February 2024, raising concerns about the long-term sustainability of a foundational Unix/Linux security utility.",
+          "url": "https://www.theregister.com/2026/02/03/sudo_maintainer_asks_for_help/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-05:a18",
+          "order": 3,
+          "title": "OPENCLAW'S AI ‘SKILL' EXTENSIONS ARE A SECURITY NIGHTMARE",
+          "summary": "Security researchers warn that OpenClaw's booming “skill” marketplace has become a major attack surface.",
+          "url": "https://www.theverge.com/news/874011/openclaw-ai-skill-clawhub-extensions-security-nightmare?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

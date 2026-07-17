@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2023-11-17",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-11-17",
+  "source_path": "TLDR Web Dev/article_17-11-2023.md",
+  "source_content_hash": "sha256:ef9731b133c3e81cccdc8e3e1fdd399d61c55a564c2f7ef86883f5bf519e1e47",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-11-17",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-17:a05",
+          "order": 1,
+          "title": "HOW TO SCALE A LARGE CODEBASE",
+          "summary": "Vercel uses a monorepo architecture to organize and reuse code efficiently across teams. Its team suggests using Turborepo for monorepo management and emphasizes the importance of feature flags for safe code release, incremental builds for quick iteration, and skew protection to handle version discrepancies. Thanks to their monorepo and these tools, they are able to have frequent and confident code releases, easy adoption of new technologies, independent work on UI parts, and efficient sharing and reuse of code.",
+          "url": "https://vercel.com/blog/how-to-scale-a-large-codebase?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a06",
+          "order": 2,
+          "title": "A FASTER WEB IN 2024",
+          "summary": "Core Web Vitals are a set of specific factors that Google considers important in a webpage's overall user experience. The interaction responsiveness metric Google uses in its Core Web Vitals assessment is changing in 2024 to INP (integration to next paint). This post outlines how this metric is uncovering issues that have been flying under the radar. Many websites today are bound to fail this metric and the post looks at what developers can do to mitigate such issues.",
+          "url": "https://rviscomi.dev/2023/11/a-faster-web-in-2024/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "rviscomi.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-17:a07",
+          "order": 1,
+          "title": "STOP PARROTING YOUTUBE SOLUTIONS IN SYSTEM DESIGN INTERVIEWS",
+          "summary": "This post looks at five common mistakes in system design interviews and how to avoid them. These mistakes include not prioritizing scenarios properly, talking too abstractly, having a shallow design implementation, speaking about superficial tradeoffs, and having irrelevant failure discussions. Overall, it’s important to focus on core questions asked during a system design interview and understand what the interviewer is looking for that gives them a “hire” signal.",
+          "url": "https://open.substack.com/pub/ravirajachar/p/stop-parroting-youtube-solutions?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a08",
+          "order": 2,
+          "title": "YOU DON'T NEED CRDTS FOR COLLABORATIVE EXPERIENCES",
+          "summary": "CRDTs (Conflict-Free Replicated Data Types) are commonly used for collaborative experiences, but are not necessary for them. They are essential in specific scenarios like offline-first applications and text editing, where they prevent overwriting and ensure accurate character placement. However, CRDTs have downsides, such as ever-growing state, complex implementations, and opaque data storage. Instead of CRDTs, collaborative applications, like spreadsheets, presentation tools, form builders, and more, can benefit from contextual information, locking mechanisms for safety, small-scale updates, and real-time updates distribution. This approach allows for effective real-time collaboration without the complexities of CRDTs.",
+          "url": "https://zknill.io/posts/collaboration-no-crdts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "zknill.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-17:a09",
+          "order": 1,
+          "title": "😘 KISS BUGS GOODBYE WITH FULLY AUTOMATED END-TO-END TEST COVERAGE",
+          "summary": "If you've tried to build automated test coverage in-house, you know it takes years to scale. Try QA Wolf [9] instead - they get web apps to 80% test coverage in just 4 months. They will create and maintain your test suite in Playwright (no vendor lock-in, you own the code), and provide unlimited parallel test runs on their infrastructure. QA Wolf has multiple case studies of customers saving at least $200k/year in QA engineering and infrastructure costs. Schedule a demo",
+          "url": "https://www.qawolf.com/?utm_campaign=KissBugGoodbye11142023&utm_source=tldr&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a09",
+          "order": 2,
+          "title": "to learn more.",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_campaign=KissBugGoodbye11142023&utm_source=tldr&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a10",
+          "order": 3,
+          "title": "SCREENSHOT-TO-CODE",
+          "summary": "Screenshot-to-code converts a screenshot to HTML and Tailwind CSS. It uses GPT-4 Vision to generate the code and DALL-E 3 to generate similar looking images. You must use your own GPT-4 Vision API key in order to use it.",
+          "url": "https://github.com/abi/screenshot-to-code?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a11",
+          "order": 4,
+          "title": "MAKEREAL",
+          "summary": "MakeReal is a canvas where you can draw anything and have GPT-4 turn it into actual working code.",
+          "url": "https://makereal.tldraw.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "makereal.tldraw.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a12",
+          "order": 5,
+          "title": "VITE 5 IS OUT!",
+          "summary": "Vite 5 has been released. Vite is the main development environment for new React applications that aren’t based on create-react-app or Next.js. The new release of Vite comes with a host of changes, such as performance improvements.",
+          "url": "https://vitejs.dev/blog/announcing-vite5?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "vitejs.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-17:a13",
+          "order": 1,
+          "title": "THE LACK OF COMPENSATION IN OPEN SOURCE SOFTWARE IS UNSUSTAINABLE",
+          "summary": "Maintainer burnout can happen with open-source projects that have garnered significant usage but no financial compensation. One solution to this is a compensation model that pays active contributors to highly utilized products. Companies using open-source software should either contribute financially or allocate developer time to these projects.",
+          "url": "https://trstringer.com/oss-compensation-broken/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "trstringer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a14",
+          "order": 2,
+          "title": "PLANNING FOR UNPLANNED WORK",
+          "summary": "Unplanned work, which includes bug reports and emergencies, can cause friction to a team’s productivity. Managing unplanned work involves two phases: intake and execution. Intake focuses on turning unexpected issues into actionable tasks, emphasizing the need for a frictionless process to ensure comprehensive reporting. The execution phase centers on efficiently resolving these issues, such as using a shared team inbox for bugs. Clearly defined roles and Service-Level Agreements (SLAs) help maintain accountability and prioritize urgent work.",
+          "url": "https://linear.app/blog/planning-for-unplanned-work?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "linear.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a15",
+          "order": 3,
+          "title": "25% OR 6 TO 4: THE 11/6/23 AUTHENTICATION OUTAGE",
+          "summary": "",
+          "url": "https://discord.com/blog/authentication-outage?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "discord.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-17:a16",
+          "order": 1,
+          "title": "C++: THE MOST IMPORTANT COMPLEXITIES",
+          "summary": "A collection of C++ complexities and tips to learn them better.",
+          "url": "https://www.sandordargo.com/blog/2023/11/15/most-important-complexities?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "sandordargo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a17",
+          "order": 2,
+          "title": "MASTERING DOM MANIPULATION WITH VANILLA JAVASCRIPT",
+          "summary": "A series of free tutorials to learn DOM manipulation using vanilla JavaScript, starting with the basics and going all the way to advanced tutorials.",
+          "url": "https://phuoc.ng/collection/html-dom/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "phuoc.ng",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-17:a18",
+          "order": 3,
+          "title": "THE VERCEL STYLE GUIDE",
+          "summary": "Vercel has released its style guide for code. The repository includes configs for popular linting and styling tools, such as Prettier and ESLint. It supports TypeScript.",
+          "url": "https://github.com/vercel/style-guide?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

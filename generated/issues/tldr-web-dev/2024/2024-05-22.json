@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2024-05-22",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-05-22",
+  "source_path": "TLDR Web Dev/article_22-05-2024.md",
+  "source_content_hash": "sha256:6962294d5477449fd843da382458df07744ac7728590ee3058a5013865386245",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-05-22",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-22:a04",
+          "order": 1,
+          "title": "HOW SLACK BUILT A DISTRIBUTED CRON EXECUTION SYSTEM FOR SCALE",
+          "summary": "Slack initially relied on cron jobs for its notification system but found it hard to scale. To address this, its team developed a new cron execution service using Go and Kubernetes for scalability and a leader-follower architecture for simplified synchronization and rapid failover. This service offloads resource-intensive tasks to a job queue, using Kafka for durability and Redis for efficient dispatch to worker nodes, and tracks job execution with a Vitess table for deduplication and monitoring.",
+          "url": "https://open.substack.com/pub/bytebytego/p/how-slack-built-a-distributed-cron?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a05",
+          "order": 2,
+          "title": "AVOID THE LONG PARAMETER LIST",
+          "summary": "Long parameter lists in functions can be hard to understand and maintain. Instead, it's better to create value objects that group related parameters into a single object. This makes the function calls simpler and makes the code more maintainable.",
+          "url": "https://testing.googleblog.com/2024/05/avoid-long-parameter-list.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "testing.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-22:a06",
+          "order": 1,
+          "title": "CLEVER CODE IS PROBABLY THE WORST CODE YOU COULD WRITE",
+          "summary": "Although clever code feels impressive to write, it's often unmaintainable and unreasonable to write in production. Code that is easy to understand and readable is arguably harder to write than clever code. This article provides tips and resources for getting better at writing clear code, along with an anecdote about the difficulties of writing clear code and an email about coding style from John Carmack.",
+          "url": "https://read.engineerscodex.com/p/clever-code-is-probably-the-worst?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a07",
+          "order": 2,
+          "title": "I WANT FLEXIBLE QUERIES, NOT RAG",
+          "summary": "This author is against the hype around RAG, which is used to help LLMs generate references alongside its answers. Instead, they believe that the flexible queries of LLMs are more valuable and prefer direct access to the relevant information.",
+          "url": "https://win-vector.com/2024/05/21/i-want-flexible-queries-not-rag/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "win-vector.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a08",
+          "order": 3,
+          "title": "WHY YOU SHOULD SAY NO MORE OFTEN",
+          "summary": "Saying no can help you prioritize your most important work and avoid overcommitting. Say yes to things that energize you and ask yourself if you would still be excited about the opportunity if it were happening tomorrow. If you're still unsure, defer the decision by asking the person to follow up later.",
+          "url": "https://open.substack.com/pub/lenny/p/how-to-say-no?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-22:a09",
+          "order": 1,
+          "title": "DEVELOP LOCALLY, DEPLOY GLOBALLY WITH VULTR CLOUD COMPUTE",
+          "summary": "Vultr offers developers powerful cloud compute across 30+ locations and an easy-to-use one-click marketplace [10] - all at an affordable, predictable price. Users save up to 90% in bandwidth charges when they switch from AWS. Claim $200 in Vultr credit when you sign up today [11]!",
+          "url": "https://www.vultr.com/promo/try200?promo=FLYTWOHUNDRED&utm_source=email&utm_medium=paidmedia&utm_campaign=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "vultr.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a12",
+          "order": 2,
+          "title": "OPENPANEL",
+          "summary": "Openpanel is an analytics tool for logging events on the web, mobile, and backend. It allows developers to visualize their data, create dashboards, access all events and visitors, and self-host the application.",
+          "url": "https://github.com/Openpanel-dev/openpanel?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a13",
+          "order": 3,
+          "title": "DESKPAD",
+          "summary": "DeskPad is a virtual monitor application for Mac that creates a mirrored display within its window, making for easier screen sharing and providing a dedicated workspace for users.",
+          "url": "https://github.com/Stengo/DeskPad?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a14",
+          "order": 4,
+          "title": "PLS FIX",
+          "summary": "pls fix is a marketplace that connects verified Big Tech employees with people looking for help to unlock their accounts that may have gotten banned or locked unfairly.",
+          "url": "https://plsfix.co/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "plsfix.co",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-22:a15",
+          "order": 1,
+          "title": "UI DENSITY",
+          "summary": "UI density is more than just visual clutter, it's about the amount of information an interface conveys over time. Dense interfaces should take into account temporal density (how quickly a user can complete tasks) and value density (whether the design leads to valuable outcomes).",
+          "url": "https://matthewstrom.com/writing/ui-density/?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "matthewstrom.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a16",
+          "order": 2,
+          "title": "TAKING RISK",
+          "summary": "UK graduates from top universities tend to favor stable jobs over riskier startup ventures. This is probably due to a cultural difference, with the US embracing a more positive-sum mindset towards risk and business growth.",
+          "url": "https://tomblomfield.com/post/750852175114174464/taking-risk?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "tomblomfield.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a17",
+          "order": 3,
+          "title": "BUILDING AN AI GAME STUDIO: WHAT WE'VE LEARNED SO FAR",
+          "summary": "Braindump is an AI game studio that lets users build top-down/2.5D games by typing prompts. It allows users to define units, abilities, and attributes, as well as populate the game map with objects and create game rules. Two challenges in building AI games were designing an intuitive user interface for prompting the AI and creating a streamlined \"game API\" that provides enough structure for the LLM to focus on filling in code and data.",
+          "url": "https://braindump.me/blog-posts/building-an-ai-game-studio?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "braindump.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-22:a18",
+          "order": 1,
+          "title": "A NEW WAY TO STORE KNOWLEDGE",
+          "summary": "You can use a single plain text file, structured with custom parsers to define measures, measurements to define concepts, and comments attached to measurements using indentation, for all tabular knowledge.",
+          "url": "https://breckyunits.com/scrollsets.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "breckyunits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a19",
+          "order": 2,
+          "title": "WHEN ONLINE CONTENT DISAPPEARS",
+          "summary": "An analysis from the Pew Research Center shows that a quarter of web pages from 2013 to 2023 are no longer accessible.",
+          "url": "https://www.pewresearch.org/data-labs/2024/05/17/when-online-content-disappears/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "pewresearch.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-22:a20",
+          "order": 3,
+          "title": "GRAPH GAME",
+          "summary": "Games that test your understanding of neural networks - choose a neural network and then try to assemble it.",
+          "url": "https://links.tldrnewsletter.com/KVyESS",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

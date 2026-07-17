@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-10-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-10-07",
+  "source_path": "TLDR InfoSec/article_07-10-2024.md",
+  "source_content_hash": "sha256:78e5bdc7f93628bea5d1e9aace25f8ce412615d8e8503bdc547974f1b600856d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-10-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a04",
+          "order": 1,
+          "title": "REMOTE WORK: A TICKING TIME BOMB",
+          "summary": "Remote work introduces security risks that jeopardize your company's data and operations - from unvetted software and shadow IT to vulnerable home networks and public Wi-Fi.",
+          "url": "https://www.threatlocker.com/ebooks/secure-remote-workforces?utm_source=tldr&utm_medium=sponsor&utm_campaign=remote-work-ebook_10-7-24&utm_content=remote-work-ebook&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a04",
+          "order": 2,
+          "title": "strengthen your remote work security! Download the eBook",
+          "summary": "",
+          "url": "https://www.threatlocker.com/ebooks/secure-remote-workforces?utm_source=tldr&utm_medium=sponsor&utm_campaign=remote-work-ebook_10-7-24&utm_content=remote-work-ebook&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a05",
+          "order": 1,
+          "title": "WORDPRESS LITESPEED CACHE PLUGIN FLAW COULD ALLOW SITE TAKEOVER",
+          "summary": "A serious flaw in the WordPress LiteSpeed Cache plugin affecting versions up to 6.5.0.2 could allow attackers to run harmful code. The vulnerability allows for arbitrary script injection when certain settings are enabled, potentially leading to account hijacking and site takeover. The issue was fixed in version 6.5.1, but site admins should act quickly to secure their websites.",
+          "url": "https://securityaffairs.com/169390/security/wordpress-litespeed-cache-plugin-flaw-site-takeover.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a06",
+          "order": 2,
+          "title": "ALERT: OVER 700,000 DRAYTEK ROUTERS EXPOSED TO HACKING VIA 14 NEW VULNERABILITIES",
+          "summary": "Researchers discovered 14 security vulnerabilities, dubbed DRAY:BREAK, in DrayTek routers used in homes and businesses. These flaws could allow attackers to take control of affected devices, potentially gaining access to enterprise networks. The vulnerabilities range in severity, with two rated critical, including one with the highest possible CVSS score of 10.0.",
+          "url": "https://thehackernews.com/2024/10/alert-over-700000-draytek-routers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a07",
+          "order": 3,
+          "title": "ABOUT A QUARTER MILLION COMCAST SUBSCRIBERS HAD THEIR DATA STOLEN FROM DEBT COLLECTOR",
+          "summary": "Comcast revealed that data on over 200K customers was stolen in February in a ransomware attack on its former debt collector, FBCS. The company learned in July that customer information was compromised, including names, addresses, SSNs, and account details from around 2021.",
+          "url": "https://www.theregister.com/2024/10/04/comcast_fcbs_ransomware_theft/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a08",
+          "order": 1,
+          "title": "TO CATCH A PREDATOR ADMIN: THE POWER OF OSINT",
+          "summary": "This blog post describes an investigation using OSINT tools that uncovered a disturbing online CSAM marketplace run by 'JoeHaze'. Despite challenges with law enforcement response, efforts were made to gather evidence and report the predator to authorities for further action. The importance of protecting children from online predators was emphasized throughout the investigation.",
+          "url": "https://links.tldrnewsletter.com/IUozm5",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a09",
+          "order": 2,
+          "title": "SAFE RIDE INTO THE DANGERZONE: REDUCING ATTACK SURFACE WITH GVISOR",
+          "summary": "Dangerzone is a software that sanitizes potentially risky documents by detonating them in a container, creating a pixel map of the document, then converting that image back to a document. Prior to version 0.7.0, Dangerzone relied on Linux containers that are hardened via removing process and network capabilities, minimal user ID mapping, and syscall filtering via seccomp. To address gaps in its security posture, Dangerzone integrated with gVisor, which is an application kernel that has minimal privileges. To enable multiplatform support, Dangerzone implemented a nested container strategy where the outer container runs as a compatibility layer and the inner layer runs the gVisor and Dangerzone logic.",
+          "url": "https://dangerzone.rocks/news/2024-09-23-gvisor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "dangerzone.rocks",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a10",
+          "order": 3,
+          "title": "PRIORITIZING DETECTION ENGINEERING",
+          "summary": "Detection Engineering is a concept that emphasizes the importance of managing the workload and complexity of a detection stack. Prioritizing detection projects involves focusing on foundational steps, collaborating on high-quality detections, and managing the work involved in detection engineering. By intentionally addressing operational management challenges and avoiding premature staffing, a successful detection program can be developed with thoughtful planning and strategic implementation.",
+          "url": "https://links.tldrnewsletter.com/a3d7Lc",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a11",
+          "order": 1,
+          "title": "🆓 LAST CHANCE TO BE PART OF SNYK'S DEVSECCON 2024 OCT 8-9!",
+          "summary": "Don't miss out on your chance to register for DevSecCon 2024! From the exciting lineup of 20+ sessions, here's one that you can't skip:",
+          "url": "https://theanchorgroup.swoogo.com/devseccon/5954645?ref=hackernews&utm_medium=em-pa&utm_source=hackernews&utm_content=events_241008_devseccon&utm_campaign=dm_pp-hackernews-240927_241008_devseccon",
+          "reading_time_minutes": null,
+          "source_domain": "theanchorgroup.swoogo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a11",
+          "order": 2,
+          "title": "ALI DIAMOND, FROM HAK5: \"I'M A SOFTWARE ENGINEER, AND I HAVE TO MAKE BAD SECURITY DECISIONS—WHY?\" Save your spot!",
+          "summary": "",
+          "url": "https://theanchorgroup.swoogo.com/devseccon/5954645?ref=hackernews&utm_medium=em-pa&utm_source=hackernews&utm_content=events_241008_devseccon&utm_campaign=dm_pp-hackernews-240927_241008_devseccon",
+          "reading_time_minutes": null,
+          "source_domain": "theanchorgroup.swoogo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a12",
+          "order": 3,
+          "title": "TWISTRS",
+          "summary": "A domain name permutation and enumeration library powered by Rust.",
+          "url": "https://github.com/haveibeensquatted/twistrs?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a13",
+          "order": 4,
+          "title": "APONO (PRODUCT LAUNCH)",
+          "summary": "Apono provides organizations with an understanding of privileged access within their cloud environments, enforces robust security guardrails, and leverages AI-driven least privilege and anomaly detection capabilities to enhance security measures.",
+          "url": "https://www.apono.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "apono.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a14",
+          "order": 5,
+          "title": "VENATOR",
+          "summary": "Venator is an open-source threat detection platform that simplifies rule management and deployment using K8S CronJobs or Helm. It can also be run standalone or with other job schedulers like Nomad.",
+          "url": "https://github.com/nianticlabs/venator?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a15",
+          "order": 1,
+          "title": "RYANAIR FLIGHT BOOKING PRACTICES CATCH EYE OF EU PRIVACY WATCHDOG",
+          "summary": "Ireland's Data Protection Commission launched an inquiry into Ryanair's customer verification process, focusing on its use of facial recognition technology and biometric data. The investigation stems from complaints about additional ID checks for third-party bookings.",
+          "url": "https://links.tldrnewsletter.com/x6sFjF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a16",
+          "order": 2,
+          "title": "MANUFACTURERS RANK AS RANSOMWARE'S BIGGEST TARGET",
+          "summary": "The manufacturing industry has become the top target for ransomware attacks, accounting for 21% of incidents. A study by Black Kite reveals that 80% of manufacturing companies have critical vulnerabilities, with 67% listed in CISA's Known Exploited Vulnerabilities catalog.",
+          "url": "https://www.darkreading.com/vulnerabilities-threats/manufacturers-ransomwares-biggest-target?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a17",
+          "order": 3,
+          "title": "WHAT DO I THINK ABOUT WIZ CODE?",
+          "summary": "This post contextualizes Wiz's new AppSec offerings via Wiz Code within Wiz's product line and the CNAPP and ASPM industries. Wiz Code offers SCA, secrets scanning, and IaC scanning, which largely already existed via the WizCLI, but with Code the UX is tied together more succinctly and scanning can be done via a GitHub integration (pipelineless). Wiz Code is a nice add on for Wiz customers and shows promise for the CNAPP space but lags behind full ASPM providers or industry leading AppSec products.",
+          "url": "https://pulse.latio.tech/p/what-do-i-think-about-wiz-code?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-07:a18",
+          "order": 1,
+          "title": "UK NUCLEAR SITE SELLAFIELD FINED $440,000 FOR CYBERSECURITY SHORTFALLS",
+          "summary": "Sellafield, a UK nuclear site, was fined $440,000 for cybersecurity failures that exposed sensitive information.",
+          "url": "https://www.bleepingcomputer.com/news/security/uk-nuclear-site-sellafield-fined-440-000-for-cybersecurity-shortfalls/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a19",
+          "order": 2,
+          "title": "GOOGLE REMOVED KASPERSKY'S SECURITY APPS FROM THE PLAY STORE",
+          "summary": "Google removed Kaspersky's security apps from the Play Store and suspended its developer accounts due to restrictions imposed by the U.S. Department of Commerce.",
+          "url": "https://securityaffairs.com/169362/security/google-removed-kaspersky-apps-from-the-play-store.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-07:a20",
+          "order": 3,
+          "title": "CHINA-LINKED GROUP SALT TYPHOON HACKED US BROADBAND PROVIDERS AND BREACHED WIRETAP SYSTEMS",
+          "summary": "A group linked to China, called Salt Typhoon, hacked U.S. broadband providers like Verizon and AT&T, potentially accessing systems for lawful wiretapping.",
+          "url": "https://securityaffairs.com/169460/apt/salt-typhoon-hacked-us-broadband-providers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

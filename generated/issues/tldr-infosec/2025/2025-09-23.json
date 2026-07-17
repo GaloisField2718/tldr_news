@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-09-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-23",
+  "source_path": "TLDR InfoSec/article_23-09-2025.md",
+  "source_content_hash": "sha256:a25374045490c392f7b20a23472abbf518e76f41d07a285a4aa5c0e5ea5565ac",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a04",
+          "order": 1,
+          "title": "THREATSPIKE RED: UNLIMITED PEN TESTING. ONE FLAT FEE.",
+          "summary": "Paying day rates for pen testing? You know it's a broken model.",
+          "url": "https://www.threatspike.com/threatspike-red/?utm_campaign=172284149-27.09+Email%3A+TLDR+Newsletter&utm_source=email&utm_medium=email&utm_content=TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "threatspike.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a04",
+          "order": 2,
+          "title": "START PEN-TESTING ON YOUR TERMS.",
+          "summary": "",
+          "url": "https://www.threatspike.com/threatspike-red/?utm_campaign=172284149-27.09+Email%3A+TLDR+Newsletter&utm_source=email&utm_medium=email&utm_content=TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "threatspike.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a05",
+          "order": 1,
+          "title": "MALICIOUS PYPI PACKAGES DELIVER SILENTSYNC RAT",
+          "summary": "Threat actors uploaded two malicious packages, sisaws and secmeasure, to PyPI that typosquat legitimate libraries and deliver the SilentSync RAT. This malware is downloaded from Pastebin and maintains persistence through registry keys, crontab modifications, or launch agents, depending on the operating system. SilentSync communicates with a hardcoded C2 server at 200.58.107[.]25 over HTTP and steals browser data, including credentials, history, autofill data, and cookies from Chrome, Brave, Edge, and Firefox while also enabling remote command execution and file exfiltration.",
+          "url": "https://www.zscaler.com/blogs/security-research/malicious-pypi-packages-deliver-silentsync-rat?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "zscaler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a06",
+          "order": 2,
+          "title": "GITHUB'S REPUTATION BEING EXPLOITED BY BAD ACTORS TO DISTRIBUTE MALWARE",
+          "summary": "A security researcher explains how they discovered a macOS malware campaign spreading through SEO and GitHub links disguised as a legitimate app. The GitHub page appears legit, featuring a demo and an install command for Terminal. This command downloads malware and clears all xattrs. The page also hosts a dmg with an obfuscated osascript that executes a second script to remove quarantine and run stackprep.",
+          "url": "https://adam.kostarelas.com/blog/github-macos-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "adam.kostarelas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a07",
+          "order": 3,
+          "title": "STELLANTIS DETECTS BREACH AT THIRD-PARTY PROVIDER FOR NORTH AMERICAN CUSTOMERS",
+          "summary": "Automaker Stellantis disclosed that a third-party service provider's platform that supports North American customers was breached. Stellantis stated that the exposed data included only basic contact information and not financial information.",
+          "url": "https://links.tldrnewsletter.com/Wio2rU",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a08",
+          "order": 1,
+          "title": "UNMASKING AKIRA: THE RANSOMWARE TACTICS YOU CAN'T AFFORD TO IGNORE",
+          "summary": "Based on ZenSec's analysis of over 30 Akira ransomware incidents from 2023 to 2025, the group primarily exploits SSL VPN vulnerabilities (Cisco ASA, SonicWall, and WatchGuard) through missing MFA and unpatched CVEs, then leverages Veeam backup system vulnerabilities for privilege escalation and credential harvesting. Akira operates as a double-extortion group, stealing data via tools like WinSCP and Rclone (often within 3 hours), then encrypting systems at the hypervisor level while using AnyDesk for persistent access. The group targets backup infrastructure for destruction, publishes stolen data via Tor-based leak sites using torrent links, and demonstrates a playbook-driven approach similar to the defunct Conti ransomware operation.",
+          "url": "https://zensec.co.uk/blog/unmasking-akira-the-ransomware-tactics-you-cant-afford-to-ignore/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "zensec.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a09",
+          "order": 2,
+          "title": "WHY CONTINUOUS PROFILING IS THE FOURTH PILLAR OF OBSERVABILITY",
+          "summary": "Early profilers focused mainly on CPU and needed manually compiled binaries, which caused high performance overhead. Today, profiling has a lower impact and offers diverse signals that can be automatically collected continuously. OpenTelemetry introduced a new category for continuous profiling and considers adding it as a fourth pillar.",
+          "url": "https://www.datadoghq.com/blog/continuous-profiling-fourth-pillar/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a10",
+          "order": 3,
+          "title": "HOW TO AUTOMATICALLY DISABLE USERS IN AWS MANAGED MICROSOFT AD BASED ON GUARDDUTY FINDINGS",
+          "summary": "Automatically disabling compromised user accounts helps organizations reduce attack fallout. This tutorial demonstrates how to utilize GuardDuty for detecting suspicious activity, triggering an AWS Step Function to retrieve user information, and subsequently disabling the account in AWS Directory Service for Microsoft AD. The last step can also be done on a domain-joined EC2 instance if an organization doesn't use AWS Managed AD.",
+          "url": "https://aws.amazon.com/blogs/security/how-to-automatically-disable-users-in-aws-managed-microsoft-ad-based-on-guardduty-findings/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a11",
+          "order": 1,
+          "title": "EBOOK: SECURING AI AT THE ENDPOINT",
+          "summary": "On-device AI has huge benefits, but it also creates new attack paths. Dell and Intel's new eBook [12] explains how to position your organization securely to take advantage of AI innovation at the endpoint - including risks to watch out for, attack countermeasures,",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a12",
+          "order": 2,
+          "title": "and best practices for your fleet. Read the ebook (PDF, ungated)",
+          "summary": "",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a13",
+          "order": 3,
+          "title": "MICROSOFT-VULNERABLE-DRIVER-BLOCK-LISTS",
+          "summary": "Microsoft no longer provides the vulnerable driver block list in a browsable web page, making it harder to access directly. Instead, the list is only available as a downloadable ZIP file, which complicates its use in SIEM products for lookups and other functions. This project automates the download, extraction, and parsing of the ZIP file, converting the data into CSV and JSON formats for seamless integration with SIEM and security tools.",
+          "url": "https://github.com/Cyb3r-Monk/Microsoft-Vulnerable-Driver-Block-Lists?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a14",
+          "order": 4,
+          "title": "REGAL",
+          "summary": "Regal is a linter and language server for the Rego policy language.",
+          "url": "https://github.com/open-policy-agent/regal?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a15",
+          "order": 5,
+          "title": "TOOLHIVE",
+          "summary": "Toolhive provides a method to quickly deploy MCP servers that run in isolated containers for added security.",
+          "url": "https://github.com/stacklok/toolhive?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a16",
+          "order": 1,
+          "title": "MICROSOFT ENTRA ID FLAW ALLOWED HIJACKING ANY COMPANY'S TENANT",
+          "summary": "Security researcher Dirk-jan Mollema found a critical flaw that combined undocumented \"actor tokens\" from Microsoft's legacy Access Control Service with a bug in the deprecated Azure AD Graph API. This flaw allowed complete takeover of any Microsoft Entra ID tenant with Global Admin rights. The attack exploited unsigned actor tokens that bypass security, generate no audit logs, and stay valid for 24 hours without revocation, letting attackers impersonate users. Microsoft patched the vulnerability CVE-2025-55241 within nine days of disclosure in July. The flaw highlights ongoing risks from legacy authentication systems lacking modern security controls.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-id-flaw-allowed-hijacking-any-companys-tenant/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a17",
+          "order": 2,
+          "title": "FBI WARNS BAD ACTORS ARE SPOOFING THE IC3 CYBERCRIME REPORTING WEBSITE",
+          "summary": "The FBI warns that cybercriminals are creating fake versions of its Internet Crime Complaint Center (IC3) website to steal personal information from victims attempting to report cyber crimes. The spoofed sites use misspelled URLs, alternative domains, and poor graphics to trick users into entering sensitive data, including names, addresses, phone numbers, and banking information. Users should verify they're on the official IC3 site by ensuring the URL is exactly \"www.ic3.gov\" with HTTPS and avoid clicking on sponsored search results that may redirect to fraudulent sites.",
+          "url": "https://links.tldrnewsletter.com/mRm9aE",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a18",
+          "order": 3,
+          "title": "TELECOM EXEC: SALT TYPHOON INSPIRING OTHER HACKERS TO USE UNCONVENTIONAL TECHNIQUES",
+          "summary": "AT&T's CISO states hackers use Salt Typhoon's tactics like targeting unprotected platforms, exploiting logging gaps, and using legitimate tools for \"living off the land\" attacks. The Chinese group's success has inspired threats to target weak spots beyond traditional security, with attackers chaining exploits due to stronger defenses, prompting innovation.",
+          "url": "https://cyberscoop.com/telecom-exec-salt-typhoon-inspiring-other-hackers-to-use-unconventional-techniques/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-23:a19",
+          "order": 1,
+          "title": "TEEN SUSPECT SURRENDERS IN 2023 LAS VEGAS CASINO CYBERATTACK CASE",
+          "summary": "A teenage suspect linked to 2023 cyberattacks on MGM Resorts and Caesars surrendered to Las Vegas police, facing six felony charges, including extortion and identity theft.",
+          "url": "https://www.casino.org/news/teen-suspect-surrenders-in-2023-las-vegas-strip-cyberattack-case/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "casino.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a20",
+          "order": 2,
+          "title": "MOZILLA NOW LETS FIREFOX ADD-ON DEVS ROLL BACK BAD UPDATES",
+          "summary": "Mozilla has introduced a new rollback feature that allows Firefox extension developers to revert to previously approved versions when critical bugs occur, with users automatically receiving the rolled-back version within 24 hours through Firefox's update mechanism.",
+          "url": "https://www.bleepingcomputer.com/news/software/mozilla-now-lets-firefox-add-on-devs-roll-back-bad-updates/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-23:a21",
+          "order": 3,
+          "title": "AI FORENSICS HELP EUROPOL TRACK 51 CHILDREN IN GLOBAL ONLINE ABUSE CASE",
+          "summary": "Europol led an international operation across 18 countries using AI-driven forensic tools to analyze over 5,000 pieces of child exploitation material, resulting in the identification of 51 child victims and 60 suspects facing criminal proceedings.",
+          "url": "https://hackread.com/ai-forensics-europol-track-children-online-abuse-case/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

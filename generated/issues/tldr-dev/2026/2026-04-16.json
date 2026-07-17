@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-dev:2026-04-16",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-04-16",
+  "source_path": "TLDR Dev/article_16-04-2026.md",
+  "source_content_hash": "sha256:41ef5a438fb24488b46c7707887e61f5cd57e8b895582eb5fbabca189d8322b8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-04-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a04",
+          "order": 1,
+          "title": "",
+          "summary": "If QA is a bottleneck on your software engineering team and you're releasing slowly because of it, you must check out QA Wolf.",
+          "url": "https://www.qawolf.com/service?utm_source=tldr&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20260416-None_Experiment-FALSE&utm_term=headline-CutYourQACyclesDownToMinutesWithAutomatedTesting&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20260416_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a08",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com/service?utm_source=tldr&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20260416-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20260416_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a09",
+          "order": 1,
+          "title": "HOW OPENAI BUILT CODEX: INSIDE THE AGENT LOOP AND HARNESS",
+          "summary": "OpenAI Codex uses a single shared Rust-based \"harness\" to power its cross-platform coding agent across multiple client surfaces like CLI, web, VS Code, and macOS. At its heart, an agent loop orchestrates model inference, tool calls, and prompt updates, with prompt caching and context compaction built-in. All clients interact with the Codex core via a stable, bidirectional JSON-RPC App Server protocol.",
+          "url": "https://www.swequiz.com/articles/openai-codex-architecture?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "swequiz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a10",
+          "order": 2,
+          "title": "THINGS YOU DIDN'T KNOW ABOUT INDEXES",
+          "summary": "Database indexes speed update retrieval by providing a sorted structure that bypasses slow full table scans. However, they come with trade-offs, making writes slower, consuming storage, and requiring careful implementation to avoid pitfalls like incorrect composite index order or applying functions to indexed columns. Tools like `EXPLAIN` help diagnose index usage, while specialized types such as functional indexes (for expressions) and partial indexes (for data subsets) address specific query patterns.",
+          "url": "https://jon.chrt.dev/2026/04/15/things-you-didnt-know-about-indexes.html?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "jon.chrt.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a11",
+          "order": 3,
+          "title": "UNDER THE HOOD OF MDN'S NEW FRONTEND",
+          "summary": "MDN rebuilt its frontend from a React SPA to a Lit-based architecture using web components for interactivity and custom server components for static templating, solving the core problem of React being unable to reach into documentation HTML. The new setup auto-discovers and lazy-loads only the JS/CSS each page actually needs, uses Declarative Shadow DOM for pre-JS rendering, and switches from Webpack to Rspack, dropping dev server startup from two minutes to two seconds.",
+          "url": "https://developer.mozilla.org/en-US/blog/mdn-front-end-deep-dive/?utm_source=tldrdev",
+          "reading_time_minutes": 30,
+          "source_domain": "developer.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a12",
+          "order": 1,
+          "title": "WHY AI SUCKS AT FRONT END",
+          "summary": "AI is great at scaffolding generic, unoriginal UI, but falls apart the moment you need bespoke interactions, pixel-perfect layouts, or accessibility. The root causes are that it's trained on outdated CSS, can't actually see what it renders, and doesn't understand architectural reasoning.",
+          "url": "https://nerdy.dev/why-ai-sucks-at-front-end?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "nerdy.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a13",
+          "order": 2,
+          "title": "DO YOU EVEN NEED A DATABASE?",
+          "summary": "Simple file-based storage is often highly performant for many applications. Benchmarks against SQLite show that methods like in-memory maps are better for ID lookups, so databases are only essential for needs like scaling past single-server RAM limits, complex queries, concurrent writes, or atomic transactions.",
+          "url": "https://www.dbpro.app/blog/do-you-even-need-a-database?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "dbpro.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a14",
+          "order": 1,
+          "title": "TEST DOUBLE COFFEE TIME: AI HARNESSES",
+          "summary": "",
+          "url": "https://testdouble.com/debrief/ai-coffee-time-with-test-double?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "testdouble.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a15",
+          "order": 2,
+          "title": "Register",
+          "summary": "",
+          "url": "https://link.testdouble.com/827278",
+          "reading_time_minutes": null,
+          "source_domain": "link.testdouble.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a16",
+          "order": 3,
+          "title": "About Test Double's Pragmatic AI approach",
+          "summary": "",
+          "url": "https://link.testdouble.com/2717af",
+          "reading_time_minutes": null,
+          "source_domain": "link.testdouble.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a17",
+          "order": 4,
+          "title": "THE GEMINI APP IS NOW ON MAC",
+          "summary": "The Gemini app is now a native macOS experience, with integrated AI assistance accessible via a keyboard shortcut, allowing users to share their screen for instant context on local files and charts.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a18",
+          "order": 5,
+          "title": "MAGIKA",
+          "summary": "Magika is an AI-powered file type detection tool that rapidly and accurately identifies over 200 content types using a lightweight deep learning model, used extensively for improving user safety.",
+          "url": "https://github.com/google/magika?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a19",
+          "order": 1,
+          "title": "CAL.COM GOES CLOSED SOURCE: WHY AI SECURITY IS FORCING OUR DECISION",
+          "summary": "Cal.com is moving its main product from open source to closed source after five years. This difficult decision was made primarily due to escalating security threats from AI, which can now rapidly find and exploit vulnerabilities in open-source code. While the core product is closing, a separate, open-source version called Cal.diy will be released under an MIT license for hobbyists and developers.",
+          "url": "https://cal.com/blog/cal-com-goes-closed-source-why?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "cal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a20",
+          "order": 2,
+          "title": "WHY AI HASN'T REPLACED HUMAN EXPERTISE—AND WHAT THAT MEANS FOR YOUR SAAS STACK",
+          "summary": "Stack Overflow reports that advanced questions on its platform have doubled since 2023. AI handles the easy stuff, but 75% of devs turn to humans when they don't trust AI output. Devs value the comments and discussion around answers more than the answers themselves, which is something AI can't replicate by collapsing discourse into a single confident paragraph.",
+          "url": "https://stackoverflow.blog/2026/04/15/why-ai-hasn-t-replaced-human-expertise/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-16:a21",
+          "order": 1,
+          "title": "FULLY REMOTE)",
+          "summary": "TLDR's Applied AI team is tasked with making every process at TLDR legible to code, runnable by anyone, and composable into larger workflows. Join a small, fast moving team using the latest AI tools with an unlimited token budget. Learn more [21].",
+          "url": "https://jobs.ashbyhq.com/tldr.tech/3b21aaf8-dea5-4127-be71-602d30e5001e",
+          "reading_time_minutes": null,
+          "source_domain": "jobs.ashbyhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a22",
+          "order": 2,
+          "title": "CAVEMAN",
+          "summary": "Caveman is an LLM skill/plugin that enables terse, \"caveman-like\" communication to cut agent output tokens by up to 75% while maintaining technical accuracy.",
+          "url": "https://github.com/JuliusBrussee/caveman?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a23",
+          "order": 3,
+          "title": "CYBERSECURITY LOOKS LIKE PROOF OF WORK NOW",
+          "summary": "New AI models like Anthropic's Mythos suggest cybersecurity is becoming a \"proof of work\" system where securing systems requires outspending attackers in token-based vulnerability discovery.",
+          "url": "https://www.dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "dbreunig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a24",
+          "order": 4,
+          "title": "GOOGLE BROKE ITS PROMISE TO ME. NOW ICE HAS MY DATA.",
+          "summary": "The Electronic Frontier Foundation has filed complaints against Google for breaking its promise to notify users before sharing their data with law enforcement.",
+          "url": "https://www.eff.org/deeplinks/2026/04/google-broke-its-promise-me-now-ice-has-my-data?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "eff.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-16:a25",
+          "order": 5,
+          "title": "HOW I LEARNED UNITY THE WRONG WAY",
+          "summary": "Years of \"vibe coding\" Unity by copying tutorials without understanding fundamental programming principles led to numerous interview failures for this dev, forcing him to rebuild his knowledge from the ground up to get genuine expertise and warning others against this common, increasingly prevalent pitfall.",
+          "url": "https://darkounity.com/blog/how-i-learned-unity-the-wrong-way?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "darkounity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

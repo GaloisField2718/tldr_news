@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2026-01-22",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-22",
+  "source_path": "TLDR InfoSec/article_22-01-2026.md",
+  "source_content_hash": "sha256:13c5850e5ff5e5dbfb1512ebe303edd2967e0764dc9a2754a457b36b1736baa6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-22",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Hiring can't solve this. Training takes too long. Analysts burn out and quit. Meanwhile, critical alerts pile up while your team wastes time on false positives.",
+          "url": "https://www.dropzone.ai/schedule-a-demo?utm_campaign=33098793-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Newsletter+Primary+2+January+2026&utm_source=sponsorship&utm_medium=newsletter&utm_content=demo",
+          "reading_time_minutes": null,
+          "source_domain": "dropzone.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a04",
+          "order": 2,
+          "title": "SCHEDULE YOUR DEMO →",
+          "summary": "",
+          "url": "https://www.dropzone.ai/schedule-a-demo?utm_campaign=33098793-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Newsletter+Primary+2+January+2026&utm_source=sponsorship&utm_medium=newsletter&utm_content=demo",
+          "reading_time_minutes": null,
+          "source_domain": "dropzone.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a05",
+          "order": 1,
+          "title": "VULNERABILITIES THREATEN TO BREAK CHAINLIT AI FRAMEWORK",
+          "summary": "Zafran Security disclosed two high-severity vulnerabilities in Chainlit, an open-source AI chatbot framework with over 200,000 weekly PyPI downloads. CVE-2025-22218 (CVSS 7.7) enables arbitrary file reads via the custom elements API, while CVE-2026-21219 (CVSS 7.0) is an SSRF flaw affecting SQLAlchemy implementations. Combined exploitation could allow attackers to steal AWS credentials from EC2 instances running IMDSv1 and achieve cloud account takeover. Version 2.9.4 patches both vulnerabilities.",
+          "url": "https://links.tldrnewsletter.com/n59Has",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a06",
+          "order": 2,
+          "title": "CLOUDFLARE WHACKS WAF BYPASS BUG THAT OPENED SIDE DOOR FOR ATTACKERS",
+          "summary": "Cloudflare has fixed a vulnerability in its WAF that could allow attackers to bypass security rules and directly access origin servers. The vulnerability emerged when Cloudflare disabled security features upon receiving an HTTP-01 ACME challenge without verifying that the challenge token was valid. Cloudflare remediated this issue with no customer action by disabling WAF features only when the challenge token matches a legitimate token for that domain.",
+          "url": "https://www.theregister.com/2026/01/20/cloudflare_fixes_acme_validation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a07",
+          "order": 3,
+          "title": "PROMPT INJECTION BUGS FOUND IN OFFICIAL ANTHROPIC GIT MCP SERVER",
+          "summary": "Cyata discovered three prompt-injection vulnerabilities in Anthropic's reference MCP server for the git implementation. The vulnerabilities could allow an attacker to execute arbitrary code when the MCP server is used alongside a filesystem MCP, delete arbitrary files, and load arbitrary files into an LLM's context. They arise from mcp-server-git failing to properly validate repository paths or sanitize arguments passed to Git commands.",
+          "url": "https://www.infosecurity-magazine.com/news/prompt-injection-bugs-anthropic/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a08",
+          "order": 1,
+          "title": "THREAT HUNTING WITH CLAUDE CODE AND MCP",
+          "summary": "This guide demonstrates how to use Claude Code with Model Context Protocol servers to compress days of manual threat hunting into hours by connecting AI agents directly to security data lakes for hypothesis-driven investigations. The workflow involves stakeholder alignment on three to five priority threats from threat models, then deploying reusable \"Skills\" that teach agents hunting methodologies, such as the pivot loop pattern for correlating indicators across time, identity, network, and host dimensions. Hunt outputs include structured findings with confidence assessments and detection coverage gaps that translate directly into detection-as-code rules.",
+          "url": "https://www.detectionatscale.com/p/ai-threat-hunting-mcp-workflows?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "detectionatscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a09",
+          "order": 2,
+          "title": "UNAUTHENTICATED CLUSTER TAKEOVER IN AWS ROSA",
+          "summary": "A security researcher discovered a critical vulnerability in the Red Hat OpenShift Service affecting AWS ROSA Classic clusters that could allow unauthenticated full cluster takeover. The vulnerability lies in the cluster transfer endpoint, which checks only whether the recipient has the ability to accept a cluster, not whether the requester owns the cluster, allowing an attacker to take over a cluster with only the cluster_uuid and username. Unauthenticated requests to the cluster's web console settings endpoint return the cluster_uuid and the owner's email address, which could be used to guess their username.",
+          "url": "https://blog.ryanjarv.sh/2026/01/05/unauth-aws-rosa-cluster-takeover.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.ryanjarv.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a10",
+          "order": 3,
+          "title": "SDFLGS - THE LOG FIELD I'D BEEN IGNORING THAT UNLOCKED ATTACK PATH DETECTION",
+          "summary": "SDFlags is a field that controls which security descriptor information is returned in queries and is used extensively in BloodHound and SharpHound. Querying for nTSecurityDescriptor fields (Owner, Group, DACL, or SACL) opens the door to attack path mapping. Conversely, legitimate tools almost never set SDFlags when running AD queries, opening up a new detection opportunity.",
+          "url": "https://www.huntress.com/blog/ldap-active-directory-detection-part-three?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a11",
+          "order": 1,
+          "title": "SECURE YOUR WORKFORCE AT EVERY STAGE OF THE EMPLOYEE LIFE CYCLE",
+          "summary": "Secure your workforce without slowing teams down. Persona verifies employees, contractors, and vendors in seconds — automating identity checks to eliminate manual work and stop impersonation attacks.",
+          "url": "https://withpersona.com/solutions/workforce-idv?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_campaign=acq_wf_ds_wf-idv_tldr-wf-idv-solution",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a11",
+          "order": 2,
+          "title": "Learn more today",
+          "summary": "",
+          "url": "https://withpersona.com/solutions/workforce-idv?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_campaign=acq_wf_ds_wf-idv_tldr-wf-idv-solution",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a12",
+          "order": 3,
+          "title": "NEBULA",
+          "summary": "Nefarious Execution & Behavioral Unit for LOLBAS Attacks (NEBULA) is an interactive PowerShell TUI for testing and exploring Windows execution techniques, COM objects, WMI methods, and LOLBAS techniques.",
+          "url": "https://github.com/MHaggis/NEBULA?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a13",
+          "order": 4,
+          "title": "DARWIS TAXII",
+          "summary": "DARWIS TAXII provides a high-performance Trusted Automated eXchange of Indicator Information (TAXII) server written in Rust. It's a Rust port of EclecticIQ OpenTAXII.",
+          "url": "https://github.com/CSPF-Founder/darwis-taxii?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a14",
+          "order": 5,
+          "title": "INTRODUCING SUPPLY CHAIN ATTACK CAMPAIGNS TRACKING IN THE SOCKET DASHBOARD",
+          "summary": "Socket launched a Threat Intel page with campaign tracking that identifies whether organizations are affected by active supply chain attack campaigns targeting package registries like npm. The feature groups related malicious packages under single campaigns (such as Shai-Hulud and Contagious Interview), displays Safe/Impacted status for each organization, and provides direct links to affected repositories with ecosystem filtering for npm, PyPI, and Maven. Security teams can immediately assess exposure to coordinated attacks without cross-referencing advisories or running custom scripts.",
+          "url": "https://links.tldrnewsletter.com/m3MXNi",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a15",
+          "order": 1,
+          "title": "HONG KONG ISSUES CODE OF PRACTICE UNDER THE PROTECTION OF CRITICAL INFRASTRUCTURES (COMPUTER SYSTEMS) ORDINANCE",
+          "summary": "Hong Kong's Office of the Commissioner of Critical Infrastructure issued a Code of Practice on January 1 that translated the Protection of Critical Infrastructures Ordinance into specific compliance requirements for critical infrastructure operators. The CoP establishes criteria for Critical Computer System designation (including SCADA and industrial control systems), defines material change notification triggers, mandates security audits and management plans, and clarifies incident reporting timelines—12 hours for serious incidents affecting service levels or causing data breaches, and 48 hours for other security incidents. Critical infrastructure operators should treat the CoP as the operative compliance benchmark and implement structured governance programs aligned with its technical baselines, security audit requirements, and incident response protocols to meet supervisory expectations.",
+          "url": "https://www.mayerbrown.com/en/insights/publications/2026/01/hong-kong-issues-code-of-practice-under-the-protection-of-critical-infrastructures-computer-systems-ordinance?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "mayerbrown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a16",
+          "order": 2,
+          "title": "A NOVEL SIDE-CHANNEL ATTACK THAT UTILIZES MEMORY RE-ORDERINGS",
+          "summary": "Memory DisOrder is a timerless side-channel attack that exploits memory re-orderings in relaxed memory models to infer cross-process activity on mainstream CPUs (X86/Arm/Apple) and GPUs (NVIDIA/AMD/Apple). The technique demonstrated covert channels achieving up to 16 bits/second with 95% accuracy on Apple M3 GPU, reliable DNN architecture fingerprinting, and potential throughput of nearly 30K bits/second on X86 CPUs when exploiting low-level system details. Organizations should monitor for emerging mitigations as this vulnerability class, which affects parallel processing units, becomes better understood.",
+          "url": "https://semiengineering.com/a-novel-side-channel-attack-that-utilizes-memory-re-orderings-u-of-washington-duke-ucsc-et-al/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "semiengineering.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a17",
+          "order": 3,
+          "title": "PHISHING CAMPAIGN ZEROES IN ON LASTPASS CUSTOMERS",
+          "summary": "An ongoing phishing campaign targeting LastPass customers began around January 19, using LLM-crafted emails with plausible subject lines urging users to \"back up their vaults\" before scheduled maintenance. The phishing emails direct victims to credential-harvesting sites designed to capture master passwords, potentially compromising entire password vaults. Organizations should alert users to verify email sender addresses, enable MFA on password managers, and report suspicious LastPass-branded emails.",
+          "url": "https://links.tldrnewsletter.com/cMGFQd",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-22:a18",
+          "order": 1,
+          "title": "CURL SHUTTERS BUG BOUNTY PROGRAM TO STOP AI SLOP",
+          "summary": "",
+          "url": "https://www.theregister.com/2026/01/21/curl_ends_bug_bounty/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a19",
+          "order": 2,
+          "title": "TRUMP ADMINISTRATION ADMITS DOGE MAY HAVE MISUSED AMERICANS' SOCIAL SECURITY DATA",
+          "summary": "According to court documents, two members of DOGE may have accessed and shared SSNs in an effort to help an advocacy group “overturn election results in certain states.”",
+          "url": "https://techcrunch.com/2026/01/20/trump-administration-admits-doge-may-have-misused-americans-social-security-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-22:a20",
+          "order": 3,
+          "title": "PWN2OWN AUTOMOTIVE 2026 - DAY ONE RESULTS",
+          "summary": "Pwn2Own Automotive 2026 Day One awarded $516,500 for 37 unique zero-days across IVI systems, EV chargers, and Tesla Infotainment, with Fuzzware.io leading the Master of Pwn competition.",
+          "url": "https://www.zerodayinitiative.com/blog/2026/1/21/pwn2own-automotive-2026-day-one-results?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "zerodayinitiative.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

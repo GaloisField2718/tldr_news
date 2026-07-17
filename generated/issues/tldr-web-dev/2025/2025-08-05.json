@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-08-05",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-08-05",
+  "source_path": "TLDR Web Dev/article_05-08-2025.md",
+  "source_content_hash": "sha256:3b3e402be20710a17758652c22bbf8e40fa18df12b0c3b03531843448634fb18",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-08-05",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-05:a04",
+          "order": 1,
+          "title": "HOW WE MADE JSON.STRINGIFY MORE THAN TWICE AS FAST",
+          "summary": "V8 has sped up `JSON.stringify` (over 2x faster) through several technical optimizations. These optimizations are: a side-effect-free fast path for plain data, specialized string handling (one-byte vs. two-byte), SIMD instructions for string serialization, and an 'express lane' for frequently serialized objects. They also upgraded their DoubleToString algorithm and switched to a segmented buffer to avoid memory reallocation overhead.",
+          "url": "https://v8.dev/blog/json-stringify?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "v8.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a05",
+          "order": 2,
+          "title": "COMPILE SVELTE 5 IN YOUR HEAD",
+          "summary": "Svelte 5's compilation process can be compared to vanilla JavaScript DOM manipulation. This article covers essential DOM concepts like the `template` element, event delegation, and reactive states using Svelte's new runes system ($state), showing how these translate to optimized JavaScript output. Through examples, it shows how Svelte 5 compiles components into functions that efficiently create and manage DOM elements.",
+          "url": "https://lihautan.com/compile-svelte-5-in-your-head?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "lihautan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a06",
+          "order": 3,
+          "title": "LET'S WRITE REACT HOOKS FROM SCRATCH",
+          "summary": "This article goes over how React Hooks store and persist state within functional components. It begins with a simplified explanation using arrays and then goes into the actual implementation using a linked list within the virtual DOM's component tracking. Code examples are provided to show how `useState` could be implemented from scratch using both arrays and linked lists.",
+          "url": "https://playfulprogramming.com/posts/react-write-hooks-from-scratch?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "playfulprogramming.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-05:a07",
+          "order": 1,
+          "title": "ONBOARDING FOR CODING AGENTS",
+          "summary": "When using coding agents like Claude Code, you should shift context from tool-specific files like `CLAUDE.md` to universal `README.md` files organized by domain for better onboarding. Code quality should be enforced through \"Quality Gates,\" defined as environment constraints using tools like linters and type checkers. This approach allows AI coding agents to iterate and improve code until all checks pass.",
+          "url": "https://www.fuzzycomputer.com/posts/onboarding?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "fuzzycomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a08",
+          "order": 2,
+          "title": "READ THAT CODE!",
+          "summary": "It's important to read AI-generated code, despite the efficiency of tools like Claude Code. Otherwise, the codebase risks weakened architecture, and devs risk the loss of implementation knowledge. There needs to be a distinction between asynchronous tasks suitable for \"auto-accept mode\" and synchronous coding for core features requiring careful oversight.",
+          "url": "https://etsd.tech/posts/rtfc/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "etsd.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a09",
+          "order": 3,
+          "title": "EVERY VISUAL WORKFLOW TOOL IS JUST EXCEL FOR DEVELOPERS WHO GAVE UP",
+          "summary": "Visual workflow tools like Zapier are essentially Excel for devs who have lost confidence in their coding abilities. These tools, while seemingly easy, create complex dependencies, vendor lock-in, and limitations that ultimately make developers less capable and force them to pay for what they can already build.",
+          "url": "https://medium.com/@mohamedalibenothmen1/every-visual-workflow-tool-is-just-excel-for-developers-who-gave-up-f7261090fbc8?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-05:a10",
+          "order": 1,
+          "title": "OV",
+          "summary": "ov is a terminal pager for efficiently viewing text, especially tabular data and large files. It has functionalities like fixed headers, column highlighting, real-time updates with follow mode, and advanced search. The pager is customizable, allowing devs to configure keybindings, styles, and integrate with tools like `bat` and `delta`",
+          "url": "https://github.com/noborus/ov?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a11",
+          "order": 2,
+          "title": "DEPENDENCY CRUISER",
+          "summary": "Dependency Cruiser is a tool for validating and visualizing JavaScript, TypeScript, and related project dependencies against user-defined rules. It identifies rule violations in text or graphics and can generate dependency graphs in various formats.",
+          "url": "https://github.com/sverweij/dependency-cruiser?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a12",
+          "order": 3,
+          "title": "SCREENCODER",
+          "summary": "ScreenCoder is a UI-to-code generation system that converts screenshots or design mockups into HTML/CSS code using a modular multi-agent architecture. It has visual understanding, layout planning, and adaptive code synthesis, allowing for customized modifications and easy tweaking of layouts and styles.",
+          "url": "https://github.com/leigest519/ScreenCoder?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-05:a13",
+          "order": 1,
+          "title": "TOKENS ARE GETTING MORE EXPENSIVE",
+          "summary": "AI subscriptions are headed for a \"short squeeze\" despite the expectation that language model costs will decrease. The problem lies in the demand for the newest, most powerful models, which remain expensive, and the exponential increase in token consumption as AI agents become more capable. Unlimited subscription models are unsustainable, as users can exploit them to consume enormous amounts of tokens (which is why Claude is introducing weekly limits now).",
+          "url": "https://ethanding.substack.com/p/ai-subscriptions-get-short-squeezed?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "ethanding.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a14",
+          "order": 2,
+          "title": "PERPLEXITY IS USING STEALTH, UNDECLARED CRAWLERS TO EVADE WEBSITE NO-CRAWL DIRECTIVES",
+          "summary": "Cloudflare has discovered that Perplexity, an AI-powered answer engine, is using stealth crawling techniques to bypass website restrictions. Perplexity appears to be masking its crawler identity by modifying its user agent, rotating IPs, and ignoring robots.txt files after being blocked. This behavior violates established internet norms of transparency and respect for website preferences, so Cloudflare has responded by delisting Perplexity as a verified bot and implementing rules to block this stealth crawling activity.",
+          "url": "https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a15",
+          "order": 3,
+          "title": "DO LLMS IDENTIFY FONTS?",
+          "summary": "A live benchmark was created to test whether LLMs can identify fonts from dafont.com forum posts where users request font identification. The benchmark avoids contamination by only testing LLMs on new, unsolved forum posts and comparing their predictions to the eventual community solutions. GPT-4o-mini and Gemini-2.5-flash-preview-05-20 were both provided with images, titles, and descriptions, allowing up to five guesses each, but the results were surprisingly poor.",
+          "url": "https://maxhalford.github.io/blog/llm-font-identification/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "maxhalford.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-05:a16",
+          "order": 1,
+          "title": "DRAWAFISH.COM POSTMORTEM — AUG 3, 2025 INCIDENT",
+          "summary": "The creator of DrawAFish.com, after getting Hacker News fame through vibe-coding and heavy reliance on Copilot, had a security incident involving username vandalism and offensive content due to a legacy password breach, lack of authentication in the username update API, and a JWT vulnerability.",
+          "url": "https://aldenhallak.com/blog/posts/draw-a-fish-postmortem.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "aldenhallak.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a17",
+          "order": 2,
+          "title": "CODE RELOADING FOR RACK APPS",
+          "summary": "This blog post explains how to implement code reloading in a Rack-based Ruby application, similar to what Rails provides, using Zeitwerk, the listen gem, and concurrent-ruby to automatically reload code changes without restarting the server.",
+          "url": "https://jardo.dev/code-reloading-for-rack-apps?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "jardo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a18",
+          "order": 3,
+          "title": "KIMU",
+          "summary": "Kimu is an open-source, React, Remotion, and TypeScript-based video editor project with features like non-linear editing, multi-track support, live preview, and video export.",
+          "url": "https://github.com/robinroy03/videoeditor?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-05:a19",
+          "order": 4,
+          "title": "QWEN-IMAGE: CRAFTING WITH NATIVE TEXT RENDERING",
+          "summary": "Qwen-Image is a new 20B MMDiT image foundation model that can render complex text and help edit images precisely.",
+          "url": "https://qwenlm.github.io/blog/qwen-image/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "qwenlm.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

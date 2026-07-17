@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2024-01-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-01-17",
+  "source_path": "TLDR InfoSec/article_17-01-2024.md",
+  "source_content_hash": "sha256:d1fa04ad5eea28542b9bd5ece6f7eeacb11fb9c4a998c7270bb8320efd88fe7d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-01-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a05",
+          "order": 1,
+          "title": "",
+          "summary": "In this recorded talk: speakers Kayne McGladrey, Field CISO at Hyperproof [5], and Dr. Rebecca Wynn, Global Chief Security Strategist and CISO at Click Solutions group, discuss: → Valid business use cases for generative AI tools like ChatGPT.",
+          "url": "https://www.brighttalk.com/webcast/18576/585611?utm_source=tldrtech-portal&utm_medium=web&utm_campaign=channel-page&utm_content=recorded",
+          "reading_time_minutes": null,
+          "source_domain": "brighttalk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a05",
+          "order": 2,
+          "title": "Watch the full talk for free",
+          "summary": "",
+          "url": "https://www.brighttalk.com/webcast/18576/585611?utm_source=tldrtech-portal&utm_medium=web&utm_campaign=channel-page&utm_content=recorded",
+          "reading_time_minutes": null,
+          "source_domain": "brighttalk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a06",
+          "order": 1,
+          "title": "180K INTERNET-EXPOSED SONICWALL FIREWALLS VULNERABLE TO DOS ATTACKS, POSSIBLY RCE",
+          "summary": "Most internet-facing SonicWall firewalls are unpatched for two high-severity vulnerabilities, allowing remote DoS and potentially RCE without authentication. CVE-2022-22274 and CVE-2023-0656 stem from code reuse issues. Patches were released in 2022 and 2023, but over 178,000 devices remain vulnerable. Exploitation can repeatedly crash devices, disrupting operations.",
+          "url": "https://www.securityweek.com/180k-internet-exposed-sonicwall-firewalls-vulnerable-to-dos-attacks-possibly-rce/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a07",
+          "order": 2,
+          "title": "SCHOOL SOFTWARE BREACH REVEALS PRIVATE DATA ON MILLIONS OF USERS",
+          "summary": "A security researcher discovered an unprotected database belonging to a school security company, Raptor Technologies. The 827GB database contains four million records that include student health information, court protection orders, school layouts, school security information, and background checks. Raptor Technologies has secured the database and reports that it has no evidence that the database was accessed by anyone else.",
+          "url": "https://www.techradar.com/pro/security/school-software-breach-reveals-private-data-on-millions-of-users?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a08",
+          "order": 3,
+          "title": "WINDOWS SMARTSCREEN FLAW EXPLOITED TO DROP PHEMEDRONE MALWARE",
+          "summary": "Trend Micro reports that a Windows Defender SmartScreen vulnerability that was patched in the November 2023 Patch Tuesday is being actively exploited in a campaign to drop the Phemedrone malware. The campaign involves using a specially crafted internet shortcut file to bypass SmartScreen, download a control panel item file from the attacker’s C2, and execute the loader, which establishes persistence and runs the malware. The Phemedrone info-stealer targets browsers, crypto wallets, Discord credentials, files, FTP connection info, system info, Steam, and Telegram.",
+          "url": "https://www.bleepingcomputer.com/news/security/windows-smartscreen-flaw-exploited-to-drop-phemedrone-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a09",
+          "order": 1,
+          "title": "WEB LLM ATTACKS",
+          "summary": "This blog post goes through what LLM attacks are and shares examples of how to execute them. Web LLM attacks can retrieve protected data, trigger harmful actions via APIs like SQL injection, and attack systems querying the model. It resembles exploiting SSRF vulnerabilities - abusing a server-side system to attack components not directly accessible.",
+          "url": "https://portswigger.net/web-security/llm-attacks?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a10",
+          "order": 2,
+          "title": "VBA: HAVING FUN WITH MACROS, OVERWRITTEN POINTERS & R/W/X MEMORY",
+          "summary": "This blog post walks through how to create a stealthy arbitrary code execution attack on macOS. The author does this by seeking execution from memory without documented functions using just RtlMoveMemory and DispCallFunc to minimize traces.",
+          "url": "https://adepts.of0x.cc/vba-hijack-pointers-rwa/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "adepts.of0x.cc",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a11",
+          "order": 3,
+          "title": "FUZZING AND BYPASSING THE AWS WAF",
+          "summary": "The Sysdig Threat Research Team discovered a payload that utilizes the onbeforetoggle HTML attribute to bypass the AWS WAF’s Managed Rules’ protection. This post details how they built a fuzzer to fuzz for XSS payloads against the AWS WAF and details the bypass that they discovered. The vulnerability was patched by AWS after it was reported.",
+          "url": "https://sysdig.com/blog/fuzzing-and-bypassing-the-aws-waf/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "sysdig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a12",
+          "order": 1,
+          "title": "PPFANG",
+          "summary": "A tool that helps to identify client-side prototype polluting libraries.",
+          "url": "https://github.com/acuciureanu/ppfang?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a13",
+          "order": 2,
+          "title": "SECURELI",
+          "summary": "seCureLI is a tool that scans your local repo for secrets before you commit code to a remote repository, installs linters based on the code of your project to support security and coding best practices, and configures all the hooks needed so you don’t have to.",
+          "url": "https://github.com/slalombuild/secureli?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a14",
+          "order": 3,
+          "title": "SOPS: SECRETS OPERATIONS",
+          "summary": "SOPS is an editor of encrypted files that has a wide range of supported formats and can encrypt using AWS, GCP, Azure, Vault, age, and PGP. SOPS exposes both an editor and a decryptor package.",
+          "url": "https://github.com/getsops/sops?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a15",
+          "order": 1,
+          "title": "BURNOUT: INFERNO DRAINER’S MULTIMILLION-DOLLAR SCAM SCHEME DETAILED",
+          "summary": "The now inactive Inferno Drainer scam created over 16,000 malicious domains from 2022-2023 to phish cryptocurrency wallet credentials using high-quality phishing pages spoofing Web3 protocols. It scammed over 137,000 victims and stole $87 million. Inferno Drainer offered its scam-as-a-service malware to affiliates for 20% of earnings. It spoofed 100+ crypto brands via phishing sites on the 16,000+ domains.",
+          "url": "https://www.group-ib.com/blog/inferno-drainer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "group-ib.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a16",
+          "order": 2,
+          "title": "HUNDREDS OF THOUSANDS OF DOLLARS WORTH OF SOLANA CRYPTOCURRENCY ASSETS STOLEN IN RECENT CLINKSINK DRAINER CAMPAIGNS",
+          "summary": "Mandiant posts about the CLINKSINK Drainer Campaign that was executed after its X account was hacked. Mandiant notes that hundreds of thousands of dollars worth of Solana cryptocurrency assets have been stolen in recent CLINKSINK drainer campaigns. These campaigns involve the use of social media and chat applications to distribute cryptocurrency-themed phishing pages, which trick victims into connecting their wallets and approving fraudulent transactions.",
+          "url": "https://www.mandiant.com/resources/blog/solana-cryptocurrency-stolen-clinksink-drainer-campaigns?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "mandiant.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a17",
+          "order": 3,
+          "title": "ECB TO RUN FIRST CYBER RESILIENCE STRESS TESTS",
+          "summary": "The European Central Bank is planning to conduct its first cyber resilience stress tests on 109 supervised banks to assess their ability to respond to and recover from a cyber attack. The tests will simulate a scenario where a cyber attack disrupts the banks' daily operations, and the banks will be evaluated on their response and recovery measures.",
+          "url": "https://www.finextra.com/newsarticle/43483/ecb-to-run-first-cyber-resilience-stress-tests?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "finextra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-01-17:a18",
+          "order": 1,
+          "title": "DDOS ATTACKS ON THE ENVIRONMENTAL SERVICES INDUSTRY SURGED IN 2023",
+          "summary": "Cloudflare published its DDoS Threat Report for Q4 2023, which observed a 61,839% increase in DDoS attacks targeting environmental services in 2023. The most targeted industries were cryptocurrency, gaming and gambling, and telecommunications.",
+          "url": "https://thehackernews.com/2024/01/ddos-attacks-on-environmental-services.html?m=1&utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a19",
+          "order": 2,
+          "title": "AWS ACCOUNTS DISCONTINUES THE USE OF SECURITY CHALLENGE QUESTIONS",
+          "summary": "AWS Accounts has announced that users will no longer be able to add security challenge questions to accounts that don’t already utilize them.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2024/01/aws-accounts-discontinues-security-challenge-questions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a20",
+          "order": 3,
+          "title": "HELLOFRESH FINED £140,000 FOR 80 MILLION SPAM MESSAGES",
+          "summary": "HelloFresh, a recipe kit delivery service, has been fined £140,000 by the UK's Information Commissioner's Office (ICO) for sending 80 million spam messages to customers without proper consent.",
+          "url": "https://www.hackread.com/hellofresh-fined-80-million-spam-messages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-01-17:a21",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

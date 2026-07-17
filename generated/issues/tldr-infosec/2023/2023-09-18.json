@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2023-09-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-09-18",
+  "source_path": "TLDR InfoSec/article_18-09-2023.md",
+  "source_content_hash": "sha256:39d66aad25dbae903a1e2ace4b663a8aae9b8ab742d32ee9f877d18baea7a175",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-09-18",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-18:o001",
+          "order": 1,
+          "title": "COLLECTION AT HIGH-VALUE TARGETS",
+          "summary": "Microsoft has reported that an Iranian cyber espionage group, tracked as Peach Sandstorm but known otherwise as Holmium, APT33, or Elfin, targeted organizations in the satellite, defense, and pharmaceutical sectors. The group compromised dozens of entities, exfiltrated data from a subset, and gained access using password spray attacks. The campaign began in February and targeted thousands of organizations.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2023/09/14/peach-sandstorm-password-spray-campaigns-enable-intelligence-collection-at-high-value-targets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o002",
+          "order": 2,
+          "title": "PASSWORD STEALING LINUX MALWARE EVADES NOTICE FOR 3 YEARS",
+          "summary": "From 2020 until 2022, a random sampling of users downloading the Free Download Manager software received a Trojan horse version of the app. The malicious software has a collector backdoor that collects secrets from systems and then utilizes another backdoor to download an uploaded script from a C2 and periodically upload the stolen secrets. IOCs are included in the article.",
+          "url": "https://arstechnica.com/security/2023/09/password-stealing-linux-malware-served-for-3-years-and-no-one-noticed/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o003",
+          "order": 3,
+          "title": "NEW GITHUB REPOJACKING METHOD FOUND",
+          "summary": "Researchers from Checkmarx discovered a new method to exploit a race condition in the GitHub retired namespaces protection process to repojack popular repositories. Repojacking is an attack where an attacker sets up a malicious mirror of a GitHub repository that was renamed with the goal of impersonating the old repository. To prevent these attacks, GitHub enabled a protection to automatically retire popular repository namespaces when they are renamed. However, attacks such as this one bypass this protection.",
+          "url": "https://checkmarx.com/blog/persistent-threat-new-exploit-puts-thousands-of-github-repositories-and-millions-of-users-at-risk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "checkmarx.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-18:o004",
+          "order": 1,
+          "title": "A DEEP DIVE INTO TPM-BASED BITLOCKER DRIVE ENCRYPTION",
+          "summary": "This document provides an in-depth analysis of TPM-based BitLocker Drive Encryption, which is a feature in Windows that allows users to encrypt their hard drives. It explains how the BitLocker keys are stored and how they are accessed using the TPM. Additionally, the author describes a vulnerability in BitLocker that allows attackers to bypass the encryption and provides a detailed explanation of how the attack works.",
+          "url": "https://blog.scrt.ch/2023/09/15/a-deep-dive-into-tpm-based-bitlocker-drive-encryption/",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.scrt.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o005",
+          "order": 2,
+          "title": "CROSS-WINDOW-MESSAGE ORIGIN VALIDATION",
+          "summary": "A vulnerability in Facebook/Meta's Canvas on the Comet platform could allow account takeover if a user plays a malicious Canvas game. The issue stems from Compat iframes used for OAuth dialogs. A malicious game could exploit cross-window messaging with the parent window to set up a rogue communication channel and take over the account. This blog post explains how the exploit works with examples.",
+          "url": "https://ysamm.com/?p=783&utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "ysamm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o006",
+          "order": 3,
+          "title": "THE HIDDEN DANGERS OF TERRAFORM’S REMOTE EXEC PROVISIONER",
+          "summary": "Terraform’s remote-exec provisioner is a powerful tool that allows for executing commands on a remote server to configure it. However, without proper guardrails, this can pose security risks such as data exfiltration. This article features an example and discusses some mitigations.",
+          "url": "https://blog.cloudsecuritypartners.com/the-hidden-dangers-of-using-terraforms-remote-exec-provisioner/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.cloudsecuritypartners.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-18:o007",
+          "order": 1,
+          "title": "LLM-SECURITY",
+          "summary": "Dropbox has released this repository of prompt injection example scripts for educational purposes to understand how to attack LLMs and learn how to defend against these types of prompts.",
+          "url": "https://github.com/dropbox/llm-security?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o008",
+          "order": 2,
+          "title": "INVICTUS-AWS",
+          "summary": "Invictus-AWS is a standalone Python script to enumerate relevant data and services in an AWS account.",
+          "url": "https://github.com/invictus-ir/Invictus-AWS?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o009",
+          "order": 3,
+          "title": "API SECURITY STARTUP PYNT RAISES $6M",
+          "summary": "Pynt is a security testing solution that automates security testing for developers and testers, enabling effortless vulnerability discovery and mitigation throughout the SDLC. It has raised a $6 million seed funding round.",
+          "url": "https://techcrunch.com/2023/09/06/api-security-startup-pynt-raises-6m/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-18:o010",
+          "order": 1,
+          "title": "THREATS",
+          "summary": "The National Security Agency (NSA), Federal Bureau of Investigation (FBI), and Cybersecurity and Infrastructure Security Agency (CISA) have released a Cybersecurity Information Sheet (CSI) on deepfake threats. The CSI provides an overview of synthetic media threats, techniques, and trends. It includes recommended steps and best practices for organizations to prepare, identify, defend against, and respond to these threats.",
+          "url": "https://www.cisa.gov/news-events/alerts/2023/09/12/nsa-fbi-and-cisa-release-cybersecurity-information-sheet-deepfake-threats?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o011",
+          "order": 2,
+          "title": "META QUEST 2: DEFENSE THROUGH OFFENSE",
+          "summary": "Meta's Native Assurance team found a vulnerability in the Meta Quest 2's Android OS that could have allowed arbitrary code execution with system privileges by exploiting memory corruption over IPC. Though it never reached production, the vulnerability highlighted improvements needed in Quest security. Meta shares its review process to demonstrate its commitment to secure product development.",
+          "url": "https://engineering.fb.com/2023/09/12/security/meta-quest-2-defense-through-offense/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o012",
+          "order": 3,
+          "title": "UNDERSTANDING DDOS SIMULATION TESTING ON AWS",
+          "summary": "An article from AWS outlining some of the DDoS options offered by AWS as well as the options and processes for running DDoS simulations on AWS. Users have the option of running a simulated DDoS attack through an approved partner or a synthetic simulated DDoS attack with the AWS Shield Response Team.",
+          "url": "https://aws.amazon.com/blogs/security/understanding-ddos-simulation-testing-at-aws/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-18:o013",
+          "order": 1,
+          "title": "ATTACKS",
+          "summary": "A new possibly North Korean group named Konni has entered the ransomware game. It recently started to employ new techniques using WinRAR vulnerabilities to exploit for cryptocurrency.",
+          "url": "https://deform.co/konni-has-entered-the-game-exploiting-winrar-vulnerability-for-cyber-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "deform.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o014",
+          "order": 2,
+          "title": "CISA OFFERS FREE VULNERABILITY SCANS FOR WATER FACILITIES",
+          "summary": "The CISA has announced a new program offering free vulnerability scans for public water utilities. The program will install scanners in the organizations and send weekly scan reports with vulnerabilities and recommendations.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-offers-free-security-scans-for-public-water-utilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-18:o015",
+          "order": 3,
+          "title": "RANSOMWARE",
+          "summary": "Scattered Spider, a cybercrime group known for social engineering attacks, has hit over 100 organizations and recently deployed ransomware in attacks. Mandiant reports they are expanding beyond telecom and outsourcing into hospitality, retail, media, and finance. Mitigations include monitoring for phishing links, credential theft, and ransomware.",
+          "url": "https://www.theregister.com/2023/09/15/scattered_spider_snares_100_victims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

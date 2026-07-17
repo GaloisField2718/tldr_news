@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-infosec:2025-08-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-08",
+  "source_path": "TLDR InfoSec/article_08-08-2025.md",
+  "source_content_hash": "sha256:88bcb21050feb67a3c42efbf079cf5f786b533859e158bb8d5d7613cc0e6f285",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a04",
+          "order": 1,
+          "title": "PLATFORMS. AGAIN.",
+          "summary": "Cloud growth. Hybrid work. Global expansion. IT complexity keeps rising.",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2025/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250811",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a04",
+          "order": 2,
+          "title": "ARCHITECTURE MATTERS. READ THE FULL GARTNER MAGIC QUADRANT REPORT AND SEE WHY CATO IS A LEADER.",
+          "summary": "",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2025/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250811",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a05",
+          "order": 1,
+          "title": "TREND MICRO CONFIRMS ACTIVE EXPLOITATION OF CRITICAL APEX ONE FLAWS IN ON-PREMISE SYSTEMS",
+          "summary": "Trend Micro confirmed active exploitation of two critical command injection vulnerabilities (CVE-2025-54948 and CVE-2025-54987) in on-premise Apex One Management Console. Rated 9.4 CVSS, the flaws allow pre-authenticated remote attackers to upload malicious code and execute commands on affected installations through insufficient input validation. Mitigations are available via the fix tool, with formal patches expected mid-August 2025, though the fix disables Remote Install Agent functionality.",
+          "url": "https://links.tldrnewsletter.com/UQCNfH",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a06",
+          "order": 2,
+          "title": "VIBE CODING TOOL CURSOR'S MCP IMPLEMENTATION ALLOWS PERSISTENT CODE EXECUTION",
+          "summary": "Check Point researchers uncovered a new remote code execution vulnerability in Cursor. The vulnerability, dubbed MCPoison, is caused by Cursor allowing an MCP configuration that has been previously approved to be updated without requiring a new approval. In this attack, an attacker could introduce a benign MCP and then, once it's approved, modify it to perform RCE or other malicious activity.",
+          "url": "https://www.theregister.com/2025/08/05/mcpoison_bug_abuses_cursor_mcp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a07",
+          "order": 3,
+          "title": "CRITICAL ZERO-DAYS CRACK OPEN CYBERARK AND HASHICORP PASSWORD VAULTS",
+          "summary": "A team of researchers discovered nine zero-days in HashiCorp Vault and five in CyberArk Conjur, which they were able to chain to achieve RCE against both platforms. The researchers discovered that they could trick Conjur into performing authentication against their own server instead of an AWS server and then escalate privileges by authenticating as a policy instead of a user. Conjur's “Policy Factory” also allows for embedding Ruby in policies, leading to RCE. The HashiCorp Vault vulnerabilities included username enumeration, authentication lockout bypasses, MFA and certificate authentication bypasses, and a privilege escalation from admin to root, which could allow for RCE.",
+          "url": "https://links.tldrnewsletter.com/dihSyD",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a08",
+          "order": 1,
+          "title": "PROMPT INJECTION ENGINEERING FOR ATTACKERS: EXPLOITING GITHUB COPILOT",
+          "summary": "This post demonstrates a prompt injection attack against GitHub Copilot, where attackers file malicious issues with hidden prompts in HTML `picture` tags, causing Copilot to insert backdoors when assigned to implement fixes. The attack leverages fake conversation history to manipulate the AI agent into secretly executing a malicious bash script disguised as a “security setup,” ultimately installing backdoored dependencies that accept commands via HTTP headers. The technique exploits Copilot's inability to distinguish legitimate from injected XML tags. Maintainers rarely scrutinize package lock file modifications during code review.",
+          "url": "https://blog.trailofbits.com/2025/08/06/prompt-injection-engineering-for-attackers-exploiting-github-copilot/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a09",
+          "order": 2,
+          "title": "WHY IS PREVENTATIVE SECURITY SO DIFFICULT?",
+          "summary": "While tools for detecting vulnerabilities are plentiful, there are very few tools that seek to preventively eliminate full classes of vulnerabilities. Preventative tooling is complex because often big tech giants are the only ones equipped with the resources to address the root causes, but they are not incentivized to aid their competitors, environments differ, and new standards struggle to garner support. AI tooling may aid in allowing for more catered automations, but it is unlikely to fully eliminate issues.",
+          "url": "https://kanenarraway.com/posts/why-is-preventative-security-so-difficult/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "kanenarraway.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a10",
+          "order": 3,
+          "title": "RESEARCHERS DESIGN “PROMPTWARE” ATTACK WITH GOOGLE CALENDAR TO TURN GEMINI EVIL",
+          "summary": "Researchers demonstrate a “promptware” attack using malicious Google Calendar events to manipulate Gemini AI into controlling smart home devices. The exploit uses indirect prompt injection via calendar descriptions, triggering real-world actions. Google has now patched the flaw, adding protections and confirmation dialogs for sensitive actions.",
+          "url": "https://arstechnica.com/google/2025/08/researchers-use-calendar-events-to-hack-gemini-control-smart-home-gadgets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a11",
+          "order": 1,
+          "title": "FACTION",
+          "summary": "FACTION automates penetration testing reports, peer reviews, change tracking, customized DOCX templates, and enables real-time collaboration.",
+          "url": "https://github.com/factionsecurity/faction?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a12",
+          "order": 2,
+          "title": "NOVAHYPERVISOR",
+          "summary": "NovaHypervisor is an open-source Type-1 hypervisor designed specifically for x64 Intel systems that operates below the kernel level to provide enhanced security protection. It creates a virtualized environment that can monitor and defend against sophisticated kernel-level attacks by protecting critical system structures like Exception Frame Records (EFR) and kernel memory layouts. This defensive hypervisor technology enables real-time detection and prevention of rootkits, kernel exploits, and other advanced persistent threats that traditional security solutions running at the kernel level might miss.",
+          "url": "https://github.com/Idov31/NovaHypervisor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a13",
+          "order": 3,
+          "title": "DROPZONE (PRODUCT LAUNCH)",
+          "summary": "Dropzone AI's agents can collect information from third-party Security Information and Event Management (SIEM), Security Orchestration, Automation and Response (SOAR), Endpoint Detection and Response (EDR), and cloud security tools such as Microsoft Defender, Splunk, CrowdStrike, and AWS Security Hub.",
+          "url": "https://www.dropzone.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "dropzone.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a14",
+          "order": 1,
+          "title": "HACKER EXTRADITED TO US FOR STEALING $3.3 MILLION FROM TAXPAYERS",
+          "summary": "Nigerian national Chukwuemeka Victor Amachukwu was extradited from France to face charges for spearphishing attacks on U.S. tax preparation businesses between 2019 and 2021. The attacker stole personal data to file fraudulent tax returns and SBA loan applications, netting $2.5 million in tax refunds and $819,000 in loans from a total $3.3 million in damages. Amachukwu faces six federal charges, including conspiracy to commit computer intrusions, wire fraud, and aggravated identity theft, with potential sentences up to 20 years per count.",
+          "url": "https://www.bleepingcomputer.com/news/security/hacker-extradited-to-us-for-stealing-33-million-from-taxpayers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a15",
+          "order": 2,
+          "title": "RESEARCHERS UNCOVER ECSCAPE FLAW IN AMAZON ECS ENABLING CROSS-TASK CREDENTIAL THEFT",
+          "summary": "“ECScape” is a flaw in Amazon ECS on EC2 that allows low-privilege containers to steal credentials from higher-privilege tasks on the same instance, enabling privilege escalation and lateral movement. Amazon advises isolating tasks, using AWS Fargate for true separation, and enforcing least-privilege policies to mitigate risks.",
+          "url": "https://links.tldrnewsletter.com/nwyzU1",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a16",
+          "order": 3,
+          "title": "'SAMOURAI' CRYPTOMIXER FOUNDERS PLEAD GUILTY TO MONEY LAUNDERING",
+          "summary": "The founders of Samourai Wallet, a cryptocurrency mixer, pleaded guilty to laundering over $200 million through their service, which used features like Whirlpool and Ricochet to obscure illicit transactions. They face prison time and must forfeit more than $200 million for their actions.",
+          "url": "https://links.tldrnewsletter.com/0L07o3",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-08:a17",
+          "order": 1,
+          "title": "NETWORK SCANS FIND LINUX IS GROWING ON BUSINESS DESKTOPS, LAPTOPS",
+          "summary": "Lansweeper reports Linux usage on business endpoints grew from 1.6% to 1.9% from January to June across 18.5 million devices driven primarily by security hardening concerns and DevOps activities rather than Windows 10 end-of-life.",
+          "url": "https://www.theregister.com/2025/08/06/lansweeper_finds_linux_growth_on/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a18",
+          "order": 2,
+          "title": "JAPAN: APPLE MUST LIFT BROWSER ENGINE BAN BY DECEMBER",
+          "summary": "Japan's Mobile Software Competition Act guidelines require Apple to lift its iOS browser engine ban by December, prohibiting both direct blocks and technical restrictions that make third-party engines impractical while mandating API access equivalent to Safari.",
+          "url": "https://open-web-advocacy.org/blog/japan-apple-must-lift-engine-ban-by-december/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "open-web-advocacy.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-08:a19",
+          "order": 3,
+          "title": "AIR FRANCE, KLM SAY HACKERS ACCESSED CUSTOMER DATA",
+          "summary": "Air France and KLM experienced a data breach through a third-party customer service platform that exposed customer names, contact details, and loyalty program numbers (but not passwords, passports, or payment data), prompting warnings about potential phishing attacks.",
+          "url": "https://www.securityweek.com/air-france-klm-say-hackers-accessed-customer-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

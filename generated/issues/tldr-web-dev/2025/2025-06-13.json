@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.1",
+  "issue_id": "tldr-web-dev:2025-06-13",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-06-13",
+  "source_path": "TLDR Web Dev/article_13-06-2025.md",
+  "source_content_hash": "sha256:c2e6dcc4cfd7752ca13149f14cab411287f097f3fb7cd562c26f611b7ef499e3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-06-13",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-13:a04",
+          "order": 1,
+          "title": "PARTIAL KEYFRAMES",
+          "summary": "Partial Keyframes is a CSS animation technique where you omit either the `from` or `to` blocks in keyframe animations, which allows them to inherit starting or ending values from the element's current state instead of using hardcoded values. This makes animations dynamic and composable for effects like fading elements to their natural opacity or animating to values set by other concurrent animations.",
+          "url": "https://www.joshwcomeau.com/animation/partial-keyframes?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a05",
+          "order": 2,
+          "title": "SHOPIFY TECH STACK",
+          "summary": "Shopify's tech stack handles massive scale using Ruby on Rails, React, MySQL, and Kafka. It uses a modular monolith architecture with independently deployable components and strict interface contracts for maintainability. Shopify's infrastructure includes Kubernetes, Kafka for event streaming, and a focus on observability, reliability, and security.",
+          "url": "https://blog.bytebytego.com/p/shopify-tech-stack?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a06",
+          "order": 3,
+          "title": "FREQUENT REAUTH DOESN'T MAKE YOU MORE SECURE",
+          "summary": "Frequent re-authentication doesn't make security better and can actually weaken it by causing user fatigue and encouraging bad security habits. Instead of relying on constant logins, security should focus on continuous, real-time risk assessment and policy enforcement.",
+          "url": "https://tailscale.com/blog/frequent-reath-security?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-13:a07",
+          "order": 1,
+          "title": "USESTATE SHOULD REQUIRE A DEPENDENCY ARRAY",
+          "summary": "React's `useState` hook should require a dependency array to prevent a common bug where state initialized from props doesn't update when those props change, creating un-reactive code. Current workarounds like using the `key` prop or `useEffect` to sync state are clunky and error-prone, and instead `useState` should work like `useState(initialValue, [dependencies])` where state resets when dependencies change.",
+          "url": "https://bikeshedd.ing/posts/use_state_should_require_a_dependency_array?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "bikeshedd.ing",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a08",
+          "order": 2,
+          "title": "FIRST THOUGHTS ON O3 PRO",
+          "summary": "OpenAI's new o3-pro model has better reasoning and integration capabilities. However, to really shine, it needs proper context. When using it, it's best to take extra time to preseed with as much context as possible in order for the best results.",
+          "url": "https://www.latent.space/p/o3-pro?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "latent.space",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a09",
+          "order": 3,
+          "title": "FAANG VS STARTUPS",
+          "summary": "A short stint at a FAANG company provides instant credibility for new graduates, opening future opportunities. Spending 2-3 years teaches corporate navigation and large project management, but can lower ambition. Longer than four years in Big Tech can permanently alter one's risk appetite.",
+          "url": "https://substack.com/@engineerscodex/note/c-125418186?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-13:a10",
+          "order": 1,
+          "title": "REACT NATIVE 0.80 - REACT 19.1, JS API CHANGES, FREEZING LEGACY ARCH, AND MUCH MORE",
+          "summary": "React Native 0.80 has been released, with React 19.1, stability improvements to the JavaScript API, and the freezing of the Legacy Architecture. Deep imports are being deprecated, and a new Strict TypeScript API is available for opt-in use. This release includes experimental prebuilt iOS dependencies for faster build times, as well as smaller APK sizes for Android apps.",
+          "url": "https://reactnative.dev/blog/2025/06/12/react-native-0.80?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "reactnative.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a11",
+          "order": 2,
+          "title": "MCWIG",
+          "summary": "McWig is a Vim-like text editor written in Go that supports features like LSP autocomplete, Tree-sitter, and color themes. It only supports Go files for now.",
+          "url": "https://github.com/firstrow/mcwig?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a12",
+          "order": 3,
+          "title": "CHATTERBOX",
+          "summary": "Chatterbox is Resemble AI's production-grade, open-source text-to-speech (TTS) model. It has state-of-the-art zero-shot TTS, emotion exaggeration control, and alignment-informed inference, and is trained on 0.5M hours of cleaned data.",
+          "url": "https://github.com/resemble-ai/chatterbox?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-13:a13",
+          "order": 1,
+          "title": "JEMALLOC POSTMORTEM",
+          "summary": "jemalloc is a memory allocator that has been maintained for about 20 years. It is now no longer being maintained. The postmortem describes jemalloc's evolution through phases at FreeBSD, Firefox, and Facebook/Meta, highlighting successes like improved performance and telemetry, as well as failures such as fragmentation issues and the controversial removal of Valgrind support.",
+          "url": "https://jasone.github.io/2025/06/12/jemalloc-postmortem/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "jasone.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a14",
+          "order": 2,
+          "title": "RENDERING CRISPY TEXT ON THE GPU",
+          "summary": "Text can be rendered on the GPU in real time. This method involves loading glyph data, rasterizing it at runtime to an atlas, and caching glyphs for reuse, allowing for high-quality, subpixel anti-aliasing.",
+          "url": "https://links.tldrnewsletter.com/B04lXj",
+          "reading_time_minutes": 26,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-13:a15",
+          "order": 1,
+          "title": "APPLE TODAY TOOK A SHOT AT REACT NATIVE",
+          "summary": "Apple claims that developers will end up writing more code trying to adapt to different platform conventions compared to native apps while still sacrificing performance.",
+          "url": "https://threadreaderapp.com/thread/1932200003096990131.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a16",
+          "order": 2,
+          "title": "WHEN GOOGLE SNEEZES, THE WHOLE WORLD CATCHES A COLD",
+          "summary": "A Google Cloud IAM failure caused a widespread outage affecting Cloudflare, Anthropic, and other large companies.",
+          "url": "https://forgecode.dev/blog/gcp-cloudflare-anthropic-outage/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "forgecode.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a17",
+          "order": 3,
+          "title": "WHY GO IS A GOOD FIT FOR AGENTS",
+          "summary": "Go's concurrency model, channels, centralized cancellation, standard library, and profiling tools make it a good fit for building agents.",
+          "url": "https://docs.hatchet.run/blog/go-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "docs.hatchet.run",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-13:a18",
+          "order": 4,
+          "title": "I DON'T WANT TO PAY A SUBSCRIPTION TO PROGRAM",
+          "summary": "The need to pay subscription fees for AI coding tools may become essential for fast software engineering.",
+          "url": "https://thelig.ht/subscription-hell/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "thelig.ht",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
