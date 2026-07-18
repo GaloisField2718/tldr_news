@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generator_version": "0.1.1",
+  "generator_version": "0.1.3",
   "issue_id": "tldr-ai:2023-03-06",
   "sector": "TLDR AI",
   "sector_slug": "tldr-ai",
@@ -8,27 +8,12 @@
   "source_path": "TLDR AI/article_06-03-2023.md",
   "source_content_hash": "sha256:170d189166e62bd465acadee9c61c1d267ed1e7b0983846d79f9eaeb54664b67",
   "format_family": "inline_url",
-  "parse_status": "partial",
+  "parse_status": "complete",
   "parse_warnings": [
     {
       "code": "footer_truncated",
       "message": "Subscription/account footer truncated before parse",
       "line": null
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'GUIDE TEXT GENERATION WITH GROUNDING FOR ROBOTIC CONTROL [https://grounded-decoding.github.io/?utm_source=tldrai]' has no inline URL",
-      "line": 71
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'EARLY DROPOUT FOR MITIGATING UNDERFITTING IN NEURAL NETWORKS (GITHUB' has no inline URL",
-      "line": 109
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'CONTEXT CLUSTERS: A NEW PARADIGM FOR VISUAL REPRESENTATION (GITHUB' has no inline URL",
-      "line": 119
     }
   ],
   "title": "TLDR AI 2023-03-06",
@@ -92,11 +77,11 @@
         {
           "id": "tldr-ai:2023-03-06:o005",
           "order": 2,
-          "title": "GUIDE TEXT GENERATION WITH GROUNDING FOR ROBOTIC CONTROL [https://grounded-decoding.github.io/?utm_source=tldrai]",
+          "title": "GUIDE TEXT GENERATION WITH GROUNDING FOR ROBOTIC CONTROL",
           "summary": "Applying large language models to robots is challenging due to their lack of experience with the physical world. To overcome this, a guided decoding strategy is used to construct an action sequence that is both likely according to the language model and realizable in the environment. This strategy solves complex tasks in a robotic setting by leveraging the knowledge of both models. They compare their work to SayCan.",
-          "url": null,
+          "url": "https://grounded-decoding.github.io/?utm_source=tldrai",
           "reading_time_minutes": 7,
-          "source_domain": null,
+          "source_domain": "grounded-decoding.github.io",
           "content_type": "editorial",
           "is_sponsor": false
         },
@@ -132,23 +117,23 @@
         {
           "id": "tldr-ai:2023-03-06:o008",
           "order": 2,
-          "title": "EARLY DROPOUT FOR MITIGATING UNDERFITTING IN NEURAL NETWORKS (GITHUB",
-          "summary": "REPO) [https://github.com/facebookresearch/dropout?utm_source=tldrai]",
-          "url": null,
+          "title": "EARLY DROPOUT FOR MITIGATING UNDERFITTING IN NEURAL NETWORKS",
+          "summary": "The study shows that early dropout, applied only during the initial phases of training, can mitigate underfitting by reducing the directional variance of gradients and aligning them with the entire dataset’s gradient. The proposed method consistently improves generalization accuracy in various vision tasks and encourages further research on regularization in deep learning.",
+          "url": "https://github.com/facebookresearch/dropout?utm_source=tldrai",
           "reading_time_minutes": null,
-          "source_domain": null,
-          "content_type": "editorial",
+          "source_domain": "github.com",
+          "content_type": "github_repo",
           "is_sponsor": false
         },
         {
           "id": "tldr-ai:2023-03-06:o009",
           "order": 3,
-          "title": "CONTEXT CLUSTERS: A NEW PARADIGM FOR VISUAL REPRESENTATION (GITHUB",
-          "summary": "REPO) [https://github.com/ma-xu/context-cluster?utm_source=tldrai]",
-          "url": null,
+          "title": "CONTEXT CLUSTERS: A NEW PARADIGM FOR VISUAL REPRESENTATION",
+          "summary": "This work introduces Context Clusters (CoCs), a new paradigm for visual representation that views an image as a set of unorganized points and extracts features via a simplified clustering algorithm. CoCs are convolution- and attention-free and only rely on clustering for spatial interaction. Despite not targeting state-of-the-art performance, CoCs achieve comparable or even better results than ConvNets or ViTs on several benchmarks.",
+          "url": "https://github.com/ma-xu/context-cluster?utm_source=tldrai",
           "reading_time_minutes": null,
-          "source_domain": null,
-          "content_type": "editorial",
+          "source_domain": "github.com",
+          "content_type": "github_repo",
           "is_sponsor": false
         }
       ]

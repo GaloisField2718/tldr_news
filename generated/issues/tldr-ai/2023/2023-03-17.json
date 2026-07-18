@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generator_version": "0.1.1",
+  "generator_version": "0.1.3",
   "issue_id": "tldr-ai:2023-03-17",
   "sector": "TLDR AI",
   "sector_slug": "tldr-ai",
@@ -8,22 +8,12 @@
   "source_path": "TLDR AI/article_17-03-2023.md",
   "source_content_hash": "sha256:6ba74cd32ccb7e8528933e18deba18b70187e07437ef272a61a4b1993431cfc5",
   "format_family": "inline_url",
-  "parse_status": "partial",
+  "parse_status": "complete",
   "parse_warnings": [
     {
       "code": "footer_truncated",
       "message": "Subscription/account footer truncated before parse",
       "line": null
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'MINUTE READ) [https://arxiv.org/abs/2303.08577?utm_source=tldrai]' has no inline URL",
-      "line": 73
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'BIFORMER: VISION TRANSFORMER WITH BI-LEVEL ROUTING ATTENTION (GITHUB' has no inline URL",
-      "line": 117
     }
   ],
   "title": "TLDR AI 2023-03-17",
@@ -87,11 +77,11 @@
         {
           "id": "tldr-ai:2023-03-17:o005",
           "order": 2,
-          "title": "MINUTE READ) [https://arxiv.org/abs/2303.08577?utm_source=tldrai]",
+          "title": "INVESTIGATING GANSFORMER: A VARIATION OF GANS FOR IMAGE GENERATION",
           "summary": "The article discusses the authors' reproduction and evaluation of the GANformer, a variation of the Generative Adversarial Networks (GANs) used for image generation. They successfully recreated both variations of the model and found differences between their results and those of the authors, as well as two undisclosed variations of the presented procedures.",
-          "url": null,
-          "reading_time_minutes": null,
-          "source_domain": null,
+          "url": "https://arxiv.org/abs/2303.08577?utm_source=tldrai",
+          "reading_time_minutes": 18,
+          "source_domain": "arxiv.org",
           "content_type": "editorial",
           "is_sponsor": false
         },
@@ -138,12 +128,12 @@
         {
           "id": "tldr-ai:2023-03-17:o009",
           "order": 3,
-          "title": "BIFORMER: VISION TRANSFORMER WITH BI-LEVEL ROUTING ATTENTION (GITHUB",
-          "summary": "REPO) [https://github.com/rayleizhu/BiFormer?utm_source=tldrai]",
-          "url": null,
+          "title": "BIFORMER: VISION TRANSFORMER WITH BI-LEVEL ROUTING ATTENTION",
+          "summary": "The article discusses the use of attention as a powerful tool for capturing long-range dependencies in vision transformers but highlights the challenge of its high computational burden and memory footprint. To address this issue, the authors propose a dynamic sparse attention via bi-level routing that allows for flexible allocation of computations with content awareness. The proposed BiFormer model, which utilizes the bi-level routing attention, shows good performance and high computational efficiency across various computer vision tasks.",
+          "url": "https://github.com/rayleizhu/BiFormer?utm_source=tldrai",
           "reading_time_minutes": null,
-          "source_domain": null,
-          "content_type": "editorial",
+          "source_domain": "github.com",
+          "content_type": "github_repo",
           "is_sponsor": false
         }
       ]

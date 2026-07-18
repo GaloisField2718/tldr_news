@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generator_version": "0.1.1",
+  "generator_version": "0.1.3",
   "issue_id": "tldr-ai:2023-03-08",
   "sector": "TLDR AI",
   "sector_slug": "tldr-ai",
@@ -8,22 +8,12 @@
   "source_path": "TLDR AI/article_08-03-2023.md",
   "source_content_hash": "sha256:26ad3ad4673e10eb073533d350d4246a98329360cef8457f21508c73649c2f73",
   "format_family": "inline_url",
-  "parse_status": "partial",
+  "parse_status": "complete",
   "parse_warnings": [
     {
       "code": "footer_truncated",
       "message": "Subscription/account footer truncated before parse",
       "line": null
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'PALM-E [https://palm-e.github.io/?utm_source=tldrai]' has no inline URL",
-      "line": 58
-    },
-    {
-      "code": "missing_inline_url",
-      "message": "Article 'PRISMER: A VISION-LANGUAGE MODEL WITH MULTI-MODAL EXPERTS [https://shikun.io/projects/prismer?utm_source=tldrai]' has no inline URL",
-      "line": 68
     }
   ],
   "title": "TLDR AI 2023-03-08",
@@ -76,22 +66,22 @@
         {
           "id": "tldr-ai:2023-03-08:o004",
           "order": 1,
-          "title": "PALM-E [https://palm-e.github.io/?utm_source=tldrai]",
+          "title": "PALM-E",
           "summary": "The term “positive transfer” is somewhat of a holy grail for large scale models. It means that when you train on two modalities, you get better performance than you would have training on just one or the other. This paper from Google shows that training on robot controls, video, and text shows positive transfer between domains. This is hypothesized to be a function of model scale, and this model is an impressive 562 billion parameters.",
-          "url": null,
+          "url": "https://palm-e.github.io/?utm_source=tldrai",
           "reading_time_minutes": 4,
-          "source_domain": null,
+          "source_domain": "palm-e.github.io",
           "content_type": "editorial",
           "is_sponsor": false
         },
         {
           "id": "tldr-ai:2023-03-08:o005",
           "order": 2,
-          "title": "PRISMER: A VISION-LANGUAGE MODEL WITH MULTI-MODAL EXPERTS [https://shikun.io/projects/prismer?utm_source=tldrai]",
+          "title": "PRISMER: A VISION-LANGUAGE MODEL WITH MULTI-MODAL EXPERTS",
           "summary": "The article discusses the high computational and data requirements of large pre-trained models used in vision-language learning, which require massive amounts of image-text data to be trained. The proposed alternative approach involves using separate sub-networks or \"experts\" for specific tasks, allowing for the use of domain-specific data and architectures that would not be feasible with a single large network. The proposed model, Prismer, is a visually conditioned autoregressive text generation model that utilizes powerful vision-only and language-only models along with modality-specific vision experts for open-ended vision-language reasoning tasks. The expert models are pre-trained and frozen, and connected through lightweight trainable components, comprising only 20% of total network parameters, leading to improved training efficiency and scalability.",
-          "url": null,
+          "url": "https://shikun.io/projects/prismer?utm_source=tldrai",
           "reading_time_minutes": 5,
-          "source_domain": null,
+          "source_domain": "shikun.io",
           "content_type": "editorial",
           "is_sponsor": false
         }
