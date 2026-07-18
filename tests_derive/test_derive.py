@@ -28,6 +28,7 @@ from tools.tldr_derive.sanitizer import (
     normalize_public_url,
     repair_wrapped_url,
     strip_zero_width,
+    truncate_footer,
 )
 from tools.tldr_derive.writer import (
     OutputContainmentError,
@@ -54,10 +55,11 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("TLDR/article_17-01-2023.md", paths)
         self.assertIn("TLDR/article_15-03-2024.md", paths)
         self.assertIn("TLDR/article_08-02-2023.md", paths)
+        self.assertIn("TLDR/article_27-01-2023.md", paths)
         self.assertIn("TLDR Crypto/article_01-01-2024.md", paths)
         self.assertTrue(all(not p.startswith("NotTLDR") for p in paths))
         self.assertTrue(all("GoDaddy" not in p for p in paths))
-        self.assertEqual(len(sources), 6)
+        self.assertEqual(len(sources), 7)
 
     def test_filename_date_extraction(self) -> None:
         self.assertEqual(
@@ -323,6 +325,86 @@ class ParserTests(unittest.TestCase):
         _, issue = self._parse("TLDR AI/article_16-02-2023.md")
         titles = [a.title for s in issue.sections for a in s.articles]
         self.assertFalse(any("unsubscribe" in t.lower() for t in titles))
+
+    def test_job_board_sentence_does_not_truncate_footer(self) -> None:
+        """Sponsor body 'job board. Thousands...' is not a footer heading."""
+        sentence = (
+            "If you're looking to hire top technical talent, sign up for our free\n"
+            "job board. Thousands of engineers, designers, and other tech workers\n"
+            "visit the job board each day.\n"
+            "\n"
+            "ARTICLE AFTER SPONSOR (3 MINUTE READ)\n"
+            "[https://example.com/after-sponsor]\n"
+            "\n"
+            "Summary remains after the job board sentence.\n"
+            "\n"
+            "JOB BOARD\n"
+            "\n"
+            "Over a dozen more jobs are posted every day.\n"
+            "\n"
+            "If you don't want to receive future editions of TLDR, please click\n"
+            "here to unsubscribe\n"
+            "[https://actions.tldrnewsletter.com/unsubscribe?ep=1&l=secret&s=token]\n"
+        )
+        kept, removed = truncate_footer(sentence)
+        self.assertTrue(removed)
+        self.assertIn("ARTICLE AFTER SPONSOR", kept)
+        self.assertIn("job board. Thousands of engineers", kept)
+        self.assertNotIn("Over a dozen more jobs", kept)
+        self.assertNotIn("unsubscribe", kept.lower())
+
+        standalone_only = "Some article text\n\nJOB BOARD\n\nHire through TLDR.\n"
+        kept2, removed2 = truncate_footer(standalone_only)
+        self.assertTrue(removed2)
+        self.assertIn("Some article text", kept2)
+        self.assertNotIn("Hire through TLDR", kept2)
+
+        jobs_heading = "Body\n\nJOBS BOARD\n\nTrailing footer copy.\n"
+        kept3, removed3 = truncate_footer(jobs_heading)
+        self.assertTrue(removed3)
+        self.assertIn("Body", kept3)
+        self.assertNotIn("Trailing footer copy", kept3)
+
+    def test_job_board_false_positive_recovers_archive_ph_articles(self) -> None:
+        """Historical sponsor copy must not drop later editorial archive.ph URLs."""
+        _, issue = self._parse("TLDR/article_27-01-2023.md")
+        self.assertNotEqual(issue.parse_status, "failed")
+        arts = [a for s in issue.sections for a in s.articles]
+        urls = [a.url or "" for a in arts]
+        self.assertTrue(any("archive.ph/TvP3p" in u for u in urls))
+        self.assertTrue(any("archive.ph/5dgFD" in u for u in urls))
+        self.assertTrue(any("archive.ph/jErjz" in u for u in urls))
+        self.assertTrue(any("archive.ph/ukO06" in u for u in urls))
+        for article in arts:
+            self.assertNotRegex(article.title, r"https?://")
+        buzz = next(a for a in arts if a.url and "archive.ph/TvP3p" in a.url)
+        self.assertEqual(buzz.reading_time_minutes, 3)
+        self.assertEqual(buzz.source_domain, "archive.ph")
+        self.assertIn("quizzes", buzz.summary.lower())
+        # Sponsor sentence must not truncate before editorial content.
+        self.assertGreaterEqual(len(arts), 4)
+    def test_historical_sources_emit_recovered_archive_ph_urls(self) -> None:
+        """Real corpus sources that previously lost four archive.ph URLs."""
+        repo = Path(__file__).resolve().parents[1]
+        expected = {
+            "TLDR/article_27-01-2023.md": ("TvP3p", "5dgFD"),
+            "TLDR/article_30-01-2023.md": ("jErjz",),
+            "TLDR/article_31-01-2023.md": ("ukO06",),
+        }
+        for relative, slugs in expected.items():
+            source = resolve_source(repo, relative)
+            issue = parse_source(source, source.path.read_text(encoding="utf-8"))
+            urls = [
+                a.url or ""
+                for s in issue.sections
+                for a in s.articles
+            ]
+            for slug in slugs:
+                self.assertTrue(
+                    any(f"archive.ph/{slug}" in u for u in urls),
+                    msg=f"{relative} missing archive.ph/{slug}",
+                )
+            self.assertGreater(len(urls), 1, msg=f"{relative} still truncated")
 
     def test_malformed_and_header_only_status(self) -> None:
         _, header = self._parse("TLDR/article_17-01-2023.md")
