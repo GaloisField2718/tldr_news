@@ -53,10 +53,11 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("TLDR AI/article_16-07-2026.md", paths)
         self.assertIn("TLDR/article_17-01-2023.md", paths)
         self.assertIn("TLDR/article_15-03-2024.md", paths)
+        self.assertIn("TLDR/article_08-02-2023.md", paths)
         self.assertIn("TLDR Crypto/article_01-01-2024.md", paths)
         self.assertTrue(all(not p.startswith("NotTLDR") for p in paths))
         self.assertTrue(all("GoDaddy" not in p for p in paths))
-        self.assertEqual(len(sources), 5)
+        self.assertEqual(len(sources), 6)
 
     def test_filename_date_extraction(self) -> None:
         self.assertEqual(
@@ -124,6 +125,72 @@ class ParserTests(unittest.TestCase):
         self.assertTrue(any("BING AI" in t for t in titles))
         urls = [a.url for s in issue.sections for a in s.articles]
         self.assertTrue(any(u and "theverge.com" in u for u in urls))
+
+    def test_inline_same_line_and_wrapped_urls(self) -> None:
+        """Historical TITLE (N MINUTE READ) [https://...] patterns."""
+        _, issue = self._parse("TLDR/article_08-02-2023.md")
+        self.assertEqual(issue.format_family, "inline_url")
+        arts = {a.title: a for s in issue.sections for a in s.articles}
+
+        classic = arts["CLASSIC NEXT LINE ARTICLE"]
+        self.assertEqual(classic.reading_time_minutes, 5)
+        self.assertIn("theverge.com", classic.url or "")
+        self.assertEqual(classic.source_domain, "theverge.com")
+        self.assertIn("classic next-line", classic.summary.lower())
+        self.assertNotIn("http", classic.title.lower())
+
+        wrapped_same = arts[
+            "META ASKS MANY MANAGERS TO GET BACK TO MAKING THINGS OR LEAVE"
+        ]
+        self.assertEqual(wrapped_same.reading_time_minutes, 2)
+        self.assertTrue((wrapped_same.url or "").startswith("https://archive.ph/"))
+        self.assertEqual(wrapped_same.source_domain, "archive.ph")
+        self.assertIn("individual contributor", wrapped_same.summary.lower())
+        self.assertNotIn("http", wrapped_same.title.lower())
+        self.assertNotIn("archive.ph", wrapped_same.title.lower())
+
+        same_line = arts["SAME LINE ARCHIVE LINK"]
+        self.assertEqual(same_line.reading_time_minutes, 3)
+        self.assertIn("archive.ph/tHRU8", same_line.url or "")
+        self.assertEqual(same_line.source_domain, "archive.ph")
+        self.assertNotIn("http", same_line.title.lower())
+
+        wrapped_next = arts["WRAPPED READING TIME THEN NEXT LINE URL"]
+        self.assertEqual(wrapped_next.reading_time_minutes, 11)
+        self.assertIn("simplethread.com", wrapped_next.url or "")
+        self.assertNotIn("http", wrapped_next.title.lower())
+
+        ordinary = arts["ORDINARY DOMAIN SAME LINE"]
+        self.assertEqual(ordinary.reading_time_minutes, 4)
+        self.assertEqual(ordinary.url, "https://arxiv.org/abs/2302.00001")
+        self.assertEqual(ordinary.source_domain, "arxiv.org")
+        self.assertNotIn("http", ordinary.title.lower())
+
+        short = arts["SHORT NEXT LINE"]
+        self.assertEqual(short.reading_time_minutes, 1)
+        self.assertIn("example.com/quick-next", short.url or "")
+
+        for article in arts.values():
+            self.assertNotRegex(article.title, r"https?://")
+
+    def test_inline_next_line_urls_still_work(self) -> None:
+        """Regression: existing next-line inline URLs remain intact."""
+        _, issue = self._parse("TLDR AI/article_16-02-2023.md")
+        arts = [a for s in issue.sections for a in s.articles]
+        self.assertGreaterEqual(len(arts), 3)
+        by_title = {a.title: a for a in arts}
+        bing = by_title["BING AI IS UNHINGED"]
+        self.assertEqual(bing.reading_time_minutes, 3)
+        self.assertIn("theverge.com", bing.url or "")
+        self.assertEqual(bing.source_domain, "theverge.com")
+        self.assertIn("personality", bing.summary.lower())
+        self.assertNotIn("http", bing.title.lower())
+        human = by_title["HUMAN WRITER OR AI?"]
+        self.assertEqual(human.reading_time_minutes, 5)
+        self.assertIn("example.com/detectgpt", human.url or "")
+        short = by_title["SHORT ITEM"]
+        self.assertEqual(short.reading_time_minutes, 1)
+        self.assertIn("example.com/quick", short.url or "")
 
     def test_reference_link_parsing(self) -> None:
         _, issue = self._parse("TLDR AI/article_16-07-2026.md")
