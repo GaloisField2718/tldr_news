@@ -28,6 +28,7 @@ from tools.tldr_derive.sanitizer import (
     normalize_public_url,
     repair_wrapped_url,
     strip_zero_width,
+    truncate_footer,
 )
 from tools.tldr_derive.writer import (
     OutputContainmentError,
@@ -53,10 +54,12 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("TLDR AI/article_16-07-2026.md", paths)
         self.assertIn("TLDR/article_17-01-2023.md", paths)
         self.assertIn("TLDR/article_15-03-2024.md", paths)
+        self.assertIn("TLDR/article_08-02-2023.md", paths)
+        self.assertIn("TLDR/article_27-01-2023.md", paths)
         self.assertIn("TLDR Crypto/article_01-01-2024.md", paths)
         self.assertTrue(all(not p.startswith("NotTLDR") for p in paths))
         self.assertTrue(all("GoDaddy" not in p for p in paths))
-        self.assertEqual(len(sources), 5)
+        self.assertEqual(len(sources), 7)
 
     def test_filename_date_extraction(self) -> None:
         self.assertEqual(
@@ -124,6 +127,72 @@ class ParserTests(unittest.TestCase):
         self.assertTrue(any("BING AI" in t for t in titles))
         urls = [a.url for s in issue.sections for a in s.articles]
         self.assertTrue(any(u and "theverge.com" in u for u in urls))
+
+    def test_inline_same_line_and_wrapped_urls(self) -> None:
+        """Historical TITLE (N MINUTE READ) [https://...] patterns."""
+        _, issue = self._parse("TLDR/article_08-02-2023.md")
+        self.assertEqual(issue.format_family, "inline_url")
+        arts = {a.title: a for s in issue.sections for a in s.articles}
+
+        classic = arts["CLASSIC NEXT LINE ARTICLE"]
+        self.assertEqual(classic.reading_time_minutes, 5)
+        self.assertIn("theverge.com", classic.url or "")
+        self.assertEqual(classic.source_domain, "theverge.com")
+        self.assertIn("classic next-line", classic.summary.lower())
+        self.assertNotIn("http", classic.title.lower())
+
+        wrapped_same = arts[
+            "META ASKS MANY MANAGERS TO GET BACK TO MAKING THINGS OR LEAVE"
+        ]
+        self.assertEqual(wrapped_same.reading_time_minutes, 2)
+        self.assertTrue((wrapped_same.url or "").startswith("https://archive.ph/"))
+        self.assertEqual(wrapped_same.source_domain, "archive.ph")
+        self.assertIn("individual contributor", wrapped_same.summary.lower())
+        self.assertNotIn("http", wrapped_same.title.lower())
+        self.assertNotIn("archive.ph", wrapped_same.title.lower())
+
+        same_line = arts["SAME LINE ARCHIVE LINK"]
+        self.assertEqual(same_line.reading_time_minutes, 3)
+        self.assertIn("archive.ph/tHRU8", same_line.url or "")
+        self.assertEqual(same_line.source_domain, "archive.ph")
+        self.assertNotIn("http", same_line.title.lower())
+
+        wrapped_next = arts["WRAPPED READING TIME THEN NEXT LINE URL"]
+        self.assertEqual(wrapped_next.reading_time_minutes, 11)
+        self.assertIn("simplethread.com", wrapped_next.url or "")
+        self.assertNotIn("http", wrapped_next.title.lower())
+
+        ordinary = arts["ORDINARY DOMAIN SAME LINE"]
+        self.assertEqual(ordinary.reading_time_minutes, 4)
+        self.assertEqual(ordinary.url, "https://arxiv.org/abs/2302.00001")
+        self.assertEqual(ordinary.source_domain, "arxiv.org")
+        self.assertNotIn("http", ordinary.title.lower())
+
+        short = arts["SHORT NEXT LINE"]
+        self.assertEqual(short.reading_time_minutes, 1)
+        self.assertIn("example.com/quick-next", short.url or "")
+
+        for article in arts.values():
+            self.assertNotRegex(article.title, r"https?://")
+
+    def test_inline_next_line_urls_still_work(self) -> None:
+        """Regression: existing next-line inline URLs remain intact."""
+        _, issue = self._parse("TLDR AI/article_16-02-2023.md")
+        arts = [a for s in issue.sections for a in s.articles]
+        self.assertGreaterEqual(len(arts), 3)
+        by_title = {a.title: a for a in arts}
+        bing = by_title["BING AI IS UNHINGED"]
+        self.assertEqual(bing.reading_time_minutes, 3)
+        self.assertIn("theverge.com", bing.url or "")
+        self.assertEqual(bing.source_domain, "theverge.com")
+        self.assertIn("personality", bing.summary.lower())
+        self.assertNotIn("http", bing.title.lower())
+        human = by_title["HUMAN WRITER OR AI?"]
+        self.assertEqual(human.reading_time_minutes, 5)
+        self.assertIn("example.com/detectgpt", human.url or "")
+        short = by_title["SHORT ITEM"]
+        self.assertEqual(short.reading_time_minutes, 1)
+        self.assertIn("example.com/quick", short.url or "")
 
     def test_reference_link_parsing(self) -> None:
         _, issue = self._parse("TLDR AI/article_16-07-2026.md")
@@ -256,6 +325,86 @@ class ParserTests(unittest.TestCase):
         _, issue = self._parse("TLDR AI/article_16-02-2023.md")
         titles = [a.title for s in issue.sections for a in s.articles]
         self.assertFalse(any("unsubscribe" in t.lower() for t in titles))
+
+    def test_job_board_sentence_does_not_truncate_footer(self) -> None:
+        """Sponsor body 'job board. Thousands...' is not a footer heading."""
+        sentence = (
+            "If you're looking to hire top technical talent, sign up for our free\n"
+            "job board. Thousands of engineers, designers, and other tech workers\n"
+            "visit the job board each day.\n"
+            "\n"
+            "ARTICLE AFTER SPONSOR (3 MINUTE READ)\n"
+            "[https://example.com/after-sponsor]\n"
+            "\n"
+            "Summary remains after the job board sentence.\n"
+            "\n"
+            "JOB BOARD\n"
+            "\n"
+            "Over a dozen more jobs are posted every day.\n"
+            "\n"
+            "If you don't want to receive future editions of TLDR, please click\n"
+            "here to unsubscribe\n"
+            "[https://actions.tldrnewsletter.com/unsubscribe?ep=1&l=secret&s=token]\n"
+        )
+        kept, removed = truncate_footer(sentence)
+        self.assertTrue(removed)
+        self.assertIn("ARTICLE AFTER SPONSOR", kept)
+        self.assertIn("job board. Thousands of engineers", kept)
+        self.assertNotIn("Over a dozen more jobs", kept)
+        self.assertNotIn("unsubscribe", kept.lower())
+
+        standalone_only = "Some article text\n\nJOB BOARD\n\nHire through TLDR.\n"
+        kept2, removed2 = truncate_footer(standalone_only)
+        self.assertTrue(removed2)
+        self.assertIn("Some article text", kept2)
+        self.assertNotIn("Hire through TLDR", kept2)
+
+        jobs_heading = "Body\n\nJOBS BOARD\n\nTrailing footer copy.\n"
+        kept3, removed3 = truncate_footer(jobs_heading)
+        self.assertTrue(removed3)
+        self.assertIn("Body", kept3)
+        self.assertNotIn("Trailing footer copy", kept3)
+
+    def test_job_board_false_positive_recovers_archive_ph_articles(self) -> None:
+        """Historical sponsor copy must not drop later editorial archive.ph URLs."""
+        _, issue = self._parse("TLDR/article_27-01-2023.md")
+        self.assertNotEqual(issue.parse_status, "failed")
+        arts = [a for s in issue.sections for a in s.articles]
+        urls = [a.url or "" for a in arts]
+        self.assertTrue(any("archive.ph/TvP3p" in u for u in urls))
+        self.assertTrue(any("archive.ph/5dgFD" in u for u in urls))
+        self.assertTrue(any("archive.ph/jErjz" in u for u in urls))
+        self.assertTrue(any("archive.ph/ukO06" in u for u in urls))
+        for article in arts:
+            self.assertNotRegex(article.title, r"https?://")
+        buzz = next(a for a in arts if a.url and "archive.ph/TvP3p" in a.url)
+        self.assertEqual(buzz.reading_time_minutes, 3)
+        self.assertEqual(buzz.source_domain, "archive.ph")
+        self.assertIn("quizzes", buzz.summary.lower())
+        # Sponsor sentence must not truncate before editorial content.
+        self.assertGreaterEqual(len(arts), 4)
+    def test_historical_sources_emit_recovered_archive_ph_urls(self) -> None:
+        """Real corpus sources that previously lost four archive.ph URLs."""
+        repo = Path(__file__).resolve().parents[1]
+        expected = {
+            "TLDR/article_27-01-2023.md": ("TvP3p", "5dgFD"),
+            "TLDR/article_30-01-2023.md": ("jErjz",),
+            "TLDR/article_31-01-2023.md": ("ukO06",),
+        }
+        for relative, slugs in expected.items():
+            source = resolve_source(repo, relative)
+            issue = parse_source(source, source.path.read_text(encoding="utf-8"))
+            urls = [
+                a.url or ""
+                for s in issue.sections
+                for a in s.articles
+            ]
+            for slug in slugs:
+                self.assertTrue(
+                    any(f"archive.ph/{slug}" in u for u in urls),
+                    msg=f"{relative} missing archive.ph/{slug}",
+                )
+            self.assertGreater(len(urls), 1, msg=f"{relative} still truncated")
 
     def test_malformed_and_header_only_status(self) -> None:
         _, header = self._parse("TLDR/article_17-01-2023.md")
