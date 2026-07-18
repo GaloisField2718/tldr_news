@@ -166,7 +166,8 @@ _FOOTER_START_RE = re.compile(
     r"if you are in a hiring position|"
     r"if you're hiring|"
     r"hire (ai|tech|software)|"
-    r"jobs? board|"
+    # Standalone footer heading only — not "job board. Thousands of engineers..."
+    r"jobs? board\.?\s*$|"
     r"careers at tldr"
     r")"
 )
