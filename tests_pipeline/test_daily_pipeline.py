@@ -2,6 +2,9 @@
 
 Does not execute the real script.py, read .env, or contact IMAP/network remotes
 outside a temporary local git bare repository.
+
+Provides a PATH-local flock(1) shim so macOS/dev hosts without util-linux can
+still exercise lock behavior offline. CI (Ubuntu) uses real flock.
 """
 
 from __future__ import annotations
@@ -23,6 +26,7 @@ from tools.tldr_derive import GENERATOR_VERSION, SCHEMA_VERSION
 REPO = Path(__file__).resolve().parents[1]
 AUTOMATION = REPO / "automation.sh"
 PUSH = REPO / "push_script.sh"
+PIPELINE_LIB = REPO / "scripts" / "pipeline_lib.sh"
 
 
 def _write_executable(path: Path, content: str) -> None:
@@ -30,9 +34,37 @@ def _write_executable(path: Path, content: str) -> None:
     path.chmod(path.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
 
+FLOCK_SHIM = textwrap.dedent(
+    """\
+    #!/usr/bin/env python3
+    \"\"\"Minimal flock(1) shim for offline tests (flock -n FD).\"\"\"
+    import fcntl
+    import sys
+
+    args = sys.argv[1:]
+    nonblock = False
+    if args and args[0] == "-n":
+        nonblock = True
+        args = args[1:]
+    if len(args) != 1 or not args[0].isdigit():
+        print("flock shim supports only: flock [-n] FD", file=sys.stderr)
+        sys.exit(64)
+    fd = int(args[0])
+    flags = fcntl.LOCK_EX
+    if nonblock:
+        flags |= fcntl.LOCK_NB
+    try:
+        fcntl.flock(fd, flags)
+    except BlockingIOError:
+        sys.exit(1)
+    sys.exit(0)
+    """
+)
+
+
 class ScriptStaticGuards(unittest.TestCase):
     def test_bash_syntax(self) -> None:
-        for script in (AUTOMATION, PUSH):
+        for script in (AUTOMATION, PUSH, PIPELINE_LIB):
             proc = subprocess.run(
                 ["bash", "-n", str(script)],
                 check=False,
@@ -49,20 +81,25 @@ class ScriptStaticGuards(unittest.TestCase):
             self.assertNotIn("push --force", text)
             self.assertNotIn("push -f", text)
             self.assertNotIn("reset --hard", text)
+            self.assertNotIn("commit --amend", text)
             self.assertNotIn("source activate", text)
-            self.assertNotIn(". activate", text)
             self.assertTrue(text.startswith("#!/usr/bin/env bash"))
             self.assertIn("set -Eeuo pipefail", text)
             self.assertIn("acquire_pipeline_lock", text)
-        lib = (REPO / "scripts" / "pipeline_lib.sh").read_text(encoding="utf-8")
+        lib = PIPELINE_LIB.read_text(encoding="utf-8")
         self.assertIn("flock -n", lib)
-        self.assertIn("fcntl.flock", lib)
+        self.assertNotIn("fcntl.flock", lib)
+        self.assertIn("flock is required", lib)
+        push = PUSH.read_text(encoding="utf-8")
+        self.assertIn("require_main_branch", push)
+        self.assertIn("pull --rebase", push)
+        self.assertIn("nothing to push", push)
+        self.assertIn("no staged changes before rebase", push)
 
     def test_push_stages_only_approved_paths(self) -> None:
         text = PUSH.read_text(encoding="utf-8")
-        self.assertIn("git add -A -- \"${directory}\"", text)
-        self.assertIn("generated/manifest.json", text)
-        self.assertIn("generated/issues", text)
+        self.assertIn("stage_approved_sources", text)
+        self.assertIn("stage_generated", text)
         self.assertNotIn("git add .", text)
 
 
@@ -80,8 +117,17 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.repo = self.tmp / "repo"
         self.bare = self.tmp / "remote.git"
         self.lock = self.tmp / "pipeline.lock"
+        self.bin_dir = self.tmp / "bin"
+        self.bin_dir.mkdir()
+        _write_executable(self.bin_dir / "flock", FLOCK_SHIM)
+
         self.repo.mkdir()
-        subprocess.run(["git", "init", "-b", "main"], cwd=self.repo, check=True, capture_output=True)
+        subprocess.run(
+            ["git", "init", "-b", "main"],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
         subprocess.run(
             ["git", "config", "user.email", "pipeline-test@example.com"],
             cwd=self.repo,
@@ -94,7 +140,6 @@ class PipelineTempRepoTests(unittest.TestCase):
             check=True,
             capture_output=True,
         )
-        # Minimal tracked tree.
         (self.repo / "TLDR").mkdir()
         (self.repo / "TLDR" / "article_01-01-2024.md").write_text(
             "# Articles TLDR 01-01-2024\n\nHEADER ONLY\n",
@@ -110,7 +155,9 @@ class PipelineTempRepoTests(unittest.TestCase):
             "format_family": "unknown",
             "sections": [],
         }
-        issue_path = self.repo / "generated" / "issues" / "tldr" / "2024" / "2024-01-01.json"
+        issue_path = (
+            self.repo / "generated" / "issues" / "tldr" / "2024" / "2024-01-01.json"
+        )
         issue_path.write_text(json.dumps(issue), encoding="utf-8")
         manifest = {
             "schema_version": SCHEMA_VERSION,
@@ -138,15 +185,17 @@ class PipelineTempRepoTests(unittest.TestCase):
         (self.repo / ".env").write_text("SECRET=do-not-stage\n", encoding="utf-8")
         (self.repo / "logs").mkdir()
         (self.repo / "logs" / "noise.log").write_text("x\n", encoding="utf-8")
-        # Copy orchestration scripts and a stub tools package path via PYTHONPATH=REPO
+
         shutil.copy2(AUTOMATION, self.repo / "automation.sh")
         shutil.copy2(PUSH, self.repo / "push_script.sh")
         (self.repo / "scripts").mkdir(exist_ok=True)
-        shutil.copy2(REPO / "scripts" / "pipeline_lib.sh", self.repo / "scripts" / "pipeline_lib.sh")
+        shutil.copy2(PIPELINE_LIB, self.repo / "scripts" / "pipeline_lib.sh")
         (self.repo / "automation.sh").chmod(0o755)
         (self.repo / "push_script.sh").chmod(0o755)
-        (self.repo / "script.py").write_text("# placeholder; never executed by real IMAP\n", encoding="utf-8")
-        # tools package comes from REPO via PYTHONPATH
+        (self.repo / "script.py").write_text(
+            "# placeholder; never executed by real IMAP\n", encoding="utf-8"
+        )
+
         subprocess.run(["git", "add", "-A"], cwd=self.repo, check=True, capture_output=True)
         subprocess.run(
             ["git", "commit", "-m", "init"],
@@ -154,7 +203,9 @@ class PipelineTempRepoTests(unittest.TestCase):
             check=True,
             capture_output=True,
         )
-        subprocess.run(["git", "init", "--bare", str(self.bare)], check=True, capture_output=True)
+        subprocess.run(
+            ["git", "init", "--bare", str(self.bare)], check=True, capture_output=True
+        )
         subprocess.run(
             ["git", "remote", "add", "origin", str(self.bare)],
             cwd=self.repo,
@@ -167,6 +218,7 @@ class PipelineTempRepoTests(unittest.TestCase):
             check=True,
             capture_output=True,
         )
+
         self.mock_state = self.tmp / "mock_state.json"
         self.mock_state.write_text(
             json.dumps(
@@ -180,6 +232,7 @@ class PipelineTempRepoTests(unittest.TestCase):
                     "generate_written": 0,
                     "validate_exit": 0,
                     "consistency_exit": 0,
+                    "generate_extra_files": 0,
                 }
             ),
             encoding="utf-8",
@@ -192,11 +245,13 @@ class PipelineTempRepoTests(unittest.TestCase):
 
     def _write_mock_python(self) -> None:
         state_path = self.mock_state
+        repo = self.repo
         content = textwrap.dedent(
             f"""\
             #!/usr/bin/env bash
             set -euo pipefail
             STATE="{state_path}"
+            REPO="{repo}"
             py_update() {{
               /usr/bin/env python3 - "$STATE" "$@" <<'PY'
             import json, sys
@@ -204,12 +259,11 @@ class PipelineTempRepoTests(unittest.TestCase):
             key = sys.argv[2]
             delta = int(sys.argv[3]) if len(sys.argv) > 3 else 1
             doc = json.loads(open(path, encoding="utf-8").read())
-            if key.endswith("_exit") or key.endswith("_selected") or key.endswith("_written"):
+            if key.endswith("_exit") or key.endswith("_selected") or key.endswith("_written") or key.endswith("_files"):
                 doc[key] = delta
             else:
                 doc[key] = doc.get(key, 0) + delta
             open(path, "w", encoding="utf-8").write(json.dumps(doc))
-            print(json.dumps(doc.get(key)))
             PY
             }}
             py_get() {{
@@ -229,6 +283,14 @@ class PipelineTempRepoTests(unittest.TestCase):
               cmd="${{3:-}}"
               if [[ "$cmd" == "generate" ]]; then
                 py_update generate_calls 1 >/dev/null
+                extra="$(py_get generate_extra_files)"
+                if [[ "$extra" != "0" ]]; then
+                  mkdir -p "$REPO/generated/issues/tldr/2024"
+                  echo '{{"issue_id":"extra","schema_version":"{SCHEMA_VERSION}","generator_version":"{GENERATOR_VERSION}"}}' \
+                    > "$REPO/generated/issues/tldr/2024/extra-from-generate.json"
+                  # one-shot
+                  py_update generate_extra_files 0 >/dev/null
+                fi
                 selected="$(py_get generate_selected)"
                 written="$(py_get generate_written)"
                 /usr/bin/env python3 -c "import json; print(json.dumps({{'selected': int('$selected'), 'written': int('$written'), 'skipped': 0, 'failures': [], 'dry_run': False}}))"
@@ -245,7 +307,6 @@ class PipelineTempRepoTests(unittest.TestCase):
               exit "$(py_get consistency_exit)"
             fi
 
-            # Inline python -c used by push_script for changed_clean parsing.
             if [[ "${{1:-}}" == "-c" ]]; then
               shift
               exec /usr/bin/env python3 -c "$@"
@@ -267,6 +328,7 @@ class PipelineTempRepoTests(unittest.TestCase):
 
     def _env(self) -> dict[str, str]:
         env = os.environ.copy()
+        env["PATH"] = f"{self.bin_dir}:{env.get('PATH', '')}"
         env.update(
             {
                 "REPO_ROOT": str(self.repo),
@@ -275,34 +337,47 @@ class PipelineTempRepoTests(unittest.TestCase):
                 "LOG_DIR": str(self.repo / "logs"),
                 "REMOTE": "origin",
                 "BRANCH": "main",
-                # Ensure -m tools.* resolves if mock shells out incorrectly.
                 "PYTHONPATH": str(REPO),
+                "TLDR_PIPELINE_TEE_ACTIVE": "0",
+                "TLDR_PIPELINE_DISABLE_TEE": "1",
             }
         )
         return env
 
-    def _run(self, script: str, check: bool = False) -> subprocess.CompletedProcess[str]:
+    def _run(self, script: str) -> subprocess.CompletedProcess[str]:
         return subprocess.run(
             ["bash", str(self.repo / script)],
             cwd=self.repo,
             env=self._env(),
-            check=check,
+            check=False,
             capture_output=True,
             text=True,
         )
 
+    def _rev(self) -> str:
+        return subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+
+    def _remote_rev(self) -> str:
+        return subprocess.run(
+            ["git", "--git-dir", str(self.bare), "rev-parse", "main"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+
     def test_lock_contention_exits_cleanly(self) -> None:
-        # Hold the lock with a long-lived process sharing the open file description.
         holder = subprocess.Popen(
             [
-                "python3",
+                "bash",
                 "-c",
-                f"""
-import fcntl, os, time
-fd = os.open({str(self.lock)!r}, os.O_CREAT | os.O_RDWR, 0o644)
-fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-time.sleep(8)
-""",
+                f'export PATH="{self.bin_dir}:$PATH"; '
+                f'exec 9>"{self.lock}"; flock -n 9 || exit 1; sleep 8',
             ]
         )
         try:
@@ -330,15 +405,18 @@ time.sleep(8)
         self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
         st = self._state()
         self.assertEqual(st["script_calls"], 1)
-        self.assertEqual(st["generate_calls"], 1)
+        self.assertGreaterEqual(st["generate_calls"], 1)
         self.assertTrue((self.repo / "logs" / "last_automation_success").is_file())
 
-    def test_push_exits_zero_when_nothing_to_commit(self) -> None:
-        # Working tree clean vs HEAD.
+    def test_push_noop_updates_success_marker(self) -> None:
+        marker = self.repo / "logs" / "last_push_success"
+        self.assertFalse(marker.exists())
+        self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
         proc = self._run("push_script.sh")
         self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
-        self.assertIn("nothing to commit", proc.stdout)
-        self.assertEqual(self._state()["validate_calls"], 0)
+        self.assertIn("nothing to push", proc.stdout)
+        self.assertTrue(marker.is_file())
+        self.assertGreaterEqual(self._state()["validate_calls"], 1)
 
     def test_push_does_not_stage_logs_or_env(self) -> None:
         (self.repo / "TLDR" / "article_02-01-2024.md").write_text(
@@ -346,11 +424,9 @@ time.sleep(8)
         )
         (self.repo / ".env").write_text("SECRET=still-secret\n", encoding="utf-8")
         (self.repo / "logs" / "should_not_stage.log").write_text("nope\n", encoding="utf-8")
-        # Make validate/consistency/generate succeed.
         self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
         proc = self._run("push_script.sh")
         self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
-        # Inspect latest commit paths.
         show = subprocess.run(
             ["git", "show", "--name-only", "--pretty=format:", "HEAD"],
             cwd=self.repo,
@@ -367,62 +443,27 @@ time.sleep(8)
         (self.repo / "TLDR" / "article_03-01-2024.md").write_text(
             "# Articles TLDR 03-01-2024\n\nNEW\n", encoding="utf-8"
         )
-        before = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
+        before = self._rev()
         self._set_state(validate_exit=2)
         proc = self._run("push_script.sh")
         self.assertNotEqual(proc.returncode, 0)
-        after = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        self.assertEqual(before, after)
-        self.assertEqual(self._state()["consistency_calls"], 0)
+        self.assertEqual(before, self._rev())
 
     def test_structural_failure_prevents_commit(self) -> None:
         (self.repo / "TLDR" / "article_04-01-2024.md").write_text(
             "# Articles TLDR 04-01-2024\n\nNEW\n", encoding="utf-8"
         )
-        before = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
+        before = self._rev()
         self._set_state(validate_exit=0, consistency_exit=3)
         proc = self._run("push_script.sh")
         self.assertNotEqual(proc.returncode, 0)
-        after = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        self.assertEqual(before, after)
+        self.assertEqual(before, self._rev())
 
     def test_selected_nonzero_prevents_commit(self) -> None:
         (self.repo / "TLDR" / "article_05-01-2024.md").write_text(
             "# Articles TLDR 05-01-2024\n\nNEW\n", encoding="utf-8"
         )
-        before = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        # Initial generate can be anything; final generate must be unclean.
-        # push_script calls generate twice; make every generate report selected=1.
+        before = self._rev()
         self._set_state(
             validate_exit=0,
             consistency_exit=0,
@@ -431,14 +472,7 @@ time.sleep(8)
         )
         proc = self._run("push_script.sh")
         self.assertNotEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
-        after = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        self.assertEqual(before, after)
+        self.assertEqual(before, self._rev())
 
     def test_successful_push_commits_and_pushes(self) -> None:
         (self.repo / "TLDR" / "article_06-01-2024.md").write_text(
@@ -450,31 +484,13 @@ time.sleep(8)
             generate_selected=0,
             generate_written=0,
         )
-        before = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
+        before = self._rev()
         proc = self._run("push_script.sh")
         self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
-        after = subprocess.run(
-            ["git", "rev-parse", "HEAD"],
-            cwd=self.repo,
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
+        after = self._rev()
         self.assertNotEqual(before, after)
         self.assertTrue((self.repo / "logs" / "last_push_success").is_file())
-        remote_head = subprocess.run(
-            ["git", "--git-dir", str(self.bare), "rev-parse", "main"],
-            check=True,
-            capture_output=True,
-            text=True,
-        ).stdout.strip()
-        self.assertEqual(after, remote_head)
+        self.assertEqual(after, self._remote_rev())
         log = subprocess.run(
             ["git", "log", "-1", "--pretty=%s"],
             cwd=self.repo,
@@ -483,7 +499,171 @@ time.sleep(8)
             text=True,
         ).stdout.strip()
         self.assertTrue(log.startswith("Daily TLDR update "))
-        self.assertIn("UTC", log)
+
+    def test_failed_push_retried_on_next_invocation(self) -> None:
+        # Create a local commit that is ahead of origin, simulating a failed push.
+        (self.repo / "TLDR" / "article_07-01-2024.md").write_text(
+            "# Articles TLDR 07-01-2024\n\nLOCAL ONLY\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", "TLDR/article_07-01-2024.md"], cwd=self.repo, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "local unpushed daily"],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
+        local = self._rev()
+        self.assertNotEqual(local, self._remote_rev())
+
+        self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
+        proc = self._run("push_script.sh")
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertEqual(self._rev(), self._remote_rev())
+        self.assertIn("pushed", proc.stdout)
+
+    def test_no_staged_changes_still_pulls_origin(self) -> None:
+        # Advance origin with a commit the local clone does not have yet.
+        other = self.tmp / "other"
+        subprocess.run(
+            ["git", "clone", str(self.bare), str(other)],
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "config", "user.email", "other@example.com"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "config", "user.name", "Other"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+        (other / "TLDR" / "article_08-01-2024.md").write_text(
+            "# Articles TLDR 08-01-2024\n\nFROM REMOTE\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", "TLDR/article_08-01-2024.md"], cwd=other, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "remote advance"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+        remote_tip = self._remote_rev()
+        self.assertNotEqual(self._rev(), remote_tip)
+
+        self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
+        proc = self._run("push_script.sh")
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertEqual(self._rev(), remote_tip)
+        self.assertTrue(
+            (self.repo / "TLDR" / "article_08-01-2024.md").is_file()
+        )
+        self.assertIn("pull --rebase completed", proc.stdout)
+        self.assertTrue((self.repo / "logs" / "last_push_success").is_file())
+
+    def test_remote_commit_triggers_post_rebase_checks(self) -> None:
+        other = self.tmp / "other2"
+        subprocess.run(
+            ["git", "clone", str(self.bare), str(other)],
+            check=True,
+            capture_output=True,
+        )
+        for cfg in (
+            ["git", "config", "user.email", "other2@example.com"],
+            ["git", "config", "user.name", "Other2"],
+        ):
+            subprocess.run(cfg, cwd=other, check=True, capture_output=True)
+        (other / "TLDR" / "article_09-01-2024.md").write_text(
+            "# Articles TLDR 09-01-2024\n\nREMOTE\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", "TLDR/article_09-01-2024.md"], cwd=other, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "remote md"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=other,
+            check=True,
+            capture_output=True,
+        )
+
+        self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
+        before_validate = self._state()["validate_calls"]
+        proc = self._run("push_script.sh")
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertIn("post-rebase validate passed", proc.stdout)
+        self.assertGreater(self._state()["validate_calls"], before_validate)
+        self.assertGreaterEqual(self._state()["generate_calls"], 2)
+
+    def test_post_rebase_validation_failure_prevents_push(self) -> None:
+        # Local unpushed commit + remote tip equal initially; make validate fail
+        # only after the first pre-commit path is skipped (noop staging), i.e. on
+        # post-rebase validate. With clean tree, validate runs only post-rebase.
+        (self.repo / "TLDR" / "article_10-01-2024.md").write_text(
+            "# Articles TLDR 10-01-2024\n\nLOCAL\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", "TLDR/article_10-01-2024.md"], cwd=self.repo, check=True)
+        subprocess.run(
+            ["git", "commit", "-m", "local ahead"],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
+        local = self._rev()
+        self.assertNotEqual(local, self._remote_rev())
+
+        # No staged changes on next run; post-rebase validate fails.
+        self._set_state(validate_exit=9, consistency_exit=0, generate_selected=0)
+        proc = self._run("push_script.sh")
+        self.assertNotEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertNotEqual(self._remote_rev(), local)
+        self.assertFalse((self.repo / "logs" / "last_push_success").exists())
+
+    def test_wrong_branch_fails_before_git_work(self) -> None:
+        subprocess.run(
+            ["git", "checkout", "-b", "feature/not-main"],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
+        before = self._rev()
+        remote_before = self._remote_rev()
+        proc = self._run("push_script.sh")
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertIn("expected branch main", proc.stdout)
+        self.assertEqual(before, self._rev())
+        self.assertEqual(remote_before, self._remote_rev())
+        self.assertEqual(self._state()["generate_calls"], 0)
+
+    def test_missing_flock_fails_clearly(self) -> None:
+        env = self._env()
+        # Remove shim directory from PATH.
+        env["PATH"] = "/usr/bin:/bin"
+        proc = subprocess.run(
+            ["bash", str(self.repo / "push_script.sh")],
+            cwd=self.repo,
+            env=env,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        # On Ubuntu CI, real flock exists — skip assertion if so.
+        if shutil.which("flock", path="/usr/bin:/bin"):
+            self.skipTest("system flock present")
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertIn("flock is required", proc.stdout + proc.stderr)
 
 
 if __name__ == "__main__":

@@ -12,12 +12,14 @@ LOG_FILE="${LOG_FILE:-${LOG_DIR}/automation.log}"
 SUCCESS_MARKER="${SUCCESS_MARKER:-${LOG_DIR}/last_automation_success}"
 
 SCRIPT_NAME="$(basename "$0")"
+
+mkdir -p "${LOG_DIR}"
+
 # shellcheck source=scripts/pipeline_lib.sh
 source "${REPO_ROOT}/scripts/pipeline_lib.sh"
 
+enable_pipeline_logging
 trap on_err ERR
-
-mkdir -p "${LOG_DIR}"
 
 if ! acquire_pipeline_lock; then
   log "lock held by another pipeline process; exiting successfully"
@@ -36,10 +38,8 @@ log "start ingestion+generate REPO_ROOT=${REPO_ROOT}"
 "${PYTHON_BIN}" script.py
 log "script.py completed successfully"
 
-gen_out="$("${PYTHON_BIN}" -m tools.tldr_derive generate --changed --output generated)"
-printf '%s\n' "${gen_out}" | tee -a "${LOG_FILE}" >/dev/null
-printf '%s\n' "${gen_out}"
-log "generate --changed summary logged"
+run_generate_changed
+log "generate --changed completed"
 
 printf '%s\n' "$(ts_utc)" > "${SUCCESS_MARKER}"
 log "success marker written: ${SUCCESS_MARKER}"
