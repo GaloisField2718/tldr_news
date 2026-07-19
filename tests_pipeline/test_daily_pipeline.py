@@ -371,6 +371,38 @@ class PipelineTempRepoTests(unittest.TestCase):
             text=True,
         ).stdout.strip()
 
+    def _clone_from_bare(self, dest: Path) -> Path:
+        """Clone the temp bare remote into dest (file:// is reliable on CI)."""
+        if dest.exists():
+            shutil.rmtree(dest)
+        url = self.bare.resolve().as_uri()
+        proc = subprocess.run(
+            ["git", "clone", url, str(dest)],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        subprocess.run(
+            ["git", "config", "user.email", "clone@example.com"],
+            cwd=dest,
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "config", "user.name", "Clone"],
+            cwd=dest,
+            check=True,
+            capture_output=True,
+        )
+        (dest / "TLDR").mkdir(parents=True, exist_ok=True)
+        return dest
+
+    def _write_remote_article(self, dest: Path, filename: str, body: str) -> None:
+        path = dest / "TLDR" / filename
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(body, encoding="utf-8")
+
     def test_lock_contention_exits_cleanly(self) -> None:
         holder = subprocess.Popen(
             [
@@ -523,26 +555,11 @@ class PipelineTempRepoTests(unittest.TestCase):
 
     def test_no_staged_changes_still_pulls_origin(self) -> None:
         # Advance origin with a commit the local clone does not have yet.
-        other = self.tmp / "other"
-        subprocess.run(
-            ["git", "clone", str(self.bare), str(other)],
-            check=True,
-            capture_output=True,
-        )
-        subprocess.run(
-            ["git", "config", "user.email", "other@example.com"],
-            cwd=other,
-            check=True,
-            capture_output=True,
-        )
-        subprocess.run(
-            ["git", "config", "user.name", "Other"],
-            cwd=other,
-            check=True,
-            capture_output=True,
-        )
-        (other / "TLDR" / "article_08-01-2024.md").write_text(
-            "# Articles TLDR 08-01-2024\n\nFROM REMOTE\n", encoding="utf-8"
+        other = self._clone_from_bare(self.tmp / "other")
+        self._write_remote_article(
+            other,
+            "article_08-01-2024.md",
+            "# Articles TLDR 08-01-2024\n\nFROM REMOTE\n",
         )
         subprocess.run(["git", "add", "TLDR/article_08-01-2024.md"], cwd=other, check=True)
         subprocess.run(
@@ -571,19 +588,11 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.assertTrue((self.repo / "logs" / "last_push_success").is_file())
 
     def test_remote_commit_triggers_post_rebase_checks(self) -> None:
-        other = self.tmp / "other2"
-        subprocess.run(
-            ["git", "clone", str(self.bare), str(other)],
-            check=True,
-            capture_output=True,
-        )
-        for cfg in (
-            ["git", "config", "user.email", "other2@example.com"],
-            ["git", "config", "user.name", "Other2"],
-        ):
-            subprocess.run(cfg, cwd=other, check=True, capture_output=True)
-        (other / "TLDR" / "article_09-01-2024.md").write_text(
-            "# Articles TLDR 09-01-2024\n\nREMOTE\n", encoding="utf-8"
+        other = self._clone_from_bare(self.tmp / "other2")
+        self._write_remote_article(
+            other,
+            "article_09-01-2024.md",
+            "# Articles TLDR 09-01-2024\n\nREMOTE\n",
         )
         subprocess.run(["git", "add", "TLDR/article_09-01-2024.md"], cwd=other, check=True)
         subprocess.run(
