@@ -97,12 +97,15 @@ presentation and search.
 
 ### Manual workflow runs
 
-From GitHub, open **Actions → derive-ci → Run workflow** on the desired ref:
+From GitHub, open **Actions → derive-ci → Run workflow**:
 
-- Leave **Trigger the web deployment after successful validation** disabled for
-  a validation-only run (the default).
-- Enable it to run validation and request a web deployment only after validation
-  succeeds.
+- Validation-only manual dispatches may run on any selected Git ref. Leave
+  **Trigger the web deployment after successful validation** disabled (the
+  default).
+- Deployment-enabled manual dispatches must select `main` and enable the option.
+  The deployment request runs only after validation succeeds.
+- A feature-branch manual run with `deploy_web=true` still validates that branch,
+  but the `deploy-web` job is skipped because the selected ref is not `main`.
 
 Equivalent GitHub CLI commands are:
 
@@ -114,8 +117,8 @@ gh workflow run derive-ci.yml --ref main
 gh workflow run derive-ci.yml --ref main -f deploy_web=true
 ```
 
-A manual run with deployment enabled must be used deliberately. Unit tests and
-pull request CI never call the real hook.
+A manual run with deployment enabled must be used deliberately and from `main`.
+Unit tests and pull request CI never call the real hook.
 
 ### Revoke or replace a compromised hook
 

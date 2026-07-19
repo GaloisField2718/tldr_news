@@ -56,7 +56,9 @@ jobs:
     needs: validate-derived-data
     if: >-
       (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
-      (github.event_name == 'workflow_dispatch' && inputs.deploy_web == true)
+      (github.event_name == 'workflow_dispatch' &&
+       github.ref == 'refs/heads/main' &&
+       inputs.deploy_web == true)
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

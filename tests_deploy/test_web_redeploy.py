@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import stat
 import subprocess
 import tempfile
 import textwrap
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -25,10 +27,36 @@ def extract_marked_block(text: str, start: str, end: str) -> str:
     return textwrap.dedent("\n".join(lines[start_index + 1 : end_index]))
 
 
+def extract_deploy_condition(text: str) -> str:
+    """Return the actual deploy-web job expression as one evaluable line."""
+    match = re.search(
+        r"(?m)^  deploy-web:\n[\s\S]*?^    if: >-\n(?P<condition>(?:^      [^\n]*\n)+)",
+        text,
+    )
+    if not match:
+        raise AssertionError("deploy-web condition was not found")
+    return " ".join(line.strip() for line in match.group("condition").splitlines())
+
+
 class WorkflowStructureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.workflow = WORKFLOW_PATH.read_text(encoding="utf-8")
+        cls.deploy_condition = extract_deploy_condition(cls.workflow)
+
+    def deploys_for(self, event_name: str, ref: str, deploy_web: bool) -> bool:
+        expression = self.deploy_condition.replace("&&", " and ").replace("||", " or ")
+        expression = re.sub(r"\btrue\b", "True", expression)
+        return bool(
+            eval(
+                expression,
+                {"__builtins__": {}},
+                {
+                    "github": SimpleNamespace(event_name=event_name, ref=ref),
+                    "inputs": SimpleNamespace(deploy_web=deploy_web),
+                },
+            )
+        )
 
     def test_validation_triggers_and_read_only_permissions(self) -> None:
         self.assertIn("pull_request:", self.workflow)
@@ -50,16 +78,36 @@ class WorkflowStructureTests(unittest.TestCase):
             r"(?s)workflow_dispatch:\s+inputs:\s+deploy_web:.*?default: false.*?type: boolean",
         )
 
-    def test_deploy_job_depends_on_validation_and_excludes_pull_requests(self) -> None:
+    def test_deploy_job_depends_on_successful_validation(self) -> None:
         deploy = self.workflow.split("  deploy-web:", 1)[1]
         self.assertIn("needs: validate-derived-data", deploy)
-        self.assertIn("github.event_name == 'push'", deploy)
-        self.assertIn("github.ref == 'refs/heads/main'", deploy)
-        self.assertIn("github.event_name == 'workflow_dispatch'", deploy)
-        self.assertIn("inputs.deploy_web == true", deploy)
-        self.assertNotIn("github.event_name == 'pull_request'", deploy)
         self.assertNotIn("actions/checkout", deploy)
         self.assertNotIn("always()", deploy)
+
+    def test_manual_deployment_condition_structurally_requires_main(self) -> None:
+        self.assertRegex(
+            self.deploy_condition,
+            r"\(github\.event_name == 'workflow_dispatch'\s+&&\s+"
+            r"github\.ref == 'refs/heads/main'\s+&&\s+inputs\.deploy_web == true\)",
+        )
+
+    def test_push_to_main_may_deploy(self) -> None:
+        self.assertTrue(self.deploys_for("push", "refs/heads/main", False))
+        self.assertFalse(self.deploys_for("push", "refs/heads/feature", True))
+
+    def test_manual_deployment_on_main_may_deploy(self) -> None:
+        self.assertTrue(self.deploys_for("workflow_dispatch", "refs/heads/main", True))
+
+    def test_manual_deployment_on_non_main_ref_cannot_deploy(self) -> None:
+        self.assertFalse(
+            self.deploys_for("workflow_dispatch", "refs/heads/feature/test", True)
+        )
+
+    def test_manual_dispatch_with_deploy_disabled_cannot_deploy(self) -> None:
+        self.assertFalse(self.deploys_for("workflow_dispatch", "refs/heads/main", False))
+
+    def test_pull_requests_cannot_deploy(self) -> None:
+        self.assertFalse(self.deploys_for("pull_request", "refs/pull/8/merge", True))
 
     def test_concurrency_cancels_older_runs_for_the_same_ref(self) -> None:
         self.assertIn("group: ${{ github.workflow }}-${{ github.ref }}", self.workflow)
