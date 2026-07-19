@@ -371,37 +371,47 @@ class PipelineTempRepoTests(unittest.TestCase):
             text=True,
         ).stdout.strip()
 
-    def _clone_from_bare(self, dest: Path) -> Path:
-        """Clone the temp bare remote into dest (file:// is reliable on CI)."""
-        if dest.exists():
-            shutil.rmtree(dest)
-        url = self.bare.resolve().as_uri()
-        proc = subprocess.run(
-            ["git", "clone", url, str(dest)],
+    def _plant_remote_only_commit(
+        self, relative_path: str, content: str, message: str
+    ) -> str:
+        """Push a commit to origin/main, then reset local main behind it.
+
+        Avoids a second clone (unreliable push-to-bare on some CI hosts).
+        """
+        before = self._rev()
+        path = self.repo / relative_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+        subprocess.run(
+            ["git", "add", "--", relative_path],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
+        subprocess.run(
+            ["git", "commit", "-m", message],
+            cwd=self.repo,
+            check=True,
+            capture_output=True,
+        )
+        push = subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=self.repo,
             check=False,
             capture_output=True,
             text=True,
         )
-        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertEqual(push.returncode, 0, msg=push.stderr + push.stdout)
+        remote_tip = self._rev()
         subprocess.run(
-            ["git", "config", "user.email", "clone@example.com"],
-            cwd=dest,
+            ["git", "reset", "--hard", before],
+            cwd=self.repo,
             check=True,
             capture_output=True,
         )
-        subprocess.run(
-            ["git", "config", "user.name", "Clone"],
-            cwd=dest,
-            check=True,
-            capture_output=True,
-        )
-        (dest / "TLDR").mkdir(parents=True, exist_ok=True)
-        return dest
-
-    def _write_remote_article(self, dest: Path, filename: str, body: str) -> None:
-        path = dest / "TLDR" / filename
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(body, encoding="utf-8")
+        self.assertNotEqual(self._rev(), remote_tip)
+        self.assertEqual(remote_tip, self._remote_rev())
+        return remote_tip
 
     def test_lock_contention_exits_cleanly(self) -> None:
         holder = subprocess.Popen(
@@ -554,28 +564,12 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.assertIn("pushed", proc.stdout)
 
     def test_no_staged_changes_still_pulls_origin(self) -> None:
-        # Advance origin with a commit the local clone does not have yet.
-        other = self._clone_from_bare(self.tmp / "other")
-        self._write_remote_article(
-            other,
-            "article_08-01-2024.md",
+        # Advance origin with a commit the local checkout does not have yet.
+        remote_tip = self._plant_remote_only_commit(
+            "TLDR/article_08-01-2024.md",
             "# Articles TLDR 08-01-2024\n\nFROM REMOTE\n",
+            "remote advance",
         )
-        subprocess.run(["git", "add", "TLDR/article_08-01-2024.md"], cwd=other, check=True)
-        subprocess.run(
-            ["git", "commit", "-m", "remote advance"],
-            cwd=other,
-            check=True,
-            capture_output=True,
-        )
-        subprocess.run(
-            ["git", "push", "origin", "main"],
-            cwd=other,
-            check=True,
-            capture_output=True,
-        )
-        remote_tip = self._remote_rev()
-        self.assertNotEqual(self._rev(), remote_tip)
 
         self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
         proc = self._run("push_script.sh")
@@ -588,24 +582,10 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.assertTrue((self.repo / "logs" / "last_push_success").is_file())
 
     def test_remote_commit_triggers_post_rebase_checks(self) -> None:
-        other = self._clone_from_bare(self.tmp / "other2")
-        self._write_remote_article(
-            other,
-            "article_09-01-2024.md",
+        self._plant_remote_only_commit(
+            "TLDR/article_09-01-2024.md",
             "# Articles TLDR 09-01-2024\n\nREMOTE\n",
-        )
-        subprocess.run(["git", "add", "TLDR/article_09-01-2024.md"], cwd=other, check=True)
-        subprocess.run(
-            ["git", "commit", "-m", "remote md"],
-            cwd=other,
-            check=True,
-            capture_output=True,
-        )
-        subprocess.run(
-            ["git", "push", "origin", "main"],
-            cwd=other,
-            check=True,
-            capture_output=True,
+            "remote md",
         )
 
         self._set_state(validate_exit=0, consistency_exit=0, generate_selected=0)
