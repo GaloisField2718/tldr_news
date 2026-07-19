@@ -58,6 +58,82 @@ push_script.sh
 Empty staging does **not** skip pull/rebase/push retry. A previous local commit
 left unpushed is retried on the next cron minute.
 
+## Validated web redeployment
+
+The complete production path is:
+
+```text
+email
+  -> script.py
+  -> newsletter Markdown source
+  -> generated JSON
+  -> push_script.sh
+  -> tldr_news/main
+  -> GitHub Actions full-corpus validation
+  -> Vercel Deploy Hook
+  -> tldr-news-web build
+  -> immutable tldr_news source SHA
+  -> production
+```
+
+A push to `tldr_news/main` starts `.github/workflows/derive-ci.yml`. The workflow
+runs all derive tests, offline pipeline tests, strict privacy validation, and
+generated consistency checks before its separate `deploy-web` job can run. A
+failed or cancelled validation run cannot request a deployment. Concurrency
+cancels an older in-progress run for the same Git ref, so repeated main pushes
+do not deploy stale validated state.
+
+The repository Actions secret is named `VERCEL_DEPLOY_HOOK_URL`. It contains the
+Vercel Deploy Hook URL for the `tldr-news-web` project and its main branch. The
+URL is a credential: never print it, place it in logs, write it to a file, or
+commit it. Pull request workflows validate only and never receive a deployment
+request. The deployment response is parsed as JSON and only the accepted job ID
+and state are logged.
+
+The web build resolves the latest `tldr_news/main` ref to an immutable Git commit
+SHA before synchronizing `generated/`. `tldr_news` remains the source of truth
+for ingestion and normalized data; `tldr-news-web` remains responsible for
+presentation and search.
+
+### Manual workflow runs
+
+From GitHub, open **Actions → derive-ci → Run workflow**:
+
+- Validation-only manual dispatches may run on any selected Git ref. Leave
+  **Trigger the web deployment after successful validation** disabled (the
+  default).
+- Deployment-enabled manual dispatches must select `main` and enable the option.
+  The deployment request runs only after validation succeeds.
+- A feature-branch manual run with `deploy_web=true` still validates that branch,
+  but the `deploy-web` job is skipped because the selected ref is not `main`.
+
+Equivalent GitHub CLI commands are:
+
+```bash
+# Validation only (default)
+gh workflow run derive-ci.yml --ref main
+
+# Validation followed by deployment
+gh workflow run derive-ci.yml --ref main -f deploy_web=true
+```
+
+A manual run with deployment enabled must be used deliberately and from `main`.
+Unit tests and pull request CI never call the real hook.
+
+### Revoke or replace a compromised hook
+
+1. In the Vercel `tldr-news-web` project settings, revoke/delete the compromised
+   Deploy Hook.
+2. Create a replacement hook targeting the main branch.
+3. Replace the `VERCEL_DEPLOY_HOOK_URL` Actions secret in the `tldr_news`
+   repository settings.
+4. Run a manual validation-only workflow.
+5. Run a manual workflow with `deploy_web=true` and confirm that validation and
+   the deployment request both succeed.
+
+Do not put either the revoked or replacement URL in commits, issues,
+documentation, command output, or workflow inputs.
+
 ## Constants
 
 ```text
