@@ -1,3 +1,19 @@
-* 16 * * * .~/tldr_news/automation.sh
+# Server crontab documentation (do not install automatically).
+#
+# Each line uses minute=`*`, so the job runs once per minute during the given
+# hour (UTC or server-local, matching the live VPS crontab). Scripts must
+# therefore be idempotent and use a shared flock to prevent overlap.
+#
+# Live schedule on /home/galois/bots/tldr_news:
 
-* 17 * * * .~/tldr_news/push_script.sh
+# Every minute during hour 10: IMAP ingestion + generate --changed
+* 10 * * * cd /home/galois/bots/tldr_news && ./automation.sh
+
+# Every minute during hour 17: validate + commit + rebase/push
+* 17 * * * cd /home/galois/bots/tldr_news && ./push_script.sh
+
+# Every minute during hour 23: second ingestion window
+* 23 * * * cd /home/galois/bots/tldr_news && ./automation.sh
+
+# Every minute during hour 00: second push window
+* 0 * * * cd /home/galois/bots/tldr_news && ./push_script.sh
