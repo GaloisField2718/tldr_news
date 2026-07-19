@@ -4,14 +4,24 @@ on:
   pull_request:
   push:
     branches:
-      - feat/tldr-derived-data-foundation
-      - feat/daily-ingestion-derived-sync
+      - main
+  workflow_dispatch:
+    inputs:
+      deploy_web:
+        description: Trigger the web deployment after successful validation
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  safe-derive-checks:
+  validate-derived-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,8 +43,98 @@ jobs:
       - name: Run offline daily pipeline tests
         run: python3 -m unittest tests_pipeline.test_daily_pipeline
 
+      - name: Run web redeployment workflow tests
+        run: python3 -m unittest tests_deploy.test_web_redeploy
+
       - name: Full-corpus strict privacy validation
         run: python3 -m tools.tldr_derive validate --all --strict-privacy
 
       - name: Generated structural consistency check
         run: python3 -m tools.check_generated_consistency --output generated
+
+  deploy-web:
+    needs: validate-derived-data
+    if: >-
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'workflow_dispatch' && inputs.deploy_web == true)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Request validated web deployment
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          # DEPLOY_SCRIPT_BEGIN
+          set -euo pipefail
+
+          if [[ -z "${VERCEL_DEPLOY_HOOK_URL:-}" ]]; then
+            echo "::error::VERCEL_DEPLOY_HOOK_URL is not configured"
+            exit 1
+          fi
+
+          if ! response="$(
+            curl \
+              --request POST \
+              --fail-with-body \
+              --silent \
+              --show-error \
+              --connect-timeout 10 \
+              --max-time 60 \
+              --retry 3 \
+              --retry-delay 2 \
+              --retry-max-time 120 \
+              --retry-connrefused \
+              "${VERCEL_DEPLOY_HOOK_URL}" 2>&1
+          )"; then
+            echo "::error::Vercel deployment request failed"
+            exit 1
+          fi
+
+          RESPONSE_BODY="${response}" python3 - <<'PY'
+          # RESPONSE_VALIDATOR_BEGIN
+          import json
+          import os
+          import re
+          import sys
+
+          def fail() -> None:
+              print("::error::Vercel returned an invalid deployment response", file=sys.stderr)
+              raise SystemExit(1)
+
+          raw = os.environ.pop("RESPONSE_BODY", "")
+          try:
+              payload = json.loads(raw)
+          except (TypeError, json.JSONDecodeError):
+              fail()
+
+          if not isinstance(payload, dict):
+              fail()
+          if payload.get("error") or payload.get("errors"):
+              fail()
+
+          job = payload.get("job")
+          if not isinstance(job, dict) or job.get("error") or job.get("errors"):
+              fail()
+
+          job_id = job.get("id")
+          if not isinstance(job_id, str) or not job_id.strip():
+              fail()
+          job_id = job_id.strip()
+          if len(job_id) > 256 or not re.fullmatch(r"[A-Za-z0-9._:-]+", job_id):
+              fail()
+
+          state = job.get("state")
+          if state is not None:
+              if not isinstance(state, str):
+                  fail()
+              state = state.strip()
+              if len(state) > 64 or not re.fullmatch(r"[A-Za-z0-9._:-]+", state):
+                  fail()
+
+          print("Vercel deployment requested successfully")
+          print(f"job_id={job_id}")
+          if state:
+              print(f"state={state}")
+          # RESPONSE_VALIDATOR_END
+          PY
+          # DEPLOY_SCRIPT_END
