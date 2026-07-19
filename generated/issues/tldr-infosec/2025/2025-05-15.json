@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-05-15",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-15",
+  "source_path": "TLDR InfoSec/article_15-05-2025.md",
+  "source_content_hash": "sha256:334d5e1ad4c65551ce52ab57ccf56e4f7edbcdadfe81a15c8b7e5ac81f96d9c8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-15",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a04",
+          "order": 1,
+          "title": "IN PRACTICE?",
+          "summary": "",
+          "url": "https://www.blackduck.com/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250430",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a04",
+          "order": 2,
+          "title": "Learn more about True Scale Application Security",
+          "summary": "",
+          "url": "https://www.blackduck.com/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250430",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a05",
+          "order": 1,
+          "title": "CHIPMAKER PATCH TUESDAY: INTEL, AMD, ARM RESPOND TO NEW CPU ATTACKS",
+          "summary": "Intel, AMD, and Arm have released security advisories on CPU vulnerabilities, including a branch privilege injection issue (CVE-2024-45332) that revives Spectre-BTI attacks on Intel processors. Intel is issuing microcode updates for this vulnerability and others identified by ETH Zurich and VU Amsterdam, which found three new Spectre v2 attacks that undermine domain isolation. In total, Intel patched 25 additional advisories for various high and medium-severity vulnerabilities, while AMD addressed several high-severity flaws in its Manageability Tools and CPU Libraries.",
+          "url": "https://www.securityweek.com/chipmaker-patch-tuesday-intel-amd-arm-respond-to-new-cpu-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a06",
+          "order": 2,
+          "title": "ICLICKER SITE HACK TARGETED STUDENTS WITH MALWARE VIA FAKE CAPTCHA",
+          "summary": "The website of iClicker, which provides a student engagement platform, was compromised in a ClickFix attack. The attack prompted users to click on a fake CAPTCHA, which copied a PowerShell command to users' clipboards and then instructed them to run it. The PowerShell script downloaded a legitimate Microsoft Visual C++ Redistributable if the script detected that it was in a malware sandbox or an unknown malware that is possibly an infostealer if it was running on a regular machine.",
+          "url": "https://www.bleepingcomputer.com/news/security/iclicker-hack-targeted-students-with-malware-via-fake-captcha/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a07",
+          "order": 3,
+          "title": "DIOR'S CHINA DATA BREACH EXPOSES ELITE CLIENTS",
+          "summary": "Luxury brand Dior experienced a customer data breach in China that exposed an undisclosed number of users' data. The stolen data included customers' names, genders, phone numbers, email addresses, mailing addresses, purchase amounts, and shopping preferences, but not financial data. Chinese users have expressed an erosion of brand trust on the Chinese social media site RedNote.",
+          "url": "https://jingdaily.com/posts/dior-china-data-breach-tests-brand-trust?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "jingdaily.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a08",
+          "order": 1,
+          "title": "THE CRYPTOGRAPHY BEHIND PASSKEYS",
+          "summary": "Passkeys employ public-key cryptography for authentication. The user's device creates a digital signature with a private key, while the website verifies it using a public key, reducing password vulnerabilities. WebAuthn provides vital anti-phishing protections through origin binding, ensuring passkeys are functional only with their respective websites. Different authenticator types balance security and convenience. The passkey ecosystem supports cryptographic extensions for functionalities such as key derivation and secure storage. However, developers must implement account recovery mechanisms, as lost passkeys cannot be reconstructed.",
+          "url": "https://blog.trailofbits.com/2025/05/14/the-cryptography-behind-passkeys/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a09",
+          "order": 2,
+          "title": "RUDE AWAKENING: UNMASKING SLEEP OBFUSCATION WITH TTTRACER",
+          "summary": "Modern C2 implants will use sleep obfuscation where the implant encrypts itself and stays dormant for a period of time before decrypting itself, fetching and performing operations, and then repeating the cycle by encrypting itself again. This makes detection difficult because it is unlikely that an EDR will scan the system while the implant is decrypted. This author explores how to utilize Time Travel Debugging to detect when an implant decrypts itself and makes network calls. They note that this method is very successful but can be bypassed by malware authors by extending the sleep period to make the manual analysis untenable or by unloading the attached debugging DLL.",
+          "url": "https://blog.felixm.pw/rude_awakening.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.felixm.pw",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a10",
+          "order": 3,
+          "title": "TALES FROM THE CLOUD TRENCHES: THE ATTACKER DOTH PERSIST TOO MUCH, METHINKS",
+          "summary": "Attackers leveraged a leaked AWS access key from an organization management account to establish multiple persistence mechanisms, including a \"persistence-as-a-service\" Lambda function triggered by API Gateway that creates new IAM users on demand. Previously unreported tactics included disabling trusted access for organization-level services, manipulating AWS Identity Center (SSO) to create backdoor users without MFA requirements, and operating from Telegram IP addresses. The attackers implemented comprehensive persistence strategies to survive credential revocation, demonstrating sophisticated knowledge of AWS services and security mechanisms.",
+          "url": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-the-attacker-doth-persist-too-much/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a11",
+          "order": 1,
+          "title": "ENTRAFALCON",
+          "summary": "EntraFalcon is a PowerShell-based tool for pentesters, security analysts, and sysadmins to evaluate the security of a Microsoft Entra ID environment.",
+          "url": "https://github.com/CompassSecurity/EntraFalcon?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a12",
+          "order": 2,
+          "title": "ONEIROMANCER",
+          "summary": "oneiromancer is a reverse engineering assistant that uses a locally running LLM fine-tuned for Hex-Rays pseudo-code to aid with code analysis. It can analyze a function or a smaller code snippet to return a high-level description of the code's actions, recommended function names, and variable renaming suggestions.",
+          "url": "https://github.com/0xdea/oneiromancer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a13",
+          "order": 3,
+          "title": "SQLMAP AI ASSISTANT",
+          "summary": "An AI wrapper for SQLMap that simplifies SQL injection testing. It features automated result analysis, step suggestions, and adaptive testing with DBMS optimizations for MySQL, MSSQL, Oracle, and PostgreSQL. It also includes adaptive WAF Bypass, which dynamically selects tamper scripts based on WAF detection.",
+          "url": "https://github.com/atiilla/sqlmap-ai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a14",
+          "order": 1,
+          "title": "THE IMPACT OF MICROSOFT'S REFS ON DFIR",
+          "summary": "This blog post provides an in-depth discussion of the new Microsoft Resilient File System (ReFS) and details how it differs from NTFS from a forensics perspective. It highlights the challenges during the transitional period, such as a gap in tooling maturity, no Master File Table, a lack of undo logs in ReFS' logging, changes in the Change Journal, and various removed NTFS features. However, ReFS also offers new forensics opportunities, including the ReFS Log and “First Events,” the potential for carving opportunities in superblocks and checkpoints, the potential for deleted data to persist if shared with another file, integrity streams traces, and other metadata.",
+          "url": "https://medium.com/@mathias.fuchs/the-impact-of-microsofts-refs-on-dfir-cdb78f401bfd?utm_source=tldrinfosec",
+          "reading_time_minutes": 32,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a15",
+          "order": 2,
+          "title": "LEDGER SECURES DISCORD AFTER HACKER BOT TRIED TO STEAL SEED PHRASES",
+          "summary": "Hardware wallet provider Ledger notified users that it has secured its Discord server following an attacker's compromise of a moderator's account. The moderator's account was used to notify Discord members of a bogus vulnerability that required users to verify their recovery phrases with a scam link. Ledger reported that after some delays in reporting the issue due to the compromised account muting and banning other Ledger moderators, the compromised account was removed, and the bot was deleted.",
+          "url": "https://cointelegraph.com/news/ledger-discord-channel-secure-after-security-breach?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a16",
+          "order": 3,
+          "title": "ONE-CLICK RCE IN ASUS'S PREINSTALLED DRIVER SOFTWARE",
+          "summary": "The author found a serious security flaw in ASUS's DriverHub software that could let hackers run code with admin rights. They explained how the system could be tricked using subdomains and a silent install trick. ASUS fixed the problem after it was reported, but credited someone else.",
+          "url": "https://mrbruh.com/asusdriverhub/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "mrbruh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-15:a17",
+          "order": 1,
+          "title": "MICROSOFT FIXES LINUX BOOT ISSUES ON DUAL-BOOT WINDOWS SYSTEMS",
+          "summary": "In August 2024, a Windows update disrupted Linux booting on dual-boot systems due to a Secure Boot modification, which Microsoft fixed by May 2025, advising users to install the latest updates.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-linux-boot-issues-on-dual-boot-windows-systems/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a18",
+          "order": 2,
+          "title": "GOOGLE CHROME TO BLOCK ADMIN-LEVEL BROWSER LAUNCHES FOR BETTER SECURITY",
+          "summary": "Google Chrome is set to discontinue running with admin rights to enhance security by restricting harmful files from gaining full system access, similar to a recent update in Edge.",
+          "url": "https://www.bleepingcomputer.com/news/google/google-chrome-to-block-admin-level-browser-launches-for-better-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-15:a19",
+          "order": 3,
+          "title": "NORTH KOREAN HACKERS STOLE $88M BY POSING AS US TECH WORKERS",
+          "summary": "North Korean hackers stole $88 million by using fake identities for remote tech jobs in the U.S., creating fake companies, resumes, and job references to deceive employers.",
+          "url": "https://hackread.com/north-korean-hackers-stole-88m-posing-us-tech-workers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

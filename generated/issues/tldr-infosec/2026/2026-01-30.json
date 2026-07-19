@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-30",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-30",
+  "source_path": "TLDR InfoSec/article_30-01-2026.md",
+  "source_content_hash": "sha256:700d3eed743239c97a9fbdceca931a3156c8ec01168496554944aa8f9522e378",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-30",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-30:a04",
+          "order": 1,
+          "title": "OPENSSL ISSUED SECURITY UPDATES TO FIX 12 FLAWS, INCLUDING REMOTE CODE EXECUTION",
+          "summary": "OpenSSL patched 12 vulnerabilities in its widely used cryptographic library, most of which involve memory safety and parsing weaknesses that can cause denial-of-service or data-integrity issues. Two critical stack-overflow bugs in CMS/PKCS#7 and PKCS#12 parsing can potentially enable remote code execution when handling untrusted data, making timely updates essential for organizations relying on OpenSSL 3.x.",
+          "url": "https://securityaffairs.com/187445/security/openssl-issued-security-updates-to-fix-12-flaws-including-remote-code-execution.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a05",
+          "order": 2,
+          "title": "FORTINET CONFIRMS NEW ZERO-DAY BEHIND MALICIOUS SSO LOGINS",
+          "summary": "CVE-2026-24858 is a critical authentication-bypass vulnerability (CVSS 9.8) that affects FortiOS, FortiManager, FortiAnalyzer, FortiProxy, and FortiWeb. It allows attackers to log in to devices via FortiCloud SSO. The zero-day, added to CISA's KEV catalog, emerged after reports that the December CVE-2025-59718 patch was being bypassed, prompting Fortinet to temporarily disable FortiCloud SSO globally on January 26. Organizations should immediately upgrade affected products. FortiCloud SSO now blocks login attempts from vulnerable device versions.",
+          "url": "https://links.tldrnewsletter.com/3rcLHX",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a06",
+          "order": 3,
+          "title": "MATCH GROUP BREACH EXPOSES DATA FROM HINGE, TINDER, OKCUPID, AND MATCH",
+          "summary": "Match Group has confirmed that a “limited amount of user data” was stolen after ShinyHunters claimed a breach of 1.7GB of stolen files allegedly containing 10M records. The attackers stole data after compromising an Okta SSO account, which gave them access to the company's AppsFlyer marketing analytics platform and to Google Drive and Dropbox accounts. The hackers stated that while the data contains some PII, it's mostly tracking data.",
+          "url": "https://www.bleepingcomputer.com/news/security/match-group-breach-exposes-data-from-hinge-tinder-okcupid-and-match/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-30:a07",
+          "order": 1,
+          "title": "CORRUPTING THE HIVE MIND: PERSISTENCE THROUGH FORGOTTEN WINDOWS INTERNALS",
+          "summary": "Swarmer is a low‑privilege tool that quietly edits Windows user registry hives without triggering common EDR hooks on standard registry APIs. Swarmer builds offline registry hives with Offreg.dll by abusing legacy mandatory user profiles and the NTUSER.MAN mechanism, enabling per‑user persistence that survives reboots while largely evading traditional monitoring. This post walks through the workflow, implementation quirks, operational caveats, and both defensive detection opportunities and attacker takeaways around this forgotten Windows feature set.",
+          "url": "https://www.praetorian.com/blog/corrupting-the-hive-mind-persistence-through-forgotten-windows-internals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "praetorian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a08",
+          "order": 2,
+          "title": "HOW REP+ HELPED ME IDENTIFY A CRITICAL SUPABASE JWT EXPOSURE",
+          "summary": "A security researcher discovered a critical Supabase misconfiguration in which an anonymous JWT embedded in client-side JavaScript granted read access to password_reset_tokens and 34 other tables due to missing Row Level Security (RLS) policies. The exposure of 272 password reset tokens and plaintext passwords enabled a full account takeover, demonstrating how publicly intended anonymous keys become dangerous when RLS is improperly configured. Security teams should audit Supabase deployments by enumerating REST endpoints with anon tokens and validating RLS enforcement across all exposed tables.",
+          "url": "https://bour.ch/how-rep-helped-me-identify-a-critical-supabase-jwt-exposure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "bour.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a09",
+          "order": 3,
+          "title": "BUILDING CRYPTOGRAPHIC AGILITY INTO SIGSTORE",
+          "summary": "Trail of Bits collaborated with the Sigstore community to implement controlled cryptographic flexibility through predefined algorithm suites, avoiding the in-band signaling vulnerabilities that plagued systems like JWT while enabling organizations to select signing algorithms beyond the original hard-coded ECDSA P-256. The implementation includes a centralized algorithm registry in Protobuf specifications, configurable algorithm restrictions via --client-signing-algorithms flags in Rekor and Fulcio, and a new --signing-algorithm option in Cosign for ephemeral key generation. Go implementations of post-quantum algorithms, LMS, and ML-DSA were developed to validate that the architecture can accommodate future cryptographic standards.",
+          "url": "https://blog.trailofbits.com/2026/01/29/building-cryptographic-agility-into-sigstore/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-30:a10",
+          "order": 1,
+          "title": "REIN SECURITY (PRODUCT LAUNCH)",
+          "summary": "Rein Security provides in-app runtime protection that baselines normal application behavior and blocks anomalous actions in real time, closing the production visibility gap for modern and AI-driven applications.",
+          "url": "https://reinsec.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reinsec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a11",
+          "order": 2,
+          "title": "CYBERSECURITY-PROJECTS",
+          "summary": "60 cybersecurity projects, certification roadmaps, and everything you need to build your cybersecurity portfolio",
+          "url": "https://github.com/CarterPerez-dev/Cybersecurity-Projects?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a12",
+          "order": 3,
+          "title": "FRIDAC2MCP",
+          "summary": "FridaC2MCP is an MCP server that exposes Frida's dynamic instrumentation capabilities as a remote server.",
+          "url": "https://github.com/s4dp4nd4/frida-c2-mcp?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-30:a13",
+          "order": 1,
+          "title": "US SENTENCES CHINESE NATIONAL FOR ROLE IN $36.9 MILLION CRYPTO SCAM",
+          "summary": "Jingliang Su, a Chinese national, was sentenced to 46 months in prison for his role in a Cambodia-based cryptocurrency investment scam that defrauded 174 Americans of $36.9 million through fake trading platforms and romance-based social engineering. The operation laundered stolen funds through US shell companies and offshore accounts before converting them to Tether cryptocurrency via Deltec Bank in the Bahamas. Su is one of nine defendants who pleaded guilty, and he was ordered to pay $26.8 million in restitution.",
+          "url": "https://hackread.com/us-sentences-chinese-man-crypto-scam/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a14",
+          "order": 2,
+          "title": "WHY THE MITRE ATT&CK FRAMEWORK ACTUALLY WORKS",
+          "summary": "The MITRE ATT&CK framework can help SOC teams understand behaviors as opposed to isolated data points from alerts. SOC teams can also utilize SIEM tools that map detection rules to ATT&CK tactics to understand their detection coverage. This enables SOC teams to shift from chasing alerts to observing narratives.",
+          "url": "https://levelup.gitconnected.com/why-the-mitre-att-ck-framework-actually-works-29ac26d2d20c?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "levelup.gitconnected.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a15",
+          "order": 3,
+          "title": "FINTECH FIRM MARQUIS BLAMES HACK AT FIREWALL PROVIDER SONICWALL FOR ITS DATA BREACH",
+          "summary": "Fintech data broker Marquis has pinned a major 2025 ransomware breach on firewall supplier SonicWall, claiming a SonicWall cloud backup hack exposed its firewall configurations and credentials. Hackers allegedly used this data to bypass defenses and steal sensitive US banking customer information, including Social Security numbers. Marquis is weighing legal and financial recoupment options, while SonicWall publicly disputes any proven link to broader ransomware campaigns.",
+          "url": "https://techcrunch.com/2026/01/29/fintech-firm-marquis-blames-hack-at-firewall-provider-sonicwall-for-its-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-30:a16",
+          "order": 1,
+          "title": "THE $5 MILLION BOTS BILL",
+          "summary": "Bots now dominate internet traffic, silently inflating infrastructure costs (>$5 million to unwanted origin hits, in a client's case). Hydrolix classifies humans vs bots in real time and stops abuse",
+          "url": "https://hydrolix.io/solutions/bot-insights/?utm_source=Newsletter&utm_medium=Email&utm_campaign=TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "hydrolix.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a16",
+          "order": 2,
+          "title": "instantly. See how it works.",
+          "summary": "",
+          "url": "https://hydrolix.io/solutions/bot-insights/?utm_source=Newsletter&utm_medium=Email&utm_campaign=TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "hydrolix.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a17",
+          "order": 3,
+          "title": "NOTORIOUS RUSSIA-BASED RAMP CYBERCRIME FORUM APPARENTLY SEIZED BY FBI",
+          "summary": "The FBI has seized RAMP, a notorious Russian cybercrime forum used by ransomware groups and initial access brokers.",
+          "url": "https://therecord.media/notorious-russia-based-ramp-forum-seized?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a18",
+          "order": 4,
+          "title": "INTRODUCING THE 2025 WIN PARTNER INDEX",
+          "summary": "Wiz's new annual WIN Partner Index is a data-driven benchmark that analyzes adoption patterns across 240+ integrations to identify which cloud security integrations organizations rely on most, which are gaining traction fastest, and where teams see consistent value.",
+          "url": "https://www.wiz.io/blog/introducing-win-partner-index?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-30:a19",
+          "order": 5,
+          "title": "RESEARCHERS FIND 175,000 PUBLICLY EXPOSED OLLAMA AI SERVERS ACROSS 130 COUNTRIES",
+          "summary": "Researchers uncovered 175,000 exposed Ollama AI servers worldwide.",
+          "url": "https://thehackernews.com/2026/01/researchers-find-175000-publicly.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

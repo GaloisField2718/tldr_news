@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-02-28",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-02-28",
+  "source_path": "TLDR Web Dev/article_28-02-2025.md",
+  "source_content_hash": "sha256:0c939158f757ddc196bc80b618100cd62c4efdd9f0942d8068b44dacac4c14ce",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-02-28",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-02-28:a04",
+          "order": 1,
+          "title": "POSTGRES AS A GRAPH DATABASE: (AB)USING PGROUTING",
+          "summary": "The pgRouting Postgres extension can be used to add graph functionality to Postgres databases. While it's usually used for geospatial routing, it can also be used for non-GIS use cases, such as task scheduling using dependencies to find the critical path, reverse proxy routing based on resource allocation, and building recommendation engines like YouTube's.",
+          "url": "https://supabase.com/blog/pgrouting-postgres-graph-database?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "supabase.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a05",
+          "order": 2,
+          "title": "HOW PREPLY IMPROVED INP ON A NEXT.JS APPLICATION WITHOUT REACT SERVER COMPONENTS AND APP ROUTER",
+          "summary": "Preply improved its INP (Interaction to Next Paint) through targeted code improvements, React 18 upgrades, and strategic refactoring. Some of the improvements that helped a lot include virtualizing long lists, debouncing keyboard events, and memoizing heavy components.",
+          "url": "https://medium.com/preply-engineering/how-preply-improved-inp-on-a-next-js-application-without-react-server-components-and-app-router-491713149875?utm_source=tldrwebdev",
+          "reading_time_minutes": 21,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-02-28:a06",
+          "order": 1,
+          "title": "DISTRIBUTED SYSTEMS PROGRAMMING HAS STALLED",
+          "summary": "Programming for distributed systems hasn't seen fundamental improvements in the last decade. Current approaches rely on band-aids over existing paradigms like external-distribution, static-location, and arbitrary-location, each with limitations in performance, control, or semantic clarity. There's a need for a new programming model that is native to distributed systems that has things like semantic locality and can surface potential issues from network delays and faults.",
+          "url": "https://www.shadaj.me/writing/distributed-programming-stalled?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "shadaj.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a07",
+          "order": 2,
+          "title": "THERE ISN'T MUCH POINT TO HTTP/2 PAST THE LOAD BALANCER",
+          "summary": "HTTP/2 support in Ruby HTTP servers like Puma isn't necessary because its primary benefit, multiplexing, is most impactful over the internet with high latency. Within a datacenter, the low latency between the application server and load balancer takes away the advantage of HTTP/2. Furthermore, features like server push, once a motivation for end-to-end HTTP/2, have been abandoned, so HTTP/2 is best handled at the infrastructure entry point (load balancer or reverse proxy) to avoid unnecessary complexity within the application server.",
+          "url": "https://byroot.github.io/ruby/performance/2025/02/24/http2-past-the-load-balancer.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "byroot.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-02-28:a08",
+          "order": 1,
+          "title": "INTRODUCING GPT 4.5",
+          "summary": "OpenAI has released a research preview of GPT-4.5, their new advanced chat model. It's their biggest model yet, with improvements in its ability to recognize patterns, draw connections, and generate insights. It also has more \"EQ\" and a better understanding of human intent. However, it's much more expensive than GPT-4o, at a whopping $75/1M input tokens.",
+          "url": "https://links.tldrnewsletter.com/VBf3JN",
+          "reading_time_minutes": 16,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a09",
+          "order": 2,
+          "title": "YAAK",
+          "summary": "Yaak is a modern, open-source API client designed for devs, with offline functionality, Git integration, and extensibility through NodeJS plugins. It supports API protocols like HTTP, GraphQL, WebSockets, and gRPC, letting users authenticate, send dynamic requests, and import data from other tools.",
+          "url": "https://yaak.app/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "yaak.app",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a10",
+          "order": 3,
+          "title": "SUPERGLUE",
+          "summary": "superglue is an open-source data connector for simpler interactions with complex or legacy APIs. It automatically generates API configurations and handles pagination, authentication, and retries, while transforming data into a user-defined schema. It also validates data compliance, automatically fixes broken transformations, and uses LLMs for data mapping.",
+          "url": "https://github.com/superglue-ai/superglue?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-02-28:a11",
+          "order": 1,
+          "title": "HOW YOUR MAC CAN UPDATE MACOS WHEN YOU DON'T WANT IT TO",
+          "summary": "Macs can still update automatically in the background even with automatic updates disabled. A forced update can be triggered by a background activity scheduled by the DAS-CTS scheduling system, which ignores user preferences. The process can bypass authentication and offers no warning or opportunity to postpone, even conflicting with scheduled backups.",
+          "url": "https://eclecticlight.co/2025/02/27/how-your-mac-can-update-macos-when-you-dont-want-it-to/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "eclecticlight.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a12",
+          "order": 2,
+          "title": "SIDELOADING",
+          "summary": "While the EU's DMA aimed to allow third-party app stores, Apple's implementation includes stringent notarization requirements and fees that basically prevent true sideloading. Hobbyist developers may find some limited opportunities, but users outside the EU cannot access these alternative apps, and sideloading's benefits, such as enabling FOSS and repurposing older devices, remain unrealized on iOS due to Apple's restrictions.",
+          "url": "https://doesioshavesideloadingyet.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": 34,
+          "source_domain": "doesioshavesideloadingyet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-02-28:a13",
+          "order": 1,
+          "title": "SVADER",
+          "summary": "Svader is a library for creating GPU-rendered Svelte components using WebGL and WebGPU fragment shaders.",
+          "url": "https://github.com/sockmaster27/svader?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a14",
+          "order": 2,
+          "title": "PROBLY",
+          "summary": "Probly is an AI-powered spreadsheet application built with Next.js and Python that combines traditional spreadsheet functionality with data analysis, visualization, and smart suggestions through the OpenAI API.",
+          "url": "https://github.com/PragmaticMachineLearning/probly?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a15",
+          "order": 3,
+          "title": "IBM COMPLETES ACQUISITION OF HASHICORP, CREATES COMPREHENSIVE, END-TO-END HYBRID CLOUD PLATFORM",
+          "summary": "IBM completed its $6.4 billion acquisition of HashiCorp to create a hybrid cloud platform.",
+          "url": "https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "newsroom.ibm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-02-28:a16",
+          "order": 4,
+          "title": "CONVENTIONS FOR AI RAILS DEVELOPMENT",
+          "summary": "A list of required and recommended coding practices, tools, and configurations for developing Rails 8 applications.",
+          "url": "https://gist.github.com/peterc/214aab5c6d783563acbc2a9425e5e866?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "gist.github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

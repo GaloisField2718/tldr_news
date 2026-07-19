@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-06-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-06-28",
+  "source_path": "TLDR InfoSec/article_28-06-2024.md",
+  "source_content_hash": "sha256:1b931dd376dbc2f2588d89b0fa0209a55f2ed0efac42f550766b6f0cbce05755",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-06-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a04",
+          "order": 1,
+          "title": "MISCONFIGURATIONS IN GITHUB AND GITLAB",
+          "summary": "'Shift Left Security' doesn't end with code. Misconfigurations in source code management [4] (SCM) platforms like GitHub can be a serious problem. For example:",
+          "url": "https://orca.security/resources/blog/source-code-management-systems/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q1-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a05",
+          "order": 1,
+          "title": "FRESH MOVEIT BUG UNDER ATTACK MERE HOURS AFTER DISCLOSURE",
+          "summary": "A new vulnerability affecting the SFTP module of MOVEit's software has been disclosed. With a CVSS score of 7.4, the vulnerability allows attackers to perform a forced authentication attack or upload an SSH public key to impersonate users without authentication. The vulnerability is under active exploitation.",
+          "url": "https://www.darkreading.com/remote-workforce/fresh-moveit-bug-under-attack-disclosure?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a06",
+          "order": 2,
+          "title": "OLLAMA PATCHES REMOTE EXECUTION VULNERABILITY",
+          "summary": "Ollama recently fixed a vulnerability discovered by Wiz that could result in path traversal. The vulnerability exploits the lack of input validation in the /api/pull endpoint of the Ollama servers by using a specially crafted request to overwrite arbitrary files on the host system. Wiz's researchers note that there are still publicly exposed Ollama servers that are vulnerable to this flaw.",
+          "url": "https://siliconangle.com/2024/06/24/ollama-addresses-remote-execution-flaw-following-wiz-discovery/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "siliconangle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a07",
+          "order": 3,
+          "title": "SOUTH KOREAN TELECOM COMPANY ATTACKS CUSTOMERS WITH MALWARE",
+          "summary": "A South Korean telecom company infected over 600,000 users with malware for using torrent services. The malware caused missing files, created strange folders, and disabled PCs. Police identified and charged individuals connected to the attack. Investigations are still ongoing.",
+          "url": "https://www.tomshardware.com/tech-industry/cyber-security/south-korean-telecom-company-attacks-torrent-users-with-malware-over-600000-people-report-missing-files-strange-folders-and-disabled-pcs?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a08",
+          "order": 1,
+          "title": "TALES FROM THE CLOUD TRENCHES: RAIDING FOR AWS VAULTS, BUCKETS, AND SECRETS",
+          "summary": "This blog post examines behavior from an attacker that Datadog saw in several customer environments. The attacker probed for S3 buckets and AWS Secrets Manager secrets, which is common but also, less commonly, probed for Glacier vaults. In all cases, the attacker did not take follow on actions. The attacker also signed their AWS API requests manually as opposed to using a library such as boto3, which handles signing.",
+          "url": "https://securitylabs.datadoghq.com/articles/tales-from-the-cloud-trenches-raiding-for-vaults-buckets-secrets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a09",
+          "order": 2,
+          "title": "WHY ARE HMAC KEYS CONSIDERED UNAUDITABLE AND UNMANAGEABLE IN GOOGLE CLOUD?",
+          "summary": "This blog post describes how Google Cloud HMAC keys have vulnerabilities related to logging, management, and auditing. Users can create unlimited HMAC keys without proper oversight or control. These issues could lead to security risks and challenges for administrators in Google Cloud.",
+          "url": "https://www.vectra.ai/blog/working-as-intended-the-unauditable-unmanageable-keys-in-google-cloud?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "vectra.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a10",
+          "order": 3,
+          "title": "AUTOMATED LLM BUGFINDERS",
+          "summary": "This blog post was written as a response to Google Project Zero's naptime LLM tool and proposes an alternative approach to building automated bug finders. Different approaches, such as the Catalyst-AI Reasoning Module, aim to enhance LLMs' effectiveness in detecting bugs by utilizing specific prompts and tools.",
+          "url": "https://cybersecpolitics.blogspot.com/2024/06/automated-llm-bugfinders.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "cybersecpolitics.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a11",
+          "order": 1,
+          "title": "FUZZ MAP",
+          "summary": "Fuzz Map is a fuzzer for GUIs that automatically identifies states using code coverage and builds a visual map. The page includes an interactive demo.",
+          "url": "https://www.fuzzmap.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "fuzzmap.io",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a12",
+          "order": 2,
+          "title": "CLOUD COMMOTION",
+          "summary": "Cloud Commotion is a tool that deploys deliberately vulnerable infrastructure using Terraform for alerting capabilities testing.",
+          "url": "https://github.com/SecurityRunners/CloudCommotion?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a13",
+          "order": 3,
+          "title": "WHISPERS",
+          "summary": "Whispers is an information security analysis tool designed for identifying hardcoded secrets in structured text and static code.",
+          "url": "https://github.com/adeptex/whispers?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a14",
+          "order": 1,
+          "title": "CISA, JCDC, GOVERNMENT, AND INDUSTRY PARTNERS CONDUCT AI TABLETOP EXERCISE",
+          "summary": "The Joint Cyber Defense Collaborative organized a 4 hour tabletop exercise with government and AI industry experts. The goal of the exercise was to spearhead the development of an AI Security Incident Collaboration Playbook by JCDC. The exercise simulated an incident involving an AI-enabled system. Participants worked through operational collaboration and information sharing protocols for incident response.",
+          "url": "https://www.cisa.gov/news-events/news/cisa-jcdc-government-and-industry-partners-conduct-ai-tabletop-exercise?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a15",
+          "order": 2,
+          "title": "CHAMELGANG & FRIENDS | CYBERESPIONAGE GROUPS ATTACKING CRITICAL INFRASTRUCTURE WITH RANSOMWARE",
+          "summary": "Cyberespionage groups are using ransomware for financial gain and to disrupt critical infrastructure. ChamelGang, a suspected Chinese APT group, targeted institutions in India and Brazil with ransomware. BestCrypt and BitLocker were also used in ransomware attacks affecting organizations in North America, South America, and Europe.",
+          "url": "https://www.sentinelone.com/labs/chamelgang-attacking-critical-infrastructure-with-ransomware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "sentinelone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a16",
+          "order": 3,
+          "title": "LOCKBIT GROUP WRONGLY CLAIMED THE HACK OF THE FEDERAL RESERVE",
+          "summary": "The LockBit ransomware group falsely claimed to have hacked the US Federal Reserve. The real victim was Evolve Bank & Trust. Evolve Bank & Trust confirmed a security breach that involved leaked personal information and is conducting an investigation. The incident has been contained, and affected customers will be directly contacted.",
+          "url": "https://securityaffairs.com/164988/cyber-crime/lockbit-has-not-hacked-federal-reserve.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-28:a17",
+          "order": 1,
+          "title": "CRITICAL GITLAB BUG LETS ATTACKERS RUN PIPELINES AS ANY USER",
+          "summary": "A critical vulnerability in GitLab allows attackers to run pipelines as any user.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-gitlab-bug-lets-attackers-run-pipelines-as-any-user/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a18",
+          "order": 2,
+          "title": "POLYFILL CLAIMS IT HAS BEEN 'DEFAMED', RETURNS AFTER DOMAIN SHUT DOWN",
+          "summary": "The Polyfill service, which was found to be serving malware, claims it has been defamed and has relaunched on a new domain.",
+          "url": "https://www.bleepingcomputer.com/news/security/polyfill-claims-it-has-been-defamed-returns-after-domain-shut-down/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-28:a19",
+          "order": 3,
+          "title": "MICROSOFT SAYS MORE CUSTOMER EMAILS ACCESSED BY RUSSIAN HACKERS",
+          "summary": "Microsoft disclosed that Russian hackers accessed more customer emails than previously known, including those of senior leadership and government agencies.",
+          "url": "https://links.tldrnewsletter.com/mHBqDU",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

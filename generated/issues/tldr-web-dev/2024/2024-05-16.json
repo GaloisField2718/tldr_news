@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-05-16",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-05-16",
+  "source_path": "TLDR Web Dev/article_16-05-2024.md",
+  "source_content_hash": "sha256:8c6b881aa391dae2dcc2e6220a335338bf9720ad7e6165d54de60b7b71bc9f2f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-05-16",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-16:a04",
+          "order": 1,
+          "title": "BUILD YOUR OWN REACT.JS IN 400 LINES OF CODE",
+          "summary": "This article explains how to build a simplified version of React with 400 lines of code. The simplified React utilizes Fiber architecture and concurrency mode to avoid blocking the main thread during rendering. It is able to execute tasks during browser idle time. It uses a linked list structure to connect work units and triggers updates through a custom useState implementation.",
+          "url": "https://webdeveloper.beehiiv.com/p/build-react-400-lines-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "webdeveloper.beehiiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a05",
+          "order": 2,
+          "title": "HOW FACEBOOK SERVED BILLIONS OF REQUESTS PER SECOND USING MEMCACHED",
+          "summary": "Facebook used Memcached, a key-value store, to efficiently handle billions of requests per second. It achieved this by scaling Memcached at three levels: cluster, region, and worldwide. It used parallel requests and batching, optimized client-server communication, and managed congestion effectively to reduce latency. “Memcache pools” were used to reduce load on their databases.",
+          "url": "https://read.engineerscodex.com/p/how-facebook-scaled-memcached?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a06",
+          "order": 3,
+          "title": "MAKING A POSTGRES QUERY 1,000 TIMES FASTER",
+          "summary": "This developer discovered a significant performance issue in a database query used for indexing posts in their application Mattermost. The query was initially slow due to too much filtering, but was sped up by using PostgreSQL's row constructor comparisons. To help find this speed boost, the developer used the BUFFERS option in EXPLAIN statements for detailed insights and prioritized Index Cond over Filter for efficient queries.",
+          "url": "https://mattermost.com/blog/making-a-postgres-query-1000-times-faster/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "mattermost.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-16:a07",
+          "order": 1,
+          "title": "YOU PROBABLY DON'T NEED MICROSERVICES",
+          "summary": "Microservices are popular and great for scalability and team organization, but can bring problems to smaller organizations. Too many services can be hard to maintain, create excessive interdependencies, and make downsizing difficult in tough economic times.",
+          "url": "https://www.thrownewexception.com/you-probably-dont-need-microservices/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "thrownewexception.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a08",
+          "order": 2,
+          "title": "HOW NOT TO DO CODE REVIEWS",
+          "summary": "Traditional code reviews, which focus on manually finding errors, have become a bottleneck for engineering teams. With advancements in automated testing and static code analyzers, code reviews can now shift their focus from error-finding to knowledge sharing and long-term codebase health.",
+          "url": "https://www.aviator.co/blog/how-not-to-do-code-reviews/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "aviator.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a09",
+          "order": 3,
+          "title": "I CODED SOMETHING DUMB AND I'M PROUD OF IT",
+          "summary": "This developer added a quicksort animation feature to a game to visually sort items while handling potential changes in the list being sorted. Instead of optimizing the quicksort algorithm to resume from its last state, the developer chose a simpler, inefficient solution (on purpose): the sorting illusion is created by repeatedly running the algorithm from the start until a change occurs.",
+          "url": "https://plbrault.com/blog-posts/i-coded-something-dumb-and-im-proud-of-it-en/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "plbrault.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-16:a10",
+          "order": 1,
+          "title": "BETTER SSE",
+          "summary": "Server-sent events is a protocol that allows web servers to push data to clients without the need for alternative mechanisms such as pinging, long-polling, or WebSockets. Better SSE is a dependency-less server-sent events implementation for Node, written in TypeScript.",
+          "url": "https://github.com/MatthewWid/better-sse?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a11",
+          "order": 2,
+          "title": "GLANCE",
+          "summary": "Glance is a self-hosted dashboard that puts all your feeds in one place, such as RSS feeds, subreddit posts, weather, bookmarks, stocks, YouTube videos, GitHub releases, and more.",
+          "url": "https://github.com/glanceapp/glance?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a12",
+          "order": 3,
+          "title": "QUARY",
+          "summary": "Quary is an open-source business intelligence tool for engineers. Engineers can use it to connect to their database, write SQL queries, create charts/dashboards/reports, and more.",
+          "url": "https://github.com/quarylabs/quary?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-16:a13",
+          "order": 1,
+          "title": "HOW I MADE MY GITHUB PROFILE README DYNAMIC",
+          "summary": "You can add a README to your profile repository by naming it the same as your GitHub username. GitHub Actions can be used to integrate dynamic content such as real-time statistics and latest blog posts using tools like `github-readme-stats` and `metrics`.",
+          "url": "https://tduyng.github.io/blog/dynamic-github-profile-readme/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "tduyng.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a14",
+          "order": 2,
+          "title": "THE CARCINIZATION OF WEB FRAMEWORKS",
+          "summary": "JavaScript frameworks have evolved and converged towards a common set of features, such as immutability for developer experience and code stability, single-directional data flow for simplified state management, signals for granular reactivity, and server-side rendering (SSR) for improved SEO and performance.",
+          "url": "https://toddledev.medium.com/the-carcinization-of-web-frameworks-21f37acb268a?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "toddledev.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-05-16:a15",
+          "order": 1,
+          "title": "BEHIND THE SCENES OF THREADS FOR WEB (40 MINUTE AUDIO)",
+          "summary": "The Threads Web team used Meta's shared infrastructure to quickly build Threads for Web in under three months.",
+          "url": "https://engineering.fb.com/2024/05/14/web/threads-for-web-behind-the-scenes/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a16",
+          "order": 2,
+          "title": "BRANDED TYPES FOR TYPESCRIPT",
+          "summary": "Branded types in TypeScript allow developers to create new types by adding a unique tag to an existing type.",
+          "url": "https://www.carlos-menezes.com/post/branded-types?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "carlos-menezes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a17",
+          "order": 3,
+          "title": "ADOBE PHOTOSHOP SOURCE CODE",
+          "summary": "Adobe Photoshop was initially a side project, then was licensed to Adobe and became a huge commercial success.",
+          "url": "https://computerhistory.org/blog/adobe-photoshop-source-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "computerhistory.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-05-16:a18",
+          "order": 4,
+          "title": "THE CSS STEPPED VALUE MATH FUNCTIONS ARE NOW IN BASELINE 2024",
+          "summary": "All major browser engines now support the CSS stepped value math functions: round(), mod(), and rem().",
+          "url": "https://web.dev/blog/css-stepped-value-functions?hl=en&utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "web.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

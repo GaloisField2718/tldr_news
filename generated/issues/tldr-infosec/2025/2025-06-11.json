@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-06-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-06-11",
+  "source_path": "TLDR InfoSec/article_11-06-2025.md",
+  "source_content_hash": "sha256:109fe689fbbb325f2117e5dcb8bbd96e8cd4b8ff56565816d8c76b6075fbece7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-06-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a04",
+          "order": 1,
+          "title": "VIDEO: HOW WE BLOCKED A RANSOMWARE ATTACK",
+          "summary": "Attackers used stolen domain admin credentials to infiltrate a hospital network - aiming to deploy remote access tools, steal sensitive data, and unleash ransomware.",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q2_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a04",
+          "order": 2,
+          "title": "Watch the video (03:13 minutes)",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q2_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a05",
+          "order": 1,
+          "title": "NEARLY 300K CRASH RECORDS STOLEN FROM TEXAS TRANSPORTATION DEPARTMENT",
+          "summary": "The Texas Department of Transportation is notifying the impacted individuals of a data breach of its Crash Reports Information System (CRIS). The breached data includes full names, addresses, driver's license numbers, license plate numbers, and car insurance policy numbers. An attacker obtained the data via a compromised account.",
+          "url": "https://therecord.media/car-crash-records-stolen-texas-transportation-department?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a06",
+          "order": 2,
+          "title": "SENSITIVE INFORMATION STOLEN IN SENSATA RANSOMWARE ATTACK",
+          "summary": "Sensata Technologies confirmed hackers stole sensitive employee data during a March-April ransomware attack. The stolen information includes Social Security numbers, financial details, and health insurance data.",
+          "url": "https://www.securityweek.com/sensitive-information-stolen-in-sensata-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a07",
+          "order": 3,
+          "title": "FOUND IN THE WILD: 2 SECURE BOOT EXPLOITS. MICROSOFT IS PATCHING ONLY 1 OF THEM",
+          "summary": "Researchers discovered two Secure Boot bypass exploits affecting 50+ device makers. Microsoft patched CVE-2025-3052 (DT Research firmware tool vulnerability) but left CVE-2025-47827 (IGEL Linux OS flaw) unpatched. Both allow attackers with physical access to install pre-boot malware, defeating Secure Boot's core security purpose against \"evil maid\" attacks.",
+          "url": "https://arstechnica.com/security/2025/06/unearthed-in-the-wild-2-secure-boot-exploits-microsoft-patches-only-1-of-them/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a08",
+          "order": 1,
+          "title": "GARTNER: HOW SECURITY TEAMS CAN TURN HYPE INTO OPPORTUNITY",
+          "summary": "At Gartner's Security Summit, analysts advised harnessing AI and cybersecurity hype constructively rather than letting it drive hasty decisions. They recommended using protection level agreements and outcome-driven metrics for fact-based security conversations with executives. Security teams must develop AI literacy while protecting organizational AI investments from emerging threats.",
+          "url": "https://links.tldrnewsletter.com/dEzyDh",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a09",
+          "order": 2,
+          "title": "NEW PROCESS INJECTION CLASS: THE CONTEXT-ONLY ATTACK SURFACE",
+          "summary": "Most process injection techniques typically begin by allocating memory, writing to that memory, and then executing it. However, the researchers in this post explored the possibility of process injection while only using the execution step. The researchers first achieved their goal by dropping a malicious DLL and then executing it by abusing that LoadLibraryA automatically appends “.dll” to strings that are passed to it. The researchers then took this one step further and used CreateRemoteThread with SetThreadContext and NTCreateThread to execute code in a remote process without needing to write a DLL to disk.",
+          "url": "https://blog.fndsec.net/2025/05/16/the-context-only-attack-surface/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.fndsec.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a10",
+          "order": 3,
+          "title": "HIGH LEVERAGE SECURITY DECISIONS",
+          "summary": "This post presents a list of security decisions that can be made early in a startup's lifecycle to enhance long-term security while providing the most value early on. The list includes organizational security and IAM-related decisions such as choosing an Identity Provider, adopting security keys, and using a Mobile Device Management (MDM) solution. The list also includes architectural decisions like adopting Infrastructure as Code and using managed infrastructure where possible.",
+          "url": "https://0xda.de/garden/high-leverage-security-decisions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "0xda.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a11",
+          "order": 1,
+          "title": "CONTAINERIZATION",
+          "summary": "The Containerization package allows applications to use Linux containers. Containerization is written in Swift and uses Virtualization.framework on Apple silicon.",
+          "url": "https://github.com/apple/containerization?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a12",
+          "order": 2,
+          "title": "SWIMLANE (PRODUCT LAUNCH)",
+          "summary": "Swimlane's platform leverages agentic AI and automation to resolve security, IT/OT operations, and compliance issues.",
+          "url": "https://swimlane.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "swimlane.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a13",
+          "order": 3,
+          "title": "CLAUDE-C2",
+          "summary": "Claude-C2 provides an MCP server to communicate with a C2 server.",
+          "url": "https://github.com/dmcxblue/Claude-C2?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a14",
+          "order": 1,
+          "title": "M&S ONLINE ORDERING SYSTEM OPERATIONAL 46 DAYS AFTER CYBER SHUTDOWN",
+          "summary": "Marks & Spencer has partially restored online orders following an April cyberattack, with select fashion ranges now available in England, Scotland, and Wales. Services remain limited - no Northern Ireland delivery, Click & Collect, or next-day options.",
+          "url": "https://www.theregister.com/2025/06/10/ms_resumes_online_orders_46/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a15",
+          "order": 2,
+          "title": "RESEARCHERS UNCOVER POSSIBLE IPHONE SPYWARE CAMPAIGN INSIDE US",
+          "summary": "Researchers from iVerify detected behavior indicative of tampering and spyware in iPhones belonging to high-value targets in an EU member state's government, US political campaigns, media organizations, and an AI company. The hackers targeted the individuals via the “Nickname” feature in iOS, which sends a notification whenever someone's iCloud photo or name changes. Apple has fixed the vulnerability being used and claimed that it has uncovered no evidence of exploitation.",
+          "url": "https://links.tldrnewsletter.com/sEy67K",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a16",
+          "order": 3,
+          "title": "BRUTEFORCING THE PHONE NUMBER OF ANY GOOGLE USER",
+          "summary": "",
+          "url": "https://brutecat.com/articles/leaking-google-phones?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "brutecat.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-11:a17",
+          "order": 1,
+          "title": "CONNECTWISE ROTATING CODE SIGNING CERTIFICATES OVER SECURITY CONCERNS",
+          "summary": "ConnectWise is updating digital certificates for key software to address security concerns - users must install these updates by June 13 to avoid potential issues.",
+          "url": "https://www.bleepingcomputer.com/news/security/connectwise-rotating-code-signing-certificates-over-security-concerns/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-11:a18",
+          "order": 2,
+          "title": "MICROSOFT OUTLOOK TO BLOCK MORE RISKY ATTACHMENTS USED IN ATTACKS",
+          "summary": "Starting next month, Microsoft will expand the types of blocked attachments in Outlook Web and the new Outlook for Windows to improve security by preventing potentially harmful files from being sent or received.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-outlook-to-block-more-risky-attachments-used-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

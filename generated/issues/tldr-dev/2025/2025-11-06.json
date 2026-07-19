@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2025-11-06",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-11-06",
+  "source_path": "TLDR Dev/article_06-11-2025.md",
+  "source_content_hash": "sha256:e32564c38379d07745114e78224d5edf65db53ad28ced8541129bc55ac75e58a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-11-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a04",
+          "order": 1,
+          "title": "30,000 BUGS IN 30 DAYS",
+          "summary": "Sentry launched AI Code Review 30 days ago. Since then, it's caught 30k bugs and is working 50% faster [4]. Read the blog post [4] to learn:",
+          "url": "https://blog.sentry.io/ai-code-review-30k-bugs-lighter-50-faster/?utm_source=tldr&utm_medium=paid-community&utm_campaign=aicodereview-fy26q4-aicodereviewlaunch&utm_content=newsletter-30k-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a04",
+          "order": 2,
+          "title": "Read the full breakdown on the Sentry blog",
+          "summary": "",
+          "url": "https://blog.sentry.io/ai-code-review-30k-bugs-lighter-50-faster/?utm_source=tldr&utm_medium=paid-community&utm_campaign=aicodereview-fy26q4-aicodereviewlaunch&utm_content=newsletter-30k-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a05",
+          "order": 1,
+          "title": "NOT SO \"MINI\"-DUMPS: HOW WE FOUND MISSING CRASHES ON STEAMOS",
+          "summary": "Sentry improved its game engine SDKs to capture crash reports from Windows games running on Linux via Wine/Proton, addressing a problem where crash reports were missing from Steam Deck. The issue came from Wine's Thread Environment Block (TEB) implementation, which caused Crashpad to capture excessively large stack regions in minidumps exceeding Sentry's size limit. Sentry's solution involved switching Crashpad to use the stack pointer (SP) instead of the TEB for stack capture, which accurately reflects used memory.",
+          "url": "https://blog.sentry.io/not-so-mini-dumps-how-we-found-missing-crashes-on-steamos/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a06",
+          "order": 2,
+          "title": "SUPERCHARGING THE ML AND AI DEVELOPMENT EXPERIENCE AT NETFLIX WITH METAFLOW",
+          "summary": "Netflix's Spin is a new Metaflow functionality that accelerates ML/AI development by enabling notebook-like iteration within production-ready workflows. Spin treats each `@step` as a checkpoint boundary that automatically persists state, allowing developers to resume execution from any point and iterate quickly without losing continuity.",
+          "url": "https://netflixtechblog.com/supercharging-the-ml-and-ai-development-experience-at-netflix-b2d5b95c63eb?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a07",
+          "order": 3,
+          "title": "HOW TO MANAGE CONTEXT IN AI CODING WORKFLOWS",
+          "summary": "Successful AI coding requires context engineering over prompt engineering, which means building systems that reliably provide AI with the right information automatically. The key is co-locating mandatory context (like `CLAUDE.md`, `README.md`, or system design docs) directly in your repository while centralizing access to distributed info through a single tool.",
+          "url": "https://refactoring.fm/p/managing-context-for-ai-coding?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "refactoring.fm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a08",
+          "order": 1,
+          "title": "WHY STARTUPS CHOOSE REACT (AND WHEN YOU SHOULDN'T)",
+          "summary": "React dominates startup funding, capturing 88.6% of the $2.85 billion raised by software startups in 2025, despite the availability of alternative frameworks like Vue, Angular, and Svelte. While React's massive ecosystem provides significant advantages, with over 1 million active projects compared to competitors' 100K-128K, approximately 85% of projects across all framework ecosystems end up abandoned on GitHub. Interestingly, smaller frameworks like Svelte show better project survival rates (36.1% vs React's 20.7% for quality projects).",
+          "url": "https://evilmartians.com/chronicles/why-startups-choose-react-and-when-you-should-not?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "evilmartians.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a09",
+          "order": 2,
+          "title": "WHY YOUR BEST ENGINEERS ARE INTERVIEWING ELSEWHERE",
+          "summary": "High engineering turnover stems from executives being out of touch with on-the-ground realities due to hierarchical information filtering. This filtering prevents executives from addressing engineer concerns like overruled technical judgments, accumulating technical debt, and meaningless work, leading to disengagement and costly replacements. To combat this, it's best to have regular skip-level conversations between executives and engineers to bypass filtering and act on engineer feedback, which is cheaper than the costs associated with high turnover.",
+          "url": "https://codegood.co/writing/why-your-best-engineers-are-interviewing-elsewhere?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "codegood.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a10",
+          "order": 3,
+          "title": "THE LEARNING LOOP AND LLMS",
+          "summary": "Software development is fundamentally a learning process that cannot be automated away, even with advanced LLMs. While LLMs can be helpful for brainstorming and reducing initial setup friction, they cannot replace the essential learning loop of observing, experimenting, and applying knowledge that developers must go through to build real expertise. True learning requires hands-on experience with failures and discoveries that AI cannot provide.",
+          "url": "https://martinfowler.com/articles/llm-learning-loop.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a11",
+          "order": 1,
+          "title": "SHIP DOMAIN INTEGRATIONS IN HOURS WITH THE NAME.COM API",
+          "summary": "Use the same API that powers Vercel, Replit, and Netlify's domain name services. Built for AI agents and human developers with OpenAPI spec and MCP support—integrate domain search, registration, and",
+          "url": "https://www.name.com/nameapi?utm_source=tldr-webdev&utm_medium=newsletter-s3&utm_campaign=name_reseller",
+          "reading_time_minutes": null,
+          "source_domain": "name.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a11",
+          "order": 2,
+          "title": "management without the engineering overhead. START BUILDING",
+          "summary": "",
+          "url": "https://www.name.com/nameapi?utm_source=tldr-webdev&utm_medium=newsletter-s3&utm_campaign=name_reseller",
+          "reading_time_minutes": null,
+          "source_domain": "name.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a12",
+          "order": 3,
+          "title": "REACT NATIVE GODOT",
+          "summary": "React Native Godot allows embedding the Godot game engine into React Native applications on both Android and iOS, running the engine on a separate thread for optimal performance. It provides full access to the Godot API from TypeScript/JavaScript. The library supports starting, stopping, pausing, and restarting the Godot Engine, even allowing reconfiguration and different Godot app loading upon restarting.",
+          "url": "https://github.com/borndotcom/react-native-godot?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a13",
+          "order": 4,
+          "title": "INTRODUCING UNIWIND - THE FASTEST TAILWIND BINDINGS FOR REACT NATIVE",
+          "summary": "Uniwind introduces fast and stable Tailwind CSS bindings for React Native apps. It provides a unified cross-platform styling solution, improving on existing solutions like Nativewind with a custom CSS parser and easy theming. Uniwind also includes automatic React Native component bindings and supports collaborations.",
+          "url": "https://www.reactnativecrossroads.com/posts/introducing-uniwind-the-fastest-tailwind-bindings-for-react-native?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "reactnativecrossroads.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a14",
+          "order": 5,
+          "title": "DILLO",
+          "summary": "Dillo is a multi-platform graphical web browser with a focus on security and privacy. It's built with the FLTK 1.3 GUI toolkit. The repository contains the original code with some minor patches.",
+          "url": "https://github.com/dillo-browser/dillo?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a15",
+          "order": 1,
+          "title": "OCTOVERSE: A NEW DEVELOPER JOINS GITHUB EVERY SECOND AS AI LEADS TYPESCRIPT TO #1",
+          "summary": "GitHub experienced record growth in 2025, adding over 36 million new developers (more than one per second on average) to reach 180+ million total developers, largely driven by the release of GitHub Copilot Free in late 2024. For the first time in over a decade, TypeScript overtook both Python and JavaScript to become the most-used language on GitHub, showing how AI-assisted development is influencing developers' tool choices toward more reliable, typed languages.",
+          "url": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a16",
+          "order": 2,
+          "title": "LEARNING FROM FAILURE TO TACKLE EXTREMELY HARD PROBLEMS",
+          "summary": "BaNEL (Bayesian Negative Evidence Learning) is a novel algorithm designed to improve machine learning in scenarios where positive rewards are extremely rare and reward evaluation is costly. It works by learning a generative model of failures, allowing it to avoid repeating past mistakes and effectively explore the solution space using only negative reward samples. Experiments on adversarial attacks and language model reasoning show BaNEL's ability to improve success rates compared to existing methods, especially when additional computation is available.",
+          "url": "https://blog.ml.cmu.edu/2025/10/27/learning-from-failure-to-tackle-extremely-hard-problems/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.ml.cmu.edu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-06:a17",
+          "order": 1,
+          "title": "FACEBOOK.COM HAS 140 LAYERS OF CONTEXT PROVIDERS (REDDIT THREAD)",
+          "summary": "",
+          "url": "https://www.reddit.com/r/reactjs/comments/1onblrs/facebookcom_has_140_layers_of_context_providers?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "reddit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a18",
+          "order": 2,
+          "title": "THE AI ICK",
+          "summary": "There is discomfort and devaluation associated with AI-generated content, especially in art and marketing, partly due to the societal implications of AI's encroachment on human creativity.",
+          "url": "https://stackoverflow.blog/2025/11/05/the-ai-ick/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a19",
+          "order": 3,
+          "title": "PLEASE IMPLEMENT THIS SIMPLE SLO",
+          "summary": "A new employee is assigned a seemingly simple SLO implementation task for the \"Foo\" service, which quickly spirals into a complex and frustrating endeavor involving miscalculations, unexpected technical challenges, shifting requirements, and ultimately leads to his termination despite his attempts to meet the ever-changing and often contradictory demands of his manager.",
+          "url": "https://eavan.blog/posts/implement-an-slo.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "eavan.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-06:a20",
+          "order": 4,
+          "title": "ABSURD WORKFLOWS: DURABLE EXECUTION WITH JUST POSTGRES",
+          "summary": "Absurd is a lightweight SQL-only library that uses Postgres for durable execution and workflow management, making it easier to build AI agents with long-running tasks and event-driven architectures.",
+          "url": "https://lucumr.pocoo.org/2025/11/3/absurd-workflows/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "lucumr.pocoo.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

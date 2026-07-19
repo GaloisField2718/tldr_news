@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-03-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-03-25",
+  "source_path": "TLDR InfoSec/article_25-03-2025.md",
+  "source_content_hash": "sha256:19690bca6d51332cf45862395657f72a3afd21389a1c6ca349b637b63508bef5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-03-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a04",
+          "order": 1,
+          "title": "THE DATA IS IN: 95% OF SECURITY FIXES DON'T REDUCE THE RISK",
+          "summary": "OX Security analyzed 101+ million security findings across 178 organizations [4] and the results are eye-opening : ONLY 2-5% OF THESE ALERTS ACTUALLY MATTER! The rest? Just static noise, draining your AppSec and Dev teams while real threats slip by unnoticed.",
+          "url": "https://www.ox.security/ox-2025-application-security-benchmark-report/?utm_campaign=9574189-TLDR&utm_source=TLDR&utm_medium=1st",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a04",
+          "order": 2,
+          "title": "Read the full benchmark report here →",
+          "summary": "",
+          "url": "https://www.ox.security/ox-2025-application-security-benchmark-report/?utm_campaign=9574189-TLDR&utm_source=TLDR&utm_medium=1st",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a05",
+          "order": 1,
+          "title": "AUTHENTICATION BYPASS IN NEXT.JS",
+          "summary": "Next.js has disclosed a Critical (9.1/10) auth bypass vulnerability. Next.js uses an internal header, X-middleware-subrequest, to prevent infinite loops from recursive requests. The vulnerability allowed users to abuse the header, bypassing middleware checks, including authorization.",
+          "url": "https://nextjs.org/blog/cve-2025-29927?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "nextjs.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a06",
+          "order": 2,
+          "title": "CRITICAL INGRESS NGINX CONTROLLER VULNERABILITY ALLOWS RCE WITHOUT AUTHENTICATION",
+          "summary": "Five vulnerabilities in the NGINX Ingress Admission Controller, called IngressNightmare, enable remote code execution without authentication. Attackers can inject harmful configurations to compromise Kubernetes environments via the admission controller.",
+          "url": "https://links.tldrnewsletter.com/ogZa8z",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a07",
+          "order": 3,
+          "title": "OVER 3M APPLICANTS' DATA LEAKED ON NYU'S WEBSITE",
+          "summary": "This past Saturday, a hacker took over NYU's website for at least two hours and exposed the personal data of over 3M applicants in an act of hacktivism. The leaked data included names, test scores, majors, zip codes, financial data, and information on applicants' family members dating back to at least 1989. The hacker claimed to have breached NYU to expose its continued use of affirmative action after the 2023 SCOTUS ruling.",
+          "url": "https://nyunews.com/news/2025/03/22/nyu-website-hacked-data-leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "nyunews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a08",
+          "order": 1,
+          "title": "BYPASSING DETECTIONS WITH COMMAND-LINE OBFUSCATION",
+          "summary": "Defensive tools that use command-line arguments to detect malicious activity are vulnerable to a technique called ArgFuscator. Obfuscation can exploit parsing flaws in executables to evade security detections, highlighting weaknesses in current cybersecurity methods.",
+          "url": "https://www.wietzebeukema.nl/blog/bypassing-detections-with-command-line-obfuscation?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "wietzebeukema.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a09",
+          "order": 2,
+          "title": "UNRAVELING TIME: A DEEP DIVE INTO TTD INSTRUCTION EMULATION BUGS",
+          "summary": "Microsoft's Time Travel Debugging (TTD) framework is a powerful record-and-replay tool that uses CPU instruction emulation to replay program execution. Google's Mandiant team found a bug in the emulation engine and built a fuzzing harness to execute random instruction sequences through TTD and a real CPU, discovering three bugs in the process, which they reported to Microsoft.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ttd-instruction-emulation-bugs?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a10",
+          "order": 3,
+          "title": "TUTORIAL: UNPACKING EXECUTABLES WITH TINYTRACER + PE-SIEVE",
+          "summary": "This tutorial demonstrates how to unpack a modified UPX-packed executable using TinyTracer and PE-sieve tools, which avoids anti-debugging measures common in packed malware. The process involves first tracing the executable to identify its Original Entry Point (OEP), setting a stop offset in TinyTracer to pause execution at the OEP, then using HollowsHunter to dump and reconstruct the unpacked program with its Import Address Table. After dumping, final modifications are needed in PE-bear to fix the entry point and restore proper section characteristics for the executable to run successfully.",
+          "url": "https://hshrzd.wordpress.com/2025/03/22/unpacking-executables-with-tinytracer-pe-sieve/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "hshrzd.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a11",
+          "order": 1,
+          "title": "HOW ARE YOU MONITORING YOUR SECURITY INVESTMENTS?",
+          "summary": "Are your security controls in fighting shape against today's threats? You don't have to guess. Prelude monitors and validates your security controls [11] - evaluating your full estate of devices (with no agents required), surfacing missing and suboptimal controls, ensuring best practices are in place, and alerting you on configuration drift. Start",
+          "url": "https://www.preludesecurity.com/platform?utm_campaign=q1fy26-newsletters&utm_medium=Email&utm_source=Tldr",
+          "reading_time_minutes": null,
+          "source_domain": "preludesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a11",
+          "order": 2,
+          "title": "for free",
+          "summary": "",
+          "url": "https://www.preludesecurity.com/platform?utm_campaign=q1fy26-newsletters&utm_medium=Email&utm_source=Tldr",
+          "reading_time_minutes": null,
+          "source_domain": "preludesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a12",
+          "order": 3,
+          "title": "TWISTR",
+          "summary": "Twistr is a domain name permutation and enumeration library powered by Rust. It aims to directly port the well-known dnstwist tool allowing for fast and flexible interfacing capabilities with the core libraries based on the client's requirements.",
+          "url": "https://github.com/haveibeensquatted/twistrs?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a13",
+          "order": 4,
+          "title": "MICROSOFT UNVEILS MICROSOFT SECURITY COPILOT AGENTS AND NEW PROTECTIONS FOR AI (PRODUCT LAUNCH)",
+          "summary": "Microsoft is expanding Security Copilot with 11 AI agents across its security platform. Six Microsoft-built and five partner-developed agents will help automate cybersecurity tasks like phishing triage, threat intelligence, and vulnerability management, aiming to combat the growing complexity of cyber threats.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2025/03/24/microsoft-unveils-microsoft-security-copilot-agents-and-new-protections-for-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a14",
+          "order": 5,
+          "title": "BOUNTY PROMPT",
+          "summary": "Bounty Prompt is a Burp Suite extension that allows users to save preconfigured AI prompts and automatically attach selected HTTP requests and responses.",
+          "url": "https://github.com/BountySecurity/BountyPrompt?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a15",
+          "order": 1,
+          "title": "ALBABAT RANSOMWARE EXPANDS TARGETS, ABUSES GITHUB",
+          "summary": "Albabat ransomware is evolving to target Windows, Linux, and macOS platforms. Retrieving components from a GitHub repository, it now harvests system information, encrypts files across multiple operating systems, and tracks infections in a PostgreSQL database.",
+          "url": "https://www.securityweek.com/albabat-ransomware-expands-targets-abuses-github/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a16",
+          "order": 2,
+          "title": "DRYRUN SECURITY VS TRADITIONAL SAST VENDORS IN RUBY ON RAILS",
+          "summary": "This post compares DryRun Security's contextual scanner to Snyk Code, GitHub Advanced Security, Semgrep, and SonarQube in finding vulnerabilities in the intentionally vulnerable RailsGoat. The test PR included SQL injection, XSS, SSRF, IDOR, user enumeration, and hardcoded token vulnerabilities. DryRun was the only tool that found all the vulnerabilities, whereas Semgrep found 3/6, GitHub and Snyk found 2/6, and SonarQube found none.",
+          "url": "https://www.dryrun.security/blog/dryrun-security-vs-traditional-sast-vendors-in-ruby-on-rails?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "dryrun.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a17",
+          "order": 3,
+          "title": "AWS WAF NOW SUPPORTS URI FRAGMENT FIELD MATCHING",
+          "summary": "",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2025/03/aws-waf-uri-fragment-field-matching/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-25:a18",
+          "order": 1,
+          "title": "SETTING DIRECTION FOR THE UK'S MIGRATION TO POST-QUANTUM CRYPTOGRAPHY",
+          "summary": "The UK's NCSC aims to adopt post-quantum cryptography (PQC) by 2035, with key milestones including completing discovery and planning by 2028 and high-priority migrations by 2031.",
+          "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a19",
+          "order": 2,
+          "title": "CHINESE APT WEAVER ANT INFILTRATED A TELCO IN ASIA FOR OVER FOUR YEARS",
+          "summary": "China-linked APT Weaver Ant infiltrated an Asian telecom provider's network for over four years, using web shells for persistence and stealthy control of compromised systems.",
+          "url": "https://securityaffairs.com/175800/apt/chinese-apt-weaver-ant-infiltrated-a-telco-for-over-four-years.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-25:a20",
+          "order": 3,
+          "title": "23ANDME FILES FOR BANKRUPTCY, CUSTOMERS ADVISED TO DELETE DNA DATA",
+          "summary": "23andMe filed for bankruptcy and will sell its assets - customers should delete their DNA data for privacy.",
+          "url": "https://www.bleepingcomputer.com/news/security/23andme-files-for-bankruptcy-customers-advised-to-delete-dna-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

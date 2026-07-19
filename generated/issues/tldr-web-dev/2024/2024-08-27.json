@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-08-27",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-08-27",
+  "source_path": "TLDR Web Dev/article_27-08-2024.md",
+  "source_content_hash": "sha256:d0a3a6a289a82b1b4a1e5da246d5b02aafa4414b6a8df869e4293f7dcfb18375",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-08-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a04",
+          "order": 1,
+          "title": "IN 2024",
+          "summary": "It's not unusual to find a ratio of 25:1 between developers and ops people in modern software development environments. Giving developers the tools to succeed is more challenging than ever.",
+          "url": "https://www.datadoghq.com/ebook/enterprise-developer-enablement/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-coreplatform-ww-devopsatenterprisescale-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a05",
+          "order": 1,
+          "title": "HOW APPLE BUILT ICLOUD TO STORE BILLIONS OF DATABASES",
+          "summary": "Apple's iCloud and CloudKit were built using a combination of Cassandra and FoundationDB. Cassandra, which is being actively improved by Apple engineers, handles exabytes of data and millions of queries. FoundationDB powers CloudKit, Apple's cloud backend service. It provides key features like transactional guarantees and solves scalability issues that Cassandra alone could not address. Each iCloud user gets their own database, resulting in billions of databases. This is made possible by the Record Layer's stateless architecture and resource allocation using a “record store” abstraction.",
+          "url": "https://read.engineerscodex.com/p/how-apple-built-icloud-to-store-billions?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "read.engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a06",
+          "order": 2,
+          "title": "HOW META ANIMATES AI-GENERATED IMAGES AT SCALE",
+          "summary": "Meta's animate feature, which allows users to generate short animations from AI-generated images, had big challenges in scalability and efficiency. To overcome these challenges, the team implemented a series of optimizations, including halving floating-point precision, improving temporal-attention expansion, leveraging DPM-Solver to reduce sampling steps, and combining guidance and step distillation. They also deployed a traffic management system for better routing and less latency, as well as a retry system with optimized settings to reduce errors.",
+          "url": "https://engineering.fb.com/2024/08/14/production-engineering/how-meta-animates-ai-generated-images-at-scale/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a07",
+          "order": 3,
+          "title": "FIXING A BUG IN GOOGLE CHROME AS A FIRST-TIME CONTRIBUTOR",
+          "summary": "This developer fixed a bug in the Chromium/Google Chrome web browser, their first contribution to an open-source project of this scale. They detail the process of building Chromium from source, finding the bug in the Devtools network inspector, debugging the code, and finally creating a fix. They also talk through the process of submitting the code, getting it reviewed, and the final impact of their contribution.",
+          "url": "https://cprimozic.net/blog/fixing-a-bug-in-google-chrome/?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "cprimozic.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a08",
+          "order": 1,
+          "title": "UNDERSTANDING THIS SINGLE CONCEPT HELPED ME WRITE MORE REUSABLE CODE: SEPARATING LAYOUT FROM CONTENT (REDDIT THREAD)",
+          "summary": "Separating layout from content in UI component development improves code reusability and maintainability by allowing components to adapt to different layout contexts without needing to override styles.",
+          "url": "https://links.tldrnewsletter.com/kPMNY1",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a09",
+          "order": 2,
+          "title": "PREDICTING THE FUTURE OF DISTRIBUTED SYSTEMS",
+          "summary": "Object storage is becoming more popular for both transactional and analytical workloads. Adopting new programming models presents a greater challenge due to the lack of clear migration paths and the perceived high investment risk. Object storage in the future may become a ubiquitous component of distributed systems as new programming models emerge, shifting code from applications to infrastructure.",
+          "url": "https://blog.colinbreck.com/predicting-the-future-of-distributed-systems/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.colinbreck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a10",
+          "order": 3,
+          "title": "DOKKU: MY FAVORITE PERSONAL SERVERLESS PLATFORM",
+          "summary": "Dokku is an open-source platform-as-a-service that allows users to create a Heroku-like environment on their own servers. It comes with features like automatic SSL certificate management, basic authentication, and flexible scaling. This developer uses Dokku to deploy various applications for their LLM consulting work, especially for non-GPU workloads.",
+          "url": "https://hamel.dev/blog/posts/dokku/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "hamel.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a11",
+          "order": 1,
+          "title": "AUTHENTICATION + AUTHORIZATION THAT'S ACTUALLY BUILT FOR DEVS",
+          "summary": "FusionAuth adds login, registration, SSO, MFA, and a bazillion other features [11] to your app in days – not months. It comes with everything you need out of the box, and it's flexible enough to customize and scale with unlimited MAU and identity provider connections. For added awesomeness, you can run it on any computer,",
+          "url": "https://fusionauth.io/?utm_medium=newsletter&utm_source=tldrwebdev&utm_campaign=aug24_newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fusionauth.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a11",
+          "order": 2,
+          "title": "anywhere. Download now",
+          "summary": "",
+          "url": "https://fusionauth.io/?utm_medium=newsletter&utm_source=tldrwebdev&utm_campaign=aug24_newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fusionauth.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a12",
+          "order": 3,
+          "title": "AV",
+          "summary": "av is a command-line tool that helps you manage your stacked PRs on GitHub. It allows you to create a PR stacked on top of another PR, and it will automatically update the dependent PR when the base PR is updated.",
+          "url": "https://github.com/aviator-co/av?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a13",
+          "order": 4,
+          "title": "PROTOBUF-ES 2.0 RELEASED",
+          "summary": "Protobuf-ES 2.0 is a significant update to the Protobuf runtime library for JavaScript and TypeScript. The release brings major improvements, including full support for Protobuf Editions, new APIs for field presence and default values, and a complete runtime reflection API.",
+          "url": "https://buf.build/blog/protobuf-es-v2?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "buf.build",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a14",
+          "order": 5,
+          "title": "TACH",
+          "summary": "Tach is a Python tool that enforces dependencies using modular architecture.",
+          "url": "https://github.com/gauge-sh/tach?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a15",
+          "order": 1,
+          "title": "WHAT THE INTERNS HAVE WROUGHT, 2024 EDITION",
+          "summary": "Every year, Jane Street presents what its interns worked on that summer. Arya Maheshwari developed Camels, an OCaml dataframe library, while another intern, Arvin Ding, designed a faster binary serialization protocol, resulting in improved tail latencies in production systems. Alex Li enhanced Limshare's time-travel debugger by integrating snapshotting, making it easier to investigate production incidents and understand the history of state changes.",
+          "url": "https://blog.janestreet.com/what-the-interns-have-wrought-2024-edition-index/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.janestreet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a16",
+          "order": 2,
+          "title": "STRIPE DATA VS OPEN‐SOURCE ALTERNATIVES: AN MRR EXAMPLE",
+          "summary": "Stripe makes it difficult to calculate crucial metrics like MRR through its API, forcing companies to use add-ons like Stripe Data Pipeline and Stripe Sigma. This strategy creates a barrier for businesses, especially those with usage-based billing models, making data analysis challenging. As a result, third-party tools and open-source billing solutions have emerged to fill the gap.",
+          "url": "https://github.com/getlago/lago/wiki/Stripe-Data-vs-Open%E2%80%90Source-Alternatives:-a-MRR-example?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a17",
+          "order": 3,
+          "title": "ERASURE CODING FOR DISTRIBUTED SYSTEMS",
+          "summary": "This blog post explores the use of erasure coding in distributed systems through practical examples, explaining its benefits in terms of storage efficiency, fault tolerance, and tail latency reduction while discussing the trade-offs involved, such as increased IOPS and decoding costs.",
+          "url": "https://transactional.blog/blog/2024-erasure-coding?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "transactional.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-08-27:a18",
+          "order": 1,
+          "title": "ENGINEER'S GUIDE TO CONVINCING YOUR PRODUCT MANAGER TO PRIORITIZE TECHNICAL DEBT",
+          "summary": "This is a guide for engineers on how to convince their product managers to prioritize resolving technical debt by aligning it with business strategy and demonstrating its direct impact on developer velocity, time to market, customer experience, and long-term scalability.",
+          "url": "https://newsletter.eng-leadership.com/p/engineers-guide-to-convincing-your?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "newsletter.eng-leadership.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a19",
+          "order": 2,
+          "title": "LINUX PIPES ARE SLOW",
+          "summary": "Linux pipes are significantly slower than expected due to the kernel's inefficient memory management and lack of vectorization when copying data, leading to a 10x slowdown compared to writing directly to memory.",
+          "url": "https://qsantos.fr/2024/08/25/linux-pipes-are-slow/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "qsantos.fr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a20",
+          "order": 3,
+          "title": "AVANTE.NVIM",
+          "summary": "avante.nvim is a Neovim plugin that provides users with AI-driven code suggestions and the ability to apply these recommendations directly to their source files with minimal effort.",
+          "url": "https://github.com/yetone/avante.nvim?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-08-27:a21",
+          "order": 4,
+          "title": "WHY YOU SHOULD USE CURSORS TO ITERATE OVER LARGE DATASETS IN REDIS",
+          "summary": "Managing large datasets in Redis can be tricky - using cursors with the SCAN command makes it much easier.",
+          "url": "https://links.tldrnewsletter.com/uYtDJf",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

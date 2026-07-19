@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-03-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-03-28",
+  "source_path": "TLDR InfoSec/article_28-03-2025.md",
+  "source_content_hash": "sha256:63b9fb688d3490be0195d45e7f9e59841c12db020cb7cb0db60c39387b1f6e58",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-03-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a04",
+          "order": 1,
+          "title": "ELIMINATE SUPPLY CHAIN ATTACKS",
+          "summary": "* Java is one of the most widely-used open source ecosystems in the enterprise. It is also a very common target for supply chain attacks [5] targeting builds or dependencies. * For example, the MavenGate attack in Jan 2024 involved attackers compromising abandoned Maven Central domains to hijack critical java projects like Gradle. * Because public package registries only apply minimal vetting for their hosted artifacts and optimize for publisher convenience, they sacrifice secure and standardized enterprise consumption. * The newly-introduced Chainguard Libraries [4] delivers one standardized source for developers to safely consume language libraries, without compromising supply chain security. * As an added benefit, it removes the toil associated with package curation and minimizes friction by preserving existing developer workflows.",
+          "url": "https://www.chainguard.dev/libraries?utm_source=TLDRinfosec&utm_medium=email&utm_content=email-ad",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a05",
+          "order": 2,
+          "title": "→ Learn more about Libraries on the Chainguard blog",
+          "summary": "",
+          "url": "https://www.chainguard.dev/unchained/announcing-chainguard-libraries-guarded-java-language-dependencies-built-from-source?utm_source=TLDRinfosec&utm_medium=email&utm_content=email-ad",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a06",
+          "order": 1,
+          "title": "GOOGLE FIXES CHROME ZERO-DAY EXPLOITED IN ESPIONAGE CAMPAIGN",
+          "summary": "Google has fixed a high-severity Chrome zero-day vulnerability that allowed malicious users to escape the browser sandbox. Researchers from Kaspersky reported this vulnerability, which they described as an “incorrect handle provided in unspecified circumstances in Mojo on Windows.” Attackers are actively exploiting this vulnerability to infect targets with sophisticated malware used for espionage. A similar zero-day vulnerability was also recently disclosed and patched in Firefox.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-fixes-chrome-zero-day-exploited-in-espionage-campaign/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a07",
+          "order": 2,
+          "title": "NHS VENDOR ADVANCED TO PAY £3M FINE FOLLOWING 2022 RANSOMWARE ATTACK",
+          "summary": "NHS vendor Advanced will pay £3 million in fines for failing to implement basic security measures before a 2022 ransomware attack. The ICO found the company breached data protection law by not using multi-factor authentication, leading to stolen personal information and NHS system disruptions.",
+          "url": "https://techcrunch.com/2025/03/27/nhs-vendor-advanced-to-pay-3m-fine-following-2022-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a08",
+          "order": 3,
+          "title": "150,000 SITES COMPROMISED BY JAVASCRIPT INJECTION PROMOTING CHINESE GAMBLING PLATFORMS",
+          "summary": "A massive cyber campaign compromised around 150,000 websites using malicious JavaScript to redirect visitors to Chinese-language gambling platforms. The attack involved injecting scripts that hijack browser windows to display gambling sites.",
+          "url": "https://links.tldrnewsletter.com/hKVavv",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a09",
+          "order": 1,
+          "title": "LUCID DEEP DIVE",
+          "summary": "Lucid is a sophisticated Phishing-as-a-Service platform operated by Chinese threat actors. This blog dives into what it is, its targets, and the technology behind it. Lucid uses advanced SMS and iMessage technologies to enable large-scale phishing campaigns to steal credit card details. It has targeted more than 160+ organizations.",
+          "url": "https://catalyst.prodaft.com/public/report/lucid/overview?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "catalyst.prodaft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a10",
+          "order": 2,
+          "title": "BLASTING PAST WEBP",
+          "summary": "The NSO Group's BLASTPASS exploit targets iPhones via iMessage through a WebP vulnerability. The attack involves sending a PKPass file with a WebP image that caused a buffer overflow, overwriting a pointer, and executing malicious code via heap manipulation that bypasses iOS protections like ASLR and PAC. Unlike earlier exploits that need complex \"weird machines,\" BLASTPASS uses conventional techniques such as callback-oriented programming and a multi-stage approach, with follow-up iMessages delivering final payload encryption keys.",
+          "url": "https://googleprojectzero.blogspot.com/2025/03/blasting-past-webp.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 38,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a11",
+          "order": 3,
+          "title": "FUN WITH TIMING ATTACKS",
+          "summary": "Timing attacks can exploit non-constant-time string comparison functions like `startsWith` to determine secrets character by character. Attackers can deduce when a guess's prefix matches part of the secret by measuring execution times over many trials, allowing them to crack an 8-character password in just thousands of attempts rather than billions. This can be demonstrated with a browser-based implementation using Thompson Sampling and a statistical approach. Developers should avoid direct secret comparisons and instead use proper cryptographic hashing with rate limiting.",
+          "url": "https://ostro.ws/post-timing-attacks?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "ostro.ws",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a12",
+          "order": 1,
+          "title": "STRAIKER (PRODUCT LAUNCH)",
+          "summary": "Straiker aims to address the risks associated with the increasing use of AI chatbots and AI agents through continuous testing or one-time risk assessments that involve in-depth attack simulations against AI applications and agents. It can also automatically block identified threats",
+          "url": "https://www.straiker.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "straiker.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a13",
+          "order": 2,
+          "title": "NAKAMOTO",
+          "summary": "Nakamoto is a 2-layer encryption tool that protects your data and cryptocurrency private keys.",
+          "url": "https://github.com/devfabiosilva/nakamoto?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a14",
+          "order": 3,
+          "title": "SPYAI",
+          "summary": "SpyAI is malware that captures full-monitor screenshots and exfiltrates them via Trusted Channel Slack to a GPT-4 Vision C2 server for daily frame-by-frame analysis.",
+          "url": "https://github.com/DarkSpaceSecurity/SpyAI?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a15",
+          "order": 1,
+          "title": "MICROSOFT WOULDN'T LOOK AT A BUG REPORT WITHOUT A VIDEO",
+          "summary": "Security researcher Will Dorman attempted to report a vulnerability to the Microsoft Security Response Center by providing a report with a clear description of the bug and supporting screenshots. However, Microsoft responded that it could not review the report until a video was submitted. This was unnecessary and time-wasting, as it would provide no additional details and would just show the commands that have already been screenshotted.",
+          "url": "https://www.theregister.com/2025/03/17/microsoft_bug_report_troll/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a16",
+          "order": 2,
+          "title": "UK'S FIRST PERMANENT FACIAL RECOGNITION CAMERAS TO BE INSTALLED IN SOUTH LONDON DESPITE BACKLASH",
+          "summary": "The Metropolitan Police will install permanent live facial recognition cameras in Croydon, London, to catch criminals by matching faces against a wanted list. Privacy campaigners strongly oppose the move, calling it a potential \"dystopian nightmare\" with no proper oversight.",
+          "url": "https://www.standard.co.uk/news/crime/facial-recognition-cameras-installed-london-croydon-b1218431.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "standard.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a17",
+          "order": 3,
+          "title": "COFFEELOADER PRETENDS TO BE ASUS SOFTWARE TO STEAL YOUR DATA",
+          "summary": "Zscaler researchers have discovered a new malware family, CoffeeLoader, active since September 2024. It masquerades as the ASUS Armoury Crate utility and delivers an infostealer like Rhadamanthys using sophisticated evasion techniques such as GPU code execution, stack spoofing, and sleep obfuscation.",
+          "url": "https://links.tldrnewsletter.com/4Sr9EK",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-03-28:a18",
+          "order": 1,
+          "title": "FAKE SNOW WHITE MOVIE TORRENT INFECTS DEVICES WITH MALWARE",
+          "summary": "Scammers are spreading malware by offering fake Snow White movie downloads to torrent users.",
+          "url": "https://hackread.com/fake-snow-white-movie-torrent-infects-device-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a19",
+          "order": 2,
+          "title": "NEW SECURITY REQUIREMENTS ADOPTED BY HTTPS CERTIFICATE INDUSTRY",
+          "summary": "Google's Chrome Root Program has introduced new security initiatives, including Multi-Perspective Issuance Corroboration and Linting, to enhance the reliability and agility of TLS connections used by Chrome users.",
+          "url": "http://security.googleblog.com/2025/03/new-security-requirements-adopted-by.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-03-28:a20",
+          "order": 3,
+          "title": "T-MOBILE COUGHED UP $33 MILLION IN SIM SWAP LAWSUIT",
+          "summary": "T-Mobile must pay $33 million for a SIM swap attack that let hackers steal cryptocurrency and access accounts.",
+          "url": "https://www.securityweek.com/t-mobile-coughed-up-33-million-in-sim-swap-lawsuit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

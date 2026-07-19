@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-07",
+  "source_path": "TLDR InfoSec/article_07-10-2025.md",
+  "source_content_hash": "sha256:74e20841888edcb0ef61800c7ea3a045cc1a44a154c1af6ecdcb446b08a598ce",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a04",
+          "order": 1,
+          "title": "A REFRESHINGLY SIMPLE APPROACH TO APPLICATION ALLOWLISTING",
+          "summary": "Hackers love when companies abandon Application Allowlisting. It's “too complicated,” “too hard to implement,” “our apps will break.”",
+          "url": "https://www.threatlocker.com/pages/application-control-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q4_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a04",
+          "order": 2,
+          "title": "_Choose Zero-Trust with ThreatLocker_",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/application-control-allowlisting?utm_source=tldr&utm_medium=sponsor&utm_campaign=allowlisting_q4_25&utm_content=allowlisting&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a05",
+          "order": 1,
+          "title": "ORACLE SECURITY ALERT ADVISORY - CVE-2025-61882",
+          "summary": "Oracle issued an emergency security alert for CVE-2025-61882, a critical remote code execution vulnerability in Oracle E-Business Suite that can be exploited over the network without authentication credentials. The vulnerability is already being actively exploited by threat actors. Oracle has discovered specific indicators of compromise, including IP addresses, command-line payloads, and file hashes associated with exploitation attempts. The IOCs reference exploit tools with naming conventions suggesting involvement by groups such as Scattered Spider, Lapsus$, and CL0P, indicating that this vulnerability is being weaponized by ransomware and extortion groups for immediate attacks.",
+          "url": "https://www.oracle.com/security-alerts/alert-cve-2025-61882.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "oracle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a06",
+          "order": 2,
+          "title": "UNITY HAS FOUND A SECURITY VULNERABILITY THAT HAS SAT DORMANT FOR ALMOST A DECADE: ‘TAKE IMMEDIATE ACTION TO PROTECT YOUR GAMES & APPS'",
+          "summary": "Unity warns developers about a vulnerability identified since version 2017.1 that exposes users to unsafe file loading and local file inclusion attacks, varying by OS. Developers need to either recompile and redistribute their apps to fix this issue or use a patching tool that applies updates without recompilation. However, this tool does not support Linux builds or applications with tamper-proofing or anti-cheat features enabled.",
+          "url": "https://www.pcgamer.com/hardware/unity-has-found-a-security-vulnerability-that-has-sat-dormant-for-almost-a-decade-take-immediate-action-to-protect-your-games-and-apps/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "pcgamer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a07",
+          "order": 3,
+          "title": "RANSOMWARE ATTACK ON OHIO COUNTY IMPACTS OVER 45K RESIDENTS, EMPLOYEES",
+          "summary": "Ransomware attackers stole data in a cyberattack on Union County in Ohio, impacting 45k of the county's 71k residents. The stolen data includes Social Security numbers, driver's license numbers, financial account information, fingerprint data, medical information, and passport numbers.",
+          "url": "https://therecord.media/ohio-ransomware-attack-impacts-45000?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a08",
+          "order": 1,
+          "title": "PHOENIX: ROWHAMMER THAT WORKS ON DDR5",
+          "summary": "Phoenix is a Rowhammer attack that bypasses DDR5 protections by reverse-engineering Target Row Refresh (TRR) and exploiting timing windows where defenses weaken. The attack uses dummy memory accesses to trick TRR before executing targeted strikes that can read/write arbitrary memory, steal RSA keys, or escalate Linux privileges within 5 seconds to 7 minutes. It demonstrates that DDR5's protections can still be evaded by sophisticated timing attacks that manipulate memory through carefully crafted access patterns.",
+          "url": "https://www.kaspersky.com/blog/phoenix-rowhammer-attack/54528/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "kaspersky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a09",
+          "order": 2,
+          "title": "MCP TOOLS: ATTACK VECTORS AND DEFENSE RECOMMENDATIONS FOR AUTONOMOUS AGENTS",
+          "summary": "Elastic Security Labs provides a comprehensive overview of different attacks and defenses for MCP tools. Elastic provides a prompt for an LLM to detect malicious functions in an MCP server, covering security risks ranging from traditional vulnerabilities to tool poisoning, orchestration injection, rug-pull redefinitions, name collisions, and passive influence. Elastic recommends that users utilize sandboxed environments for MCP, adhere to the principle of least privilege, restrict MCP servers to only trusted sources, require human approval for sensitive operations, and monitor all prompts and code.",
+          "url": "https://www.elastic.co/security-labs/mcp-tools-attack-defense-recommendations?utm_source=tldrinfosec",
+          "reading_time_minutes": 26,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a10",
+          "order": 3,
+          "title": "IMDS ABUSED: HUNTING RARE BEHAVIORS TO UNCOVER EXPLOITS",
+          "summary": "Wiz Research developed a data-driven threat hunting methodology to detect anomalous Instance Metadata Service (IMDS) usage by identifying processes that rarely access IMDS but suddenly query sensitive endpoints, such as IAM credentials, leading to the discovery of active exploitation of two zero-day SSRF vulnerabilities. The team uncovered CVE-2025-51591 in Pandoc (HTML-to-PDF conversion via malicious iframe tags) and a ClickHouse SSRF vulnerability where attackers abused SQL \"SELECT * FROM url\" functions to access cloud metadata services across AWS and GCP environments. This approach demonstrates how behavioral anomaly detection can reveal novel attack vectors targeting cloud infrastructure, emphasizing the importance of enforcing IMDSv2 and implementing least-privilege access controls to mitigate credential theft and lateral movement risks.",
+          "url": "https://www.wiz.io/blog/imds-anomaly-hunting-zero-day?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a11",
+          "order": 1,
+          "title": "THE FUTURE OF AI IN SOC: A WHITEPAPER BY STEVE ZALEWSKI, FORMER CISO @ LEVI STRAUSS",
+          "summary": "Your human analysts will never outpace AI-powered attacks - you're going to have to fight fire with fire. This white paper [11] explain the stages of AI maturity, how they relate to the SOC, and how to approach the human-in-the-loop question. Get the whitepaper from",
+          "url": "https://content.dropzone.ai/hubfs/Dropzone_Whitepaper_Proactive_to_Reactive_V3.pdf?utm_campaign=24720149-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Secondary+10-07-25&utm_source=sponssorship&utm_medium=newsletter&utm_content=From+Reactive+to+Proactive+white+paper",
+          "reading_time_minutes": null,
+          "source_domain": "content.dropzone.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a11",
+          "order": 2,
+          "title": "Dropzone AI",
+          "summary": "",
+          "url": "https://content.dropzone.ai/hubfs/Dropzone_Whitepaper_Proactive_to_Reactive_V3.pdf?utm_campaign=24720149-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Secondary+10-07-25&utm_source=sponssorship&utm_medium=newsletter&utm_content=From+Reactive+to+Proactive+white+paper",
+          "reading_time_minutes": null,
+          "source_domain": "content.dropzone.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a12",
+          "order": 3,
+          "title": "CADDY",
+          "summary": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS.",
+          "url": "https://github.com/caddyserver/caddy?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a13",
+          "order": 4,
+          "title": "IAMHOUNDDOG",
+          "summary": "IAMhounddog is a tool that helps pentesters quickly identify privileged principals and second-order privilege escalation opportunities in unfamiliar AWS environments.",
+          "url": "https://github.com/VirtueSecurity/IAMhounddog?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a14",
+          "order": 5,
+          "title": "TOKENEX",
+          "summary": "Tokenex is a library that provides a unified interface for obtaining and refreshing credentials from various cloud providers and authentication systems. Tokenex supports AWS, GCP, Azure, OCI, Generic, K8sSecret, OAuth2AC, and OAuth2CC.",
+          "url": "https://github.com/riptideslabs/tokenex?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a15",
+          "order": 1,
+          "title": "TOTOLINK X6000R: THREE NEW VULNERABILITIES UNCOVERED",
+          "summary": "There are three critical vulnerabilities in TOTOLINK X6000R routers (CVE-2025-52905, CVE-2025-52906, and CVE-2025-52907) that allow unauthenticated attackers to execute arbitrary commands and bypass security controls via the router's web interface. The vulnerabilities stem from inadequate input sanitization in the cstecgi.cgi endpoint, with the blocklist failing to filter hyphen characters, and enabling argument injection, command injection, and arbitrary file manipulation attacks. TOTOLINK has released patched firmware (V9.4.0cu.1498_B20250826). Users are strongly advised to update immediately as these flaws could allow attackers to gain root access, intercept traffic, and pivot to other network devices.",
+          "url": "https://unit42.paloaltonetworks.com/totolink-x6000r-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a16",
+          "order": 2,
+          "title": "SIGNAL STATEMENT ON GERMANY",
+          "summary": "The latest German Chat Control proposals would require scanning of every message, photo, and video on a person's device. Signal has announced that it will discontinue services in Germany, and possibly across Europe, if these controls are passed, arguing that regardless of whether messages are scanned before or after encryption, the controls negate the premises of end-to-end encryption.",
+          "url": "https://signal.org/blog/pdfs/germany-chat-control.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "signal.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a17",
+          "order": 3,
+          "title": "SCATTERED LAPSUS$ HUNTERS OFFERING $10 IN BITCOIN TO 'ENDLESSLY HARASS' EXECS",
+          "summary": "The cybercrime group Scattered Lapsus$ Hunters is paying individuals $10 in Bitcoin to pressure executives of alleged breach victims via email, aiming to coerce them into making ransom payouts. The group, linked to attacks via a Salesforce integration, published targets' details and set a payment deadline. Salesforce and Google have stated that the attacks aren't linked to a compromise of Salesforce itself, and law enforcement is investigating the gang.",
+          "url": "https://www.theregister.com/2025/10/06/scattered_lapsus_bitcoin_reward/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-07:a18",
+          "order": 1,
+          "title": "STEP INTO THE FUTURE OF PRIVILEGED ACCESS AND AUTHORIZATION AT STRONGDM LIVE! NYC",
+          "summary": "Join Stephen Washington Jr., Rinki Sethi, StrongDM, and PAM PIONEER PHILIP LIEBERMAN on OCTOBER 23 in Midtown Manhattan to explore how runtime authorization and the IDENTITY FIREWALL are transforming access security—delivering productivity and control beyond legacy",
+          "url": "https://www.strongdm.com/events/roadshow/nyc/invitation?trk=strongdm-newsletter-social-event&utm_source=strongdm&utm_medium=newsletter&utm_campaign=2026-q3-sdm-roadshow-nyc&utm_content=event",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a18",
+          "order": 2,
+          "title": "PAM. Register",
+          "summary": "",
+          "url": "https://www.strongdm.com/events/roadshow/nyc/invitation?trk=strongdm-newsletter-social-event&utm_source=strongdm&utm_medium=newsletter&utm_campaign=2026-q3-sdm-roadshow-nyc&utm_content=event",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a19",
+          "order": 3,
+          "title": "RACHEL TOBAC: WARN YOUR FAMILY ABOUT SORA2",
+          "summary": "Security professionals should educate their families about Sora 2 and the importance of online skepticism.",
+          "url": "https://threadreaderapp.com/thread/1973096031899291659.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a20",
+          "order": 4,
+          "title": "ZERODAY.CLOUD",
+          "summary": "Wiz has announced a new hacking competition with a total reward pool of $4.5 million where participants can earn up to $300,000 per exploit for demonstrating vulnerabilities against widely used cloud software.",
+          "url": "https://www.zeroday.cloud/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "zeroday.cloud",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-07:a21",
+          "order": 5,
+          "title": "RED HAT DATA BREACH ESCALATES AS SHINYHUNTERS JOINS EXTORTION",
+          "summary": "Red Hat's data breach worsened as Crimson Collective and ShinyHunters launched a leak site, threatening to release 570GB of stolen data, including reports from Walmart, HSBC, and the Department of Defense, unless the ransom is paid by October 10.",
+          "url": "https://www.bleepingcomputer.com/news/security/red-hat-data-breach-escalates-as-shinyhunters-joins-extortion/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

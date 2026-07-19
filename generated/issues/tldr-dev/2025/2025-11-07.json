@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2025-11-07",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-11-07",
+  "source_path": "TLDR Dev/article_07-11-2025.md",
+  "source_content_hash": "sha256:56bdcdcfca318ff34fff13d2a74968e9404744966cb33998640441922c0c200d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-11-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a04",
+          "order": 1,
+          "title": "",
+          "summary": "AI doesn't want to follow your rules by default. But there is a solution...",
+          "url": "https://www.tabnine.com/webinar/beyond-autocomplete-how-agentic-ai-is-rewriting-enterprise-software/?utm_campaign=219047143-Agentic+Launch&utm_source=tldr&utm_medium=quicklinks",
+          "reading_time_minutes": null,
+          "source_domain": "tabnine.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a04",
+          "order": 2,
+          "title": "Join live on November 13",
+          "summary": "",
+          "url": "https://www.tabnine.com/webinar/beyond-autocomplete-how-agentic-ai-is-rewriting-enterprise-software/?utm_campaign=219047143-Agentic+Launch&utm_source=tldr&utm_medium=quicklinks",
+          "reading_time_minutes": null,
+          "source_domain": "tabnine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a05",
+          "order": 1,
+          "title": "BUILD BETTER SOFTWARE TO BUILD SOFTWARE BETTER",
+          "summary": "Slack's engineering team reduced its build pipeline time from 60 minutes by applying classic software engineering principles to its build system using Bazel. They treated build performance optimization like code performance optimization by implementing caching (storing results of expensive build work), parallelization (spreading work across multiple compute resources), and better granularity (breaking work into smaller, more efficient units).",
+          "url": "https://slack.engineering/build-better-software-to-build-software-better?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "slack.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a06",
+          "order": 2,
+          "title": "WHEN YOUR HASH BECOMES A STRING: HUNTING RUBY'S MILLION-TO-ONE MEMORY BUG",
+          "summary": "This article goes over an investigation of an extremely rare Ruby bug where an internal FFI (Foreign Function Interface) Hash was mysteriously replaced by a String object at runtime, causing 2,700 identical \"undefined method 'default' for String\" errors. The root cause was discovered to be missing write barriers in FFI versions before 1.17.0, which prevented Ruby's garbage collector from knowing about object references in C code, allowing it to incorrectly free the Hash and replace it with a String at the same memory address.",
+          "url": "https://mensfeld.pl/2025/11/ruby-ffi-gc-bug-hash-becomes-string?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mensfeld.pl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a07",
+          "order": 3,
+          "title": "HOW OFTEN DOES PYTHON ALLOCATE?",
+          "summary": "This dev modified CPython to track allocations and discovered that Python frequently allocates `PyLongObject` objects, especially when printing integers. However, optimizations like freelists and pool allocators help reduce the real-world impact by reusing allocated memory. While Python allocates often, the cost is mitigated by these strategies, though tagged pointers, a technique used by other languages to avoid allocation, could further improve performance.",
+          "url": "https://zackoverflow.dev/writing/how-often-does-python-allocate/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "zackoverflow.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a08",
+          "order": 1,
+          "title": "GAME DESIGN IS SIMPLE, ACTUALLY",
+          "summary": "Game design, while complex in detail, can be understood through a twelve-step framework. At its core, game design revolves around presenting players with engaging problems to solve, offering clear feedback, and escalating challenges to encourage learning and mastery. Games consist of interconnected loops, combining simple problems into larger systems.",
+          "url": "https://www.raphkoster.com/2025/11/03/game-design-is-simple-actually/?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "raphkoster.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a09",
+          "order": 2,
+          "title": "YOU SHOULD WRITE AN AGENT",
+          "summary": "Devs should experiment with LLM agents as they are actually quite simple to implement. This article goes over how to create basic agents with personalities and tool integration, showing how easy it is to set up a loop where an LLM interacts with the environment. Understanding context engineering, token limits, and agent design decisions is necessary for building effective and secure agents.",
+          "url": "https://fly.io/blog/everyone-write-an-agent/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "fly.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a10",
+          "order": 1,
+          "title": "DON'T MISS OUT — REGISTER NOW FOR IBM Z DAY 2025!",
+          "summary": "Register now to join thousands of developers, architects, and clients at IBM Z Day 2025 — the flagship global virtual tech event, at no cost!",
+          "url": "https://d2swt604.na1.hs-sales-engage.com/Ctc/GH+23284/d2SwT604/Jks2-6qcW69sMD-6lZ3lfN6kdcpqgzjPYW63Pccq50XMh1W8n97L64TGm5NW48wKS-3wp_0qW7lDkxV83YZYpW5Mc3FX7JS_9PW8JmbKf1S8b9yW2zqJH32JKSDMW3QC9Wk8tj4QjW3k_Ghc1T3m9jV_BZwf4yMBBzW6q6Qyf5vJC3fW2KtX2p1-3_NkW47ymZ38Fy14DW5CvNG-1JHXhnW2XY2yc2qCN_JW1BygwM6KsQPTW1P7DH81HrDvsW4SlnFD1cWTJBW3tFt3X6C2wLVd2hYZT04?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "d2swt604.na1.hs-sales-engage.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a11",
+          "order": 2,
+          "title": "👉 EXPLORE THE AGENDA HERE",
+          "summary": "",
+          "url": "https://d2swt604.na1.hs-sales-engage.com/Ctc/GH+23284/d2SwT604/Jks2-6qcW69sMD-6lZ3lfN6kdcpqgzjPYW63Pccq50XMh1W8n97L64TGm5NW48wKS-3wp_0qW7lDkxV83YZYpW5Mc3FX7JS_9PW8JmbKf1S8b9yW2zqJH32JKSDMW3QC9Wk8tj4QjW3k_Ghc1T3m9jV_BZwf4yMBBzW6q6Qyf5vJC3fW2KtX2p1-3_NkW47ymZ38Fy14DW5CvNG-1JHXhnW2XY2yc2qCN_JW1BygwM6KsQPTW1P7DH81HrDvsW4SlnFD1cWTJBW3tFt3X6C2wLVd2hYZT04",
+          "reading_time_minutes": null,
+          "source_domain": "d2swt604.na1.hs-sales-engage.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a12",
+          "order": 3,
+          "title": "SPOILERJS",
+          "summary": "spoilerjs is a lightweight, dependency-free web component for creating spoiler text with a Telegram-inspired particle effect. It allows users to hide text behind a spoiler warning, revealing it with a configurable particle animation upon clicking.",
+          "url": "https://github.com/shajidhasan/spoilerjs?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a13",
+          "order": 4,
+          "title": "QQQA",
+          "summary": "qqqa is a stateless CLI tool providing LLM assistance in the command line through two binaries: `qq` for quick questions and `qa` for single-step agent tasks. It supports OpenAI and Groq APIs. The tool has simple formatting, configurable profiles, and safety rails for file access and command execution.",
+          "url": "https://github.com/iagooar/qqqa?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a14",
+          "order": 5,
+          "title": "DEXTO",
+          "summary": "Dexto is a toolkit for building AI agents that turn natural language into real-world actions by orchestrating LLMs, tools, and data into persistent systems. It has a configuration-driven framework with session management, tool orchestration, and multimodal interactions. The toolkit supports over 50 LLMs, various storage options, and provides built-in observability.",
+          "url": "https://github.com/truffle-ai/dexto?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a15",
+          "order": 1,
+          "title": "THE PULSE: AMAZON LAYOFFS – AI OR ECONOMY TO BLAME?",
+          "summary": "Amazon announced another round of mass layoffs affecting 14,000 employees, with software engineers being disproportionately impacted, following previous cuts of over 27,000 jobs since 2023. While Amazon claims the layoffs are to become \"more lean\" and invest in AI transformation, analysis shows that the company has strong financials with $93B in cash reserves and $32B in free cash flow, making the $2-4B in salary savings from layoffs relatively small.",
+          "url": "https://open.substack.com/pub/pragmaticengineer/p/the-pulse-amazon-layoffs-ai-or-economy?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a16",
+          "order": 2,
+          "title": "1,500+ PRS LATER: SPOTIFY'S JOURNEY WITH OUR BACKGROUND CODING AGENT (PART 1)",
+          "summary": "Spotify has successfully integrated AI coding agents into its Fleet Management system, which has generated over 1,500 merged pull requests for automated code maintenance tasks like dependency updates, language modernization, and complex migrations. The AI-powered approach has reduced manual coding time by 60-90% compared to traditional methods and allows engineers to define fleet-wide changes using natural language prompts rather than complex programmatic transformations.",
+          "url": "https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "engineering.atspotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-11-07:a17",
+          "order": 1,
+          "title": "MANY POSTS HERE ARE TEACHING BEGINNERS WRONG LESSONS ON SMALL DATA",
+          "summary": "Some Kaggle competitions often teach beginners to overengineer solutions, leading to overfitting and worse leaderboard scores than simpler models due to the small dataset size.",
+          "url": "https://www.kaggle.com/competitions/titanic/discussion/614836?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "kaggle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a18",
+          "order": 2,
+          "title": "OPENPCC",
+          "summary": "OpenPCC is an open-source framework for provably private AI inference that lets users run AI models without exposing sensitive data by using encrypted streaming, hardware attestation, and unlinkable requests.",
+          "url": "https://github.com/openpcc/openpcc?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a19",
+          "order": 3,
+          "title": "SANDDANCE",
+          "summary": "SandDance is an open-source data visualization tool that uses unit visualizations and animated transitions to help users explore, understand, and present data.",
+          "url": "https://github.com/microsoft/SandDance?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-11-07:a20",
+          "order": 4,
+          "title": "HOMARR",
+          "summary": "Homarr is a customizable, open-source dashboard application with numerous integrations, user management, and other features for self-hosted applications.",
+          "url": "https://github.com/homarr-labs/homarr?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

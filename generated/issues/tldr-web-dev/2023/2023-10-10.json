@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2023-10-10",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-10-10",
+  "source_path": "TLDR Web Dev/article_10-10-2023.md",
+  "source_content_hash": "sha256:a87730b1c7ba591a1d89c771c6affc03ffe7a7dfd9f9ca9e33bd14866f1a8d70",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-10-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o001",
+          "order": 1,
+          "title": "HAPPY CYBERSECURITY MONTH! CELEBRATE WITH API SECURITY 101",
+          "summary": "With APIs becoming ever more central to software development, now is a great time to brush up on API security best practices. Download this 101 guide from Nylas",
+          "url": "https://info.nylas.com/api-security-101-guide.html?utm_source=tldr&utm_medium=sponsoredemail&utm_campaign=FY23Q3-TLDRWebDev-1P&utm_content=2023-10-10-Issue-securityguide",
+          "reading_time_minutes": null,
+          "source_domain": "info.nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o002",
+          "order": 1,
+          "title": "HOW SLACK PROCESSES 33,000 JOBS PER SECOND",
+          "summary": "Slack manages many tasks asynchronously, including push notifications and billing. It previously used Redis for task queuing, but as Slack scaled, it faced limitations such as memory constraints and coupling between workers and Redis instances. To address these issues, Slack integrated Apache Kafka, added Kafkagate as a new scheduler, and used JQRelay to relay jobs from Kafka to Redis. This improved Slack’s scalability and durability and reduced complexity in managing job queues.",
+          "url": "https://blog.quastor.org/p/slack-processes-33000-jobs-per-second?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o003",
+          "order": 2,
+          "title": "SPEEDING UP THE JAVASCRIPT ECOSYSTEM- THE BARREL FILE DEBACLE",
+          "summary": "Barrel files are files that only export other files. They are used to reduce the number of import statements in a project. Barrel files are a common cause of performance issues in JavaScript projects, especially large ones. Importing many files through a web of barrel files can significantly increase module loading times, affect test runners' performance, and cause linting times to increase dramatically. Getting rid of barrel files can make many tasks run 60-80% faster.",
+          "url": "https://marvinh.dev/blog/speeding-up-javascript-ecosystem-part-7/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "marvinh.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o004",
+          "order": 3,
+          "title": "ARCHITECTURE",
+          "summary": "Slack sends millions of messages daily across millions of channels in real-time across the world. This post explores Slack’s real-time messaging architecture with a discussion on the architectural and system design concepts they leverage to scale and keep the latency low. Slack's Channel Servers are stateful and in-memory, aiding in quick message delivery to clients. The post also touches on how consistent hashing routes traffic to different Channel Server nodes. It discusses the trade-off between low latency and scalability challenges which can be mitigated using the right cloud instance for memory-intensive operations.",
+          "url": "https://scaleyourapp.com/system-design-case-study-real-time-messaging-architecture/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "scaleyourapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o005",
+          "order": 1,
+          "title": "FORTY YEARS OF PROGRAMMING",
+          "summary": "In this article, the author, who has been programming for forty years, reflects on their learnings. They discuss their evolution in terms of ergonomics and health, noting the shift from standard setups to ergonomic choices like a vertical mouse and the Magic Trackpad from Apple. They also detail their keyboard journey, highlighting customizable, wrist-friendly keyboards. The author recommends VIM-based editors, standing desks, stretching exercises, and rock climbing as ways to maintain health and productivity in a programming career.",
+          "url": "https://fabiensanglard.net/40/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "fabiensanglard.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o006",
+          "order": 2,
+          "title": "MY PERSONAL C CODING STYLE AS OF LATE 2023",
+          "summary": "The author of this article reflects on significant changes in their C coding style and habits over the past year. They highlight various modifications, including the use of short names for primitive types, the adoption of a standardized set of macros, the elimination of null-terminated strings in favor of a custom string type, and the preference for structure returns over out parameters. Overall, the changes they highlight have improved productivity and code readability.",
+          "url": "https://nullprogram.com/blog/2023/10/08/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "nullprogram.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o007",
+          "order": 3,
+          "title": "A HEALTHIER WAY TO OPEN SOURCE YOUR CODE",
+          "summary": "Open-source project maintainers face many challenges, including the burden of managing user expectations, answering questions, fixing bugs, and reviewing pull requests. Possible solutions for managing open-source projects include clearly stating the project's status, converting all open issues to discussions, blocking the creation of new issues, and unsubscribing from all notifications to reduce the mental and emotional toll on the maintainer. This author encourages sharing code without committing one's time and mental capacity to the entire project.",
+          "url": "https://sapegin.me/blog/healthy-open-source/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "sapegin.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o008",
+          "order": 1,
+          "title": "YOUR CLIENT’S BUSINESS",
+          "summary": "Trusted by the web’s biggest creators, Memberful is the easiest way to build a membership business. Memberful seamlessly integrates with the tools your clients already use like - WordPress, Mailchimp, Discord, and more - plus it includes a full-featured GraphQL API, webhooks, and OAuth Single Sign On. Your client's membership program should allow them to launch a new revenue stream without rebuilding their entire tech stack — Memberful makes that happen. Create your client's customized membership website now (free trial, no credit card required)",
+          "url": "https://memberful.com/product/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=developers&utm_content=q4_october",
+          "reading_time_minutes": null,
+          "source_domain": "memberful.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o009",
+          "order": 2,
+          "title": "FETCHBOOK",
+          "summary": "Fetchbook is a command-line tool designed to help you manage your collections of HTTP requests. It is based on the standard RequestInit object and runs in TypeScript with bun.sh.",
+          "url": "https://github.com/4lejandrito/fetchbook?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o010",
+          "order": 3,
+          "title": "CRITICAL",
+          "summary": "Critical optimizes a webpage by inlining above-the-fold CSS.",
+          "url": "https://github.com/addyosmani/critical",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o011",
+          "order": 1,
+          "title": "STREAMING AT SCALE WITH KUBERNETES AND RABBITMQ",
+          "summary": "A technical lead on a streaming solution discusses the use of technologies like Kubernetes, RabbitMQ, and load balancers in managing the process of video streaming. They detail how videos are processed asynchronously, scaled using Kubernetes, and cached using a Content Delivery Network () to ensure smooth playback for users. Costs are optimized using on-demand instances called preemptible nodes.",
+          "url": "https://alexandreolive.medium.com/video-streaming-at-scale-with-kubernetes-and-rabbitmq-6e23fd0e75fb?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "alexandreolive.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o012",
+          "order": 2,
+          "title": "MISCONCEPTIONS CAN KILL ACCESSIBILITY MOMENTUM",
+          "summary": "Achieving accessibility is difficult. To create accessible software, engineers need to take the time to learn how assistive technologies actually work. This article addresses a specific proposal related to focus behavior in UI elements and the potential issues it may bring. It underscores the complexity of accessibility and the need for careful consideration in implementing accessibility features.",
+          "url": "https://yatil.net/blog/misconceptions-can-kill-accessibility-momentum?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "yatil.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-10-10:o013",
+          "order": 1,
+          "title": "INCREMENTAL STATIC REGENERATION IN NUXT",
+          "summary": "Many people think that incremental static regeneration can only be applied to static sites like blogs. However, it’s possible to use incremental static regeneration in other types of websites, such as Nuxt e-commerce websites.",
+          "url": "https://dev.to/jacobandrewsky/incremental-static-regeneration-in-nuxt-3255?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o014",
+          "order": 2,
+          "title": "HTTP JOURNEY: FROM REQUEST TO RESPONSE",
+          "summary": "HTTP is a stateless request/response protocol. This article goes through the entire lifecycle of an HTTP request.",
+          "url": "https://medium.com/@felipemantillagomez/http-journey-from-request-to-response-7b122b8e74e9?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o015",
+          "order": 3,
+          "title": "",
+          "summary": "A Firefox bug gets fixed after 22 years.",
+          "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=148624&utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "bugzilla.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-10-10:o016",
+          "order": 4,
+          "title": "7 STRATEGIES TO COPE WITH CAREER UNCERTAINTY",
+          "summary": "Economic uncertainty and workplace issues continue to weigh on workers and managers on a global scale, causing tremendous anxiety. In addition, career trajectories are inherently full of unknowns. We can’t always know future outcomes. This article offers 7 ways to deal with uncertainty in the workplace in a healthy way.",
+          "url": "https://www.forbes.com/sites/bryanrobinson/2023/10/07/7-strategies-to-cope-with-the-stress-of-career-uncertainty/amp/?utm_source=webdev",
+          "reading_time_minutes": 4,
+          "source_domain": "forbes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

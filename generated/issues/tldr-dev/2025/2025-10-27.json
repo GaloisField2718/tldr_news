@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2025-10-27",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-10-27",
+  "source_path": "TLDR Dev/article_27-10-2025.md",
+  "source_content_hash": "sha256:04494cf24d7243356830d6a102940d981be11833458e7472850395f9ca95e55d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-10-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a04",
+          "order": 1,
+          "title": "TESTING",
+          "summary": "If slow QA processes bottleneck you or your software engineering team and you're releasing slower because of it — you need to check out QA Wolf.",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20251027-None_Experiment-FALSE&utm_term=headline-CutYourQACyclesDownFromHoursToMinutesWithAutomatedTesting&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutQACyclesFromHoursToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20251027_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a08",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20251027-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=CutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACutQACyclesFromHoursToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20251027_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a09",
+          "order": 1,
+          "title": "THE SEARCH PROBLEM: WHY YOUR COMPUTER FINDS THINGS FASTER THAN YOU DO",
+          "summary": "This blog post explores the limitations of binary search trees compared to B-trees when dealing with disk I/O. While binary trees are efficient in memory, their performance degrades a lot on disk due to the high cost of each disk access. On the other hand, B-trees, by storing multiple keys per node that fit within a single disk block, reduce the number of disk reads required for searching.",
+          "url": "https://deyaa1251.github.io/deyaa1251/posts/b_tree/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "deyaa1251.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a10",
+          "order": 2,
+          "title": "SOLVED BY MODERN CSS: SECTION LAYOUT",
+          "summary": "Building a dynamic section layout can be done using modern CSS techniques like :has(), container queries, fluid typography with clamp(), and query units. This article shows how to create responsive card layouts within the section and adjust the overall layout based on the number of items.",
+          "url": "https://ishadeed.com/article/modern-css-section-layout/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "ishadeed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a11",
+          "order": 3,
+          "title": "THE BUG THAT TAUGHT ME MORE ABOUT PYTORCH THAN YEARS OF USING IT",
+          "summary": "This dev discovered a niche PyTorch bug while working on a sparse autoencoder, where the training loss plateaued due to the encoder weights failing to update on the Apple Silicon GPU (MPS). The root cause was traced to some of the Adam optimizer's operations silently failing to update output tensors on MPS due to the way memory was handled. A workaround was implemented by creating a contiguous temporary tensor, performing the operation, and then copying the results back to the original non-contiguous tensor.",
+          "url": "https://elanapearl.github.io/blog/2025/the-bug-that-taught-me-pytorch/?utm_source=tldrwebdev",
+          "reading_time_minutes": 32,
+          "source_domain": "elanapearl.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a12",
+          "order": 1,
+          "title": "DIRECTIVES AND THE PLATFORM BOUNDARY",
+          "summary": "There is an increasing trend of JavaScript frameworks introducing custom directives, such as `use client` and `use server`, which resemble language features but lack standardization. These directives can cause confusion, complicate debugging, and reduce portability by blurring the line between the JavaScript platform and specific frameworks. Explicit APIs with imports give better provenance, versioning, and tooling ergonomics compared to directives that end up working as platform “lock-in.”",
+          "url": "https://tanstack.com/blog/directives-the-new-framework-lock-in?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a13",
+          "order": 2,
+          "title": "WHY I CODE AS A CTO",
+          "summary": "This CTO prioritizes coding despite the conventional wisdom that senior leaders should primarily manage. He divides his coding efforts into experimental projects, critical customer requests, and bug fixes. AI tools help boost his productivity.",
+          "url": "https://www.assembled.com/blog/why-i-code-as-a-cto?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "assembled.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a14",
+          "order": 3,
+          "title": "ADVICE FOR NEW PRINCIPAL TECH ICS (I.E., NOTES TO MYSELF)",
+          "summary": "New Principal Tech Individual Contributors (ICs) should balance deep technical work with broader responsibilities such as providing vision, mentoring, and connecting teams. A large part of the role involves teaching the organization to value new ideas and driving initiatives that might not happen otherwise.",
+          "url": "https://eugeneyan.com/writing/principal/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "eugeneyan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a15",
+          "order": 1,
+          "title": "ANNOUNCING THE SWIFT SDK FOR ANDROID",
+          "summary": "The Android workgroup has announced the nightly preview release of the Swift SDK for Android, letting devs build native Android applications using Swift. This SDK helps cross-platform development by allowing developers to port Swift packages to Android, with over 25% of packages already compatible.",
+          "url": "https://www.swift.org/blog/nightly-swift-sdk-for-android/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "swift.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a16",
+          "order": 2,
+          "title": "OXDRAW",
+          "summary": "Oxdraw is a tool that bridges the gap between code-generated diagrams (like Mermaid) and manually customizable diagramming software (like Lucidchart). It allows users to create and fine-tune diagrams using Mermaid syntax with a web interface for visual adjustments. Edits made in the interface are saved back to the Mermaid source file as comments.",
+          "url": "https://github.com/RohanAdwankar/oxdraw?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a17",
+          "order": 3,
+          "title": "SHADCNTHEMER",
+          "summary": "ShadcnThemer is a platform for discovering, creating, and sharing custom themes for the shadcn/ui component library.",
+          "url": "https://shadcnthemer.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "shadcnthemer.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a18",
+          "order": 1,
+          "title": "HOW WE SAVED $500,000 PER YEAR BY ROLLING OUR OWN “S3”",
+          "summary": "Nanit reduced costs by creating N3, a Rust-based in-memory landing zone for video processing, using S3 as a fallback buffer. This removed PutObject request fees and short-term storage costs associated with S3's minimum storage duration. The solution uses a two-tier fallback system, where an N3-Proxy initially redirects uploads to S3 upon N3-Storage failure, and Camera Service then completely switches to S3 presigned URLs in case of broader N3 issues.",
+          "url": "https://engineering.nanit.com/how-we-saved-500-000-per-year-by-rolling-our-own-s3-6caec1ee1143?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.nanit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a19",
+          "order": 2,
+          "title": "THE JOURNEY BEFORE MAIN()",
+          "summary": "This article explains the journey from when the OS kernel is asked to run a program to when the `main()` function is executed. The kernel uses the `execve` system call to load the program, which is usually in ELF format on Linux. The ELF file contains code, data, and other information, including an entry point where execution begins.  The kernel sets up the stack with arguments, environment variables, and auxiliary vectors before jumping to the `_start` function, which then initializes the language runtime and calls the user's `main()` function.",
+          "url": "https://amit.prasad.me/blog/before-main?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "amit.prasad.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-27:a20",
+          "order": 1,
+          "title": "CODE LIKE A SURGEON",
+          "summary": "Taking a \"software surgeon\" approach to coding means using AI tools for secondary tasks and having devs focus on core design and critical thinking.",
+          "url": "https://www.geoffreylitt.com/2025/10/24/code-like-a-surgeon?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "geoffreylitt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a21",
+          "order": 2,
+          "title": "YOU ALREADY HAVE A GIT SERVER",
+          "summary": "This blog post explains how to use Git on a server to manage and deploy code, particularly for website content.",
+          "url": "https://maurycyz.com/misc/easy_git/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "maurycyz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a22",
+          "order": 3,
+          "title": "REACT VS BACKBONE IN 2025",
+          "summary": "Despite advancements and a larger ecosystem, modern frameworks like React may not represent a large improvement over older frameworks like Backbone for simple tasks, often trading explicit simplicity for complex abstractions that can hurt understanding and debugging.",
+          "url": "https://backbonenotbad.hyperclay.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "backbonenotbad.hyperclay.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-27:a23",
+          "order": 4,
+          "title": "FTA: FAST TYPESCRIPT ANALYZER",
+          "summary": "FTA is a fast, open-source static analysis tool written in Rust for TypeScript and JavaScript code that identifies complexity and maintainability issues.",
+          "url": "https://ftaproject.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ftaproject.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

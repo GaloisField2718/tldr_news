@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-02-02",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-02-02",
+  "source_path": "TLDR Web Dev/article_02-02-2024.md",
+  "source_content_hash": "sha256:cead12b347a96bb01aee6b803a2f9035b86e526bc65115b86a3e3ef801a17826",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-02-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a05",
+          "order": 1,
+          "title": "🪄 INSTANTLY GENERATE A VISUAL UI FOR YOUR DATABASE",
+          "summary": "Devs are there to build software. If they’re getting bogged down with ad-hoc requests for data access, something’s gone wrong — and that’s why you need Basedash [5]. Simply connect your database, [5] and Basedash will use AI to generate an interface. Voila, now anyone can work with data using admin panels, internal CRMs, dashboards, or SQL queries [5] (the AI can write those for you too).",
+          "url": "https://www.basedash.com/?utm_source=tldr-webdev&utm_campaign=20240202",
+          "reading_time_minutes": null,
+          "source_domain": "basedash.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a05",
+          "order": 2,
+          "title": "Basedash is free for small teams. Start here ✨",
+          "summary": "",
+          "url": "https://www.basedash.com/?utm_source=tldr-webdev&utm_campaign=20240202",
+          "reading_time_minutes": null,
+          "source_domain": "basedash.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a06",
+          "order": 1,
+          "title": "HOW WE BUILT OUR CUSTOMER DATA WAREHOUSE ALL ON POSTGRES",
+          "summary": "Tembo built its customer data warehouse with only PostgreSQL using foreign data wrappers (FDWs) and other PostgreSQL extensions to simplify the process. It needed to pull data from various sources, including Postgres, Prometheus, and Clerk, into a single location to create dashboards for tracking customer usage and behavior. Instead of introducing new tools and technologies, Tembo utilized FDWs to connect PostgreSQL to these data sources, creating two new FDWs, clerk_fdw, and prometheus_fdw, for Clerk and Prometheus respectively. It also used pg_cron for scheduling updates and pg_partman for partitioning to improve performance and automate data retention.",
+          "url": "https://tembo.io/blog/tembo-data-warehouse?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "tembo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a07",
+          "order": 2,
+          "title": "THE WEB JUST GETS BETTER WITH INTEROP 2024",
+          "summary": "Web interoperability makes the web accessible and consistent across different browsers. The Interop Project aims to improve interoperability by encouraging browser engine teams to focus on specific areas. The focus areas for Interop 2024 include accessibility, CSS Nesting, custom properties, and Declarative Shadow DOM. Interop is also investigating projects aimed at improving accessibility testing, mobile testing, and WebAssembly testing.",
+          "url": "https://webkit.org/blog/14955/the-web-just-gets-better-with-interop/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "webkit.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a08",
+          "order": 1,
+          "title": "MY FAVOURITE GIT COMMIT",
+          "summary": "The author’s favorite Git commit is a message from their time at the Government Digital Service while working on GOV.UK. The commit message, titled \"Convert template to US-ASCII to fix error,\" is valued because it provides clear explanations for the change, is searchable, tells a story about the problem and its resolution, and helps spread knowledge and build trust within a team. Good commit messages are helpful in maintaining a codebase's history and improving collaboration among developers.",
+          "url": "https://dhwthompson.com/2019/my-favourite-git-commit?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "dhwthompson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a09",
+          "order": 2,
+          "title": "IT FEELS LIKE REACT IS GETTING A BIT OF A KICKING RECENTLY",
+          "summary": "React has faced criticism lately for becoming overly complicated despite its wide use across the industry. When choosing a web framework or library for a project, it’s important to consider various factors, such as project requirements, performance needs, and team capabilities. Instead of following social media trends, developers should choose the best tool for the job, which is sometimes React or sometimes something else.",
+          "url": "https://piccalil.li/blog/react-is-getting-a-bit-of-a-kicking-recently/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "piccalil.li",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a10",
+          "order": 1,
+          "title": "STANCHION",
+          "summary": "Stanchion is an SQLite 3 extension that brings column-oriented storage to SQLite. SQLite exclusively supports row-oriented tables, but Stanchion changes that. Column-oriented storage is generally better for analytics queries over many rows and few columns and metric, log, event, and time-series data.",
+          "url": "https://github.com/dgllghr/stanchion?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a11",
+          "order": 2,
+          "title": "JOLT",
+          "summary": "Jolt is a JSON structural transformation library that is useful for transforming JSON data from databases or extracting data from large JSON documents for your own consumption.",
+          "url": "https://github.com/bazaarvoice/jolt?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a12",
+          "order": 1,
+          "title": "THANKSGIVING 2023 SECURITY INCIDENT",
+          "summary": "In November 2023, Cloudflare detected a security incident where a threat actor gained access to its self-hosted Atlassian server. Despite this, Cloudflare assured its customers that no customer data or systems were affected. The incident was traced back to stolen credentials from an Okta compromise in October, with the threat actor conducting reconnaissance and accessing internal systems, mainly Atlassian products. Cloudflare responded with a \"Code Red\" effort to strengthen security, rotating over 5,000 production credentials, segmenting systems, and performing forensic triages. The threat actor was ultimately denied access. Cloudflare notes that it believes the attack was performed by a nation-state.",
+          "url": "https://blog.cloudflare.com/thanksgiving-2023-security-incident?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a13",
+          "order": 2,
+          "title": "APPLE ANNOUNCES CHANGES TO IOS, SAFARI, AND THE APP STORE IN THE EUROPEAN UNION",
+          "summary": "Apple announced big changes for iOS, Safari, and the App Store users in the EU. For developers, the changes include new options for app distribution and payment processing. For web developers specifically, Apple is introducing a choice screen that will surface when users first open Safari in iOS 17.4 or later. That screen will prompt EU users to choose a default browser from a list of options. Apple has also introduced alternative, opt-in-optional business terms for apps in the EU, which include reduced commission on app transactions, a 3% fee when using the App Store’s payment processing, and a core technology fee of €0.50 for each first annual install per year over a 1 million threshold.",
+          "url": "https://www.apple.com/newsroom/2024/01/apple-announces-changes-to-ios-safari-and-the-app-store-in-the-european-union/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-02:a14",
+          "order": 1,
+          "title": "WHY RENAMING A FILE ISN’T THE SAME AS CONVERTING IT",
+          "summary": "When you convert a file, such as an M4A to MP3, it involves several steps like decoding, re-encoding, and copying metadata. On the other hand, simply renaming a file doesn't change its internal data or format - it remains encoded in the original format. Changing a file's extension by renaming it may result in losing metadata.",
+          "url": "https://medium.com/@gremline_tae/why-renaming-a-file-isnt-the-same-as-converting-it-6f19ce332ad7?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a15",
+          "order": 2,
+          "title": "STARLINK'S LASER SYSTEM IS BEAMING 42 MILLION GB OF DATA PER DAY",
+          "summary": "SpaceX’s laser system for Starlink is delivering over 42 petabytes of data per day across 9,000 lasers.",
+          "url": "https://www.pcmag.com/news/starlinks-laser-system-is-beaming-42-million-gb-of-data-per-day?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "pcmag.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a16",
+          "order": 3,
+          "title": "GOOGLE SIGNIFICANTLY REDUCES RECAPTCHA FREE TIER, INTRODUCES NEW PRICING MODELS",
+          "summary": "Google is reducing the number of free Recaptcha assessments from 1 million to 10,000 a month and introducing new pricing models for paid tiers.",
+          "url": "https://bytepursuits.com/google-significantly-reduces-recaptcha-free-tier-introduces-new-pricing-models?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "bytepursuits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a17",
+          "order": 4,
+          "title": "14 THINGS TO CHECK BEFORE DEPLOYING A WEBSITE",
+          "summary": "Before deploying, it’s useful to optimize images, have a 404 page and favicon, minify files, certify the SSL certificate for the site, check responsiveness and accessibility, and use fallbacks.",
+          "url": "https://dev.to/arjuncodess/14-things-to-check-before-deploying-a-website-49ee?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-02:a18",
+          "order": 5,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2023-12-18",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-12-18",
+  "source_path": "TLDR Web Dev/article_18-12-2023.md",
+  "source_content_hash": "sha256:9cd67a00f3e417ea69a107be91271b04061c02321f67aee802ec1ab69303bac6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-12-18",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-12-18:a05",
+          "order": 1,
+          "title": "DATABASE FUNDAMENTALS",
+          "summary": "This article teaches database fundamentals by guiding the reader in building a simple database. It starts with the ACID properties (Atomicity, Consistency, Isolation, and Durability) that most databases aim to guarantee and discusses the challenges in achieving these properties. It then delves into the concept of storage engines in databases, comparing mutable B-Trees and immutable Log Structured Merge (LSM) Trees. It explains how LSM Trees are designed to minimize disk I/O and seeks, making them suitable for write-heavy workloads. The article touches on topics like bloom filters and Write-Ahead Logs (WALs) as part of database design to achieve ACID properties and isolation.",
+          "url": "https://tontinton.com/posts/database-fundementals/?utm_source=tldrwebdev",
+          "reading_time_minutes": 27,
+          "source_domain": "tontinton.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a06",
+          "order": 2,
+          "title": "THE AWAIT EVENT HORIZON IN JAVASCRIPT",
+          "summary": "An async function, upon awaiting a Promise, cannot proceed until that Promise resolves, which could potentially lead to resource leaks if the Promise never settles. There are many remediations to the problem, like Explicit Resource Management and AbortSignal. However, in practice, they are limited and don't solve the fundamental problem. Instead, generator functions in JavaScript can offer more structured concurrency as they are not constrained by the await event horizon.",
+          "url": "https://frontside.com/blog/2023-12-11-await-event-horizon/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "frontside.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-12-18:a07",
+          "order": 1,
+          "title": "THE BEST WEBASSEMBLY RUNTIME MAY BE NO RUNTIME AT ALL",
+          "summary": "An alternative approach to WebAssembly (WASM) runtimes is no runtime at all. Traditional WASM runtimes like V8, Wasmer, WasmEdge, and Wasmtime are complex and platform-dependent. Instead, transpile Wasm code to C source code using tools like wasm2c or w2c2, which results in human-readable C code that can be compiled and run without the need for a dedicated runtime.",
+          "url": "https://00f.net/2023/12/11/webassembly-compilation-to-c/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "00f.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a08",
+          "order": 2,
+          "title": "HOW TO PREPARE THE TECHNICAL INTERVIEW",
+          "summary": "This post shares an experience of preparing for internal interviews to switch teams at Amazon. It emphasizes the importance of making a positive impression on interviewers, both emotionally and rationally, by engaging in meaningful conversations and explaining thought processes clearly. It goes on to outline a strategic approach to interview preparation involving mindset, learning modes, a structured plan, struggle time, and the interview week, highlighting the importance of consistent effort and focus.",
+          "url": "https://strategizeyourcareer.substack.com/p/how-to-prepare-the-technical-interview?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "strategizeyourcareer.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-12-18:a09",
+          "order": 1,
+          "title": "SVGL",
+          "summary": "A library of free-to-use SVG logos.",
+          "url": "https://svgl.app/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "svgl.app",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a10",
+          "order": 2,
+          "title": "ANNOUNCING REACT HYDRATION OVERLAY - EASILY SQUASH HYDRATION ERRORS",
+          "summary": "Overlay for debugging hydration mismatches, providing an explicit diff between the server-side and client-side renders.",
+          "url": "https://github.com/BuilderIO/hydration-overlay?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-12-18:a11",
+          "order": 1,
+          "title": "HOW MANY LINES OF C IT TAKES TO EXECUTE A + B IN PYTHON?",
+          "summary": "This article delves into the implementation details of how Python handles operations like \"a + b\" at the CPython runtime level. It discusses the use of the PyObject structure and PyTypeObject structure to enable polymorphism and inheritance in Python objects. The article explores how dynamic dispatch works in Python, including the compilation of Python code to bytecode and its execution by the CPython virtual machine.",
+          "url": "https://open.substack.com/pub/codeconfessions/p/cpython-dynamic-dispatch-internals?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a12",
+          "order": 2,
+          "title": "WHY MULTI-CLOUD: THE 5 BEST REASONS, ACCORDING TO EXPERTS",
+          "summary": "A multi-cloud architecture is an approach that involves using multiple cloud providers for an application or company. There are several reasons to adopt a multi-cloud approach, including regulatory compliance, avoiding vendor lock-in, meeting customer requirements, gaining leverage in price negotiations with cloud providers, and empowering engineering teams. However, the primary motivation for adopting multi-cloud should be to address business problems rather than technical ones.",
+          "url": "https://www.cockroachlabs.com/blog/why-multi-cloud-reasons/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "cockroachlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-12-18:a13",
+          "order": 1,
+          "title": "PROGRAMS ARE GAMES, PROGRAMMING IS A GAME",
+          "summary": "Programming can be considered a unique and fun game where individuals can create programs to map inputs to outputs, making it more enjoyable than many other activities.",
+          "url": "https://blog.charliemeyer.co/programs-are-games-programming-is-a-game/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.charliemeyer.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a14",
+          "order": 2,
+          "title": "MEASURING THE SIZE OF THE CACHE LINE EMPIRICALLY",
+          "summary": "",
+          "url": "https://lemire.me/blog/2023/12/12/measuring-the-size-of-the-cache-line-empirically/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "lemire.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a15",
+          "order": 3,
+          "title": "OXLINT GENERAL AVAILABILITY",
+          "summary": "Oxlint is a JavaScript linter designed to catch erroneous or useless code without requiring any configurations by default. It’s 50-100 times faster than ESlint and defaults to identifying erroneous, redundant, or confusing code over unnecessary nitpicking rules.",
+          "url": "https://oxc-project.github.io/blog/2023-12-12-announcing-oxlint.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "oxc-project.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-12-18:a16",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

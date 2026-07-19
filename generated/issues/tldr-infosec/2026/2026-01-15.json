@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-15",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-15",
+  "source_path": "TLDR InfoSec/article_15-01-2026.md",
+  "source_content_hash": "sha256:b87c0248a8373f43fa27168448089fefd1ad9eb94c2e38e69d77d06bbdd39583",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-15",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a04",
+          "order": 1,
+          "title": "IDENTITY SECURITY",
+          "summary": "As 2026 begins, businesses are contending with a fragmented threat landscape. Identities, applications, devices, and AI-driven tools are multiplying, often outside of IT or security's control.",
+          "url": "https://1password.com/webinars/new-framework-for-identity-security?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_all_amer_english_webinar-identity-security-framework_consideration_2026-01&utm_content=text&utm_term=live-january-15-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a05",
+          "order": 1,
+          "title": "CONVINCING LINKEDIN COMMENT-REPLY TACTIC USED IN NEW PHISHING",
+          "summary": "Scammers are flooding LinkedIn posts with fake reply comments from company pages impersonating LinkedIn (e.g., \"Linked Very\"), warning users about bogus policy violations and directing them to credential-harvesting sites. The campaign gains credibility by using LinkedIn's official lnkd.in URL shortener to mask phishing domains, making malicious links harder to identify without clicking. LinkedIn confirmed awareness and emphasized that it never communicates policy violations through public comments.",
+          "url": "https://www.bleepingcomputer.com/news/security/convincing-linkedin-comment-reply-tactic-used-in-new-phishing/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a06",
+          "order": 2,
+          "title": "CYBERATTACK FORCES BELGIAN HOSPITAL TO TRANSFER CRITICAL CARE PATIENTS",
+          "summary": "A ransomware attack on AZ Monica hospital in Antwerp severely disrupted IT systems, forcing servers offline and halting most surgeries and many treatments, including imaging and chemotherapy. Critical patients were moved with Red Cross help, while other hospitals, including Amsterdam UMC, took over urgent chemotherapy.",
+          "url": "https://therecord.media/belgium-hospital-cyberattack-antwerp-az-monica?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a07",
+          "order": 3,
+          "title": "PERSONAL DETAILS OF THOUSANDS OF BORDER PATROL AND ICE AGENTS ALLEGEDLY LEAKED IN HUGE DATA BREACH",
+          "summary": "Sensitive data belonging to around 4,500 ICE and Border Patrol employees has been released by a Department of Homeland Security whistleblower. The leaked data includes names, work emails, phone numbers, roles, and some resume data. The data was leaked to the ICE List website, which stated that it would conduct a manual review to filter out certain roles before releasing the data.",
+          "url": "https://www.thedailybeast.com/personal-details-of-thousands-of-border-patrol-and-ice-goons-allegedly-leaked-in-huge-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thedailybeast.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a08",
+          "order": 1,
+          "title": "VOIDLINK: THE CLOUD-NATIVE MALWARE FRAMEWORK",
+          "summary": "VoidLink is a sophisticated Zig-based Linux malware framework from Chinese-affiliated developers. It features a cloud-first design that detects AWS, GCP, Azure, Alibaba, and Tencent environments and adapts its behavior based on detected EDRs and security controls. The framework includes 37+ plugins inspired by Cobalt Strike's BOF architecture, environment-adaptive rootkit deployment (LD_PRELOAD, eBPF, or LKM-based on the kernel version), and multiple C2 channels, including HTTP, DNS tunneling, ICMP, and P2P mesh networking. VoidLink's credential-harvesting targets cloud environments, Git repositories, and SSH keys, suggesting that software engineers and cloud infrastructure are primary targets for espionage or supply chain attacks.",
+          "url": "https://research.checkpoint.com/2026/voidlink-the-cloud-native-malware-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a09",
+          "order": 2,
+          "title": "CVE-2025-64155: THREE YEARS OF REMOTELY ROOTING THE FORTINET FORTISIEM",
+          "summary": "A series of vulnerabilities in Fortinet's FortiSIEM platform allows a remote, unauthenticated attacker to gain full control of the appliance, from admin access to root. The weakness lies in how the phMonitor service processes certain storage-related requests, ultimately enabling crafted data to reach a curl-based health-check script and inject extra arguments. By abusing curl's features, an attacker can write arbitrary files as the FortiSIEM admin user and then leverage a writable script executed by root via cron to escalate privileges. Combined, these flaws permit long-term, stealthy compromise of FortiSIEM deployments.",
+          "url": "https://horizon3.ai/attack-research/disclosures/cve-2025-64155-three-years-of-remotely-rooting-the-fortinet-fortisiem/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "horizon3.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a10",
+          "order": 3,
+          "title": "CHOOSING A MANAGED SERVICE PROVIDER",
+          "summary": "The UK's NCSC released a guide and checklist for small- to medium-sized enterprises (SMEs) seeking to choose a Managed Service Provider (MSP) for IT and security services. Organizations should request any certifications the MSP has, customer testimonials, and ensure the MSP communicates clearly and transparently. Organizations should also ask the MSP about their policies on patching, backups, data access, logging, and incident response.",
+          "url": "https://www.ncsc.gov.uk/guidance/choosing-a-managed-service-provider-msp?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a11",
+          "order": 1,
+          "title": "TIRED OF WAITING FOR YOUR AI GATEWAY TO CATCH UP? PYDANTIC OFFERS ONE KEY, ZERO TRANSLATION",
+          "summary": "With enterprise usage, LLM governance is a pain. Pydantic AI Gateway [11] (PAIG) provides one key for all major providers (OpenAI, Anthropic, Google, AWS Bedrock, Groq, etc.), zero schema translation, and granular spend caps. Get a full audit trail and SSO while enjoying single-digit millisecond overhead via Cloudflare's global edge. Start",
+          "url": "https://pydantic.dev/articles/pydantic-ai-gateway?utm_campaign=secondary150126&utm_source=tldrinfosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "pydantic.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a12",
+          "order": 2,
+          "title": "with no credit card",
+          "summary": "",
+          "url": "https://pydantic.dev/ai-gateway?utm_campaign=secondary150126&utm_source=tldrinfosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "pydantic.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a13",
+          "order": 3,
+          "title": "AI-KNOWLEDGE-GRAPH",
+          "summary": "ai-knowledge-graph is a Python tool that extracts Subject-Predicate-Object triplets from unstructured text using any OpenAI-compatible LLM endpoint and generates interactive knowledge graph visualizations. It features automatic text chunking, entity standardization across document segments, and relationship inference to connect disconnected graph components. The tool outputs interactive HTML visualizations with community detection, centrality-based node sizing, and filtering controls.",
+          "url": "https://github.com/robert-mcdermott/ai-knowledge-graph?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a14",
+          "order": 4,
+          "title": "AURA-INSPECTOR",
+          "summary": "Aura-inspector is a Swiss Army knife of Salesforce Experience Cloud testing. It facilitates in discovering misconfigured Salesforce Experience Cloud applications as well as automates much of the testing process.",
+          "url": "https://github.com/google/aura-inspector?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a15",
+          "order": 5,
+          "title": "NOVEE (PRODUCT LAUNCH)",
+          "summary": "Novee offers a continuous, AI-driven penetration testing platform that simulates sophisticated real-world attackers to uncover novel vulnerabilities, including complex business logic flaws. It also provides exploit validation, automated retesting, and remediation guidance.",
+          "url": "https://novee.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "novee.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a16",
+          "order": 1,
+          "title": "PHYSICAL ATTACKS ON CRYPTO HOLDERS - WRENCH ASSAULTS RISING?",
+          "summary": "France has experienced a surge in violent \"wrench attacks\" targeting cryptocurrency holders and their relatives between 2024 and 2026, exploiting self-custody's fundamental weakness: anyone with the key or seed phrase can irreversibly transfer funds without bank intervention. Attackers identify targets through public displays of wealth on social media, data leaks from crypto firms like Ledger, and potentially compromised access to government databases, including new EU crypto-asset reporting systems under DAC8. Recommended mitigations include operational security measures, time-locked transactions, and multisignature wallet schemes requiring geographically distributed keys.",
+          "url": "https://blog.lukaszolejnik.com/physical-attacks-on-crypto-holders-wrench-assaults-rising/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.lukaszolejnik.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a17",
+          "order": 2,
+          "title": "RESEARCHERS NULL-ROUTE OVER 550 KIMWOLF AND AISURU BOTNET COMMAND SERVERS",
+          "summary": "Black Lotus Labs null-routed over 550 C2 nodes associated with the AISURU/Kimwolf botnet, which has infected more than 2 million Android devices—primarily unsanctioned TV streaming boxes with exposed Android Debug Bridge (ADB) services. The botnet exploits vulnerabilities in residential proxy services to propagate, turning compromised devices into proxy nodes for DDoS attacks and malicious traffic relay. Security teams should monitor for ADB exposure on network devices and block traffic to the identified C2 infrastructure.",
+          "url": "https://thehackernews.com/2026/01/kimwolf-botnet-infected-over-2-million.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a18",
+          "order": 3,
+          "title": "I ALMOST LOST MY APPLE ACCOUNT TO THE MOST SOPHISTICATED PHISHING ATTACK I'VE EVER SEEN",
+          "summary": "A security-conscious user received several 2FA prompts and SMS verification codes for their Apple account one afternoon, followed by an automated call warning them that their account was under attack. After receiving this call, a second call came from a very professional-sounding employee who created a support case for the user, verified that it was from Apple to build trust, and walked the user through resetting their password. The phish then had the user “close the case” via an SMS link, which directed them to a sophisticated phishing site where they could steal the user's credentials.",
+          "url": "https://links.tldrnewsletter.com/9bCV26",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-15:a19",
+          "order": 1,
+          "title": "UKRAINE'S ARMY TARGETED IN NEW CHARITY-THEMED MALWARE CAMPAIGN",
+          "summary": "CERT-UA reported that the suspected Russian threat group Void Blizzard targeted Ukrainian Defense Forces officials via Signal and WhatsApp with charity-themed lures delivering the PluggyApe backdoor, which now features MQTT-based C2 communication and dynamic address retrieval from paste sites.",
+          "url": "https://www.bleepingcomputer.com/news/security/ukraines-army-targeted-in-new-charity-themed-malware-campaign/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a20",
+          "order": 2,
+          "title": "GLOBAL CYBERSECURITY OUTLOOK 2026",
+          "summary": "The WEF's fifth annual cybersecurity report shows 94% see AI as the main cyber driver, 87% cite AI vulnerabilities as the fastest-growing risk, and 91% of large organizations are revising cybersecurity strategies due to geopolitical volatility.",
+          "url": "https://links.tldrnewsletter.com/LfeKLr",
+          "reading_time_minutes": 30,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-15:a21",
+          "order": 3,
+          "title": "ANTHROPIC FINDS $1.5 MILLION TO HELP PYTHON FOUNDATION IMPROVE SECURITY",
+          "summary": "Anthropic is donating $1.5 million to the Python Software Foundation to enhance security in CPython and PyPI, thereby lowering supply chain risks for millions of Python developers and possibly other open source ecosystems too.",
+          "url": "https://www.theregister.com/2026/01/14/anthropic_python_security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

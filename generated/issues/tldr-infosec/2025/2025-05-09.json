@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-05-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-09",
+  "source_path": "TLDR InfoSec/article_09-05-2025.md",
+  "source_content_hash": "sha256:62b563c75dea4bcff12047720fda3f1f5b15025214cb5d4e9f8d45fd233ed18b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a04",
+          "order": 1,
+          "title": "REGULATED, AI POWERED WORLD",
+          "summary": "As the avalanche of AI-generated code transforms development practices, AppSec teams face unprecedented security challenges.",
+          "url": "https://www.blackduck.com/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250430",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a04",
+          "order": 2,
+          "title": "Discover how Black Duck delivers True Scale Application Security",
+          "summary": "",
+          "url": "https://www.blackduck.com/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250430",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a05",
+          "order": 1,
+          "title": "COGUI PHISHING PLATFORM SENT 580M EMAILS TO STEAL CREDENTIALS",
+          "summary": "A new phishing kit called CoGUI was used to send over 580M emails to targets between January and April. The attack chain begins with an email impersonating a legitimate site with an urgent subject line. The email includes a link that checks if the victim's machine matches a series of criteria such as IP, browser language, OS, etc, and presents a fake login page if the criteria match or redirects the victim to the legitimate site if not. CoGUI is the largest volume phishing campaign Proofpoint is tracking.",
+          "url": "https://www.bleepingcomputer.com/news/security/cogui-phishing-platform-sent-580-million-emails-to-steal-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a06",
+          "order": 2,
+          "title": "KICKIDLER EMPLOYEE MONITORING SOFTWARE ABUSED IN RANSOMWARE ATTACKS",
+          "summary": "Kickidler is an employee monitoring tool that can capture keystrokes, take screenshots, and create videos of employees' screens. A new ransomware campaign operates by using Google Ads masquerading as ads for RVTools, a free Windows utility for managing VMware vSphere deployments. This leads users to download a trojanized version of the software that includes a PowerShell backdoor that deploys Kickidler on the device. The ransomware operator then monitors the victim's (likely an administrator) machine to collect credentials for sensitive systems and off-site cloud backups without detection.",
+          "url": "https://www.bleepingcomputer.com/news/security/kickidler-employee-monitoring-software-abused-in-ransomware-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a07",
+          "order": 3,
+          "title": "SUPPLY CHAIN ATTACK HITS NPM PACKAGE WITH 45,000 WEEKLY DOWNLOADS",
+          "summary": "rand-user-agent, an npm package, was compromised in a supply chain attack that caused it to inject obfuscated code that activates a remote access trojan (RAT) on users' systems. Aikido detected the compromise on May 5, when its malware analysis flagged version 1.0.110. Researchers found obfuscated code hidden in 'dist/index.js', visible only by scrolling horizontally in the npm site's source view.",
+          "url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-hits-npm-package-with-45-000-weekly-downloads/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a08",
+          "order": 1,
+          "title": "DOCUMENT MY PENTEST: YOU HACK, THE AI WRITES IT UP!",
+          "summary": "The PortSwigger research team developed a Burp AI extension that automatically documents a pentest based on the request history. The initial implementation was good at spotting Path Traversal vulnerabilities, but struggled with more complex vulnerabilities like XSS until the team added a regex translator to transform inputs. The team found that the AI could be directly asked to explain why it reported that a false positive was a vulnerability and how to improve its prompt to classify vulnerabilities better.",
+          "url": "https://portswigger.net/research/document-my-pentest?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a09",
+          "order": 2,
+          "title": "THE MASSIVE, HIDDEN INFRASTRUCTURE ENABLING BIG GAME HUNTING AT SCALE",
+          "summary": "Advertisers use Traffic Distribution Systems (TDSs) to direct potential customers to highly targeted ads. Insikt Group has been tracking how cybercriminals utilize malicious TDSs to direct victims to the malware with the highest likelihood of success against the target. Insikt Group has identified a TDS known as TAG-124 that is used by multiple threat actors, such as the Rhysida Ransomware-as-a-Service operation, Iterlock Ransomware, and TA866/ Asylum Ambuscade, but notes that TDSs are hard to defend against because they occur so early in the cyberattack life cycle.",
+          "url": "https://www.recordedfuture.com/blog/massive-hidden-infrastructure-enabling-big-game-hunting-at-scale?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "recordedfuture.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a10",
+          "order": 3,
+          "title": "THE PATH TO MEMORY SAFETY IS INEVITABLE",
+          "summary": "This article discusses memory safety approaches beyond language choice, emphasizing comprehensive solutions including sanitizers, fuzzers, and compiler-based mitigations. The practices include selecting robust distributions like Debian, using tools like Fil-C for C/C++ safety, and implementing runtime protections.",
+          "url": "https://hardenedlinux.org/blog/2025-05-07-the-path-to-memory-safety-is-inevitable/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "hardenedlinux.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a11",
+          "order": 1,
+          "title": "RULEHOUND",
+          "summary": "Rulehound is an index of publicly available and open-source threat detection rulesets.",
+          "url": "https://github.com/infosecB/Rulehound?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a12",
+          "order": 2,
+          "title": "CODEANT AI (PRODUCT LAUNCH)",
+          "summary": "CodeAnt automatically reviews pull requests, flags issues, and proposes fixes. It continuously scans and monitors code and dependencies for a wide range of quality and security issues.",
+          "url": "https://www.codeant.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "codeant.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a13",
+          "order": 3,
+          "title": "NOSEYPARKER",
+          "summary": "Nosey Parker is a command-line tool that finds secrets and sensitive information in textual data and Git history.",
+          "url": "https://github.com/praetorian-inc/noseyparker?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a14",
+          "order": 1,
+          "title": "OPEN SOURCE PROJECT CURL IS SICK OF USERS SUBMITTING “AI SLOP” VULNERABILITIES",
+          "summary": "Daniel Stenberg, the original author of the curl project, posted on LinkedIn about an increasing issue of AI-generated bug reports being submitted to the program on HackerOne. Stenberg has said that maintainers on the project are getting bogged down by “AI slop” reports that include hallucinated vulnerabilities such as one that he cites in the article in which the reported claimed to have found a “novel exploit leveraging stream dependency cycles in the HTTP/3 protocol stack” but the reporter continuously gave nonsensical responses to follow-up questions. Stenberg announced that any reporters of “AI slop” vulnerabilities will be banned from the project.",
+          "url": "https://arstechnica.com/gadgets/2025/05/open-source-project-curl-is-sick-of-users-submitting-ai-slop-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a15",
+          "order": 2,
+          "title": "GOOGLE ROLLS OUT AI TOOLS TO PROTECT CHROME USERS AGAINST SCAMS",
+          "summary": "Google is enhancing Chrome security with Gemini Nano, an on-device AI model, to protect desktop users against scams through Enhanced Protection mode. New AI warnings on Android will also help users identify malicious notifications. Google claims these AI systems have already reduced airline customer service scams by 80% and blocked millions of scammy pages.",
+          "url": "https://techcrunch.com/2025/05/08/google-rolls-out-ai-tools-to-protect-chrome-users-against-scams/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a16",
+          "order": 3,
+          "title": "ADOPTING SUDO-RS BY DEFAULT IN UBUNTU 25.10",
+          "summary": "Ubuntu 25.10 will be the first major Linux distribution to adopt sudo-rs, a Rust reimplementation of sudo developed by the Trifecta Tech Foundation. This memory-safe alternative aims to enhance security at the privilege boundary while maintaining compatibility. The transition should be transparent for most users, though some niche features may not be included.",
+          "url": "https://discourse.ubuntu.com/t/adopting-sudo-rs-by-default-in-ubuntu-25-10/60583?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "discourse.ubuntu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-09:a17",
+          "order": 1,
+          "title": "DELTA AIR LINES CLASS ACTION CLEARED FOR TAKEOFF OVER CROWDSTRIKE CHAOS",
+          "summary": "A federal judge has advanced a class action lawsuit against Delta Air Lines by passengers affected by the July 2024 CrowdStrike software outage.",
+          "url": "https://www.theregister.com/2025/05/07/delta_crowdstrike_class_action/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a18",
+          "order": 2,
+          "title": "FAKE CRYPTO EXCHANGE ADS ON FACEBOOK SPREAD MALWARE",
+          "summary": "Fake crypto exchange ads on Facebook are spreading malware through deceptive tactics like using celebrity names and trusted cryptocurrency exchange logos to lure users into downloading malicious software.",
+          "url": "https://hackread.com/fake-crypto-exchange-ads-facebook-spread-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-09:a19",
+          "order": 3,
+          "title": "EUROPOL ANNOUNCES MORE DDOS SERVICE TAKEDOWNS, ARRESTS",
+          "summary": "Europol has shut down six DDoS attack websites and arrested four individuals in Poland for running a network of platforms used for attacks.",
+          "url": "https://www.securityweek.com/europol-announces-more-ddos-service-takedowns-arrests/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

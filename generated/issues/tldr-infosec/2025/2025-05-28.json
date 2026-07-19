@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-05-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-28",
+  "source_path": "TLDR InfoSec/article_28-05-2025.md",
+  "source_content_hash": "sha256:64ec0288cd62ac4e4dd628838a449b2462b5640ead1baeaf9124f268bcbc91a2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a04",
+          "order": 1,
+          "title": "PROTECTING HIGH-PROFILE INDIVIDUALS USING OSINT",
+          "summary": "Threats against high-profile individuals often start online — but if they go unnoticed, they can escalate into real-world harassment or even physical harm. This threat is growing more urgent at a time when:",
+          "url": "https://go.flashpoint.io/guide-to-osint-executive-protection?utm_campaign=Resource_RP_OSINT_Executive_Protection&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000Lo4xBIAR",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a04",
+          "order": 2,
+          "title": "threats escalate. Get the guide",
+          "summary": "",
+          "url": "https://go.flashpoint.io/guide-to-osint-executive-protection?utm_campaign=Resource_RP_OSINT_Executive_Protection&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000Lo4xBIAR",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a05",
+          "order": 1,
+          "title": "MATHWORKS, CREATOR OF MATLAB, CONFIRMS RANSOMWARE ATTACK",
+          "summary": "MathWorks, creator of MATLAB computing platform, disclosed a ransomware attack that began May 18 that affected customer-facing applications and internal systems. The company has been gradually restoring services with cybersecurity experts' help and has notified federal authorities, but it hasn't revealed which ransomware group was responsible or whether data was stolen.",
+          "url": "https://links.tldrnewsletter.com/11ex7P",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a06",
+          "order": 2,
+          "title": "ADIDAS CONFIRMS CRIMINALS STOLE DATA FROM CUSTOMER SERVICE PROVIDER",
+          "summary": "Adidas disclosed that an unauthorized person stole customer contact information from a third-party customer service provider. The data included names and email addresses of customers who previously contacted support, but excluded passwords and payment information. The company is notifying affected customers and authorities while investigating the breach.",
+          "url": "https://www.theregister.com/2025/05/27/adidas_confirms_data_theft/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a07",
+          "order": 3,
+          "title": "GITHUB MCP EXPLOITED: ACCESSING PRIVATE REPOSITORIES VIA MCP",
+          "summary": "A critical vulnerability in GitHub's MCP integration allows attackers to use prompt injection in public issues to trick coding agents (e.g., Claude) into leaking data from private repositories. This exploit, termed a \"toxic agent flow,\" does not rely on compromised tools but exploits trusted agents' interactions with untrusted external content. The issue requires system-level mitigations—like runtime guardrails and continuous MCP traffic monitoring—since model-level alignment is insufficient to prevent such context-driven attacks.",
+          "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "invariantlabs.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a08",
+          "order": 1,
+          "title": "THREAT SPOTLIGHT: HIJACKED ROUTERS AND FAKE SEARCHES FUELING PAYROLL HEIST",
+          "summary": "ReliaQuest has discovered a campaign that uses SEO poisoning to target employee mobile devices for payroll fraud. Attackers create fake company login pages that appear in search results, steal credentials when employees access them, and then redirect paychecks to attacker-controlled accounts. This post dives into the campaign, the attacks, and how they keep evading detection.",
+          "url": "https://reliaquest.com/blog/threat-spotlight-payroll-fraud-attackers-stealing-paychecks-seo-poisoning/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "reliaquest.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a09",
+          "order": 2,
+          "title": "REDISRAIDER: WEAPONIZING MISCONFIGURED REDIS TO MINE CRYPTOCURRENCY AT SCALE",
+          "summary": "RedisRaider is a new Linux malware campaign that scans the internet for public Redis servers running on Linux and then abuses the Redis SET command to inject a cron job. The cron job downloads the RedisRaider binary to /tmp/mysql, makes it executable, and then executes it using nohup. The RedisRaider binary is a heavily obfuscated dropper for a modified version of the XMRig cryptominer that uses a custom packer to further complicate reversing and forensic analysis.",
+          "url": "https://securitylabs.datadoghq.com/articles/redisraider-weaponizing-misconfigured-redis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a10",
+          "order": 3,
+          "title": "MASTER TAILSCALE ACLS FOR YOUR ENTERPRISE ENVIRONMENT: A STEP-BY-STEP GUIDE",
+          "summary": "Tailscale can use ACLs to provide zero-trust network access to internal resources. This guide presents and walks through a sample Enterprise ACL and then deep-dives into how ACLs can be written and modified for some common use cases, such as RBAC, secure device access, hybrid infrastructure, and SSH auditing.",
+          "url": "https://vulnerx.com/mastering-tailscale-acl/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "vulnerx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a11",
+          "order": 1,
+          "title": "SECATOR",
+          "summary": "secator is a task and workflow runner used for security assessments. It supports dozens of well-known security tools and is designed to improve productivity for pentesters and security researchers.",
+          "url": "https://github.com/freelabz/secator?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a12",
+          "order": 2,
+          "title": "TOP 5 TOOLS FOR ACTIVE DIRECTORY PENETRATION TESTING",
+          "summary": "The top five tools for hacking Active Directory domains are PingCastle, ldapdomaindump, BloodHound & PlumHound, Responder, and HashCat.",
+          "url": "https://www.linkedin.com/pulse/top-5-tools-active-directory-penetration-testing-tcm-security-inc-vcgvc?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a13",
+          "order": 3,
+          "title": "AZUREVELO",
+          "summary": "azurevelo deploys a Velociraptor container on Azure App Service to aid incident responders.",
+          "url": "https://github.com/msdirtbag/azurevelo?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a14",
+          "order": 1,
+          "title": "DUTCH INTELLIGENCE AGENCIES SAY RUSSIAN HACKERS STOLE POLICE DATA IN CYBERATTACK",
+          "summary": "\"Laundry Bear,\" a Russian state-backed hacker group, breached Dutch police systems in September, accessing all officers' contact details. The group targets Western nations supporting Ukraine, seeking military equipment information.",
+          "url": "https://www.securityweek.com/dutch-intelligence-agencies-say-russian-hackers-stole-police-data-in-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a15",
+          "order": 2,
+          "title": "FIREFOX SECURITY RESPONSE TO PWN2OWN 2025",
+          "summary": "Two new content-process exploits were demonstrated against Firefox at Pwn2Own 2025, but neither bypassed the browser's sandbox. Mozilla released patched versions the same day and urged users to update immediately. These results reflect recent architectural hardening and reinforce Firefox's security resilience.",
+          "url": "https://blog.mozilla.org/security/2025/05/17/firefox-security-response-to-pwn2own-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a16",
+          "order": 3,
+          "title": "THREAT OF TCC BYPASSES ON MACOS",
+          "summary": "macOS's TCC framework blocks unauthorized access to sensitive data, even for malware with root access, but many third-party apps expose vulnerabilities that bypass these protections. A flaw in Cursor.app shows how malware can inherit TCC permissions and access protected files without user knowledge. Developers and vendors often ignore these issues, despite their real threat to user privacy and system integrity.",
+          "url": "https://afine.com/threat-of-tcc-bypasses-on-macos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "afine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-28:a17",
+          "order": 1,
+          "title": "ZSCALER TO ACQUIRE MDR SPECIALIST RED CANARY",
+          "summary": "Zscaler announced its intention to acquire Red Canary, known for Managed Detection and Response (MDR) services, to enhance its integration of artificial intelligence, automation, and human expertise into security.",
+          "url": "https://www.securityweek.com/zscaler-to-acquire-mdr-specialist-red-canary/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a18",
+          "order": 2,
+          "title": "CLOUDFLARE BOSS SENDS STARK WARNING OVER LALIGA ANTI-PIRACY CAMPAIGN",
+          "summary": "Cloudflare CEO Matthew Prince warned that LaLiga's broad anti-piracy IP blocks, which target Cloudflare infrastructure, are causing significant collateral damage by disrupting access to critical and legitimate websites, including emergency services in Spain.",
+          "url": "https://links.tldrnewsletter.com/Fg75NA",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-28:a19",
+          "order": 3,
+          "title": "IRANIAN PLEADS GUILTY TO ROBBINHOOD RANSOMWARE ATTACKS, FACES 30 YEARS",
+          "summary": "An Iranian man has confessed to his involvement in the Robbinhood ransomware attacks that targeted U.S. cities and organizations from 2019 to 2024, stealing data and demanding Bitcoin ransoms.",
+          "url": "https://www.bleepingcomputer.com/news/security/iranian-pleads-guilty-to-robbinhood-ransomware-attacks-faces-30-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

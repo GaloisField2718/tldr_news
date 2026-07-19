@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-05-08",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-05-08",
+  "source_path": "TLDR Dev/article_08-05-2026.md",
+  "source_content_hash": "sha256:5a136f3835a35e1fb81aba551ba96d93b74ae2e52d19c223b5d7699febdfd63d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-05-08",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-08:a05",
+          "order": 1,
+          "title": "HOW GOOGLE MADE THEIR GEMMA LLM 3X FASTER",
+          "summary": "Google's Gemma model achieved a three-fold increase in inference speed using speculative decoding. This technique involves a tiny, fast 'Drafter' predicting tokens that the main model verifies in parallel to efficiently use the GPU and save memory.",
+          "url": "https://stacksweep.substack.com/p/how-google-made-their-gemma-llm-3x?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "stacksweep.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a06",
+          "order": 2,
+          "title": "OPENAI'S WEBRTC PROBLEM",
+          "summary": "WebRTC is a poor choice for voice-based AI due to its packet-dropping design, which favors low latency over the audio accuracy needed for reliable prompts, and introduces technical debt with complex port management. The better alternative is QUIC, which uses unique connection IDs for easy network switching and load balancing.",
+          "url": "https://moq.dev/blog/webrtc-is-the-problem/?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "moq.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a07",
+          "order": 3,
+          "title": "THE ARCHITECTURE OF LOCAL-FIRST WEB DEVELOPMENT",
+          "summary": "Local-first development is a paradigm shift where application data is primarily stored on the user's device instead of a central server. Modern implementations often use SQLite compiled to WebAssembly to turn the browser into a high-performance database node, managing complexities like conflict resolution and data migration through specialized sync engines.",
+          "url": "https://smashingmagazine.com/2026/05/architecture-local-first-web-development/?utm_source=tldrdev",
+          "reading_time_minutes": 33,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-08:a08",
+          "order": 1,
+          "title": "AI SLOP IS KILLING ONLINE COMMUNITIES",
+          "summary": "The proliferation of low-effort, AI-generated content is currently overwhelming online communities and drowning out meaningful human discourse. Good contributions should be built with AI under careful human guidance rather than simply being the raw, thoughtless byproduct of a simple prompt.",
+          "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "rmoff.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a09",
+          "order": 2,
+          "title": "AGENTS NEED CONTROL FLOW, NOT MORE PROMPTS",
+          "summary": "Building reliable AI agents requires moving beyond complex prompt engineering toward deterministic control flow encoded directly in software. Reliable systems must treat LLMs as modular components within a broader runtime that enforces validation checkpoints and explicit logic.",
+          "url": "https://bsuh.bearblog.dev/agents-need-control-flow/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "bsuh.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-08:a10",
+          "order": 1,
+          "title": "EMBEDDING ANALYTICS? SDK > IFRAME",
+          "summary": "Iframe > redirect to a separate auth flow > awkward styling > users bounced out of your UX. Sound familiar? Reveal [11] is an actual SDK offering React, Angular, Vue, and Blazor on the client, with .NET, Java, or Node on the server. Dashboards render natively in your app. Ship API-driven intelligence [11], not a bolt-on LLM wrapper.",
+          "url": "https://www.revealbi.io/ai?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "revealbi.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a12",
+          "order": 2,
+          "title": "MIRAGE",
+          "summary": "Mirage is a unified virtual file system that simplifies how AI agents interact with various data sources, such as S3, Google Drive, and Slack, by mounting them into a single directory tree accessible via standard Unix-like commands. It offers SDKs for major frameworks and includes a two-layer cache and portable workspace snapshots for high performance and environment consistency.",
+          "url": "https://github.com/strukto-ai/mirage?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a13",
+          "order": 3,
+          "title": "ANNOUNCING ROLLDOWN 1.0",
+          "summary": "Rolldown 1.0 is a stable, production-ready Rust-based JavaScript bundler that serves as the underlying engine for Vite 8, unifying development and production pipelines to simplify the web build process. This high-performance tool achieves processing speeds comparable to esbuild while maintaining compatibility with the Rollup plugin ecosystem.",
+          "url": "https://voidzero.dev/posts/announcing-rolldown-1-0?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "voidzero.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-08:a14",
+          "order": 1,
+          "title": "9 TIMES THE WEB PLATFORM WAS INFLUENCED BY LIBRARIES",
+          "summary": "The web platform has historically evolved by adopting and standardizing APIs that were first developed and battle-tested by popular third-party JavaScript libraries. Innovations such as `querySelector`, `classList`, and declarative UI attributes originated in tools like jQuery and Bootstrap before becoming native browser features. Modern language capabilities, including Promises, ES Modules, and the `structuredClone` method, also came from community-driven solutions.",
+          "url": "https://jadjoubran.io/blog/web-platform-influenced-by-libraries?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "jadjoubran.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a15",
+          "order": 2,
+          "title": "WHAT IS A STANDARD CONTAINER: DIVING INTO THE OCI RUNTIME SPEC",
+          "summary": "The Open Container Initiative defines standard containers as portable, isolated execution environments that encapsulate software and its dependencies to guarantee consistent performance across platforms.",
+          "url": "https://labs.iximiuz.com/tutorials/oci-containers-explained?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "labs.iximiuz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a16",
+          "order": 3,
+          "title": "OPEN WEB VS AI: WHAT CAN W3C DO?",
+          "summary": "A recent meeting at the W3C addressed growing threats to the open web posed by LLM crawlers and AI-driven content consumption. These technologies challenge the current web model by straining server resources, extracting value from publishers without fair exchange, and potentially undermining advertising revenue.",
+          "url": "https://hidde.blog/web-ai-breakout/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "hidde.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-05-08:a17",
+          "order": 1,
+          "title": "AI STRATEGY IS OUTPACING DELIVERY",
+          "summary": "AI adoption is accelerating, but delivery continues to lag as ROI pressure rises and governance and system complexity introduce",
+          "url": "https://www.moduscreate.com/downloads/executive-insights-report?utm_campaign=39225702-2026+Brand+Research&utm_source=tldrdev&utm_medium=newsletter&utm_content=may8",
+          "reading_time_minutes": null,
+          "source_domain": "moduscreate.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a17",
+          "order": 2,
+          "title": "friction. See the data",
+          "summary": "",
+          "url": "https://www.moduscreate.com/downloads/executive-insights-report?utm_campaign=39225702-2026+Brand+Research&utm_source=tldrdev&utm_medium=newsletter&utm_content=may8",
+          "reading_time_minutes": null,
+          "source_domain": "moduscreate.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a18",
+          "order": 3,
+          "title": "THE PHP LICENSE IS DEAD; LONG LIVE THE BSD 3-CLAUSE",
+          "summary": "The PHP project is retiring its long-standing, custom licenses in favor of the widely recognized BSD 3-Clause license to improve legal compatibility and simplify redistribution for developers and Linux distributions.",
+          "url": "https://fossforce.com/2026/05/the-php-license-is-dead-long-live-the-bsd-3-clause/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "fossforce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a19",
+          "order": 4,
+          "title": "I SWITCHED FROM MAC TO A LENOVO CHROMEBOOK, AND YOU CAN TOO",
+          "summary": "The Lenovo Chromebook Plus 14 is a great high-performance alternative to MacBooks for web developers, offering comparable ARM-based processing power.",
+          "url": "https://blog.johnozbay.com/i-left-apples-ecosystem-for-a-lenovo-chromebook-and-you-can-too.html?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.johnozbay.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a20",
+          "order": 5,
+          "title": "OURCAR: WHAT I LEARNED MAKING AN APP FOR MY FAMILY",
+          "summary": "Developing a custom car-sharing application to resolve family logistical challenges showed this dev the importance of balancing user-centered design, technical performance, and focused feature scoping.",
+          "url": "https://mendelgreenberg.com/posts/ourcar/?utm_source=tldrdev",
+          "reading_time_minutes": 20,
+          "source_domain": "mendelgreenberg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-05-08:a21",
+          "order": 6,
+          "title": "MAYBE YOU SHOULDN'T INSTALL NEW SOFTWARE FOR A BIT",
+          "summary": "Due to newly discovered Linux kernel vulnerabilities and the elevated risk of supply chain attacks, a one-week moratorium on installing new software is recommended, excluding essential security patches.",
+          "url": "https://xeiaso.net/blog/2026/abstain-from-install/?utm_source=tldrdev",
+          "reading_time_minutes": 1,
+          "source_domain": "xeiaso.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

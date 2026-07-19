@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-06-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-06-02",
+  "source_path": "TLDR InfoSec/article_02-06-2025.md",
+  "source_content_hash": "sha256:791bacfc2ecf3e6253fb5a426d287654027657ec7a3ed3722d998fe491fdf46b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-06-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-02:a04",
+          "order": 1,
+          "title": "EXPLOIT DETAILS FOR MAX SEVERITY CISCO IOS XE FLAW NOW PUBLIC",
+          "summary": "Cisco disclosed vulnerabilities (CVE-2025-20188) in IOS XE for Catalyst Wireless Controllers and APs. The vendor indicated that a hard-coded JSON Web Token (JWT) allows unauthenticated remote attackers to upload files, perform path traversal, and execute commands with root privileges. CVE-2025-20188 is only dangerous if the 'Out-of-Band AP Image Download' feature is enabled on the Wireless Controllers.",
+          "url": "https://www.bleepingcomputer.com/news/security/exploit-details-for-max-severity-cisco-ios-xe-flaw-now-public/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a05",
+          "order": 2,
+          "title": "INTERLOCK RANSOMWARE DEPLOYS NEW NODESNAKE RAT IN UK ATTACKS",
+          "summary": "The Interlock ransomware group has deployed a Remote Access Trojan (RAT) called NodeSnake in attacks on two UK universities over two months. NodeSnake enables attackers to control infected computers, access files, monitor activity, and install additional malware while remaining undetected. It emerged in September 2024 and previously targeted large organizations in North America and Europe. Interlock now focuses on educational institutions and local governments, possibly to steal intellectual property and test new attack methods.",
+          "url": "https://hackread.com/interlock-ransomware-new-nodesnake-rat-in-uk-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a06",
+          "order": 3,
+          "title": "NEW LINUX FLAWS ALLOW PASSWORD HASH THEFT VIA CORE DUMPS IN UBUNTU, RHEL, FEDORA",
+          "summary": "Two race condition vulnerabilities (CVE-2025-5054 and CVE-2025-4598) in Linux dump handlers enable local attackers to steal password hashes and sensitive data from crashed privileged processes. These flaws affect apport in Ubuntu and systemd-coredump in Red Hat and Fedora, allowing attackers to exploit SUID programs via timing attacks that replace crashed processes with malicious ones to access core dumps. Organizations can mitigate risk by disabling core dumps for SUID binaries with \"echo 0 > /proc/sys/fs/suid_dumpable\" until patches are applied.",
+          "url": "https://links.tldrnewsletter.com/7r8pXu",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-02:a07",
+          "order": 1,
+          "title": "DEMONSTRABLY SECURE SOFTWARE SUPPLY CHAINS WITH NIX",
+          "summary": "Nix enables secure software supply chains by providing verifiable proofs of the sources that produced a final product, removing the need for restrictive air-gapped environments. It tracks all dependencies to their source code through fixed-output derivations and exports these sources, typically a few GB, to an offline system for integrity proof by rebuilding everything from scratch. This method lets developers use modern tools and workflows while ensuring the cryptographic supply chain verification needed by agencies like CISA, BSI, and ANSSI for critical systems.",
+          "url": "https://nixcademy.com/posts/secure-supply-chain-with-nix/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "nixcademy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a08",
+          "order": 2,
+          "title": "DANABOT TAKEDOWN SHOWS HOW AGENTIC AI CUT MONTHS OF SOC ANALYSIS TO WEEKS",
+          "summary": "U.S. authorities have dismantled DanaBot, a Russian malware operation that infected 300,000+ systems and caused $50+ million in damage. The takedown showcased agentic AI's cybersecurity capabilities. Autonomous threat detection and real-time analysis were used to accelerate investigations and enable swift law enforcement action against sophisticated cyber threats.",
+          "url": "https://links.tldrnewsletter.com/YIVAZv",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a09",
+          "order": 3,
+          "title": "WIRELESS PIVOTS: HOW TRUSTED NETWORKS BECOME INVISIBLE THREAT VECTORS",
+          "summary": "Even well-configured enterprise Wi-Fi networks that use EAP-TLS can be compromised via wireless pivots targeting trusted devices connecting to untrusted networks outside the corporate perimeter. Attackers capture probe requests from corporate devices, set up rogue access points mimicking home networks (like Thomson routers), crack Wi-Fi passwords via WPA handshake captures, and use tools like Responder to intercept NetNTLM hashes from mDNS/LLMNR broadcasts. Once cracked, these hashes provide internal credentials for accessing cloud services like Office 365, illustrating that the security boundary extends beyond the corporate network to any location where trusted devices connect.",
+          "url": "https://www.thexero.co.uk/wifi/wireless-pivots?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "thexero.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-02:a10",
+          "order": 1,
+          "title": "SPECIALIZED CYBER TRAINING FOR ICS/OT",
+          "summary": "Industrial environments—such as critical infrastructure and manufacturing—face unique threats that IT security training doesn't address. Watch the video [11] to see why specific ICS/OT training is a must. Ready to start? SANS offers hands-on labs with real equipment and instructors who are active in the field today. See available",
+          "url": "https://www.sans.org/industrial-control-systems-security/?utm_source=TLDR&utm_medium=Sponsored_Content&utm_content=ICS_Security_TLDR_6.02.25_Newsletter&utm_campaign=ICS_OT_Malware_Ransomware_2025&utm_type=Global_Campaign&utm_goal=Leads&utm_rDetail=Global",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a12",
+          "order": 2,
+          "title": "courses and certifications",
+          "summary": "",
+          "url": "https://www.sans.org/cyber-security-courses/?focus-area=industrial-control-systems-security%2F%3Futm_source%3DTLDR&utm_medium=Sponsored_Content&utm_content=ICS_Courses_TLDR_6.02.25_Newsletter&utm_campaign=ICS_OT_Malware_Ransomware_2025&utm_type=Global_Campaign&utm_goal=Leads&utm_rDetail=Global",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a13",
+          "order": 3,
+          "title": "ENVILDER",
+          "summary": "Envilder is a CLI that securely centralizes your environment variables from AWS SSM as a single source of truth.",
+          "url": "https://github.com/macalbert/envilder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a14",
+          "order": 4,
+          "title": "PROMPTME",
+          "summary": "PromptMe is an educational project that showcases security vulnerabilities in large language models and their web integrations. It includes 10 hands-on challenges inspired by the OWASP LLM Top 10, demonstrating how these vulnerabilities can be discovered and exploited in real-world scenarios.",
+          "url": "https://github.com/R3dShad0w7/PromptMe/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a15",
+          "order": 5,
+          "title": "UNBOUND (PRODUCT LAUNCH)",
+          "summary": "Unbound's AI Gateway product connects to commonly used AI tools to surface usage patterns and provide model routing, real-time protection, and usage analytics.",
+          "url": "https://www.getunbound.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "getunbound.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-02:a16",
+          "order": 1,
+          "title": "POLICE TAKES DOWN AVCHECK SITE USED BY CYBERCRIMINALS TO SCAN MALWARE",
+          "summary": "International law enforcement seized AVCheck, one of the largest counter-antivirus services cybercriminals used to test whether their malware could evade commercial antivirus software before deployment. The operation, which involved U.S., Dutch, and other agencies, also took down related crypting services Cryptor.biz and Crypt.guru that helped obfuscate malware to make it undetectable. The takedown was part of Operation Endgame and disrupted a key component of the cybercriminal ecosystem that allowed ransomware groups to refine their attacks against security systems.",
+          "url": "https://www.bleepingcomputer.com/news/security/police-takes-down-avcheck-antivirus-site-used-by-cybercriminals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a17",
+          "order": 2,
+          "title": "RANSOMWARE KINGPIN “STERN” APPARENTLY IDED BY GERMAN LAW ENFORCEMENT",
+          "summary": "German police have identified \"Stern,\" the enigmatic leader of the notorious Trickbot cybercrime cartel, as 36-year-old Russian Vitaly Kovalev. Trickbot attacked thousands of victims, including hospitals, stealing hundreds of millions over six years. Kovalev was previously sanctioned under different aliases, but his connection to \"Stern\" remained hidden until now.",
+          "url": "https://arstechnica.com/security/2025/05/german-police-say-theyve-identified-trickbot-ransomware-kingpin/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-02:a18",
+          "order": 1,
+          "title": "META STOPPED COVERT OPERATIONS FROM IRAN, CHINA, AND ROMANIA SPREADING PROPAGANDA",
+          "summary": "Meta disrupted propaganda campaigns from Iran, China, and Romania that misled users with fake accounts and AI-generated images.",
+          "url": "https://securityaffairs.com/178456/social-networks/meta-stopped-covert-operations-from-iran-china-romania.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a19",
+          "order": 2,
+          "title": "BILLIONS OF COOKIES UP FOR GRABS AS EXPERTS WARN OVER SESSION SECURITY",
+          "summary": "93.7 billion stolen cookies are for sale online, with 7-9% still active and exploitable by cybercriminals for account access.",
+          "url": "https://www.theregister.com/2025/05/29/billions_of_cookies_available/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-02:a20",
+          "order": 3,
+          "title": "VICTORIA'S SECRET HIT BY OUTAGES AS IT BATTLES SECURITY INCIDENT",
+          "summary": "Victoria's Secret responded to a cybersecurity incident that disrupted its website and online orders by shutting down its website, pausing some in-store services, and collaborating with third-party experts to restore operations.",
+          "url": "https://techcrunch.com/2025/05/28/victorias-secret-hit-by-outages-as-it-battles-security-incident/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-23",
+  "source_path": "TLDR InfoSec/article_23-10-2025.md",
+  "source_content_hash": "sha256:028c21884b9e35a9b0c78dad0ebe7f04329715819ae7be0a829cc422dacd83d3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a04",
+          "order": 1,
+          "title": "MANAGEMENT",
+          "summary": "Most PAM vendors started with password vaults and bolted on cloud connectors. StrongDM was built differently [4]: a universal access platform that treats authorization, not authentication, as the primary control plane.",
+          "url": "https://www.strongdm.com/blog/gartner-magic-quadrant-privileged-access-management",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a04",
+          "order": 2,
+          "title": "Read why Gartner recognized StrongDM's modern approach",
+          "summary": "",
+          "url": "https://www.strongdm.com/blog/gartner-magic-quadrant-privileged-access-management",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a05",
+          "order": 1,
+          "title": "RESEARCHERS UNCOVER REMOTE CODE EXECUTION FLAW IN ABANDONED RUST CODE LIBRARY",
+          "summary": "CVE-2025-62518 is a high-severity boundary-parsing vulnerability (CVSS 8.1) in the abandoned async-tar Rust library that allows remote code execution through file overwriting. The flaw affects critical tools, including the uv package manager, tokio-tar (5+ million downloads), and multiple widely-used forks. The issue highlights the open-source abandonware crisis, where unmaintained code is repeatedly forked, spreading bugs across ecosystems with limited visibility and patchability. Security teams should audit dependencies for async-tar and related forks (tokio-tar, testcontainers, wasmCloud), apply available patches, and establish processes to track abandoned dependencies.",
+          "url": "https://cyberscoop.com/async-tar-rust-open-source-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a06",
+          "order": 2,
+          "title": "TP-LINK WARNS OF CRITICAL COMMAND INJECTION FLAW IN OMADA GATEWAYS",
+          "summary": "TP-Link has issued a warning about two command injection vulnerabilities in Omada gateway devices that could allow attackers to execute arbitrary OS commands. One of the flaws has a critical severity rating (CVSS 9.3) and can be exploited by unauthenticated attackers, while the second requires access to the web management interface. TP-Link also disclosed two additional vulnerabilities in a separate bulletin that could allow command injection and root access.",
+          "url": "https://www.bleepingcomputer.com/news/security/tp-link-warns-of-critical-command-injection-flaw-in-omada-gateways/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a07",
+          "order": 3,
+          "title": "TYKIT SVG PHISHING KIT TIED TO ATTACKS TARGETING M365 CREDENTIALS",
+          "summary": "Researchers from ANY.RUN identified a new phishing campaign using SVG attachments as lures, dubbed the Typical phishing kit or Tykit. The malicious SVG distracts users while embedded JavaScript redirects the victim to a “trampoline” page,  which then leads to a phishing site mimicking the Microsoft 365 login page. ANY.RUN believes this campaign is operated by a Phishing-as-a-Service (PhaaS) operator.",
+          "url": "https://links.tldrnewsletter.com/RNF3Nn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a08",
+          "order": 1,
+          "title": "PROMPT INJECTION TO RCE IN AI AGENTS",
+          "summary": "Trail of Bits discovered argument injection vulnerabilities across three popular AI agent platforms that allow attackers to bypass human approval safeguards and achieve remote code execution. The flaw exploits pre-approved “safe commands” such as git, find, and ripgrep through malicious flag combinations (e.g., git show --format to write files, fd -x=python3 for execution, or go test -exec to run arbitrary code). These one-shot prompt-injections can be embedded in code comments, GitHub repositories, or logs. Researchers note that maintaining allowlists of “safe commands” without sandboxing is fundamentally insecure, as flag filtering is impractical. Security teams should use container-based sandboxing, use argument separators (--), drastically reduce allowlists, and audit against GTFOBINS/LOLBINS for potential abuse.",
+          "url": "https://blog.trailofbits.com/2025/10/22/prompt-injection-to-rce-in-ai-agents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a09",
+          "order": 2,
+          "title": "UNLOCKING FREE WIFI ON BRITISH AIRWAYS",
+          "summary": "British Airways offers free “messaging” WiFi to frequent flyer members, limited to whitelisted messaging app domains via SNI (Server Name Indication) filtering in TLS handshakes. By simulating traffic to approved domains, researchers found they could tunnel general web activity through the free tier. The method relies on customizing TLS connections and proxying traffic, demonstrating how SNI leaks destination domains even when content is encrypted and how service restrictions can be bypassed with technical knowledge.",
+          "url": "https://saxrag.com/tech/reversing/2025/06/01/BAWiFi.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "saxrag.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a10",
+          "order": 3,
+          "title": "VERIZON: MOBILE BLINDSPOT LEADS TO NEEDLESS DATA BREACHES",
+          "summary": "Many organizations overlook mobile security, leaving them exposed as employees transmit attacks from personal devices. Smishing has become more effective than email phishing, with up to half of users failing simulated tests. Despite the availability of strong mobile defenses, most organizations fail to adopt them, leading to increased breach risk, downtime, and regulatory consequences.",
+          "url": "https://links.tldrnewsletter.com/q8AZyX",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a11",
+          "order": 1,
+          "title": "CONTAIN SLACK DATA BEFORE IT COSTS MILLIONS",
+          "summary": "Uncontrolled data equals uncontrolled risk. BENlabs deployed Onna to protect against litigation costs and infosec vulnerabilities hiding in Slack. The result: proactive discovery, predictable costs, and stronger compliance. Onna gives teams the confidence to scale without fear of legal or security fallout.",
+          "url": "https://www.revealdata.com/case-study/how-benlabs-avoids-seven-figure-ediscovery-costs-with-onnas-prophylactic-approach?utm_campaign=19424793-25Q3+BENlabs+Case+Study&utm_source=email&utm_medium=Email+ads&utm_content=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "revealdata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a11",
+          "order": 2,
+          "title": "Download the full case study",
+          "summary": "",
+          "url": "https://www.revealdata.com/case-study/how-benlabs-avoids-seven-figure-ediscovery-costs-with-onnas-prophylactic-approach?utm_campaign=19424793-25Q3+BENlabs+Case+Study&utm_source=email&utm_medium=Email+ads&utm_content=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "revealdata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a12",
+          "order": 3,
+          "title": "IMHEX",
+          "summary": "Imhex is a modern, high-performance hex editor for reverse engineers and programmers. It features a visually optimized interface, data pattern analysis, and powerful scripting capabilities.",
+          "url": "https://github.com/WerWolv/ImHex?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a13",
+          "order": 4,
+          "title": "GRAVWELL (PRODUCT LAUNCH)",
+          "summary": "Gravwell is an enterprise analytics and security platform that helps teams centralize logs, accelerate threat hunting, and analyze data from both IT and OT environments.",
+          "url": "https://www.gravwell.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gravwell.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a14",
+          "order": 5,
+          "title": "INTRODUCING HONEYBEE: HOW WE AUTOMATE HONEYPOT DEPLOYMENT FOR THREAT RESEARCH",
+          "summary": "Wiz has open-sourced HoneyBee, an automation framework that rapidly deploys realistic honeypots by generating intentionally misconfigured Dockerfiles and Docker Compose manifests for popular cloud apps. Each honeypot can include AI-generated misconfigurations, Nuclei validation templates, and optional tcpdump monitoring. Using HoneyBee, Wiz researchers discovered cryptomining campaigns targeting exposed Java Debug Wire Protocol (JDWP) and PostgreSQL, capturing complete attack chains, from XMRig deployment to fileless persistence within hours. Honeybee supports three key use cases: validating detection rules safely, orchestrating honeypot networks with SIEM/CSPM integration, and creating hands-on training environments that mirror real-world misconfigurations",
+          "url": "https://www.wiz.io/blog/honeybee-threat-research?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a15",
+          "order": 1,
+          "title": "CHINESE GANGS MADE OVER $1B TARGETING AMERICANS WITH SCAM TEXTS",
+          "summary": "Chinese organized crime groups have generated over $1 billion in just three years through a large-scale SMS scam operation targeting Americans with fake toll, postage, and government refund messages. The campaign has surged 350% since January 2024, with a record 330,000 scam texts reported in a single day. The operation uses US-based SIM farms to send messages, steals credit card data, and bypasses MFA by adding stolen cards to mobile wallets (which banks often trust after first use). The groups also employ 400-500 gig workers and money mules recruited via Telegram to buy and resell high-value goods and gift cards for laundering. Security teams should educate users to avoid unsolicited payment messages, verify messages through official channels, tighten device trust policies for mobile wallets, monitor gift card purchases, and deploy anti-malware solutions with web protection and scam detection capabilities.",
+          "url": "https://www.malwarebytes.com/blog/news/2025/10/chinese-gangs-made-over-1-billion-targeting-americans-with-scam-texts?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a16",
+          "order": 2,
+          "title": "STATE OF CLOUD SECURITY",
+          "summary": "Datadog's 2025 State of Cloud Security report shows progress alongside persistent gaps across AWS, Azure, and Google Cloud. IMDSv2 enforcement has increased to 49% of EC2 instances, and federated authentication adoption now covers 79% of organizations. However, 59% of AWS IAM users still have access keys older than one year, and nearly one in five EC2 instances remain overprivileged. While data perimeter adoption and public access blocking have improved, insecure defaults and lingering legacy practices continue to expose organizations to risk.",
+          "url": "https://www.datadoghq.com/state-of-cloud-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a17",
+          "order": 3,
+          "title": "JAGUAR LAND ROVER LOOKING AT $2.5B PRICE TAG FROM CRIPPLING CYBERATTACK",
+          "summary": "Jaguar Land Rover suffered one of the most expensive cyberattacks in UK history, disrupting production for weeks and affecting over 5,000 organizations. The attack is estimated to have cost at least £1.9 billion in damages and triggered significant supply chain and operational fallout. Government agencies intervened to assist in recovery, but full restoration of systems remains ongoing.",
+          "url": "https://arstechnica.com/security/2025/10/jaguar-land-rover-struggling-8-weeks-after-most-expensive-uk-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-23:a18",
+          "order": 1,
+          "title": "YOUR FIREWALL IS ONLY DOING HALF THE JOB",
+          "summary": "Discover how attackers “call home” through your outbound traffic—and how you can stop them before they do real damage. Read",
+          "url": "https://www.intrusion.com/blog/why-you-need-to-monitor-and-control-outbound-traffic/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_term=10232025",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a18",
+          "order": 2,
+          "title": "the blog by Intrusion.",
+          "summary": "",
+          "url": "https://www.intrusion.com/blog/why-you-need-to-monitor-and-control-outbound-traffic/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_term=10232025",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a19",
+          "order": 3,
+          "title": "ROBOCALLING TASK FORCE BILL ADVANCES IN SENATE",
+          "summary": "The bipartisan Foreign Robocall Elimination Act has passed the Senate Commerce Committee, establishing an FCC-led task force to investigate overseas robocalling operations, recommend countermeasures, and evaluate the effectiveness of STIR/SHAKEN caller authentication protocols.",
+          "url": "https://cyberscoop.com/senate-commerce-robocall-bill-advances-committee-fcc/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-23:a20",
+          "order": 4,
+          "title": "OVER 266,000 F5 BIG-IP INSTANCES EXPOSED TO REMOTE ATTACKS",
+          "summary": "The Shadowserver Foundation has identified over 266,000 internet-exposed F5 BIG-IP instances, nearly half located in the United States.",
+          "url": "https://www.bleepingcomputer.com/news/security/over-266-000-f5-big-ip-instances-exposed-to-remote-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-ai:2023-03-03",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2023-03-03",
+  "source_path": "TLDR AI/article_03-03-2023.md",
+  "source_content_hash": "sha256:da3bf13cf5eeb6a2ea56009729fd2bf378df5bf1e3e70dc9f882f6f7b1336a47",
+  "format_family": "inline_url",
+  "parse_status": "partial",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    },
+    {
+      "code": "missing_inline_url",
+      "message": "Article 'MONOCULAR DEPTH ESTIMATION USING DIFFUSION MODELS' has no inline URL",
+      "line": 89
+    }
+  ],
+  "title": "TLDR AI 2023-03-03",
+  "sections": [
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-03:o001",
+          "order": 1,
+          "title": "FORD ANNOUNCES NEW SELF DRIVING DIVISION “LATITUDE AI”",
+          "summary": "",
+          "url": "https://media.ford.com/content/fordmedia/fna/us/en/news/2023/03/02/ford-establishes-latitude-ai-to-develop-future-automated-driving.html?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "media.ford.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o002",
+          "order": 2,
+          "title": "GOOGLE CLOUD CEO RALLYING CRY ABOUT CONTINUED AI COMPETENCY",
+          "summary": "With the AI race heating up, Google is feeling the pressure. In a recent internal meeting the Google Cloud CEO said “The game is never over in the first minute” and urged employees to work as a team to continue to improve AI capabilities. He talked about what the history books would say about Google navigating this time period and expressed optimism about the future of search.",
+          "url": "https://archive.ph/GijmU?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "research-innovation",
+      "heading": "RESEARCH & INNOVATION",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-03:o003",
+          "order": 1,
+          "title": "64K TOKENS",
+          "summary": "Another paper from the systems group at Stanford working on improving language modeling abilities for long context. They work to build a subquadratic attention replacement and build on much of their recent work in state space models and long convolutions work. They introduce the “Hyena Hierarchy” which is a drop in replacement for attention, while reducing FLOPs, and improving long context scaling. This is an exciting next step and worth a read.",
+          "url": "https://arxiv.org/abs/2302.10866?utm_source=tldrai",
+          "reading_time_minutes": 60,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o004",
+          "order": 2,
+          "title": "UNLIMITED-SIZE DIFFUSION RESTORATION",
+          "summary": "The paper discusses the use of diffusion models for zero-shot image restoration and proposes solutions for handling images of arbitrary sizes. The current methods only deal with fixed-size images, but the proposed approach uses Mask-Shift Restoration to address local incoherence and Hierarchical Restoration to alleviate out-of-domain issues. These parameter-free approaches can be used not only for image restoration but also for image generation of unlimited sizes, making them a potential general tool for diffusion models.",
+          "url": "https://arxiv.org/abs/2303.00354?utm_source=tldrai",
+          "reading_time_minutes": 9,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o005",
+          "order": 3,
+          "title": "TRANSFORMER",
+          "summary": "The paper proposes a non-autoregressive (NAR) generative model called Stratified Image Transformer (StraIT) that outperforms existing autoregressive (AR) and diffusion models (DMs) in high-quality image synthesis. StraIT leverages the hierarchical nature of images to encode visual tokens into stratified levels, which alleviates modeling difficulty and lifts the generative power of NAR models. The experiments show that StraIT achieves FID scores of 3.96 at 256×256 resolution on ImageNet without leveraging any guidance in sampling or auxiliary image classifiers.",
+          "url": "https://arxiv.org/abs/2303.00750?utm_source=tldrai",
+          "reading_time_minutes": 15,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-resources",
+      "heading": "ENGINEERING & RESOURCES",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-03:o006",
+          "order": 1,
+          "title": "MONOCULAR DEPTH ESTIMATION USING DIFFUSION MODELS",
+          "summary": "[/%E2%80%8B%E2%80%8Bhttps://depth-gen.github.io/?utm_source=tldrai]",
+          "url": null,
+          "reading_time_minutes": null,
+          "source_domain": null,
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o007",
+          "order": 2,
+          "title": "GENERATION",
+          "summary": "The paper proposes Collage Diffusion, a collage-conditional diffusion algorithm that enables precise control over the spatial arrangement and visual attributes of objects in generated images. By modifying the text-image cross-attention with alpha masks and learning specialized text representations per layer, users can edit individual components of generated images and control image harmonization on a layer-by-layer basis. Collage Diffusion generates globally harmonized images that maintain desired object locations and visual characteristics better than prior approaches.",
+          "url": "https://arxiv.org/abs/2303.00262?utm_source=tldrai",
+          "reading_time_minutes": 25,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-03:o008",
+          "order": 1,
+          "title": "ELEUTHERAI RETROSPECTIVE",
+          "summary": "One of the top open science collaboratives in ML, Eleuther has made many contributions to the field over the past year and a half. They have published 28 papers, 10 different models, and dozens of code bases. Many of the most exciting developments such as RWKV, GPTNeo, and open replications of AlphaFold are coming from this group. Read more here about what they’re working on and what’s coming next.",
+          "url": "https://blog.eleuther.ai/year-two-preface/?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.eleuther.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o009",
+          "order": 2,
+          "title": "",
+          "summary": "With a context length of 2048 tokens, this instruction tuned model is an excellent foundation model for text generation. With improved CoT, in context learning, and general performance (as much as 7.4% over FlanT5-xxl) this model is a great step forward in open source language models. This model uses the UL2 objective which is a mixture of denoisers and has shown impressive performance at general language modeling. Importantly, they also remove the need for cumbersome mode tokens by an additional 100k steps of training before the Flan instruction tuning process.",
+          "url": "https://www.yitay.net/blog/flan-ul2-20b?utm_source=tldrai",
+          "reading_time_minutes": 7,
+          "source_domain": "yitay.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o010",
+          "order": 3,
+          "title": "INSIDE THE RISE OF OPENAI CTO MIRA MURATI",
+          "summary": "This article is a deep dive into how OpenAI CTO Mira Murati became one of tech’s most influential innovators.",
+          "url": "https://archive.is/9t9gB?utm_source=tldrai",
+          "reading_time_minutes": 17,
+          "source_domain": "archive.is",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-03:o011",
+          "order": 1,
+          "title": "ROMANIA UNVEILS WORLD’S FIRST AI GOVERNMENT “ADVISOR”",
+          "summary": "",
+          "url": "https://interestingengineering.com/innovation/romania-unveils-worlds-first-ai-advisor?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "interestingengineering.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o012",
+          "order": 2,
+          "title": "PROMPTCRAFT-ROBOTICS",
+          "summary": "PromptCrafts-Robotics is a community for people to test and share interesting prompting examples for LLMs within the robotics domain.",
+          "url": "https://github.com/microsoft/PromptCraft-Robotics?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-03:o013",
+          "order": 3,
+          "title": "NEBULLVM",
+          "summary": "Nebullvm is an ecosystem of plug and play modules to optimize the performance of your AI systems.",
+          "url": "https://github.com/nebuly-ai/nebullvm?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

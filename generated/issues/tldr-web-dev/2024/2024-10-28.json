@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-10-28",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-28",
+  "source_path": "TLDR Web Dev/article_28-10-2024.md",
+  "source_content_hash": "sha256:eff232153e2f3d0f5b3db34e64d29d7ef7e4997ae159ec207202d353de6c90a4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-28",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-28:a04",
+          "order": 1,
+          "title": "HOW WE SHRUNK OUR JAVASCRIPT MONOREPO GIT SIZE BY 94%",
+          "summary": "A Microsoft team working with a massive JavaScript monorepo (1JS) faced a challenge: the repository size had ballooned to 178GB. The issue stemmed from two key problems: keeping thousands of files in a single folder and a flawed packing algorithm that led to inefficient compression of files with similar names, especially CHANGELOG files. To address the folder issue, the team implemented a pull request and automated cleanup pipelines. The packing issue was tackled by repacking the repo with a larger window and utilizing a new path-walk algorithm, resulting in a reduction from 178GB to 5GB.",
+          "url": "https://www.jonathancreamer.com/how-we-shrunk-our-git-repo-size-by-94-percent/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "jonathancreamer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a05",
+          "order": 2,
+          "title": "UNDERSTANDING ROUND ROBIN DNS",
+          "summary": "Round Robin DNS is a method of load balancing by distributing traffic across multiple servers. Browsers like Safari select the closest server based on latency, while Cloudflare consistently picks a random server regardless of its proximity or availability.",
+          "url": "https://blog.hyperknot.com/p/understanding-round-robin-dns?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.hyperknot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a06",
+          "order": 3,
+          "title": "DELICIOUS DONUT COMPONENTS",
+          "summary": "Component composition in React Server Components (RSC) allows for creating flexible UIs and avoiding prop drilling. While composition works similarly in both client and server components, there are important distinctions when interleaving them. This article discusses these differences, including limitations on function passing and the use of `React.cloneElement()`, and provides alternative strategies for sharing state across server and client boundaries.",
+          "url": "https://frontendatscale.com/blog/donut-components/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "frontendatscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-28:a07",
+          "order": 1,
+          "title": "WRITES AND WRITE-NOTS",
+          "summary": "The widespread use of AI will create a division between \"writes\" and \"write-nots,\" with the former being those who can still write and the latter those who rely on AI for writing. This shift will result in a decline in the ability to think clearly, as writing is an essential tool for developing and expressing thought.",
+          "url": "https://paulgraham.com/writes.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "paulgraham.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a08",
+          "order": 2,
+          "title": "MASTERING CODE SIMPLICITY: WHY DEEP FUNCTIONS LIKE JSON.PARSE() MAKE PROGRAMMING EASIER",
+          "summary": "“Deep functions” are well-designed functions that simplify complex tasks by hiding complexity. JSON.parse() is a prime example: its simple interface masks its complex internal workings, while still being predictable to use and call externally.",
+          "url": "https://mycolaos.com/blog/mastering-code-simplicity-deep-functions-json-parse?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "mycolaos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a09",
+          "order": 3,
+          "title": "HOW NOT TO DISAGREE",
+          "summary": "When a team leader disagrees with a managerial decision, they should not oppose it publicly but instead commit to executing it effectively. By doing so, they avoid creating a victim mentality within the team and preserve their credibility.",
+          "url": "https://boz.com/articles/disagree?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "boz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-28:a10",
+          "order": 1,
+          "title": "MDX",
+          "summary": "Mdx is a command-line tool that allows you to execute code blocks within Markdown files. It provides features like argument passing, dependency definition, and shebang support.",
+          "url": "https://github.com/dim0x69/mdx?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a11",
+          "order": 2,
+          "title": "AGENT.EXE",
+          "summary": "Agent.exe is an Electron app that lets Claude 3.5 Sonnet control your local computer directly.",
+          "url": "https://github.com/corbt/agent.exe?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a12",
+          "order": 3,
+          "title": "BETTER UPLOAD",
+          "summary": "Better Upload is a React library that simplifies file uploads to S3-compatible services. It offers a streamlined setup, customizable server-side logic, and pre-built UI components.",
+          "url": "https://better-upload.js.org/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "better-upload.js.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-28:a13",
+          "order": 1,
+          "title": "BEFORE YOU BUY A DOMAIN NAME, FIRST CHECK TO SEE IF IT'S HAUNTED",
+          "summary": "This developer bought a domain name, musicbox.fun, unaware that it had a history of copyright violations. This past activity negatively impacted the domain's reputation with search engines, causing the developer's website traffic to plummet. Before buying a domain, check for such “haunted” domains by using the Wayback Machine, searching for DMCA complaints, and examining historical SEO data.",
+          "url": "https://www.bryanbraun.com/2024/10/25/before-you-buy-a-domain-name-first-check-to-see-if-its-haunted/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "bryanbraun.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a14",
+          "order": 2,
+          "title": "DETECTING WHEN LLMS ARE UNCERTAIN",
+          "summary": "Reasoning in LLMs can be improved by utilizing adaptive sampling techniques that take into account the model's uncertainty. A project called Entropix measures uncertainty using entropy and varentropy, which quantify the distribution of the predicted tokens. It then uses different sampling methods based on these metrics, including argmax sampling for high confidence, branching for multiple possibilities, and inserting \"thinking\" tokens for low confidence.",
+          "url": "https://www.thariq.io/blog/entropix/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "thariq.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a15",
+          "order": 3,
+          "title": "OUR OPTIMIZERS NEED A RETHINK",
+          "summary": "Compiler and database optimizers may need a significant rethink to improve their understandability, controllability, and testability. Current shortcomings of optimizers include limited user control, difficulty in debugging optimization misses, and lack of proper testing capabilities. These can be solved by providing clearer documentation, developing improved tooling for debugging optimization failures, allowing users to provide explicit guidance to the optimizer, and creating regression testing infrastructure.",
+          "url": "https://typesanitizer.com/blog/rethink-optimizers.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "typesanitizer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-28:a16",
+          "order": 1,
+          "title": "NOTES ON THE NEW CLAUDE ANALYSIS JAVASCRIPT CODE EXECUTION TOOL",
+          "summary": "Anthropic's Claude now features a JavaScript-based code execution tool, \"the analysis tool,\" which runs directly in the user's browser and allows Claude to solve problems by writing and executing code.",
+          "url": "https://simonwillison.net/2024/Oct/24/claude-analysis-tool/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a17",
+          "order": 2,
+          "title": "USING SQLITE AS STORAGE FOR WEB SERVER STATIC CONTENT",
+          "summary": "Clace, a platform for internal tool development, uses SQLite as a file storage system for its web applications, taking advantage of its transactional updates, file de-duplication, easy backups, and content hashing features.",
+          "url": "https://clace.io/blog/sqlite/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "clace.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-28:a18",
+          "order": 3,
+          "title": "HOW WE SAVED HUNDREDS OF ENGINEERING HOURS BY WRITING TESTS WITH LLMS",
+          "summary": "This company created test suites in minutes using LLMs with precise prompts and code examples.",
+          "url": "https://www.assembled.com/blog/how-we-saved-hundreds-of-engineering-hours-by-writing-tests-with-llms?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "assembled.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

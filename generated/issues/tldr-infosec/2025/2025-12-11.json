@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-11",
+  "source_path": "TLDR InfoSec/article_11-12-2025.md",
+  "source_content_hash": "sha256:8fb4ff4f08f743503a7385d9bf29c731d06bb88e87fced1268fa095e28832426",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a04",
+          "order": 1,
+          "title": "VISIBILITY",
+          "summary": "SOC efficiency is the most valuable currency in cybersecurity [5] - but ESG research has found that 55% of security teams take hours just to confirm if an alert is real [6]. This gives attackers plenty of time to move laterally through your network.",
+          "url": "https://www.netscout.com/cybersecurity?utm_source=tldr&utm_medium=display&utm_campaign=brand-campaign-cybersecurity&utm_keyword=display&utm_content=campaign_page",
+          "reading_time_minutes": null,
+          "source_domain": "netscout.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a04",
+          "order": 2,
+          "title": "Stay ahead of risk with NETSCOUT",
+          "summary": "",
+          "url": "https://www.netscout.com/cybersecurity?utm_source=tldr&utm_medium=display&utm_campaign=brand-campaign-cybersecurity&utm_keyword=display&utm_content=campaign_page",
+          "reading_time_minutes": null,
+          "source_domain": "netscout.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a07",
+          "order": 1,
+          "title": "NET SOAPWN FLAW OPENS DOOR FOR FILE WRITES AND REMOTE CODE EXECUTION VIA ROGUE WSDL",
+          "summary": "A .NET Framework design flaw, dubbed SOAPwn, allows attackers to weaponize WSDL-based SOAP client proxies to write arbitrary files or redirect SOAP requests to attacker-controlled locations. This can enable NTLM credential capture and remote code execution via web shells or malicious scripts. Impacted enterprise products include Barracuda Service Center RMM and Ivanti EPM, which have begun shipping security fixes.",
+          "url": "https://thehackernews.com/2025/12/net-soapwn-flaw-opens-door-for-file.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a08",
+          "order": 2,
+          "title": "CYDOME FLAGS MIRAI VARIANT BROADSIDE, TARGETS MARITIME LOGISTICS THROUGH TBK DVR DEVICES",
+          "summary": "A Mirai variant named Broadside is actively compromising maritime logistics systems by exploiting a vulnerability in TBK digital video recorder (DVR) devices. Broadside uses a custom C2 protocol, a unique “Magic Header,” and aggressively kills competing malware. Beyond DDoS capabilities, it can harvest system credentials, posing an elevated risk to operational technology environments.",
+          "url": "https://industrialcyber.co/transport/cydome-flags-mirai-variant-broadside-targets-maritime-logistics-through-tbk-dvr-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "industrialcyber.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a09",
+          "order": 3,
+          "title": "GOOGLE ADS FOR SHARED CHATGPT AND GROK GUIDES PUSH MACOS INFOSTEALER MALWARE",
+          "summary": "A phishing campaign uncovered by Kaspersky and Huntress is abusing Google ads to lure macOS users searching for troubleshooting tips. The ads lead to public ChatGPT and Grok “shared conversations” posing as legitimate guides, but instead push victims to download the AMOS infostealer.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-ads-for-shared-chatgpt-grok-guides-push-macos-infostealer-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a10",
+          "order": 1,
+          "title": "DECLARATIVE BINARY PARSING FOR SECURITY RESEARCH WITH KAITAI STRUCT",
+          "summary": "Kaitai Struct enables describing binary file formats in a declarative YAML-based language and automatically generating parsers in many languages, which is very useful for reverse engineering, malware analysis, and protocol or firmware research. This example walks through designing a dummy KAISTDE binary format, manually serializing and parsing it in C and Python, then expressing the same structure in a .ksy spec so the Kaitai compiler can emit a robust parser and visualizations.",
+          "url": "https://husseinmuhaisen.com/blog/declarative-binary-parsing-for-security-research-with-kaitai-struct/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "husseinmuhaisen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a11",
+          "order": 2,
+          "title": "AWS LAMBDA MANAGED INSTANCES: A SECURITY OVERVIEW",
+          "summary": "During re:Invent 2025, AWS announced Lambda Managed Instances, which enable Lambda functions to run on AWS-managed EC2 instances. AWS prevents users from attaching instance roles to these instances, unlike other managed instances. EKS-managed nodes do not allow direct instance access via tools like SSM or EC2 Instance Connect. The instances run AWS' container-optimized Linux distribution, Bottlerocket OS, and execute Lambda functions as containerd containers.",
+          "url": "https://www.offensai.com/blog/aws-lambda-managed-instances-security-overview?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "offensai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a12",
+          "order": 3,
+          "title": "NEW RANSOMWARE 01FLIP: MULTI-PLATFORM RANSOMWARE WRITTEN IN RUST",
+          "summary": "01flip is a new Rust-based ransomware family (tracked as CL-CRI-1036) that targets critical infrastructure in the Asia-Pacific region, leveraging Rust's cross-compilation capabilities to support both Windows and Linux platforms. Attackers exploited CVE-2019-11580 for initial access, deployed Sliver C2 framework for lateral movement, and used AES-128-CBC with RSA-2048 encryption while demanding one bitcoin ransom, with subsequent data leaks appearing on dark web forums. Organizations should monitor for Rust-based malware signatures, patch internet-facing applications against known vulnerabilities, and implement detection for cross-platform ransomware that uses low-level API calls and string obfuscation techniques to evade traditional security controls.",
+          "url": "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a13",
+          "order": 1,
+          "title": "NO ONE KNOWS WHAT AI AGENTS WILL LOOK LIKE NEXT YEAR. HOW SHOULD YOU APPROACH SECURITY TODAY?",
+          "summary": "“Thought leaders” are confident about non-human identities, but can they predict what this landscape will look like in 12 months? Not reliably...",
+          "url": "https://www.okta.com/webinars/hub/beyond-oktane-how-to-manage-nhi-with-okta-ispm/?utm_source=newsletter&utm_medium=thirdparty&utm_campaign=2025-10%7CWBN-OND%7CBeyondOktane-ISPM-Demo-Part2-VID&utm_id=aNKKZ0000004CAG4A2",
+          "reading_time_minutes": null,
+          "source_domain": "okta.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a15",
+          "order": 2,
+          "title": "EQUIXLY (PRODUCT LAUNCH)",
+          "summary": "Equixly provides an AI-powered API security testing platform that continuously probes APIs like a virtual hacker to uncover technical and business-logic vulnerabilities across the SDLC, integrating into CI/CD pipelines to automate penetration testing and guide remediation.",
+          "url": "https://equixly.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "equixly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a16",
+          "order": 3,
+          "title": "SENTRYPEER",
+          "summary": "SentryPeer is a fraud detection tool that tracks bad actors' attempted calls by saving their IP addresses and dialed numbers.",
+          "url": "https://github.com/SentryPeer/SentryPeer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a17",
+          "order": 4,
+          "title": "FIL-C",
+          "summary": "Fil-C is a memory-safe implementation of the C and C++ programming languages that can compile and run a lot of software with zero or minimal changes.",
+          "url": "https://fil-c.org/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "fil-c.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a18",
+          "order": 1,
+          "title": "JAPANESE FIRMS SUFFER LONG TAIL OF RANSOMWARE DAMAGE",
+          "summary": "Ransomware attacks are hitting major Japanese companies and government bodies, forcing factories, retailers, and service providers offline for months. Many Japanese organizations depend on older systems and complex supply chains, so recovery is slow and costly.",
+          "url": "https://links.tldrnewsletter.com/Ik0NCD",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a19",
+          "order": 2,
+          "title": "ONEDRIVE. LET'S TAKE THIS OFFLINE",
+          "summary": "Microsoft launched Offline Mode for OneDrive Business customers in April 2024, which allows users to continue using the web version of OneDrive while offline. This works by downloading file metadata and running a SharePoint web server locally. This post introduces an update to the OneDriveExplorer, which can parse the cache used for offline mode.",
+          "url": "https://malwaremaloney.blogspot.com/2025/09/onedrive-lets-take-this-offline.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "malwaremaloney.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a20",
+          "order": 3,
+          "title": "CAN LLMS DETECT IDORS? UNDERSTANDING THE BOUNDARIES OF AI REASONING",
+          "summary": "Semgrep tested Claude Code with Sonnet 4 and OpenAI Codex with GPT5's ability to detect IDOR vulnerabilities in code with four levels of increasing difficulty, from no authorization to implicit authorization through middleware. In total, the models identified 15 real, previously unknown vulnerabilities and 93 false positives, with Sonnet 4 performing best. In its test with a generic prompt, Semgrep found that the models could detect some simpler IDOR vulnerabilities but failed in more complex cases.",
+          "url": "https://semgrep.dev/blog/2025/can-llms-detect-idors-understanding-the-boundaries-of-ai-reasoning/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-11:a21",
+          "order": 1,
+          "title": "HOW TO GET MORE FROM YOUR MICROSOFT 365 LICENSES — WITHOUT MOVING TO E5",
+          "summary": "Enterprise-grade security at an SMB-ready price point? Not impossible anymore: Microsoft's new Defender and Purview add-ons work at a scale",
+          "url": "https://ussignal.com/solutions/simplifying-security-with-microsoft/?utm_source=tldr_infosec_newsletter&utm_medium=ebook&utm_campaign=microsoft_simplifying_Security+",
+          "reading_time_minutes": null,
+          "source_domain": "ussignal.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a21",
+          "order": 2,
+          "title": "and cost that fits any business. Download the guide by US Signal",
+          "summary": "",
+          "url": "https://ussignal.com/solutions/simplifying-security-with-microsoft/?utm_source=tldr_infosec_newsletter&utm_medium=ebook&utm_campaign=microsoft_simplifying_Security+",
+          "reading_time_minutes": null,
+          "source_domain": "ussignal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a22",
+          "order": 3,
+          "title": "ORGANIZATIONS CAN NOW BUY CYBER INSURANCE THAT COVERS DEEPFAKES",
+          "summary": "Cybersecurity insurer Coalition announced that it will start offering coverage for certain deepfake incidents, including those that lead to reputational harm.",
+          "url": "https://cyberscoop.com/url-coalition-cybersecurity-insurance-coverage-deepfakes-reputational-harm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a23",
+          "order": 4,
+          "title": "ADVENT OF HACKS",
+          "summary": "Advent of Hacks is a GitHub repository with a list of free cybersecurity holiday events, CTFs, and Advent challenges.",
+          "url": "https://github.com/RazviOverflow/advent-of-hacks?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-11:a24",
+          "order": 5,
+          "title": "HTTPS CERTIFICATE INDUSTRY PHASING OUT LESS SECURE DOMAIN VALIDATION METHODS",
+          "summary": "Chrome Root Program and CA/Browser Forum adopted Ballots SC-080, SC-090, and SC-091 to sunset 11 legacy Domain Control Validation methods relying on email, phone, fax, postal mail, and reverse DNS lookups by March 2028, pushing Certificate Authorities toward automated, cryptographically verifiable ACME-based validation to prevent fraudulent certificate issuance.",
+          "url": "https://security.googleblog.com/2025/12/https-certificate-industry-phasing-out.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

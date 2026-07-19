@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-02-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-02-19",
+  "source_path": "TLDR InfoSec/article_19-02-2025.md",
+  "source_content_hash": "sha256:1b3a25d51c75d5549addc1905a64f2c38816c70deb8689cb7760a05b7c1f3bf6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-02-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a04",
+          "order": 1,
+          "title": "FREE COPY OF THE GARTNER COOL VENDORS REPORT FOR MODERN SOC",
+          "summary": "This report by Gartner highlights products and services that tackle key SOC challenges in interesting, new, and innovative ways [4]. Inside you'll find:",
+          "url": "https://content.dropzone.ai/gartner-cool-vendors-for-the-modern-soc-report?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20240219",
+          "reading_time_minutes": null,
+          "source_domain": "content.dropzone.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a05",
+          "order": 1,
+          "title": "FRESSH BUGS UNDISCOVERED FOR YEARS THREATEN OPENSSH SECURITY",
+          "summary": "OpenSSH has released patches for two new vulnerabilities: a machine-in-the-middle attack (CVE-2025-26465) and a denial-of-service bug (CVE-2025-26466), discovered by Qualys. While not critically severe, they affect this widely used secure connection tool.",
+          "url": "https://www.theregister.com/2025/02/18/openssh_vulnerabilities_mitm_dos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a06",
+          "order": 2,
+          "title": "VENTURE CAPITAL GIANT INSIGHT PARTNERS HIT BY CYBERATTACK",
+          "summary": "Insight Partners revealed that they were breached in January following a social engineering attack. Insight has stated that they shut down the attacker's presence in their network immediately after detecting their intrusion and has no evidence that any portfolio companies, funds, or other stakeholders were impacted by this breach.",
+          "url": "https://www.bleepingcomputer.com/news/security/venture-capital-giant-insight-partners-hit-by-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a07",
+          "order": 3,
+          "title": "JUNIPER NETWORKS FIXED A CRITICAL FLAW IN SESSION SMART ROUTERS",
+          "summary": "Juniper Networks fixed a critical authentication bypass vulnerability, tracked as CVE-2025-21589 (CVSS score of 9.8), in its Session Smart Router. The flaw could allow attackers to take control of the device without proper authentication. Users are advised to upgrade to the fixed versions listed on the site to protect against potential attacks.",
+          "url": "https://securityaffairs.com/174365/security/juniper-networks-fixed-a-critical-flaw-in-session-smart-routers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a08",
+          "order": 1,
+          "title": "MAGENTO CREDIT CARD STEALER DISGUISED IN AN `IMG` TAG",
+          "summary": "Magecart is a credit card skimming malware that is sophisticated and hard to detect as it hides in `img` tags using Base64 encoding. It can seamlessly inject fake payment forms to steal card details, requiring vigilant security measures and monitoring.",
+          "url": "https://blog.sucuri.net/2025/02/magento-credit-card-stealer-disguised-in-an-tag.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.sucuri.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a09",
+          "order": 2,
+          "title": "REVOLUTIONIZING SOFTWARE TESTING: INTRODUCING LLM-POWERED BUG CATCHERS",
+          "summary": "Mutation testing is the process by which automatic test cases are programmatically created based on existing test cases to increase code coverage. Meta created the Automated Compliance Hardening (ACH) system to use LLMs to generate mutants to model realistic inputs. A developer uses ACH by describing the types of bugs that they're concerned about, ACH then generates a series of bugs and converts them into tests to run.",
+          "url": "https://engineering.fb.com/2025/02/05/security/revolutionizing-software-testing-llm-powered-bug-catchers-meta-ach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a10",
+          "order": 3,
+          "title": "HOW ADVERSARIES EXPLOIT UNMONITORED CLOUD REGIONS TO EVADE DETECTION",
+          "summary": "Attackers commonly exploit unused regions in cloud providers to launch crypto miners, exfiltrate data, or deploy other payloads. This post explores the various methods and permissions that attackers can utilize in AWS, GCP, and Azure to enumerate or enable unused regions. This post also provides recommended mitigations such as restricting region usage, setting budget alerts, and conducting regular audits.",
+          "url": "https://permiso.io/blog/how-threat-actors-leverage-unsupported-cloud-regions?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a11",
+          "order": 1,
+          "title": "SAAS BREACHES SURGED 300% IN 2024, WITH ATTACKERS BREACHING CORE SYSTEMS IN AS LITTLE AS 9 MINUTES",
+          "summary": "Obsidian Security's SaaS Security Threat Report [11] draws from the industry's largest SaaS breach data repository and direct involvement in +150 incidents. The report reveals that traditional defenses are failing against new SaaS attack patterns, where identities are the new",
+          "url": "https://www.obsidiansecurity.com/saas-security-threat-report/?utm_source=tldr&utm_medium=newsletter&utm_campaign=threatreport25&utm_term=newsletter2",
+          "reading_time_minutes": null,
+          "source_domain": "obsidiansecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a11",
+          "order": 2,
+          "title": "frontline. Read the full findings here",
+          "summary": "",
+          "url": "https://www.obsidiansecurity.com/saas-security-threat-report/?utm_source=tldr&utm_medium=newsletter&utm_campaign=threatreport25&utm_term=newsletter2",
+          "reading_time_minutes": null,
+          "source_domain": "obsidiansecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a12",
+          "order": 3,
+          "title": "MIRRORTAB (PRODUCT LAUNCH)",
+          "summary": "MirrorTab intercepts and sanitizes a browser session before it ever reaches the customer's device eliminating the traditional client-side attack surface by preventing raw code or sensitive data from being exposed in the user's environment.",
+          "url": "https://www.mirrortab.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "mirrortab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a13",
+          "order": 4,
+          "title": "PASSKEY RAIDER",
+          "summary": "Passkey Raider is a Burp Suite extension designed to facilitate comprehensive testing of Passkey systems.",
+          "url": "https://github.com/siamthanathack/Passkey-Raider?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a14",
+          "order": 5,
+          "title": "TAILPIPE",
+          "summary": "Tailpipe is an open source SIEM powered by DuckDB that allows for querying data with SQL directly from the terminal.",
+          "url": "https://github.com/turbot/tailpipe?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a15",
+          "order": 1,
+          "title": "COMMON OAUTH VULNERABILITIES",
+          "summary": "This blog provides an overview of how OAuth 2 works with a focus on outlining the different parties involved in a request. It outlines the common flows that are used in OAuth applications such as Implicit Flows, Authorization Code Flows, Client Credentials, Device Authorization Flows, and Resource Owner Password Credentials Flows. The post then provides common attacks and mitigations against these flows.",
+          "url": "https://blog.doyensec.com/2025/01/30/oauth-common-vulnerabilities.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.doyensec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a16",
+          "order": 2,
+          "title": "UNDERSTANDING SAFETENSORS: A SECURE ALTERNATIVE TO PICKLE FOR ML MODELS",
+          "summary": "Python Pickles are a binary format that is commonly used to distribute ML models but is inherently insecure because arbitrary code can be executed during deserialization. SafeTensors is a format that was created to solve this issue by only storing metadata and numerical tensors. SafeTensors binaries should always be preferred over Pickles when available as in addition to the security benefits, they can also be more performant.",
+          "url": "https://dev.to/stacklok/understanding-safetensors-a-secure-alternative-to-pickle-for-ml-models-o71?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a17",
+          "order": 3,
+          "title": "$10 INFOSTEALERS ARE BREACHING CRITICAL US SECURITY: MILITARY AND EVEN THE FBI HIT",
+          "summary": "The article talks about how relatively inexpensive infostealer malware, like boobytrapped PDFs, game mods, and pirated software, are leading to compromises across the board, even in critical US organizations like the Pentagon and the FBI. According to Hudson Rock's report, over 30 million computers worldwide have been hit, with one in five holding corporate credentials. The article includes a case study on Honeywell and the US Navy and discusses the importance of vigilance and training staff.",
+          "url": "https://hackread.com/infostealers-breach-us-security-military-fbi-hit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-19:a18",
+          "order": 1,
+          "title": "MICROSOFT THREAT INTELLIGENCE - NEW XCSSET VARIANT",
+          "summary": "The first known variant since 2022, this latest XCSSET malware features enhanced obfuscation methods, updated persistence mechanisms, and new infection strategies.",
+          "url": "https://threadreaderapp.com/thread/1891410993265123662.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a19",
+          "order": 2,
+          "title": "CHINA-LINKED APT GROUP WINNTI TARGETS JAPANESE ORGANIZATIONS SINCE MARCH 2024",
+          "summary": "Researchers from cybersecurity firm LAC have uncovered that a China-linked APT group called Winnti carried out a cyberespionage campaign that targeted Japanese companies in the manufacturing, materials, and energy sectors in March 2024.",
+          "url": "https://securityaffairs.com/174353/apt/china-linked-apt-group-winnti-targets-japanese-orgs.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-19:a20",
+          "order": 3,
+          "title": "X NOW BLOCKS SIGNAL CONTACT LINKS, FLAGS THEM AS MALICIOUS",
+          "summary": "Social media platform X is now blocking Signal.me links, used by the Signal encrypted messaging app to share account info, citing spam or malware risks.",
+          "url": "https://www.bleepingcomputer.com/news/security/x-now-blocks-signal-contact-links-flags-them-as-malicious/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

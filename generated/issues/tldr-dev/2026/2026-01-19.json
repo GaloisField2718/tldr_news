@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-01-19",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-01-19",
+  "source_path": "TLDR Dev/article_19-01-2026.md",
+  "source_content_hash": "sha256:3ed2591394d996e39d7a80a67b0a27ac0f7b8cc108bbfb61c1fe5e8382948d8e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-01-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a04",
+          "order": 1,
+          "title": "SHIP THIRD-PARTY INTEGRATIONS WITHOUT REBUILDING OAUTH",
+          "summary": "Connecting user accounts to third-party APIs always comes with the same plumbing: OAuth flows, token storage, refresh logic, and provider-specific quirks.",
+          "url": "https://workos.com/docs/pipes?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=q12026&utm_content=no_rebuild",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a07",
+          "order": 2,
+          "title": "Simplify integrations with WorkOS Pipes →",
+          "summary": "",
+          "url": "https://workos.com/docs/pipes?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=q12026&utm_content=simplify_integrations_cta",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a08",
+          "order": 1,
+          "title": "BUILDING A BETTER BUGBOT",
+          "summary": "Bugbot is Cursor's AI-powered code review agent for identifying logic bugs, performance issues, and security vulnerabilities in pull requests. Its development evolved from qualitative assessments to a systematic, AI-driven resolution rate metric, with improvements through methods like parallel passes with majority voting and a shift to an agentic architecture creating the largest performance gains.",
+          "url": "https://cursor.com/blog/building-bugbot?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "cursor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a09",
+          "order": 2,
+          "title": "A SOCIAL FILESYSTEM",
+          "summary": "A “social filesystem\" paradigm addresses the problem of user data being locked within social media applications. In this model, each user maintains a portable \"everything folder\" (repository) containing all their social interactions as self-owned records, defined by shared schemas. User identity and data location are made permanent and host-agnostic through Decentralized Identifiers and `at://` URIs, creating verifiable links across a distributed system.",
+          "url": "https://overreacted.io/a-social-filesystem/?utm_source=tldrdev",
+          "reading_time_minutes": 35,
+          "source_domain": "overreacted.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a10",
+          "order": 3,
+          "title": "FINDING AND FIXING A 50,000 GOROUTINE LEAK THAT NEARLY KILLED PRODUCTION",
+          "summary": "A 50,000 goroutine leak in a WebSocket notification service gradually degraded production over 6 weeks, growing from 1,200 goroutines and 2.1GB RAM to 50,847 goroutines consuming 47GB RAM with 32-second latency. The leak was caused by three bugs: never calling context cancel functions when WebSocket connections closed, not stopping ticker objects in heartbeat goroutines, and not properly closing message channels. The fix involved adding proper WebSocket close handlers, connection monitoring, and making sure all resources (contexts, tickers, and channels) were properly cleaned up when connections died.",
+          "url": "https://skoredin.pro/blog/golang/goroutine-leak-debugging?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "skoredin.pro",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a11",
+          "order": 1,
+          "title": "SOFTWARE ENGINEERS CAN NO LONGER NEGLECT THEIR SOFT SKILLS",
+          "summary": "Communication has become the most important skill for software engineers. This is due to the fast advancement of AI coding agents, which can now efficiently handle most non-trivial programming tasks. These formerly optional interpersonal skills are now non-negotiable.",
+          "url": "https://www.qu8n.com/posts/most-important-software-engineering-skill-2026?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "qu8n.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a12",
+          "order": 2,
+          "title": "TIPS FOR MAKING THE PERFORMANCE PANEL LESS OVERWHELMING",
+          "summary": "Chrome's Performance Panel can be made less overwhelming by dimming third-party code to focus on first-party issues, using search functionality to find specific functions or files, adding annotations to document findings, using the Insights Panel for automated performance issue detection, and creating custom tracks with console.time() or the Performance Measure API to monitor specific functions.",
+          "url": "https://calendar.perfplanet.com/2025/tips-for-making-the-performance-panel-less-overwhelming?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "calendar.perfplanet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a13",
+          "order": 3,
+          "title": "USEOPTIMISTIC WON'T SAVE YOU",
+          "summary": "React 19's useOptimistic hook is helpful for implementing optimistic UI updates, but it is not a complete solution for the complexities introduced by concurrent React. Naive optimistic update implementations lead to race conditions and visual glitches. Even useOptimistic still suffers from issues like failing to prevent race conditions when requests complete out of order.",
+          "url": "https://www.columkelly.com/blog/use-optimistic?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "columkelly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a14",
+          "order": 1,
+          "title": "ADD API KEY AUTHENTICATION TO YOUR SAAS WITH CLERK",
+          "summary": "Step-by-step guide to Clerk's API Keys beta. Generate secure keys, validate requests in Next.js API routes, build a management UI with rotation and revocation. Full code examples included.",
+          "url": "https://go.clerk.com/UYCe6Ov?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a15",
+          "order": 2,
+          "title": "AIONUI",
+          "summary": "AionUi is a unified graphical interface designed to serve as a \"Cowork\" platform for various command-line AI tools like Gemini CLI, Claude Code, and more. It automatically detects and integrates these disparate AI agents, providing an environment that addresses common limitations such as unsaved conversations and single-session restrictions. AionUi has intelligent file management, multi-model support, and a preview panel for AI-generated results across nine different formats.",
+          "url": "https://github.com/iOfficeAI/AionUi?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a16",
+          "order": 3,
+          "title": "MEMLAB",
+          "summary": "memlab is a tool designed to analyze JavaScript heaps and identify memory leaks in both browser and Node.js environments. It allows users to define end-to-end test scenarios and run them via a command-line interface to find leaks and perform various memory analyses. The tool can analyze duplicated strings, check for unbound object growth, and offers a programming API for integrated memory analysis.",
+          "url": "https://facebook.github.io/memlab/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "facebook.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a17",
+          "order": 1,
+          "title": "THE A IN AGI STANDS FOR ADS",
+          "summary": "OpenAI is evolving into an advertising engine. Despite its AGI mission, OpenAI is using its large user base and high-intent conversational data to implement ad products similar to Google's search advertising. The company plans to integrate sponsored content, affiliate features, and a self-serve platform, projecting billions in ad revenue by 2026 and potentially over $140 billion by 2029.",
+          "url": "https://links.tldrnewsletter.com/3NeGn3",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a18",
+          "order": 2,
+          "title": "TANSTACK AI VS. VERCEL AI SDK: CHOOSING THE RIGHT AI LIBRARY FOR REACT",
+          "summary": "TanStack AI and Vercel AI SDK are both React-focused AI libraries, but they differ in their architectural approach to handling AI tools. The main advantage of TanStack AI is its \"isomorphic tools\" feature, which allows developers to define AI tools once using `toolDefinition()` and then choose where they execute with `.server()` or `.client()`, removing the code duplication that occurs with Vercel AI SDK where tools must be implemented separately on both server and client sides.",
+          "url": "https://blog.logrocket.com/tanstack-vs-vercel-ai-library-react?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.logrocket.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a19",
+          "order": 3,
+          "title": "THE THREE BIGGEST AGENTIC COMMERCE TRENDS FROM NRF 2026",
+          "summary": "Agentic commerce was the dominant theme at NRF 2026, with retailers shifting from questioning whether to implement AI-powered shopping agents to focusing on how to scale them effectively. Three key trends came up: 75% of retailers are now actively implementing or planning agentic commerce initiatives, companies are taking an incremental approach to optimizing product catalogs for AI agents rather than tackling everything at once, and retailers are creating their own branded AI shopping experiences alongside integrating with third-party agents.",
+          "url": "https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "stripe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-19:a20",
+          "order": 1,
+          "title": "THE DATALIST ELEMENT ON IOS 26",
+          "summary": "iOS 26 introduces a critical Safari regression where the datalist element obscures active input fields, making forms unusable.",
+          "url": "https://adactio.com/journal/22360?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "adactio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a21",
+          "order": 2,
+          "title": "HOW TO BUILD SELF-IMPROVING CODING AGENTS - PART 1",
+          "summary": "Coding agents can become self-improving by modifying their environment rather than static model weights.",
+          "url": "https://ericmjl.github.io/blog/2026/1/17/how-to-build-self-improving-coding-agents-part-1/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "ericmjl.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a22",
+          "order": 3,
+          "title": "AGENT PSYCHOSIS: ARE WE GOING INSANE?",
+          "summary": "GitHub is being flooded with low-quality slop, and open-source maintainers face burnout as one-minute prompts require hour-long reviews.",
+          "url": "https://lucumr.pocoo.org/2026/1/18/agent-psychosis/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "lucumr.pocoo.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-19:a23",
+          "order": 4,
+          "title": "TODAY IN CLAUDE CODE - A SKILL TO GENERATE DAILY SUMMARIES OF YOUR CLAUDE CODE ACTIVITY",
+          "summary": "This is a Claude Code skill that generates a summary of daily Claude Code usage by extracting prompt history from JSONL files and token data.",
+          "url": "https://gist.github.com/chrismdp/29b3c5504504fe9ad2ff3310fa2a2a99?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "gist.github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

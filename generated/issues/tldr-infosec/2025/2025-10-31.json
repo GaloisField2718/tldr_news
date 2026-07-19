@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-31",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-31",
+  "source_path": "TLDR InfoSec/article_31-10-2025.md",
+  "source_content_hash": "sha256:55d614770911b3bd486579ff4158999fc268ee26cb4b271a6f51668655384597",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-31",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Poorly-managed passwords are the #1 cause of breaches, and they leave IT teams struggling with fragmented access management and manual onboarding/offboarding processes. Reddit was dealing with all these challenges, plus a compromised security vendor. They needed a solution that reduced credential risk without slowing down their employees.",
+          "url": "https://1password.com/webinars/how-reddit-scales-secure-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_reddit-scales-secure-access_consideration_2025-10&utm_content=text&utm_term=live-october-31-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a04",
+          "order": 2,
+          "title": "Register now",
+          "summary": "",
+          "url": "https://1password.com/webinars/how-reddit-scales-secure-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_reddit-scales-secure-access_consideration_2025-10&utm_content=text&utm_term=live-october-31-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a05",
+          "order": 1,
+          "title": "NEW TEE.FAIL SIDE-CHANNEL ATTACK EXTRACTS SECRETS FROM INTEL AND AMD DDR5 SECURE ENCLAVES",
+          "summary": "TEE.Fail is a side-channel attack that targets DDR5 memory systems which uses a $1,000 interposition device to physically monitor memory traffic and extract cryptographic keys from Intel TDX/SGX and AMD SEV-SNP trusted execution environments. The attack exploits weaknesses in AES-XTS deterministic encryption used by both vendors, enabling attackers to record memory operations between CPU and DRAM, extract ECDSA attestation keys, and compromise confidential virtual machines by faking attestation processes. Both Intel and AMD have classified this as an out-of-scope physical attack with no planned mitigations, leaving software countermeasures as the only defense option despite their high implementation costs.",
+          "url": "https://thehackernews.com/2025/10/new-teefail-side-channel-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a06",
+          "order": 2,
+          "title": "MAJOR US TELECOM BACKBONE FIRM HACKED BY NATION-STATE ACTORS",
+          "summary": "Ribbon Communications has suffered a breach with attackers accessing the IT network from December 2024. No sensitive data exfiltration has been confirmed. Some customer files outside the main network were accessed, but notifications have been sent. The company does not anticipate a major operational or financial impact.",
+          "url": "https://www.securityweek.com/major-us-telecom-backbone-firm-hacked-by-nation-state-actors/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a07",
+          "order": 3,
+          "title": "CONDUENT ADMITS ITS DATA BREACH MAY HAVE AFFECTED AROUND 10 MILLION PEOPLE",
+          "summary": "Conduent has confirmed a cyberattack exposed sensitive data of up to 10 million people. The breach, attributed to the SafePay ransomware gang, lasted nearly three months and compromised data such as Social Security numbers and medical information. Impacted individuals are spread across several states.",
+          "url": "https://www.techradar.com/pro/security/conduent-admits-its-data-breach-may-have-affected-around-10-million-people?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a08",
+          "order": 1,
+          "title": "BATTLING SHADOW AI: PROMPT INJECTION FOR THE GOOD",
+          "summary": "Researchers developed a defensive use of prompt injection to combat Shadow AI risks by embedding hidden warnings in corporate documents that trigger alerts when users upload sensitive files to unapproved AI tools like ChatGPT or DeepSeek, successfully displaying disclaimers and, in some cases, blocking processing entirely. The team built an open-source prototype tool called \"Prompt Injection for the Good\" to test effectiveness across multiple LLMs and file types, finding most models honor carefully-phrased warnings in .docx, .pdf, and .eml formats. It failed to detect prompts in heavily obfuscated text and OCR-based tools. Security professionals should experiment with embedding defensive prompt injections in corporate document templates and sensitivity labels as a user awareness mechanism for Shadow AI. This creative approach has limitations, including inconsistent LLM behavior, potential conflicts with vendor anti-injection defenses, and the dual-use risk of the technique itself.",
+          "url": "https://research.eye.security/prompt-injection-to-battle-shadow-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "research.eye.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a09",
+          "order": 2,
+          "title": "ENHANCE EMAIL SECURITY USING VPC ENDPOINTS WITH AMAZON SES",
+          "summary": "Amazon offers the ability to use VPC endpoints for isolating network traffic and securing Amazon Simple Email Service (SES) SMTP connections. This walkthrough from AWS details the process for creating a secure SMTP configuration using VPC endpoints, security groups to limit SMTP traffic to approved networks, and IAM policies to limit SES usage to authorized accounts.",
+          "url": "https://aws.amazon.com/blogs/messaging-and-targeting/enhance-email-security-using-vpc-endpoints-with-amazon-ses/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a10",
+          "order": 3,
+          "title": "10 NPM TYPOSQUATTED PACKAGES DEPLOY MULTI-STAGE CREDENTIAL HARVESTER",
+          "summary": "Socket has identified a campaign using 10 typosquatted npm packages that execute credential-stealing malware when installed. These packages exploit the npm postinstall lifecycle to run code automatically, showing a fake CAPTCHA and realistic installation prompts to deceive developers. The payload employs multiple layers of obfuscation, fingerprints victims by IP, and downloads a 24MB cross-platform information stealer that harvests credentials from system keyrings, browsers, and authentication services on Windows, Linux, and macOS.",
+          "url": "https://links.tldrnewsletter.com/05G8L0",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a11",
+          "order": 1,
+          "title": "STOP THREATS FROM HAUNTING YOUR SOC",
+          "summary": "Haunted by endless alerts and unseen attackers? Blind spots across cloud, identity, and network give adversaries the cover they need to strike. Vectra AI's Attack Signal Intelligence™ shines a light on hidden threats with faster MTTD, fewer false positives, and less analyst fatigue. Uncover what lurks in your environment in Mind Your Attack Gaps [11], then see how Vectra exposes them. See the unseen before it sees you. Book a demo [12].",
+          "url": "https://www.vectra.ai/resources/mind-your-attack-gaps?utm_source=tldr&utm_medium=display&utm_campaign=26Q3_C_AMS_PRO_TLDR-Newletter",
+          "reading_time_minutes": null,
+          "source_domain": "vectra.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a13",
+          "order": 2,
+          "title": "VULS",
+          "summary": "Vuls is an agent-less vulnerability scanner for Linux, FreeBSD, containers, WordPress, programming language libraries, and network devices.",
+          "url": "https://github.com/future-architect/vuls?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a14",
+          "order": 3,
+          "title": "BRIDA 0.6 RELEASED!",
+          "summary": "Brida 0.6 now supports Frida 17+ after breaking changes in Frida removed runtime bridges from GumJS, which affected many tools, including earlier Brida versions. The update features major JavaScript refactoring for Frida 17.3.2+ compatibility, support for frida-compile 19.0.4, new Host:Port and DeviceId modes, OkHttp hostname verifier bypass, improved Android root detection, and Gradle configuration. Mobile security testers should upgrade to Brida 0.6 for current Frida support. 0.6pre remains for legacy use with older Frida versions on incompatible devices. It's pending approval in Burp Suite's BApp Store but available on GitHub.",
+          "url": "https://hnsecurity.it/blog/brida-0-6-released/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "hnsecurity.it",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a15",
+          "order": 4,
+          "title": "SPEKTRUM LABS (PRODUCT LAUNCH)",
+          "summary": "Spektrum Labs delivers a cyber resilience platform that uses AI agents to continuously validate security posture and generate cryptographic proof of safeguards, enabling organizations to confidently demonstrate resilience to boards, customers, insurers, and regulators.",
+          "url": "https://spektrum.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "spektrum.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a16",
+          "order": 1,
+          "title": "THE RISE OF COLLABORATIVE TACTICS AMONG CHINA-ALIGNED CYBER ESPIONAGE CAMPAIGNS",
+          "summary": "Trend Micro researchers identified a sophisticated \"Premier Pass-as-a-Service\" model where China-aligned APT groups Earth Estries and Earth Naga collaborate by sharing access to compromised networks, with Earth Estries acting as an access broker that hands off already-compromised systems to Earth Naga for continued exploitation. The attacks targeted government agencies and telecommunications providers across APAC, Southeast Asia, and NATO countries using multiple deployment vectors, including CrowDoor backdoors, ShadowPad malware, and Cobalt Strike beacons delivered through DLL side-loading and compromised credentials. This emerging collaboration pattern complicates attribution efforts and represents an evolution beyond traditional initial access brokers, as threat actors share access at later stages of the kill chain (command-and-control phase) rather than just initial entry points, requiring defenders to move beyond process chain analysis and monitor for suspicious file deployments and unauthorized remote administration tools.",
+          "url": "https://www.trendmicro.com/en_us/research/25/j/premier-pass-as-a-service.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "trendmicro.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a17",
+          "order": 2,
+          "title": "SECURITY RISKS OF LLM FRAMEWORKS WITH CASE STUDIES",
+          "summary": "Critical vulnerabilities across major LLM frameworks like SSRF, path traversal, SQL injection, RCE, server-side template injection, and DoS attacks arise from insufficient input validation, unsafe code execution features, and flawed integration with external resources. They stem from common implementation mistakes, including failing to validate URLs and paths in web crawlers, executing LLM-generated SQL without proper sanitization, failing to enforce import restrictions in code execution environments, and setting inadequate resource limits for streaming operations. Developers should avoid experimental/deprecated framework features, implement strict input validation using allowlists for URLs and paths, separate templates from user data, restrict LLM permissions to the minimum necessary levels, and apply multi-layered defenses.",
+          "url": "https://flatt.tech/research/posts/llm-framework-vulns-exposed/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "flatt.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a18",
+          "order": 3,
+          "title": "CVE-2025-62725: FROM \"DOCKER COMPOSE PS\" TO SYSTEM COMPROMISE",
+          "summary": "A path traversal vulnerability in Docker Compose allowed attackers to write arbitrary files on host systems by crafting malicious OCI artifacts. The bug was triggered by seemingly harmless commands like 'docker compose ps', enabling attackers to escape the cache directory and gain SSH access by injecting public keys into authorized_keys files. Docker patched this high-severity flaw (CVSS 8.9) in version v2.40.2.",
+          "url": "https://www.imperva.com/blog/cve-2025-62725-from-docker-compose-ps-to-system-compromise/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "imperva.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-31:a19",
+          "order": 1,
+          "title": "THE POST MORTEM OF A FAILED RANSOMWARE ATTACK",
+          "summary": "Attackers used stolen admin credentials to infiltrate a hospital network — aiming to deploy remote access tools, steal sensitive data, and unleash ransomware. See how ThreatLocker detected and",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q4_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a19",
+          "order": 2,
+          "title": "stopped the attack.",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q4_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a20",
+          "order": 3,
+          "title": "WORDPRESS SECURITY PLUGIN EXPOSES PRIVATE DATA TO SITE SUBSCRIBERS",
+          "summary": "Security researchers have found a vulnerability in the WordPress plugin that allows authenticated users to access any server file due to missing capability checks, affecting over 100,000 servers.",
+          "url": "https://www.bleepingcomputer.com/news/security/wordpress-security-plugin-exposes-private-data-to-site-subscribers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a21",
+          "order": 4,
+          "title": "FRANCISCO PARTNERS TO BUY APPLE SECURITY FIRM JAMF FOR $2.2B",
+          "summary": "Private equity firm Francisco Partners announced that it will be buying endpoint security software Jamf.",
+          "url": "https://www.bankinfosecurity.com/francisco-partners-to-buy-apple-security-firm-jamf-for-22b-a-29877?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bankinfosecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-31:a22",
+          "order": 5,
+          "title": "THIS SECURITY HOLE CAN CRASH BILLIONS OF CHROMIUM BROWSERS, AND GOOGLE HASN'T PATCHED IT YET",
+          "summary": "A security researcher found a denial of service flaw in Chromium's Blink engine caused by missing rate limiting on document.title updates, which was effective on nine out of eleven major browsers tested.",
+          "url": "https://www.theregister.com/2025/10/29/brash_dos_attack_crashes_chromium/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-09-22",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-09-22",
+  "source_path": "TLDR InfoSec/article_22-09-2023.md",
+  "source_content_hash": "sha256:d770d5c6471a76b0401d382aae1874611d218638d761bc162c422be7e271e70a",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-09-22",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-22:o001",
+          "order": 1,
+          "title": "TARGETS CLIENTS OF OVER 40 MEXICAN AND BRAZILIAN BANK",
+          "summary": "Check Point discovered an active BBTok banking malware campaign in Latin America, with a new variant impersonating 40+ Mexican/Brazilian banks to steal 2FA codes and card numbers. Threat actors maintained diverse Windows infection chains with varied file types, showing continued evolution of the malware.",
+          "url": "https://blog.checkpoint.com/security/check-point-research-exposes-new-versions-of-the-bbtok-banking-malware-which-targets-clients-of-over-40-mexican-and-brazilian-banks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o002",
+          "order": 2,
+          "title": "38TB OF DATA ACCIDENTALLY EXPOSED BY MICROSOFT AI RESEARCHERS",
+          "summary": "Microsoft researchers posted a link with a misconfigured Azure SAS token that granted access to the full storage account as opposed to just the intended dataset while publishing an open-source dataset on GitHub. The 38TB of accidentally-exposed data includes full backups of two employee workstations as well as secrets, private keys, and internal messages.",
+          "url": "https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o003",
+          "order": 3,
+          "title": "MORE VULNERABLE",
+          "summary": "Apple has released security patches to address three zero-day flaws that were actively exploited in iOS, iPadOS, macOS, watchOS, and Safari. This brings the total number of zero-day bugs discovered in Apple's software this year to 16. The flaws include a certificate validation issue in the Security framework, a security flaw in Kernel, and a WebKit flaw that could result in arbitrary code execution.",
+          "url": "https://thehackernews.com/2023/09/apple-rushes-to-patch-3-new-zero-day.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-22:o004",
+          "order": 1,
+          "title": "NEW WAYS TO INJECT SYSTEM CA CERTIFICATES IN ANDROID 14",
+          "summary": "The discussion around Android 14's CA certificate controls has sparked solutions going beyond previous root approaches. While directly writing certs is blocked, root access still enables control by digging into internals. Feedback has produced promising options to regain system-level CA management practically on the latest Android versions.",
+          "url": "https://httptoolkit.com/blog/android-14-install-system-ca-certificate/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "httptoolkit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o005",
+          "order": 2,
+          "title": "DEPLOYING AWS BACKUP",
+          "summary": "A blog post that begins with an overview of what cloud ransomware attacks look like and then an overview of AWS Backup. The post then continues to offer advice for deploying AWS Backup at scale using AWS Organizations. It includes terraform code to aid in deployment.",
+          "url": "https://www.primeharbor.com/blog/awsbackup/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "primeharbor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o006",
+          "order": 3,
+          "title": "A BIG LOOK AT SECURITY IN OPENAPI",
+          "summary": "This blog post discusses security options in OpenAPI and what companies are doing regarding API security. Large companies like Facebook and Github use OAuth2 for API security. The post recommends using OAuth2 for authentication, but acknowledges that it can be complex. API keys are still commonly used for security in smaller APIs. Basic authentication is not recommended due to its lack of security.",
+          "url": "https://liblab.com/blog/a-big-look-at-security-in-openapi?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "liblab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-22:o007",
+          "order": 1,
+          "title": "NOT EVERY BUG IS A SECURITY RISK, BUT ALL OF THEM SUCK",
+          "summary": "Ready to wave goodbye 👋 to bugs? QA Wolf",
+          "url": "https://www.qawolf.com/?utm_campaign=NotEveryBugSecurity07072023&utm_source=infosec&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o008",
+          "order": 2,
+          "title": "CISCO TO ACQUIRE SPLUNK IN $28B MEGA DEAL",
+          "summary": "The biggest enterprise software deal of the year to date goes to Cisco for acquiring the observability behemoth Splunk in a $28B deal, paying a premium of $157 per share on the average of $80 or $90 per share Splunk has had this year.",
+          "url": "https://techcrunch.com/2023/09/21/cisco-to-acquire-splunk-in-28b-mega-deal/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o009",
+          "order": 3,
+          "title": "1PASSWORD ROLLS OUT PUBLIC PASSKEY SUPPORT",
+          "summary": "1Password has completed testing for its passkey support. Users can now create, manage, and sign in with passkeys via 1Password mobile apps and web extensions. Passkeys are a new login technology that is meant to replace passwords. 1Password has not enabled the ability to replace a master password with a passkey but teases that the feature is coming later in the fall.",
+          "url": "https://www.theverge.com/2023/9/20/23880714/1password-mobile-passkey-support-web-browser-extension-release-date?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o010",
+          "order": 4,
+          "title": "AFTERMATH",
+          "summary": "Aftermath is a free macOS Incident Response framework from JAMF. It allows defenders to collect and analyze data from a compromised host. Aftermath can be run as a standalone tool or deployed via MDM and then a series of collection modules can be run to collect data for analysis.",
+          "url": "https://github.com/jamf/aftermath?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-22:o011",
+          "order": 1,
+          "title": "LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD",
+          "summary": "This blog post dives into the group LUCR-3. LUCR-3 overlaps with groups such as Scattered Spider, Oktapus, UNC3944, and STORM-0875. It is a financially motivated attacker that leverages the Identity Provider (IDP) as initial access into an environment with the goal of stealing intellectual property for extortion. LUCR-3 targets Fortune 2000 companies across various sectors, including but not limited to software, retail, hospitality, manufacturing, and telecom.",
+          "url": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o012",
+          "order": 2,
+          "title": "PIZZA",
+          "summary": "Pizza Hut Australia says 190,000 customers' info – including names, delivery addresses, email addresses, phone numbers, and order information – have been accessed. It told customers it learned of the incident in early September and described it as \"unauthorized third party\" access to a subset of its data.",
+          "url": "https://www.theregister.com/2023/09/21/pizza_hut_australia_data_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o013",
+          "order": 3,
+          "title": "T-MOBILE APP EXPOSES OTHER USERS’ ACCOUNT DETAILS",
+          "summary": "T-Mobile customers on X and Reddit reported that they were able to see other accounts’ information in the T-Mobile app. T-Mobile has fixed the issue. The issue was caused by a technology update glitch and was not a cyberattack.",
+          "url": "https://www.theverge.com/2023/9/20/23881825/t-mobile-account-security-breach-customer-information-leak?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-22:o014",
+          "order": 1,
+          "title": "POLAND INVESTIGATES OPENAI OVER PRIVACY CONCERNS",
+          "summary": "Poland's watchdog is investigating whether ChatGPT breaches EU GDPR data laws, adding to privacy lawsuits OpenAI already faces in the US. The lack of clarity around how the chatbot handles and secures user data is drawing growing regulatory scrutiny.",
+          "url": "https://www.reuters.com/technology/poland-investigates-openai-over-privacy-concerns-2023-09-21/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "reuters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o015",
+          "order": 2,
+          "title": "SERVICES",
+          "summary": "AWS IAM has added Action Last Accessed support to over 140 services. Action Last Accessed allows admins to see when an IAM identity last accessed an action, which can aid in finding over-privileged identities.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2023/09/aws-identity-access-management-action-last-accessed-information/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-22:o016",
+          "order": 3,
+          "title": "MARVELL DISPUTES CLAIM CAVIUM BACKDOORED CHIPS FOR UNCLE SAM",
+          "summary": "Marvell has denied allegations that its subsidiary, Cavium, backdoored chips for US intelligence. Documents leaked by Edward Snowden in 2013 identified Cavium as a vendor of semiconductors backdoored for US intelligence. The allegations surfaced again in Jacob Appelbaum's PhD thesis, which was published in March 2022.",
+          "url": "https://packetstormsecurity.com/news/view/35034/Marvell-Disputes-Claim-Cavium-Backdoored-Chips-For-Uncle-Sam.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "packetstormsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

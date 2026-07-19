@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-10-14",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-14",
+  "source_path": "TLDR Web Dev/article_14-10-2024.md",
+  "source_content_hash": "sha256:ab7f4a1207109d7d1d3f2f56e3adb3de8b0405e922de97bc1889f947d9ae8cfb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a04",
+          "order": 1,
+          "title": "MANAGE IDENTITY… OR DO FUN CODING PROJECTS? 🤔",
+          "summary": "Reduce the time devs spend on identity setup and maintenance (you have better things to build). Frontegg [4] has everything you need for auth, entitlements, and security out-of-the-box.👇",
+          "url": "https://frontegg.com/?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_10_14",
+          "reading_time_minutes": null,
+          "source_domain": "frontegg.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a05",
+          "order": 2,
+          "title": "bother with → Sign up to see how easy it is to do",
+          "summary": "* Let your customers take control of their own identity. Your customers can manage SSO, MFA, Users, and more → check out the admin",
+          "url": "https://portal.frontegg.com/signup?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_10_14",
+          "reading_time_minutes": null,
+          "source_domain": "portal.frontegg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a06",
+          "order": 3,
+          "title": "portal",
+          "summary": "* Tell our AI to configure identity for you → learn about Frontegg",
+          "url": "https://frontegg.com/product/admin-portal?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_10_14",
+          "reading_time_minutes": null,
+          "source_domain": "frontegg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a07",
+          "order": 4,
+          "title": "Flows",
+          "summary": "✅ Trusted by Siemens, Materialize, and Hint Health",
+          "url": "https://frontegg.com/blog/ai-generated-flows-for-identity-management?utm_source=tldr_newsletter&utm_medium=tldr_newsletter&utm_campaign=tldr_10_14",
+          "reading_time_minutes": null,
+          "source_domain": "frontegg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a08",
+          "order": 1,
+          "title": "1 BUG, $50,000+ IN BOUNTIES, HOW ZENDESK INTENTIONALLY LEFT A BACKDOOR IN HUNDREDS OF FORTUNE 500 COMPANIES",
+          "summary": "A 15-year-old bug hunter discovered a vulnerability in Zendesk's email collaboration feature that allowed attackers to access customer support tickets from any company using the service. This exploit was initially dismissed by Zendesk's bug bounty program as \"out of scope,\" but subsequent public disclosure of the vulnerability forced Zendesk to take action. The bug hunter then discovered a second, more serious exploit that could allow attackers to gain access to private Slack workspaces using Zendesk, which was fixed later.",
+          "url": "https://gist.github.com/hackermondev/68ec8ed145fcee49d2f5e2b9d2cf2e52?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "gist.github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a09",
+          "order": 2,
+          "title": "NODE.JS, PIPES, AND DISAPPEARING BYTES",
+          "summary": "Piping large amounts of JSON data from a Node.js command to another command results in truncated output. The issue stems from the asynchronous nature of Node.js's `process.stdout.write` when writing to a pipe on POSIX systems. When the pipe buffer is full, `process.stdout.write` returns false, and further writes are blocked until the pipe is read. The solution involves subscribing to the `drain` event of the `process.stdout` stream to resume writing after the pipe has been filled.",
+          "url": "https://sxlijin.github.io/2024-10-09-node-stdout-disappearing-bytes?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "sxlijin.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a10",
+          "order": 3,
+          "title": "THE INTERACTIVE GUIDE TO RENDERING IN REACT",
+          "summary": "React re-renders a component only when its state changes, triggered by an event handler that modifies the state using useState's updater function. It handles multiple updates within an event handler by batching them, applying only the result of the last invocation. StrictMode is a development mode that forces components to re-render twice to ensure purity and resilience.",
+          "url": "https://ui.dev/why-react-renders?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "ui.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a11",
+          "order": 1,
+          "title": "3 CAREER PRINCIPLES THAT GOT ME TO DIRECTOR AT GOOGLE",
+          "summary": "A former Google director shares three career principles that helped her achieve five promotions in ten years: Glue, Grit, and Friction. Glue refers to the less glamorous tasks that are vital for team success but might not be directly promotable. Grit is a commitment to pursuing long-term goals despite challenges and viewing failures as opportunities for learning. Friction represents the gap between reality and the ideal state. It must be overcome to show a force multiplier effect.",
+          "url": "https://read.highgrowthengineer.com/p/3-career-principles-to-director-at-google?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "read.highgrowthengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a12",
+          "order": 2,
+          "title": "WRITE DOWN THE PLAN",
+          "summary": "Writing down plans is a simple yet powerful habit that can help one's career. It forces better thinking and clarity, builds alignment amongst teams, and increases visibility.",
+          "url": "https://www.developing.dev/p/write-down-the-plan?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "developing.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a13",
+          "order": 3,
+          "title": "LESSONS FROM PLAIN TEXT",
+          "summary": "Plain text is more complex than it seems on the surface. For example, tabs and spaces differences can cause inconsistencies during collaboration. Soft-wrapping text is better for improved readability and compatibility.",
+          "url": "https://www.rugu.dev/en/blog/plain-text/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "rugu.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a14",
+          "order": 1,
+          "title": "VSCODE WEB VISUAL EDITOR",
+          "summary": "This is a Visual Studio Code extension for visually editing HTML files in real time. It has features like element selection, zoom, and alignment.",
+          "url": "https://github.com/urin/vscode-web-visual-editor?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a15",
+          "order": 2,
+          "title": "CANARY",
+          "summary": "Canary is an open-source, self-hostable search engine that offers both a core server and web components for building a search bar for your application.",
+          "url": "https://github.com/fastrepl/canary?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a16",
+          "order": 3,
+          "title": "MITATA",
+          "summary": "Mitata is a benchmark tooling library for JavaScript and C++ that offers accurate timing down to picoseconds, helpful visualizations, and features like automatic garbage collection and argument handling for benchmarks.",
+          "url": "https://github.com/evanwashere/mitata?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a17",
+          "order": 1,
+          "title": "$2 H100S: HOW THE GPU BUBBLE BURST",
+          "summary": "The price of H100 GPUs has plummeted from $8/hour to under $2/hour in just a year. This is due to the resales of reserved compute, the rise of open-source models for fine-tuning, and a decline in the number of companies developing new foundation models.",
+          "url": "https://www.latent.space/p/gpu-bubble?utm_source=tldrwebdev",
+          "reading_time_minutes": 23,
+          "source_domain": "latent.space",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a18",
+          "order": 2,
+          "title": "HOW GENAI WILL IMPACT DATA ENGINEERING",
+          "summary": "Generative AI is a fundamental shift that will push data engineers to merge with data analysts to focus on business needs and merge with software engineers to own online systems end-to-end. Current data engineers should try to get ahead by incorporating LLMs into their workflows, exploring AI infrastructure, and staying informed about advancements in the field.",
+          "url": "https://blog.dataengineer.io/p/how-genai-will-impact-data-engineering?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.dataengineer.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a19",
+          "order": 3,
+          "title": "DESIGNING A FAST CONCURRENT HASH TABLE",
+          "summary": "Papaya is a fast and concurrent hash table for Rust. It uses a novel approach to address the challenges of lock-free design, including using a metadata table for cache efficiency and a probabilistic approach to resizing. It also uses various memory reclamation strategies to be faster than other concurrent Rust hash tables in terms of read throughput, latency, and async support.",
+          "url": "https://ibraheem.ca/posts/designing-papaya/?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "ibraheem.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-14:a20",
+          "order": 1,
+          "title": "ZERO-LATENCY SQLITE STORAGE IN EVERY DURABLE OBJECT",
+          "summary": "Cloudflare's Durable Object platform has been upgraded to use SQLite for relational storage, allowing for zero-latency data access by co-locating application logic with the data on the same physical host.",
+          "url": "https://simonwillison.net/2024/Oct/13/zero-latency-sqlite-storage-in-every-durable-object/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a21",
+          "order": 2,
+          "title": "WORKING FROM HOME IS POWERING PRODUCTIVITY",
+          "summary": "Working from home is expected to boost economic growth through increased labor supply, more efficient use of capital, and improved productivity.",
+          "url": "https://www.imf.org/en/Publications/fandd/issues/2024/09/working-from-home-is-powering-productivity-bloom?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "imf.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a22",
+          "order": 3,
+          "title": "EVERY BUG/QUIRK OF THE WINDOWS RESOURCE COMPILER (RC.EXE), PROBABLY (2 HOUR READ)",
+          "summary": "This blog post details numerous, often baffling, bugs and quirks of the Windows resource compiler (rc.exe).",
+          "url": "https://www.ryanliptak.com/blog/every-rc-exe-bug-quirk-probably/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ryanliptak.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-14:a23",
+          "order": 4,
+          "title": "INLINE SCOPE FOR CSS",
+          "summary": "The @scope rule in CSS allows developers to directly attach styles to HTML elements, limiting the scope of the CSS to the children of the targeted DOM node.",
+          "url": "https://picostitch.com/tidbits/2024/10/inline-scope-for-css/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "picostitch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

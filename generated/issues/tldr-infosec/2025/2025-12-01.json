@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-01",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-01",
+  "source_path": "TLDR InfoSec/article_01-12-2025.md",
+  "source_content_hash": "sha256:d7f4635fedc12ed96ec9c51e3c185c95da07443566cf210ff97715e71b8adac1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-01",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a04",
+          "order": 1,
+          "title": "",
+          "summary": "In the age of AI and SaaS, IT and security leaders are confronting a new reality. Productivity and innovation are racing ahead, and legacy security tools are struggling to keep up.",
+          "url": "https://1password.com/webinars/security-in-the-age-of-ai-agents-and-shadow-it?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_security-in-the-age-of-ai-agents-and-shadow-it_consideration_2025-12&utm_content=text&utm_term=live-december-1-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a04",
+          "order": 2,
+          "title": "Register now",
+          "summary": "",
+          "url": "https://1password.com/webinars/security-in-the-age-of-ai-agents-and-shadow-it?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_security-in-the-age-of-ai-agents-and-shadow-it_consideration_2025-12&utm_content=text&utm_term=live-december-1-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a05",
+          "order": 1,
+          "title": "PUBLIC GITLAB REPOSITORIES EXPOSED MORE THAN 17,000 SECRETS",
+          "summary": "Security researcher Luke Marshall examined all 5.6 million public GitLab Cloud repositories with TruffleHog and found 17,430 verified active secrets across 2,804 distinct domains. This exposure is nearly three times that found in a similar scan of Bitbucket. The leaked credentials included over 5,200 Google Cloud Platform keys, MongoDB credentials, Telegram bot tokens, and OpenAI keys. Some secrets date back to 2009 and are still valid today. Although many organizations revoked their credentials after receiving automated alerts—earning the researcher $9,000 in bug bounties—some secrets continue to be exposed on GitLab repositories.",
+          "url": "https://www.bleepingcomputer.com/news/security/public-gitlab-repositories-exposed-more-than-17-000-secrets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a06",
+          "order": 2,
+          "title": "UPBIT ADMITS SECURITY FLAW THAT COULD HAVE ALLOWED ATTACKERS TO INFER PRIVATE KEYS AFTER $30M HACK",
+          "summary": "South Korean crypto exchange Upbit suffered a $30 million breach on November 27 when attackers drained assets from a Solana hot wallet. North Korea's Lazarus Group is suspected of being the threat actor. Post-incident analysis revealed a critical vulnerability that allowed inference of a private key from publicly disclosed blockchain wallet transactions, though Upbit's CEO did not explicitly confirm that this flaw enabled the breach. The exchange has suspended deposits and withdrawals for a complete wallet system overhaul and will cover all customer losses using company assets. $1.5 million of the stolen funds have already been frozen.",
+          "url": "https://links.tldrnewsletter.com/w4rH7g",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a07",
+          "order": 3,
+          "title": "NEW ALBIRIOX MALWARE ATTACKING ANDROID USERS TO TAKE COMPLETE CONTROL OF THEIR DEVICE",
+          "summary": "A new Malware-as-a-Service called Albiriox has been observed providing customers with remote access to victim Android devices. Victims typically receive messages promising them discounts or prizes for an app. The links lead to fake versions of legitimate apps that request permissions to install applications, then fetch and install the malware. In addition to traditional infostealer capabilities, Albiriox includes a VNC module that streams the victim's device screen to the attacker.",
+          "url": "https://cybersecuritynews.com/albiriox-malware-attacking-android-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a08",
+          "order": 1,
+          "title": "INSIDE VALKYRIE STEALER: CAPABILITIES, EVASION TECHNIQUES, AND OPERATOR PROFILE",
+          "summary": "Valkyrie Stealer is a C++ infostealer developed by threat actor \"Lawxsz\" that employs Themida protection, ChaCha20-encrypted payload with reflective DLL loading, and comprehensive anti-VM defenses. The malware targets Chromium browsers by extracting AES master keys and parsing SQLite databases using an embedded engine, steals Discord and Telegram sessions, harvests credentials from 20+ gaming platforms, and exfiltrates cryptocurrency wallets from MetaMask, Exodus, Atomic Wallet, and Electrum. Stolen data is compressed using dual-method ZIP packaging, encrypted with AES-GCM using hardcoded keys, and exfiltrated to C2 servers resolved dynamically via Steam profile scraping. The operator maintains active distribution channels on Telegram, GitHub, YouTube, Discord, and Signal under the Prysmax Software brand.",
+          "url": "https://www.dexpose.io/inside-valkyrie-stealer-capabilities-evasion-techniques-and-operator-profile/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "dexpose.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a09",
+          "order": 2,
+          "title": "CACHE POISONING CASE STUDIES PART 1: FOUNDATIONAL ATTACKS BEHIND A $100K+ VULNERABILITY CLASS",
+          "summary": "Cache poisoning is a web security vulnerability in which attackers trick caching systems, such as CDNs or proxies, into storing malicious responses, serving them to other users, and causing widespread harm. Early real-world examples from platforms such as HackerOne, GitHub, and Shopify show that unvalidated headers like X-Forwarded-Host or Content-Type can trigger global redirects, denial-of-service attacks, or stored XSS across multiple domains. These foundational cases, often yielding bounties of $2,500 to $6,300, highlight risks such as method overrides in cloud storage and social media amplification via Open Graph tags.",
+          "url": "https://herish.me/blog/cache-poisoning-case-studies-part-1-foundational-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "herish.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a10",
+          "order": 1,
+          "title": "PAM WITHOUT VAULTS",
+          "summary": "If engineer access to resources means passwords, vaults, or tickets, your PAM is slowing you down. Teleport [11] removes access blockers by replacing vaulted credentials and ticket queues with short-lived, cryptographic identity and ephemeral authorization. No more standing privileges, access friction, or credential handling. Try Teleport for",
+          "url": "https://fandf.co/46QQR5H?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a11",
+          "order": 2,
+          "title": "yourself.",
+          "summary": "",
+          "url": "https://fandf.co/46QQR5H",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a12",
+          "order": 3,
+          "title": "LUMEN",
+          "summary": "LUMEN is a browser-based Windows Event Log analyzer built with React and WebAssembly that processes EVTX files entirely client-side without uploading logs to external servers. It supports files up to 500MB with both binary EVTX and XML exports. The tool features a curated SIGMA detection engine with platform-specific rule loading, automated event correlation that chains related activities into investigative storylines, IOC extraction with optional VirusTotal integration, and AI-powered analysis. Security teams can perform guided investigations while maintaining complete data privacy through local-only processing with session persistence via localStorage and no telemetry or data transmission.",
+          "url": "https://github.com/Koifman/LUMEN?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a13",
+          "order": 4,
+          "title": "PROXIMITY",
+          "summary": "Proximity scans MCP servers to discover tools, prompts, and resources. It provides a detailed analysis of server capabilities and optional security evaluation using NOVA rules.",
+          "url": "https://github.com/fr0gger/proximity?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a14",
+          "order": 5,
+          "title": "GMSGADGET (WEBAPP)",
+          "summary": "Give Me a Security Gadget (GMSGadget) is a collection of JavaScript gadgets that can be used to bypass XSS mitigations like Content Security Policy (CSP) and HTML sanitizers like DOMPurify.",
+          "url": "https://gmsgadget.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gmsgadget.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a15",
+          "order": 1,
+          "title": "HASHJACK ATTACK USES URL '#' TO CONTROL AI BROWSER BEHAVIOR",
+          "summary": "HashJack is a novel indirect prompt injection technique that embeds malicious commands in URL fragments (after the # symbol) to manipulate AI browser assistants such as Google Gemini, Microsoft Copilot, and Perplexity Comet. The attack takes advantage of AI assistants' handling of full URLs, letting threat actors weaponize legitimate websites without compromising them and execute malicious instructions that bypass traditional security controls, enabling credential theft, data exfiltration, and more. Microsoft and Perplexity updated their products by October-November, but Google considered the Gemini vulnerability as expected behavior and chose not to fix it, leaving users vulnerable to this emerging AI security threat.",
+          "url": "https://hackread.com/hashjack-attack-url-control-ai-browser-behavior/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a16",
+          "order": 2,
+          "title": "BRIT TELCO BRSK CONFIRMS BREACH AS BIDDING BEGINS FOR 230K+ CUSTOMER RECORDS",
+          "summary": "Brsk, a UK broadband provider, is investigating a cyberattack after criminals advertised more than 230,000 customer records for sale, allegedly including contact details, installation data, location information, phone numbers, and flags for vulnerable customers. It says only basic contact data was accessed. No passwords or payment details were taken. The company is offering affected users 12 months of credit monitoring while regulators and law enforcement investigate.",
+          "url": "https://www.theregister.com/2025/11/28/brsk_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a17",
+          "order": 3,
+          "title": "LEGACY PYTHON BOOTSTRAP SCRIPTS CREATE DOMAIN-TAKEOVER RISK IN MULTIPLE PYPI PACKAGES",
+          "summary": "Old Python bootstrap scripts in several PyPI packages still reference a long-abandoned domain used to fetch an installer for the legacy Distribute fork of Setuptools. The domain is now for sale. An attacker could buy it and serve malicious code to anyone running those scripts, exposing developers to supply-chain compromise and potential remote takeover via additional malware, such as RATs.",
+          "url": "https://thehackernews.com/2025/11/legacy-python-bootstrap-scripts-create.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-01:a18",
+          "order": 1,
+          "title": "TRAIN YOUR ENTIRE ORGANIZATION WITH INFOSEC IQ & INFOSEC SKILLS",
+          "summary": "Unlock on-demand cybersecurity ranges and labs for your technical team with any new Infosec IQ security awareness training contract. Act",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%25%25CRMLongId%25%25",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a18",
+          "order": 2,
+          "title": "now to get your 3 FREE INFOSEC SKILLS SEATS.",
+          "summary": "",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%25%25CRMLongId%25%25",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a19",
+          "order": 3,
+          "title": "PRESSURE RISING: EUROPEAN PARLIAMENT URGES TO BAN SOCIAL MEDIA FOR UNDER-16S",
+          "summary": "The European Parliament proposed a non-binding resolution for a harmonized EU minimum age of 16 for social media.",
+          "url": "https://links.tldrnewsletter.com/ps8DJW",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a20",
+          "order": 4,
+          "title": "INFOSEC BLACK FRIDAY AND CYBER MONDAY DEALS",
+          "summary": "A collection of deals on InfoSec training, tools, gear, and more for Black Friday and Cyber Monday.",
+          "url": "https://github.com/0x90n/InfoSec-Black-Friday?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-01:a21",
+          "order": 5,
+          "title": "FRENCH SOCCER FEDERATION HIT BY CYBERATTACK, MEMBER DATA STOLEN",
+          "summary": "A cyberattack on the French soccer federation compromised the software used by clubs to manage registered members.",
+          "url": "https://www.securityweek.com/french-soccer-federation-hit-by-cyberattack-member-data-stolen/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

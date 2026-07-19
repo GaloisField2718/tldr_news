@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-13",
+  "source_path": "TLDR InfoSec/article_13-01-2026.md",
+  "source_content_hash": "sha256:ce05fea8d5d8fe560604fc702bddf4ce236cd621d35078ba7b8c7520d181208c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Bitwarden surveyed IT managers and enterprise users to find out what actually drives password manager adoption. The biggest factor? Leadership directives.",
+          "url": "https://bitwarden.com/resources/bitwarden-security-impact-report/?utm_campaign=34103600-TLDR+2026&utm_source=tldr_infosec&utm_medium=email&utm_content=2025_security_impact_report_01132026_send%C2%A0",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a05",
+          "order": 2,
+          "title": "alone don't solve the problem. The latest Security Impact Report",
+          "summary": "breaks down what really works:",
+          "url": "https://bitwarden.com/resources/bitwarden-security-impact-report/?utm_campaign=34103600-TLDR+2026&utm_source=tldr_infosec&utm_medium=email&utm_content=2025_security_impact_report_01132026_send",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a06",
+          "order": 3,
+          "title": "Read the full report (ungated) [5]or try Bitwarden for free →",
+          "summary": "",
+          "url": "https://bitwarden.com/go/business-password-manager/tldr/?utm_campaign=34103600-TLDR+2026&utm_source=tldr_infosec&utm_medium=email&utm_content=form_page",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a07",
+          "order": 1,
+          "title": "TREND MICRO FIXED A REMOTE CODE EXECUTION IN APEX CENTRAL",
+          "summary": "Trend Micro patched three vulnerabilities in Apex Central on-premise, including a critical RCE flaw in LoadLibraryEX (CVE-2025-69258, CVSS 9.8) that allows unauthenticated attackers to execute code as SYSTEM by loading malicious DLLs. Tenable disclosed the vulnerabilities along with PoC exploit code after discovering them in August. Organizations running Apex Central below Build 7190 should apply the critical patch immediately and restrict remote access to management consoles.",
+          "url": "https://securityaffairs.com/186733/hacking/trend-micro-fixed-a-remote-code-execution-in-apex-central.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a08",
+          "order": 2,
+          "title": "CISA ORDERS FEDS TO PATCH GOGS RCE FLAW EXPLOITED IN 0-DAY ATTACKS",
+          "summary": "CISA has ordered government agencies to secure their systems against a high-severity vulnerability in the Gogs alternative for GitHub. The remote code execution (RCE) vulnerability is caused by a path traversal weakness in the PutContents API that allows attackers to bypass protections implemented for a previous RCE bug. Attackers can exploit the vulnerability by creating symbolic links that point to system files and then using the PutContents API to write data to those files via the symbolic links.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-gogs-rce-flaw-exploited-in-zero-day-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a09",
+          "order": 3,
+          "title": "‘BAD ACTOR' HIJACKS APEX LEGENDS CHARACTERS IN LIVE MATCHES",
+          "summary": "Apex Legends players experienced disruptions during live matches over the weekend as threat actors hijacked their characters, removed them from matches, and changed their nicknames. Players theorized that a threat actor obtained access to an administrative panel for the game. Apex Legends publisher Respawn stated that it had remediated the security incident and that the attackers were unable to access sensitive files or execute code on victims' devices.",
+          "url": "https://www.bleepingcomputer.com/news/security/bad-actor-hijacks-apex-legends-characters-in-live-matches/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a10",
+          "order": 1,
+          "title": "PWNING CLAUDE CODE IN 8 DIFFERENT WAYS",
+          "summary": "Claude Code was found to execute arbitrary system commands without explicit user approval through eight distinct techniques that bypassed its command-safety mechanisms. These issues stemmed from fragile regex-based blocklists on “safe” commands like man, sort, sed, git, xargs, and rg, plus subtle Bash variable expansion tricks that hid real payloads. An attacker could turn supposedly read‑only operations into command execution paths by abusing lesser-known flags and prompt-like variable expansion. The problems were ultimately fixed by moving from a blocklist-first design to a stricter allowlist model in Claude Code v1.0.93.",
+          "url": "https://flatt.tech/research/posts/pwning-claude-code-in-8-different-ways/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "flatt.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a11",
+          "order": 2,
+          "title": "THE MAP IS NOT THE TERRITORY: THE AGENT-TOOL TRUST BOUNDARY",
+          "summary": "Modern AI agents often treat model outputs as fully trusted inputs to tools, creating a dangerous gap between text strings (the map) and what the underlying system actually does (the territory). Attackers exploit this by encoding malicious behavior in paths, URLs, or shell commands that pass superficial checks but resolve to sensitive files, internal services, or injected commands at execution time. Robust defenses require layered, deterministic guards: semantic validation that interprets arguments as the system will, and execution-time checks that verify real filesystem and network behavior rather than relying on regexes or human confirmation alone.",
+          "url": "https://niyikiza.com/posts/map-territory/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "niyikiza.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a12",
+          "order": 3,
+          "title": "AWS PRIVILEGE ESCALATION: IAM RISKS, SERVICE-BASED ATTACKS, AND NEW AI-DRIVEN BEDROCK/AGENTCORE VECTORS",
+          "summary": "AWS privilege escalation has evolved from classic IAM misconfigurations to service-based execution paths and now AI-driven orchestration via Bedrock Agents and AgentCore Code Interpreters. New attack vectors include creating code interpreters that execute Python under privileged agent roles and hijacking Lambda functions backing Bedrock agent tools, both of which enable multi-stage privilege chains to sensitive resources. Testing across 16 scenarios showed that all were exploitable in unrestricted environments but preventable with properly configured SCP-based guardrails, highlighting that native AWS controls often cannot granularly constrain high-risk actions that lack ARNs or condition keys.",
+          "url": "https://www.softwaresecured.com/post/aws-privilege-escalation-iam-risks-service-based-attacks-and-new-ai-driven-bedrock-agentcore-vectors?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "softwaresecured.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a13",
+          "order": 1,
+          "title": "VULNERABLE-MCP-SERVERS-LAB",
+          "summary": "This repository contains a collection of intentionally vulnerable Model Context Protocol (MCP) server implementations for security training, covering common failure modes including path traversal, indirect prompt injection, eval-based RCE, namespace typosquatting, and secrets exposure. Each server includes documentation on exploitation techniques, supporting hands-on training for pentesters learning AI agent security and MCP integration risks. Intended for isolated lab environments only.",
+          "url": "https://github.com/appsecco/vulnerable-mcp-servers-lab?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a14",
+          "order": 2,
+          "title": "RENGINE",
+          "summary": "reNgine is an automated reconnaissance framework for web applications focused on highly configurable, streamlined recon processes via Engines, recon data correlation, and organization. It supports continuous monitoring and is backed by a database.",
+          "url": "https://github.com/yogeshojha/rengine?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a15",
+          "order": 3,
+          "title": "UNKOVER",
+          "summary": "unKover is a Windows anti-rootkit driver that can detect drivers mapped to kernel memory.",
+          "url": "https://github.com/eversinc33/unKover?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a16",
+          "order": 1,
+          "title": "FINTECH FIRM BETTERMENT CONFIRMS DATA BREACH AFTER HACKERS SEND FAKE CRYPTO SCAM NOTIFICATION TO USERS",
+          "summary": "Betterment disclosed that attackers used social engineering to access some customer data, including names and contact details, via third-party marketing and operations platforms, and then pushed a fake in‑app crypto message promising to triple deposits sent to a malicious wallet. The firm says no accounts or credentials were compromised. It is investigating the incident with external cybersecurity support.",
+          "url": "https://techcrunch.com/2026/01/12/fintech-firm-betterment-confirms-data-breach-after-hackers-send-fake-crypto-scam-notification-to-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a17",
+          "order": 2,
+          "title": "RUSSIA'S FANCY BEAR APT DOUBLES DOWN ON GLOBAL SECRETS THEFT",
+          "summary": "The Russian Fancy Bear APT has been carrying out a low-complexity, spear-phishing campaign targeting governments or organizations of strategic value to Russia. The phishing emails contain a link to a document that the target believes is relevant, which then redirects them to a phishing page for an email or VPN provider. While Fancy Bear is better known for more sophisticated malware campaigns, this campaign may have been chosen as a low-cost effort to gain access to notable organizations.",
+          "url": "https://links.tldrnewsletter.com/jhPaWr",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a18",
+          "order": 3,
+          "title": "THINGS YOU WISH YOU DIDN'T NEED TO KNOW ABOUT SERVICE-LINKED ROLES",
+          "summary": "AWS Service-Linked Roles (SLRs) are a special class of IAM roles managed by AWS and used to bootstrap services or resources within services that depend on other services. SLRs are largely undocumented, so the author of this post used the undocumented iamv2 API to enumerate the trust policies and IAM policies of the SLRs used by as many services as they could find. They discovered several “code smells” in the IAM policies, such as a lack of confused-deputy protection, resource policies that use wildcards, tag-based policies, or name-based policies.",
+          "url": "https://www.plerion.com/blog/about-aws-service-linked-roles?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-13:a19",
+          "order": 1,
+          "title": "EUROPOL RAIDS DISRUPT BLACK AXE CYBERCRIME RING IN SPAIN",
+          "summary": "Europol-coordinated raids across Spain arrested 34 members of the Black Axe cybercrime organization and seized €185,000 in assets linked to romance scams, phishing, and BEC fraud, resulting in nearly €6 million in losses.",
+          "url": "https://hackread.com/europol-black-axe-cybercrime-ring-spain/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a20",
+          "order": 2,
+          "title": "IRELAND RECALLS ALMOST 13,000 PASSPORTS OVER MISSING 'IRL' CODE",
+          "summary": "Ireland recalled nearly 13,000 passports issued between December 23 and January 6 after a software update omitted the 'IRL' country code from the machine-readable zone, rendering documents non-compliant with ICAO standards and potentially unusable at automated border gates.",
+          "url": "https://www.bleepingcomputer.com/news/security/ireland-recalls-almost-13-000-passports-over-missing-irl-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-13:a21",
+          "order": 3,
+          "title": "RESEARCHERS UNCOVER SERVICE PROVIDERS FUELING INDUSTRIAL-SCALE PIG BUTCHERING FRAUD",
+          "summary": "Infoblox researchers exposed service providers, including Penguin Account Store and UWORK, that supply Chinese-speaking crime syndicates with turnkey pig butchering-as-a-service (PBaaS) infrastructure, offering fraud kits, stolen credentials, CRM platforms, and complete scam packages starting at $50.",
+          "url": "https://thehackernews.com/2026/01/researchers-uncover-service-providers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

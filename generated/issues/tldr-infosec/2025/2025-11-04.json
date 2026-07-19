@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-11-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-04",
+  "source_path": "TLDR InfoSec/article_04-11-2025.md",
+  "source_content_hash": "sha256:8b5d211ee5c1ee68e1b1e4d3c1e981e8c38de3319f82c9763f15c350acb3904f",
+  "format_family": "links_block",
+  "parse_status": "partial",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    },
+    {
+      "code": "missing_reference_number",
+      "message": "Article 'POLAND HIT BY ANOTHER MAJOR CYBERATTACK AS HACKERS STEAL USERS' DATA FROM LOAN PLATFORM' has no reference number",
+      "line": 43
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:a04",
+          "order": 1,
+          "title": "WHEN YOUR CEO CALLS, WILL YOU KNOW IT'S REAL?",
+          "summary": "Phishing has gone beyond email. Today's attackers use AI-generated voices, videos, and interactive deepfakes of company executives. They can fool almost anyone - including you and your coworkers.",
+          "url": "https://www.adaptivesecurity.com/demo/adaptive-security-awareness-training?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250917",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:o002",
+          "order": 1,
+          "title": "POLAND HIT BY ANOTHER MAJOR CYBERATTACK AS HACKERS STEAL USERS' DATA FROM LOAN PLATFORM",
+          "summary": "Polish authorities are investigating a large-scale cyberattack that compromised personal data belonging to clients of the SuperGrosz online loan platform. Poland's Deputy Prime Minister Gawkowski reported that the attackers stole names, national identification numbers, ID card details, email and home addresses, phone numbers, nationality, bank account numbers, and other sensitive personal information. Affected users are advised to exercise caution, change passwords, enable 2FA, and use the government's mobile app to block their national identification number.",
+          "url": null,
+          "reading_time_minutes": 2,
+          "source_domain": null,
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a06",
+          "order": 2,
+          "title": "CISA: HIGH-SEVERITY LINUX FLAW NOW EXPLOITED BY RANSOMWARE GANGS",
+          "summary": "CISA has added a 2024 use-after-free vulnerability to the known exploited vulnerabilities (KEV) list after it was observed being exploited by ransomware gangs. The vulnerability results from a decade-old flaw in the netfilter:nf_tables kernel component and can be abused by local attackers to escalate privileges to root.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-linux-privilege-escalation-flaw-now-exploited-in-ransomware-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a07",
+          "order": 3,
+          "title": "ANDROID APPS MISUSING NFC AND HCE TO STEAL PAYMENT DATA ON THE RISE",
+          "summary": "Zimperium researchers discovered over 760 malicious Android apps exploiting Near-Field Communication (NFC) and Host Card Emulation (HCE) to steal payment data through NFC relay attacks, showing dramatic growth since April 2024. These apps impersonate trusted financial institutions and trick users into setting them as default NFC payment handlers, then use command-and-control servers to relay card terminal requests and exfiltrate EMV data to Telegram channels. The campaign has targeted over 20 institutions globally using 70+ C2 servers, primarily focusing on Russian banks but also affecting European banks, Brazilian institutions, and services like Google Pay.",
+          "url": "https://securityaffairs.com/184130/security/android-apps-misusing-nfc-and-hce-to-steal-payment-data-on-the-rise.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:a08",
+          "order": 1,
+          "title": "YOU'LL NEVER SEE ATTRITION REFERENCED IN AN RCA",
+          "summary": "Public incident reports intentionally omit staff attrition as a contributing factor to reassure customers that issues are being resolved, since mentioning workforce issues could undermine confidence and create liability. Internal analyses also rarely consider attrition, focusing instead on technical details rather than organizational factors that increase system vulnerability. Attrition is like smoking and lung cancer - it's a risk factor that heightens the likelihood of failures without being necessary or sufficient on its own.",
+          "url": "https://surfingcomplexity.blog/posts/youll-never-see-attrition-referenced-in-an-rca/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "surfingcomplexity.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a09",
+          "order": 2,
+          "title": "MOSIP ON AWS: TECHNICAL DEEP DIVE EXPLORING ARCHITECTURE, IMPLEMENTATION, AND DEPLOYMENT MODELS",
+          "summary": "AWS and Atos developed a cloud-based digital identity platform using MOSIP, addressing security challenges with multi-layered defenses like AWS Shield, WAF, CloudFront, segmented VPCs, and dedicated CloudHSM. It offers four hybrid deployment models for data sovereignty, from fully cloud to on-premises, with security controls such as data encryption, role-based access via OAuth2, and monitoring through GuardDuty and CloudWatch. Security teams should evaluate hybrid cloud architectures for sensitive government systems, implement defense-in-depth with hardware security modules, and use Infrastructure-as-Code for consistent security controls.",
+          "url": "https://aws.amazon.com/blogs/publicsector/mosip-on-aws-technical-deep-dive-exploring-architecture-implementation-and-deployment-models/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a10",
+          "order": 3,
+          "title": "CAN'T HIDE IN 3D",
+          "summary": "Time-Terrain-Behavior (TTB) mapping can be used to transform logs and security events into a 3D landscape to create a visual threat landscape. The x-axis is set as the terrain layer and measures how many different tools detected an entity, the y-axis measures how many different time periods an entity was active in, and the z-axis measures how many different actions an entity performs. This post works through applying this methodology to the Splunk BOTS v2 scenario.",
+          "url": "https://dispatch.thorcollective.com/p/cant-hide-in-3d?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "dispatch.thorcollective.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:a11",
+          "order": 1,
+          "title": "HOW TO SECURE ON-DEVICE AI WORKLOADS",
+          "summary": "AI is transforming productivity—but it's also expanding the attack surface. Learn how to build a resilient endpoint strategy that supports on-device AI innovation without compromising data integrity. Develop and deploy AI models on a secure, modern foundation with the latest Dell and Intel AI PCs. Get the eBook: Endpoint Security for AI",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a12",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.delltechnologies.com/asset/en-us/solutions/business-solutions/briefs-summaries/endpoint-security-for-ai-ebook.pdf",
+          "reading_time_minutes": null,
+          "source_domain": "delltechnologies.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a13",
+          "order": 3,
+          "title": "ORSTED C2",
+          "summary": "Orsted is a C2 framework that consists of multiple beacons that can communicate with each other and the main Orsted server.",
+          "url": "https://github.com/almounah/orsted?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a14",
+          "order": 4,
+          "title": "USING GHIDRA TO PATCH MY KEYBOARD'S FIRMWARE",
+          "summary": "In this post, a researcher demonstrates firmware reverse engineering on the Epomaker Galaxy100 keyboard using Ghidra to bypass VIA configuration limitations and modify key mappings. The technical approach involved extracting firmware via DFU mode (Fn+L+Esc), setting up proper memory mapping in Ghidra for ARM Cortex-M3 architecture, locating USB HID keycode tables through pattern matching, and directly patching binary offsets to swap function key layers. Security professionals can apply these techniques for embedded device analysis, firmware modification workflows, and understanding how consumer hardware implements bootloader protections and keycode handling mechanisms.",
+          "url": "https://packet.delivery/blog/patching-galaxy100-firmware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "packet.delivery",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a15",
+          "order": 5,
+          "title": "REFLECTIZ (PRODUCT LAUNCH)",
+          "summary": "Reflectiz provides an agentless web exposure management platform that detects third-party tools and code risks, de-obfuscates suspicious JavaScript, and gives organizations centralized visibility and control over website activity and security compliance.",
+          "url": "https://www.reflectiz.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reflectiz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:a16",
+          "order": 1,
+          "title": "CHINA-LINKED HACKERS EXPLOITED LANSCOPE FLAW AS A ZERO-DAY IN ATTACKS",
+          "summary": "Chinese cyber-espionage group Bronze Butler (Tick) exploited CVE-2025-61932, a critical request origin verification flaw in Motex Lanscope Endpoint Manager versions 9.4.7.2 and earlier, as a zero-day vulnerability for several months before it was patched in October. The attackers exploited this vulnerability to achieve unauthenticated remote code execution with SYSTEM privileges, deploying an updated Gokcpdoor malware variant that features multiplexed command-and-control communication and DLL sideloading for evasion, along with tools such as goddi Active Directory dumper and 7-Zip for data exfiltration to cloud storage services. Organizations using Lanscope Endpoint Manager must immediately upgrade to patched versions, as no workarounds exist, while security teams should monitor for indicators of Bronze Butler activity, including Gokcpdoor malware, OAED Loader, and connections to ports 38000/38002.",
+          "url": "https://www.bleepingcomputer.com/news/security/china-linked-hackers-exploited-lanscope-flaw-as-a-zero-day-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a17",
+          "order": 2,
+          "title": "ALLEGED U PENN HACKER CLAIMS THEY'RE IN IT FOR MONEY, NOT ‘PRIMARILY “ANTI-DEI”'",
+          "summary": "Hackers breached the University of Pennsylvania's systems, aiming to sell roughly 1.2 million lines of personal donor data. Unlike previous university hacks tied to diversity debates, this attack focused on financial gain, not ideology. U Penn is investigating and has involved the FBI as affected individuals have confirmed their stolen data.",
+          "url": "https://www.theverge.com/policy/812700/university-pennsylvania-hack-data-sale-dei?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a18",
+          "order": 3,
+          "title": "METROPOLITAN POLICE HAILS FACIAL RECOGNITION TECH AFTER RECORD YEAR FOR ARRESTS",
+          "summary": "London's Metropolitan Police credits live facial recognition technology with enabling 962 arrests over the past year. While officials cite improved public safety and broad support, privacy advocates raise concerns about racial bias, noting 80 percent of false alerts involved Black individuals. The report claims these disparities are not statistically significant, yet critics argue for better oversight and legal safeguards to protect civil rights.",
+          "url": "https://www.theregister.com/2025/11/03/metropolitan_police_hails_facial_recognition/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-04:a19",
+          "order": 1,
+          "title": "HERE'S WHAT 400+ IT LEADERS THINK ABOUT AI ADOPTION, ORCHESTRATION, AND GOVERNANCE",
+          "summary": "Tines commissioned Forrester to ask 400+ IT leaders about their biggest AI challenges. The results show where AI adoption stalls, why orchestration unlocks value, and how IT is primed to lead. Read the",
+          "url": "https://www.tines.com/access/whitepaper/forrester-it-ai-orchestration-2025/?utm_source=TLDR&utm_medium=paid_media&utm_content=infosec-quicklink-0411",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a19",
+          "order": 2,
+          "title": "full study.",
+          "summary": "",
+          "url": "https://www.tines.com/access/whitepaper/forrester-it-ai-orchestration-2025/?utm_source=TLDR&utm_medium=paid_media&utm_content=infosec-quicklink-0411",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a20",
+          "order": 3,
+          "title": "CLAUDE AI APIS CAN BE ABUSED FOR DATA EXFILTRATION",
+          "summary": "Attackers can exploit Anthropic's Claude AI APIs using indirect prompt injections to extract user data.",
+          "url": "https://www.securityweek.com/claude-ai-apis-can-be-abused-for-data-exfiltration/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a21",
+          "order": 4,
+          "title": "CYBERCRIMINALS EXPLOIT REMOTE MONITORING TOOLS TO INFILTRATE LOGISTICS AND FREIGHT NETWORKS",
+          "summary": "Threat actors are collaborating with organized crime groups to deploy legitimate RMM tools like ScreenConnect and SimpleHelp through spear-phishing and fraudulent freight listings to gain network access at logistics companies, enabling them to manipulate dispatch systems and steal physical cargo shipments, primarily food and beverage products.",
+          "url": "https://thehackernews.com/2025/11/cybercriminals-exploit-remote.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-04:a22",
+          "order": 5,
+          "title": "ALLEGED JABBER ZEUS CODER 'MRICQ' IN US CUSTODY",
+          "summary": "Ukrainian cybercriminal Yuriy Igorevich Rybtsov, known as \"MrICQ,\" was extradited from Italy to face charges for developing the Jabber Zeus banking trojan, which used man-in-the-browser attacks and real-time one-time password interception to steal tens of millions from US businesses through payroll manipulation and money mule networks.",
+          "url": "https://krebsonsecurity.com/2025/11/alleged-jabber-zeus-coder-mricq-in-u-s-custody/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-12-02",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-12-02",
+  "source_path": "TLDR Web Dev/article_02-12-2024.md",
+  "source_content_hash": "sha256:66b0c47d74bbf52a10757a53f42f9f8b41dea6a63a1d5a2adc7eae3fc487afba",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-12-02",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-02:a04",
+          "order": 1,
+          "title": "NIGHTMARES ON NPM: HOW TWO MALICIOUS PACKAGES FACILITATE DATA THEFT AND DESTRUCTION",
+          "summary": "Two malicious npm packages, transferwise-iconfont and protect-api, were recently discovered. The former exfiltrates sensitive data, while the latter obfuscates destructive code to delete system files. Malicious open-source packages use tactics like namespace mimicry, obfuscation, and delayed execution for attacks.",
+          "url": "https://socket.dev/blog/nightmares-on-npm-how-two-malicious-packages-facilitate-data-theft-and-destruction?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a05",
+          "order": 2,
+          "title": "BUILDING A DISTRIBUTED LOG USING S3 (UNDER 150 LINES OF GO)",
+          "summary": "This blog post describes building a distributed log using Amazon S3 in Go by using S3's scalability and durability to avoid managing a distributed storage system. The log uses a simple append-only design, where each record is stored as a unique S3 object with a sequentially increasing offset, preventing duplicate entries via conditional writes. SHA-256 checksums are incorporated into each record for data integrity, while crash recovery is implemented by iterating through S3 objects to find the last written offset.",
+          "url": "https://avi.im/blag/2024/s3-log/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "avi.im",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a06",
+          "order": 3,
+          "title": "KUBERNETES ON HETZNER",
+          "summary": "This developer migrated a self-managed Kubernetes cluster from DigitalOcean to Hetzner for a 75% reduction in infrastructure costs and a doubling of compute resources. The migration involved using Terraform and Puppet for infrastructure management, Tailscale for secure node access, and Hetzner's managed firewall and load balancer.",
+          "url": "https://bilbof.com/posts/kubernetes-on-hetzner?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "bilbof.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-02:a07",
+          "order": 1,
+          "title": "15 LESSONS FROM 15 YEARS OF INDIE APP DEVELOPMENT",
+          "summary": "This indie iOS app developer has been able to keep up his 15-year indie app career by enjoying the development process, understanding personal motivations (beyond solely financial gain), and accepting the high-risk, high-reward nature of indie app development. Success is a marathon, not a sprint, and it requires perseverance to not give up too early.",
+          "url": "https://lukaspetr.com/15-lessons-from-15-years-of-indie-app-development/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "lukaspetr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a08",
+          "order": 2,
+          "title": "RAILS IS BETTER LOW CODE THAN LOW CODE",
+          "summary": "This author compares building a simple CRUD application using a low-code platform versus Ruby on Rails. Initially, the low-code platform is faster for creating a basic prototype, but adding features becomes increasingly difficult due to limitations and a lack of flexibility. Conversely, Rails, while initially slower, makes it much easier to accommodate unexpected feature requests and complex functionalities.",
+          "url": "https://radanskoric.com/articles/rails-is-better-low-code-than-low-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "radanskoric.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a09",
+          "order": 3,
+          "title": "IF NOT REACT, THEN WHAT?",
+          "summary": "React and similar frontend frameworks, used incorrectly, can lead to performance and accessibility issues. It's important for devs to use performance metrics and user testing to guide their tech choices. This means that sometimes just pure HTML and CSS can do the job compared to needing JavaScript for something.",
+          "url": "https://infrequently.org/2024/11/if-not-react-then-what/?utm_source=tldrwebdev",
+          "reading_time_minutes": 31,
+          "source_domain": "infrequently.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-02:a10",
+          "order": 1,
+          "title": "ADVENT OF CODE 2024",
+          "summary": "Advent of Code is a yearly Advent calendar that features daily programming puzzles suitable for various skill levels, solvable in any language. Devs can use it for practice, learning, or competition. No prior computer science background is required.",
+          "url": "https://adventofcode.com/2024/about?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "adventofcode.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a11",
+          "order": 2,
+          "title": "STEEL",
+          "summary": "Steel-browser is an open-source, containerized browser sandbox that provides a REST API for building AI agents and apps that interact with the web. It offers features like session management, proxy support, and integration with automation frameworks such as Puppeteer, Playwright, and Selenium.",
+          "url": "https://github.com/steel-dev/steel-browser?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-02:a12",
+          "order": 1,
+          "title": "HEADLESS, BONELESS, SKINLESS, & LIFELESS UI",
+          "summary": "There are four categories of UI abstractions: Headless UI, Boneless UI, Skinless UI, and Lifeless UI. Headless UI is a common term where the abstractions often have underlying functionality and structure. Boneless refers to UI libraries that provide composable styles but no markup. Skinless UIs provide functioning markup with no styling. Lifeless UI abstractions, like TanStack, offer typesafe hooks and logic without rendering actual UI elements, leaving the developer responsible for applying those functions to elements and styles.",
+          "url": "https://nerdy.dev/headless-boneless-and-skinless-ui?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "nerdy.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a13",
+          "order": 2,
+          "title": "OCTOVERSE: AI LEADS PYTHON TO TOP LANGUAGE AS THE NUMBER OF GLOBAL DEVELOPERS SURGES",
+          "summary": "GitHub's Octoverse 2024 report reveals a surge in global developer activity fueled in part by the rise of AI. Python surpassed JavaScript as the most popular programming language due to increased interest in data science and ML (thanks to AI). Regions like India, Africa, and Latin America have grown a lot. AI-powered tools are being used more often during development.",
+          "url": "https://github.blog/news-insights/octoverse/octoverse-2024/?utm_source=tldrwebdev",
+          "reading_time_minutes": 32,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-02:a14",
+          "order": 1,
+          "title": "ASK HN: HOW CAN I GROW AS AN ENGINEER WITHOUT GOOD SENIORS TO LEARN FROM? (HACKER NEWS THREAD)",
+          "summary": "A recent data engineering graduate, working independently at a non-tech company, seeks advice on professional development without senior devs to learn from - the answers recommend open-source contributions, online resources, and switching companies.",
+          "url": "https://news.ycombinator.com/item?id=42289955&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a15",
+          "order": 2,
+          "title": "WHY GOLANG SLICES STILL SURPRISE ME",
+          "summary": "Go slices are confusing because they behave as either dynamically sized arrays or fat pointers depending on context, leading to mutability and ownership issues and surprising behaviors like reslicing beyond the length and modifying the capacity.",
+          "url": "https://build-your-own.org/blog/20241125_go_slice_surprise/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "build-your-own.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-02:a16",
+          "order": 3,
+          "title": "SLOW DEPLOYMENT CAUSES MEETINGS",
+          "summary": "Slow code deployment, rather than causing meetings, is more likely the reason for them, as organizations increase meeting overhead to compensate for their inability to deploy code frequently enough.",
+          "url": "https://tidyfirst.substack.com/p/slow-deployment-causes-meetings?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "tidyfirst.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

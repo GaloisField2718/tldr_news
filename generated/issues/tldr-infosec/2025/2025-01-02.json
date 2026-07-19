@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-01-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-02",
+  "source_path": "TLDR InfoSec/article_02-01-2025.md",
+  "source_content_hash": "sha256:993dc6d9411cef530f63fbcbeae3e64d44d2d6063ee547b3f6b7edf427077705",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-02:a04",
+          "order": 1,
+          "title": "JUNIPER WARNS OF MIRA'S BOTNET TARGETING SESSION SMART ROUTERS",
+          "summary": "Juniper Networks is warning that session smart routers are being targeted by a Mirai botnet infection campaign. The default passwords for these devices have been added to the virus database. Juniper warns that any devices using the default passwords should be assumed to be compromised. It has provided threat hunting advice and is urging admins to reimage any infected devices.",
+          "url": "https://www.securityweek.com/juniper-warns-of-mirai-botnet-targeting-session-smart-routers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a05",
+          "order": 2,
+          "title": "BEYONDTRUST SAYS HACKERS BREACHED REMOTE SUPPORT SAAS INSTANCES",
+          "summary": "BeyondTrust identified a security incident in which an attacker obtained a Remote Support SaaS API key which it used to access some Remote Support SaaS instances and reset passwords for local application users. As part of its investigation, BeyondTrust discovered two CVEs that could allow for RCE but did not mark either as being actively exploited. BeyondTrust has patched all cloud instances against these CVEs and is working with customers to ensure that self-hosted instances are patched.",
+          "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-says-hackers-breached-remote-support-saas-instances/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a06",
+          "order": 3,
+          "title": "FOUR-FAITH INDUSTRIAL ROUTER CVE-2024-12856 EXPLOITED IN THE WILD",
+          "summary": "A new post-authentication vulnerability in Four-Faith industrial routers, CVE-2024-12856, is being exploited in the wild. Using default credentials for remote command injection, the attack targets specific router models over HTTP, allowing attackers to execute commands on vulnerable devices. VulnCheck has notified Four-Faith and customers about the issue and recommends contacting Four-Faith for information on patches and affected models.",
+          "url": "https://vulncheck.com/blog/four-faith-cve-2024-12856?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "vulncheck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-02:a07",
+          "order": 1,
+          "title": "EXPLOITING PUBLIC AWS RESOURCES - CLI ATTACK PLAYBOOK",
+          "summary": "A glossary of exploitation techniques for exploiting AWS resources that can be misconfigured to be publicly accessible. Each attack features relevant CLI commands to carry it out as well as sometimes featuring a sample resource policy that could allow for it. The first section focuses on resources that can be found from a black box perspective and includes: exploiting S3 buckets for public list, read, and write, exploiting S3 buckets for authenticated list and write, exploiting S3 static site hosting or misconfigured CloudFront distributions for unauthenticated bucket list, exploiting EC2 to discover AMIs, exploiting EBS and RDS to discover public snapshots, exploiting misconfigured OIDC roles, and exploiting public SSM documents. The second section focuses on resources that can't be discovered from a black box perspective and includes: exploiting public SQS queues and SNS topics, exploiting private API gateways, exploiting Lambda functions, and exploiting public and private ECR repositories.",
+          "url": "https://hackingthe.cloud/aws/exploitation/Misconfigured_Resource-Based_Policies/exploting_public_resources_attack_playbook/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "hackingthe.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a08",
+          "order": 2,
+          "title": "WICKED PANDA APT ADVERSARY SIMULATION",
+          "summary": "This README explains a simulation of an attack by the Wicked Panda group targeting government networks. The attack involves stages like DodgeBox DLL loader and MoonWalk backdoor for data exfiltration via Google Drive API. The attackers use techniques like DLL sideloading and hashing to evade detection and establish communication channels.",
+          "url": "https://github.com/S3N4T0R-0X0/APT-Attack-Simulation/blob/main/Chinese%20APT/Wicked%20Panda/README.md?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a09",
+          "order": 3,
+          "title": "SIMPLE PROMPTS TO GET THE SYSTEM PROMPTS",
+          "summary": "This blog post covers various methods, like expanding the prompt or encoding it in base64, that can be used to extract system prompts from AI models, potentially bypassing developer-imposed limits. Understanding these tricks can show the vulnerabilities in AI models and how they can be manipulated to disclose hidden prompts.",
+          "url": "https://eval.blog/blog/simple-prompts-to-get-the-system-prompts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "eval.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-02:a10",
+          "order": 1,
+          "title": "PIMPMYKALI.SH",
+          "summary": "A tool from TCM Security to apply various fixes and install tools for Kali Linux VMs",
+          "url": "https://github.com/Dewalt-arch/pimpmykali?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a11",
+          "order": 2,
+          "title": "SMUGGLESHIELD",
+          "summary": "SmuggleShield is a browser extension that helps prevent basic HTML smuggling attacks by detecting common patterns. It works on Chrome and Edge for Mac and Windows, providing an extra layer of security during browsing or team exercises. The extension uses machine learning and allows for incognito mode protection with manual activation.",
+          "url": "https://github.com/RootUp/SmuggleShield?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a12",
+          "order": 3,
+          "title": "HOW WE ARE SELF HOSTING CODE SCANNING AT REDDIT",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/BaS0ZB",
+          "reading_time_minutes": 13,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-02:a13",
+          "order": 1,
+          "title": "AWS POST-QUANTUM CRYPTOGRAPHY MIGRATION PLAN",
+          "summary": "AWS is preparing for post-quantum cryptography (PQC) by implementing NIST-approved algorithms to protect against future quantum computer threats to public key cryptography. Its migration plan consists of four workstreams: creating an inventory of current crypto usage (prioritizing data-in-transit), updating asymmetric key derivation between AWS endpoints and customers, addressing long-term digital signature keys, and handling short-term session signature keys. AWS recommends organizations prepare by making an inventory of their cryptography usage and upgrading to TLS 1.3.",
+          "url": "https://aws.amazon.com/blogs/security/aws-post-quantum-cryptography-migration-plan/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a14",
+          "order": 2,
+          "title": "SO… YOU THOUGHT YOUR VPN WAS KEEPING YOU SAFE AND SECURE?",
+          "summary": "VPNs have become ubiquitous as a way for protecting access to sensitive resources in organizations and preserving privacy for individuals. This has made VPNs a valuable target for attackers with VPN vulnerabilities on the rise since 2022. This article examines attacks in VPNs from Check Point, Fortinet, Palo Alto Networks, and Ivanti. For each vulnerability, the author demonstrates how to exploit the vulnerability and its impact.",
+          "url": "https://www.hackers-arise.com/post/so-you-thought-your-vpn-was-keeping-you-safe-and-secure?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackers-arise.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a15",
+          "order": 3,
+          "title": "MISP-STANDARD.ORG - INTRODUCING THE MISP THREAT ACTOR NAMING STANDARD",
+          "summary": "The MISP-standard.org has introduced a new Threat Actor Naming Standard for cybersecurity information sharing. This standard aims to provide a structured approach for naming threat actors to improve collaboration and interoperability in the cybersecurity community. It offers global consistency, interoperability with existing platforms like MISP, and benefits such as enhanced collaboration and streamlined analysis.",
+          "url": "https://www.misp-standard.org/blog/Naming-Threat-Actor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "misp-standard.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-02:a16",
+          "order": 1,
+          "title": "RUSSIA BANS CYBERSECURITY COMPANY RECORDED FUTURE",
+          "summary": "Recorded Future's CEO has celebrated being the first cybersecurity firm to be banned by Russia.",
+          "url": "https://cyberscoop.com/russia-bans-recorded-future/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a17",
+          "order": 2,
+          "title": "OVER 3.1 MILLION FAKE \"STARS\" ON GITHUB PROJECTS USED TO BOOST RANKINGS",
+          "summary": "A study found over 3.1 million fake stars across repositories and notes that users should be cautious and verify repository quality beyond star ratings.",
+          "url": "https://www.bleepingcomputer.com/news/security/over-31-million-fake-stars-on-github-projects-used-to-boost-rankings/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-02:a18",
+          "order": 3,
+          "title": "WHAT HAPPENED IN THE U.S. DEPARTMENT OF THE TREASURY BREACH? A DETAILED SUMMARY",
+          "summary": "GitGuradian provides a detailed timeline of events leading up to the US Department of Treasury Breach due to a compromised API key used for technical support by BeyondTrust, allowing remote access to workstations and documents.",
+          "url": "https://blog.gitguardian.com/what-happened-in-the-u-s-department-of-the-treasury-breach-a-detailed-summary/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

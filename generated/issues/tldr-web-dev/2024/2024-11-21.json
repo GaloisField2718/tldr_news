@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-11-21",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-11-21",
+  "source_path": "TLDR Web Dev/article_21-11-2024.md",
+  "source_content_hash": "sha256:d33a5c01a0d0ca74c97415c2f3b3c86014f1aa5eddf422e789bd7a35182c4c22",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-11-21",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-21:a04",
+          "order": 1,
+          "title": "BE CAREFUL WITH USESYNCEXTERNALSTORE",
+          "summary": "This developer initially created a `useLocalStorage` hook using `useSyncExternalStore` to manage local storage, but encountered an infinite render loop when storing non-string values due to React's comparison of objects. To resolve this, the hook was edited to serialize and deserialize data using `superjson`, which handles non-primitive types more effectively than `JSON.stringify` and `JSON.parse`.",
+          "url": "https://www.nico.fyi/blog/be-careful-with-usesyncexternalstore?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "nico.fyi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a05",
+          "order": 2,
+          "title": "WHAT ARE REACT PORTALS?",
+          "summary": "React Portals offer a way to render a component's children outside its parent's DOM hierarchy. This is useful for elements like modals and notifications that need to be displayed at the top level of an application.",
+          "url": "https://techhub.iodigital.com/articles/what-are-react-portals?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "techhub.iodigital.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a06",
+          "order": 3,
+          "title": "5 DIFFERENCES BETWEEN REACT SERVER COMPONENTS AND SERVER-SIDE RENDERING",
+          "summary": "Server Components reduce client-side JavaScript by rendering static parts on the server, skipping hydration, and avoiding bundle bloat. SSR pre-renders HTML on the server, but still sends the full app bundle to the client for hydration, increasing load times. While SSR supports interactive components throughout, Server Components isolate static and interactive parts.",
+          "url": "https://www.tymzap.com/blog/5-differences-between-react-server-components-and-server-side-rendering?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "tymzap.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-21:a07",
+          "order": 1,
+          "title": "HOW TO COPE WITH TECHNOLOGY FOMO",
+          "summary": "Many developers feel anxiety about keeping up with the constant churn of new technologies. However, chasing the latest trends is not as important as understanding foundational \"keyframe\" technologies and the problems they solve. This lets developers pick up new things quickly whenever they need to.",
+          "url": "https://avdi.codes/how-to-cope-with-technology-fomo/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "avdi.codes",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a08",
+          "order": 2,
+          "title": "HOW WE CHOOSE TECHNOLOGIES",
+          "summary": "PostHog prioritizes adopting new technologies when facing urgent problems like excessive costs or scaling challenges. Decisions are made asynchronously through a request for comments (RFC) process and the team continuously evaluates their technology stack to make sure it aligns with their long-term goals.",
+          "url": "https://newsletter.posthog.com/p/how-we-choose-technologies?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "newsletter.posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-21:a09",
+          "order": 1,
+          "title": "USE EXPO DOM COMPONENTS TO MAGICALLY RUN YOUR WEBSITE AS-IS IN A NATIVE APP",
+          "summary": "If you want to convert your React website to a native app [9], you end up having to mostly start over because you're missing DOM elements, CSS, and browser APIs. But what if you could just run your website as-is in your native app and incrementally migrate it to truly",
+          "url": "https://expo.dev/blog/the-magic-of-expo-dom-components?utm_medium=newsletter&utm_source=tldr-webdev&utm_campaign=20241121",
+          "reading_time_minutes": null,
+          "source_domain": "expo.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a09",
+          "order": 2,
+          "title": "native views on a component-by-component basis? Find out how",
+          "summary": "",
+          "url": "https://expo.dev/blog/the-magic-of-expo-dom-components?utm_medium=newsletter&utm_source=tldr-webdev&utm_campaign=20241121",
+          "reading_time_minutes": null,
+          "source_domain": "expo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a10",
+          "order": 3,
+          "title": "OPENNEXT",
+          "summary": "OpenNext is a tool that allows developers to deploy Next.js applications across various environments, including AWS Lambda and traditional Node.js servers. It aims to support all Next.js 14 features and is actively maintained by the SST community.",
+          "url": "https://github.com/opennextjs/opennextjs-aws?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a11",
+          "order": 4,
+          "title": "INTRODUCING WORKFLOWS: CICD BUILT FOR YOUR APP",
+          "summary": "Expo Workflows is a new CI/CD service that allows developers to automate their entire app development process, from building and testing to submitting to app stores. It offers pre-packaged jobs for common tasks and the ability to create custom jobs, triggered by GitHub events or manually via EAS CLI.",
+          "url": "https://expo.dev/blog/expo-workflows-automate-your-release-process?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "expo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a12",
+          "order": 5,
+          "title": "LEGEND LIST",
+          "summary": "Legend List is an experimental React Native library that aims to be a higher-performing replacement for FlatList, especially for lists with dynamically sized items.",
+          "url": "https://github.com/LegendApp/legend-list?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-21:a13",
+          "order": 1,
+          "title": "HOW GOOGLE SPENT 15 YEARS CREATING A CULTURE OF CONCEALMENT",
+          "summary": "Google created a culture of concealment to avoid antitrust litigation by encouraging employees to delete messages, avoid certain words, and include lawyers in communications. This practice was revealed through court documents and testimony in three antitrust trials against Google.",
+          "url": "https://archive.ph/n2kna?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a14",
+          "order": 2,
+          "title": "AAA - ANALYTICAL ANTI-ALIASING",
+          "summary": "This article explores various anti-aliasing techniques in computer graphics, starting with simple methods like SSAA and MSAA and progressing to more advanced techniques. It then goes through post-processing methods such as MLAA and FXAA. The article's core focus is on Analytical Anti-Aliasing (AAA), a novel approach that achieves smooth, sharp results by directly calculating anti-aliased pixels based on the shape's mathematical definition.",
+          "url": "https://blog.frost.kiwi/analytical-anti-aliasing/?utm_source=tldrwebdev",
+          "reading_time_minutes": 36,
+          "source_domain": "blog.frost.kiwi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a15",
+          "order": 3,
+          "title": "STATE OF HTML 2024",
+          "summary": "The State of HTML 2024 report shows that developers are adopting new HTML features, such as dialog and inert, while being frustrated by areas of friction like inconsistent browser support. There's a growing reliance on modern standards for accessibility and interactivity.",
+          "url": "https://2024.stateofhtml.com/en-US?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "2024.stateofhtml.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-11-21:a16",
+          "order": 1,
+          "title": "ESSENTIAL TYPESCRIPT FOR REACT",
+          "summary": "Some important TypeScript tips for React devs include inferring output types, typing children with ReactNode, using ComponentProps for props, and using unions and tuples for better type management.",
+          "url": "https://www.jacobparis.com/content/react-ts?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "jacobparis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a17",
+          "order": 2,
+          "title": "LEOPARDS",
+          "summary": "Leopards is a Python library that allows you to query lists of dictionaries or objects with a SQL-like syntax.",
+          "url": "https://github.com/mkalioby/leopards?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a18",
+          "order": 3,
+          "title": "SQLITE-VEC NOW SUPPORTS METADATA COLUMNS AND FILTERING",
+          "summary": "The latest release of sqlite-vec, a SQLite extension for vector search, now allows users to store and filter non-vector data like metadata and auxiliary columns within vector tables, which improves the efficiency of KNN queries.",
+          "url": "https://alexgarcia.xyz/blog/2024/sqlite-vec-metadata-release/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "alexgarcia.xyz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-11-21:a19",
+          "order": 4,
+          "title": "AUTOTAB",
+          "summary": "Autotab is an AI-powered tool that automates repetitive computer tasks by learning from user demonstrations and executing actions with mouse and keyboard control.",
+          "url": "https://www.autotab.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "autotab.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

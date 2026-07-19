@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-12-04",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-12-04",
+  "source_path": "TLDR Web Dev/article_04-12-2024.md",
+  "source_content_hash": "sha256:1d37f6fd909d5771fd14b23433e4601fdb1bb9a41f6410915111814545645749",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-12-04",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-04:a04",
+          "order": 1,
+          "title": "IS AURORA DSQL YOUR NEXT DATABASE?",
+          "summary": "Amazon launched Aurora DSQL, a serverless, globally distributed database, at Re:Invent 2024. Aurora DSQL has high availability, multi-regional capabilities, and claims significantly faster speeds than Google Cloud's Spanner, making achieving global scale easier through decoupled compute and storage and Amazon Time Sync Service. However, the service is still in its early stages, lacking essential features like foreign keys and triggers, and its authentication method presents challenges for application integration.",
+          "url": "https://blog.p6n.dev/p/is-aurora-dsql-huge?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.p6n.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a05",
+          "order": 2,
+          "title": "WEBHOOKS ARE HARDER THAN THEY SEEM",
+          "summary": "While webhooks appear simple (an HTTP POST request), building a robust webhook system presents many challenges. These challenges include ensuring reliability (handling failures and retries), implementing strong security measures (authentication, SSRF prevention), and achieving scalability (managing potentially massive event volumes). For good webhook adoption, webhooks need a positive dev experience with good observability.",
+          "url": "https://www.svix.com/blog/webhooks-are-harder-than-they-seem/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "svix.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a06",
+          "order": 3,
+          "title": "RAILING AGAINST TIME: TOOLS AND TECHNIQUES THAT GOT US 5X FASTER TESTS",
+          "summary": "Developers were able to get a test suite down from 53 minutes to 11 minutes by using a combination of profiling tools, RSpec techniques, and code refactoring. Their optimization strategy focused on identifying high-value targets, prioritizing easy wins, and consistently measuring results. The process involved three main phases: general optimizations, factory optimization, and optimizing individual test files using techniques like `let_it_be` (which means using shared test data instead of creating new test data for each test).",
+          "url": "https://evilmartians.com/chronicles/railing-against-time-tools-and-techniques-that-got-us-5x-faster-results?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "evilmartians.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-04:a07",
+          "order": 1,
+          "title": "EGOLESS ENGINEERING",
+          "summary": "Overly specialized roles in companies can create silos and make collaboration tougher. Egoless engineering promotes shared responsibility, cross-functional teamwork, and a culture of collaboration. It's up to leadership to make sure that they are creating \"domain experts\" rather than \"domain owners,” which leads to a healthier organization long-term.",
+          "url": "https://egoless.engineering/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "egoless.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a08",
+          "order": 2,
+          "title": "SQL BEST PRACTICES – DON'T COMPARE COUNT(*) WITH 0",
+          "summary": "Instead of using `COUNT(*)` to find users without addresses, use `NOT EXISTS` for better performance. `COUNT(*)` unnecessarily counts all rows before rejecting them, while `NOT EXISTS` stops checking as soon as a match is found.",
+          "url": "https://www.depesz.com/2024/12/01/sql-best-practices-dont-compare-count-with-0/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "depesz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a09",
+          "order": 3,
+          "title": "BEING IN THE DETAILS",
+          "summary": "Flattened organizations demand managers to be more hands-on. Effective management requires knowing the details without micromanaging and delegating responsibility while retaining accountability for decisions and outcomes.",
+          "url": "https://theengineeringmanager.substack.com/p/being-in-the-details?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "theengineeringmanager.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-04:a10",
+          "order": 1,
+          "title": "SECURITY DOESN'T HAVE TO BE A PAIN",
+          "summary": "Too many security tools are built for non-technical decision makers, which makes them incredibly clunky for developers to actually use. Arcjet takes a developer-first approach [11]: add a few lines to your code for bot detection, rate limiting, email validation, attack",
+          "url": "https://launch.arcjet.com/sjCgDDy?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "launch.arcjet.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a11",
+          "order": 2,
+          "title": "protection, and data redaction. See a live example",
+          "summary": "",
+          "url": "https://launch.arcjet.com/sjCgDDy",
+          "reading_time_minutes": null,
+          "source_domain": "launch.arcjet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a12",
+          "order": 3,
+          "title": "AMAZON AURORA DSQL",
+          "summary": "Amazon Aurora DSQL is a serverless, distributed SQL database that offers virtually unlimited scale, high availability, and ease of use with no infrastructure management.",
+          "url": "https://aws.amazon.com/rds/aurora/dsql/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a13",
+          "order": 4,
+          "title": "ES TOOLKIT",
+          "summary": "es-toolkit is a high-performance, small-bundle-size JavaScript utility library that offers various functions with improved performance and TypeScript support.",
+          "url": "https://github.com/toss/es-toolkit?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a14",
+          "order": 5,
+          "title": "STAGEHAND",
+          "summary": "Stagehand is an open-source, AI-powered web automation framework built on Playwright that offers simple APIs (act, extract, and observe) for natural language-driven web interactions. It supports various LLMs.",
+          "url": "https://github.com/browserbase/stagehand?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-04:a15",
+          "order": 1,
+          "title": "DESIGNING DATA PRODUCTS",
+          "summary": "Engineers should take a use-case-driven approach when designing data products. This means starting with a specific use case and working backward to identify necessary data products, where each is self-contained and valuable. This iterative process avoids over-engineering by focusing on the minimal viable data product and gradually generalizing as more use cases are considered.",
+          "url": "https://martinfowler.com/articles/designing-data-products.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a16",
+          "order": 2,
+          "title": "OPTIMIZATION ADVENTURES: MAKING A PARALLEL RUST WORKLOAD 10X FASTER WITH (OR WITHOUT) RAYON",
+          "summary": "This blog post details an optimization journey to improve a parallel Rust workload's speed tenfold. Initially, using the Rayon library only yielded a 2x speedup, prompting a deeper investigation using profiling tools like `strace` and `perf`. The author identified excessive system calls and cache misses as bottlenecks, leading him to create a custom parallel implementation tailored to his specific use case.",
+          "url": "https://gendignoux.com/blog/2024/11/18/rust-rayon-optimized.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 29,
+          "source_domain": "gendignoux.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a17",
+          "order": 3,
+          "title": "THE OPEN-SOURCE TOOLKIT FOR BUILDING AI AGENTS",
+          "summary": "This post provides a curated list of open-source tools and frameworks for building AI agents. There are various categories of tools, including frameworks for agent orchestration, tools for computer and browser interaction, voice integration, document understanding, memory management, testing, monitoring, simulation, and examples of vertical agents.",
+          "url": "https://www.aitidbits.ai/p/open-source-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "aitidbits.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-04:a18",
+          "order": 1,
+          "title": "CERBOS",
+          "summary": "Cerbos is a self-hosted authorization layer that uses YAML policies to define access control rules.",
+          "url": "https://github.com/cerbos/cerbos?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a19",
+          "order": 2,
+          "title": "WHY PHISHERS LOVE NEW TLDS LIKE .SHOP, .TOP, AND .XYZ",
+          "summary": "Phishing attacks have increased a lot due to the use of cheap, easily registered new top-level domains (.shop, .top, .xyz, etc.), which are attractive to scammers.",
+          "url": "https://krebsonsecurity.com/2024/12/why-phishers-love-new-tlds-like-shop-top-and-xyz/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a20",
+          "order": 3,
+          "title": "CHERRY STUDIO",
+          "summary": "Cherry Studio is a cross-platform desktop client supporting multiple LLMs with features like document and data processing, AI assistants, and more.",
+          "url": "https://github.com/kangfenmao/cherry-studio?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-04:a21",
+          "order": 4,
+          "title": "LEGEND STATE",
+          "summary": "Legend-State is a fast, lightweight, and easy-to-use state management library for React.",
+          "url": "https://github.com/LegendApp/legend-state?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

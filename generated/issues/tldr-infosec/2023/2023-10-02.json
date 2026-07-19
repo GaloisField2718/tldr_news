@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-10-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-10-02",
+  "source_path": "TLDR InfoSec/article_02-10-2023.md",
+  "source_content_hash": "sha256:774a7b9de052fa8a601ca3dab0ee4de5dba7605bf713b63d5bf98887a80272d7",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-10-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-02:o001",
+          "order": 1,
+          "title": "MILLIONS OF EXIM MAIL SERVERS EXPOSED TO ZERO-DAY RCE ATTACKS",
+          "summary": "A zero-day vulnerability in all versions of Exim mail transfer agent allows unauthenticated attackers to gain remote code execution on Internet-exposed servers. The vulnerability is due to an Out-of-bounds Write weakness found in the SMTP service, which can lead to software crashes or corruption of data following successful exploitation.",
+          "url": "https://www.bleepingcomputer.com/news/security/millions-of-exim-mail-servers-exposed-to-zero-day-rce-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o002",
+          "order": 2,
+          "title": "JOHNSON CONTROLS INTERNATIONAL DISRUPTED BY MAJOR CYBERATTACK",
+          "summary": "Johnson Controls International this week reported in a filing with the US Securities and Exchange Commission that it had suffered a cyberattack that caused disruptions to its internal IT infrastructure. The attack was perpetrated by cybergang Dark Angels, who posted a ransom letter claiming the attack. It was done with ransomware that encrypted Johnson Controls’ VMware ESXi machines.",
+          "url": "https://www.darkreading.com/ics-ot/johnson-controls-international-hit-with-massive-ransomware-attack?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o003",
+          "order": 3,
+          "title": "CRITICAL VULNERABILITIES IN WS_FTP SERVER",
+          "summary": "Progress Software posted a security advisory for several vulnerabilities affecting WS_FTP Server, a secure file transfer solution. Rapid7 has observed that these vulnerabilities are being actively exploited and provided details of the attack chains it has been seeing.",
+          "url": "https://www.rapid7.com/blog/post/2023/09/29/etr-critical-vulnerabilities-in-ws_ftp-server/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "rapid7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-02:o004",
+          "order": 1,
+          "title": "DEPENDENCY-TRACK",
+          "summary": "This article teaches readers how to store and analyze Software Bill of Materials with OWASP Dependency-Track to identify security vulnerabilities in open-source components. It covers how Dependency-Track can be deployed in a production environment and summarizes the pros and cons of the platform.",
+          "url": "https://itnext.io/a-practical-approach-to-sbom-in-ci-cd-part-ii-deploying-dependency-track-18fbb54d83b9?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "itnext.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o005",
+          "order": 2,
+          "title": "NOSQL INJECTION EXPLOITATION TECHNIQUES & LABS",
+          "summary": "NoSQL injection is a vulnerability where hackers can interfere with queries to NoSQL databases. This can let them bypass authentication, steal or edit data, cause denial of service, or execute server code. NoSQL databases do not use SQL, instead favoring non-relational data formats that open up for injection risks through the lack of standards. This blog dives into the different NoSQL injection techniques and provides labs for readers to try to exploit them.",
+          "url": "https://portswigger.net/web-security/nosql-injection?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o006",
+          "order": 3,
+          "title": "AUTOMATE LAMBDA CODE SIGNING WITH AWS CODECATALYST AND AWS SIGNER",
+          "summary": "Code Signing helps ensure the trust and security of deployed code using cryptographic signatures. This post from AWS walks through the process of configuring a CodeCatalyst CI/CD pipeline that uses AWS Signer to automatically sign deployed code.",
+          "url": "https://aws.amazon.com/blogs/devops/automate-lambda-code-signing-with-amazon-codecatalyst-and-aws-signer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-02:o007",
+          "order": 1,
+          "title": "ENCRYPTED CLIENT HELLO - THE LAST PUZZLE PIECE TO PRIVACY",
+          "summary": "Cloudflare has announced a new proposed standard called Encrypted Client Hello (ECH) that masks Server Name Indication (SNI), preventing networks from snooping on which websites a user is visiting. ECH is the last puzzle piece to privacy, and Cloudflare hopes that more providers will offer ECH, leading to a more private internet for everyone.",
+          "url": "https://blog.cloudflare.com/announcing-encrypted-client-hello/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o008",
+          "order": 2,
+          "title": "",
+          "summary": "Discern Security has raised $3M to use AI for cybersecurity. Many firms buy expensive tools but don't know how to use them properly. Discern's software maps infrastructure and tools, then makes recommendations to optimize configurations and get the most protection.",
+          "url": "https://www.forbes.com/sites/davidprosser/2023/09/19/why-discern-security-thinks-ai-can-defeat-the-cyber-attackers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "forbes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o009",
+          "order": 3,
+          "title": "SUBSTATION",
+          "summary": "Substation is a cloud-native, event-driven data pipeline toolkit. It allows for the deployment of modular, serverless data pipelines, data processing, and writing custom data processing applications in Go.",
+          "url": "https://github.com/brexhq/substation?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-02:o010",
+          "order": 1,
+          "title": "SECURITY SWEEP",
+          "summary": "Palo Alto Networks is in talks to acquire Israeli cybersecurity startups Talon Cyber Security and Dig Security for around $1 billion in total. Talon protects distributed workforces with secure enterprise browsing. Dig secures data across public clouds. The deals would expand Palo Alto's security portfolio as demand grows.",
+          "url": "https://techcrunch.com/2023/09/26/palo-alto-networks-dig-talon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o011",
+          "order": 2,
+          "title": "OF A SPANISH AEROSPACE COMPANY",
+          "summary": "ESET researchers uncovered a Lazarus cyberattack on a Spanish aerospace firm. Hackers posed as Meta recruiters on LinkedIn and sent coding challenges containing malware. Once inside the network, Lazarus deployed multiple tools including a new backdoor called LightlessCan. ESET analyzed the attack method and Lazarus' toolset through cooperation with the victim company.",
+          "url": "https://www.welivesecurity.com/en/eset-research/lazarus-luring-employees-trojanized-coding-challenges-case-spanish-aerospace-company/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "welivesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o012",
+          "order": 3,
+          "title": "VOLATILITY3: REMOTE ANALYSIS ON CLOUD OBJECT-STORAGE",
+          "summary": "Volatility3 is a memory forensic framework used for incident response. It recently added support for S3 object storage and released an in-depth blog post on how it was implemented.",
+          "url": "https://www.forensicxlab.com/posts/vols3/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "forensicxlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-02:o013",
+          "order": 1,
+          "title": "WHO’S BEHIND THE 8BASE RANSOMWARE GROUP?",
+          "summary": "A Krebs on Security reader noted that the 8base ransomware group was leaking a significant amount of information on its public error pages. Brian Krebs used this information to trace the website to a 36-year-old Moldovan programmer. The programmer denied the connection.",
+          "url": "https://krebsonsecurity.com/2023/09/whos-behind-the-8base-ransomware-website/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o014",
+          "order": 2,
+          "title": "FACIAL RECOGNITION TECHNOLOGY",
+          "summary": "A viral TikTok account has amassed a following by utilizing off-the-shelf facial recognition tools to dox random people. The account usually starts by choosing a victim from other viral videos or comments and then goes through the process of processing the image and doxing the person. TikTok has commented that the account does not violate their policies.",
+          "url": "https://www.404media.co/the-end-of-privacy-is-a-taylor-swift-fan-tiktok-account-armed-with-facial-recognition-tech/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "404media.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-02:o015",
+          "order": 3,
+          "title": "USING CLOUDFLARE TO BYPASS CLOUDFLARE",
+          "summary": "Cloudflare has a vulnerability where customer-configured protection mechanisms can be bypassed due to gaps in cross-tenant security controls, potentially exposing customers to attacks Cloudflare is supposed to prevent.",
+          "url": "https://certitude.consulting/blog/en/using-cloudflare-to-bypass-cloudflare/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "certitude.consulting",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

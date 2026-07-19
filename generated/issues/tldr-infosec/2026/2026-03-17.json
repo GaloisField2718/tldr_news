@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-03-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-17",
+  "source_path": "TLDR InfoSec/article_17-03-2026.md",
+  "source_content_hash": "sha256:00687aed22f0e0e6b97960b78848e854d17390c049bbec27b1820159ffeea209",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a04",
+          "order": 1,
+          "title": "THE FUTURE OF IT INFRASTRUCTURE IS HERE",
+          "summary": "Environments have become more distributed and messier -- yet many IT Ops teams still rely on manual workflows to manage capacity, reliability, and scale. The result? Hidden waste, slower incident response, growing risk, and teams stuck firefighting instead of improving systems.",
+          "url": "https://www.tines.com/access/guide/the-future-of-it-infrastructure/?utm_source=TLDR&utm_medium=paid_media&utm_content=newsletter-primary-1703",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a04",
+          "order": 2,
+          "title": "Download _The Future of IT Infrastructure_ from Tines",
+          "summary": "",
+          "url": "https://www.tines.com/access/guide/the-future-of-it-infrastructure/?utm_source=TLDR&utm_medium=paid_media&utm_content=newsletter-primary-1703",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a05",
+          "order": 1,
+          "title": "CRACKARMOR: MULTIPLE VULNERABILITIES IN APPARMOR",
+          "summary": "",
+          "url": "https://cdn2.qualys.com/advisory/2026/03/10/crack-armor.txt?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cdn2.qualys.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a06",
+          "order": 2,
+          "title": "GLASSWORM SUPPLY-CHAIN ATTACK ABUSES 72 OPEN VSX EXTENSIONS TO TARGET DEVELOPERS",
+          "summary": "Socket identified 72 more malicious Open VSX extensions active since January 31, 2026, as part of an intensified GlassWorm campaign. This campaign exploits `extensionPack` and `extensionDependencies` in `package.json` to chain seemingly harmless extensions into delivery mechanisms for transitive malware once trust is established. The malware continues to exhibit classic GlassWorm features, such as Russian locale checks, Solana transactions used as dead-drop resolvers for C2 resilience, and invisible Unicode characters used to hide payloads. Additionally, it now employs greater obfuscation and wallet rotation to evade detection. Meanwhile, Aikido linked the same actor to LLM-generated cover commits across 151 GitHub repositories and two npm packages (@aifabrix/miso-client, @iflow-mcp/watercrawl-watercrawl-mcp) from March 3 to March 9, 2026, targeting credentials, tokens, and secrets.",
+          "url": "https://thehackernews.com/2026/03/glassworm-supply-chain-attack-abuses-72.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a07",
+          "order": 3,
+          "title": "UK COMPANIES HOUSE WEB GLITCH EXPOSES CORPORATE DETAILS TO FRAUDSTERS",
+          "summary": "The UK's Companies House, the agency responsible for incorporating and dissolving the nation's listed companies, has taken its WebFiling dashboard down due to a vulnerability. The vulnerability allowed a user to access other companies' dashboards by selecting “file for another company” and repeatedly pressing the “back” key when prompted for an authentication code, which would redirect them to the other company's dashboard. Attackers could exploit this to view and edit information belonging to other companies.",
+          "url": "https://www.infosecurity-magazine.com/news/companies-house-glitch-exposes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a08",
+          "order": 1,
+          "title": "DECRYPTING AND ABUSING PREDEFINED BIOCS IN PALO ALTO CORTEX XDR",
+          "summary": "InfoGuard Labs researchers decrypted the AES-256-CBC-encrypted CLIPS rule files shipped with Palo Alto Cortex XDR agents 8.7 and 8.8 (content version 1790-16658), exposing hardcoded global whitelists that exempted any process with `:\\Windows\\ccmcache` in its command line from roughly half of all BIOC detections, including LSASS dump prevention rules mapped to MITRE ATT&CK T1003/TA0006. The global whitelist has been removed in Cortex XDR Agent 9.1 with content version 2160, though individual rule exceptions remain exploitable by attackers with knowledge of the plaintext rules. Defenders running agents below 9.1 should prioritize upgrading immediately. Those on patched versions should audit process command-line telemetry for ccmcache path injection and treat any closed-box EDR as a single layer rather than a complete control.",
+          "url": "https://labs.infoguard.ch/posts/decrypting-and-abusing_paloalto-cortex-xdr_behavioral-rules_biocs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "labs.infoguard.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a09",
+          "order": 2,
+          "title": "[NEW THREAT INTELLIGENCE] EUROPEAN SECURITY VENDOR TARGETED BY HACKERS FRONTING AS CISCO DOMAIN",
+          "summary": "Outpost24's threat intel team uncovered a multi-stage phishing campaign that starts with DKIM-validated JP Morgan–themed emails and abused Cisco Secure Email Gateway links, then chains through Nylas tracking, a compromised Indian development company's infrastructure, and a re-registered legacy domain before landing on Cloudflare-protected infrastructure. An anti-bot “human validation” step filters out automated analysis and ultimately delivers a highly convincing Microsoft 365 credential-harvesting page, likely powered by the Kratos Phishing-as-a-Service kit.",
+          "url": "https://links.tldrnewsletter.com/FVelfV",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a10",
+          "order": 3,
+          "title": "THE RISE OF MALICIOUS REPOSITORIES ON GITHUB",
+          "summary": "GitHub is seeing a surge of malicious repositories that impersonate legitimate projects and offer only infected Windows binaries, often removing build instructions and technical detail while using LLM‑generated text to appear authentic. Some repos target macOS/Linux ecosystems like Homebrew but still ship only Windows executables, suggesting a low‑effort or automated campaign. Attackers abuse README updates and recognizable zip naming patterns to climb search rankings, sometimes using long‑standing or hijacked accounts. While many downloads are now blocked by browser and AV protections, developers still need to verify repos and binaries carefully to avoid compromise.",
+          "url": "https://rushter.com/blog/github-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "rushter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a11",
+          "order": 1,
+          "title": "WHEN POSTURE ISN'T ENOUGH: CLOUD INTRUSIONS ARE UP 136% OVER LAST YEAR",
+          "summary": "CSPM and CNAPP lock the doors, but attackers are already logging in with stolen keys. This Mitiga report [11] lays out a dual-layer strategy that protects AI adoption while minimizing AI-driven threats. See why posture management falls short and what zero-impact breach",
+          "url": "https://www.mitiga.io/deploy-cdr-with-cnapp?utm_source=email&utm_medium=tldr&utm_campaign=cnapp-brief-march-2026",
+          "reading_time_minutes": null,
+          "source_domain": "mitiga.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a11",
+          "order": 2,
+          "title": "prevention looks like. Read the report",
+          "summary": "",
+          "url": "https://www.mitiga.io/deploy-cdr-with-cnapp?utm_source=email&utm_medium=tldr&utm_campaign=cnapp-brief-march-2026",
+          "reading_time_minutes": null,
+          "source_domain": "mitiga.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a12",
+          "order": 3,
+          "title": "REDSTACK",
+          "summary": "redStack is a Terraform-provisioned, boot-to-breach red team lab on AWS that deploys Mythic, Sliver, and Havoc C2 servers behind an Apache redirector with X-Request-ID header validation, URI filtering, and AV/Tor exit blocking, all accessible via a Guacamole portal with an isolated Windows operator workstation. The architecture uses dual VPCs with peering to keep all C2 servers off the public internet and supports OpenVPN integration for closed-lab environments such as HackTheBox, Proving Grounds, and VulnLab.",
+          "url": "https://github.com/BaddKharma/redStack?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a13",
+          "order": 4,
+          "title": "YOUTUBE MEDIA STORAGE",
+          "summary": "YouTube Media Storage is a tool that allows for storing files on YouTube by encoding them into lossless video and then decoding them back to the original file.",
+          "url": "https://github.com/PulseBeat02/yt-media-storage?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a14",
+          "order": 5,
+          "title": "SIGMALITE",
+          "summary": "sigmalite is a Golang package that provides a parser and execution engine for the Sigma detection format.",
+          "url": "https://github.com/runreveal/sigmalite?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a15",
+          "order": 1,
+          "title": "HACKED DATA SHINES LIGHT ON HOMELAND SECURITY'S AI SURVEILLANCE AMBITIONS",
+          "summary": "Hacked records from DHS's Office of Industry Partnership, obtained by transparency nonprofit Distributed Denial of Secrets, expose over 1,400 funded contracts worth $845M spanning 2004 to late 2025, including May 2025 awards for mobile biometric harvesting devices, AI-powered airport CCTV passenger profiling systems, and a nationwide 911 call data lake with predictive policing capabilities. The leak also reveals 6,000+ companies that bid with the agency, showing the full breadth of private-sector appetite for DHS surveillance work and technologies considered but never funded. The disclosures arrive amid DHS's $165B funding boost and ongoing controversy over agents collecting visual and biometric data on protesters, reigniting civil liberties debates around AI-assisted behavioral screening programs that have repeatedly failed independent review.",
+          "url": "https://www.theguardian.com/us-news/2026/mar/15/hacked-data-homeland-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a16",
+          "order": 2,
+          "title": "META IS KILLING END-TO-END ENCRYPTION IN INSTAGRAM DMS",
+          "summary": "Meta announced it is discontinuing end-to-end encryption in Instagram DMs due to low adoption. The feature had only been rolled out to a subset of users and required opting in for each chat individually. While Meta does support end-to-end encryption in WhatsApp, it has been unclear about the progress made towards it in Messenger and other apps.",
+          "url": "https://www.engadget.com/social-media/meta-is-killing-end-to-end-encryption-in-instagram-dms-195207421.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "engadget.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a17",
+          "order": 3,
+          "title": "FBI SEEKS VICTIMS OF STEAM GAMES USED TO SPREAD MALWARE",
+          "summary": "The FBI's Seattle division is requesting that gamers who installed Steam titles containing malware complete a form to provide additional information. Based on the questions in the form, the FBI appears to be investigating the apps for cryptocurrency theft and account takeover. Victims are also requested to include any screenshots of communications with individuals promoting the games.",
+          "url": "https://links.tldrnewsletter.com/ATKCTB",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-17:a18",
+          "order": 1,
+          "title": "TUNE IN LIVE: HOW CISCO'S HYBRID MESH FIREWALL TURNS NETWORK DATA INTO REAL-TIME",
+          "summary": "Hear directly from Cisco threat researchers on how they're implementing advanced threat research by correlating IPS rules to network telemetry, and delivering detection directly to Cisco",
+          "url": "https://cloudsecurity.cisco.com/webinar-instant-threat-detections?utm_name=ROI-DNA&utm_medium=media-email&utm_source=publisher-direct&utm_content=fir-fy26-q3-na-0317-webi-instant-threat-detections&utm_term=roi-digital-abm&utm_campaign=roi-fy26q3-glbl-fir-att-exp-fir-me-tldr-bh-mh-lt-dp-webi-0317-hmf&utm_adgroup=0317-hmf",
+          "reading_time_minutes": null,
+          "source_domain": "cloudsecurity.cisco.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a18",
+          "order": 2,
+          "title": "firewalls. Join the webinar!",
+          "summary": "",
+          "url": "https://cloudsecurity.cisco.com/webinar-instant-threat-detections?utm_name=ROI-DNA&utm_medium=media-email&utm_source=publisher-direct&utm_content=fir-fy26-q3-na-0317-webi-instant-threat-detections&utm_term=roi-digital-abm&utm_campaign=roi-fy26q3-glbl-fir-att-exp-fir-me-tldr-bh-mh-lt-dp-webi-0317-hmf&utm_adgroup=0317-hmf",
+          "reading_time_minutes": null,
+          "source_domain": "cloudsecurity.cisco.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a19",
+          "order": 3,
+          "title": "BYTEDANCE REPORTEDLY PAUSES GLOBAL LAUNCH OF ITS SEEDANCE 2.0 VIDEO GENERATOR",
+          "summary": "ByteDance has delayed the global rollout of Seedance 2.0, its viral AI video model, after Hollywood studios, including Disney, issued cease-and-desist letters over unauthorized use of copyrighted IP.",
+          "url": "https://techcrunch.com/2026/03/15/bytedance-reportedly-pauses-global-launch-of-its-seedance-2-0-video-generator/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a20",
+          "order": 4,
+          "title": "LOBLAW CONFIRMS DATA BREACH - CANADIAN RETAIL GIANT SAYS 'BASIC CUSTOMER INFORMATION' AFFECTED",
+          "summary": "Attackers accessed a non-critical Loblaw network segment and stole customer contact data, including names, phone numbers, and email addresses.",
+          "url": "https://www.techradar.com/pro/security/loblaw-confirms-data-breach-canadian-retail-giant-says-basic-customer-information-affected?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-17:a21",
+          "order": 5,
+          "title": "HACKING ATTEMPT REPORTED AT POLAND'S NUCLEAR RESEARCH CENTER",
+          "summary": "Hackers recently tried to breach IT systems at Poland's National Centre for Nuclear Research, which operates the MARIA research reactor and backs the country's civilian nuclear program.",
+          "url": "https://links.tldrnewsletter.com/JH9ggL",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

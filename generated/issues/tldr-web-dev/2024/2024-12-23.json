@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-12-23",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-12-23",
+  "source_path": "TLDR Web Dev/article_23-12-2024.md",
+  "source_content_hash": "sha256:5f55b47510d967dc9e688d80e697aade5ae8192589e42b8da5febd5a7c6f04b4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-12-23",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-23:a04",
+          "order": 1,
+          "title": "WHAT EVERY DEVELOPER SHOULD KNOW ABOUT OFFLINE-FIRST APPS",
+          "summary": "Offline-first app development prioritizes local data storage and synchronization with the server after the fact, so that data persists even without internet connectivity. This article goes into the various ways to implement offline-first architectures natively on the web using components like IndexedDB, the Cache API, and Service Workers. It also goes over strategies for conflict resolution, state management, error recovery, and testing.",
+          "url": "http://devstarterpacks.com/blog/what-every-developer-should-know-about-offline-first-apps?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "devstarterpacks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a05",
+          "order": 2,
+          "title": "HOW BLOOM FILTERS MADE SQLITE 10X FASTER",
+          "summary": "Researchers significantly improved SQLite's analytical query performance by using Bloom filters. The original nested loop join implementation in SQLite, used for joining tables, resulted in many costly B-tree probes. By incorporating Bloom filters, the researchers created a pre-filtering mechanism, drastically reducing the number of B-tree probes needed. This optimization, implemented via new \"Filter\" and \"FilterAdd\" opcodes, resulted in a 7x-10x speed increase for analytical queries in SQLite.",
+          "url": "https://avi.im/blag/2024/sqlite-past-present-future/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "avi.im",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a06",
+          "order": 3,
+          "title": "WHY WE USE OUR OWN HARDWARE AT FASTMAIL",
+          "summary": "Fastmail uses its own hardware for email services because it allows for cost optimization and long-term planning over the dynamic scaling offered by cloud services. This approach allows for more efficient hardware usage, where equipment can be used for 5-10 years. Fastmail recently upgraded to a ZFS-based NVMe SSD system, leading to big performance and space savings through compression while eliminating the complexities of traditional RAID setups.",
+          "url": "https://www.fastmail.com/blog/why-we-use-our-own-hardware/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "fastmail.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-23:a07",
+          "order": 1,
+          "title": "ON LONG TERM SOFTWARE DEVELOPMENT",
+          "summary": "Long-term software development is best done by minimizing dependencies, rigorously testing, and prioritizing simple, well-documented code to combat complexity that inevitably increases over time. The importance of a stable team, regular dependency audits, and comprehensive logging were also stressed in the author's presentation shown in this article.",
+          "url": "https://berthub.eu/articles/posts/on-long-term-software-development/?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "berthub.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a08",
+          "order": 2,
+          "title": "KEEPING A CHANGELOG AT WORK",
+          "summary": "The author advocates for maintaining a personal changelog of work activities, inspired by open-source best practices. This changelog improves communication in one-on-one meetings, onboarding new employees, and provides a personal reference and self-reflection tool. The author's changelog, updated weekly, enhances transparency and trust with colleagues and managers by providing a clear record of their work. The benefits include increased productivity, improved knowledge sharing, and self-assessment of work efficiency, ultimately leading to professional growth.",
+          "url": "https://code.dblock.org/2020/09/01/keep-a-changelog-at-work.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "code.dblock.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-23:a09",
+          "order": 1,
+          "title": "INTRODUCING S2",
+          "summary": "S2 is a new serverless stream storage service designed to be a cloud-native alternative to traditional streaming platforms like Kafka. It offers a simple, scalable API for appending and reading records with strong consistency and concurrency control. It has more throughput and lower latency than existing serverless options.",
+          "url": "https://s2.dev/blog/intro?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "s2.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a10",
+          "order": 2,
+          "title": "STAGEHAND",
+          "summary": "Stagehand is an open-source, AI-powered web automation framework built on Playwright that offers simple APIs (act, extract, and observe) for natural language-driven web interactions. It supports various LLMs.",
+          "url": "https://github.com/browserbase/stagehand?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-23:a11",
+          "order": 1,
+          "title": "HOW TO MAKE LLMS SHUT UP",
+          "summary": "To address the problem of an AI code review bot generating excessive comments, the Greptile team experimented with various methods, including prompt engineering and using the LLM to judge its own comments, but these attempts failed. They eventually succeeded by implementing a clustering approach, using vector embeddings of past comments to identify and filter out \"nit\" comments (those technically correct but unimportant). This resulted in a big increase in the percentage of Greptile's comments addressed by developers from 19% to over 55%.",
+          "url": "https://www.greptile.com/blog/make-llms-shut-up?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "greptile.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a12",
+          "order": 2,
+          "title": "TRANSLATING JAVA TO KOTLIN AT SCALE",
+          "summary": "Meta undertook a massive project to translate its Android codebase from Java to Kotlin, exceeding the halfway point despite having one of the world's largest codebases. To manage this at scale, it created the Kotlinator, a tool that automates the conversion process using JetBrains' J2K, supplemented by extensive pre- and post-processing steps to handle complexities and custom frameworks. This automation involved addressing build speed issues and creating a headless version of J2K to run conversions remotely, integrated with Meta's internal code review system.",
+          "url": "https://engineering.fb.com/2024/12/18/android/translating-java-to-kotlin-at-scale/?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-23:a13",
+          "order": 1,
+          "title": "FINDMY.PY",
+          "summary": "FindMy.py is a cross-platform Python library for interacting with Apple's Find My network.",
+          "url": "https://github.com/malmeloo/FindMy.py?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a14",
+          "order": 2,
+          "title": "BEING A DEVELOPER IN THE AGE OF REASONING AI",
+          "summary": "OpenAI's o3 model synthesizes code like a developer, blurring the lines between user and developer roles and prompting questions about developer relevance and the ethical implications of trusting AI-generated code without understanding its logic.",
+          "url": "https://near.tl/developer-forever/forum/announcement/being-a-developer-in-the-age-of-reasoning-ai.anc-4b87de19-f7cf-4ef0-91c8-e28b260fd9ad.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "near.tl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a15",
+          "order": 3,
+          "title": "GITHUB ASSISTANT",
+          "summary": "GitHub Assistant is a proof-of-concept application that allows devs to ask questions to GitHub repositories using natural language.",
+          "url": "https://github.com/reltadev/github-assistant?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-23:a16",
+          "order": 4,
+          "title": "ASK HN: HOW DOES JETBRAINS PROTECT THEIR IDE JAVA SOURCE CODE? (HACKER NEWS THREAD)",
+          "summary": "The JetBrains IDE source code is easily accessible and people will pay for it still due to other benefits, such as release cadence of new features.",
+          "url": "https://news.ycombinator.com/item?id=42487156&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

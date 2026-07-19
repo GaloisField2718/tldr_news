@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-01-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-14",
+  "source_path": "TLDR InfoSec/article_14-01-2025.md",
+  "source_content_hash": "sha256:03841d40e9bfb146a4204d136e0ca480fb5653b73915c267fba55d8e91ee8199",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-14",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-14:a04",
+          "order": 1,
+          "title": "A BREACH OF GRAVY ANALYTICS' HUGE TROVE OF LOCATION DATA THREATENS THE PRIVACY OF MILLIONS",
+          "summary": "A major data breach at Gravy Analytics threatens millions of people's smartphone location data, collected through app advertising networks. The hacker leaked 30 million location points from various apps, including sensitive locations. The breach occurred via a compromised Amazon cloud key, prompting investigations by data protection authorities.",
+          "url": "https://techcrunch.com/2025/01/13/gravy-analytics-data-broker-breach-trove-of-location-data-threatens-privacy-millions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a05",
+          "order": 2,
+          "title": "NOMINET PROBES NETWORK INTRUSION LINKED TO IVANTI ZERO-DAY EXPLOIT",
+          "summary": "Nominet discovered a network intrusion through Ivanti VPN software's latest zero-day vulnerability (CVE-2025-0282). While domain systems remain operational and no data theft is confirmed, this marks the first public case of this exploit.",
+          "url": "https://www.theregister.com/2025/01/13/nominet_ivanti_zero_day/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a06",
+          "order": 3,
+          "title": "MICROSOFT: MACOS BUG LETS HACKERS INSTALL MALICIOUS KERNEL DRIVERS",
+          "summary": "Apple patched a macOS vulnerability that allowed hackers to bypass System Integrity Protection and install malicious kernel drivers by exploiting a flaw in the Storage Kit daemon. This flaw, designated as CVE-2024-44243, could be abused by local attackers with root privileges to compromise Mac systems without physical access, potentially leading to the installation of persistent malware and data theft. Microsoft emphasized the importance of SIP in protecting macOS systems and highlighted the need for robust security solutions to detect and prevent such threats.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-macos-bug-lets-hackers-install-malicious-kernel-drivers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-14:a07",
+          "order": 1,
+          "title": "FUNKSEC – ALLEGED TOP RANSOMWARE GROUP POWERED BY AI",
+          "summary": "FunkSec ransomware group emerged in late 2024, claiming 85+ victims in December. Analysis suggests they use AI-assisted malware development despite apparent inexperience and that many of their leaked datasets appear to be recycled from previous hacktivist campaigns.",
+          "url": "https://research.checkpoint.com/2025/funksec-alleged-top-ransomware-group-powered-by-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a08",
+          "order": 2,
+          "title": "THE SHIFTING LANDSCAPE OF OPEN SOURCE SECURITY",
+          "summary": "This post dives into the landscape of OSS, which in 2025 faces increased supply chain attacks and regulatory demands. Key trends include AI's dual role in cybersecurity (both helping and hindering), the impact of the EU's Cyber Resilience Act, and the growing emphasis on continuous monitoring.",
+          "url": "https://www.darkreading.com/vulnerabilities-threats/shifting-landscape-open-source-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a09",
+          "order": 3,
+          "title": "AVOIDING MISTAKES WITH AWS OIDC INTEGRATION CONDITIONS",
+          "summary": "This article discusses a critical security issue with AWS OpenID Connect (OIDC) integrations where missing or incorrectly configured conditions in IAM role trust policies could allow unauthorized access to AWS accounts. The article explains that while the \"sub\" condition is commonly known to be required (especially for GitHub Actions), different vendors may require different or additional conditions, such as Microsoft Defender requiring \"sts:RoleSessionName\" or some vendors using custom conditions. The key recommendation is that AWS customers should ensure all their OIDC integrations have both \"aud\" and \"sub\" conditions (unless vendor documentation specifically indicates otherwise) and investigate any exceptions carefully, as there are many vendors that work differently and some even recommend additional security measures like IP address restrictions.",
+          "url": "https://www.wiz.io/blog/avoiding-mistakes-with-aws-oidc-integration-conditions?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-14:a10",
+          "order": 1,
+          "title": "SOCIAL ANALYZER",
+          "summary": "Social Analyzer is an API, CLI, and Web App for analyzing and finding a person's profile across over 1,000 social media/websites. It includes different analysis and detection modules, and you can choose which modules to use during the investigation process.",
+          "url": "https://github.com/qeeqbox/social-analyzer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a11",
+          "order": 2,
+          "title": "BURPFERENCE",
+          "summary": "burpference is a Burp Suite extension that captures in-scope HTTP requests from Burp's proxy history and sends them to an LLM in JSON format.",
+          "url": "https://github.com/dreadnode/burpference?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a12",
+          "order": 3,
+          "title": "MEGR-APT",
+          "summary": "MEGR-APT is an APT hunting system that discovers suspicious subgraphs matching an attack scenario published in Cyber Threat Intel (CTI) reports.",
+          "url": "https://github.com/CoDS-GCS/MEGR-APT-code?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-14:a13",
+          "order": 1,
+          "title": "SECURITY AT SCALE: PLAID'S JOURNEY TO CREATING A KEY MANAGEMENT SYSTEM",
+          "summary": "Plaid launched an effort to build its own Key Management System (KMS) to curb bespoke cryptographic processes across different teams and services. It chose to build its own system over using a vendor-provided solution to avoid API limitations that would hamper scalability, lower costs, and be self-service. The migration process proved to be the most challenging part of building the system.",
+          "url": "https://plaid.com/blog/security-plaid-key-management-system/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "plaid.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a14",
+          "order": 2,
+          "title": "THE MANY WAYS TO OBTAIN CREDENTIALS IN AWS",
+          "summary": "This post enumerates the many different ways that an attacker might be able to obtain credentials in an AWS environment. The AWS SDK looks for hard-coded credentials, followed by environment variables, followed by AWS credential files, and lastly IMDS. The post concludes by listing out more specialized ways that certain services can obtain credentials.",
+          "url": "https://www.wiz.io/blog/the-many-ways-to-obtain-credentials-in-aws?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a15",
+          "order": 3,
+          "title": "SNYK SECURITY RESEARCHER DEPLOYS MALICIOUS NPM PACKAGES TARGETING CURSOR.COM",
+          "summary": "Source Code Red claims that NPM packages were deployed to target Cursor.com by a user named sn4k-s3c from Snyk. These packages collected sensitive data from systems and exfiltrated it to an attacker-controlled web service. It is essential to be cautious when installing NPM packages and look for suspicious signals like limited files in the package.",
+          "url": "https://sourcecodered.com/snyk-malicious-npm-package/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "sourcecodered.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-14:a16",
+          "order": 1,
+          "title": "NEW ADVICE HELPS ORGANIZATIONS SELECT SECURE OPERATIONAL TECHNOLOGY PRODUCTS IN FACE OF RISING CYBER THREAT",
+          "summary": "The National Cyber Security Centre and international cyber experts urge critical infrastructure operators to integrate security into procurement processes to defend against cyber threats.",
+          "url": "https://www.ncsc.gov.uk/news/help-selecting-secure-ot-products-face-cyber-threat?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a17",
+          "order": 2,
+          "title": "AZURE AND M365 MFA OUTAGE LOCKS OUT USERS ACROSS REGIONS",
+          "summary": "Azure and Microsoft 365 experienced a four-hour outage for multi-factor authentication that affected users in Western Europe, Chile, and the US.",
+          "url": "https://go.theregister.com/feed/www.theregister.com/2025/01/13/azure_m365_outage/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "go.theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-14:a18",
+          "order": 3,
+          "title": "CISA ORDERS AGENCIES TO PATCH BEYONDTRUST BUG EXPLOITED IN ATTACKS",
+          "summary": "CISA ordered U.S. federal agencies to patch a command injection bug in BeyondTrust software within three weeks to protect against ongoing attacks.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-agencies-to-patch-beyondtrust-bug-exploited-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

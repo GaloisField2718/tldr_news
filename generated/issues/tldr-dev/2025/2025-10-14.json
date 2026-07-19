@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2025-10-14",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-10-14",
+  "source_path": "TLDR Dev/article_14-10-2025.md",
+  "source_content_hash": "sha256:ea95269150f80945accb92db2b3e41ca0d37f68e4c9f3368fde5fb865340c5a5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-10-14",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-14:a04",
+          "order": 1,
+          "title": "FROM MILLIONS TO BILLIONS",
+          "summary": "Geocodio needed to scale its request logging from millions to billions of requests monthly for billing and customer support, but its deprecated MariaDB setup with TokuDB was struggling. Its initial attempt to replace MariaDB with ClickHouse directly resulted in \"TOO_MANY_PARTS\" errors due to small, frequent inserts, and a subsequent attempt using ClickHouse buffer tables led to \"TOO_MANY_LINKS\" errors. The solution involved introducing Kafka for durable storage and high throughput and Vector to efficiently batch and load data from Kafka into ClickHouse.",
+          "url": "https://www.geocod.io/code-and-coordinates/2025-10-02-from-millions-to-billions/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "geocod.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a05",
+          "order": 2,
+          "title": "ENVIRONMENT VARIABLES ARE A LEGACY MESS: LET'S DIVE DEEP INTO THEM",
+          "summary": "Environment variables are a flat, global dictionary of strings passed from parent to child processes through the `execve` system call. When a new program is launched, the kernel places these variables on the stack as null-terminated strings, which the program then copies into its own data structure (like a hashmap in Bash or an array in glibc). While the Linux kernel and glibc are liberal about the format of environment variables, it's generally recommended to use uppercase letters, digits, and underscores for names, and UTF-8 encoding for values to avoid potential issues.",
+          "url": "https://allvpv.org/haotic-journey-through-envvars/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "allvpv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a06",
+          "order": 3,
+          "title": "15 RECENT NODE.JS FEATURES THAT REPLACE POPULAR NPM PACKAGES",
+          "summary": "Node.js has evolved to include many features that previously required third-party npm packages, reducing dependency bloat. This post covers fifteen recent Node.js features that replace popular packages, including the global fetch() API (replacing node-fetch), built-in test runner (replacing mocha/jest), native WebSocket support, file system utilities like fs.glob() and recursive operations, and various other utilities for styling text, generating UUIDs, and handling URLs.",
+          "url": "http://nodesource.com/blog/nodejs-features-replacing-npm-packages?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "nodesource.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-14:a07",
+          "order": 1,
+          "title": "TWO THINGS LLM CODING AGENTS ARE STILL BAD AT",
+          "summary": "LLM coding agents still feel awkward to work with due to two main issues: they don't copy-paste code like humans do (instead \"remembering\" and rewriting code from memory), and they're terrible at asking clarifying questions, preferring to make assumptions and brute-force solutions. These quirks make LLMs feel more like \"weird, overconfident interns\" rather than replacements for human developers.",
+          "url": "https://kix.dev/two-things-llm-coding-agents-are-still-bad-at?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "kix.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a08",
+          "order": 2,
+          "title": "ABSTRACTION, NOT SYNTAX",
+          "summary": "While alternatives to YAML are welcome, the focus should shift from superficial syntax improvements to configuration languages that allow for loops, variables, and formulas, like RCL. While these configuration languages introduce new trade-offs, such as needing an intermediate build step and possibly hurting greppability, the benefits of abstraction outweigh the costs for complex configurations.",
+          "url": "https://ruudvanasseldonk.com/2025/abstraction-not-syntax?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "ruudvanasseldonk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-14:a09",
+          "order": 1,
+          "title": "NITRO",
+          "summary": "Nitro is a next-generation server toolkit for building and deploying web servers with TypeScript. It supports development with hot module replacement, zero-config deployment to any provider, and a compact output size.",
+          "url": "https://nitro.build/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "nitro.build",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a10",
+          "order": 2,
+          "title": "STEEL BROWSER",
+          "summary": "Steel is an open-source browser API for building AI agents and apps that interact with the web. It has features like full browser control using Puppeteer, session management, proxy support, extension support, debugging tools, anti-detection measures, and resource management. Devs can interact with the API through sessions, quick actions, and SDKs in Node and Python for tasks like web scraping, screenshots, and PDF generation.",
+          "url": "https://github.com/steel-dev/steel-browser?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a11",
+          "order": 3,
+          "title": "JSON RIVER",
+          "summary": "JSON River is a lightweight JavaScript library for parsing JSON incrementally from streams. It provides a sequence of increasingly complete JSON values as they arrive. The library prioritizes correctness, matching JSON.parse behavior and throwing errors on invalid input, and has been tested against the JSONTestSuite.",
+          "url": "https://github.com/rictic/jsonriver?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-14:a12",
+          "order": 1,
+          "title": "LLMS ARE GETTING BETTER AT CHARACTER-LEVEL TEXT MANIPULATION",
+          "summary": "LLMs are getting better at character-level text manipulation, such as character replacement, counting, and decoding ciphers. Newer LLMs like GPT-5 and Claude Sonnet 4.5 show improved performance in these tasks compared to older generations, suggesting a better understanding of algorithms beyond simple memorization. This article tests models on Base64 and ROT20 encoded text, showing that larger models are more successful at tasks like decoding and character substitution, even with gibberish text.",
+          "url": "https://blog.burkert.me/posts/llm_evolution_character_manipulation/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.burkert.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a13",
+          "order": 2,
+          "title": "THREE WAYS FORMALLY VERIFIED CODE CAN GO WRONG IN PRACTICE",
+          "summary": "Formally verified code, despite being \"correct\" according to specifications, can still contain bugs in practice. These bugs arise from three main issues: invalid proofs, incorrect properties being verified, and wrong assumptions made during the verification process. \"Correctness\" in formal methods refers to conformity with a specification, which may not always align with real-world expectations or cover all potential issues.",
+          "url": "https://buttondown.com/hillelwayne/archive/three-ways-formally-verified-code-can-go-wrong-in/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "buttondown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-14:a14",
+          "order": 1,
+          "title": "SQLITE ONLINE",
+          "summary": "A quick, simple, visual way to use, test, and host SQLite databases online.",
+          "url": "https://sqliteonline.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "sqliteonline.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a15",
+          "order": 2,
+          "title": "NANOCHAT",
+          "summary": "Nanochat is a minimal, hackable, full-stack implementation of a ChatGPT-like LLM designed to be trained and run on a single machine for around $100 created by Andrej Karpathy, part of OpenAI's founding team.",
+          "url": "https://github.com/karpathy/nanochat?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a16",
+          "order": 3,
+          "title": "THE LLMENTALIST EFFECT: HOW CHAT-BASED LARGE LANGUAGE MODELS REPLICATE THE MECHANISMS OF A PSYCHIC'S CON",
+          "summary": "The perceived intelligence of LLMs is an illusion where statistically generic responses are misinterpreted as specifically intelligent and relevant due to subjective validation.",
+          "url": "https://softwarecrisis.dev/letters/llmentalist/?utm_source=tldrwebdev",
+          "reading_time_minutes": 28,
+          "source_domain": "softwarecrisis.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-14:a17",
+          "order": 4,
+          "title": "IGNORE PREVIOUS DIRECTIONS 8: DEVOPSDAYS",
+          "summary": "Containers have evolved from solving application management challenges to being the basis of a complex Kubernetes landscape, leading to both increased efficiency and new forms of resource wastage across the board.",
+          "url": "https://buttondown.com/justincormack/archive/ignore-previous-directions-8-devopsdays/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "buttondown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

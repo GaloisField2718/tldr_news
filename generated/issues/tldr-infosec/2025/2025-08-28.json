@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-08-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-28",
+  "source_path": "TLDR InfoSec/article_28-08-2025.md",
+  "source_content_hash": "sha256:9b77512d5b4ae2756416077d4769da8dcd855d97883caf00b7dd75736db0e854",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a04",
+          "order": 1,
+          "title": "AWS ARTICLE: SIMPLIFY HYBRID NETWORK SECURITY",
+          "summary": "Managing security across hybrid networks can be challenging, especially when consistent policies need to be set across systems. Simplify your security approach to a single dashboard with AWS and Fortinet.",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security/secure-hybrid-network-next-generation-firewall?trk=c41e7f90-889d-425e-8745-a86b17da8589&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a05",
+          "order": 1,
+          "title": "DATA I/O BECOMES LATEST RANSOMWARE ATTACK VICTIM",
+          "summary": "Data I/O, a tech manufacturer, suffered a ransomware attack on August 16 that led to major outages. The incident's impact remains unclear as the investigation is still underway, but restoration of operations has begun. Costs may be substantial.",
+          "url": "https://links.tldrnewsletter.com/s5ngHn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a06",
+          "order": 2,
+          "title": "FIRST AI-POWERED RANSOMWARE POC SPOTTED",
+          "summary": "PromptLock, the world's first known AI-powered ransomware, uses OpenAI's gpt-oss-20b model to generate malicious scripts. It is currently only a proof-of-concept and has not been seen in active attacks. PromptLock demonstrates how AI can simplify cybercriminal operations.",
+          "url": "https://www.theregister.com/2025/08/26/first_aipowered_ransomware_spotted_by/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a07",
+          "order": 3,
+          "title": "NX COMPROMISED TO STEAL WALLETS AND CREDENTIALS",
+          "summary": "The popular NX build system was compromised with malicious versions published to npm that steal cryptocurrency wallets, API keys, and credentials from at least 1,400 affected users. The malware creates repositories prefixed with \"s1ngularity-repository\" in victims' GitHub accounts. It uniquely leverages the Claude Code CLI or Gemini CLI to execute file system searches for sensitive data through AI prompts, making detection more challenging for traditional security tools. Users should immediately check for unauthorized repositories, update to version 21.4.1, and rotate all potentially compromised credentials, including GitHub tokens, npm keys, and SSH keys.",
+          "url": "https://semgrep.dev/blog/2025/security-alert-nx-compromised-to-steal-wallets-and-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a08",
+          "order": 1,
+          "title": "BEWARE THE FALSE FALSE-POSITIVE: HOW TO DISTINGUISH HTTP PIPELINING FROM REQUEST SMUGGLING",
+          "summary": "Sometimes, when people are hunting for HTTP request smuggling vulnerabilities, they actually run into false positives caused by connection reuse. Some scenarios where connection reuse may be necessary for finding vulnerabilities include situations where the frontend server only reuses the upstream connection if the client connection was reused, connection-state attacks, and client-side desync attacks. James Kettle created a Custom Action for Burp Suite called `Smuggling or pipelining?` to distinguish between a genuine HTTP smuggling attack and an HTTP pipelining false-positive.",
+          "url": "https://portswigger.net/research/how-to-distinguish-http-pipelining-from-request-smuggling?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a09",
+          "order": 2,
+          "title": "BEHIND THE COINBASE BREACH: BRIBERY EMERGES AS ENTERPRISE THREAT",
+          "summary": "Threat actors like The Com and Scattered Spider bribed TaskUS workers in India with up to $2,500 to steal data from 70,000 Coinbase customers, resulting in a $20 million ransom demand that Coinbase refused, offering the same as a bounty. The breach revealed a shift from phishing to insider targeting through bribery, primarily targeting customer support staff with data access. Coinbase fired 226 workers, opened a US support hub, and enhanced controls. Experts advise red-team exercises to test employee responses to bribery attempts worldwide.",
+          "url": "https://www.csoonline.com/article/4042522/behind-the-coinbase-breach-bribery-is-an-emerging-enterprise-threat.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a10",
+          "order": 3,
+          "title": "THE ONE WHERE WE JUST STEAL THE VULNERABILITIES (CRUSHFTP CVE-2025-54309)",
+          "summary": "A flaw (CVE-2025-54309) in CrushFTP servers allows attackers to gain administrative access if certain features are disabled. Researchers used a honeypot sensor network to catch hackers exploiting this race condition in real time and confirmed that two coordinated HTTP requests could add a rogue admin account. The vulnerability impacts thousands of vulnerable servers and is being exploited in the wild, highlighting the need for organisations to patch and monitor for unusual activity.",
+          "url": "https://labs.watchtowr.com/the-one-where-we-just-steal-the-vulnerabilities-crushftp-cve-2025-54309/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a11",
+          "order": 1,
+          "title": "AI NOTETAKERS ARE PRIVACY AND SECURITY NIGHTMARES. THEY DON'T HAVE TO BE",
+          "summary": "Most AI note-takers create AI governance gaps: over-capture, default model training, and the spread of Shadow AI. Fellow [11] puts you in control with policy-based recording, consent/disclosure, transcript redaction, role-based access, retention, audit logs, SSO/SAML and no training on your data. Record meetings without causing a security meltdown. Try Fellow today [11].",
+          "url": "https://fellow.ai/go/privacy-controls?utm_source=tldr-infosec&utm_medium=email-sponsored&utm_campaign=Q3-tldr-1",
+          "reading_time_minutes": null,
+          "source_domain": "fellow.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a12",
+          "order": 2,
+          "title": "BRUTEFORCEAI",
+          "summary": "BruteForceAI is an advanced penetration testing tool that transforms traditional brute-force attacks by incorporating large language models for smart form analysis. The tool automatically detects login form selectors with AI and then performs complex multi-threaded attacks that mimic human behavior.",
+          "url": "https://github.com/MorDavid/BruteForceAI?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a13",
+          "order": 3,
+          "title": "MERCATOR",
+          "summary": "Mercator is an open-source web application designed to manage the mapping of information systems, as described in ANSSI's \"Mapping the Information System Guide\".",
+          "url": "https://github.com/dbarzin/mercator?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a14",
+          "order": 4,
+          "title": "REACH SECURITY (PRODUCT LAUNCH)",
+          "summary": "Reach Security employs virtual assistants in exposure management to automate drift detection, policy enforcement, and remediation. Its new ConfigIQ Drift module empowers customers to set custom deviation rules and baselines, all of which are managed centrally.",
+          "url": "https://www.reach.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reach.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a15",
+          "order": 1,
+          "title": "NEW SNI5GECT ATTACK CRASHES PHONES AND DOWNGRADES 5G TO 4G WITHOUT ROGUE BASE STATION",
+          "summary": "Sni5Gect is a framework that can downgrade 5G connections to vulnerable 4G, crash phone modems, and bypass authentication by passively sniffing unencrypted messages between base stations and phones during the initial connection phase before authentication. The attack achieves 80% sniffing accuracy and 70-90% message injection success rates from up to 20 meters away, exploiting the window before NAS security context establishment without requiring a rogue base station. Tests successfully targeted phones from OnePlus, Samsung, Google, and Huawei. The GSMA has acknowledged the vulnerability as",
+          "url": "https://links.tldrnewsletter.com/cHrJs8",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a16",
+          "order": 2,
+          "title": "ANTHROPIC'S AUTO-CLICKING AI CHROME EXTENSION RAISES BROWSER-HIJACKING CONCERNS",
+          "summary": "Anthropic's new Claude for Chrome AI extension, now in limited preview, allows AI to control browser actions but poses significant security risks. Researchers found these AI agents are vulnerable to hidden, malicious website instructions, with attacks succeeding up to 23.6% of the time. Although new safety measures cut success rates, experts warn browser-integrated AI may be fundamentally unsafe for now.",
+          "url": "https://arstechnica.com/information-technology/2025/08/new-ai-browser-agents-create-risks-if-sites-hijack-them-with-hidden-instructions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a17",
+          "order": 3,
+          "title": "‘VIBE-HACKING' IS NOW A TOP AI THREAT",
+          "summary": "Cybercriminals are misusing agentic AI systems, such as Claude, to power new types of cyberattacks. In one major case, a single actor utilized AI to extort data from 17 organizations by crafting targeted extortion demands and executing sophisticated attacks end-to-end, highlighting how AI enables complex threats with minimal resources.",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/766435/anthropic-claude-threat-intelligence-report-ai-cybersecurity-hacking?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-28:a18",
+          "order": 1,
+          "title": "UNPACKING THE 2025 GARTNER MARKET GUIDE FOR CNAPP",
+          "summary": "Gartner's 2025 CNAPP Market Guide highlights the industry shift from fragmented security tools to unified cloud-native application protection platforms that consolidate vulnerability management, compliance, and threat detection into single solutions.",
+          "url": "https://www.wiz.io/blog/unpacking-cnapp-gartner-market-guide?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a19",
+          "order": 2,
+          "title": "CITRIX FIXES CRITICAL NETSCALER RCE FLAW EXPLOITED IN ZERO-DAY ATTACKS",
+          "summary": "Citrix urgently released a security update for a critical vulnerability in NetScaler ADC and Gateway, which hackers exploited as a zero-day to execute arbitrary code remotely, risking widespread network compromise.",
+          "url": "https://www.bleepingcomputer.com/news/security/citrix-fixes-critical-netscaler-rce-flaw-exploited-in-zero-day-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-28:a20",
+          "order": 3,
+          "title": "TREASURY SANCTIONS NORTH KOREA IT WORKER SCHEME FACILITATORS AND FRONT ORGANIZATIONS",
+          "summary": "The U.S. Treasury sanctioned four entities for aiding North Korea's IT worker scheme, which places workers in U.S. jobs using fraudulent documents to evade sanctions and fund weapons programs.",
+          "url": "https://cyberscoop.com/treasury-department-sanctions-north-korea-worker-scheme/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-06-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-06-23",
+  "source_path": "TLDR InfoSec/article_23-06-2025.md",
+  "source_content_hash": "sha256:56c1b2b97b14c05dd60792e0b8d4e2a2bc45c703fb713ae106e8e2a5f6cbf3f7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-06-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a04",
+          "order": 1,
+          "title": "AI IS BREAKING IAM",
+          "summary": "AI-powered deepfakes and phishing attacks enable bad actors to impersonate employees with terrifying precision. To keep up, security teams need a viable Know Your Employee (KYE) strategy [4] with higher assurance authentication policies.",
+          "url": "https://withpersona.com/events/solution-demo-know-your-employee?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_term=info-sec-newsletter&utm_campaign=acq_gen_ds_webinar-promo-kye_20250623",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a04",
+          "order": 2,
+          "title": "Join Persona's engineering team for a live discussion and demo",
+          "summary": "covering:",
+          "url": "https://withpersona.com/events/solution-demo-know-your-employee?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_term=info-sec-newsletter&utm_campaign=acq_gen_ds_webinar-promo-kye_20250623",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a04",
+          "order": 3,
+          "title": "Register for the live event →",
+          "summary": "",
+          "url": "https://withpersona.com/events/solution-demo-know-your-employee?utm_source=tldr&utm_medium=paid-email&utm_audience=a&utm_term=info-sec-newsletter&utm_campaign=acq_gen_ds_webinar-promo-kye_20250623",
+          "reading_time_minutes": null,
+          "source_domain": "withpersona.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a05",
+          "order": 1,
+          "title": "16 BILLION APPLE, FACEBOOK, GOOGLE, AND OTHER PASSWORDS LEAKED",
+          "summary": "A record 16 billion login credentials have leaked online, exposing passwords from major services. Experts urge users to stop reusing passwords, adopt password managers, enable multi-factor authentication, and switch to passkeys for better security. The leak is not from a single breach but multiple infostealer sources.",
+          "url": "https://www.forbes.com/sites/daveywinder/2025/06/20/16-billion-apple-facebook-google-passwords-leaked---change-yours-now/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "forbes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a06",
+          "order": 2,
+          "title": "ATTACK ON OXFORD CITY COUNCIL EXPOSES 21 YEARS OF ELECTION WORKER DATA",
+          "summary": "Oxford City Council suffered a cyberattack on June 7-8, compromising 21 years of election worker data (2001-2022). The breach affected current and former council officers' personal information. Automated security systems detected and stopped the attack and have since been restored. There is no evidence that suggests data was shared externally or mass-downloaded.",
+          "url": "https://www.theregister.com/2025/06/20/oxford_city_council_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a07",
+          "order": 3,
+          "title": "ANUBIS RANSOMWARE LISTS DISNEYLAND PARIS AS NEW VICTIM",
+          "summary": "The Anubis ransomware group asserts that it has acquired 64GB of data from Disneyland Paris, mostly concerning construction and renovation efforts. They claim to have accessed the files by breaching a partner company and have shared images and videos as evidence. It remains uncertain whether customer data was also compromised. Disneyland Paris has not verified the breach.",
+          "url": "https://hackread.com/anubis-ransomware-lists-disneyland-paris-new-victim/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a08",
+          "order": 1,
+          "title": "CLOUDTRAIL LOGGING EVASION: WHERE POLICY SIZE MATTERS",
+          "summary": "Researchers from Permiso Security discovered a novel CloudTrail log bypass that abuses differing policy size calculations. AWS' documentation states that whitespace does not count when determining the maximum size of an IAM policy. However, the researchers determined that the policy would fail validation if the whitespace caused the size to exceed 131,072 characters. The researchers discovered that CloudTrail fails to capture full request details for requests in the size range of 102,401 to 131,072.",
+          "url": "https://permiso.io/blog/cloudtrail-logging-evasion-where-policy-size-matters?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "permiso.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a09",
+          "order": 2,
+          "title": "DO NOT RUN ANY CARGO COMMANDS ON UNTRUSTED PROJECTS",
+          "summary": "This post highlights two attack vectors by which malicious Rust code could target the cargo system. The first attack vector abuses the fact that a project could remap the `rustc` binary to any arbitrary path, which would compromise any cargo commands. The second attack vector could compromise plugins that don't use the cargo config files, such as `cargo crev`, by defining an alias for that command in the config.toml.",
+          "url": "https://shnatsel.medium.com/do-not-run-any-cargo-commands-on-untrusted-projects-4c31c89a78d6?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "shnatsel.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a10",
+          "order": 3,
+          "title": "DETECTION PITFALLS YOU MIGHT BE SLEEPING ON",
+          "summary": "This post presents five common Windows detection pitfalls that can lead to gaps in detection. The pitfalls include parameters being able to be called in multiple different ways, & and | causing multiple log entries for a single command, extra whitespace in commands, other forms of command obfuscation, and commands that don't cause process creation events. Each pitfall also includes detection tips to circumvent it.",
+          "url": "https://detect.fyi/detection-pitfalls-you-might-be-sleeping-on-52b5a3d9a0c8?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "detect.fyi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a11",
+          "order": 1,
+          "title": "SMB? ELECTRIC MAKES YOUR IT EASY TO MANAGE AND YOUR BUSINESS SECURE",
+          "summary": "Electric combines best-in-class security with simple tools to handle every IT thing you need to manage, but don't really want to: hardware provisioning, device monitoring, employee offboarding... And if you take a demo in the next few days [11], they'll send you a YETI cooler",
+          "url": "https://try.electric.ai/learn?utm_source=tldr&utm_medium=paid_affiliate&utm_campaign=2506_mkt_tldr_infosec_secondary_incentive",
+          "reading_time_minutes": null,
+          "source_domain": "try.electric.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a11",
+          "order": 2,
+          "title": "or Apple AirPods Pro! Claim your offer",
+          "summary": "",
+          "url": "https://try.electric.ai/learn?utm_source=tldr&utm_medium=paid_affiliate&utm_campaign=2506_mkt_tldr_infosec_secondary_incentive",
+          "reading_time_minutes": null,
+          "source_domain": "try.electric.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a12",
+          "order": 3,
+          "title": "GPGFRONTEND",
+          "summary": "Modern, cross-platform OpenPGP GUI—easy for beginners, powerful for experts, fully portable and open-source.",
+          "url": "https://github.com/saturneric/GpgFrontend?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a13",
+          "order": 4,
+          "title": "AWS ROLLS OUT 3 KEY SECURITY CAPABILITIES AT RE:INFORCE, HELPING CUSTOMERS SIMPLIFY AND SCALE",
+          "summary": "AWS announced three new security services at re:Inforce conference to address AI-era threats. Security Hub centralizes threat identification and prioritization. Shield proactively analyzes network configurations to prevent attacks like SQL injection and DDoS. GuardDuty Extended Threat Detection now protects container applications, detecting sophisticated multi-stage attack patterns.",
+          "url": "https://www.aboutamazon.com/news/aws/aws-new-security-features-reinforce?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aboutamazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a14",
+          "order": 5,
+          "title": "TOOLHIVE",
+          "summary": "ToolHive is a tool that allows for running any MCP server in a locked-down container with a single command.",
+          "url": "https://github.com/stacklok/toolhive?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a15",
+          "order": 1,
+          "title": "MASSIVE 7.3 TBPS DDOS ATTACK DELIVERS 37.4 TB IN 45 SECONDS, TARGETING HOSTING PROVIDER",
+          "summary": "Cloudflare blocked a record-breaking 7.3 Tbps DDoS attack targeting a hosting provider in May. The 45-second attack delivered 37.4 terabytes from over 122,000 IP addresses across 161 countries.",
+          "url": "https://links.tldrnewsletter.com/qcn32z",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a16",
+          "order": 2,
+          "title": "IRAN'S GOVERNMENT SAYS IT SHUT DOWN INTERNET TO PROTECT AGAINST CYBERATTACKS",
+          "summary": "Iran shut down its internet nationwide this week, calling it a \"near-total blackout.\" The government confirmed it ordered the shutdown to protect against Israeli cyberattacks, citing recent hacks on Iranian banks and cryptocurrency exchanges by the pro-Israel group Predatory Sparrow.",
+          "url": "https://techcrunch.com/2025/06/20/irans-government-says-it-shut-down-internet-to-protect-against-cyberattacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-23:a17",
+          "order": 1,
+          "title": "SCAMMERS USE INFERNO DRAINER TO STEAL $43K FROM COINMARKETCAP USERS",
+          "summary": "Hackers deceived CoinMarketCap users into linking their crypto wallets to a counterfeit prompt, resulting in the theft of over $43,000 through a tool known as Inferno Drainer, which disseminated a hidden code across the site.",
+          "url": "https://hackread.com/scammers-inferno-drainer-crypto-coinmarketcap-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a18",
+          "order": 2,
+          "title": "WALMART TO PAY $10M TO SETTLE LAWSUIT OVER MONEY TRANSFER SCAM",
+          "summary": "Walmart has agreed to pay $10 million to settle FTC allegations that it allowed scammers to exploit its money transfer services between 2013 and 2018, which resulted in hundreds of millions of dollars stolen from customers through fraud schemes.",
+          "url": "https://links.tldrnewsletter.com/on5T6j",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-23:a19",
+          "order": 3,
+          "title": "RUSSIAN HACKERS BYPASS GMAIL MFA USING STOLEN APP PASSWORDS",
+          "summary": "Russian hackers impersonated U.S. State Department officials to deceive individuals into providing passwords that allowed them to circumvent Gmail's security measures, specifically targeting experts and critics of Russia.",
+          "url": "https://www.bleepingcomputer.com/news/security/russian-hackers-bypass-gmail-mfa-using-stolen-app-passwords/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

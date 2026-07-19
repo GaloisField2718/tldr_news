@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-08-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-08-02",
+  "source_path": "TLDR InfoSec/article_02-08-2024.md",
+  "source_content_hash": "sha256:713c1f2795ebbc466390dd96338666e4d78b4a2da7a87da78da53dee2571e844",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-08-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a04",
+          "order": 1,
+          "title": "MORE BY DOING LESS",
+          "summary": "Many companies think of compliance in terms of templates and generic checklists. These box-ticking exercises are high-effort, slow, and can cause teams to take compliance and security less seriously (or treat it as a nuisance).",
+          "url": "https://www.assurancelab.cpa/do-less-to-achieve-more?utm_campaign=TLDR+advertising+content&utm_source=TLDR+InfoSec&utm_medium=TDLR+newsletter&utm_content=Do+less+to+achieve+more+article",
+          "reading_time_minutes": null,
+          "source_domain": "assurancelab.cpa",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a05",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.assurancelab.cpa/resources/everything-we-knew-about-soc-2-was-wrong?utm_campaign=TLDR+advertising+content&utm_source=TLDR+InfoSec&utm_medium=TLDR+newsletter&utm_content=Everything+we+know+about+SOC+2+was+wrong+article",
+          "reading_time_minutes": null,
+          "source_domain": "assurancelab.cpa",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a06",
+          "order": 3,
+          "title": "* Streamline your compliance with AI-powered audits",
+          "summary": "",
+          "url": "https://www.assurancelab.cpa/ai-powered-audit?utm_campaign=TLDR+advertising+content&utm_source=TLDR+InfoSec&utm_medium=TLDR+newsletter&utm_content=Overall+Compliance+Starter+Pathway+page",
+          "reading_time_minutes": null,
+          "source_domain": "assurancelab.cpa",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a07",
+          "order": 1,
+          "title": "DIGICERT REVOKES 83K TLS CERTIFICATES DUE TO DOMAIN VALIDATION BUG",
+          "summary": "DigiCert announced that it will be revoking 0.4% of certificates issued from August 2019 to June 2024. The CABF baseline domain verification requirement is to publish a CNAME record with the domain followed by an underscore and random value. A bug introduced in August 2019 led to some code paths not appending the underscore which could potentially lead to clashes between the record and subdomains. DigiCert says this is unlikely due to the random value having 150 bits of entropy, but nevertheless has notified customers that it will be revoking affected certificates.",
+          "url": "https://www.bleepingcomputer.com/news/security/digicert-mass-revoking-tls-certificates-due-to-domain-validation-bug/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a08",
+          "order": 2,
+          "title": "CISA: CRITICAL SERVICENOW VULNERABILITIES BEING TARGETED BY HACKERS",
+          "summary": "CISA and several security companies are warning that two ServiceNow vulnerabilities that were reported by AssetNote on July 11 are being actively exploited. The vulnerabilities allow attackers to access databases and exfiltrate data as well as read arbitrary files. Researchers warn of between 13k to 42k vulnerable ServiceNow instances ranging across the private and public sectors.",
+          "url": "https://therecord.media/critical-servicenow-vulnerabilities-hackers-cisa?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a09",
+          "order": 3,
+          "title": "'ERROR' IN MICROSOFT'S DDOS DEFENSES AMPLIFIED 8-HOUR AZURE OUTAGE",
+          "summary": "Microsoft admitted its defensive implementation worsened the Azure outage on July 30, which was initially triggered by a DDoS attack. DDOS attacks aim to overwhelm systems with malicious traffic. They are becoming increasingly common, so Microsoft should have been able to prevent the outage.",
+          "url": "https://www.theregister.com/2024/07/31/microsoft_ddos_azure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a10",
+          "order": 1,
+          "title": "REVEALING THE INNER STRUCTURE OF AWS SESSION TOKENS",
+          "summary": "Tal Be'ery, co-founder of ZenGo, performed a first ever analysis of AWS Session Tokens to uncover the components that make up a session token. The goal of this research was to discover if the tokens contained sensitive information and if tokens could be edited for forgery as well as other attack vectors. The research found that session tokens are base64 encoded protobufs that store most of the interesting information in a userEncryptedData field. The researchers found that they could forge tokens however AWS rejected forged tokens. The post includes more details about the reversing process and protobuf fields.",
+          "url": "https://links.tldrnewsletter.com/AOAJYx",
+          "reading_time_minutes": 17,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a11",
+          "order": 2,
+          "title": "SECURING YOUR SECRETS IN AWS",
+          "summary": "An exploration of how to incrementally improve credentials access in AWS. The post begins with outlining a “vanilla” credentials workflow before detailing how environment variables do not solve the threats inherent with having plaintext credentials. It then outlines how to store secrets in Secrets Manager and have the application dynamically retrieve them to eliminate plaintext secrets from production. The next improvement comes from using KMS to encrypt secrets before using them in CI/CD pipelines to reduce the presence of plaintext credentials. The post then details steps that service providers can use to improve credential management for customers including bringing your own key.",
+          "url": "https://dev.to/aws-builders/securing-your-secrets-in-aws-kh5?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "dev.to",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a12",
+          "order": 3,
+          "title": "CREATE YOUR OWN CUSTOM IMPLANT",
+          "summary": "This blog post discusses creating a custom implant for evasive purposes by avoiding detection through customized payloads. It explains the process of building the implant in C and includes details on server setup, interactive features, client functionality, and testing against security tools. The conclusion highlights the advantages of custom implants but also emphasizes the need for caution due to potential limitations and security considerations.",
+          "url": "https://www.ribbiting-sec.info/posts/2024-07-31_implant/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ribbiting-sec.info",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a13",
+          "order": 1,
+          "title": "FLEET",
+          "summary": "Fleet is an open-source version of FleetDM's tool. It is built on Osquery and can be used for vulnerability monitoring, MDM, detection engineering, and other applications.",
+          "url": "https://github.com/fleetdm/fleet?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a14",
+          "order": 2,
+          "title": "SOC2 POLICY TEMPLATES",
+          "summary": "A collection of templates for SOC2 policies and procedures. The templates can be outputted as an HTML dashboard or in PDF.",
+          "url": "https://github.com/gjyoung1974/soc2-policy-templates?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a15",
+          "order": 3,
+          "title": "CLUTCH SECURITY (PRODUCT LAUNCH)",
+          "summary": "Clutch Security is a platform that gives security teams visibility into all of an organization's non-human identities. The platform allows security teams to understand which NHIs exist within the organization and identify associated risks.",
+          "url": "https://www.clutch.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "clutch.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a16",
+          "order": 1,
+          "title": "RECORD-BREAKING $75 MILLION RANSOM PAID TO DARK ANGELS GANG",
+          "summary": "Ransomware attacks are rising, with an 18% year-on-year increase reported by Zscaler ThreatLabz. A record $75 million ransom was allegedly paid this year. The U.S. faces nearly half of all attacks, with a 93% increase. The U.K. was the second most targeted country.",
+          "url": "https://www.forbes.com/sites/daveywinder/2024/07/31/record-breaking-75-million-ransom-paid-to-dark-angels-gang/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "forbes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a17",
+          "order": 2,
+          "title": "POOR SECURITY LET HACKERS ACCESS 40 MILLION VOTERS' DETAILS",
+          "summary": "The UK Electoral Commission was reprimanded by the ICO for a security lapse that left millions of voters' data vulnerable to hackers. The breach, which lasted over a year from August 2021, was enabled by unchanged passwords and outdated software.",
+          "url": "https://www.bbc.co.uk/news/articles/c724e12zpndo?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bbc.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a18",
+          "order": 3,
+          "title": "OVER 1 MILLION DOMAINS AT RISK OF 'SITTING DUCKS' DOMAIN HIJACKING TECHNIQUE",
+          "summary": "A joint analysis by Infoblox and Eclypsium reveals that Russian cybercriminals are exploiting DNS weaknesses in \"Sitting Ducks\" attacks to hijack domains without accessing owner accounts. This method, easier and less detectable than other hijacking techniques, has affected over 35,000 domains since 2018.",
+          "url": "https://thehackernews.com/2024/08/over-1-million-domains-at-risk-of.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-08-02:a19",
+          "order": 1,
+          "title": "COST OF A DATA BREACH REPORT 2024",
+          "summary": "The average cost of a data breach jumped 10% to $4.88 million in 2023.",
+          "url": "https://www.ibm.com/downloads/cas/1KZ3XE9D?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "ibm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a20",
+          "order": 2,
+          "title": "TWILIO KILLS OFF AUTHY FOR DESKTOP, FORCIBLY LOGS OUT ALL USERS",
+          "summary": "Twilio has shut down its Authy for Desktop app, logging users out and discontinuing the service.",
+          "url": "https://www.bleepingcomputer.com/news/security/twilio-kills-off-authy-for-desktop-forcibly-logs-out-all-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-08-02:a21",
+          "order": 3,
+          "title": "HACKERS DISTRIBUTING MALICIOUS PYTHON PACKAGES VIA POPULAR DEVELOPER Q&A PLATFORM",
+          "summary": "Hackers used Stack Exchange to trick developers into downloading malicious Python packages that could steal cryptocurrency.",
+          "url": "https://thehackernews.com/2024/08/hackers-distributing-malicious-python.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

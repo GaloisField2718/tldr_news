@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-08-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-06",
+  "source_path": "TLDR InfoSec/article_06-08-2025.md",
+  "source_content_hash": "sha256:352a007abab63ec22cd480d7b4608bebe09aa00e77e7061d14ff9da138936ce3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-06",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-06:a04",
+          "order": 1,
+          "title": "CONFIDENTIAL INFORMANTS EXPOSED IN LOUISIANA SHERIFF'S OFFICE HACK",
+          "summary": "The Medusa ransomware gang reportedly stole over 90GB of data from the East Baton Rouge Sheriff's Office in 2024. A sample of the data includes sensitive information on confidential informants, including names, dates of birth, and SSNs. The breach also included data on seized devices, surveillance operations, sock puppet accounts, polygraph results, and internal affairs.",
+          "url": "https://san.com/cc/exclusive-confidential-informants-exposed-in-louisiana-sheriffs-office-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "san.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a05",
+          "order": 2,
+          "title": "SONICWALL INVESTIGATES 'CYBER INCIDENTS,' INCLUDING RANSOMWARE TARGETING SUSPECTED 0-DAY",
+          "summary": "SonicWall is probing recent ransomware attacks on its Gen 7 firewalls, potentially exploiting a zero-day in SSL VPNs. Even with MFA enabled, attackers bypassed controls, deployed ransomware, and quickly pivoted to internal systems. SonicWall has urged customers to disable SSL VPN and use mitigation steps ASAP while waiting for official patches.",
+          "url": "https://www.theregister.com/2025/08/04/sonicwall_investigates_cyber_incidents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a06",
+          "order": 3,
+          "title": "HACKER USED A VOICE PHISHING ATTACK TO STEAL CISCO CUSTOMERS' PERSONAL INFORMATION",
+          "summary": "A hacker used a voice phishing (“vishing”) call to trick a Cisco representative, gaining access to their third-party CRM system and stealing Cisco.com users' personal data: names, organizations, addresses, emails, phone numbers, and more. The company did not disclose how many users this sophisticated social engineering breach affected.",
+          "url": "https://techcrunch.com/2025/08/05/hacker-used-a-voice-phishing-attack-to-steal-cisco-customers-personal-information/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-06:a07",
+          "order": 1,
+          "title": "INVERSEPROMPT: TURNING CLAUDE AGAINST ITSELF, ONE PROMPT AT A TIME (­­­CVE-2025-54794 & CVE-2025-54795)",
+          "summary": "Elad Beber discovered two high-severity vulnerabilities in Anthropic's Claude Code during its Research Preview phase. CVE-2025-54794 (CVSS 7.7) allows path restrictions to be bypassed through naive prefix validation, enabling access to files outside the intended working directory. CVE-2025-54795 (CVSS 8.7) enables command injection via inadequate input sanitization, allowing arbitrary code execution without user confirmation by breaking out of allowed commands like “echo”. Anthropic has patched both vulnerabilities.",
+          "url": "https://cymulate.com/blog/cve-2025-547954-54795-claude-inverseprompt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cymulate.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a08",
+          "order": 2,
+          "title": "FROM THE TOP 20 OPEN SOURCE COMPONENT VULNERABILITIES: RETHINKING THE CHALLENGES OF OPEN SOURCE SECURITY GOVERNANCE",
+          "summary": "Open source security governance is challenged by widespread reliance on vulnerable libraries, lack of standardized management, insecure defaults, and unclear ownership. This post dives into how effective governance requires proactive policies, measurable capabilities, and continuous attention beyond just tool-based vulnerability scans to deal with known and unknown risks in dependencies.",
+          "url": "https://insbug.medium.com/from-the-top-20-open-source-component-vulnerabilities-rethinking-the-challenges-of-open-source-aeac681910a2?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "insbug.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a09",
+          "order": 3,
+          "title": "EXPLOITING ZERO DAYS IN ABANDONED HARDWARE",
+          "summary": "Trail of Bits researchers exploited two discontinued home network devices (Netgear WGR614v9 router and BitDefender Box V1) at DistrictCon's Junkyard competition, achieving remote root access through chained vulnerabilities, including UPnP authentication bypass, buffer overflows, and firmware downgrade attacks. The research highlights how end-of-life hardware becomes a persistent security risk when manufacturers stop releasing updates, leaving vulnerabilities permanently unpatched. Both devices were initially designed to protect home networks, but became easy targets due to years without security updates.",
+          "url": "https://blog.trailofbits.com/2025/07/25/exploiting-zero-days-in-abandoned-hardware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-06:a10",
+          "order": 1,
+          "title": "ENTRAGOAT",
+          "summary": "EntraGoat is a deliberately vulnerable Microsoft Entra ID infrastructure that simulates real-world identity security misconfigurations and attack vectors. It introduces intentional vulnerabilities in your environment to provide a realistic learning platform for security professionals. EntraGoat features multiple privilege escalation paths and focuses on black-box attack methodologies.",
+          "url": "https://github.com/semperis/entragoat?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a11",
+          "order": 2,
+          "title": "FABLE SECURITY (PRODUCT LAUNCH)",
+          "summary": "Fable uses AI to monitor real-time employee behavior signals and provides interventions such as chats and video briefings tailored to individual risk moments. It aims to educate users and reduce human-related cybersecurity threats in enterprises.",
+          "url": "https://fablesecurity.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "fablesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a12",
+          "order": 3,
+          "title": "DOUBLETEAM",
+          "summary": "DoubleTeam is a Python listener that uses socat, tmux, and threading to launch a new tmux window on each connection, listen on multiple ports, and automatically resume listening upon spawning the new window.",
+          "url": "https://github.com/ricardojoserf/DoubleTeam?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-06:a13",
+          "order": 1,
+          "title": "AI SITE PERPLEXITY USES “STEALTH TACTICS” TO FLOUT NO-CRAWL EDICTS",
+          "summary": "A recent report from Cloudflare stated that Perplexity is deliberately circumventing robots.txt and utilizing evasion techniques to avoid web application blocks. The researchers identified that when Perplexity's crawlers encounter Cloudflare's blocks or a robots.txt file, they cycle through a list of IPs not in Perplexity's published IP ranges and shuffle ASNs to avoid blocks. Other sites such as Forbes, Reddit, and Wired have also leveled similar accusations at Perplexity.",
+          "url": "https://arstechnica.com/information-technology/2025/08/ai-site-perplexity-uses-stealth-tactics-to-flout-no-crawl-edicts-cloudflare-says/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a14",
+          "order": 2,
+          "title": "JURY “SENDS A MESSAGE” ON APP PRIVACY IN RULING AGAINST META",
+          "summary": "A jury found Meta guilty of illegally invading the privacy of women who shared their health data with the period tracking app Flo by deliberately harvesting it without consent. This verdict may set a landmark precedent in setting boundaries for how far tech firms can go in collecting personal data for use in targeted advertising. Meta has denied any wrongdoing and is “exploring all legal options.”",
+          "url": "https://therecord.media/jury-verdict-meta-flo-app-data-privacy-case?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a15",
+          "order": 3,
+          "title": "SONATYPE UNCOVERS GLOBAL ESPIONAGE CAMPAIGN IN OPEN SOURCE ECOSYSTEMS",
+          "summary": "Sonatype uncovered a global espionage campaign led by North Korea's Lazarus Group that uses malware-laced open source packages on npm and PyPI to infiltrate developer environments. Over 234 malicious packages targeted at least 36,000 victims, aiming to steal secrets and open persistent backdoors across critical digital infrastructure.",
+          "url": "https://www.sonatype.com/blog/sonatype-uncovers-global-espionage-campaign-in-open-source-ecosystems?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "sonatype.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-06:a16",
+          "order": 1,
+          "title": "PANDORA CYBER ATTACK EXPOSES CUSTOMER DATA VIA THIRD-PARTY VENDOR",
+          "summary": "Pandora confirmed a cyber attack through a third-party vendor that exposed customer names, phone numbers, and email addresses (but not financial data).",
+          "url": "https://hackread.com/pandora-cyber-attack-customer-data-third-party-vendor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a17",
+          "order": 2,
+          "title": "THE HEAT WASN'T JUST OUTSIDE: CYBER ATTACKS SPIKED IN SUMMER 2025",
+          "summary": "Summer 2025 saw a major spike in cyber attacks with ransomware groups heavily targeting healthcare, retail breaches at Louis Vuitton and Belk, and widespread exploitation of critical Microsoft SharePoint vulnerabilities in espionage campaigns.",
+          "url": "https://www.bleepingcomputer.com/news/security/the-heat-wasnt-just-outside-cyber-attacks-spiked-in-summer-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-06:a18",
+          "order": 3,
+          "title": "PBS CONFIRMS DATA BREACH AFTER EMPLOYEE INFO LEAKED ON DISCORD SERVERS",
+          "summary": "PBS confirmed a data breach exposing corporate contact information of 3,997 employees and affiliates after the data was leaked and circulated on Discord servers by PBS Kids fans apparently motivated by curiosity rather than malicious intent.",
+          "url": "https://www.bleepingcomputer.com/news/security/pbs-confirms-data-breach-after-employee-info-leaked-on-discord-servers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-02",
+  "source_path": "TLDR InfoSec/article_02-12-2025.md",
+  "source_content_hash": "sha256:3a3792cd1dad1734466bd93899e8f28d8eac6795ae26d8a6becad304de10f47c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a04",
+          "order": 1,
+          "title": "WHEN YOUR CEO CALLS, WILL YOU KNOW IT'S REAL?",
+          "summary": "Today's phishing attacks involve AI-generated voices, videos, and interactive deepfakes of company executives. They fool 99% of people.",
+          "url": "https://www.adaptivesecurity.com/demo/security-awareness-training?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20251202",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a06",
+          "order": 1,
+          "title": "PRIVILEGE ESCALATION WITH SAGEMAKER AND THERE'S MORE HIDING IN EXECUTION ROLES",
+          "summary": "Privilege escalation flaws have been discovered in AWS SageMaker. Attackers with specific permissions can inject malicious code via lifecycle configurations, mimicking EC2 user data escalation and affecting Lambda and CloudFormation. It is important to detect stop-modify-start sequences in CloudTrail and implement strict access controls.",
+          "url": "https://www.plerion.com/blog/privilege-escalation-with-sagemaker-and-execution-roles?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a07",
+          "order": 2,
+          "title": "TOP SOUTH KOREAN E-COMMERCE FIRM COUPANG APOLOGISES OVER MASSIVE DATA BREACH",
+          "summary": "South Korean e-commerce giant Coupang disclosed unauthorized access that affected 33.7 million customer accounts beginning June 24 through overseas servers, exposing names, email addresses, phone numbers, shipping addresses, and order histories. Authorities are investigating a suspected Chinese former employee. The government is examining potential personal information protection violations. This is the country's worst data breach in over a decade.",
+          "url": "https://links.tldrnewsletter.com/zM9xC7",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a08",
+          "order": 3,
+          "title": "SMARTTUBE YOUTUBE APP FOR ANDROID TV BREACHED TO PUSH MALICIOUS UPDATE",
+          "summary": "The popular open-source SmartTube YouTube client for Android TV, which provides ad blocking and runs well on low-powered devices, was compromised after an attacker gained access to the developer's signing keys. The compromise was detected when multiple users reported that Play Protect blocked SmartTube. The app developer confirmed that his digital keys were compromised and stated that he had revoked the old signature and would publish a new version with a separate app ID.",
+          "url": "https://www.bleepingcomputer.com/news/security/smarttube-youtube-app-for-android-tv-breached-to-push-malicious-update/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a09",
+          "order": 1,
+          "title": "BIND LINK – EDR TAMPERING",
+          "summary": "Threat actors can abuse Windows 11's Bind Link API through the bindflt.sys driver to redirect EDR installation folders to attacker-controlled directories, enabling DLL hijacking and code execution under EDR context. The EDR-Redir proof of concept uses LoadLibraryW to load bindfltapi.dll and CreateDirectoryW to create transparent folder mappings between virtual and backing paths. CrowdStrike, SentinelOne, and Carbon Black have implemented BindFlt monitoring, while Microsoft Defender for Endpoint remains vulnerable. Security teams should deploy Sysmon Event ID 7 monitoring for bindfltapi.dll image load events, validate whether legitimate bind link usage exists in their environment to reduce false positives, and investigate EDR vendor support for bindflt driver activity detection.",
+          "url": "https://ipurple.team/2025/12/01/bind-link-edr-tampering/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "ipurple.team",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a10",
+          "order": 2,
+          "title": "START USING WINDOWS AUTOPATCH",
+          "summary": "Microsoft Intune provides an endpoint management suite for Windows devices. Windows Autopatch is built into Intune and allows administrators to define groups to gradually roll out to an organization. Administrators can also configure hot patching on devices to expedite compliance.",
+          "url": "https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/prepare/windows-autopatch-start-using-autopatch?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "learn.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a11",
+          "order": 3,
+          "title": "SHAI HULUD 2.0: ANALYSIS AND COMMUNITY RESOURCES",
+          "summary": "",
+          "url": "https://pulse.latio.tech/p/shai-hulud-20-analysis-and-community?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a12",
+          "order": 1,
+          "title": "SPECIAL OFFER FOR TLDR READERS: $200 OFF ZERO TRUST WORLD 2026 WITH CODE ZTWTLDR26",
+          "summary": "ThreatLocker's annual Zero Trust World [13] is the most interactive, HANDS-ON CYBERSECURITY LEARNING event. Join hacking labs, become Cyber Hero certified, and attend sessions led by cybersecurity, IT, and business experts.",
+          "url": "https://ztw.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a13",
+          "order": 2,
+          "title": "Use code ZTWTLDR26 for $200 off your all-access pass",
+          "summary": "",
+          "url": "https://ztw.com/",
+          "reading_time_minutes": null,
+          "source_domain": "ztw.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a14",
+          "order": 3,
+          "title": "GUILTY-AS-YARA",
+          "summary": "Guilty-As-Yara is a Rust-based tool that generates Windows PE executables containing data patterns designed to trigger YARA rule matches for validating rules.",
+          "url": "https://github.com/Sam0rai/guilty-as-yara?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a15",
+          "order": 4,
+          "title": "R2FRIDA",
+          "summary": "r2frida is a radare2 plugin that bundles Frida to instrument and analyze local or remote processes via r2 commands and scripts.",
+          "url": "https://github.com/nowsecure/r2frida?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a16",
+          "order": 1,
+          "title": "TOMIRIS SHIFTS TO PUBLIC-SERVICE IMPLANTS FOR STEALTHIER C2 IN ATTACKS ON GOVERNMENT TARGETS",
+          "summary": "Tomiris is a Kazakhstan-linked threat actor that leverages Telegram and Discord as command-and-control infrastructure while targeting foreign ministries and government entities across Russia and Central Asia through spear-phishing campaigns. The attack deploys multi-language malware, including Rust-based downloaders, Python-based backdoors like Distopia, and custom implants. Over 50% of lures use Russian-language content to blend malicious traffic with legitimate service activity. Security teams should monitor for unusual Telegram and Discord API traffic patterns, implement application control policies that restrict execution from archive files, and deploy behavioral detection to detect persistence mechanisms targeting Windows Registry modifications associated with these custom implant families.",
+          "url": "https://thehackernews.com/2025/12/tomiris-shifts-to-public-service.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a17",
+          "order": 2,
+          "title": "AWS PRE:INVENT SECURITY HIGHLIGHTS: WHAT CHANGED AND WHY IT MATTERS",
+          "summary": "AWS has added a new CLI command, `aws login`, which allows users to obtain short-lived credentials for AWS even if the account isn't configured with IAM Identity Center. AWS IAM Outbound Identity Federation now allows AWS users or services to request a short-lived JWT for external services that trust your AWS account, which can replace the use of hardcoded, long-term credentials or API keys in Lambda or EC2. AWS has also enabled Attribute-Based Access Control (ABAC) for S3, which allows users to define access permissions to S3 using tags instead of listing every bucket in an IAM policy.",
+          "url": "https://links.tldrnewsletter.com/K8Zaqx",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a18",
+          "order": 3,
+          "title": "PURPLE TEAM MATURITY MODEL: FROM CHAOS TO CONTROLLED CHAOS",
+          "summary": "Organizations that wish to start with purple teaming can begin by defining a purple team strategy with loosely scheduled sessions, referencing MITRE ATT&CK tactics in testing, and feeding early detection gaps into detection engineering. Teams can then introduce metrics as they mature, begin using more structured purple team exercises, and map red team TTPs more closely to MITRE ATT&CK tactics and threat intel. As teams further mature, they can introduce automated adversary emulation. Eventually, purple teaming can be driven by threat-intel, continuously run fully automated attack chains, and integrate machine learning, SOAR, and XDR to power rapid detection and response.",
+          "url": "https://links.tldrnewsletter.com/BQ5qym",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-02:a19",
+          "order": 1,
+          "title": "TRAIN YOUR ENTIRE ORGANIZATION WITH INFOSEC IQ & INFOSEC SKILLS",
+          "summary": "Unlock on-demand cybersecurity ranges and labs for your technical team with any new Infosec IQ security awareness training contract. Act",
+          "url": "https://links.tldrnewsletter.com/4utjrk",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a19",
+          "order": 2,
+          "title": "now to get your 3 FREE INFOSEC SKILLS SEATS.",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/4utjrk",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a20",
+          "order": 3,
+          "title": "NORTH KOREAN HACKERS DEPLOY 197 NPM PACKAGES TO SPREAD UPDATED OTTERCOOKIE MALWARE",
+          "summary": "North Korean threat actors deployed 197 malicious npm packages downloaded over 31,000 times as part of the Contagious Interview campaign.",
+          "url": "https://thehackernews.com/2025/11/north-korean-hackers-deploy-197-npm.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a21",
+          "order": 4,
+          "title": "OVER 2,000 FAKE SHOPPING SITES SPOTTED BEFORE CYBER MONDAY",
+          "summary": "CloudSEK discovered over 2,000 interconnected fake shopping sites targeting Black Friday and Cyber Monday shoppers through coordinated phishing campaigns.",
+          "url": "https://hackread.com/fake-shopping-sites-cyber-monday/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-02:a22",
+          "order": 5,
+          "title": "EUROPEAN COPS SHUT DOWN CRYPTO MIXING WEBSITE THAT HELPED LAUNDER 1.3B EUROS",
+          "summary": "Europol and partner agencies have seized Cryptomixer, a widely used crypto-mixing service linked to cybercriminal activities such as drug trafficking, arms sales, ransomware, and card fraud.",
+          "url": "https://techcrunch.com/2025/12/01/european-cops-shut-down-crypto-mixing-website-that-helped-launder-1-3-billion-euros/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

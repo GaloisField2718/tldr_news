@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-03-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-04",
+  "source_path": "TLDR InfoSec/article_04-03-2026.md",
+  "source_content_hash": "sha256:c3aca010d00cb2d1606eb163e2ebe42929f3c600b1d66ca94afb71e1c7dfd0b4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-04",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-04:a04",
+          "order": 1,
+          "title": "BRIT GAMES STUDIO CLOUD IMPERIUM ADMITS TO DATA BREACH",
+          "summary": "Cloud Imperium Games, the studio behind Star Citizen, disclosed a January 21 data breach over a month later, revealing that attackers gained unauthorized read-only access to backup systems containing usernames, contact details, dates of birth, and other personal information. The company downplayed the risk by noting no financial data or passwords were compromised, but security experts warn the exposed PII is sufficient to fuel targeted phishing campaigns. Players criticized the delayed, near-hidden disclosure, with the breach notice buried in a small pop-up rather than communicated directly via email.",
+          "url": "https://www.theregister.com/2026/03/03/brit_games_studio_cloud_imperium/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a05",
+          "order": 2,
+          "title": "1.2 MILLION AFFECTED BY UNIVERSITY OF HAWAII CANCER CENTER DATA BREACH",
+          "summary": "A ransomware attack on August 31, 2025, compromised the data of 1.2 million at the University of Hawaiʻi Cancer Center, targeting research servers but sparing clinical operations. This affected 87,493 study participants' names, SSNs, health info from a 1993 cohort, plus 1.15 million others' names, driver's licenses, SSNs, and voter records.",
+          "url": "https://links.tldrnewsletter.com/PpltxE",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a06",
+          "order": 3,
+          "title": "HACKERS STEAL MEDICAL DETAILS OF 15 MILLION IN FRANCE",
+          "summary": "France's health ministry has confirmed a data breach involving the exposure of administrative information for 15.8 million patients and sensitive doctors' notes for approximately 165,000 individuals. The breach is connected to Cegedim Sante software, which is used by around 1,500 practices. Reports indicate that data such as sexual orientation and AIDS status appeared online, prompting experts to warn of potentially irreparable damage to privacy.",
+          "url": "https://links.tldrnewsletter.com/7jMwHn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-04:a07",
+          "order": 1,
+          "title": "FAKE VCS TARGET CRYPTO TALENT IN A NEW CLICKFIX CAMPAIGN",
+          "summary": "A suspected DPRK-aligned campaign is targeting crypto professionals through fabricated VC firms (SolidBit Capital, MegaBit, and Lumax Capital) on LinkedIn, funneling victims to spoofed Zoom/Google Meet pages that deploy cross-platform ClickFix payloads via fake Cloudflare CAPTCHA. The attack chain uses clipboard poisoning to inject OS-specific commands, delivering fileless PowerShell loaders on Windows and multi-stage Python payloads on macOS, with fully undetectable Mach-O binaries evading all VirusTotal vendors. Crypto and Web3 professionals should treat unsolicited LinkedIn outreach with extreme caution, verify company domains via WHOIS, and never paste commands into a terminal as part of any \"verification\" process.",
+          "url": "https://moonlock.com/fake-vcs-target-crypto-talent-clickfix-campaign?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "moonlock.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a08",
+          "order": 2,
+          "title": "ANALYSIS OF AN INTEGRATED PHISHING CAMPAIGN UTILIZING GOOGLE CLOUD INFRASTRUCTURE",
+          "summary": "A coordinated phishing operation abuses Google Cloud Storage to host a redirector HTML file at storage.googleapis.com, allowing emails to sail through SPF/DKIM checks while pointing to seemingly trustworthy Google infrastructure. The operator reuses one GCS bucket but fans out across 25+ lures, ranging from “Cloud Storage Full” and fake AV expiry to retail rewards and health offers, all converging on credit-card-harvesting pages that present low “shipping” or “service” fees. Defenders should flag storage.googleapis.com links in email, scrutinize sender metadata, and report abusive buckets like “whilewait” to Google Cloud Abuse to collapse the campaign's shared infrastructure.",
+          "url": "https://malwr-analysis.com/2026/03/03/analysis-of-an-integrated-phishing-campaign-utilizing-google-cloud-infrastructure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "malwr-analysis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a09",
+          "order": 3,
+          "title": "ABUSING .ARPA: THE TLD THAT ISN'T SUPPOSED TO HOST ANYTHING",
+          "summary": "The Infoblox Threat Intel team detected a novel phishing campaign that abuses the .arpa domain using IPv6 reverse domains to bypass firewalls and other detections. The .arpa TLD is a special TLD that is primarily used to map IP addresses to domains and is unlikely to be blocked. The attackers were able to find DNS registrars that allowed them to create A records for these domains and used them in phishing campaigns that advertised free prizes.",
+          "url": "https://www.infoblox.com/blog/threat-intelligence/abusing-arpa-the-tld-that-isnt-supposed-to-host-anything/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "infoblox.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-04:a10",
+          "order": 1,
+          "title": "CYBERCRIME IS THE WORLD'S THIRD-LARGEST ECONOMY",
+          "summary": "The costs of cybercrime are expected to reach $12.2 trillion annually by 2031. The Huntress 2026 Threat Report breaks down the main profit centers: RMM abuse, malicious AI use, social engineering, ransomware, identity attacks, and more. Get the full report [10]. Just want the",
+          "url": "https://www.huntress.com/resources/2026-cyber-threat-report?utm_source=tldr&utm_medium=email&utm_campaign=cy26-01-camp-brand-global-broad-all-x-x-2026_threat_report&hnt=gnhgjip4vlgi",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a11",
+          "order": 2,
+          "title": "highlights? Download the TL;DR",
+          "summary": "",
+          "url": "https://www.huntress.com/resources/2026-cyber-threat-report-tldr?utm_source=tldr&utm_medium=email&utm_campaign=cy26-01-camp-brand-global-broad-all-x-x-2026_threat_report_tldr&hnt=xvx0noxmnifb",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a12",
+          "order": 3,
+          "title": "MQUIRE",
+          "summary": "mquire is an osquery-inspired memory forensics tool that enables SQL-based querying of Linux kernel memory snapshots without requiring external debug symbols. Written in Rust, it leverages embedded BTF and Kallsyms data to enumerate processes, open files, and network connections, and to extract cached files directly from memory dumps. Designed for incident response and malware analysis, it supports interactive shell, single-query, and custom command modes, including process tree visualization and file carving.",
+          "url": "https://github.com/trailofbits/mquire?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a13",
+          "order": 4,
+          "title": "A NEW APP ALERTS YOU IF SOMEONE NEARBY IS WEARING SMART GLASSES",
+          "summary": "Nearby Glasses is a new Android app that continuously scans for Bluetooth signals from smart glasses made by Meta and Snap, alerting users when potentially always-recording wearable devices are detected nearby. The app matches manufacturer-specific Bluetooth company identifiers and supports custom IDs for detecting a broader range of surveillance wearables, though it may produce false positives from VR headsets. The tool addresses growing privacy concerns about covert recording devices, particularly following reports that Meta Ray-Ban smart glasses were used in immigration raids and harassment.",
+          "url": "https://techcrunch.com/2026/03/02/nearby-glasses-new-app-alerts-you-wearing-smart-glasses-surveillance-meta-snap-bluetooth/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a14",
+          "order": 5,
+          "title": "FIG SECURITY (PRODUCT LAUNCH)",
+          "summary": "Fig Security traces data flows through security stacks, alerting teams to changes impacting detection or response. It back-traces detections, samples data pipelines, and simulates fixes via SIEM integrations.",
+          "url": "https://www.fig.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "fig.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-04:a15",
+          "order": 1,
+          "title": "AETERNUM LOADER: INSIDE THE BINARY",
+          "summary": "Researchers reversed the Aeternum Loader malware, revealing its use of the Polygon blockchain for C2 communications via a hardcoded smart contract address, with AES-encrypted commands that can be decrypted using only the contract address as the key. The loader employs per-string XOR obfuscation, CRC32/DJB2 API hashing, NTFS ADS-based self-deletion, PPID spoofing to explorer.exe, and novel anti-VM checks including CPUID thermal/power MSR detection and SMBIOS BIOS characteristics bit counting. Notably, the blockchain C2 approach creates a permanent, immutable record of all attacker commands, giving defenders a historical audit trail once the encryption is broken.",
+          "url": "https://ctrlaltintel.com/threat%20research/Aeternum-Part-2/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "ctrlaltintel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a16",
+          "order": 2,
+          "title": "SHE CAME OUT OF THE BATHROOM NAKED, EMPLOYEE SAYS",
+          "summary": "A joint investigation by Svenska Dagbladet and Göteborgs-Posten revealed that data annotators at Meta subcontractor Sama in Nairobi routinely encounter intimate footage from Meta Ray-Ban smart glasses, including nudity, bank details, and sexual content from users who appear unaware they are being recorded. Network traffic analysis confirmed the glasses require constant communication with Meta servers to function, contradicting retailer claims that data stays local, while Meta's own terms permit both automated and human review of user interactions. Privacy lawyers and Sweden's data protection authority questioned the legality of transferring such sensitive data to Kenya, where no EU adequacy decision exists, raising significant GDPR compliance concerns.",
+          "url": "https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "svd.se",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a17",
+          "order": 3,
+          "title": "FLAW-FINDING AI ASSISTANTS FACE CRITICISM FOR SPEED, ACCURACY",
+          "summary": "Anthropic's Claude Code Security and OpenAI's Aardvark raise concerns about being slow, expensive, and noisy compared to established SAST tools, especially when the same AI both writes and reviews code. Experts argue these assistants should augment, not replace, existing pipelines, as AI-driven “vibe coding” accelerates insecure code and growing security debt. The real value lies in AI-enhanced remediation workflows and the potential revival of interactive, AI-powered code review.",
+          "url": "https://links.tldrnewsletter.com/fSKisA",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-04:a18",
+          "order": 1,
+          "title": "YOU KNOW LLM SECURITY IS BAD. YOU DON'T KNOW HOW BAD",
+          "summary": "Cobalt reviewed data from 16k+ pentests, and the results are as ugly as it gets. Only 21% of serious LLM vulnerabilities actually get",
+          "url": "https://resource.cobalt.io/state-of-llm-security?utm_campaign=14995291-SOPR+AI+cut+2025_06&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a18",
+          "order": 2,
+          "title": "resolved. See why",
+          "summary": "",
+          "url": "https://resource.cobalt.io/state-of-llm-security?utm_campaign=14995291-SOPR+AI+cut+2025_06&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a19",
+          "order": 3,
+          "title": "HUAWEI BRINGS ITS FLATPACK AI DATACENTERS, PACKED FULL OF CHINESE CHIPS, TO THE WORLD",
+          "summary": "Huawei is marketing its modular AI datacenters globally, featuring homegrown Kunpeng CPUs and Ascend GPUs with a 4-to-6-month deployment promise, targeting nations outside Western security restrictions where Nvidia and AMD GPU supply remains scarce.",
+          "url": "https://www.theregister.com/2026/03/03/huawei_takes_ai_datacenters_global/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a20",
+          "order": 4,
+          "title": "AMAZON SAYS DRONES DAMAGED THREE FACILITIES IN UAE AND BAHRAIN",
+          "summary": "Drone strikes linked to Iranian retaliatory attacks hit three AWS data centers in the UAE and Bahrain, causing structural damage, power disruptions, and service outages in what experts called the first time major cloud infrastructure has been knocked offline by military action.",
+          "url": "https://www.bbc.com/news/articles/cgk28nj0lrjo?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-04:a21",
+          "order": 5,
+          "title": "MALWARE ATTACKS WEAPONIZING WINDOWS FILE EXPLORER, WEBDAV UNDERWAY",
+          "summary": "Phishing campaigns targeting European corporate networks exploit Windows File Explorer and WebDAV to deploy RATs via malicious shortcut files hosted on Cloudflare Tunnel domains.",
+          "url": "https://links.tldrnewsletter.com/xHiwP9",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

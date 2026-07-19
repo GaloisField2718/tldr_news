@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-01-23",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-01-23",
+  "source_path": "TLDR Web Dev/article_23-01-2024.md",
+  "source_content_hash": "sha256:9ee39ff791544f75408e3591990843ffdc30d202214c05c1d21a566984dc28b8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-01-23",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-01-23:a05",
+          "order": 1,
+          "title": "HOW TO BUILD A SCALABLE NOTIFICATION SERVICE",
+          "summary": "Razorpay faced challenges like database bottlenecks and slow customer responses to webhooks when it scaled its notification service. To address these, it implemented prioritized queues, asynchronous database writes, and better quality of service for webhooks. The company prioritized notifications based on customer response times.",
+          "url": "https://blog.quastor.org/p/build-scalable-notification-service?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a06",
+          "order": 2,
+          "title": "CACHES: LRU VS RANDOM",
+          "summary": "A random eviction policy performs surprisingly well for large caches. It often outperforms LRU in terms of miss rate, especially when cache size increases. This may mean that different approaches may suit different cache levels. Combining LRU for smaller caches and 2-random for larger ones might be promising. The “random” principle applies to various scenarios beyond cache eviction, like load balancing and data distribution.",
+          "url": "https://danluu.com/2choices-eviction/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "danluu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a07",
+          "order": 3,
+          "title": "A GUIDE TO ENABLING PARTIAL PRE-RENDERING IN NEXT.JS",
+          "summary": "With incremental static regeneration (ISR), Next.js enables the pre-rendering of pages containing dynamic data during the build time. This article is a comprehensive guide on enabling partial pre-rendering in Next.js 14, which lets you control which parts of a page are pre-rendered.",
+          "url": "https://blog.logrocket.com/guide-enabling-partial-pre-rendering-next-js/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.logrocket.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-01-23:a08",
+          "order": 1,
+          "title": "BACKLOG SIZE IS INVERSELY PROPORTIONAL TO HOW OFTEN YOU TALK TO CUSTOMERS",
+          "summary": "This author built a successful event/ticket service for comics by prioritizing customer feedback over assumptions. He believes that having a large backlog means that you don’t talk to customers often enough. Along with recommending talking to customers more, the author also recommends simplifying UI, observing user usage more, focusing on loyal customers, and creating more MVPs for learning.",
+          "url": "https://bitbytebit.substack.com/p/the-size-of-your-backlog-is-inversely?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "bitbytebit.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a09",
+          "order": 2,
+          "title": "HOW TO DRIVE MEETINGS",
+          "summary": "Meetings are crucial for senior engineers, but poorly run ones can hurt productivity. Before a meeting, set a clear agenda with shared pre-work. During the meeting, guide the conversation, manage time, and redirect if needed. After the meeting, finalize follow-ups, clearly assign ownership, and share meeting highlights with relevant parties.",
+          "url": "https://www.developing.dev/p/how-to-drive-meetings?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "developing.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-01-23:a10",
+          "order": 1,
+          "title": "HEAT.JS",
+          "summary": "Heat.js is a lightweight JavaScript library that generates customizable heat maps to visualize date-based activity and trends. It’s similar to GitHub’s yearly contribution heatmap that is displayed on user’s profiles.",
+          "url": "https://github.com/williamtroup/Heat.js?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a11",
+          "order": 2,
+          "title": "BRIG",
+          "summary": "Brig is a user interface toolkit for Node.js. It’s used to load and play QML files, which are used in graphical applications to render objects.",
+          "url": "https://github.com/BrigJS/brig?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-01-23:a12",
+          "order": 1,
+          "title": "SHIPPING BLENDED DIFFS",
+          "summary": "The Split Diff view was launched on GitHub back in 2014. The engineer who shipped it is now looking to ship a new way to review diffs: blended diffs. Instead of showing 2 lines of changes for a single line change (one for the deleted line and one for the added line), blended diffs show the final file view and use AI to generate diff summaries. This article is an interesting read on how a team found a problem, designed a solution, went through design iterations, and implemented the solution with a team of engineers.",
+          "url": "https://markdotto.com/2024/01/17/blended-diffs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "markdotto.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a13",
+          "order": 2,
+          "title": "THE OPEN SOURCE SUSTAINABILITY CRISIS",
+          "summary": "For open source to be more sustainable, companies need to contribute more to open source contributors through financial support. Today, most open source contributors need to spend extra time on securing sponsorship or taking on extra work to support themselves. Open source maintainers often burn out as a result, leading to a lower velocity of improvement on open source software.",
+          "url": "https://openpath.chadwhitacre.com/2024/the-open-source-sustainability-crisis/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "openpath.chadwhitacre.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a14",
+          "order": 3,
+          "title": "READING QR CODES WITHOUT A COMPUTER",
+          "summary": "QR codes have different parts, like finder patterns, separators, timing patterns, and format information. Mask patterns hide data and improve readability. Encoding modes specify how data is stored (e.g., numeric or alphanumeric). To decode a QR code, one can use a cheat sheet to identify the mask pattern, read the encoding mode, follow the reading order, find the total number of content bytes, and decode the content using a table. This guide takes readers through this process step-by-step with visuals.",
+          "url": "https://qr.blinry.org/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "qr.blinry.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-01-23:a15",
+          "order": 1,
+          "title": "AN IMPORTANT UPDATE ABOUT RIOT’S FUTURE",
+          "summary": "Riot Games has laid off 11% of its staff, offering a minimum of 6 months of severance, a commitment to pay out their annual bonus, health benefits, and more.",
+          "url": "https://www.riotgames.com/en/news/2024-rioter-update?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "riotgames.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a16",
+          "order": 2,
+          "title": "SO YOU THINK YOU KNOW C?",
+          "summary": "A short, 5-question quiz that tests you on your C knowledge - with a twist.",
+          "url": "https://wordsandbuttons.online/so_you_think_you_know_c.html?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "wordsandbuttons.online",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a17",
+          "order": 3,
+          "title": "MACHINE LEARNING ENGINEERING OPEN BOOK",
+          "summary": "A free online resource to help with the successful training of large language models and multi-modal models.",
+          "url": "https://github.com/stas00/ml-engineering?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a18",
+          "order": 4,
+          "title": "BIOME.JS ROADMAP 2024",
+          "summary": "Biome.js is a fast formatter for JavaScript, TypeScript, JSX, and JSON that can even format malformed code. In 2024, Biome.js maintainers hope to help more users move to Biome, expand Biome’s language support, and deepen Biome’s existing capabilities.",
+          "url": "https://biomejs.dev/blog/roadmap-2024/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "biomejs.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-01-23:a19",
+          "order": 5,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

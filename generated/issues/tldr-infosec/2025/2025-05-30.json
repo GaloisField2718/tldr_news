@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-05-30",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-05-30",
+  "source_path": "TLDR InfoSec/article_30-05-2025.md",
+  "source_content_hash": "sha256:47cd840229fec2d8643e2f34bd247a0c57f86212be0bebcf04ca36ead04e1435",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-05-30",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-30:a04",
+          "order": 1,
+          "title": "DATA BREACH AFFECTS 38K UCHICAGO MEDICINE PATIENTS",
+          "summary": "UChicago Medicine released a statement that the data of 38K patients may have been exposed in a July 2024 breach. The data breach was caused by a third-party debt collector's system breach. The exposed data may include SSNs, addresses, dates of birth, medical information, and financial account information.",
+          "url": "https://www.upi.com/Top_News/US/2025/05/28/UChicago-Medicine-cybersecurity-data-breach-NRS/4031748455724/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "upi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a05",
+          "order": 2,
+          "title": "THREAT ACTORS ABUSE GOOGLE APPS SCRIPT IN EVASIVE PHISHING ATTACKS",
+          "summary": "Threat actors are exploiting Google Apps Script to create phishing pages that mimic legitimate sites, enhancing their credibility. This tactic reduces the likelihood of detection by security tools. As a result, users may be more easily deceived into providing sensitive information.",
+          "url": "https://www.bleepingcomputer.com/news/security/threat-actors-abuse-google-apps-script-in-evasive-phishing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a06",
+          "order": 3,
+          "title": "FAKE CHATGPT AND INVIDEO AI DOWNLOADS DELIVER RANSOMWARE",
+          "summary": "Cisco Talos has discovered three malware families—CyberLock ransomware, Lucky_Gh0$t ransomware, and Numero malware—that disguise themselves as legitimate AI tool installers for ChatGPT, InVideo AI, and NovaLeadsAI. These threats spread through SEO poisoning, social media, and messaging platforms, specifically targeting sales, technology, and marketing businesses. CyberLock demands $50,000 in Monero cryptocurrency, Lucky_Gh0$t encrypts files under 1.2GB while destroying larger ones, and Numero renders Windows systems unusable by interfering with the graphical interface.",
+          "url": "https://hackread.com/fake-chatgpt-invideo-ai-downloads-deliver-ransomware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-30:a07",
+          "order": 1,
+          "title": "DETECTION-IN-DEPTH",
+          "summary": "Detection-in-depth is a detection engineering concept modeled after the principle of defense-in-depth, in which security teams create detections to catch an attacker at every step of the attack chain. Detections (including out-of-the-box detections that come with a platform) must be fine-tuned to the specific environment to reduce false positives. They should be tested using threat emulation tools such as Atomic Red Team and penetration testing activities.",
+          "url": "https://dispatch.thorcollective.com/p/detection-in-depth?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "dispatch.thorcollective.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a08",
+          "order": 2,
+          "title": "HTML TO PDF RENDERER: A TALE OF LOCAL FILE ACCESS AND SHELLCODE EXECUTION",
+          "summary": "In a recent engagement, a penetration tester from Neodyme tested a tool that converted HTML to PDF. The tester's first instinct was to attempt Server-Side Request Forgery (SSRF), which they succeeded in doing in a test environment. They then discovered that they could enumerate information about the engine and local files. The tester then found an exploit against the outdated Chromium browser used by the converter to render the HTML and adapted it to obtain shellcode execution on the server.",
+          "url": "https://neodyme.io/en/blog/html_renderer_to_rce/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "neodyme.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a09",
+          "order": 3,
+          "title": "DECODING TCP SYN FOR STRONGER NETWORK SECURITY",
+          "summary": "NETSCOUT analyzed TCP SYN segments from honeypots to identify network security patterns, examining source addresses, IPv4 TTL values, and TCP header lengths. The study found no source address spoofing despite expectations, discovered that TTL values varied widely from the same sources due to path diversity, and identified that many anomalies correlated with crafted packets from suspicious networks. The research demonstrates that analyzing TCP header patterns can effectively distinguish legitimate traffic from potential threats, with 20-byte headers and zero sequence numbers as strong indicators of malicious activity.",
+          "url": "https://www.netscout.com/blog/asert/decoding-tcp-syn-stronger-network-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "netscout.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-30:a10",
+          "order": 1,
+          "title": "HOW A FORGOTTEN INTERNAL TOOL LED TO A PRODUCTION BREACH—AND HOW TO PREVENT IT",
+          "summary": "A leaked password gave an attacker access to an internal tool—with permissions that reached all the way to production. The root cause? No fine-grained access control. Explore what went wrong—and how to prevent it—with Oso's Nightmares of Authorization series [11].",
+          "url": "https://www.osohq.com/post/nightmares-of-authorization-pwned-password-data-pilferer?utm_content=tldr&utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "osohq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a12",
+          "order": 2,
+          "title": "SOC ASSESSMENT TOOL (WEB APP)",
+          "summary": "The SOC Assessment Tool provides a comprehensive assessment tool to evaluate the maturity of a Security Operations Center (SOC). It provides actionable insights upon completion of the assessment.",
+          "url": "https://soc.tools.ssojet.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "soc.tools.ssojet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a13",
+          "order": 3,
+          "title": "10 BURP EXTENSIONS I ACTUALLY USE",
+          "summary": "A LinkedIn post by Ti3rius about 10 “hidden gem” burp extensions he commonly uses, which are not in the top 30 most popular in the BApp Store.",
+          "url": "https://www.linkedin.com/posts/tib3rius_notsponsoredijustloveburp-activity-7327711876438544384-Fkm_?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a14",
+          "order": 4,
+          "title": "MONKEY365",
+          "summary": "Monkey365 is an open-source security tool designed for conducting security configuration reviews of Microsoft 365, Azure subscriptions, and Microsoft Entra ID. It simplifies the process by eliminating the need to learn complex APIs or admin panels. The tool identifies security gaps and offers recommendations for optimal configuration to enhance the security and effectiveness of your Microsoft 365 tenant or Azure subscription.",
+          "url": "https://github.com/silverhack/monkey365?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-30:a15",
+          "order": 1,
+          "title": "FROM REVERSE ENGINEERING TO CHEAT DEVELOPMENT: INTERNAL GAME HACKS WITH ASSAULTCUBE",
+          "summary": "This guide shows how to build an internal cheat for the AssaultCube game by injecting a custom DLL into the game's memory. It explains how to hook into game functions like damage and add advanced features such as aimbot and wallhacks. The project is intended to be a technical learning tool for understanding game memory and function hooking.",
+          "url": "https://adminions.ca/books/articles/page/part-2-from-reverse-engineering-to-cheat-development-internal-game-hacks-with-assaultcube?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "adminions.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a16",
+          "order": 2,
+          "title": "US SANCTIONS FIRM LINKED TO CYBER SCAMS BEHIND $200 MILLION IN LOSSES",
+          "summary": "The U.S. Treasury Department has sanctioned Funnull Technology, a Philippines-based company facilitating numerous malicious websites. These sites are connected to cyber scams that have resulted in over $200 million in losses for Americans. The sanctions aim to disrupt the operations of this company and its role in cybercrime.",
+          "url": "https://www.bleepingcomputer.com/news/security/us-sanctions-company-linked-to-hundreds-of-thousands-of-cyber-scam-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a17",
+          "order": 3,
+          "title": "MARK YOUR CALENDAR: APT41 INNOVATIVE TACTICS",
+          "summary": "Google's Threat Intelligence Group discovered APT41 using the \"TOUGHPROGRESS\" malware, which exploits Google Calendar for command and control communications. The malware is delivered through spear-phishing emails containing ZIP archives hosted on compromised government websites. To evade detection, the malware uses a three-stage infection chain (PLUSDROP, PLUSINJECT, and TOUGHPROGRESS) with advanced obfuscation techniques, including 64-bit register overflow and control flow obfuscation. Google disrupted the campaign by developing custom detection signatures, terminating attacker-controlled Calendar accounts and Workspace projects, and adding malicious domains to Safe Browsing blocklists.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/apt41-innovative-tactics?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-05-30:a18",
+          "order": 1,
+          "title": "MICROSOFT AUTHENTICATOR NOW WARNS TO EXPORT PASSWORDS BEFORE JULY CUTOFF",
+          "summary": "Microsoft Authenticator will discontinue its password autofill feature in July, prompting users to either export their passwords or switch to Microsoft Edge.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-authenticator-now-warns-to-export-passwords-before-july-cutoff/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a19",
+          "order": 2,
+          "title": "APPLE SAFARI EXPOSES USERS TO FULLSCREEN BROWSER-IN-THE-MIDDLE ATTACKS",
+          "summary": "A vulnerability in Apple's Safari browser allows attackers to exploit a fullscreen trick to illicitly acquire user account credentials, prompting users to be cautious with sensitive data entry.",
+          "url": "https://www.bleepingcomputer.com/news/security/apple-safari-exposes-users-to-fullscreen-browser-in-the-middle-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-05-30:a20",
+          "order": 3,
+          "title": "PARTIES BEHIND 2024 BIDEN AI ROBOCALL REACH DEAL IN LAWSUIT",
+          "summary": "Two parties involved in an AI-generated robocall that mimicked then-President Joe Biden and discouraged voting in the New Hampshire Democratic primary have agreed to settle a civil lawsuit filed by voting groups.",
+          "url": "https://cyberscoop.com/biden-ai-robocall-league-of-women-voters-lawsuit-life-corporation-voice-broadcasting/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

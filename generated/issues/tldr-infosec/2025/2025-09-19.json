@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-09-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-19",
+  "source_path": "TLDR InfoSec/article_19-09-2025.md",
+  "source_content_hash": "sha256:11cacd3b8a96f04c00954b6797febcf72865cc58eacf5fb70178c384b01c55f8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a04",
+          "order": 1,
+          "title": "PREVENTING SOCIAL ENGINEERING",
+          "summary": "Hackers have exploited the same psychological blind spots since the early Internet days. Our brains are hardwired to fall for these scams - and your team is no exception.",
+          "url": "https://bitwarden.com/go/rachel-tobac-ebook/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=hackers_guide",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a05",
+          "order": 2,
+          "title": "Manager by G2 + CNET. Try Bitwarden for Business, free",
+          "summary": "",
+          "url": "https://bitwarden.com/go/business-password-manager/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=form_page",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a06",
+          "order": 1,
+          "title": "SYSTEMBC MALWARE TURNS INFECTED VPS SYSTEMS INTO PROXY HIGHWAY",
+          "summary": "SystemBC is a proxy botnet providing a highway for malicious traffic, with an average of 1,500 bots/day. It primarily recruits bots by compromising VPS systems with at least one vulnerability, making up over 80% of the bots. Some customers of SystemBC include REM Proxy, a Russian web-scraping service, and a Vietnamese-based proxy network.",
+          "url": "https://www.bleepingcomputer.com/news/security/systembc-malware-turns-infected-vps-systems-into-proxy-highway/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a07",
+          "order": 2,
+          "title": "NEARLY 250,000 IMPACTED BY DATA BREACH AT MEDICAL ASSOCIATES OF BREVARD",
+          "summary": "Medical Associates of Brevard in Florida revealed that a data breach in January affected almost 247,000 patients and exposed sensitive health and personal data. The BianLian ransomware group claimed responsibility for stealing information like emails and HR documents, but it remains unclear how the stolen data has been used.",
+          "url": "https://www.securityweek.com/nearly-250000-impacted-by-data-breach-at-medical-associates-of-brevard/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a08",
+          "order": 3,
+          "title": "INSIGHT PARTNERS: RANSOMWARE HIT EXPOSED DATA ON 12K PEOPLE",
+          "summary": "Venture firm Insight Partners suffered a ransomware attack that exposed data of over 12,000 staff and investors. The breach began in October 2024, leading to data encryption in January before being detected. The stolen data includes personal, banking, and tax details.",
+          "url": "https://www.theregister.com/2025/09/18/vc_giant_insight_partners_confirms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a09",
+          "order": 1,
+          "title": "DETECT SECRETS IN GITLAB CI LOGS USING GGSHIELD AND BRING YOUR OWN SOURCE",
+          "summary": "GitGuardian demonstrates how to automatically scan GitLab CI/CD pipeline logs for secrets using ggshield and their Bring Your Own Source initiative, addressing a critical but often overlooked attack vector where sensitive data like environment variables, API responses, and temporary credentials are exposed in build logs. The solution involves creating a custom Docker image with enhanced ggshield capabilities, configuring secure token storage via HashiCorp Vault, and implementing an automated scanning script that processes all pipeline job logs and creates incidents in the GitGuardian dashboard. This approach provides comprehensive secrets detection across the entire DevOps lifecycle, catching runtime secrets that traditional source code scanning misses while maintaining zero friction for developers.",
+          "url": "https://blog.gitguardian.com/detect-secrets-in-gitlab-ci-logs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a10",
+          "order": 2,
+          "title": "AWS AGENTCORE: THE OVERLOOKED PRIVILEGE ESCALATION PATH IN BEDROCK'S AI TOOLING",
+          "summary": "AWS Bedrock AgentCore is a collection of tools that assist in deploying and scaling AI agents. AgentCore provides the ability to launch Code Interpreters, which run code in a sandboxed environment and can be customized to have access to AWS credentials to perform actions on AWS resources. Custom Code Interpreters cannot be protected with resource policies and only emit CloudTrail data events, presenting a tempting privilege escalation vector for attackers.",
+          "url": "https://sonraisecurity.com/blog/aws-agentcore-privilege-escalation-bedrock-scp-fix/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "sonraisecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a11",
+          "order": 3,
+          "title": "LATERAL MOVEMENT - BITLOCKER",
+          "summary": "BitLocker is a full disk encryption feature for Windows that protects data at rest by encrypting full volumes. This post outlines a privilege escalation or lateral movement technique that uses Windows Management Instrumentation (WMI) to hijack specific COM objects of BitLocker using remote manipulation of BitLocker registry keys to execute code under the user's context on a target host. The post also discusses detection opportunities for this attack and Sigma and Windows Defender for Endpoint queries to detect them.",
+          "url": "https://ipurple.team/2025/08/04/lateral-movement-bitlocker/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "ipurple.team",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a12",
+          "order": 1,
+          "title": "SECURITY AWARENESS TRAINING THAT ACTUALLY WORKS - BASED ON REAL-WORLD THREAT INTELLIGENCE",
+          "summary": "Most security awareness programs achieve dismal completion rates because they use generic scenarios. Huntress Managed SAT [12] builds training from real threat intelligence gathered across 3.7M+ protected endpoints. The result is 98% completion rates and employees who recognize actual threats, not just textbook examples. Get a free trial",
+          "url": "https://www.huntress.com/lp/security-awareness-training-demo?utm_source=tldr&utm_medium=email&utm_campaign=Cy25-09-camp-platform-global-prospect-iis-x-tldr_newsletter_0919",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a12",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.huntress.com/lp/security-awareness-training-demo?utm_source=tldr&utm_medium=email&utm_campaign=Cy25-09-camp-platform-global-prospect-iis-x-tldr_newsletter_0919",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a13",
+          "order": 3,
+          "title": "YASA",
+          "summary": "YASA (Yet Another Static Analyzer) is an open-source static program analysis project. Its core innovation lies in a unified intermediate representation called the Unified Abstract Syntax Tree (UAST), designed to support multiple programming languages. Built on top of UAST, YASA provides a highly accurate static analysis framework. Users can extend its capabilities by writing custom checkers to perform various program analysis tasks—such as AST queries, data flow analysis, and function call graph analysis—and expose functionality through SDK, declarative query language (QL), or MCP.",
+          "url": "https://github.com/antgroup/YASA-Engine?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a14",
+          "order": 4,
+          "title": "PYARMOR",
+          "summary": "Pyarmor is a command-line tool designed for obfuscating Python scripts, binding obfuscated scripts to specific machines, and setting expiration dates for obfuscated scripts.",
+          "url": "https://github.com/dashingsoft/pyarmor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a15",
+          "order": 5,
+          "title": "INBOXFUSCATION",
+          "summary": "Inboxfuscation is an advanced inbox rule obfuscation framework for Microsoft Exchange environments. The tool provides sophisticated Unicode-based obfuscation techniques to create stealthy inbox rules that can evade basic detection while maintaining functionality.",
+          "url": "https://github.com/Permiso-io-tools/Inboxfuscation?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a16",
+          "order": 1,
+          "title": "CHECK POINT ACQUIRES LAKERA TO BUILD A UNIFIED AI SECURITY STACK",
+          "summary": "Check Point has announced plans to acquire AI security platform Lakera in Q4 2025 to strengthen enterprise defenses against emerging AI threats like prompt injection attacks, data leaks through LLMs, and model manipulation as organizations rapidly adopt generative AI and autonomous agents. Lakera's AI-native runtime protection technology boasts 98% detection rates with sub-50ms latency and less than 0.5% false positives, addressing gaps that traditional cybersecurity tools cannot handle in real-time AI environments.",
+          "url": "https://www.csoonline.com/article/4058653/check-point-acquires-lakera-to-build-a-unified-ai-security-stack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a17",
+          "order": 2,
+          "title": "WATCHGUARD WARNS OF CRITICAL VULNERABILITY IN FIREBOX FIREWALLS",
+          "summary": "WatchGuard has released security updates to address a critical (CVSS 9.3) remote code execution vulnerability impacting its Firebox firewalls. The vulnerability is caused by an out-of-bounds write on devices configured to use IKEv2 VPN. Devices that have deleted the vulnerable configuration but still have a branch office VPN to a static gateway peer configured may also be vulnerable.",
+          "url": "https://www.bleepingcomputer.com/news/security/watchguard-warns-of-critical-vulnerability-in-firebox-firewalls/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a18",
+          "order": 3,
+          "title": "MEET SHADOWLEAK: ‘IMPOSSIBLE TO DETECT' DATA THEFT USING AI",
+          "summary": "Researchers at Radware discovered a vulnerability called ShadowLeak that exploits OpenAI's ChatGPT through indirect prompt injection attacks. Hidden email instructions can trick the AI into stealing sensitive data like credit card numbers and names from users' inboxes. The attack bypasses ChatGPT's security protections by encoding stolen data in Base64 and exfiltrating it directly through OpenAI's servers via the agent's browsing tool, making it nearly impossible to detect since it doesn't go through the client interface. This attack represents a significant escalation from previous client-side prompt injection attacks, as the data theft occurs entirely on the backend without any visible signs to the user.",
+          "url": "https://www.csoonline.com/article/4059606/meet-shadowleak-impossible-to-detect-data-theft-using-ai.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-19:a19",
+          "order": 1,
+          "title": "INSIDE THE 2025 SECURITY OPERATIONS REPORT: WHAT 330 TRILLION DATA POINTS REVEAL ABOUT MODERN CYBER RISK",
+          "summary": "Adversaries are accelerating their tactics, with over half of security alerts now occurring outside business hours.",
+          "url": "https://arcticwolf.com/resources/on-demand-webinar-uk/inside-the-2025-security-operations-report-what-data-points-reveal-about-cyber-risk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arcticwolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a20",
+          "order": 2,
+          "title": "TRUMP ADMIN SAYS SOCIAL SECURITY DATABASE WASN'T “LEAKED, HACKED, OR SHARED”",
+          "summary": "The Trump administration denied allegations by a whistleblower that Social Security data was moved to an insecure cloud system.",
+          "url": "https://arstechnica.com/tech-policy/2025/09/trump-admin-denies-doge-put-social-security-data-into-insecure-cloud-system/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-19:a21",
+          "order": 3,
+          "title": "JAGUAR LAND ROVER TO PAUSE PRODUCTION FOR THIRD WEEK DUE TO CYBERATTACK",
+          "summary": "Jaguar Land Rover will extend its vehicle production shutdown into a third week following a cyberattack earlier this month.",
+          "url": "https://techcrunch.com/2025/09/17/jaguar-land-rover-to-pause-production-for-third-week-due-to-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

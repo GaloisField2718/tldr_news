@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-11-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-10",
+  "source_path": "TLDR InfoSec/article_10-11-2025.md",
+  "source_content_hash": "sha256:b400373f668f313c5cec24143be62230190ed7b259737d16730bfb1dcb54f676",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a04",
+          "order": 1,
+          "title": "DEFEND AGAINST THEM",
+          "summary": "Identity is the new attack surface, and infostealers are at the frontline - fuelling ransomware, fraud, and data breaches for bad actors. Low costs and easy access mean they're here to stay.",
+          "url": "https://go.flashpoint.io/proactive-defenders-guide-to-infostealers?utm_campaign=Resource_RP_DefendersGuide_Infostealers&utm_source=linkedin&utm_medium=paid-social&sfcampaign_id=701Rc00000W7BAoIAN",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a06",
+          "order": 1,
+          "title": "US CONGRESSIONAL BUDGET OFFICE HIT BY SUSPECTED FOREIGN CYBERATTACK",
+          "summary": "The US Congressional Budget Office (CBO) confirmed that it had suffered a cyberattack after detecting unauthorized access to its networks. Officials who discovered the breach are concerned that emails between CBO and congressional offices may have been exposed. A foreign actor is suspected.",
+          "url": "https://www.bleepingcomputer.com/news/security/us-congressional-budget-office-hit-by-suspected-foreign-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a07",
+          "order": 2,
+          "title": "DANGEROUS RUNC FLAWS COULD ALLOW HACKERS TO ESCAPE DOCKER CONTAINERS",
+          "summary": "Three critical vulnerabilities (CVE-2025-31133, CVE-2025-52565, and CVE-2025-52881) in the runC container runtime used by Docker and Kubernetes allow attackers to exploit symlink races and bind-mount redirections to gain root-level write access to the host system, bypassing container isolation by manipulating /dev/null, /dev/console, and /proc filesystem mounts during container initialization. The flaws affect all runC versions for CVE-2025-31133 and CVE-2025-52881, while CVE-2025-52565 impacts versions 1.0.0-rc3 and later, with patches available in runC versions 1.2.8, 1.3.3, 1.4.0-rc.3 and above. Security teams should immediately update to patched runC versions, enable user namespaces without mapping host root into containers, implement rootless containers where possible, and monitor for suspicious symlink behaviors that could indicate exploitation attempts.",
+          "url": "https://www.bleepingcomputer.com/news/security/dangerous-runc-flaws-could-allow-hackers-to-escape-docker-containers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a08",
+          "order": 3,
+          "title": "NEW LANDFALL SPYWARE EXPLOITED SAMSUNG ZERO-DAY VIA WHATSAPP MESSAGES",
+          "summary": "A threat actor exploited CVE-2025-21042, a critical out-of-bounds write zero-day in Samsung's libimagecodec.quram.so library, to deploy LandFall spyware via malicious .DNG images sent through WhatsApp to Samsung Galaxy users (S22, S23, S24, Z Fold 4, and Z Flip 4) in the Middle East from July 2024 until Samsung patched it in April 2025. The spyware delivered a malformed DNG file with an embedded ZIP archive containing a loader and SELinux policy manipulator, enabling extensive spying such as microphone/call recording, location tracking, and access to photos, contacts, SMS, call logs, files, and browsing history while maintaining persistence and evading detection. Security professionals should ensure devices are updated with April 2025 patches, disable automatic media downloads, enable Android's Advanced Protection or iOS Lockdown Mode for high-risk users, and monitor for similar DNG exploitation patterns, given recent trends of commercial spyware leveraging image vulnerabilities.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-landfall-spyware-exploited-samsung-zero-day-via-whatsapp-messages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a09",
+          "order": 1,
+          "title": "BYPASSING ENROLLMENT RESTRICTIONS TO BREAK BYOD BARRIERS IN INTUNE",
+          "summary": "Administrators can configure Intune to block bring your own device (BYOD) enrollment using the device enrollment restriction, which can prevent attackers from enrolling rogue devices after stealing login credentials. If personal devices are allowed for other operating systems (such as Android), attackers can send the Entra join request as that OS and then check in and complete enrollment as Windows. Otherwise, attackers can manipulate the check in XML to mock a device ID or mock Azure Virtual Desktop.",
+          "url": "https://temp43487580.github.io/intune/bypass-enrollment-restictions-to-break-byod-barriers-in-intune/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "temp43487580.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a10",
+          "order": 2,
+          "title": "FROM KEY SPRAWL TO SCALABLE CONTROL: RETHINKING SSH ACCESS",
+          "summary": "Static SSH keys can present security issues if they are not rotated often enough or shared between teams or with external contractors, and can also add to management overhead. SSH certificates present a more modern alternative in which users present their public key to a centralized CA, which signs a certificate based on it, which can be used for a time limited authentication. This article presents an implementation of SSH certificates using Hashicorp Vault and Boundary.",
+          "url": "https://www.hashicorp.com/en/blog/from-key-sprawl-to-scalable-control-rethinking-ssh-access?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "hashicorp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a11",
+          "order": 3,
+          "title": "BUILDING SECURITY IN OPEN SOURCE FOR FINANCIAL SERVICES: OPENSSF AT OPEN SOURCE FINANCE FORUM (OSFF) NYC",
+          "summary": "OpenSSF sponsored the Open Source in Finance Forum to address critical security challenges in financial services, where 80-90% of modern software supply chains rely on open source software, including 71% of AI components, highlighting emerging risks such as malware hidden in AI model weights, poisoned training data, and identity-based intrusions that now account for 30% of financial sector attacks. The organization is implementing proactive defense measures, including Model Signing v1.0 for AI integrity verification, MLSecOps frameworks for full AI lifecycle security, transparency tools like OpenSSF Scorecard, OSV, and GUAC, plus policy engagement across the US and EU to secure open source from development to deployment. Financial services security professionals should adopt OpenSSF's security frameworks and tools, implement model signing for AI components, establish MLSecOps practices throughout the AI lifecycle, and actively participate in cross-industry collaboration to address supply chain vulnerabilities while connecting maintainers with the organizations that depend on their work.",
+          "url": "https://openssf.org/blog/2025/11/09/building-security-in-open-source-for-financial-services-openssf-at-open-source-finance-forum-osff-nyc/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "openssf.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a12",
+          "order": 1,
+          "title": "HOW MANY OF YOUR UNUSED ADMIN ACCOUNTS ARE STILL ACTIVE?",
+          "summary": "From unused admin accounts to default Windows settings, small misconfigurations lead to big exploits. ThreatLocker Defense Against Configurations [12] (DAC) scans your system daily, identifies resilience issues, and maps them to your compliance standards. No need for additional integrations — just login to ThreatLocker and close the gaps. See how [12].",
+          "url": "https://www.threatlocker.com/platform/defense-against-configurations?utm_source=tldr&utm_medium=sponsor&utm_campaign=dac_q4_25&utm_content=dac-&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a13",
+          "order": 2,
+          "title": "RESTRICTEDPYTHON",
+          "summary": "RestrictedPython is a tool that defines a subset of the Python language that allows for running untrusted code.",
+          "url": "https://github.com/zopefoundation/RestrictedPython?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a14",
+          "order": 3,
+          "title": "DESTROYLIST",
+          "summary": "An up-to-date blacklist of phishing and scam domains, automatically updated by the PhishDestroy system. A reliable threat intelligence source for integration into security systems.",
+          "url": "https://github.com/phishdestroy/destroylist?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a15",
+          "order": 1,
+          "title": "MY AWS ACCOUNT GOT HACKED - HERE IS WHAT HAPPENED",
+          "summary": "A cloud architect discovered that their personal AWS account was breached when they received a DKIM verification email. They then removed the attacker's access and found that the attacker had created four IAM accounts for backdoor access, launched a large EC2 instance (possibly for cryptomining), created an AWS Organization and a new account, and used Resource Explorer to search for additional access. The post walks the reader through the author's full process, from discovery to incident response to root cause analysis.",
+          "url": "https://zviwex.com/posts/aws-account-hacked/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "zviwex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a16",
+          "order": 2,
+          "title": "WHAT MAKES RANSOMWARE GROUPS SUCCESSFUL?",
+          "summary": "Ransomware gangs thrive through automation, customization, and advanced tools, rapidly evolving their tactics to outpace defenders. AI accelerates attacks and facilitates phishing, while tailored ransomware operations employ strong encryption and sophisticated extortion tactics. These groups operate like efficient SaaS enterprises, and the recommendation is to focus on defense against attacker techniques and fast, automated responses.",
+          "url": "https://links.tldrnewsletter.com/ufxtUO",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a17",
+          "order": 3,
+          "title": "RANSOMVIBING APPEARS IN VS CODE EXTENSIONS",
+          "summary": "A ransomware-infected VS Code extension, \"susvsex,\" was found on the Visual Studio Marketplace. It utilizes GitHub for command and control, encrypts files, and uploads them for extortion, but its malicious intent was clearly evident. Due to poor coding and a hardcoded decryption key, its threat is currently low. The incident highlights gaps in extension security.",
+          "url": "https://secureannex.com/blog/ransomvibe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "secureannex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-10:a18",
+          "order": 1,
+          "title": "IRU: AI THAT POWERS IT + SECURITY AT NOTION, REPLIT, VERCEL, AND LOVABLE",
+          "summary": "Collapse the security stack into one tool AI-powered tool that automates security response, policy enforcement (apps, users, devices), and compliance evidence. Trusted by the world's",
+          "url": "https://www.iru.com/?utm_source=tldr&utm_medium=paid-media&utm_campaign=tldr_secondaryarticle_202511_10",
+          "reading_time_minutes": null,
+          "source_domain": "iru.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a18",
+          "order": 2,
+          "title": "fastest-growing companies. Meet Iru",
+          "summary": "",
+          "url": "https://www.iru.com/?utm_source=tldr&utm_medium=paid-media&utm_campaign=tldr_secondaryarticle_202511_10",
+          "reading_time_minutes": null,
+          "source_domain": "iru.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a19",
+          "order": 3,
+          "title": "MICROSOFT UNCOVERS 'WHISPER LEAK' ATTACK THAT IDENTIFIES AI CHAT TOPICS IN ENCRYPTED TRAFFIC",
+          "summary": "Microsoft has revealed a new attack, called Whisper Leak, that enables attackers to infer the topics of AI chat conversations by analyzing encrypted network traffic patterns, even without accessing the actual data.",
+          "url": "https://thehackernews.com/2025/11/microsoft-uncovers-whisper-leak-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a20",
+          "order": 4,
+          "title": "QNAP FIXES SEVEN ZERO-DAY FLAWS EXPLOITED AT PWN2OWN",
+          "summary": "QNAP has released fixes for seven zero-day vulnerabilities discovered by Pwn2Own Ireland researchers in its QTS, QuTS Hero, Hyper Data Protector, Malware Remover, and HBS 3 Hybrid Backup Sync software.",
+          "url": "https://www.bleepingcomputer.com/news/security/qnap-fixes-seven-nas-zero-day-vulnerabilities-exploited-at-pwn2own/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-10:a21",
+          "order": 5,
+          "title": "18 ARRESTED IN CRACKDOWN ON CREDIT CARD FRAUD RINGS",
+          "summary": "Authorities across Europe detained 18 people accused of orchestrating extensive credit card fraud and money laundering networks.",
+          "url": "https://www.securityweek.com/18-arrested-in-crackdown-on-credit-card-fraud-rings/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

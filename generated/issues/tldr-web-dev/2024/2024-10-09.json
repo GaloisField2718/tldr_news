@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-10-09",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-09",
+  "source_path": "TLDR Web Dev/article_09-10-2024.md",
+  "source_content_hash": "sha256:5dd724452d40b3ba3e527a83a2a5d9cc57cdcb163f420e41c3532bde82649fc6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-09",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-09:a04",
+          "order": 1,
+          "title": "MIGRATING IN-PLACE FROM POSTGRESQL TO MYSQL",
+          "summary": "Yelp Reservations, acquired in 2013, was originally built with a PostgreSQL database. Recently, the service was migrated in-place to a Yelp-standard MySQL database. This involved overcoming challenges like data consistency, handling PostgreSQL-specific features, and managing the release process with minimal service disruption.",
+          "url": "https://engineeringblog.yelp.com/2024/10/migrating-from-postgres-to-mysql.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "engineeringblog.yelp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a05",
+          "order": 2,
+          "title": "DO NOT USE SECRETS IN ENVIRONMENT VARIABLES. HERE'S HOW TO DO IT BETTER",
+          "summary": "Storing secrets in environment variables is a common practice but actually may be a security risk when secrets are poorly managed, leaked through frontend code, exposed in .env files, logged unintentionally, or inherited by child processes. Developers should try to use secrets stores instead.",
+          "url": "https://www.nodejs-security.com/blog/do-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better?utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "nodejs-security.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a06",
+          "order": 3,
+          "title": "SMOLDERINGLY FAST B-TREES",
+          "summary": "The benchmark matters when comparing the performance of B-trees and hashmaps. Different benchmarks show hashmaps benefit more from cache behavior and speculative execution. B-trees avoid hashmap pitfalls like flooding and rehashing, but hashmaps with additional measures for order and iteration may be easier to use in development.",
+          "url": "https://www.scattered-thoughts.net/writing/smolderingly-fast-btrees/?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "scattered-thoughts.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-09:a07",
+          "order": 1,
+          "title": "COGNITIVE LOAD IS WHAT MATTERS",
+          "summary": "Cognitive load refers to the mental effort required to understand and work with code. Excessive cognitive load can lead to confusion, errors, and delays. Developers should work on reducing extraneous cognitive load while working on code by avoiding overly complex conditionals, minimizing inheritance, and using clear, self-describing variable names.",
+          "url": "https://github.com/zakirullin/cognitive-load?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a08",
+          "order": 2,
+          "title": "THE STATIC SITE PARADOX",
+          "summary": "Ironically, professional software engineers are more likely to use simple static HTML websites for their personal blogs, while regular users are often stuck with more resource-intensive CMS platforms like WordPress. This disparity is because creating a static website requires technical knowledge and effort that many users lack, while readily available CMS solutions are much easier to use (even though they are more complex under the hood).",
+          "url": "https://kristoff.it/blog/static-site-paradox/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "kristoff.it",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a09",
+          "order": 3,
+          "title": "A MODEST CRITIQUE OF HTMX",
+          "summary": "htmx is an open-source front-end JavaScript library that extends HTML with custom attributes that enable the use of AJAX directly in HTML. While the core concept of htmx is appealing, its implementation is more complicated because of issues with inheritance, state management, and integration with other libraries like React. For example, htmx's reliance on replacing DOM elements wholesale causes problems with maintaining browser-local state and conflicts with libraries like React that manage their own state.",
+          "url": "https://chrisdone.com/posts/htmx-critique/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "chrisdone.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-09:a10",
+          "order": 1,
+          "title": "SPEAKEASY: GENERATE HANDWRITTEN SDKS IN +10 LANGUAGES",
+          "summary": "Why spend hundreds of hours your team doesn't have on building and maintaining SDKs? With Speakeasy, [10] you can upload your OpenAPI spec and get SDKs your API users will love, including OAuth2.0, custom",
+          "url": "https://www.speakeasy.com/product/sdk-generation?utm_source=webdev-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "speakeasy.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a10",
+          "order": 2,
+          "title": "code, retries, pagination, and more. Start for free →",
+          "summary": "",
+          "url": "https://www.speakeasy.com/product/sdk-generation?utm_source=webdev-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "speakeasy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a11",
+          "order": 3,
+          "title": "BRISA",
+          "summary": "Brisa Framework is a web platform framework that aims to unify server and client-side development. It offers server-rendered JSX components and minimal JavaScript shipped to the browser. Brisa uses a web component island-based architecture, allowing for interactive elements to be rendered on the server and hydrated on the client with native Web APIs.",
+          "url": "https://brisa.build/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "brisa.build",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a12",
+          "order": 4,
+          "title": "PLAYER.STYLE",
+          "summary": "Player.style offers a collection of pre-built video and audio player themes designed to be easily implemented in any web player or app framework.",
+          "url": "https://player.style/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "player.style",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-09:a13",
+          "order": 1,
+          "title": "THE REAL DATA WALL IS BILLIONS OF YEARS OF EVOLUTION",
+          "summary": "The current focus on data as the driving force of AI progress is misguided. Instead, the real data wall is the vast amount of information encoded within our evolutionary history, far exceeding any data set used in AI training. This \"evolutionary data\" includes not only DNA but also the complex information embedded in the structure and function of our cells.",
+          "url": "https://dynomight.substack.com/p/data-wall?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "dynomight.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a14",
+          "order": 2,
+          "title": "IS AGE REALLY A FACTOR IN TECH?",
+          "summary": "Age doesn't matter in tech as long as individuals possess the necessary skills. While some tech giants are taking steps to address age diversity, there still needs to be systemic changes to combat ageism in tech.",
+          "url": "https://www.trevorlasn.com/blog/ageism-in-tech?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "trevorlasn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a15",
+          "order": 3,
+          "title": "ON THE NATURE OF TIME",
+          "summary": "From a computational perspective, time is not a fundamental coordinate but rather a reflection of the universe's computational processes. This idea is supported by the concept of computational irreducibility, which states that the only way to determine a system's future state is to trace through each computational step. Time, therefore, becomes a robust and irreplaceable element of our experience, reflecting the fundamental nature of computation.",
+          "url": "https://writings.stephenwolfram.com/2024/10/on-the-nature-of-time/?utm_source=tldrwebdev",
+          "reading_time_minutes": 32,
+          "source_domain": "writings.stephenwolfram.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-09:a16",
+          "order": 1,
+          "title": "CANVASES VERSUS DOCUMENTS",
+          "summary": "Web design may be shifting away from immersive \"canvas-style\" layouts and back to more structured, document-like designs.",
+          "url": "https://kaiwenwang.com/writing/canvases-versus-documents?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "kaiwenwang.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a17",
+          "order": 2,
+          "title": "DON'T LET DICTS SPOIL YOUR CODE",
+          "summary": "For better code structure and maintainability in Python, it's better to use dataclasses, Pydantic, and TypedDicts instead of using dictionaries.",
+          "url": "https://roman.pt/posts/dont-let-dicts-spoil-your-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "roman.pt",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a18",
+          "order": 3,
+          "title": "AUTOMATTIC IS DOING OPEN SOURCE DIRTY",
+          "summary": "The creator of Ruby on Rails argues that Automattic's demand for 8% of WP Engine's revenue is a violation of open source principles and the GPL license.",
+          "url": "https://world.hey.com/dhh/automattic-is-doing-open-source-dirty-b95cf128?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "world.hey.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-09:a19",
+          "order": 4,
+          "title": "WHAT'S NEW IN RUBY ON RAILS 8",
+          "summary": "Rails 8 introduces updates like easier deployments, a modern asset pipeline, improved SQLite capabilities, and more Active Record features.",
+          "url": "https://blog.appsignal.com/2024/10/07/whats-new-in-ruby-on-rails-8.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.appsignal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

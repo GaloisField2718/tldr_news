@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2023-11-21",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-11-21",
+  "source_path": "TLDR Web Dev/article_21-11-2023.md",
+  "source_content_hash": "sha256:9aa41a4caa6b2930e7b6f46e2b0b19730918252065ab60b5a71a5eb28da30d6f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-11-21",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-21:a05",
+          "order": 1,
+          "title": "CSS NESTING",
+          "summary": "This article discusses the introduction of native CSS nesting in major browsers like Chrome, Firefox, and Safari, a feature previously available only in CSS preprocessors (like Sass). It emphasizes the ease and benefits of using CSS nesting, providing various examples to illustrate its utility. Examples include nesting elements without a class or ID, using CSS combinators, and employing the ampersand symbol for more complex nesting scenarios. The article also showcases practical applications of CSS nesting in different contexts, such as styling post content and card components.",
+          "url": "https://ishadeed.com/article/css-nesting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "ishadeed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a06",
+          "order": 2,
+          "title": "WHAT HAPPENS WHEN DATABASES CRASH?",
+          "summary": "Databases store tables and indexes in files, writing to data pages in memory, which are then written to disk. A challenge arises when there's a power loss or crash during writing, leading to corrupted files. To address this, databases use a Write-Ahead Log (WAL). This article describes how the WAL is used as a source of truth to help the database regain its bearings after a crash.",
+          "url": "https://medium.com/@hnasr/what-happens-when-databases-crash-74540fd97ea9?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a07",
+          "order": 3,
+          "title": "DEVELOPING AN EFFECTIVE CI/CD PIPELINE FOR FRONTEND APPS",
+          "summary": "A CI/CD (Continuous Integration and Continuous Delivery/Deployment) pipeline automates various stages of the software development life cycle. It typically includes stages like coding, building, testing, releasing, deploying, monitoring, and planning. This article dives into best practices for an effective CI/CD pipeline, including making small, frequent changes, using feature flags, having rollback strategies, secure deployment strategies, prioritizing security, and fostering collaboration among all teams.",
+          "url": "https://blog.logrocket.com/best-practices-ci-cd-pipeline-frontend/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.logrocket.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-21:a08",
+          "order": 1,
+          "title": "CLEVER CODE IS PROBABLY THE WORST CODE YOU COULD WRITE",
+          "summary": "Although clever code feels impressive to write, it’s often unmaintainable and unreasonable to write in production. Code that is easy to understand and readable is arguably harder to write than clever code. This article provides tips and resources, such as an email about coding style from John Carmack, for getting better at writing clear code, along with an anecdote about the difficulties of writing clear code.",
+          "url": "https://open.substack.com/pub/engineercodex/p/clever-code-is-probably-the-worst?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a09",
+          "order": 2,
+          "title": "DATA-DRIVEN DEVELOPMENT IS A LIE",
+          "summary": "Data-driven development (DDD) is where logic is expressed through data structures rather than code. This article describes a typical DDD scenario in Clojure involving maps and rules for decision-making, highlighting how initially simple data-driven solutions can become complex and unwieldy as requirements evolve. The author criticizes the overselling of DDD in the community and advocates for a more balanced approach, suggesting that complex checks are often better implemented directly in Clojure rather than through a data-driven framework.",
+          "url": "https://grishaev.me/en/ddd-lie?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "grishaev.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-21:a10",
+          "order": 1,
+          "title": "MAKE REAL STARTER",
+          "summary": "Make Real is built with tldraw, a React library for creating whiteboards and drawings on an infinite canvas. It allows users to draw a UI mockup and use GPT-4 to turn the image into an HTML file.",
+          "url": "https://github.com/tldraw/make-real-starter?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a11",
+          "order": 2,
+          "title": "RIVER",
+          "summary": "River is a robust high-performance job processing system for Go and Postgres. It enqueues jobs transactionally with other database changes, resulting in whole classes of distributed systems problems being avoided. Jobs that are enqueued will be guaranteed only if their corresponding transaction successfully commits. Conversely, if a job’s transaction is rolled back, then that job will be removed. These jobs remain invisible and unavailable for work until the transaction is fully committed.",
+          "url": "https://github.com/riverqueue/river?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a12",
+          "order": 3,
+          "title": "REACT JOYRIDE",
+          "summary": "React Joyride is a tool that lets you create guided tours of your React applications. It uses react-floater for styling and positioning and it gives you the capability to use your own components.",
+          "url": "https://github.com/gilbarbara/react-joyride?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-21:a13",
+          "order": 1,
+          "title": "THE STATE OF THE DEVELOPER ECOSYSTEM",
+          "summary": "This report was created with the feedback and insights of 26,348 developers from around the world. It covers topics like programming languages, tools, and AI, touching a wide variety of disciplines including web development. For example, Rust is becoming more popular, while Scala is one of the highest-paid languages.",
+          "url": "https://www.jetbrains.com/lp/devecosystem-2023/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "jetbrains.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a14",
+          "order": 2,
+          "title": "A SHORT HISTORY OF OPENAI",
+          "summary": "Sam Altman was removed as CEO of OpenAI on Friday, with exact reasons unknown. OpenAI, founded in 2015 as a non-profit by Altman and others, made significant strides in AI research, particularly in deep learning and reinforcement learning. In 2019, OpenAI transitioned to a capped-profit model to combine the aspects of for-profit and non-profit entities, leading to a complex corporate structure. The recent years saw the release of influential AI models like GPT-3 and DALL-E and the successful launch of ChatGPT.",
+          "url": "https://open.substack.com/pub/chamath/p/a-short-history-of-openai?r=2bjtip&utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-11-21:a15",
+          "order": 1,
+          "title": "LEARN PERFORMANCE",
+          "summary": "A free course by Google on web performance. It covers key web performance concepts and techniques for improving performance, like code splitting, lazy loading, and optimizing images, videos, and fonts.",
+          "url": "https://web.dev/learn/performance?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "web.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a16",
+          "order": 2,
+          "title": "CSS NESTING IS HERE",
+          "summary": "CSS nesting, where one style rule can be nested inside another, is now native to CSS.",
+          "url": "https://css-irl.info/css-nesting-is-here/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "css-irl.info",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a17",
+          "order": 3,
+          "title": "BAD STRATEGY, AI MEETINGS, AND TECH DEBT",
+          "summary": "This article provides thoughts on what bad strategy looks like, AI tools for meetings, and how tech debt impacts companies at different stages. Bad strategies are often fluffy, mistaken as goals, and not focused on specific problems. Tech debt happens at every stage but can be leveraged better the earlier you are and becomes a drift as you scale.",
+          "url": "https://refactoring.fm/p/bad-strategy-ai-meetings-and-tech?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "refactoring.fm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-11-21:a18",
+          "order": 4,
+          "title": "PRINCIPLES OF FUNCTIONAL PROGRAMMING",
+          "summary": "Functional programming is a declarative programming style that uses functions and expressions to create computer programs with the goal of clear code. Principles of Functional Programming is a free course by Carnegie Mellon that was taught to computer science students in the summer of 2023.",
+          "url": "https://brandonspark.github.io/150/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "brandonspark.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

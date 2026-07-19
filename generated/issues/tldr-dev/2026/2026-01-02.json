@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-01-02",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-01-02",
+  "source_path": "TLDR Dev/article_02-01-2026.md",
+  "source_content_hash": "sha256:b8ba3fe6bd224432cddfd1a7f886f728829500c2eb12e49488b333b44fe8623e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-01-02",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-02:a04",
+          "order": 1,
+          "title": "WEBASSEMBLY AS A PYTHON EXTENSION PLATFORM",
+          "summary": "WebAssembly (Wasm) is becoming a practical extension platform for Python, allowing developers to write high-performance or specialized code in other languages and distribute it without requiring native toolchains. Implementing Wasm extensions requires careful attention to memory management, correctly handling Wasm's unsigned pointers, and working around certain API quirks like the `wasmtime` store's instantiation limitations. Through examples like optimizing Python hotspots and embedding a cryptography library, the author shows Wasm's potential for improving Python application performance.",
+          "url": "https://nullprogram.com/blog/2026/01/01/?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "nullprogram.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a05",
+          "order": 2,
+          "title": "PYTHON NUMBERS EVERY PROGRAMMER SHOULD KNOW",
+          "summary": "This is an extensive benchmark of Python's performance and memory usage for various operations. It goes over the latency and memory consumption of fundamental Python constructs, collections, I/O, web frameworks, databases, and asynchronous processes. The data was collected on a specific system with Python 3.14.2, and the source code for benchmarks is openly available.",
+          "url": "https://mkennedy.codes/posts/python-numbers-every-programmer-should-know/?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "mkennedy.codes",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-02:a06",
+          "order": 1,
+          "title": "10 PRIORITIZATION TRAPS",
+          "summary": "In fast-paced startup environments, prioritization is a constant struggle. Rather than making perfect decisions, teams should focus on identifying and filtering out common pitfalls to make marginally better choices and move forward. The article goes over various anti-patterns, such as getting stuck in urgent but low-value tasks, over-refining work, failing to fully commit to critical projects, and neglecting long-term opportunities or systemic issues.",
+          "url": "https://cutlefish.substack.com/p/tbm-399-10-prioritization-traps?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "cutlefish.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a07",
+          "order": 2,
+          "title": "BESPOKE SOFTWARE IS THE FUTURE",
+          "summary": "Generalized, off-the-shelf software solutions often create unnecessary complexity and \"leakiness\" by enforcing broad abstractions for features most users don't need. Instead, the future is bespoke, custom-tailored software, now that LLMs make the creation of software much easier. This means that internal tooling becomes better and more personalized for the company itself.",
+          "url": "https://fzakaria.com/2026/01/01/bespoke-software-is-the-future?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "fzakaria.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a08",
+          "order": 3,
+          "title": "THE NEXT THING WILL NOT BE BIG",
+          "summary": "The era of constantly seeking \"The Next Big Thing\" in technology may be concluding as core innovations mature and markets saturate. Historically, the 20th and early 21st centuries saw an anomalous pace of technological change, but physical and economic limits are now being reached. Consequently, the ongoing expectation for another massive, industry-reshaping technology like AI might be misguided, as future developments will be more incremental.",
+          "url": "https://blog.glyph.im/2026/01/the-next-thing-will-not-be-big.html?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.glyph.im",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-02:a09",
+          "order": 1,
+          "title": "WELCOME TO GAS TOWN",
+          "summary": "\"Gas Town” is a new AI orchestrator designed to manage and coordinate 20-30 coding agents (like Claude Code) simultaneously. It operates on a \"Molecular Expression of Work\" (MEOW) stack, using Git-backed \"Beads\" to define persistent, composable workflows called \"molecules\" that agents execute autonomously via the \"Gas Town Universal Propulsion Principle\" (GUPP). Gas Town features a sophisticated system of worker roles and patrols, similar to Kubernetes for agents, to ensure continuous workflow completion even with unpredictable AI behaviors.",
+          "url": "https://links.tldrnewsletter.com/s6tiyg",
+          "reading_time_minutes": 34,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a10",
+          "order": 2,
+          "title": "OPENWORKERS",
+          "summary": "OpenWorkers is an open-source runtime that allows devs to self-host Cloudflare Workers-compatible JavaScript in V8 isolates. It provides bindings for various services like KV storage, PostgreSQL, and S3, alongside common Web APIs, all within a sandboxed environment with resource limits and cron scheduling.",
+          "url": "https://openworkers.com/introducing-openworkers?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "openworkers.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-02:a11",
+          "order": 1,
+          "title": "SOFTWARE TAKETH AWAY FASTER THAN HARDWARE GIVETH: WHY C++ PROGRAMMERS KEEP GROWING FAST DESPITE COMPETITION, SAFETY, AND AI",
+          "summary": "Despite competition, C++ and Rust are the fastest-growing major programming languages due to the principle that software demands consistently outstrip hardware capabilities, driving a constant need for efficient performance. This demand is increased even more by critical computing constraints like power and chip supply, making languages prioritizing \"performance per watt\" even more important.",
+          "url": "https://herbsutter.com/2025/12/30/software-taketh-away-faster-than-hardware-giveth-why-c-programmers-keep-growing-fast-despite-competition-safety-and-ai/?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "herbsutter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a12",
+          "order": 2,
+          "title": "USING ALTERNATIVE BROWSER ENGINES IN JAPAN",
+          "summary": "Apple's iOS 26.2 and later now allows alternative browser engines for users in Japan, applicable to both dedicated full browser apps and in-app browsing experiences using an embedded engine. Developers must obtain specific entitlements and meet certain criteria due to the high security and privacy risks associated with browser engines, which handle untrusted content and sensitive user data. Requirements cover functional baselines, security practices like memory safety and timely vulnerability fixes, and strict privacy standards such as blocking cross-site cookies by default.",
+          "url": "https://developer.apple.com/support/alternative-browser-engines-jp/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "developer.apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-01-02:a13",
+          "order": 1,
+          "title": "BUILDING INTERNAL AGENTS",
+          "summary": "This article goes over Imprint's journey in building internal AI agents, covering technical challenges like skill support, context management, triggers, and more, serving as a practical learning guide for others.",
+          "url": "https://lethain.com/agents-series/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "lethain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a14",
+          "order": 2,
+          "title": "I'M BRAVE ENOUGH TO SAY IT: LINUX IS GOOD NOW, AND IF YOU WANT TO FEEL LIKE YOU ACTUALLY OWN YOUR PC, MAKE 2026 THE YEAR OF LINUX ON (YOUR) DESKTOP",
+          "summary": "Linux is now good and user-friendly, which has become increasingly important in the face of Windows' more intrusive features being introduced.",
+          "url": "https://www.pcgamer.com/software/linux/im-brave-enough-to-say-it-linux-is-good-now-and-if-you-want-to-feel-like-you-actually-own-your-pc-make-2026-the-year-of-linux-on-your-desktop/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "pcgamer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a15",
+          "order": 3,
+          "title": "I WAS WRONG ABOUT TYPESCRIPT: PART 1",
+          "summary": "This dev, accustomed to strict type systems like Rust's, found TypeScript's default lack of strictness frustrating, along with the problematic `any` type and hidden runtime errors.",
+          "url": "https://chefama.blog/blog/posts/i-was-wrong-about-typescript-1?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "chefama.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-01-02:a16",
+          "order": 4,
+          "title": "SLOWING DOWN AI ON PURPOSE",
+          "summary": "A deliberate workflow where AI acts as a design partner, focused on in-depth analysis and shared understanding through a living document before generating any code, leads to much better software in the long run.",
+          "url": "https://danielabaron.me/blog/slowing-down-ai-on-purpose/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "danielabaron.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

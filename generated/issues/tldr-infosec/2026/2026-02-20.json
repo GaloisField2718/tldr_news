@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-20",
+  "source_path": "TLDR InfoSec/article_20-02-2026.md",
+  "source_content_hash": "sha256:9484cb71713d4fe39a0af17e2e33c3c395b42b1ecddc7f242b04c96cb73ad40d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a04",
+          "order": 1,
+          "title": "DRATA",
+          "summary": "Compliance doesn't end when you get your SOC 2 certificate. Security reviews, audits, and vendor questionnaires demand constant attention -- and leave GRC teams too overwhelmed to actually think about security strategy.",
+          "url": "https://drata.com/c/demo/?utm_source=TLDR_infosec&utm_medium=display&utm_campaign=20260220_drata_for_startups_DG_all_ALL",
+          "reading_time_minutes": null,
+          "source_domain": "drata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a04",
+          "order": 2,
+          "title": "⚡️ Automate and accelerate trust with Drata ⚡️",
+          "summary": "",
+          "url": "https://drata.com/c/demo/?utm_source=TLDR_infosec&utm_medium=display&utm_campaign=20260220_drata_for_startups_DG_all_ALL",
+          "reading_time_minutes": null,
+          "source_domain": "drata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a05",
+          "order": 1,
+          "title": "ALMOST IMPOSSIBLE: JAVA DESERIALIZATION THROUGH BROKEN CRYPTO IN OPENTEXT DIRECTORY SERVICES",
+          "summary": "Searchlight Cyber (Assetnote) discovered an unauthenticated Java deserialization vulnerability in OpenText Directory Services (OTDS) exploitable in its default configuration, stemming from a flawed HMAC signature verification where attacker-controlled length fields allowed truncating the signed message to begin at an injected payload. Exploitation required building a custom Deflate compressor with tailored Huffman codes to produce output restricted to valid modified UTF-8 bytes (0x01-0x7F) while remaining incompressible by zlib, enabling the payload to survive a double-compression pipeline intact. Organizations running OTDS should patch immediately, as a compromise could affect all integrated OpenText applications that rely on it for authentication.",
+          "url": "https://slcyber.io/research-center/almost-impossible-java-deserialization-through-broken-crypto-in-opentext-directory-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "slcyber.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a06",
+          "order": 2,
+          "title": "FRENCH GOVERNMENT SAYS 1.2 MILLION BANK ACCOUNTS EXPOSED IN BREACH",
+          "summary": "France's Ministry of Economy disclosed that attackers used stolen official credentials to access FICOBA, the national bank account registry, exposing data on 1.2 million accounts, including IBANs, names, addresses, and some tax IDs. Operational banking access and balances were not exposed, but authorities warn of heightened phishing and scams.",
+          "url": "https://links.tldrnewsletter.com/MO8mCY",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a07",
+          "order": 3,
+          "title": "CRITICAL INFRA HONEYWELL CCTVS VULNERABLE TO AUTH BYPASS FLAW",
+          "summary": "CISA warned of CVE-2026-1670 (CVSS 9.8), a missing authentication flaw in multiple Honeywell CCTV models that allows unauthenticated attackers to remotely change the password recovery email address, enabling full account takeover and unauthorized access to camera feeds. Affected models include the I-HIB2PI-UL and several SMB NDAA-compliant PTZ cameras deployed in commercial and critical infrastructure environments. Organizations should isolate these devices behind firewalls, restrict network exposure, and contact Honeywell for patch guidance.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-infra-honeywell-cctvs-vulnerable-to-auth-bypass-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a08",
+          "order": 1,
+          "title": "RED VULNS RISING: EXAMINING CHINESE NATIONAL VULNERABILITY DATABASES",
+          "summary": "Bitsight analyzed China's two national vulnerability databases—CNNVD, overseen by the Ministry of State Security, and CNVD, operated by CNCERT—and found that while they largely mirror CVE publication, approximately 1,400 entries were published in Chinese databases before becoming public in CVE, often by several months. China's 2021 RMSV regulations tightened domestic vulnerability disclosure controls, including mandatory 48-hour reporting to the government and prohibitions on sharing PoC exploits. There was a notable decline in non-CVE vulnerability publications from CNVD after the regulation, although CNNVD has recently seen a resurgence. Security leaders should account for potential blind spots in Western vulnerability ecosystems, as some Chinese database entries lack CVE equivalents and may represent vulnerabilities unknown to Western defenders.",
+          "url": "https://www.bitsight.com/blog/chinese-vulnerability-database-analysis-cnvd-cnnvd?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "bitsight.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a09",
+          "order": 2,
+          "title": "CLINEJECTION — COMPROMISING CLINE'S PRODUCTION RELEASES JUST BY PROMPTING AN ISSUE TRIAGER",
+          "summary": "A prompt-injected GitHub issue title could drive Cline's Claude-based triage bot to execute arbitrary commands in CI, then use GitHub Actions cache poisoning to hijack nightly build workflows and steal VS Code Marketplace, OpenVSX, and npm publishing tokens. This chain could have enabled a massive supply-chain attack on millions of developers via malicious extension or CLI updates.",
+          "url": "https://adnanthekhan.com/posts/clinejection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "adnanthekhan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a10",
+          "order": 3,
+          "title": "DECRYPTING MULTIDESK PASSWORDS",
+          "summary": "MultiDesk RDP client's password encryption was reverse-engineered, revealing RC4 encryption with per-user keys stored in the HKEY_CURRENT_USER\\Software\\MultiDesk\\key registry hive across both legacy (v3.16) and modern (v14.0) versions. Version 3.16 used base64-encoded RC4 ciphertext with rdtsc-generated keys, while version 5+ introduced a salted key derivation scheme using CryptGenRandom, but remained fundamentally RC4-based. Pentesters should add MultiDesk.xml, MultiDesk.multidesk, and the associated registry keys to their internal recon checklists, as credential recovery is trivial with local admin or user-level access to the target machine.",
+          "url": "https://blog.paradoxis.nl/decrypting-multidesk-passwords-58af8ad274b3?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.paradoxis.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a11",
+          "order": 1,
+          "title": "THE MIMIKATZ MISSING MANUAL",
+          "summary": "Carlos Perez (DarkOperator) has publicly released \"The Mimikatz Missing Manual,\" a comprehensive guide originally developed as private training material with direct input from Mimikatz author Benjamin Delpy, covering Windows identity, Kerberos, and PKI research. The manual spans seven parts, including LSASS credential extraction, Kerberos ticket forgery, DCSync/DCShadow persistence, and DPAPI abuse, with guidance tailored for red teams, blue teams, and security researchers. Available as a GitHub Pages site, it emphasizes not just command references, but the underlying Windows Security Authority internals being manipulated.",
+          "url": "https://github.com/darkoperator/mimikatz-missing-manual?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a12",
+          "order": 2,
+          "title": "VENICE SECURITY (PRODUCT LAUNCH)",
+          "summary": "Venice Security provides an adaptive privileged access management platform that discovers identities and entitlements across cloud, on‑prem, and SaaS, grants just‑in‑time access only when needed, and automatically revokes standing privileges to reduce enterprise risk.",
+          "url": "https://www.venice.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "venice.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a13",
+          "order": 3,
+          "title": "DATA-SHIELD IPV4 BLOCKLIST",
+          "summary": "The Data-Shield IPv4 Blocklist Community provides an official, curated registry of IPv4 addresses identified as malicious. Updated continuously, this resource offers vital threat intelligence to bolster your Firewall and WAF instances, delivering a robust, additional layer of security for your infrastructure.",
+          "url": "https://github.com/duggytuxy/Data-Shield_IPv4_Blocklist?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a14",
+          "order": 1,
+          "title": "CITIZEN LAB FINDS CELLEBRITE TOOL USED ON KENYAN ACTIVIST'S PHONE IN POLICE CUSTODY",
+          "summary": "Citizen Lab confirmed with high confidence that Cellebrite forensic extraction tools were used on Kenyan pro-democracy activist Boniface Mwangi's Samsung phone while in police custody following his July 2025 arrest, potentially enabling full data extraction including messages, passwords, and financial information. The findings follow a similar report of Cellebrite misuse in Jordan and coincide with Amnesty International's discovery of Intellexa's Predator spyware targeting an Angolan journalist via WhatsApp, marking the first confirmed Predator case against civil society in Angola. The cases highlight the growing global abuse of commercial surveillance tools against activists and journalists, with Predator's sophisticated anti-forensics capabilities including crash monitoring, recording indicator suppression, and granular operator control over failed deployments.",
+          "url": "https://thehackernews.com/2026/02/citizen-lab-finds-cellebrite-tool-used.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a15",
+          "order": 2,
+          "title": "INTERPOL OPERATION RED CARD 2.0 ARRESTS 651 IN AFRICAN CYBERCRIME CRACKDOWN",
+          "summary": "An INTERPOL-led push across 16 African countries led to 651 arrests, $4.3 million recovered, and disruption of online scams causing over $45 million in losses. Authorities dismantled high-yield investment, mobile money, and fake loan schemes, seizing 2,341 devices and taking down 1,442 malicious IPs and domains, with victims identified both in Africa and abroad.",
+          "url": "https://thehackernews.com/2026/02/interpol-operation-red-card-20-arrests.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a16",
+          "order": 3,
+          "title": "KEEPING GOOGLE PLAY & ANDROID APP ECOSYSTEMS SAFE IN 2025",
+          "summary": "Google reported blocking over 1.75 million policy-violating apps and banning 80,000 malicious developer accounts from Google Play in 2025, while Play Protect's real-time scanning identified more than 27 million new malicious apps from outside the store across 350 billion daily scans. Enhanced fraud protection expanded to 185 markets covering 2.8 billion devices, blocking 266 million risky sideloaded installation attempts. New defenses included in-call scam protection preventing users from being socially engineered into disabling Play Protect, and Android 16's one-line-of-code tapjacking protection for sensitive app screens.",
+          "url": "http://security.googleblog.com/2026/02/keeping-google-play-android-app-ecosystem-safe-2025.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-20:a17",
+          "order": 1,
+          "title": "FIREBASE MISCONFIGURATION EXPOSES 300M MESSAGES FROM CHAT & ASK AI USERS",
+          "summary": "A misconfigured Firebase database exposed approximately 300 million chat messages from 25 million users of Codeway's Chat & Ask AI app.",
+          "url": "https://hackread.com/firebase-misconfiguration-chat-ask-ai-users-expose/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a18",
+          "order": 2,
+          "title": "GERMANY'S NATIONAL RAIL OPERATOR DEUTSCHE BAHN HIT BY A DDOS ATTACK",
+          "summary": "A large-scale DDoS attack hit Deutsche Bahn on 17–18 February, knocking out bahn.de, the DB Navigator app, and core IT systems.",
+          "url": "https://securityaffairs.com/188254/breaking-news/germanys-national-rail-operator-deutsche-bahn-hit-by-a-ddos-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-20:a19",
+          "order": 3,
+          "title": "STATE DEPT. OFFICIAL SAYS POST-QUANTUM TRANSITION PLANS WILL OUTLIVE CURRENT LEADERSHIP",
+          "summary": "State Department official Gharun Lacy urged public and private sectors to coordinate post-quantum cryptography transitions as a collective ecosystem effort, warning that data harvesting threats from nation-state adversaries like China will outlive leadership cycles and require sustained cross-generational commitment toward the 2035 migration target.",
+          "url": "https://cyberscoop.com/post-quantum-state-department-transition-plans-outlive-leadership-cycles/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

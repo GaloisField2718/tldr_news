@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-04-23",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-04-23",
+  "source_path": "TLDR Dev/article_23-04-2026.md",
+  "source_content_hash": "sha256:06c92a67515c451617cc6fac7488c88cb6c8b0185bf1c881fb7adda1d51b13ed",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-04-23",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-23:a04",
+          "order": 1,
+          "title": "THE INVISIBLE ENGINEERING BEHIND LAMBDA'S NETWORK",
+          "summary": "The AWS Lambda networking team reduced VPC cold start latency from 150ms to 200µs by implementing eBPF for Geneve tunnel creation. They also achieved a 20x increase in capacity by converging network topologies and simplifying network rules.",
+          "url": "https://www.allthingsdistributed.com/2026/04/the-invisible-engineering-behind-lambdas-network.html?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "allthingsdistributed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a05",
+          "order": 2,
+          "title": "ALL YOUR AGENTS ARE GOING ASYNC",
+          "summary": "AI agents are transitioning from synchronous chat to autonomous background processes, exposing the limitations of traditional HTTP models in handling long-lived tasks and real-time engagement. For seamless interaction, a complete solution must combine durable agent state with bi-directional transport mechanisms.",
+          "url": "https://zknill.io/posts/all-your-agents-are-going-async/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "zknill.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a06",
+          "order": 3,
+          "title": "CODING MODELS ARE DOING TOO MUCH",
+          "summary": "AI coding tools often \"over-edit\" by unnecessarily rewriting code during bug fixes, a tendency that frontier models exhibit by default but can be reduced through explicit prompting. Research shows that Reinforcement Learning effectively trains these models to be minimal, faithful editors without compromising their general coding performance.",
+          "url": "https://nrehiew.github.io/blog/minimal_editing/?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "nrehiew.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-23:a07",
+          "order": 1,
+          "title": "TECHNICAL, COGNITIVE, AND INTENT DEBT",
+          "summary": "As AI-driven code generation becomes cheaper, software engineering will shift toward comprehensive verification and the design of meaningful abstractions that AI cannot replicate. This evolution requires humans to move from writing code to defining quality and managing the cognitive debt inherent in complex, automated systems.",
+          "url": "https://martinfowler.com/fragments/2026-04-02.html?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a08",
+          "order": 2,
+          "title": "SEVEN BEST PRACTICES FOR WRITING HIGH-QUALITY PROMPTS",
+          "summary": "High-quality prompts must be specific about the deliverable, use positive instructions, set a quality bar, attach real specifications instead of descriptions, utilize conversation memory, and treat approval prompts as a review step. Treat AI as a capable new teammate who has deep technical knowledge but lacks institutional context.",
+          "url": "https://links.tldrnewsletter.com/n4w46j",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-23:a09",
+          "order": 1,
+          "title": "ARGENT",
+          "summary": "Argent is an agentic toolkit that enables AI assistants to autonomously control, profile, and debug iOS Simulators, with native support for React Native. The toolkit integrates with various code editors and prioritizes user privacy by operating locally without data collection.",
+          "url": "https://github.com/software-mansion/argent?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a10",
+          "order": 2,
+          "title": "BROCCOLI",
+          "summary": "Broccoli is an open-source tool that automates engineering workflows by converting Linear tickets into GitHub Pull Requests using AI models like Claude and Codex. It runs entirely within a user's Google Cloud project for data privacy while providing automated planning, implementation, and code reviews.",
+          "url": "https://github.com/besimple-oss/broccoli?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-23:a11",
+          "order": 1,
+          "title": "CONTEXT IS SOFTWARE, WEIGHTS ARE HARDWARE",
+          "summary": "While context acts as temporary \"software\" for in-context learning, weight updates permanently modify a model's fundamental computational capabilities and internal representations. Effective continual learning requires both increasing context windows for working memory and persistent weight-space learning for accumulated, fundamental knowledge.",
+          "url": "https://www.aravindjayendran.com/writing/context-is-not-learning?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "aravindjayendran.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a12",
+          "order": 2,
+          "title": "HOW MARGELO HELPED DISCORD IMPROVE REACT NATIVE'S NEW ARCHITECTURE PERFORMANCE",
+          "summary": "Discord's janky Android animations on React Native's New Architecture came from Reanimated cloning hundreds of Shadow Tree nodes per frame. The fix was to sync settled animations back to React so those nodes could be evicted, which then made it safe to restore a synchronous fast path for non-layout props. The changes cut Discord's jank frame rate by 26% and are shipping upstream as a “shared animation backend” in React Native 0.85.",
+          "url": "https://blog.margelo.com/margelo-discord-react-native-performance?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "blog.margelo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a13",
+          "order": 3,
+          "title": "AI-GENERATED UI IS INACCESSIBLE BY DEFAULT",
+          "summary": "AI tools produce React components that look right but are invisible to screen readers. They produce div soup with no roles, keyboard support, or ARIA state, because models optimize for visual fidelity while ignoring the accessibility tree. The fix is a layered defense: prompt constraints in .cursorrules, linting as errors in CI, runtime tests, Playwright audits, and headless libraries like Radix or React Aria for interactive primitives.",
+          "url": "https://frontendmasters.com/blog/ai-generated-ui-is-inaccessible-by-default/?utm_source=tldrdev",
+          "reading_time_minutes": 21,
+          "source_domain": "frontendmasters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-23:a14",
+          "order": 1,
+          "title": "KEEPING THE CURSOR APP STABLE",
+          "summary": "The Cursor team improved app stability by implementing comprehensive crash detection systems to identify and resolve memory-related issues, resulting in an 80% reduction in out-of-memory crashes.",
+          "url": "https://cursor.com/blog/app-stability?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "cursor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a15",
+          "order": 2,
+          "title": "WHY I DON'T CHAIN EVERYTHING IN JAVASCRIPT ANYMORE",
+          "summary": "While short JavaScript method chains are acceptable, chaining complex operations sacrifices readability, debuggability, and efficiency.",
+          "url": "https://allthingssmitty.com/2026/04/20/why-i-dont-chain-everything-in-javascript-anymore/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "allthingssmitty.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a16",
+          "order": 3,
+          "title": "WHAT ASYNC PROMISED AND WHAT IT DELIVERED",
+          "summary": "The evolution of asynchronous programming, from callbacks to promises to async/await, has consistently addressed immediate problems like resource management and ergonomics, but each iteration introduced new, systemic costs such as function coloring and the sequential trap.",
+          "url": "https://causality.blog/essays/what-async-promised/?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "causality.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-23:a17",
+          "order": 4,
+          "title": "TOLARIA",
+          "summary": "Tolaria is a free, open-source note-taking application designed for the AI era.",
+          "url": "https://tolaria.md/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "tolaria.md",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

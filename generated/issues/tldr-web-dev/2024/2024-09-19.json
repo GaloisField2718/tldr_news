@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-09-19",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-09-19",
+  "source_path": "TLDR Web Dev/article_19-09-2024.md",
+  "source_content_hash": "sha256:29bdcda4f4d5cfb9122e765bddc8130e11e8e639a3d1958b0956cd250dff80a8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-09-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a04",
+          "order": 1,
+          "title": "UNNECESSARY CALLS",
+          "summary": "With 10 billion page views per month and 8 million daily users (as of March 2023), unused features have a price - whether that's cloud resources or carbon emissions.",
+          "url": "https://adevinta.com/techblog/leveraging-a-b-testing-to-soft-disable-unused-features-and-reduce-unnecessary-calls/?utm_medium=newsletter&utm_source=tldr-webdev&utm_campaign=20240919",
+          "reading_time_minutes": null,
+          "source_domain": "adevinta.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a04",
+          "order": 2,
+          "title": "implementation and the results. Read the article",
+          "summary": "",
+          "url": "https://adevinta.com/techblog/leveraging-a-b-testing-to-soft-disable-unused-features-and-reduce-unnecessary-calls/?utm_medium=newsletter&utm_source=tldr-webdev&utm_campaign=20240919",
+          "reading_time_minutes": null,
+          "source_domain": "adevinta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a05",
+          "order": 1,
+          "title": "HOW DOES SESSION REPLAY WORK?",
+          "summary": "Session replay provides qualitative views of user interactions that have already happened. It works by reconstructing the changes made to the DOM rather than literally recording the screen. This involves re-applying the CSS to the HTML and using open-source software like rrweb to record and replay these DOM changes.",
+          "url": "https://read.technically.dev/p/how-does-session-replay-work?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "read.technically.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a06",
+          "order": 2,
+          "title": "A MILESTONE FOR TYPESCRIPT PERFORMANCE IN TANSTACK ROUTER",
+          "summary": "TanStack Router, a type-safe routing library for TypeScript, made performance improvements to address a bottleneck in TypeScript's language service when handling large route trees. The issue stemmed from the language service having to infer types for the entire route tree, even when only a specific route was referenced. To solve this, TanStack Router introduced a new approach for file-based routing where the route tree is explicitly declared instead of inferred, allowing the language service to infer types only for the relevant route.",
+          "url": "https://tanstack.com/blog/tanstack-router-typescript-performance?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a07",
+          "order": 3,
+          "title": "INTERNING IN GO",
+          "summary": "Go's new `unique` package can improve memory usage by interning objects, specifically strings, to avoid storing duplicate copies. Interning, by reusing identical objects, reduces memory usage compared to other approaches. This post illustrates this through a program that processes a large text file, identifying all words starting with \"B\" and comparing the memory usage of different methods: storing references, cloning strings, and using the `unique` package.",
+          "url": "https://links.tldrnewsletter.com/tAKKDO",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a08",
+          "order": 1,
+          "title": "REMIX'S CONCURRENT SUBMISSIONS ARE FUNDAMENTALLY FLAWED (WITHOUT CAUSAL ORDERING)",
+          "summary": "Remix's approach to concurrent submissions, using a \"submission and revalidation\" pattern, is fundamentally flawed. It leads to unnecessary latency and introduces race conditions where the UI can display outdated information, even after users have submitted changes. There are two solutions: Causal ordering, which makes sure requests are processed in the order they depend on each other, and Persistence, where a connection is maintained between the client and server to guarantee ordered processing.",
+          "url": "https://dashbit.co/blog/remix-concurrent-submissions-flawed?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "dashbit.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a09",
+          "order": 2,
+          "title": "THE HIDDEN COSTS OF OVER-COLLABORATION",
+          "summary": "Over-reliance on collaboration has hidden costs. Excessive collaboration can reduce overall output due to time spent in meetings and can create expensive interactions between teams that are not always necessary. It can also hide deeper-rooted problems, like inefficient workflows and unclear team boundaries.",
+          "url": "https://malcolmbastien.com/2024/09/16/the-hidden-costs-of-over-collaboration/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "malcolmbastien.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a10",
+          "order": 3,
+          "title": "STOP LEARNING TO GIVE FEEDBACK. LEARN TO RECEIVE IT",
+          "summary": "Receiving feedback well means approaching feedback with curiosity and seeking clarification when possible. It's also important to avoid immediate counterarguments when receiving feedback and instead create a safe environment for the feedback giver to be honest with you.",
+          "url": "https://newsletter.weskao.com/p/how-to-receive-feedback?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "newsletter.weskao.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a11",
+          "order": 1,
+          "title": "DAVID NEAL OF REVERENTGEEK TO HEADLINE CAMUNDACON IN NYC",
+          "summary": "The CamundaCon Process Orchestration Conference [11] is coming to New York City (and streamed live online)! On the agenda: A keynote by Microsoft MVP and Author David Neal (ReverentGeek), hands-on workshops, talks by process automation experts at top-tier companies, and many surprises. Buy a ticket to attend in-person or register",
+          "url": "https://newyork.camundacon.com/page/3899887/tickets?utm_medium=paid_leadgen&utm_source=tldr&utm_campaign=CamundaCon.NA.24Q4.Oct",
+          "reading_time_minutes": null,
+          "source_domain": "newyork.camundacon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a11",
+          "order": 2,
+          "title": "virtually for free.",
+          "summary": "",
+          "url": "https://newyork.camundacon.com/page/3899887/tickets?utm_medium=paid_leadgen&utm_source=tldr&utm_campaign=CamundaCon.NA.24Q4.Oct",
+          "reading_time_minutes": null,
+          "source_domain": "newyork.camundacon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a12",
+          "order": 3,
+          "title": "NITRO",
+          "summary": "Nitro is a framework for developing high-performance native modules in React Native. It achieves this through hybrid objects, which are native objects implemented in C++, Swift, or Kotlin that provide direct access to native functionalities. Nitro uses a lightweight layer built on JSI and bridges directly to Swift and Kotlin while still prioritizing type safety and null-safety by using a code-generator to make sure that TypeScript specifications are the single source of truth for both JavaScript and native code.",
+          "url": "https://mrousavy.github.io/nitro/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "mrousavy.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a13",
+          "order": 4,
+          "title": "ELECTRICO",
+          "summary": "Electrico is a lightweight, cross-platform alternative to Electron that uses Rust and Javascript to emulate Electron and Node APIs within embedded WebViews. This lets users run Electron apps without bundling Node.js and Chromium.",
+          "url": "https://github.com/thomastschurtschenthaler/electrico?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a14",
+          "order": 5,
+          "title": "FARMHASH",
+          "summary": "This is a Node.js implementation of FarmHash, Google's family of high performance hash functions. It offers various hash and fingerprint functions with different bit lengths and seeding options.",
+          "url": "https://github.com/lovell/farmhash?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a15",
+          "order": 1,
+          "title": "WHY WORDFREQ WILL NOT BE UPDATED",
+          "summary": "wordfreq provided snapshots of language usage up to 2021 - it will not be updated anymore due to several reasons. First, the rise of generative AI has contaminated online data with AI-generated text, making it difficult to accurately represent human language usage. Second, previously free sources of data, like Twitter and Reddit, have become inaccessible or expensive, making it impractical to collect new data. Finally, its developer has become disillusioned with the current state of natural language processing.",
+          "url": "https://github.com/rspeer/wordfreq/blob/master/SUNSET.md?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a16",
+          "order": 2,
+          "title": "A GENTLE GUIDE TO SELF-HOSTING YOUR SOFTWARE",
+          "summary": "This is a guide for beginners on self-hosting software and using Uberspace as a platform that emphasizes the software aspect rather than complex hardware setup. The author goes through the process of self-hosting two example apps.",
+          "url": "https://knhash.in/gentle-guide-to-self-hosting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "knhash.in",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-19:a17",
+          "order": 1,
+          "title": "REACT 19 CHEAT SHEET",
+          "summary": "A downloadable cheat sheet for all of the new features in React 19.",
+          "url": "https://www.epicreact.dev/react-19-cheatsheet?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "epicreact.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a18",
+          "order": 2,
+          "title": "GITHUB TRICK TO FIND THE COMMIT THAT DELETED A FILE",
+          "summary": "You can use git log -- /path/to/deleted/file to find the commit that deleted a file in your local repo, and you can do the same on a hosted repo with https://github.com/⟦user⟧/⟦project⟧/commits/⟦branch⟧/⟦path/to/deleted/file⟧.",
+          "url": "https://devblogs.microsoft.com/oldnewthing/20240909-00/?p=110234&utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a19",
+          "order": 3,
+          "title": "THE EMPIRE OF C++ STRIKES BACK WITH SAFE C++ PROPOSAL",
+          "summary": "A new proposal addresses C++'s memory safety vulnerabilities by introducing features similar to Rust, allowing developers to write safer code without needing to rewrite their projects in a different language.",
+          "url": "https://www.theregister.com/2024/09/16/safe_c_plusplus/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-19:a20",
+          "order": 4,
+          "title": "APPLE MOBILE PROCESSORS ARE NOW MADE IN AMERICA. BY TSMC",
+          "summary": "Apple is the first customer for TSMC's new Arizona chip fabrication facility, producing its A16 mobile processors for the iPhone on American soil.",
+          "url": "https://timculpan.substack.com/p/apple-mobile-processors-are-now-made?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "timculpan.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

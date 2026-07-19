@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-11-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-27",
+  "source_path": "TLDR InfoSec/article_27-11-2025.md",
+  "source_content_hash": "sha256:51c6483f2db30a4bb099a306810d0e824f3d5e4a7ad875eeff5ed3e1e523d3f4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a04",
+          "order": 1,
+          "title": "ATTACK PATHS DON'T TAKE THANKSGIVING OFF",
+          "summary": "Misconfigurations and excessive privileges quietly chain together into routes attackers can use to reach your critical assets — and they aren't taking a Thanksgiving break. ATTACK PATH MANAGEMENT (APM) shows identity risk the way adversaries see it, mapping relationships across identities, systems, and permissions so you can prioritize what truly matters.",
+          "url": "https://specterops.io/wp-content/uploads/sites/3/2025/07/Identity-APM-Maturity-Model_1034-0.pdf?utm_campaign=ContentSyndication_Paid_2025_11_24_TL%3BDR&utm_medium=Paid&utm_source=ContentSyndication&Latest_Campaign=701Uw00000b9aF4",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a07",
+          "order": 1,
+          "title": "RANSOMWARE ATTACK DISRUPTS LOCAL EMERGENCY ALERT SYSTEM ACROSS US",
+          "summary": "A ransomware attack hit the OnSolve CodeRED emergency alert system, affecting local agencies nationwide in the US and leading to a data breach. Hackers accessed user data and encrypted systems, causing some areas to lose emergency notification capabilities. Crisis24, a platform provider, is transitioning agencies to a new system and has advised users to change reused passwords.",
+          "url": "https://www.securityweek.com/ransomware-attack-disrupts-local-emergency-alert-system-across-us/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a08",
+          "order": 2,
+          "title": "HARVARD UNIVERSITY REVEALS DATA BREACH HITTING ALUMNI AND DONORS",
+          "summary": "Harvard University suffered a data breach after a voice phishing attack compromised its Alumni Affairs and Development systems. Personal data like addresses, emails, and phone numbers of alumni, donors, and students were exposed, though financial details and passwords were not affected. Harvard is working with law enforcement. It has warned affected individuals to watch out for phishing attempts.",
+          "url": "https://www.techradar.com/pro/security/harvard-university-reveals-data-breach-hitting-alumni-and-donors?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a09",
+          "order": 3,
+          "title": "CHROME EXTENSION CAUGHT INJECTING HIDDEN SOLANA TRANSFER FEES INTO RAYDIUM SWAPS",
+          "summary": "A malicious Chrome extension called \"Crypto Copilot\" (still available, with 12 installs) silently injects hidden SystemProgram.transfer instructions into Raydium DEX swaps, siphoning 0.0013 SOL minimum or 0.05% of trades over 2.6 SOL to a hardcoded attacker wallet before users sign transactions. The extension uses obfuscation via minification and variable renaming, communicates with a fake backend at crypto-coplilot-dashboard.vercel[.]app, and leverages legitimate services like DexScreener and Helius RPC to appear trustworthy while bypassing Chrome Web Store review. Crypto users should audit all transaction instructions before signing and avoid installing browser extensions that request wallet access. Security teams should monitor for wallet-draining extensions targeting DeFi platforms.",
+          "url": "https://thehackernews.com/2025/11/chrome-extension-caught-injecting.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a10",
+          "order": 1,
+          "title": "A COMPLETE GUIDE TO TRANSPORT LAYER SECURITY (TLS) AUTHENTICATION",
+          "summary": "This comprehensive guide covers TLS authentication fundamentals, including the handshake process, certificate validation chain, and the distinction between server-only authentication and mutual TLS (mTLS) for high-security environments. Key recommendations include enforcing TLS 1.3 (or 1.2 minimum), using forward secrecy cipher suites with ECDHE, storing private keys in HSMs/KMS, and automating certificate lifecycle management via the ACME protocol. For modern architectures, the article emphasizes layering TLS with OAuth 2.0/OIDC for combined machine and user authentication and leveraging service meshes such as Istio for automated mTLS across microservices.",
+          "url": "https://blog.gitguardian.com/a-complete-guide-to-transport-layer-security-tls-authentication/?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a11",
+          "order": 2,
+          "title": "DESKTOP APPLICATION SECURITY STANDARD: INTRODUCING DASVS",
+          "summary": "The Desktop Application Security Verification Standard (DASVS) is a comprehensive framework for addressing the unique security challenges of desktop applications across Windows, macOS, and Linux. Unlike web or mobile apps, desktop applications operate with significant system access, which demands specialized security controls. DASVS aims to provide clear, actionable verification rules and is being extended with guides and automated assessment tools to help organizations strengthen desktop application protection.",
+          "url": "https://links.tldrnewsletter.com/oub4K7",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a12",
+          "order": 3,
+          "title": "ANDROID QUICK SHARE SUPPORT FOR AIRDROP: A SECURE APPROACH TO CROSS-PLATFORM FILE SHARING",
+          "summary": "Google enabled Quick Share interoperability with AirDrop starting with Pixel 10, using Rust for the core communication layer to eliminate memory-safety vulnerabilities in wireless protocol data parsing—a historically common attack surface. The implementation uses direct peer-to-peer connections without server routing. It underwent internal threat modeling plus independent penetration testing by NetSPI, and was validated as \"notably stronger\" than other industry implementations with no information leakage. For cross-platform development, Rust's compile-time memory safety guarantees make it ideal for parsing untrusted data from external sources, and Google's approach demonstrates how memory-safe languages can secure interoperability layers between disparate platforms without sacrificing performance.",
+          "url": "http://security.googleblog.com/2025/11/android-quick-share-support-for-airdrop-security.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a13",
+          "order": 1,
+          "title": "MALEFICENTVM",
+          "summary": "A practice VM designed for learning malware development through CTF-style challenges. Exercises include OS enumeration, shellcode injection into target processes, and IAT hooking techniques.",
+          "url": "https://github.com/winsecurity/MaleficentVM?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a14",
+          "order": 2,
+          "title": "VIJIL (PRODUCT LAUNCH)",
+          "summary": "Vijil helps organizations develop secure, reliable AI agents by providing a platform for testing, hardening, and monitoring agents against risks such as prompt injection. It offers modular agent templates, compliance, and runtime protection for confidential deployments.",
+          "url": "https://www.vijil.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "vijil.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a15",
+          "order": 3,
+          "title": "XSSRECON",
+          "summary": "XSSRecon is a powerful tool designed to help security researchers and penetration testers identify reflected XSS vulnerabilities in web applications. It automates testing URL parameters for the reflection of a test payload and further checks how special characters are handled.",
+          "url": "https://github.com/rix4uni/xssrecon?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a16",
+          "order": 1,
+          "title": "FBI: CYBERCRIMINALS STOLE $262M BY IMPERSONATING BANK SUPPORT TEAMS",
+          "summary": "The FBI reported over 5,100 account takeover complaints since January, with attackers impersonating bank staff via calls, texts, and emails to harvest credentials and MFA/OTP codes, then wiring funds to cryptocurrency wallets. Attackers employed SEO poisoning to push phishing sites mimicking financial institutions to the top of search results. Some used dual-impersonation tactics to claim fraudulent transactions and direct victims to fake law enforcement. Defenders should train users to access banking sites via bookmarks rather than search results, and organizations should monitor for brand impersonation in search ads.",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-cybercriminals-stole-262-million-by-impersonating-bank-support-teams-since-january/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a17",
+          "order": 2,
+          "title": "LIFETIME ACCESS TO AI-FOR-EVIL WORMGPT 4 COSTS JUST $220",
+          "summary": "Malicious AI tools like WormGPT 4 and the free KawaiiGPT are making it easier for cybercriminals to generate malware and phishing messages and to automate parts of attacks. While the code requires some human adjustment to evade detection, these \"Dark LLMs\" significantly lower the barriers to entry for cyberattacks and social engineering.",
+          "url": "https://www.theregister.com/2025/11/25/wormgpt_4_evil_ai_lifetime_cost_220_dollars/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a18",
+          "order": 3,
+          "title": "CISA: SPYWARE AND RATS USED TO TARGET WHATSAPP AND SIGNAL USERS",
+          "summary": "Threat actors are using commercial spyware and remote access trojans to target WhatsApp and Signal users. Attacks involve phishing, malicious QR codes, and impersonated apps. They are focusing on high-value individuals worldwide.",
+          "url": "https://securityaffairs.com/185047/malware/cisa-spyware-and-rats-used-to-target-whatsapp-and-signal-users.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-27:a19",
+          "order": 1,
+          "title": "TOR SWITCHES TO NEW COUNTER GALOIS ONION RELAY ENCRYPTION ALGORITHM",
+          "summary": "Tor has replaced its old encryption algorithm with a new, stronger one called Counter Galois Onion (CGO) to improve user security and privacy.",
+          "url": "https://www.bleepingcomputer.com/news/security/tor-switches-to-new-counter-galois-onion-relay-encryption-algorithm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a20",
+          "order": 2,
+          "title": "MULTIPLE LONDON COUNCILS REPORT DISRUPTION AMID ONGOING CYBERATTACK",
+          "summary": "A cyberattack has forced three London councils, Kensington and Chelsea, Westminster, and Hammersmith & Fulham, to shut down networks and activate emergency plans.",
+          "url": "https://techcrunch.com/2025/11/26/multiple-london-councils-report-disruption-amid-ongoing-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-27:a21",
+          "order": 3,
+          "title": "POPULAR FORGE LIBRARY GETS FIX FOR SIGNATURE VERIFICATION BYPASS FLAW",
+          "summary": "CVE-2025-12816 is a high-severity ASN.1 validation flaw in node-forge versions 1.3.1 and earlier (26M weekly NPM downloads) that allows attackers to craft malformed data.",
+          "url": "https://www.bleepingcomputer.com/news/security/popular-forge-library-gets-fix-for-signature-verification-bypass-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

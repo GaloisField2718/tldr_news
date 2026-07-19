@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-03-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-03-08",
+  "source_path": "TLDR InfoSec/article_08-03-2024.md",
+  "source_content_hash": "sha256:fc954b7d7b1111437df4db7f67311904dc5523f52be2338639432657a2e65d61",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-03-08",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-08:a04",
+          "order": 1,
+          "title": "VMWARE SANDBOX ESCAPE BUGS ARE SO CRITICAL, PATCHES HAVE BEEN RELEASED FOR END-OF-LIFE PRODUCTS",
+          "summary": "VMware is urging customers to patch critical vulnerabilities that allow hackers to escape VMware's sandbox and hypervisor protections across all versions of ESXi, Workstation, Fusion, and Cloud Foundation products. The four flaws, with two rated at a 9.3/10 severity, undermine the products' core purpose of running sensitive operations inside a virtual machine segmented from the host machine.",
+          "url": "https://arstechnica.com/security/2024/03/vmware-issues-patches-for-critical-sandbox-escape-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a05",
+          "order": 2,
+          "title": "APPLE FIXES TWO NEW IOS ZERO-DAYS EXPLOITED IN ATTACKS ON IPHONES",
+          "summary": "Apple has released fixes for two new iOS and iPadOS vulnerabilities. The first vulnerability is in the iOS Kernel and the second is in RTKit. Both vulnerabilities allow attackers with arbitrary kernel read and write permissions to bypass kernel memory permissions.",
+          "url": "https://www.bleepingcomputer.com/news/apple/apple-fixes-two-new-ios-zero-days-exploited-in-attacks-on-iphones/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a06",
+          "order": 3,
+          "title": "WOGRAT MALWARE ABUSES ONLINE NOTEPAD SERVICES TO STORE MALWARE",
+          "summary": "A new malware strain that targets both Windows and Linux is being distributed as a base64 encoded payload from the aNotepad service. The WogRAT malware on Windows is loaded as a DLL and communicates with C2 servers via POST requests to receive commands for uploading and downloading files, waiting, running arbitrary commands, and terminating. The Linux version behaves similarly except that it uses a TinySHell backdoor to communicate with the C2 server over a reverse shell.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-wograt-malware-abuses-online-notepad-service-to-store-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-08:a07",
+          "order": 1,
+          "title": "FROM CYBERCRIME TO CYBERSECURITY: THE REDEMPTION AND REVOLUTION OF THE FOUNDER OF HIVE FORENSICS",
+          "summary": "This interview delves into the extraordinary journey of Sam Paniagua, founder of fraud prevention firm Hive Forensics. An unconventional path, Paniagua's story is one of transformation, redemption, and unwavering determination in using cybersecurity innovation to safeguard dreams, livelihoods, and digital society's foundations.",
+          "url": "https://medium.com/@contantineklaus/from-cybercrime-to-cybersecurity-the-redemption-and-revolution-of-the-founder-of-hive-forensics-9a5cfbbb8239?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a08",
+          "order": 2,
+          "title": "HOW TO HUNT FOR UEFI MALWARE USING VELOCIRAPTOR",
+          "summary": "UEFI attacks, which require advanced techniques, are becoming more prevalent. This article begins with an overview of the UEFI system and common attacks on UEFI malware. It then works through Rapid7’s Velociraptor tool’s capabilities for performing forensic investigations on UEFI malware-infected systems.",
+          "url": "https://www.rapid7.com/blog/post/2024/02/29/how-to-hunt-for-uefi-malware-using-velociraptor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "rapid7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a09",
+          "order": 3,
+          "title": "MEET SILVER SAML: GOLDEN SAML IN THE CLOUD",
+          "summary": "Golden SAML is a post-exploitation attack technique that involves extracting signing certificates from Active Directory Federation Services to forge signing certificates. In the wake of the Solar Winds attack, organizations were urged to move to a cloud-based SAML like Entra ID to prevent Golden SAML attacks. This post presents a new attack method that leverages externally generated SAML certificates to forge authentication responses from an Entra ID SAML server.",
+          "url": "https://www.semperis.com/blog/meet-silver-saml/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "semperis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-08:a10",
+          "order": 1,
+          "title": "CAN ‘BUILD FAST’ AND ‘BUILD SECURE’ LIVE HAPPILY TOGETHER?",
+          "summary": "Tight deadlines for developers lead to security vulnerabilities, but good luck convincing executives to move slower. A more realistic solution? Faster security testing with Dynamic Analysis (DAST) [10]. Launch scans with a few clicks to rapidly find runtime vulnerabilities [10] in web apps and APIs, and see near-instant results with <5% FPR.",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=infosec-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a10",
+          "order": 2,
+          "title": "Try Veracode DAST free for 14 days",
+          "summary": "",
+          "url": "https://www.veracode.com/products/dynamic-analysis-dast?utm_source=tldr&utm_medium=infosec-newsletter&utm_campaign=VER7013n0000019ZIBAA2&utm_content=dast-free-trial",
+          "reading_time_minutes": null,
+          "source_domain": "veracode.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a11",
+          "order": 3,
+          "title": "BREADLOG",
+          "summary": "Breadlog maintains stable, unique references to log messages in your source code. This helps you identify application events from log messages using numerical IDs that stay the same even when a log message's content changes. No brittle or complex text parsing required.",
+          "url": "https://github.com/jamesmistry/breadlog?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a12",
+          "order": 4,
+          "title": "SYZKALLER",
+          "summary": "syzkaller is an unsupervised coverage-guided kernel fuzzer.",
+          "url": "https://github.com/google/syzkaller?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a13",
+          "order": 5,
+          "title": "BADGERBOARD",
+          "summary": "Badgerboard is an open source example implementation of a hardware/software solution that can lift traffic from a Schneider Electric X80 backplane into \"normal\" network traffic to be inspected and acted upon by various network visibility security solutions, such as Snort. This repository includes a link to a blog post with more details on what the hardware and software setup looks like.",
+          "url": "https://github.com/Cisco-Talos/badgerboard?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-08:a14",
+          "order": 1,
+          "title": "HOW CISA FIGHTS CYBER THREATS DURING ELECTION PRIMARY SEASON",
+          "summary": "CISA has set up an Election Operations Center to coordinate threat responses for the 2024 primaries and elections, providing cybersecurity training, guidelines, and a Protect2024 website with resources for state officials. No credible threats have been detected yet. CISA is focused on potential DDoS, ransomware, and emerging AI risks to secure the electoral process.",
+          "url": "https://www.darkreading.com/cybersecurity-operations/cisa-fights-cyber-threats-election-primary-season?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a15",
+          "order": 2,
+          "title": "JAPAN ORDERS LOCAL GIANTS LINE AND NAVER TO DISENTANGLE THEIR TECH STACKS",
+          "summary": "Japan ordered messaging app LINE and its parent company NAVER to separate their tech stacks after a data breach exposed over 510,000 users' data. The government cited deep entanglements between the companies' systems and authentication services that enabled unauthorized access. They must now implement their own authentication tools and minimize interconnections.",
+          "url": "https://www.theregister.com/2024/03/06/japan_line_naver_infosec_guidance/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a16",
+          "order": 3,
+          "title": "NSA RELEASES MATURITY GUIDANCE FOR THE ZERO TRUST NETWORK AND ENVIRONMENT PILLAR",
+          "summary": "The NSA has released a Cybersecurity information sheet that provides guidance on how to strengthen internal network control and contain network intrusions to a segmented portion of the network using Zero Trust principles. It is assisting DoD customers in piloting Zero Trust systems and is developing additional guidance for incorporating Zero Trust principles and designs into enterprise networks.",
+          "url": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3695223/nsa-releases-maturity-guidance-for-the-zero-trust-network-and-environment-pillar/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "nsa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-03-08:a17",
+          "order": 1,
+          "title": "WORLDCOIN HIT WITH TEMPORARY BAN IN SPAIN OVER PRIVACY CONCERNS",
+          "summary": "Spain’s data protection authority has ordered Worldcoin to temporarily stop collecting and processing personal data from the market.",
+          "url": "https://techcrunch.com/2024/03/06/worldcoin-spain-ban/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a18",
+          "order": 2,
+          "title": "FLIPPER ZERO WIFI ATTACK CAN UNLOCK AND STEAL TESLA CARS",
+          "summary": "Security researchers report that Flipper Zero devices can be used to execute an easy phishing attack that can compromise Tesla accounts and unlock and steal cars.",
+          "url": "https://www.bleepingcomputer.com/news/security/flipper-zero-wifi-attack-can-unlock-and-steal-tesla-cars/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-03-08:a19",
+          "order": 3,
+          "title": "FBI: U.S. LOST RECORD $12.5 BILLION TO ONLINE CRIME IN 2023",
+          "summary": "The FBI's Internet Crime Complaint Center (IC3) reported a record $12.5 billion in online crime losses in 2023, a 22% increase from the previous year, with 880,000 complaints received.",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-us-lost-record-125-billion-to-online-crime-in-2023/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

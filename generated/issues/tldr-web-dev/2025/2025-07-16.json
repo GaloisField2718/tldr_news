@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-07-16",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-16",
+  "source_path": "TLDR Web Dev/article_16-07-2025.md",
+  "source_content_hash": "sha256:8241fc7ef96fe89b9d0b0cd7eb96b13c87de8bea983623a0ad39146e32be2bce",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-16",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-16:a04",
+          "order": 1,
+          "title": "JAVASCRIPT SCOPE HOISTING IS BROKEN",
+          "summary": "JavaScript scope hoisting is an optimization used by bundlers to concatenate modules into a single scope instead of wrapping each in a function, but it breaks when combined with code splitting because it can't preserve the correct execution order of modules with side effects. This leads to different program behavior, with shared modules executing in the wrong order compared to unbundled code, affecting bundlers like Rollup, ESBuild, and others. The solution requires wrapping modules in functions to control execution order.",
+          "url": "https://devongovett.me/blog/scope-hoisting.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "devongovett.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a05",
+          "order": 2,
+          "title": "WHAT'S //GO:NOSPLIT FOR?",
+          "summary": "Go's `//go:nosplit` directive removes the usual stack overflow check from functions to improve performance. Nosplit functions skip the preemption check that normally compares the stack pointer against a limit and calls `runtime.morestack` when needed, making them about 2% faster in hot loops but potentially much faster when the goroutine struct isn't cached. However, nosplit functions are dangerous because they can cause stack overflows, so the Go linker includes safety checks to make sure chains of nosplit functions don't exceed a small stack limit (792 bytes).",
+          "url": "https://mcyoung.xyz/2025/07/07/nosplit?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mcyoung.xyz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-16:a06",
+          "order": 1,
+          "title": "REFLECTIONS ON OPENAI",
+          "summary": "A co-founder of Segment, which was acquired for $3.2B by Twilio, worked for OpenAI for a year. He liked the company's bias for action, its fast decision-making pace, its focus on practical AI safety, and its commitment to broadly distributing the benefits of AI. He played a key role in launching Codex, the coding agent, within an incredibly short timeframe.",
+          "url": "https://calv.info/openai-reflections?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "calv.info",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a07",
+          "order": 2,
+          "title": "TO BE A BETTER PROGRAMMER, WRITE LITTLE PROOFS IN YOUR HEAD",
+          "summary": "To improve as a programmer, practice writing small, mental proofs to guarantee code correctness. Strive for code with high \"proof-affinity,\" making it easy to reason about and verify. This gets easier with consistent practice.",
+          "url": "https://the-nerve-blog.ghost.io/to-be-a-better-programmer-write-little-proofs-in-your-head/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "the-nerve-blog.ghost.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a08",
+          "order": 3,
+          "title": "NO TIME TO LEARN (WEB) FRAMEWORK X",
+          "summary": "Learning specific web frameworks like React may not be worth the time since they frequently change or become obsolete. Instead, focus on transferable fundamentals like vanilla JavaScript, strongly-typed languages, and understanding core specifications rather than framework-specific features like React hooks.",
+          "url": "https://brainbaking.com/post/2025/06/no-time-to-learn-web-framework-x?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "brainbaking.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-16:a09",
+          "order": 1,
+          "title": "BNA UI",
+          "summary": "BNA UI is a beautiful and customizable UI component library for React Native. It has features like light/dark theme support, Expo Router integration, TypeScript support, and zero configuration setup.",
+          "url": "https://github.com/ahmedbna/ui?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a10",
+          "order": 2,
+          "title": "UZU",
+          "summary": "Uzu is a high-performance inference engine for AI models on Apple Silicon that offers a simple API, hybrid GPU/MPSGraph architecture, unified model configurations, traceable computations, and bindings for Swift and CLI.",
+          "url": "https://github.com/trymirai/uzu?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a11",
+          "order": 3,
+          "title": "REACT NATIVE APPLE LLM",
+          "summary": "The `react-native-apple-llm` plugin enables React Native apps to use Apple's on-device Foundation Models for AI tasks. It has functionalities like checking model availability, configuring LLM sessions, and generating both structured JSON outputs and natural language text.",
+          "url": "https://github.com/deveix/react-native-apple-llm?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-16:a12",
+          "order": 1,
+          "title": "WHAT CAN AGENTS ACTUALLY DO?",
+          "summary": "AI agents use LLMs to evaluate contexts, suggest and utilize tools to enrich those contexts, and manage flow control for tool usage. Customer support and bug triaging are good use case examples, and AI agents should be treated as software products requiring careful design, iteration, and human oversight.",
+          "url": "https://lethain.com/what-can-agents-do/?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "lethain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a13",
+          "order": 2,
+          "title": "ASYMMETRY OF VERIFICATION AND VERIFIER'S LAW",
+          "summary": "\"Asymmetry of verification\" is where some tasks are much easier to verify than to solve, which is an important concept in improving AI. Examples include Sudoku, website operation, and BrowseComp problems, where easy verification enables AI training. The \"Verifier's Law\" states that AI's ability to solve a task is proportional to its verifiability.",
+          "url": "https://www.jasonwei.net/blog/asymmetry-of-verification-and-verifiers-law?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "jasonwei.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-16:a14",
+          "order": 1,
+          "title": "GPUHAMMER",
+          "summary": "GPUHammer demonstrates the first successful Rowhammer attack on GPU memory (GDDR6 in an NVIDIA A6000), enabling malicious users to induce bit flips, tamper with data, and degrade ML model accuracy in shared environments.",
+          "url": "https://gpuhammer.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "gpuhammer.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a15",
+          "order": 2,
+          "title": "DEATH BY A THOUSAND SLOPS",
+          "summary": "The curl bug bounty program has gotten a surge in low-quality vulnerability reports, many seemingly generated by AI, which wastes the security team's time and resources.",
+          "url": "https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "daniel.haxx.se",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a16",
+          "order": 3,
+          "title": "CLOUDFLARE 1.1.1.1 INCIDENT ON JULY 14, 2025",
+          "summary": "A misconfiguration in Cloudflare's systems caused a global outage of the 1.1.1.1 DNS Resolver service for about an hour on July 14 due to an error in managing service topologies.",
+          "url": "https://blog.cloudflare.com/cloudflare-1-1-1-1-incident-on-july-14-2025/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-16:a17",
+          "order": 4,
+          "title": "10 MOST(LY DEAD) INFLUENTIAL PROGRAMMING LANGUAGES",
+          "summary": "This blog post explains the historical significance of ten \"mostly dead\" programming languages (COBOL, ALGOL, APL, BASIC, PL/I, SIMULA 67, Pascal, CLU, ML, and Smalltalk), highlighting their contributions to modern programming concepts and paradigms.",
+          "url": "https://www.hillelwayne.com/post/influential-dead-languages/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "hillelwayne.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

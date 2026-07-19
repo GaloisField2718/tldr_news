@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-08-14",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-08-14",
+  "source_path": "TLDR Web Dev/article_14-08-2025.md",
+  "source_content_hash": "sha256:8ed2fba1cdf573e9901311500b482030dfe2c12b82357b02d961a696918ba2e3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-08-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a04",
+          "order": 1,
+          "title": "MODERN WEB TESTING, MINUS THE MAINTENANCE",
+          "summary": "No more fragile CSS selectors or XPaths.",
+          "url": "https://go.momentic.ai/tldr-web",
+          "reading_time_minutes": null,
+          "source_domain": "go.momentic.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a04",
+          "order": 2,
+          "title": "Book a demo today. Prevent the next incident.",
+          "summary": "",
+          "url": "https://go.momentic.ai/tldr-web",
+          "reading_time_minutes": null,
+          "source_domain": "go.momentic.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a05",
+          "order": 1,
+          "title": "FIGHTING WITH YOUTUBE TO SHOW A PREVIEW IMAGE",
+          "summary": "A method for displaying YouTube video previews on a webpage efficiently delays the loading of the full video iframe until the user clicks the preview. The standard approach of using YouTube's thumbnail URL can fail because the highest resolution image isn't always available, and YouTube's fallback image triggers the onload event instead of onerror. The solution involves checking the image size in the onload handler to determine if the fallback image is loaded, and then iterating through lower resolution thumbnails until a valid one is found.",
+          "url": "https://shaneosullivan.wordpress.com/2025/08/11/fighting-with-youtube-to-show-a-preview-image/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "shaneosullivan.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a06",
+          "order": 2,
+          "title": "HUNTING A MEMORY LEAK",
+          "summary": "DoltHub discovered a memory leak in its Dolt SQL Server after a customer reported steadily growing memory usage. While it used Go's memory profiling tools to investigate the issue, it found that the Go heap wasn't actually growing. Instead, the memory leak was occurring in kernel space, so the root cause was related to file system operations rather than application memory management.",
+          "url": "https://dolthub.com/blog/2025-07-24-hunting-a-memory-leak?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "dolthub.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a07",
+          "order": 3,
+          "title": "BETTER CSS LAYOUTS: TIME.COM HERO SECTION",
+          "summary": "This article rebuilds the Time.com hero section layout using advanced CSS techniques. It goes over various approaches to creating a more flexible and responsive design, including CSS Grid, container queries, display contents, and the :has() selector. The goal is to make the layout adapt to different content types and viewport sizes without early switching to mobile view.",
+          "url": "https://ishadeed.com/article/time-layout/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "ishadeed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a08",
+          "order": 1,
+          "title": "REFLECTIONS ON THE REACT COMMUNITY",
+          "summary": "After a decade of experience with React, this ex-Vercel employee says that it's hard to maintain a large open-source community. The React team struggles to actively engage due to the overwhelming amount of feedback.",
+          "url": "https://leerob.com/reflections?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "leerob.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a09",
+          "order": 2,
+          "title": "WHAT WE LEARNED FROM CREATING POSTCSS",
+          "summary": "The creators of PostCSS, a CSS automation tool with 400 million monthly downloads used by major companies like Google and Wikipedia, share lessons learned from 12 years of maintaining the open-source project. Successful open-source projects require a lot of time investment in documentation and promotion, comparable to the actual coding effort. They recommend directly approaching potential users to suggest adopting your library.",
+          "url": "https://evilmartians.com/chronicles/what-we-learned-from-creating-postcss?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "evilmartians.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a10",
+          "order": 3,
+          "title": "MCP VULNERABILITIES EVERY DEVELOPER SHOULD KNOW",
+          "summary": "",
+          "url": "https://composio.dev/blog/mcp-vulnerabilities-every-developer-should-know?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "composio.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a11",
+          "order": 1,
+          "title": "TERRAGON",
+          "summary": "Terragon is a platform that allows devs to easily run AI agents like Claude Code and OpenAI Codex in the cloud. It provides isolated dev environments, Git workflows, cross-platform access, monitoring, automation, and security features to help developers plan, build, review, test, and ship code faster.",
+          "url": "https://www.terragonlabs.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "terragonlabs.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a12",
+          "order": 2,
+          "title": "EMBEDDING ATLAS",
+          "summary": "Embedding Atlas is a tool developed by Apple that provides interactive visualizations for large embeddings, enabling users to visualize, cross-filter, and search embeddings and metadata. It has features like automatic data clustering and labeling, real-time search, and WebGPU implementation for fast performance.",
+          "url": "https://github.com/apple/embedding-atlas?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a13",
+          "order": 1,
+          "title": "I WANT EVERYTHING LOCAL – BUILDING MY OFFLINE AI WORKSPACE",
+          "summary": "InstaVM is a completely offline AI workspace that runs locally without cloud dependencies to address privacy concerns. The system combines local LLMs (via Ollama), sandboxed code execution using Apple's container tool, and headless browser automation (Playwright) to create an isolated environment for tasks like video editing, data analysis, and research.",
+          "url": "https://instavm.io/blog/building-my-offline-ai-workspace?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "instavm.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a14",
+          "order": 2,
+          "title": "WE CAUGHT COMPANIES MAKING IT HARDER TO DELETE YOUR PERSONAL DATA ONLINE",
+          "summary": "Many data brokers are hiding instructions on how consumers can delete their personal data from search engines, despite California law requiring them to provide deletion options. These companies use code to prevent search engines from indexing the pages, making it difficult for consumers to find and exercise their privacy rights. After being contacted, some companies removed the code, while others defended the practice or did not respond.",
+          "url": "https://themarkup.org/privacy/2025/08/12/we-caught-companies-making-it-harder-to-delete-your-data?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "themarkup.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a15",
+          "order": 3,
+          "title": "$160M VC-BACKED COMPANY JUST KILLED MY EU TRADEMARK FOR A SMALL OSS PROJECT. IS IT EVEN WORTH FIGHTING?",
+          "summary": "A small open-source project developer lost their EU trademark for \"Deepkit\" to a $160M-backed company, \"Deepki,\" due to failure to demonstrate sufficient \"genuine use\" within the EU. The developer's provided data, including Google Analytics and download statistics, was rejected for lacking specific location data connecting usage to the EU. Now, the developer questions whether it is worth appealing the decision in the EU or fighting the US registration, especially considering the cost and the project's small scale.",
+          "url": "https://links.tldrnewsletter.com/MOArXP",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-08-14:a16",
+          "order": 1,
+          "title": "A CASE STUDY IN BAD HIRING PRACTICE: AND HOW TO FIX IT",
+          "summary": "Companies sabotage their cybersecurity hiring efforts by abusing job boards, using broken hiring practices, and failing to value talent.",
+          "url": "https://www.tomkranz.com/blog1/a-case-study-in-bad-hiring-practice-and-how-to-fix-it?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "tomkranz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a17",
+          "order": 2,
+          "title": "STACKBENCH",
+          "summary": "StackBench is a platform that analyzes code documentation by simulating how AI coding agents would use it, providing actionable insights to improve agent-readiness and developer experience.",
+          "url": "https://stackbench.ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "stackbench.ai",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a18",
+          "order": 3,
+          "title": "WHY I CHOSE OCAML AS MY PRIMARY LANGUAGE",
+          "summary": "OCaml is a relevant and versatile programming language with strengths in language features, ecosystem, and community.",
+          "url": "https://xvw.lol/en/articles/why-ocaml.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 59,
+          "source_domain": "xvw.lol",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-08-14:a19",
+          "order": 4,
+          "title": "THE THREE TYPES OF AI BOT TRAFFIC AND HOW TO HANDLE THEM",
+          "summary": "The three types of AI bot traffic are training crawlers, grounding bots, and AI referrals.",
+          "url": "https://vercel.com/blog/the-three-types-of-ai-bot-traffic-and-how-to-handle-them?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

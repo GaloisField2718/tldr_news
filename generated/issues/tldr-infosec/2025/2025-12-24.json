@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-24",
+  "source_path": "TLDR InfoSec/article_24-12-2025.md",
+  "source_content_hash": "sha256:f93f81b2476b923fc6be3dbba1f71ad42f4136c26d5b34aa78d7ca3824865b8d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-24",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-24:a04",
+          "order": 1,
+          "title": "NISSAN SAYS THOUSANDS OF CUSTOMERS EXPOSED IN RED HAT BREACH",
+          "summary": "Nissan has confirmed that data belonging to approximately 21k customers was breached via a data breach at Red Hat in September. The breached data includes full names, physical and email addresses, phone numbers, and sales data for some customers who purchased or received services at Nissan in Fukuoka, Japan.",
+          "url": "https://www.bleepingcomputer.com/news/security/nissan-says-thousands-of-customers-exposed-in-red-hat-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a05",
+          "order": 2,
+          "title": "FRENCH POSTAL SERVICE BROUGHT DOWN BY CYBER ATTACK",
+          "summary": "France's postal service, La Poste, suffered a widespread DDoS attack that disabled all IT systems for over twelve hours, affecting the website, mobile app, Digiposte digital document service, and digital ID services. The attack also disrupted La Poste's banking subsidiary Banque Postale's online services, though over-the-counter operations and payment processing remained functional. The timing raised concerns about potential Christmas delivery disruptions, with no timeline provided for service restoration.",
+          "url": "https://www.csoonline.com/article/4111141/french-mail-brought-down-by-cyber-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a06",
+          "order": 3,
+          "title": "3.5 MILLION AFFECTED BY UNIVERSITY OF PHOENIX DATA BREACH",
+          "summary": "A ransomware-linked campaign exploited zero-day flaws in Oracle E-Business Suite to access University of Phoenix systems, leading to data theft affecting nearly 3.5 million people. Exposed data includes names, dates of birth, Social Security numbers, and bank account details, though no leak has yet appeared online.",
+          "url": "https://www.securityweek.com/3-5-million-affected-by-university-of-phoenix-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-24:a07",
+          "order": 1,
+          "title": "C2 REDIRECTORS MADE EASY",
+          "summary": "Red teamers traditionally must manually configure C2 redirector proxy rules by reviewing profiles and adding User-Agent strings and HTTP endpoints to configuration files, requiring updates whenever the C2 profile changes. The author developed caddy-c2, a Caddy web server module that automatically parses Cobalt Strike profiles using goMalleable to extract User-Agents and URI paths, then dynamically routes legitimate C2 traffic without manual rule configuration. The module simplifies redirector deployment by eliminating the need to manually sync proxy configurations with C2 profile changes, though current support is limited to Cobalt Strike, with plans to expand to frameworks such as Mythic and Havoc.",
+          "url": "https://blog.lum8rjack.com/posts/caddy-c2/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.lum8rjack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a08",
+          "order": 2,
+          "title": "HOW TO HACK DISCORD, VERCEL AND MORE WITH ONE EASY TRICK - EVA'S SITE",
+          "summary": "Mintlify lets customers write pages in MDX, but processes that content in a way that allows attackers to run arbitrary JavaScript on the server during build. This means an attacker can take over the build environment, poison cached pages, and inject malicious scripts into many companies' docs, including big names like Discord and Vercel. Because some docs were served from the same domain or path as real apps, those scripts could steal auth tokens or perform actions as logged-in users.",
+          "url": "https://kibty.town/blog/mintlify/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "kibty.town",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a09",
+          "order": 3,
+          "title": "MODERNIZING LINKEDIN'S STATIC APPLICATION SECURITY TESTING CAPABILITIES TO PROTECT OUR MEMBERS",
+          "summary": "LinkedIn modernized its SAST pipeline by building custom GitHub Actions workflows using CodeQL and Semgrep that deviated from paved paths to accommodate complex internal build processes, implementing dynamic rule filtering, SARIF enrichment, and extensive metrics instrumentation across tens of thousands of repositories. The team deployed a \"stub workflow\" approach combined with a Drift Management System that daily checks repository compliance and automatically commits workflow files, ensuring consistent security coverage while allowing centralized updates without touching individual repos. LinkedIn implemented \"blocking mode\" enforcement via GitHub Repository Rulesets requiring SARIF submission and zero high-risk vulnerabilities before PR merges, protected by multi-level kill switches (organization/repo/language/tool/rule-specific) and fail-safe mechanisms that upload blank SARIFs to unblock developers during scanning failures while triggering oncall alerts.",
+          "url": "https://www.linkedin.com/blog/engineering/security/modernizing-linkedins-static-application-security-testing-capabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-24:a10",
+          "order": 1,
+          "title": "CLR-UNHOOK",
+          "summary": "CLR-Unhook is a native C++ utility that bypasses EDR/AV hooks in the .NET Common Language Runtime by restoring the original nLoadImage function implementation.",
+          "url": "https://github.com/hwbp/CLR-Unhook?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a11",
+          "order": 2,
+          "title": "GOSTRINGUNGARBLER",
+          "summary": "Mandiant released GoStringUngarbler, a Python tool that deobfuscates strings in Go binaries protected by garble's literal transformation flag, supporting Windows PE and Linux ELF executables compiled with Garble v0.11.0-v0.13.0 and Go v1.21-v1.23. The tool identifies decrypting subroutines via regex pattern matching, emulates them using the Unicorn emulator to extract plaintext strings, and patches the binary by replacing obfuscation routines with stubs that directly reference the decrypted content. Security analysts can use this to accelerate malware analysis of garble-obfuscated Go samples, though it only works when garble's \"-literals\" flag was used during compilation.",
+          "url": "https://github.com/mandiant/gostringungarbler?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a12",
+          "order": 3,
+          "title": "GAMBIT CYBER (PRODUCT LAUNCH)",
+          "summary": "Gambit Cyber provides an AI-native, risk-centric continuous threat exposure management platform called KnightGuard. It uses coordinated AI agents to help enterprises continuously identify, validate, prioritize, and remediate cyber risks across CTI, SecOps, and IT operations.",
+          "url": "https://gambitcyber.org/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gambitcyber.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-24:a13",
+          "order": 1,
+          "title": "LIBXML2 NARROWLY AVOIDS BECOMING UNMAINTAINED",
+          "summary": "The libxml2 library temporarily lost its sole volunteer maintainer, Nick Wellnhofer, after years of unpaid security work, creating a critical risk for GNOME, web browsers, and countless projects depending on this XML/XSLT processing library. Wellnhofer experienced burnout from companies that sent security reports, expecting immediate CVE responses and patches, with no financial compensation beyond a single Google donation, while providing no code contributions or test cases. Two new maintainers have assumed responsibility, but the incident highlights the unsustainable model in which commercial software relies on unpaid volunteers to maintain critical infrastructure components.",
+          "url": "https://hackaday.com/2025/12/23/libxml2-narrowly-avoids-becoming-unmaintained/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackaday.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a14",
+          "order": 2,
+          "title": "THE 5 SECURITY FEATURES THAT WILL LEAD IN 2026, AND 3 THAT SHOULD",
+          "summary": "Security market analyst James Berthoty predicts that supply chain and AI tooling will dominate the market in 2026. Berthoty predicts that the following critical product capabilities will be essential: supply chain malware detection, AI vulnerability remediation and prioritization, AI visibility, guardrails, testing, AI based detections, and SOC augmenters. Teams should also have runtime function level reachability (ADR), developer endpoint security, and realtime AI threat modeling and design review on their radar.",
+          "url": "https://pulse.latio.tech/p/the-5-security-features-that-will?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a15",
+          "order": 3,
+          "title": "OPENAI SAYS AI BROWSERS MAY ALWAYS BE VULNERABLE TO PROMPT INJECTION ATTACKS",
+          "summary": "OpenAI acknowledges that prompt injection attacks in AI browsers like ChatGPT Atlas are a long-term, unsolved security risk, similar to social engineering on the web. The company is layering defenses, including an LLM-based automated attacker that repeatedly probes Atlas in simulation to discover new attack strategies, tighten protections, and enforce user confirmations. Experts still question whether the current agentic browser value justifies their elevated risk.",
+          "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-24:a16",
+          "order": 1,
+          "title": "AMAZON HAS STOPPED 1,800 JOB APPLICATIONS FROM NORTH KOREAN AGENTS",
+          "summary": "Amazon blocked over 1,800 job applications from suspected North Korean agents since April 2024.",
+          "url": "https://www.csoonline.com/article/4111148/amazon-has-stopped-1800-job-applications-from-north-korean-agents.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a17",
+          "order": 2,
+          "title": "PIRATE GROUP ANNA'S ARCHIVE COPIES 256M SPOTIFY SONGS IN DATA SCRAPE",
+          "summary": "Pirate preservation group Anna's Archive scraped 256 million Spotify track records and 86 million audio files through unauthorised data collection.",
+          "url": "https://hackread.com/annas-archive-pirate-spotify-songs-data-scrape/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-24:a18",
+          "order": 3,
+          "title": "SERVICENOW TO ACQUIRE CYBERSECURITY STARTUP ARMIS FOR $7.75B .",
+          "summary": "ServiceNow is acquiring Armis, a nine-year-old cybersecurity company focused on securing critical infrastructure for Fortune 500s and governments, in an all-cash $7.75 billion deal.",
+          "url": "https://techcrunch.com/2025/12/23/servicenow-to-acquire-cybersecurity-startup-armis-for-7-75b/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

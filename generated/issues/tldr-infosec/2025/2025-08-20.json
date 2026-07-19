@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-08-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-20",
+  "source_path": "TLDR InfoSec/article_20-08-2025.md",
+  "source_content_hash": "sha256:bc00d6d63ef79680f265a6c30aedb21e1d2b4cd0ac2910e5e6172eab5a5bb8b6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a04",
+          "order": 1,
+          "title": "TRANSPARENCY",
+          "summary": "Join award-winning WIRED journalist Andy Greenberg and leading security experts, including Upwind CSO Rinki Sethi (formerly Twitter CISO), at the free, virtual Open Source Security Summit [4] sponsored by Bitwarden.",
+          "url": "https://bitwarden.com/open-source-security-summit/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=summit",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a04",
+          "order": 2,
+          "title": "👉 Register free for the virtual summit",
+          "summary": "EVERY BREACH STARTS WITH WEAK CREDENTIALS. Protect your business with Bitwarden—built on a trusted open source foundation, recommended by",
+          "url": "https://bitwarden.com/open-source-security-summit/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=summit",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a05",
+          "order": 3,
+          "title": "IT leaders, and loved by employees. Start free today",
+          "summary": "",
+          "url": "https://bitwarden.com/go/business-password-manager/tldr/?utm_campaign=10538385-TLDR+2025&utm_source=TLDR&utm_medium=newsletter&utm_content=form_page",
+          "reading_time_minutes": null,
+          "source_domain": "bitwarden.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a06",
+          "order": 1,
+          "title": "DOCKER HUB STILL HOSTS DOZENS OF LINUX IMAGES WITH THE XZ BACKDOOR",
+          "summary": "There are over 35 Docker Hub images that still contain the XZ-Utils backdoor (CVE-2024-3094). Discovered in March 2024, the vulnerability allows attackers with a specific private key to bypass SSH authentication and execute commands as root. Debian has refused to remove the backdoored images, citing low exploitation risk and archival continuity, despite the danger of accidental pulls in CI/CD pipelines. Organizations should verify that their containers use XZ-Utils version 5.6.2 or later to avoid inheriting this supply chain compromise.",
+          "url": "https://www.bleepingcomputer.com/news/security/docker-hub-still-hosts-dozens-of-linux-images-with-the-xz-backdoor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a07",
+          "order": 2,
+          "title": "NY BUSINESS COUNCIL DISCLOSES DATA BREACH AFFECTING 47K PEOPLE",
+          "summary": "The Business Council of New York State (BCNYS), the largest employer association in the state, revealed that attackers stole personal, financial, and health data of over 47,000 people in a February breach. The data included full names, SSNs, birth dates, IDs, financial info, payment card details, and e-signatures. BCNYS said it didn't detect the breach until August 4, but cut off access immediately.",
+          "url": "https://www.bleepingcomputer.com/news/security/business-council-of-new-york-state-discloses-data-breach-affecting-47-000-people/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a08",
+          "order": 3,
+          "title": "CASINO TECH OUTFIT BRAGG COPS TO INTRUSION BUT SAYS DATA JACKPOT UNTOUCHED",
+          "summary": "Bragg Gaming Group reported a cyberattack that affected only its internal systems. No customer or personal data was accessed. Operations continue normally, although key details about the attack method and duration are still unclear, leaving some questions about the incident's full impact.",
+          "url": "https://www.theregister.com/2025/08/19/bragg_attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a09",
+          "order": 1,
+          "title": "ANALYZING EVOLUTION OF THE PIPEMAGIC MALWARE",
+          "summary": "Kaspersky and BI.ZONE analyzed PipeMagic backdoor's evolution from 2022 to 2025, revealing new infections in Saudi Arabia and Brazil using fake ChatGPT apps, exploiting CVE-2025-29824 for privilege escalation. The malware now includes enhanced modules for asynchronous communication, payload injection, and .NET execution, with attackers using LSASS memory dumping for lateral movement across compromised networks.",
+          "url": "https://securityaffairs.com/181286/breaking-news/analyzing-evolution-of-the-pipemagic-malware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a10",
+          "order": 2,
+          "title": "MALWARE ANALYSIS ON AWS: SETTING UP A SECURE ENVIRONMENT",
+          "summary": "Malware analysis environments have complex requirements as they must allow analysts to effectively analyze potentially malicious code while it is executing in the environment. This post proposes a process in which a security analyst gains access to an EC2 instance with no outbound connectivity via AWS Systems Manager Session Manager. The analyst then connects to malware samples through a gateway endpoint for S3 to download the malware and detonate it, and then they can use services such as CloudTrail and GuardDuty to monitor the behavior. The post provides a detailed setup checklist that covers policy, account setup, VPC design, instance configuration, storage, monitoring, IAM, and lifecycle considerations.",
+          "url": "https://aws.amazon.com/blogs/security/malware-analysis-on-aws-setting-up-a-secure-environment/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a11",
+          "order": 3,
+          "title": "NOODLOPHILE STEALER EVOLVES: TARGETED COPYRIGHT PHISHING HITS ENTERPRISES WITH SOCIAL MEDIA FOOTPRINTS",
+          "summary": "The Noodlophile Stealer malware has evolved. It is now conducting targeted phishing campaigns impersonating copyright claims, mainly against organizations with large social media presences. The attackers steal browser and login data, adapting tactics for better success, and concentrate on enterprises with significant Facebook activity, highlighting the need for stronger cybersecurity and anti-phishing measures.",
+          "url": "https://www.morphisec.com/blog/noodlophile-stealer-evolves-targeted-copyright-phishing-hits-enterprises-with-social-media-footprints/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "morphisec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a12",
+          "order": 1,
+          "title": "TURN CYBER TRAINING INTO A FORCE MULTIPLIER",
+          "summary": "Discover how high-performing organizations use SANS to improve retention, cut external security costs by nearly $900K, and detect threats 4.2x faster. Download the IDC white paper, sponsored by SANS [12], and explore training and tools designed for measurable impact with SANS Cybersecurity Training [13].",
+          "url": "https://www.sans.org/mlp/idc-the-business-value-of-sans?utm_medium=Sponsored_Content&utm_source=TLDR&utm_content=TLDRInfoSec_IDCSANSValuePaper_8.20.25&utm_campaign=Paper_IDCSANSValue_2025&utm_rdetail=Global&utm_goal=Leads&utm_type=Global_Campaign",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a14",
+          "order": 2,
+          "title": "OKTA OPEN-SOURCES CATALOG OF AUTH0 RULES FOR THREAT DETECTION",
+          "summary": "Okta has open-sourced ready-made Sigma queries for Auth0 customers to detect account takeovers, misconfigurations, and suspicious behavior in event logs. Auth0 is an IAM platform used by organizations for login, authentication, and user management services. Organizations can utilize the rules by cloning the GitHub repo and using a Sigma converter (such as sigma-cli) to translate the rules into a query syntax that their SIEM supports.",
+          "url": "https://www.bleepingcomputer.com/news/security/okta-open-sources-catalog-of-auth0-rules-for-threat-detection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a15",
+          "order": 3,
+          "title": "WARREN",
+          "summary": "Warren is an AI-powered security alert management system that reduces noise and accelerates response time. It ingests alerts from existing tools and enriches them with AI and threat intel.",
+          "url": "https://github.com/secmon-lab/warren?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a16",
+          "order": 4,
+          "title": "SIMPLECRYPT",
+          "summary": "SimpleCrypt is a powerful command-line tool designed for securely encrypting and decrypting files and directories using AES-256 encryption. It aims to provide users with a straightforward and efficient way to protect sensitive information directly from their terminal.",
+          "url": "https://github.com/alessgorgo/SimpleCrypt?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a17",
+          "order": 1,
+          "title": "AWS PRICING FOR KIRO DEV TOOL DUBBED 'A WALLET-WRECKING TRAGEDY'",
+          "summary": "AWS changed Kiro's pricing from reasonable plans to a split request model with \"vibe\" at $0.04 and \"spec\" at $0.20. Developers report monthly costs of $550-$1,950, far above the promised 1,000 interactions for $19. The free tier offers only 50 vibe requests, with no spec requests, requiring immediate payment for actual code execution. Open-source developers use 4-6 requests per action, making Kiro more expensive than AWS's Amazon Q ($40 for 3,000 requests) or competitors with unlimited plans.",
+          "url": "https://www.theregister.com/2025/08/18/aws_updated_kiro_pricing/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a18",
+          "order": 2,
+          "title": "HOW XPROTECT'S DETECTION RULES HAVE CHANGED FROM 2019-2025",
+          "summary": "XProtect comprises YARA detection rules employed by Gatekeeper checks to identify known malware. Over six years, the number of rules has quadrupled, and the total size has grown to 22 times its original. This expansion results in longer scan times. However, removing older rules is risky, as it could leave newer Macs vulnerable to malware, especially if they still support x86 execution.",
+          "url": "https://eclecticlight.co/2025/08/15/how-xprotects-detection-rules-have-changed-2019-25/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "eclecticlight.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a19",
+          "order": 3,
+          "title": "MOZILLA WARNS GERMANY COULD SOON DECLARE AD BLOCKERS ILLEGAL",
+          "summary": "Mozilla has raised concerns about a recent ruling by Germany's Federal Supreme Court (BGH) in a case brought by online media company Axel Springer against Eyeo, the makers of the Adblock Plus browser extension. Axel Springer claimed that a website's HTML/CSS is a protected computer program, and therefore, ad blockers that interact with in-memory structures such as DOM, CSSOM, and the rendering tree should be considered unlawful reproduction and modification. The lawsuit has significant implications for other types of browser extensions that alter the DOM, as well as ad blockers.",
+          "url": "https://www.bleepingcomputer.com/news/legal/mozilla-warns-germany-could-soon-declare-ad-blockers-illegal/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-20:a20",
+          "order": 1,
+          "title": "BLACK HAT 2025: LATEST NEWS AND INSIGHTS",
+          "summary": "Black Hat USA 2025 returns to Las Vegas August 2-7.",
+          "url": "https://www.csoonline.com/article/3482049/black-hat-latest-news-and-insights.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a21",
+          "order": 2,
+          "title": "LINKTREE GOES DARK IN INDIA — AND THE COMPANY ISN'T SURE WHY",
+          "summary": "Linktree has been inaccessible in India for several days across all ISPs.",
+          "url": "https://techcrunch.com/2025/08/18/linktree-goes-dark-in-india-and-the-company-isnt-sure-why/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-20:a22",
+          "order": 3,
+          "title": "UK DROPS DEMAND FOR BACKDOOR INTO APPLE ENCRYPTION",
+          "summary": "The UK government has dropped its demand for Apple to provide backdoor access to encrypted iCloud data following US pressure.",
+          "url": "https://www.theverge.com/news/761240/uk-apple-us-encryption-back-door-demands-dropped?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

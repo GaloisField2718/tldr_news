@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-03-14",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-03-14",
+  "source_path": "TLDR Web Dev/article_14-03-2024.md",
+  "source_content_hash": "sha256:7a0f14ee4173c702e02e2b332a6621efe353863ef035d62cb00003e50af8b68d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-03-14",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-14:a04",
+          "order": 1,
+          "title": "HOW DISCORD'S LIVE STREAMING WORKS",
+          "summary": "Discord's live streaming feature broadcasts users' screen activity to others in their group. To achieve this, Discord uses OS-specific APIs for screen and audio capture along with robust fallback mechanisms. The captured video data is then encoded using codecs like VP8 and H264 for efficient transmission, with Discord servers handling quality adjustments and routing for high-quality delivery to viewers.",
+          "url": "https://blog.quastor.org/p/discords-live-streaming-works?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a05",
+          "order": 2,
+          "title": "POKÉMON GO: ARCHITECTURE OF THE #1 AR GAME IN THE WORLD",
+          "summary": "Pokémon GO began as an iteration of Niantic's earlier augmented-reality game, Ingress. It uses GCP’s scalability for its massive player base. The game's architecture heavily utilizes Google Kubernetes Engine for managing workloads and Spanner for its global consistency and high transactionality in storing player and map data. Niantic introduced Redis as an in-memory cache to handle the immense traffic spikes during live events like Raid Battles. Pokémon GO uses PushGateway for real-time notifications.",
+          "url": "https://www.fullstackexpress.io/p/pokemon-go-architecture?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "fullstackexpress.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a06",
+          "order": 3,
+          "title": "BEST PRACTICES FOR WRITING TESTS WITH REACT TESTING LIBRARY",
+          "summary": "To write effective tests using the React Testing Library, developers should focus on using ByRole queries to target elements based on accessibility roles. For simulating user interactions, one should use the userEvent library rather than fireEvent. Utilize findBy* queries and waitForElementToBeRemoved to manage asynchronous updates for more robust tests.",
+          "url": "https://claritydev.net/blog/improving-react-testing-library-tests?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "claritydev.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-14:a07",
+          "order": 1,
+          "title": "FALSEHOODS PROGRAMMERS BELIEVE ABOUT TIME ZONES",
+          "summary": "Time zones are complex. Rules and boundaries change frequently based on political and geographical influences. Developers often underestimate the challenge of handling time zones and their irregular offsets, multiple names, and unpredictable changes by governments. Building any system reliant on time zones requires careful consideration of their complexities to avoid future errors.",
+          "url": "https://www.zainrizvi.io/blog/falsehoods-programmers-believe-about-time-zones/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "zainrizvi.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a08",
+          "order": 2,
+          "title": "KEEPING TRACK OF ENGINEERING-WIDE GOALS AND MIGRATIONS",
+          "summary": "Yelp created an internal platform called EE Metrics to help engineering teams manage technical debt and highlight important company-wide engineering initiatives. EE Metrics provides teams with detailed web pages outlining their technical debt and surfaces key migrations or health metrics. The platform's Team Health Reports allow teams to see critical audits and prioritize actions based on the highest impact to the team.",
+          "url": "https://engineeringblog.yelp.com/2024/03/keeping-track-of-engineering-wide-goals-and-migrations.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "engineeringblog.yelp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a09",
+          "order": 3,
+          "title": "LLMS ARE NOT ENOUGH… WHY CHATBOTS NEED KNOWLEDGE REPRESENTATION",
+          "summary": "LLMs have impressive factual knowledge, but their reasoning abilities remain limited, as they struggle with applying their knowledge to novel queries. Explicit knowledge representation, such as databases or knowledge graphs, is needed for reliable question-answering that combines the factual recall of LLMs with efficient search capabilities. However, designing these knowledge structures is not an easy task.",
+          "url": "https://blog.anj.ai/2024/03/knowledge.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.anj.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-14:a10",
+          "order": 1,
+          "title": "➡️ JOIN THE MOST IMPORTANT GENAI CONVERSATIONS AT GOOGLE CLOUD NEXT ‘24",
+          "summary": "Google Cloud’s upcoming developer conference [11] is packed with immersive learning, community interactions, and a peek into the future of Google Cloud — with a focus on the latest tools for building AI-powered applications [12].",
+          "url": "https://cloud.withgoogle.com/next?utm_source=tldr&utm_medium=eblast&utm_campaign=FY24-Q2-global-ENDM33-physicalevent-er-next-2024-mc&utm_content=tldr-newsletter-ext-mar-14-ai",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.withgoogle.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a13",
+          "order": 2,
+          "title": "* Deep dive programs on gen AI",
+          "summary": "* 500+ sessions [14] (101 - 301 level) across 10 different tracks * Cutting-edge AI demos [12] and interactive learning",
+          "url": "https://cloud.withgoogle.com/next/session-library?session=SPTL201&utm_source=tldr&utm_medium=eblast&utm_campaign=FY24-Q2-global-ENDM33-physicalevent-er-next-2024-mc&utm_content=tldr-newsletter-ext-mar-11-ai",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.withgoogle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a15",
+          "order": 3,
+          "title": "PM PT on March 31, 2024. Register now ↗️",
+          "summary": "",
+          "url": "https://cloud.withgoogle.com/next?utm_source=tldr&utm_medium=eblast&utm_campaign=FY24-Q2-global-ENDM33-physicalevent-er-next-2024-mc&utm_content=tldr-newsletter-ext-mar-11-ai",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.withgoogle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a16",
+          "order": 4,
+          "title": "REACT GEIGER",
+          "summary": "React Geiger is a tool for \"audiolizing\" React performance issues. It runs in the background and makes little clicking noises during excessively slow component rerenders.",
+          "url": "https://github.com/kristiandupont/react-geiger?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a17",
+          "order": 5,
+          "title": "FINDER",
+          "summary": "Finder generates the shortest CSS selector for elements on web pages.",
+          "url": "https://github.com/antonmedv/finder?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a18",
+          "order": 6,
+          "title": "FLYDE",
+          "summary": "Flyde is an open-source visual programming language that aims to augment traditional coding practices. It is designed for integration with TypeScript/JavaScript codebases. Flyde features a VSCode extension, Node.js support, and browser compatibility.",
+          "url": "https://github.com/flydelabs/flyde?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-14:a19",
+          "order": 1,
+          "title": "SALT LABS RESEARCH FINDS SECURITY FLAWS WITHIN CHATGPT ECOSYSTEM",
+          "summary": "Researchers have identified significant security vulnerabilities within the ChatGPT ecosystem that potentially allow attackers to access users' accounts on third-party websites, such as GitHub, without their consent. These vulnerabilities were found both in the core ChatGPT platform and its plugins. They expose sensitive data and enable account takeovers through exploitation of the OAuth authentication process and other flaws in plugin frameworks.",
+          "url": "https://salt.security/blog/security-flaws-within-chatgpt-extensions-allowed-access-to-accounts-on-third-party-websites-and-sensitive-data?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "salt.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a20",
+          "order": 2,
+          "title": "COMPRESSING CHESS MOVES FOR FUN AND PROFIT",
+          "summary": "This article explores efficient chess move encoding to reduce database size and improve query speeds on a large chess website. The author developed a custom encoding that represents moves using fewer bits than standard text formats. This approach optimizes for common move types (pawn moves, captures) and in a test case, the encoding reduced file size by 74%.",
+          "url": "https://mbuffett.com/posts/compressing-chess-moves/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "mbuffett.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-03-14:a21",
+          "order": 1,
+          "title": "A FORMULA FOR RESPONSIVE FONT-SIZE",
+          "summary": "The CSS formula “font-size: calc(1rem + 0.25vw);” enables responsive font sizing, allowing text to scale smoothly across various screen widths and removing the need for traditional media query breakpoints.",
+          "url": "https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "jameshfisher.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a22",
+          "order": 2,
+          "title": "C++ SAFETY, IN CONTEXT",
+          "summary": "This article lays out a comprehensive view of C++ safety issues, advocating for cross-disciplinary collaboration across programming languages and security communities to address various security and safety threats within languages.",
+          "url": "https://herbsutter.com/2024/03/11/safety-in-context/?utm_source=tldrwebdev",
+          "reading_time_minutes": 28,
+          "source_domain": "herbsutter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a23",
+          "order": 3,
+          "title": "WRITE FOR OTHERS BUT MOSTLY FOR YOURSELF",
+          "summary": "The act of writing, particularly with the intention of public sharing, forced this author to find and understand gaps in their own knowledge, leading to deeper learning for themselves.",
+          "url": "https://jack-vanlightly.com/blog/2022/1/25/write-for-others-but-mostly-for-yourself?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "jack-vanlightly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-03-14:a24",
+          "order": 4,
+          "title": "CHEERP",
+          "summary": "Cheerp is a C/C++ compiler that optimizes code for WebAssembly and JavaScript, enabling easy integration of existing C/C++ libraries and applications into web environments.",
+          "url": "https://github.com/leaningtech/cheerp-meta?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

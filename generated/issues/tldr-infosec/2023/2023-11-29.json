@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-11-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-11-29",
+  "source_path": "TLDR InfoSec/article_29-11-2023.md",
+  "source_content_hash": "sha256:79b38fc6af01fc1575fa04a1819bd63c7043dc286e5480173808c4300f8f9711",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-11-29",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-29:a06",
+          "order": 1,
+          "title": "DESIGN FLAW IN GOOGLE WORKSPACE COULD LET ATTACKERS GAIN UNAUTHORIZED ACCESS",
+          "summary": "Google Workspace's domain-wide delegation feature has a severe design flaw dubbed DeleFriend that enables privilege escalation without admin access. Attackers could gain unauthorized Workspace API access for theft, exfiltration, and other unauthorized actions domain-wide. Successful exploitation of the flaw could allow exfiltration of sensitive data from Google services like Gmail, Drive, Calendar, and others.",
+          "url": "https://thehackernews.com/2023/11/design-flaw-in-google-workspace-could.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a07",
+          "order": 2,
+          "title": "CRITICAL VULNERABILITY FOUND IN RAY AI FRAMEWORK",
+          "summary": "A critical vulnerability in Ray, an open source compute framework for AI, could allow unauthorized access to all nodes. Tracked as CVE-2023-48023, the vulnerability allows remote attackers to submit or delete jobs without authentication. Furthermore, an attacker could retrieve sensitive information and execute arbitrary code.",
+          "url": "https://www.securityweek.com/critical-vulnerability-found-in-ray-ai-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a08",
+          "order": 3,
+          "title": "GOOGLE CHROME EMERGENCY UPDATE FIXES 6TH ZERO-DAY EXPLOITED IN 2023",
+          "summary": "Google released an advisory that it was aware of the active exploitation of CVE-2023-6345. This CVE addresses an integer overflow vulnerability in the Skia 2D graphics library. A fix is being rolled out to users.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-chrome-emergency-update-fixes-6th-zero-day-exploited-in-2023/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-29:a09",
+          "order": 1,
+          "title": "ANALYZING THE LITTERDRIFTER MALWARE",
+          "summary": "This article takes a deep dive into Gamaredon’s new LitterDrifter malware. LitterDrifter is a worm written in VBS that spreads via USB devices and communicates with a flexible C2 infrastructure. The article also contains indicators of compromise.",
+          "url": "https://research.checkpoint.com/2023/malware-spotlight-into-the-trash-analyzing-litterdrifter?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a10",
+          "order": 2,
+          "title": "POST-EXPLOITING A COMPROMISED ETCD CLUSTER",
+          "summary": "This post from NCCGroup presents a technique for compromising Kubernetes clusters given a root-compromised etcd host. The post provides an overview of how Kubernetes interacts with etcd and then delves into how to use a compromised etcd host to gain access to a cluster, followed by bypassing AdmissionControllers. The post concludes with some potential mitigation techniques.",
+          "url": "https://research.nccgroup.com/2023/11/07/post-exploiting-a-compromised-etcd-full-control-over-the-cluster-and-its-nodes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "research.nccgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a11",
+          "order": 3,
+          "title": "ADVERSARIAL ATTACKS ON LLMS",
+          "summary": "This thorough article by Lilian Weng dives deep into different types of attacks on Large Language Models (LLMs). Weng discusses various attacks and prevention strategies in depth.",
+          "url": "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "lilianweng.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-29:a12",
+          "order": 1,
+          "title": "KEYLOGGER MALWARE — AN IN-DEPTH ANALYSIS OF INFECTED USER DEVICES",
+          "summary": "Keyloggers are used to steal typed passwords, credit card numbers, and private conversations — while bypassing protections such as VPN. Between March to August 2023, Moonlock detected a large number of keylogger samples [12] on macOS devices. Their report highlights the distribution of keyloggers, core modules, anti-analysis techniques, code examples, API usage, detection methods, and more.",
+          "url": "https://moonlock.com/keylogger-malware-family?utm_source=TLDR&utm_medium=cpc&utm_campaign=2023_11&utm_term=email",
+          "reading_time_minutes": null,
+          "source_domain": "moonlock.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a12",
+          "order": 2,
+          "title": "Read the full findings on Moonlock Lab (ungated)",
+          "summary": "",
+          "url": "https://moonlock.com/keylogger-malware-family?utm_source=TLDR&utm_medium=cpc&utm_campaign=2023_11&utm_term=email",
+          "reading_time_minutes": null,
+          "source_domain": "moonlock.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a13",
+          "order": 3,
+          "title": "SCAPY",
+          "summary": "Scapy is a Python-based interactive packet manipulation program and library. It is able to forge or decode packets of a wide number of protocols, send them on the wire, capture them, store or read them using pcap files, match requests and replies, and much more. Scapy is designed to allow fast packet prototyping by using default values that work.",
+          "url": "https://github.com/secdev/scapy?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a14",
+          "order": 4,
+          "title": "YOUSHALLNOTPASS",
+          "summary": "YouShallNotPass executes administrator-specified checks on CI/CD pipelines to prevent unauthorized workflows from executing suspicious commands on sensitive systems. The tool includes support for GitLab runners and experimental support for GitHub.",
+          "url": "https://github.com/kudelskisecurity/youshallnotpass?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a15",
+          "order": 5,
+          "title": "ICEKUBE: FINDING COMPLEX ATTACK PATHS IN KUBERNETES CLUSTERS",
+          "summary": "IceKube is an open-source tool that creates graph databases of resource configurations and relationships in Kubernetes clusters. It can analyze these relationships and identify potential attacks by combining them to query for routes using one or more of the 25 attack techniques it currently implements.",
+          "url": "https://labs.withsecure.com/tools/icekube--finding-complex-attack-paths-in-kubernetes-clusters?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "labs.withsecure.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-29:a16",
+          "order": 1,
+          "title": "ABUSING MICROSOFT ACCESS “LINKED TABLE” FEATURE TO PERFORM NTLM FORCED AUTHENTICATION ATTACKS",
+          "summary": "This post goes through how Microsoft Access can be used to perform a remote attack. It is done by using the \"linking to remote SQL Server tables\" feature, enabling attackers to leak the Windows user’s NTLM tokens to any attacker-controlled server. The attack can be launched as long as the victim opens an .accdb or .mdb file.",
+          "url": "https://research.checkpoint.com/2023/abusing-microsoft-access-linked-table-feature-to-perform-ntlm-forced-authentication-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a17",
+          "order": 2,
+          "title": "EUROPOL ARREST HACKERS ALLEGEDLY BEHIND STRING OF RANSOMWARE ATTACKS",
+          "summary": "Europol has arrested five individuals who have been accused of a string of ransomware attacks affecting more than 1,800 victims worldwide. The police also seized cryptocurrency assets, including almost four million hryvnias (around $110,000), and other alleged evidence of illegal activities.",
+          "url": "https://techcrunch.com/2023/11/28/europol-hackers-ransomware-lockergoga-hive/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a18",
+          "order": 3,
+          "title": "IRANIAN HACKER GROUP CYBER AV3NGERS HACKED THE MUNICIPAL WATER AUTHORITY OF ALIQUIPPA IN PENNSYLVANIA",
+          "summary": "Over the weekend, Iranian hacker group Cyber Av3ngers hacked the Municipal Water Authority of Aliquippa in Pennsylvania and took control of one of its booster stations. However, the attack did not impact the operations at the facility, the water supply, or the drinking water.",
+          "url": "https://securityaffairs.com/154818/hacktivism/cyber-av3ngers-hacked-municipal-water-authority-of-aliquippa.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-29:a19",
+          "order": 1,
+          "title": "2023 AI CODE SECURITY REPORT",
+          "summary": "This report surveyed 537 people about AI code completion tools and their use for secure development and found that 96% of teams use AI coding tools and over half said that AI coding tools commonly generate insecure code suggestions.",
+          "url": "https://snyk.io/reports/ai-code-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "snyk.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a20",
+          "order": 2,
+          "title": "GUIDELINES FOR SECURE AI SYSTEM DEVELOPMENT",
+          "summary": "The US and UK cybersecurity agencies CISA and NCSC have published security-focused guidance for the developers of systems that leverage AI, promoting the implementation of secure-by-design principles in AI/ML development.",
+          "url": "https://www.ncsc.gov.uk/files/Guidelines-for-secure-AI-system-development.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-29:a21",
+          "order": 3,
+          "title": "PLEX UPDATE RAISES PRIVACY CONCERNS",
+          "summary": "Plex has rolled out a new feature called Discover Together. It is enabled by default and allows friends and those with access to the Plex server to view anything that a user watched or rated. Many Plex users are enraged by this update and feel that it violates the principles of self-hosting.",
+          "url": "https://www.techspot.com/news/100979-plex-update-raises-concerns-over-potential-sharing-porn.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

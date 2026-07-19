@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-09-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-09-29",
+  "source_path": "TLDR InfoSec/article_29-09-2023.md",
+  "source_content_hash": "sha256:2127d3b025dfe1d2dc8750a1e6dc513375d71300263266ea0a81db10f5ae8ea1",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-09-29",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-29:o001",
+          "order": 1,
+          "title": "FAKE BITWARDEN SITES PUSH NEW PASSWORD STEALER",
+          "summary": "Fake websites have been popping up that offer a Trojan masquerading as the Bitwarden password manager that includes a new password-stealing malware dubbed ZenRAT. The malware specifically targets Windows devices and directs macOS or Linux users to the official download page. The malware uses WMI queries to acquire system information in addition to the credentials and sends them in a zip to a C2.",
+          "url": "https://www.bleepingcomputer.com/news/security/fake-bitwarden-sites-push-new-zenrat-password-stealing-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o002",
+          "order": 2,
+          "title": "RUSSIAN ZERO-DAY SELLER OFFERS $20M FOR HACKING PHONES",
+          "summary": "Operation Zero, a Russian company specializing in buying and selling zero-day software exploits, has increased its payments for zero-day vulnerabilities in iPhones and Android devices from $200,000 to $20 million. While traditionally, bug bounty platforms inform vendors of vulnerabilities, companies like Operation Zero sell these vulnerabilities to governments, leading to a lucrative yet unregulated gray market where prices and customer identities remain opaque.",
+          "url": "https://techcrunch.com/2023/09/27/russian-zero-day-seller-offers-20m-for-hacking-android-and-iphones/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o003",
+          "order": 3,
+          "title": "PASSWORDS",
+          "summary": "A threat actor is using an alias of GitHub’s Dependabot feature to install password-stealing malware. By mimicking the Dependabot, which automatically scans projects for vulnerabilities, the attacker has convinced users to accept malicious commits.",
+          "url": "https://www.itpro.com/security/cyber-attacks/hackers-are-spoofing-themselves-as-githubs-dependabot-to-steal-user-passwords?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "itpro.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-29:o004",
+          "order": 1,
+          "title": "OKTA FOR RED TEAMERS",
+          "summary": "An article providing an overview of some Okta features that are useful for red teaming. The first portion of the article discusses features that allow running Okta with Active Directory environments and how to pivot between the two. The article also includes a discussion of using a fake SAML provider with Okta.",
+          "url": "https://www.trustedsec.com/blog/okta-for-red-teamers?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "trustedsec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o005",
+          "order": 2,
+          "title": "MEET MADPOT, A THREAT INTELLIGENCE TOOL FROM AMAZON",
+          "summary": "MadPot is a large-scale honeypot network that Amazon runs to catch threats and gain threat intelligence which it shares publicly or with government agencies. MadPot intercepts over 100 million attempts per day and the insights can feed into AWS to bolster their threat detection and prevention offerings such as GuardDuty.",
+          "url": "https://www.aboutamazon.com/news/aws/amazon-madpot-stops-cybersecurity-crime?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aboutamazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o006",
+          "order": 3,
+          "title": "CHROME GRAPHICS AS SEEN BY ATTACKERS",
+          "summary": "This document provides an overview of how WebGPU works through the eyes of an attacker, discusses vulnerability research methodologies, and describes important bugs found during the research. The report aims to give the security community a deeper understanding of vulnerabilities that may come with the addition of WebGPU.",
+          "url": "https://chromium.googlesource.com/chromium/src/+/main/docs/security/research/graphics/webgpu_technical_report.md?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "chromium.googlesource.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-29:o007",
+          "order": 1,
+          "title": "LDAPWORDLISTHARVESTER",
+          "summary": "LDAPWordlistHarvester is a tool for generating wordlists from information present in an LDAP for cracking non-random passwords of domain accounts. Once you have the wordlist, you can use hashcat with rules to crack passwords.",
+          "url": "https://github.com/p0dalirius/LDAPWordlistHarvester?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o008",
+          "order": 2,
+          "title": "CISA LAUNCHES NATIONAL CAMPAIGN TO RAISE ONLINE SECURITY AWARENESS",
+          "summary": "The Cybersecurity and Infrastructure Security Agency has launched a nationwide cybersecurity campaign called \"Secure Our World\". The campaign is part of CISA's Cybersecurity Awareness Program, which aims to raise public awareness of cyber threats and online security.",
+          "url": "https://executivegov.com/2023/09/cisa-launches-national-campaign-to-raise-online-security-awareness/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "executivegov.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o009",
+          "order": 3,
+          "title": "PASSKEYS ARE GENERALLY AVAILABLE ON GITHUB",
+          "summary": "GitHub has made passkeys available to all users on its platform, following the successful beta launch in July.",
+          "url": "https://github.blog/2023-09-21-passkeys-are-generally-available/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-29:o010",
+          "order": 1,
+          "title": "THE MYSTERY OF THE CVES THAT ARE NOT VULNERABILITIES",
+          "summary": "An unknown party submitted a large number of backdated CVEs with high CVSS scores. The problem with this is that a researcher has found that many of these are just automatic submissions that are not actually vulnerabilities. This could cause issues when these CVEs are pulled in by systems that don’t check whether they are disputed.",
+          "url": "https://www.malwarebytes.com/blog/news/2023/09/the-mystery-of-the-cves-that-are-not-vulnerabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o011",
+          "order": 2,
+          "title": "SONY LAUNCHES INVESTIGATION AFTER POTENTIAL BREACH",
+          "summary": "A ransomware group named Ransomed.vc claims to have breached Sony's systems and has threatened to sell the stolen data. Although the claims remain unconfirmed, Cyber Security Connect reported that the group provided evidence such as screenshots of internal pages and Java files.",
+          "url": "https://www.ign.com/articles/sony-launches-investigation-after-ransomware-group-claims-to-have-breached-companys-systems?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "ign.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o012",
+          "order": 3,
+          "title": "SECURITY RESEARCHERS HIGHLIGHT TWO POTENTIAL ICLOUD KEYCHAIN ISSUES",
+          "summary": "Potential iCloud Keychain issues have been identified by security researchers in iOS 17 and macOS Sonoma. The first problem is that the feature may automatically activate upon upgrading, even if it was previously turned off. The second issue is that if users disable iCloud Keychain, the data might not be deleted from Apple's servers, contrary to past practice.",
+          "url": "https://9to5mac.com/2023/09/27/icloud-keychain-issues/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "9to5mac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-09-29:o013",
+          "order": 1,
+          "title": "RASPBERRY PI 5 ANNOUNCED",
+          "summary": "The next generation of Raspberry Pi will be released this October and features 2-3x the speed of the previous model.",
+          "url": "https://www.raspberrypi.com/products/raspberry-pi-5/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "raspberrypi.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o014",
+          "order": 2,
+          "title": "GOVERNMENT SHUTDOWN COULD BENCH 80% OF CISA STAFF",
+          "summary": "Roughly 80% of the staff at US cybersecurity agency CISA may be furloughed if a government shutdown occurs this week. While some personnel involved with cybersecurity operations are likely to be classified as essential and exempt from furlough, there will be fewer staff available for security monitoring and response.",
+          "url": "https://www.securityweek.com/80-of-cisa-staff-at-risk-of-furlough-as-government-shutdown-looms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-09-29:o015",
+          "order": 3,
+          "title": "MISCONFIGURED TESLAMATE INSTANCES PUT TESLA CAR OWNERS AT RISK",
+          "summary": "Misconfigured instances of third-party data logging application TeslaMate may potentially expose Tesla cars and their drivers to malicious attacks, according to IoT security intelligence firm Redinent. While TeslaMate is a useful tool for tracking car data, it poses a significant risk if not properly configured.",
+          "url": "https://packetstormsecurity.com/news/view/35060/Misconfigured-TeslaMate-Instances-Put-Tesla-Car-Owners-At-Risk.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "packetstormsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

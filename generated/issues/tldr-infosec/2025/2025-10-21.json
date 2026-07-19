@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-21",
+  "source_path": "TLDR InfoSec/article_21-10-2025.md",
+  "source_content_hash": "sha256:cb47f79fc5f75f0e837b6f31fbe364e570221130ec5759c5f5181d2a038da745",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a04",
+          "order": 1,
+          "title": "WHAT COMES AFTER THE CORPORATE FIREWALL?",
+          "summary": "The corporate firewall is a relic of bygone times. With employees working from coffee shops, airports, and home networks, traditional perimeter security leaves your endpoints exposed to unmanaged devices and compromised networks.",
+          "url": "https://www.threatlocker.com/platform/network-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=network_control_q3_25&utm_content=network_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a05",
+          "order": 2,
+          "title": "See Network Control in action",
+          "summary": "",
+          "url": "https://www.threatlocker.com/platform/network-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=network_control_q4_25&utm_content=network_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a06",
+          "order": 1,
+          "title": "131 CHROME EXTENSIONS CAUGHT HIJACKING WHATSAPP WEB FOR MASSIVE SPAM CAMPAIGN",
+          "summary": "Socket researchers discovered 131 malicious Chrome extensions with over 20,000 active users that inject code into WhatsApp Web to automate bulk spam campaigns targeting Brazilian users. The extensions, marketed as CRM tools with names like “YouSeller” and “ZapVende,” share identical codebases and are distributed through a franchise model operated by DBX Tecnologia, violating Google's Chrome Web Store policies. The nine-month campaign aims to bypass WhatsApp's rate limits and anti-spam controls by automating message sending without user confirmation.",
+          "url": "https://thehackernews.com/2025/10/131-chrome-extensions-caught-hijacking.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a07",
+          "order": 2,
+          "title": "FOREIGN HACKERS BREACHED A US NUCLEAR WEAPONS PLANT VIA SHAREPOINT FLAWS",
+          "summary": "Foreign threat actors breached the Kansas City National Security Campus, which produces 80% of non-nuclear components for US nuclear weapons, by exploiting unpatched Microsoft SharePoint vulnerabilities CVE-2025-53770 (spoofing) and CVE-2025-49704 (RCE) in July, with attribution disputed between Chinese nation-state groups (Linen Typhoon, Violet Typhoon, and Storm-2603) and Russian cybercriminals. While the breach targeted IT systems rather than air-gapped OT/manufacturing environments, experts warn that even unclassified technical data such as precision requirements, tolerances, and supply chain details could provide adversaries with strategic intelligence about US weapons capabilities and manufacturing processes. Security teams should prioritize patching SharePoint on-premises servers, implement a comprehensive zero-trust architecture across both IT and OT environments as outlined in DoD's emerging OT fan chart framework, establish robust IT/OT segmentation to prevent lateral movement, and recognize that nation-state actors may acquire zero-day knowledge through MAPP program misuse or underground exchanges before patches are available.",
+          "url": "https://www.csoonline.com/article/4074962/foreign-hackers-breached-a-us-nuclear-weapons-plant-via-sharepoint-flaws.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a08",
+          "order": 3,
+          "title": "EMAIL BOMBS EXPLOIT LAX AUTHENTICATION IN ZENDESK",
+          "summary": "",
+          "url": "https://krebsonsecurity.com/2025/10/email-bombs-exploit-lax-authentication-in-zendesk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a09",
+          "order": 1,
+          "title": "SECURING AMAZON BEDROCK API KEYS: BEST PRACTICES FOR IMPLEMENTATION AND MANAGEMENT",
+          "summary": "AWS recommends using temporary STS credentials over API keys when possible, but when API keys are necessary, short-term keys with built-in expiration are preferred over long-term keys. Organizations should implement comprehensive monitoring through CloudTrail events, EventBridge rules, and AWS Config to detect API key creation and usage while using SCPs to control or block key creation entirely if not needed. The article provides detailed guidance on identifying, protecting, detecting, and responding to API key security events across the credential lifecycle.",
+          "url": "https://aws.amazon.com/blogs/security/securing-amazon-bedrock-api-keys-best-practices-for-implementation-and-management/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a10",
+          "order": 2,
+          "title": "HOW A FAKE AI RECRUITER DELIVERS FIVE STAGED MALWARE DISGUISED AS A DREAM JOB",
+          "summary": "A sophisticated phishing scheme targets developers by posing as an AI recruiter offering an enticing job. Victims are tricked into cloning and running a malicious code repository as part of a “technical assessment,” which then unfolds the attack over five stages: first, a hidden backdoor is silently activated, followed by advanced JavaScript and Python malware that steals credentials, crypto wallets, and browser data, monitors keystrokes and clipboard, and installs remote-access tools like AnyDesk. The malware uses deep obfuscation and persistence mechanisms to resist removal and detection, ultimately handing attackers full control and ongoing surveillance of the compromised system.",
+          "url": "https://medium.com/deriv-tech/how-a-fake-ai-recruiter-delivers-five-staged-malware-disguised-as-a-dream-job-64cc68fec263?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a11",
+          "order": 3,
+          "title": "HOW I REVERSED AMAZON'S KINDLE WEB OBFUSCATION BECAUSE THEIR APP SUCKED",
+          "summary": "Frustrated by Amazon's Kindle app instability and restrictive DRM, this author set out to reverse-engineer Amazon's web obfuscation system. Instead of granting simple access to purchased ebooks, Amazon uses a system where the actual text is encoded as glyph IDs rather than characters, with the mapping randomized for every batch of pages. Overcoming these sophisticated protections required pixel-level glyph matching and leveraging font metrics to reconstruct the book, eventually allowing the owner to access their purchase in a way they controlled.",
+          "url": "https://blog.pixelmelt.dev/kindle-web-drm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.pixelmelt.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a12",
+          "order": 1,
+          "title": "ALL YOUR AST TOOLS IN ONE AI-POWERED PLATFORM",
+          "summary": "Drowning in alerts? Invicti ASPM [12] unifies DAST, SAST, SCA, API, container testing, and more under one platform. AppSec leaders see test results in a single view, developers get automated remediation workflows, and organizations track risk with clear KPIs.",
+          "url": "https://www.invicti.com/platform-overview/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=secondary-aspm&utm_content=251015-demo-secondary-text&utm_term=brand",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a12",
+          "order": 2,
+          "title": "SEE THE PLATFORM",
+          "summary": "",
+          "url": "https://www.invicti.com/platform-overview/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=secondary-aspm&utm_content=251015-demo-secondary-text&utm_term=brand",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a13",
+          "order": 3,
+          "title": "NANOCHAT LETS YOU BUILD YOUR OWN HACKABLE LLM",
+          "summary": "Andrej Karpathy's nanochat is an open-source project that enables the creation of a simple ChatGPT clone for approximately $100 using 8,000 lines of minimal-dependency code and a single speedrun.sh script, producing a 1.9 billion parameter model trained on 38 billion tokens in about 4 hours on NVIDIA 8XH100 GPU hardware. The accessible codebase allows security researchers and developers to experiment with LLM architecture, understand model training processes, and test modifications without commercial platform restrictions, with scaling to $1,000 enabling significantly more capable models for math, coding, and reasoning tasks. This transparent, hackable approach provides security professionals with valuable insight into LLM internals for threat modeling, adversarial testing, and understanding AI system vulnerabilities that commercial black-box models obscure.",
+          "url": "https://hackaday.com/2025/10/20/nanochat-lets-you-build-your-own-hackable-llm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackaday.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a14",
+          "order": 4,
+          "title": "DOMAINSTACK",
+          "summary": "Domainstack is an all‑in‑one app for exploring domain names. Search any domain (e.g., github.com) and get instant insights, including WHOIS/RDAP lookups, DNS records, SSL certificates, HTTP headers, hosting details, geolocation, and SEO signals.",
+          "url": "https://github.com/jakejarvis/domainstack.io?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a15",
+          "order": 5,
+          "title": "SILENTPUSH (PRODUCT LAUNCH)",
+          "summary": "Silent Push offers proactive threat intelligence, detecting and mapping malicious infrastructure pre-attack as it supplies “indicators of future compromise” via continuous internet scans. It also supports threat hunting and brand protection, and integrates with existing security tools or can operate standalone.",
+          "url": "https://www.silentpush.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "silentpush.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a16",
+          "order": 1,
+          "title": "WINOS 4.0 HACKERS EXPAND TO JAPAN AND MALAYSIA WITH NEW MALWARE",
+          "summary": "Winos 4.0 threat actors have expanded operations from China and Taiwan to Japan and Malaysia, deploying HoldingHands RAT through phishing emails with fake Finance Ministry PDFs containing embedded malicious links hosted primarily on Tencent Cloud infrastructure. The sophisticated multi-stage attack chain uses digitally signed executables, anti-VM checks, targets Norton/Avast/Kaspersky for evasion, leverages Windows Task Scheduler for persistence, and injects payloads into taskhostw.exe with process monitoring for re-injection, while newer variants added C2 IP update capabilities via registry (HKEY_CURRENT_USER\\SOFTWARE\\HHClient). Security teams should monitor for suspicious PDF attachments impersonating government finance documents, block identified C2 infrastructure, including IP 156.251.17[.]9 and domain twczb[.]com, implement behavioral detection for Task Scheduler manipulation and unusual dokan2.dll/TimeBrokerClient.dll activity in System32, and trace Tencent Cloud APPID patterns to identify related phishing infrastructure.",
+          "url": "https://securityaffairs.com/183580/security/winos-4-0-hackers-expand-to-japan-and-malaysia-with-new-malware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a17",
+          "order": 2,
+          "title": "RUSSIAN LYNK GROUP LEAKS SENSITIVE UK MOD FILES, INCLUDING INFO ON EIGHT MILITARY BASES",
+          "summary": "Russian cybercrime group Lynx breached Dodd Group, a UK Ministry of Defence contractor, on September 23, stealing approximately 4TB of data, including sensitive files on eight RAF and Royal Navy bases such as RAF Lakenheath (hosting US F-35 jets and believed nuclear weapons storage), RAF Portreath (NATO radar site), and RAF Predannack (UK Drone Hub). The leaked data includes roughly 1,000 documents containing staff names, emails, phone numbers, vehicle details, visitor logs, security guidance, and construction records marked as “Controlled” or “Official Sensitive,” with the gang publishing data after failed ransom negotiations. Security professionals should prioritize third-party risk management and contractor security assessments, as supply chain compromises continue to expose critical defense infrastructure and personnel data that nation-state actors can leverage for intelligence gathering or future attacks.",
+          "url": "https://securityaffairs.com/183640/data-breach/russian-lynk-group-leaks-sensitive-uk-mod-files-including-info-on-eight-military-bases.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-21:a18",
+          "order": 1,
+          "title": "SEE HOW ONE COMPANY AVOIDS MILLION-DOLLAR DISCOVERY BILLS",
+          "summary": "When Slack data becomes evidence, costs skyrocket. Onna makes discovery fast, predictable, and secure—transforming liability into manageable risk.",
+          "url": "https://www.revealdata.com/case-study/how-benlabs-avoids-seven-figure-ediscovery-costs-with-onnas-prophylactic-approach?utm_campaign=19424793-25Q3+BENlabs+Case+Study&utm_source=email&utm_medium=Email+ads&utm_content=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "revealdata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a18",
+          "order": 2,
+          "title": "Read the case study now",
+          "summary": "",
+          "url": "https://www.revealdata.com/case-study/how-benlabs-avoids-seven-figure-ediscovery-costs-with-onnas-prophylactic-approach?utm_campaign=19424793-25Q3+BENlabs+Case+Study&utm_source=email&utm_medium=Email+ads&utm_content=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "revealdata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a19",
+          "order": 3,
+          "title": "XUBUNTU.ORG MIGHT BE COMPROMISED",
+          "summary": "The Xubuntu.org website's torrent download links are serving malicious ZIP files containing a suspicious Windows executable with a 2026 copyright date (despite being 2025) and no actual torrent file inside.",
+          "url": "https://links.tldrnewsletter.com/BHCtD6",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-21:a20",
+          "order": 4,
+          "title": "MICROSOFT: OCTOBER UPDATES BREAK USB INPUT IN WINDOWS RECOVERY",
+          "summary": "Microsoft's October 2025 security updates (KB5066835) break USB mouse and keyboard functionality in Windows Recovery Environment (WinRE) on Windows 11 24H2, 25H2, and Windows Server 2025.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-updates-break-usb-mice-and-keyboards-in-windows-recovery/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

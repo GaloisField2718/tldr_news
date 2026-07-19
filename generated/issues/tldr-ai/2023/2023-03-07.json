@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-ai:2023-03-07",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2023-03-07",
+  "source_path": "TLDR AI/article_07-03-2023.md",
+  "source_content_hash": "sha256:09000702af3b26221e01262f3be6897eb6d9e89567575a05fc7221d68e96dcd4",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR AI 2023-03-07",
+  "sections": [
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-07:o001",
+          "order": 1,
+          "title": "GOOGLE’S UNIVERSAL SPEECH MODEL",
+          "summary": "",
+          "url": "https://ai.googleblog.com/2023/03/universal-speech-model-usm-state-of-art.html?utm_source=tldrai",
+          "reading_time_minutes": 7,
+          "source_domain": "ai.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o002",
+          "order": 2,
+          "title": "AI IS BEING USED TO DETECT BREAST CANCER",
+          "summary": "",
+          "url": "https://www.nytimes.com/2023/03/05/technology/artificial-intelligence-breast-cancer-detection.html?utm_source=tldrai",
+          "reading_time_minutes": 7,
+          "source_domain": "nytimes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o003",
+          "order": 3,
+          "title": "MICROSOFT LAUNCHES COPILOT",
+          "summary": "Microsoft, having brought artificial intelligence to its battle with Google over search, is now turning to the latest AI technology to catch up with rivals in the corporate applications market such as Oracle, Salesforce, and SAP. Microsoft’s new AI “copilot” will help answer customer calls, summarize sales meetings, and generate marketing pitches.",
+          "url": "https://archive.ph/T0IJc?utm_source=tldrai",
+          "reading_time_minutes": 4,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "research-innovation",
+      "heading": "RESEARCH & INNOVATION",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-07:o004",
+          "order": 1,
+          "title": "HUMAN MOTION DIFFUSION AS A GENERATIVE PRIOR",
+          "summary": "The paper proposes a method to address the low availability of data in motion generation tasks by using a pre-trained diffusion-based model as a generative prior. The method includes a zero-shot setting that generates long animations with controlled transitions, a few-shot setting that generates two-person interaction, and a fine-tuning setting that enables fine-grained control and editing. The proposed method outperforms state-of-the-art approaches in quality scores and interaction levels in a user study.",
+          "url": "https://priormdm.github.io/priorMDM-page/?utm_source=tldrai",
+          "reading_time_minutes": 4,
+          "source_domain": "priormdm.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o005",
+          "order": 2,
+          "title": "IN-CONTEXT INSTRUCTION LEARNING",
+          "summary": "The paper presents a new approach to instruction learning called In-Context Instruction Learning (ICIL) that significantly improves the zero-shot task generalization performance of Large Language Models (LLMs). While previous approaches to instruction learning have been predominantly fine-tuning based, ICIL uses a single fixed prompt to evaluate all tasks, resulting in a 9.3% improvement in performance for the most powerful instruction-fine-tuned baseline. ICIL is shown to be complementary to instruction-based fine-tuning, making it a promising approach for improving zero-shot task generalization for LLMs.",
+          "url": "https://arxiv.org/abs/2302.14691?utm_source=tldrai",
+          "reading_time_minutes": 20,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o006",
+          "order": 3,
+          "title": "STYLIZE YOUR FACE IN ONLY ONE-SHOT",
+          "summary": "The paper presents StyO, a new model for one-shot face stylization that combines content and style attributes from input images using disentanglement and recombination strategies. The model uses latent diffusion models and consists of two modules: Identifier Disentanglement Learner (IDL) and Fine-grained Content Controller (FCC). Evaluation results show that StyO outperforms current state-of-the-art methods in producing high-quality stylized face images.",
+          "url": "https://arxiv.org/abs/2303.03231?utm_source=tldrai",
+          "reading_time_minutes": 15,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-resources",
+      "heading": "ENGINEERING & RESOURCES",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-07:o007",
+          "order": 1,
+          "title": "FASTER MODEL INIT ON GPU",
+          "summary": "Loading language models to GPUs can be painfully slow, potentially minutes long. This is because they tend to load all the weights onto the CPU before transferring them to the GPU. Instead of this process, you can write an initialization context manager which puts the weights directly on the GPU - leading to pretty dramatic savings.",
+          "url": "http://lernapparat.de/faster-model-init?utm_source=tldrai",
+          "reading_time_minutes": 7,
+          "source_domain": "lernapparat.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o008",
+          "order": 2,
+          "title": "AN OPEN-SOURCE FRAMEWORK FOR IN-CONTEXT LEARNING",
+          "summary": "The authors introduce OpenICL, an open-source toolkit that facilitates In-Context Learning (ICL) and Large Language Model (LLM) evaluation. ICL is a new paradigm for LLM evaluation that adapts pre-trained models to unseen tasks without parameter updates. OpenICL provides a flexible architecture that users can easily combine with different components to meet their requirements. The toolkit also includes various state-of-the-art retrieval and inference methods, making it an efficient and robust tool for LLM evaluation on a wide range of Natural Language Processing (NLP) tasks.",
+          "url": "https://github.com/Shark-NLP/OpenICL?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o009",
+          "order": 3,
+          "title": "WORDS AS IMAGE - SEMANTIC TYPOGRAPHY",
+          "summary": "Semantic Typography is where letters in a word are shaped in such a way to reflect the meaning of the word. So the A in Paris might look like the Eiffel tower. This is typically a very labor intensive process. However, using a differentiable renderer and a strong text-to-image prior, it is now feasible to automate some of this process. A delightful piece of work with fun visual examples included.",
+          "url": "https://wordasimage.github.io/Word-As-Image-Page/?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "wordasimage.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-07:o010",
+          "order": 1,
+          "title": "THE WALUIGI EFFECT",
+          "summary": "",
+          "url": "https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post?utm_source=tldrai",
+          "reading_time_minutes": 20,
+          "source_domain": "lesswrong.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o011",
+          "order": 2,
+          "title": "RECREATING FLAMINGO - RETROSPECTIVE",
+          "summary": "",
+          "url": "https://docs.google.com/document/d/1ZNGyVWYFUbzV0xuei4SED2QAakGjMpaaQALcKYQm46U/edit",
+          "reading_time_minutes": 5,
+          "source_domain": "docs.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2023-03-07:o012",
+          "order": 1,
+          "title": "THOUSANDS SCAMMED BY AI VOICES",
+          "summary": "",
+          "url": "https://arstechnica.com/tech-policy/2023/03/rising-scams-use-ai-to-mimic-voices-of-loved-ones-in-financial-distress/?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o013",
+          "order": 2,
+          "title": "A DEEP DIVE INTO THE AI OBJECTIVE INSTITUTE",
+          "summary": "Inspired by digital-privacy pioneer Peter Eckersley, the AI Objective Institute is working toward guiding AI toward “human flourishing”",
+          "url": "https://archive.ph/lViGi?utm_source=tldrai",
+          "reading_time_minutes": 10,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2023-03-07:o014",
+          "order": 3,
+          "title": "LLAMA INT8",
+          "summary": "LLaMA int8 is a fork of the LLaMA code that runs LLaMA-13B comfortably within 24 GiB of RAM.",
+          "url": "https://github.com/tloen/llama-int8?utm_source=tldrai",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

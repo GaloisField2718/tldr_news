@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-03-27",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-27",
+  "source_path": "TLDR Web Dev/article_27-03-2025.md",
+  "source_content_hash": "sha256:42e879302410bc41782a2677a9854eb75eecc366184450704b75353bd77fcb69",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-27",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-27:a04",
+          "order": 1,
+          "title": "HOW WE MADE OUR RICH TEXT EDITOR LOAD FASTER",
+          "summary": "CKEditor 5 initially struggled with performance issues when loading large, complex documents due to its multi-layered architecture. To fix these issues, its team reduced redundant conversions, improved tree traversal, and batched operations. As a result, document load times were reduced by 6–7x, showing the power of improving underlying algorithms within code rather than focusing on JavaScript micro-optimizations first.",
+          "url": "https://ckeditor.com/blog/how-we-made-our-rich-text-editor-load-faster-part-1/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "ckeditor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a05",
+          "order": 2,
+          "title": "SHARDING PGVECTOR",
+          "summary": "Pgvector is a PostgreSQL extension for vector embeddings. PgDog scales `pgvector` by sharding the vector index. It distributes shards across multiple machines by using IVFFlat's existing vector space partitioning and K-means clustering, allowing for parallel queries based on proximity to centroids. This improves search performance, especially with larger datasets.",
+          "url": "https://pgdog.dev/blog/sharding-pgvector?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "pgdog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a06",
+          "order": 3,
+          "title": "UI ALGORITHMS: A TINY UNDO STACK",
+          "summary": "This article shows a simple implementation of an undo/redo stack in JavaScript. Instead of using a single stack with a pointer, the implementation uses two separate stacks, \"past\" and \"future\", to represent undoable and redoable actions, respectively, avoiding common indexing errors. It also addresses the pass-by-reference issue in JavaScript by using structuredClone() to guarantee that the undo and redo functions operate on cloned copies of the data, maintaining idempotency.",
+          "url": "https://blog.julik.nl/2025/03/a-tiny-undo-stack?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.julik.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-27:a07",
+          "order": 1,
+          "title": "BREADCRUMBS ARE DEAD IN WEB DESIGN",
+          "summary": "Breadcrumbs are obsolete in web design today due to the shift from hierarchical navigation to dynamic, search-first, and AI-driven user experiences. Mobile-first design, predictive navigation, and personalized content recommendations have made traditional breadcrumb trails redundant.",
+          "url": "https://webdesignerdepot.com/breadcrumbs-are-dead-in-web-design/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "webdesignerdepot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a08",
+          "order": 2,
+          "title": "YOU SHOULD KNOW THIS BEFORE CHOOSING NEXT.JS",
+          "summary": "Vercel tightly couples Next.js with its own infrastructure, which prevents other providers from fully supporting the framework due to a lack of adapters, official serverless support, and Vercel-specific code paths. Its handling of a recent security vulnerability is concerning as it delayed notifying other providers.",
+          "url": "https://eduardoboucas.com/posts/2025-03-25-you-should-know-this-before-choosing-nextjs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "eduardoboucas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a09",
+          "order": 3,
+          "title": "A LOVE LETTER TO THE CSV FORMAT",
+          "summary": "CSV's strengths include its streamability, appendability, dynamic typing, and the unique property of remaining valid when reversed, which allows for efficient processing of the last rows. Its often-overlooked advantages make it very valuable still, especially when simplicity and flexibility are needed over features like strict typing and column-oriented access.",
+          "url": "https://github.com/medialab/xan/blob/master/docs/LOVE_LETTER.md?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-27:a10",
+          "order": 1,
+          "title": "SEMANTIC SEARCH EXCELLENCE — FROM FOUNDATIONAL TEXT SEARCH TO RAG",
+          "summary": "Join the Elastic team to learn how to build search that understands the meaning of a query, and the choices and options along this path: foundational text search, RAG, vector databases, and using ESRE for dynamically fine-tuning search relevance based on user behavior.",
+          "url": "https://www.elastic.co/virtual-events/getting-started-semantic-search-excellence-live?utm_source=publisher-direct&utm_medium=tldr&utm_campaign=webdev-semantic-search-webinar-gc",
+          "reading_time_minutes": null,
+          "source_domain": "elastic.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a10",
+          "order": 2,
+          "title": "Attend live on April 23",
+          "summary": "",
+          "url": "https://www.elastic.co/virtual-events/getting-started-semantic-search-excellence-live?utm_source=publisher-direct&utm_medium=tldr&utm_campaign=webdev-semantic-search-webinar-gc",
+          "reading_time_minutes": null,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a11",
+          "order": 3,
+          "title": "COCOMMIT",
+          "summary": "Cocommit is a command-line tool that uses LLMs to analyze and improve Git commit messages. It uses LangChain to support various LLM providers, offering shortcuts for easy usage and customizable options for different project needs.",
+          "url": "https://github.com/andrewromanenco/cocommit?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a12",
+          "order": 4,
+          "title": "HYPERLIGHT",
+          "summary": "Hyperlight is a lightweight, embeddable Virtual Machine Manager (VMM) designed for securely running untrusted code within micro virtual machines. It does this by using micro VMs without a kernel or OS, using Hyperlight Guest library for interaction between host and guest via defined APIs.",
+          "url": "https://github.com/hyperlight-dev/hyperlight?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a13",
+          "order": 5,
+          "title": "EXPO PASSKEY",
+          "summary": "Expo Passkey is a plugin that allows secure passwordless authentication in Expo apps using native biometrics. It has features like key lifecycle management, a type-safe API, and UI components.",
+          "url": "https://github.com/iosazee/expo-passkey?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-27:a14",
+          "order": 1,
+          "title": "INSIDE GOOGLE'S TWO-YEAR FRENZY TO CATCH UP WITH OPENAI",
+          "summary": "Google launched a 100-day sprint to develop a rival chatbot, Bard, led by VP Sissie Hsiao in response to ChatGPT's release. It reorganized its AI efforts by DeepMind and Google Brain to create the Gemini model. Despite setbacks and internal anxieties along the way, Google was able to integrate Gemini into its products and develop new AI features to maintain its competitive edge.",
+          "url": "https://www.wired.com/story/google-openai-gemini-chatgpt-artificial-intelligence/?utm_source=tldrwebdev",
+          "reading_time_minutes": 29,
+          "source_domain": "wired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a15",
+          "order": 2,
+          "title": "THE WORM THAT NO COMPUTER SCIENTIST CAN CRACK",
+          "summary": "The OpenWorm project, launched in 2011, has been attempting to create a complete computer simulation of the C. elegans nematode, a simple organism with only 302 neurons. Despite the worm's relative simplicity and extensive research data, the project has struggled to produce a realistic simulation. Researchers believe that successfully simulating the worm could change our understanding of how brains and bodies interact.",
+          "url": "https://www.wired.com/story/openworm-worm-simulator-biology-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "wired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a16",
+          "order": 3,
+          "title": "NODE.JS TSC VOTES TO STOP DISTRIBUTING COREPACK",
+          "summary": "The Node.js Technical Steering Committee (TSC) has voted to remove Corepack from future Node.js releases (25+) due to low adoption rates, distribution concerns, and the desire for package managers to evolve independently. Corepack was initially introduced to bridge the gap between different package managers.",
+          "url": "https://socket.dev/blog/node-js-tsc-votes-to-stop-distributing-corepack?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-27:a17",
+          "order": 1,
+          "title": "MODEL CONTEXT PROTOCOL (MCP)",
+          "summary": "OpenAI has added MCP support to its Agents SDK.",
+          "url": "https://openai.github.io/openai-agents-python/mcp/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "openai.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a18",
+          "order": 2,
+          "title": "AN INTERVIEW WITH ZEN CHIEF ARCHITECT MIKE CLARK",
+          "summary": "Mike Clark, the chief architect of AMD's Zen microarchitecture, discusses various hardware design decisions and their relationship to software development, x64 vs ARM, memory page sizes, CPU pipeline diagrams, and how software developers can better use existing and future hardware.",
+          "url": "https://www.computerenhance.com/p/an-interview-with-zen-chief-architect?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "computerenhance.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a19",
+          "order": 3,
+          "title": "WHY KNOWING YOUR APP'S BUNDLE CONTENTS MATTERS FOR REACT NATIVE PERFORMANCE",
+          "summary": "Expo Atlas helps React Native devs optimize app performance by providing insights into bundle contents, allowing them to identify and remove unnecessary dependencies, reduce bundle size, and improve startup time.",
+          "url": "https://www.callstack.com/blog/knowing-your-apps-bundle-contents-native-performance?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "callstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-27:a20",
+          "order": 4,
+          "title": "LAZY LOAD BACKGROUND IMAGES WITH THE INTERSECTIONOBSERVER API",
+          "summary": "Lazy loading of background images can be done using the IntersectionObserver API, which monitors when offscreen images are about to become visible in the viewport and then loads them.",
+          "url": "https://www.debugbear.com/blog/lazy-load-background-images-intersection-observer?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "debugbear.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

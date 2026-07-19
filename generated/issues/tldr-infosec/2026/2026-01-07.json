@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-07",
+  "source_path": "TLDR InfoSec/article_07-01-2026.md",
+  "source_content_hash": "sha256:c82175094010564fef88702381e94aad6e60ab586cb5e398f7c9e926969ae997",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Hiring can't solve this. Training takes too long. Analysts burn out and quit. Meanwhile, critical alerts pile up in your queue while your team wastes time on false positives.",
+          "url": "https://www.dropzone.ai/schedule-a-demo?utm_campaign=33719715-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Newsletter+Primary+1+January+2026&utm_source=sponsorship&utm_medium=newsletter&utm_content=demo",
+          "reading_time_minutes": null,
+          "source_domain": "dropzone.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a04",
+          "order": 2,
+          "title": "SCHEDULE YOUR DEMO →",
+          "summary": "",
+          "url": "https://www.dropzone.ai/schedule-a-demo?utm_campaign=33719715-%5BDigital+Sponsorship%5D+TLDR+InfoSec+Newsletter+Primary+1+January+2026&utm_source=sponsorship&utm_medium=newsletter&utm_content=demo",
+          "reading_time_minutes": null,
+          "source_domain": "dropzone.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a05",
+          "order": 1,
+          "title": "CLICKFIX ATTACK USES FAKE WINDOWS BSOD SCREENS TO PUSH MALWARE",
+          "summary": "Securonix tracked a ClickFix campaign (PHALT#BLYX) targeting European hospitality firms through phishing emails impersonating Booking.com reservation cancellations, leading victims to a high-fidelity clone site that displays fake Windows BSOD screens in full-screen browser mode. The social engineering attack tricks users into executing malicious PowerShell commands that download and compile a .NET project using MSBuild.exe, thereby deploying the DCRAT remote access trojan, which includes keylogging, reverse shell, remote desktop functionality, and cryptocurrency mining. Hospitality organizations should implement email filtering for Booking.com impersonation attempts, educate staff that legitimate BSOD screens never provide recovery instructions or commands to execute, and monitor for suspicious MSBuild.exe compilation activity and Windows Defender exclusion modifications.",
+          "url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-uses-fake-windows-bsod-screens-to-push-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a06",
+          "order": 2,
+          "title": "HACKTIVIST DELETES WHITE SUPREMACIST WEBSITES LIVE ONSTAGE DURING HACK CONFERENCE",
+          "summary": "A hacktivist who goes by Martha Root deleted the websites of WhiteDate, WhiteChild, and WhiteDeal in real time at the end of a talk about the websites at Chaos Communication Congress. Root infiltrated the sites using AI chatbots that bypassed verification processes and were verified as “white.” Root also leaked data from the sites, including users' profiles with names, pictures, descriptions, ages, locations, genders, languages, races, and other personal information.",
+          "url": "https://techcrunch.com/2026/01/05/hacktivist-deletes-white-supremacist-websites-live-on-stage-during-hacker-conference/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a07",
+          "order": 3,
+          "title": "NEW N8N VULNERABILITY (9.9 CVSS) LETS AUTHENTICATED USERS EXECUTE SYSTEM COMMANDS",
+          "summary": "A critical flaw in n8n (CVE-2025-68668) allows authenticated users with workflow permissions to bypass the Python sandbox and run arbitrary OS commands on the host, scoring 9.9 on CVSS. The issue affects versions 1.0.0 through 2.0.0 and is fixed in 2.0.0. Mitigations include disabling the Code Node, turning off Python support, or using task runner-based isolation.",
+          "url": "https://thehackernews.com/2026/01/new-n8n-vulnerability-99-cvss-lets.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a08",
+          "order": 1,
+          "title": "WINNING THE AI CYBER RACE: VERIFIABILITY IS ALL YOU NEED",
+          "summary": "AI-powered cyber offense is outpacing defense because offensive tasks offer binary, easily verifiable outcomes, while defensive tasks like SIEM analysis, GRC assessments, and forensics lack reliable mechanical verifiers, resulting in noise-heavy signals with precision rates below 1% that make model training ineffective. Research demonstrates the verifiability gap's impact: OpenAI's o3 achieved 90% CTF challenge success versus GPT-4's 20%, DARPA AIxCC results showed autonomous vulnerability detection improving from 37% to 77%, and Microsoft's Project Ire reached 98% precision by wrapping LLMs with proper tool scaffolding, compared to Google's Sec-Gemini at 12% precision without verifiers. Security leaders should prioritize building mechanical verifiers and adopt offense-first thinking through continuous AI red teaming, as whoever owns the verifiers wins the AI security race.",
+          "url": "https://sergejepp.substack.com/p/winning-the-ai-cyber-race-verifiability?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "sergejepp.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a09",
+          "order": 2,
+          "title": "ESCAPING ISLA NUBLAR: COMING AROUND TO LLMS FOR FORMAL METHODS",
+          "summary": "CNnotator is a tool that combines large language models (LLMs) with formal verification to generate memory-safety annotations for C code automatically. It works through an iterative process where LLM-generated annotations are tested against a CN verifier. This approach addresses the challenge of translating legacy C/C++ code—which accounts for 70% of Chromium's security bugs—into memory-safe languages like Rust. Testing showed that OpenAI's o3 reasoning model achieved a 90% success rate on the first attempt and 97% within three attempts.",
+          "url": "https://www.galois.com/articles/escaping-isla-nublar-coming-around-to-llms-for-formal-methods?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "galois.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a10",
+          "order": 3,
+          "title": "REVERSE ENGINEERING MY CLOUD-CONNECTED E-SCOOTER AND FINDING THE MASTER KEY TO UNLOCK ALL SCOOTERS",
+          "summary": "The Äike electric scooter relies entirely on a cloud-backed mobile app for locking, unlocking, and other controls, which becomes risky once the manufacturer goes bankrupt and services degrade. By reverse engineering the Android app, using Frida to intercept BLE GATT traffic and Java hashing calls, the author uncovers a SHA-1–based challenge-response that incorrectly uses a global default key rather than a unique per-device secret. With this knowledge, any nearby Äike scooter can be authenticated to and remotely commanded via a short Python proof-of-concept using Bleak.",
+          "url": "https://blog.nns.ee/2026/01/06/aike-ble/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.nns.ee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a11",
+          "order": 1,
+          "title": "PYFRC2G",
+          "summary": "PyFRC2G converts pfSense and OPNSense firewall rules into graphical flow diagrams and PDF documentation through API-based alias retrieval, automatic interface detection, and per-interface output generation with color-coded visualization. The tool implements smart change detection using MD5 comparison to regenerate graphs only when rules change, generates separate CSV and PDF files for each interface using Graphviz, and supports optional CISO Assistant integration for automatic upload of compliance evidence. Security teams can use PyFRC2G to visually document complex firewall rule sets and meet IT security compliance requirements across various frameworks without manual configuration files.",
+          "url": "https://github.com/olivierb46/PyFRC2G?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a12",
+          "order": 2,
+          "title": "FAIL2BAN",
+          "summary": "Fail2Ban scans log files and bans IP addresses that conduct too many failed login attempts. It does this by updating system firewall rules to reject new connections from those IP addresses, for a configurable amount of time. Fail2Ban comes out-of-the-box ready to read many standard log files, such as those for sshd and Apache. It can be easily configured to read any log file of your choosing, for any error you wish.",
+          "url": "https://github.com/fail2ban/fail2ban?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a13",
+          "order": 3,
+          "title": "RUSTSCAN",
+          "summary": "RustScan is a modern Port scanner that helps find ports quickly (3 seconds at its fastest for 65k ports).",
+          "url": "https://github.com/bee-san/RustScan?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a14",
+          "order": 1,
+          "title": "RUSSIA-ALIGNED HACKERS ABUSE VIBER TO TARGET UKRAINIAN MILITARY AND GOVERNMENT",
+          "summary": "UAC-0184 (Hive0156), a threat actor aligned with Russia, used the Viber messaging platform to send malicious ZIP files containing LNK files disguised as Office documents to Ukrainian military and government targets. The attack involved multiple stages, including the deployment of Hijack Loader via PowerShell, which employed DLL side-loading and module stomping techniques to bypass detection from major security vendors like Kaspersky, Avast, BitDefender, AVG, Emsisoft, Webroot, and Microsoft. Afterward, it injected Remcos RAT into chime.exe for cyber espionage and data theft. Ukrainian organizations should improve monitoring of messaging platforms beyond email, adopt behavioral detection for Hijack Loader and Remcos RAT, and bolster defenses against social engineering attacks that exploit trusted communication channels.",
+          "url": "https://thehackernews.com/2026/01/russia-aligned-hackers-abuse-viber-to.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a15",
+          "order": 2,
+          "title": "THE SHIFT FROM DISK IMAGING TO DIGITAL TRIAGE",
+          "summary": "Quick Triage addresses digital forensics backlogs by shifting from traditional bit-for-bit disk imaging to rapid artifact-focused triage, enabling field decisions within minutes rather than months of lab analysis. The \"desktop pivot\" strategy exploits cloud synchronization mechanics where mobile data protected by iOS Secure Enclave or Android TEE encryption becomes accessible on Windows systems with weaker BitLocker protection. Waymo's trade secret theft (Registry USB logs) demonstrated how Windows artifact analysis solves investigations when mobile extraction fails. Investigators are advised to prioritize communication artifacts and web activity as immediate lead sources before comprehensive forensic imaging.",
+          "url": "https://blog.elcomsoft.com/2026/01/the-shift-from-disk-imaging-to-digital-triage/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.elcomsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a16",
+          "order": 3,
+          "title": "NORDVPN DENIES BREACH AFTER HACKER LEAKS DATA",
+          "summary": "A threat actor claims to have brute-forced a misconfigured NordVPN server, allegedly leaking data, including Salesforce and Jira information, but NordVPN's forensic review found no compromise of its infrastructure. The threat actor attributed the leak to a third-party testing platform that used only dummy data without any real customer information, source code, or credentials.",
+          "url": "https://www.securityweek.com/nordvpn-denies-breach-after-hacker-leaks-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-07:a17",
+          "order": 1,
+          "title": "THE AI AGENT WORKFORCE IS ALREADY HERE",
+          "summary": "Shadow IT has evolved into Shadow AI. With agents operating as rogue pilots, the risk isn't coming—it could already be inside your",
+          "url": "https://www.okta.com/solutions/secure-ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "okta.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a18",
+          "order": 2,
+          "title": "perimeter. Learn how Okta Secures AI.",
+          "summary": "",
+          "url": "https://www.okta.com/solutions/secure-ai/",
+          "reading_time_minutes": null,
+          "source_domain": "okta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a19",
+          "order": 3,
+          "title": "BITFINEX HACK CONVICT ILYA LICHTENSTEIN RELEASED EARLY UNDER US FIRST STEP ACT",
+          "summary": "Ilya Lichtenstein, convicted of laundering 119,754 bitcoin stolen in the 2016 Bitfinex hack through a multi-signature vulnerability exploit, has been released early under the US First Step Act after serving part of his five-year sentence.",
+          "url": "https://thehackernews.com/2026/01/bitfinex-hack-convict-ilya-lichtenstein.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a20",
+          "order": 4,
+          "title": "DISNEY FINED $10M FOR VIOLATING CHILDREN'S PRIVACY LAWS ON YOUTUBE",
+          "summary": "Disney agreed to pay $10 million to settle DOJ allegations that it violated COPPA by failing to properly designate YouTube videos as child-directed content.",
+          "url": "https://hackread.com/disney-fine-violating-children-privacy-laws-youtube/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-07:a21",
+          "order": 5,
+          "title": "FCC FINALIZES NEW PENALTIES FOR ROBOCALL VIOLATORS",
+          "summary": "FCC finalized regulations effective February 5, imposing financial penalties on telecoms for submitting false or inaccurate information to the Robocall Mitigation Database.",
+          "url": "https://cyberscoop.com/fcc-finalizes-new-penalties-for-robocall-violators/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

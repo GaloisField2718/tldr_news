@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-08-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-13",
+  "source_path": "TLDR InfoSec/article_13-08-2025.md",
+  "source_content_hash": "sha256:a02ae6fb74dac0dc48163d2aed2e214a5576f49f42d25f9c75db85e59b11fe50",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-13",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-13:a04",
+          "order": 1,
+          "title": "NETHERLANDS: CITRIX NETSCALER FLAW CVE-2025-6543 EXPLOITED TO BREACH ORGS",
+          "summary": "The Netherlands' National Cyber Security Centre (NCSC) warns that a critical Citrix NetScaler vulnerability (CVE-2025-6543) has been actively exploited to breach critical organizations in the country. The flaw allows attackers to compromise NetScaler appliances and gain unauthorized access to organizational networks. Organizations using Citrix NetScaler are urged to apply patches immediately to prevent exploitation.",
+          "url": "https://www.bleepingcomputer.com/news/security/netherlands-citrix-netscaler-flaw-cve-2025-6543-exploited-to-breach-orgs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a05",
+          "order": 2,
+          "title": "NORTH KOREAN KIMSUKY HACKERS EXPOSED IN ALLEGED DATA BREACH",
+          "summary": "Two hackers have breached the North Korean state-sponsored hacking group Kimsuky and leaked 8.9GB of data. The data includes phishing logs, data stolen from South Korea, phishing toolkits, unknown binary archives and executables, Chrome history and configs, and Bash history files. The hackers allegedly hacked Kimsuky for ideological reasons.",
+          "url": "https://www.bleepingcomputer.com/news/security/north-korean-kimsuky-hackers-exposed-in-alleged-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a06",
+          "order": 3,
+          "title": "MANPOWER FRANCHISE DISCLOSES DATA THEFT AFTER RANSOMHUB POSTS ALLEGED STOLEN DATA",
+          "summary": "Manpower is notifying 144,189 people of a data breach after attackers accessed its network between December 29, 2024, and January 12, 2025. RansomHub claims 500GB of data was stolen, including client and corporate data.",
+          "url": "https://www.theregister.com/2025/08/12/manpower_franchise_data_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-13:a07",
+          "order": 1,
+          "title": "I BUILT AN AI HACKER. IT FAILED SPECTACULARLY",
+          "summary": "In this post, the author talks about how they built an autonomous AI pentester chaining tools like Nmap and Burp. It underperformed—few real vulnerabilities, many false results, high costs, and slow runs. Key lessons: LLMs plan well but evaluate poorly, autonomy drifts, and human validation and hybrid AI-assisted workflows outperform pure agentic hacking.",
+          "url": "https://www.ultrared.ai/blog/building-autonomous-ai-hacker?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "ultrared.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a08",
+          "order": 2,
+          "title": "MAKING FILE ENCRYPTION FAST AND SECURE FOR TEAMS WITH ADVANCED KEY MANAGEMENT",
+          "summary": "Dropbox describes how it solved for Hardware Security Module (HSM)-backed, team-based file encryption, where files are encrypted at rest and access can be removed instantly while also prioritizing usability at scale. End-to-end encryption would make it impossible for Dropbox to offer file content search, and traditional team-based key management, where a top-level key is used to derive unique keys for each file, would be prohibitively slow due to Dropbox's file storage architecture. To solve this problem, Dropbox introduced namespace encryption keys, which are derived from an HSM-backed top-level key and are used to derive team encryption keys. When sharing files, Dropbox can temporarily share the namespace encryption key while it reencrypts the blocks with team encryption keys.",
+          "url": "https://dropbox.tech/security/file-encryption-teams-advanced-key-management?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "dropbox.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a09",
+          "order": 3,
+          "title": "PERSISTENT RISK: XZ UTILS BACKDOOR STILL LURKING IN DOCKER IMAGES",
+          "summary": "Binarly warns that the XZ Utils backdoor (CVE-2024-3094) still lurks in Debian-based Docker Hub images from March 11, 2024, propagating into derivative images. It found 35+ affected tags, and the risk persists via inherited bases and CI pipelines. Recommendations: avoid those tags, rebuild from patched bases, and scan for the issue in your images.",
+          "url": "https://www.binarly.io/blog/persistent-risk-xz-utils-backdoor-still-lurking-in-docker-images?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "binarly.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-13:a10",
+          "order": 1,
+          "title": "BUILD A SMARTER SECURITY WORKFORCE",
+          "summary": "High-performing teams start with high-impact training. See how SANS-trained staff detect threats 4.2x faster and save millions annually. Download the IDC white paper [10], sponsored by SANS, then",
+          "url": "https://www.sans.org/mlp/idc-the-business-value-of-sans?utm_medium=Sponsored_Content&utm_source=TLDR&utm_content=TLDRInfoSec_IDCSANSValuePaper_8.13.25&utm_campaign=Paper_IDCSANSValue_2025&utm_rdetail=Global&utm_goal=Leads&utm_type=Global_Campaign",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a11",
+          "order": 2,
+          "title": "explore more SANS training and resources.",
+          "summary": "",
+          "url": "https://www.sans.org/mlp/online-cybersecurity-training-community?utm_medium=Sponsored_Content&utm_source=TLDR&utm_content=TLDRInfoSec_JTC_8.13.25&utm_campaign=Join_Community&utm_rdetail=Global&utm_goal=Leads&utm_type=Global_Campaign",
+          "reading_time_minutes": null,
+          "source_domain": "sans.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a12",
+          "order": 3,
+          "title": "GO GET 'EM: UPDATES TO VOLEXITY GOLANG TOOLING",
+          "summary": "Volexity's GoStringExtractor is a plugin utility for IDA Pro and Ghidra that helps analyze string data in Go binaries for reverse engineering and detection purposes. The tool addresses challenges in analyzing Go binaries where strings are stored in contiguous tables without individual termination, and includes data from all linked packages. This enhancement aids security researchers in better understanding malware behavior and developing detection signatures for Go-based threats.",
+          "url": "https://www.volexity.com/blog/2025/08/11/go-get-em-updates-to-volexity-golang-tooling/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "volexity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a13",
+          "order": 4,
+          "title": "CYATA (PRODUCT LAUNCH)",
+          "summary": "Cyata continuously scans desktop and SaaS environments for AI identities and their permissions, and creates detailed audit trails of their activity, including by requiring them to justify their reasoning in real time.",
+          "url": "https://cyata.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "cyata.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a14",
+          "order": 5,
+          "title": "VEIL",
+          "summary": "Verified Entity Identity Lock exposes hidden trust paths in your AWS IAM setup before they become security risks.",
+          "url": "https://github.com/wakeful/veil?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-13:a15",
+          "order": 1,
+          "title": "JUSTICE DEPARTMENT ANNOUNCES COORDINATED DISRUPTION ACTIONS AGAINST BLACKSUIT (ROYAL) RANSOMWARE OPERATIONS",
+          "summary": "The Justice Department conducted coordinated disruption actions against the BlackSuit (Royal) ransomware group on July 24, seizing four servers and nine domains. Law enforcement also recovered approximately $1 million in laundered proceeds from the ransomware operations. This represents a significant enforcement action against one of the active ransomware groups targeting organizations worldwide.",
+          "url": "https://links.tldrnewsletter.com/nzG8IY",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a16",
+          "order": 2,
+          "title": "HOW TOOL CALLING WORKS IN LLMS",
+          "summary": "LLMs use tools, external functions, or APIs when a user makes a request that the model cannot fulfill given its internal knowledge base. During inference, an LLM is provided with a series of tool definitions as part of its input prompt or context window, much like providing a human with a series of external functions and their documentation. When the LLM detects that a tool must be called, it ranks potential tools based on their relevance to the task and then calls the appropriate tool to address the user's query.",
+          "url": "https://newsletter.scalablethread.com/p/how-tool-calling-works-in-llms?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "newsletter.scalablethread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a17",
+          "order": 3,
+          "title": "MUDDYWATER'S DARKBIT RANSOMWARE CRACKED",
+          "summary": "Cybersecurity firm Profero has cracked the Iranian-backed MuddyWater's DarkBit ransomware, allowing clients to recover their data without paying a ransom. Profero found that the key generation method that DarkBit uses is weak and can be brute-forced. It also discovered that VMDK files on ESXi servers are sparse, and much of the content that its clients needed could be recovered without needing to brute-force the decryption. Profero is not publicly releasing its decryptor but urges victims to contact them.",
+          "url": "https://www.bleepingcomputer.com/news/security/muddywaters-darkbit-ransomware-cracked-for-free-data-recovery/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-13:a18",
+          "order": 1,
+          "title": "GITHUB HEAD ANKLES AS MICROSOFT TAKES BIZ BY THE HAND",
+          "summary": "GitHub CEO Thomas Dohmke is departing the company, with Microsoft choosing not to appoint a successor as the code hosting platform is becoming more integrated within Microsoft's CoreAI division.",
+          "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/11/github_head_ankles_as_microsoft/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "go.theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a19",
+          "order": 2,
+          "title": "FCC TIGHTENS RULES ON FOREIGN FIRMS BUILDING UNDERSEA CABLES, CITING SECURITY",
+          "summary": "The FCC has implemented stricter licensing requirements for foreign companies building undersea cables, citing national security concerns and the need to protect critical data infrastructure from potential foreign sabotage.",
+          "url": "https://cyberscoop.com/undersea-cable-fcc-licensing-foreign-companies/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-13:a20",
+          "order": 3,
+          "title": "HYUNDAI WANTS IONIQ 5 OWNERS TO PAY TO FIX A KEYLESS ENTRY SECURITY HOLE",
+          "summary": "Hyundai has offered UK Ioniq 5 owners a £49 “optional” security upgrade to stop thieves using a Game Boy‑like device that cracks keyless entry.",
+          "url": "https://www.theverge.com/news/757205/hyundai-ioniq-5-security-upgrade-fix-game-boy-device-attacks?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

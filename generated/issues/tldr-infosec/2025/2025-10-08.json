@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-08",
+  "source_path": "TLDR InfoSec/article_08-10-2025.md",
+  "source_content_hash": "sha256:d82e65eab1e0229b0ecbe047ce3a74267ca35ff833fc01a03516cacc9365a98c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a04",
+          "order": 1,
+          "title": "STOP REPLACING IDPS THAT ALREADY WORK",
+          "summary": "You don't need to migrate off Google Workspace to get stronger access control. If your IdP already handles authentication, the real gaps are after login—who (or what) can access what, when, and why. Switching IdPs often adds cost and friction but does little to fix privilege sprawl. Opal [5] sits on top of your existing stack, automating just-in-time access, audit trails, and review workflows [6] so you can enforce least privilege without touching authentication or disrupting users. It's how teams like CLOUDFLARE, DATABRICKS, FIGMA, PERPLEXITY, and RUNWAY strengthen identity security with the IdPs they already use.",
+          "url": "https://www.opal.dev/blog/no-okta-migration-scale-identity-with-opal-not-overhead?utm_medium=paid-ad&utm_source=tldr-media",
+          "reading_time_minutes": null,
+          "source_domain": "opal.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a04",
+          "order": 2,
+          "title": "SEE HOW IT WORKS",
+          "summary": "",
+          "url": "https://www.opal.dev/blog/no-okta-migration-scale-identity-with-opal-not-overhead?utm_medium=paid-ad&utm_source=tldr-media",
+          "reading_time_minutes": null,
+          "source_domain": "opal.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a07",
+          "order": 1,
+          "title": "DATA BREACH AT DOCTORS IMAGING GROUP IMPACTS 171,000 PEOPLE",
+          "summary": "Doctors Imaging Group, a Florida-based radiology provider, reported a breach where hackers accessed their network for several days in November 2024. Over 171,000 people had personal and medical data compromised, including Social Security and account numbers.",
+          "url": "https://www.securityweek.com/data-breach-at-doctors-imaging-group-impacts-171000-people/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a08",
+          "order": 2,
+          "title": "REDIS WARNS OF CRITICAL FLAW IMPACTING THOUSANDS OF INSTANCES",
+          "summary": "The Redis security team has released patches for a new critical (CVSS 10/10) vulnerability that could allow attackers to gain remote code execution. The vulnerability is caused by a 13-year-old use-after-free vulnerability that can be exploited by authenticated threat actors using a specially crafted Lua script. Redis recommends that administrators patch their servers and, to secure their instances further, they can enable authentication, disable Lua scripting and other unnecessary commands, launch Redis as a non-root user, and enable Redis logging.",
+          "url": "https://www.bleepingcomputer.com/news/security/redis-warns-of-max-severity-flaw-impacting-thousands-of-instances/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a09",
+          "order": 3,
+          "title": "THE SALESLOFT-DRIFT BREACH: ANALYZING THE BIGGEST SAAS BREACH OF 2025",
+          "summary": "The biggest SaaS security incident in 2025 exploited the integration between Salesloft and Drift, compromising over 700 companies. Attackers abused OAuth tokens and SaaS-to-SaaS connections to move laterally, bypassing traditional security defenses and harvesting sensitive credentials. The supply chain nature of the breach allowed a single compromise to spread rapidly across interconnected apps like Salesforce and Gmail, amplifying its impact.",
+          "url": "https://www.reco.ai/blog/the-salesloft-drift-breach-analyzing-the-biggest-saas-breach-of-2025?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "reco.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a10",
+          "order": 1,
+          "title": "FANTASTIC AWS POLICIES AND WHERE TO FIND THEM",
+          "summary": "AWS presents a large surface of IAM policies that are available across principal policies, resource policies, AWS Resource Access Manager, resource control policies, and IAM Identity Center permission sets. This post provides a listing and explanation of many of these policies, as well as introducing a new tool called iam-collect. iam-collect can download all IAM policies across every account in an organization for analysis and also provides a set of agent instructions that can be used with an LLM to explore the data further.",
+          "url": "https://iam.cloudcopilot.io/posts/fantastic-aws-policies-and-where-to-find-them?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "iam.cloudcopilot.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a11",
+          "order": 2,
+          "title": "FLIPSWITCH: A NOVEL SYSCALL HOOKING TECHNIQUE",
+          "summary": "FlipSwitch is a novel Linux rootkit technique that bypasses kernel 6.9's new syscall dispatch mechanism by directly patching machine code in the x64_sys_call function rather than overwriting the traditional sys_call_table. The technique locates specific call instructions within the kernel dispatcher and modifies their 4-byte offsets to redirect syscalls to malicious functions, demonstrating how attackers adapt to kernel hardening measures. This research highlights the ongoing arms race between Linux kernel security improvements and rootkit evolution. Elastic has provided YARA signatures to detect this proof-of-concept implementation.",
+          "url": "https://www.elastic.co/security-labs/flipswitch-linux-rootkit?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a12",
+          "order": 3,
+          "title": "AN IN-DEPTH RESEARCH-BASED WALK-THROUGH OF AN UNINITIALIZED LOCAL VARIABLE STATIC ANALYZER",
+          "summary": "Cybervelia researchers developed a Binary Ninja engine-based static analyzer that detects uninitialized local variables (ULVs) in stripped binaries by reconstructing stack layouts, tracking read-before-write patterns through Medium-Level IL analysis, and implementing interprocedural taint propagation to trace data flows across function calls. The tool addresses the challenge that modern compiler optimizations obscure ULVs in binaries, despite improved source-level detection, by utilizing techniques such as neighbor-offset heuristics for size inference and proximity-based coverage analysis to identify genuine vulnerabilities. The analyzer integrates IDA Pro symbol importing and Intel PIN execution tracing to reduce false positives and focus on actually executed code paths, demonstrating that ULV detection remains relevant even in modern binaries with recent Linux kernel vulnerabilities serving as examples.",
+          "url": "https://blog.cybervelia.com/p/an-in-depth-research-based-walk-through?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "blog.cybervelia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a13",
+          "order": 1,
+          "title": "👼 A CLOUD FIREWALL YOU DON'T NEED TO BABYSIT",
+          "summary": "Firewall rules get incredibly complex and can become a major distraction (and threat) for leaner teams. Intrusion Shield for AWS [13] uses decades of trusted threat intelligence to block risky network traffic automatically. Every malicious connection attempt is instantly turned into a firewall rule, with no action required from",
+          "url": "https://www.intrusion.com/intrusion-shield-cloud-for-aws-tldr/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_medium=100825",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a13",
+          "order": 2,
+          "title": "your team. Goodbye firewall alerts, hello smart prioritization.",
+          "summary": "",
+          "url": "https://www.intrusion.com/intrusion-shield-cloud-for-aws-tldr/?utm_campaign=22505002-AWS_Launch_2025&utm_source=TLDR&utm_medium=100825",
+          "reading_time_minutes": null,
+          "source_domain": "intrusion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a14",
+          "order": 3,
+          "title": "SETUPHIJACK",
+          "summary": "SetupHijack is a tool that exploits race conditions and insecure file handling in Windows installer and update processes.",
+          "url": "https://github.com/hackerhouse-opensource/SetupHijack?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a15",
+          "order": 4,
+          "title": "FILIGRAN (PRODUCT LAUNCH)",
+          "summary": "Filigran unifies threat intelligence, attack surface, and security risk analysis, featuring OpenCTI and OpenBAS for intelligence operations and adversary emulation.",
+          "url": "https://filigran.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "filigran.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a16",
+          "order": 5,
+          "title": "INTRODUCING CODEMENDER: AN AI AGENT FOR CODE SECURITY",
+          "summary": "CodeMender is a new AI-driven agent developed by Google DeepMind to discover, patch, and prevent software vulnerabilities automatically. The tool addresses threats and proactively secures existing code, enabling developers to build safer software with reduced time spent on manual vulnerability management.",
+          "url": "https://deepmind.google/discover/blog/introducing-codemender-an-ai-agent-for-code-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "deepmind.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a17",
+          "order": 1,
+          "title": "KLOPATRA: EXPOSING A NEW ANDROID BANKING TROJAN OPERATION WITH ROOTS IN TURKEY",
+          "summary": "Klopatra is a sophisticated new Android banking trojan operated by Turkish-speaking cybercriminals that utilizes commercial-grade Virbox protection and native code libraries to evade detection. The malware targets users in Spain and Italy through fake IPTV apps, exploits Android Accessibility Services for complete device control, and employs both overlay attacks and Hidden VNC capabilities to conduct fraudulent operations while victims are asleep. With over 3,000 compromised devices across two main botnets, Klopatra represents a significant evolution in mobile malware sophistication, demonstrating how threat actors are adopting professional-grade obfuscation techniques typically seen in desktop malware.",
+          "url": "https://www.cleafy.com/cleafy-labs/klopatra-exposing-a-new-android-banking-trojan-operation-with-roots-in-turkey?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "cleafy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a18",
+          "order": 2,
+          "title": "‘YOU'LL NEVER NEED TO WORK AGAIN': CRIMINALS OFFER REPORTER MONEY TO HACK BBC",
+          "summary": "A BBC reporter was contacted via Signal by a “reach out manager” from the Medusa ransomware gang, who offered 25% of the ransom if they gained access to the reporter's corporate device. The reporter played along to gather more information about the gang's tactics, documenting increased pressure from the ransomware actor. Eventually, the actor grew impatient, sending multiple 2FA requests before the reporter could alert the BBC security team, leading to a disconnection from the network.",
+          "url": "https://www.bbc.com/news/articles/c3w5n903447o?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a19",
+          "order": 3,
+          "title": "APPLE PULLS ICEBLOCK FROM THE APP STORE",
+          "summary": "The ICEBlock app described itself as “Waze but for ICE sightings” and allowed users to report sightings of ICE officials anonymously. AG Pam Bondi stated that Apple removed the app from the App Store after it was requested to be removed because it presents a threat to law enforcement officials, which ICEBlock developer Joshua Aaron has denied, stating it is patently false.",
+          "url": "https://www.theverge.com/news/791170/iceblock-app-store-removed-by-apple?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-08:a20",
+          "order": 1,
+          "title": "TWO YEARS LATER, WHAT'S BEEN THE IMPACT OF CISA'S SECURE BY DESIGN GUIDELINES?",
+          "summary": "The co-founders of Secure Code Warrior, along with expert contributors, interviewed 20 enterprise security leaders about best practices, developer enablement, and security. Read the research",
+          "url": "https://discover.securecodewarrior.com/secure-by-design-whitepaper.html?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "discover.securecodewarrior.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a21",
+          "order": 2,
+          "title": "report",
+          "summary": "",
+          "url": "https://discover.securecodewarrior.com/secure-by-design-whitepaper.html",
+          "reading_time_minutes": null,
+          "source_domain": "discover.securecodewarrior.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a22",
+          "order": 3,
+          "title": "GOOGLE'S AI BOUNTY PROGRAM PAYS BUG HUNTERS UP TO $30K",
+          "summary": "Google has launched a bug bounty program focused on AI security, rewarding up to $30,000 for discovering vulnerabilities that could cause rogue actions or exploit AI systems through issues such as unauthorized account access or data leaks.",
+          "url": "https://www.theverge.com/news/793362/google-ai-security-vulnerability-rewards?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a23",
+          "order": 4,
+          "title": "DOCKER MAKES HARDENED IMAGES CATALOG AFFORDABLE FOR SMALL BUSINESSES",
+          "summary": "Docker launched unlimited access to its Hardened Images catalog for small businesses, offering pre-verified container images with near-zero CVEs, up to 95% reduced attack surface, and a 7-day patch SLA through an affordable subscription model.",
+          "url": "https://www.bleepingcomputer.com/news/security/docker-makes-hardened-images-catalog-affordable-for-small-businesses/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-08:a24",
+          "order": 5,
+          "title": "OPENAI: THREAT ACTORS USE US TO BE EFFICIENT, NOT MAKE NEW TOOLS",
+          "summary": "OpenAI's October threat report indicates that cyber adversaries primarily leverage AI to enhance their existing hacking techniques, with groups from China, North Korea, and cybercriminal organizations utilizing ChatGPT for malware creation, spear phishing, and reconnaissance activities.",
+          "url": "https://cyberscoop.com/openai-threat-report-ai-cybercrime-hacking-scams/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-26",
+  "source_path": "TLDR InfoSec/article_26-02-2026.md",
+  "source_content_hash": "sha256:f42d7f9b7e1abf3cd17dd9e53952bc0f53d380f1fa6f9e2ebc013e62d6737efb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Between chasing unsanctioned apps and fielding hundreds of tickets daily, it's no wonder IT teams are stretched thin. But 1Password SaaS Manager helps IT take control of their rapidly expanding SaaS landscape.",
+          "url": "https://1password.com/webinars/empower-your-it-heros?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_all_amer_english_empower-your-it-heros_consideration_2026-02&utm_content=text&utm_term=ondemand-february-26-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a04",
+          "order": 2,
+          "title": "Watch now",
+          "summary": "",
+          "url": "https://1password.com/webinars/empower-your-it-heros?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_all_amer_english_empower-your-it-heros_consideration_2026-02&utm_content=text&utm_term=ondemand-february-26-primary-infosec-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a05",
+          "order": 1,
+          "title": "CRITICAL VULNERABILITY IN META MANUS AI AGENT ENABLES ZERO-CLICK INDIRECT PROMPT INJECTION",
+          "summary": "SilentBridge is a family of CVSS 9.8 zero-click indirect prompt injection vulnerabilities in Meta's Manus AI agent that allowed hidden instructions in web pages, search results, and documents to hijack high-privilege agent capabilities, including Gmail access, code execution, and root-level container control. Researchers demonstrated full exploit chains in which benign actions, such as “summarize this page,” triggered Gmail data exfiltration, the establishment of a reverse shell with passwordless sudo escalation, public exposure of internal code-server tooling, and cross-tenant media access via unauthenticated CDN paths. Manus deployed mitigations following responsible disclosure, but the findings highlight a systemic trust-boundary failure affecting any agentic AI platform that allows untrusted content to influence privileged tool invocation without isolation or user consent.",
+          "url": "https://aurascape.ai/resources/auralabs-research/silentbridge-zero-click-agent-takeover-meta-manus/?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "aurascape.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a06",
+          "order": 2,
+          "title": "CARGURUS DATA BREACH AFFECTS 12.5 MILLION ACCOUNTS",
+          "summary": "Automotive marketplace CarGurus has confirmed a security incident in which 12.5 million user accounts were exposed, including names, email addresses, phone numbers, physical addresses, financial prequalification data, and some dealer information. The researchers attributed the hack to the ShinyHunters group, known for high‑impact social engineering attacks against major enterprises and universities.",
+          "url": "https://techcrunch.com/2026/02/24/cargurus-data-breach-affects-12-5-million-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a07",
+          "order": 3,
+          "title": "WYNN RESORTS TAKES ATTACKER'S WORD FOR IT THAT STOLEN STAFF DATA WAS DELETED",
+          "summary": "Wynn Resorts confirms ShinyHunters stole extensive employee data, including personal and HR details, after exploiting Oracle PeopleSoft and valid credentials since 2025. The company says the crooks claim to have deleted the data and offers staff credit monitoring. Still, experts stress ransomware crews rarely erase stolen records and view such “deletion” promises as indicators of a completed extortion deal.",
+          "url": "https://www.theregister.com/2026/02/25/wynn_resorts_shinyhunters/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a08",
+          "order": 1,
+          "title": "NEW MALICIOUS NPM PACKAGE “AMBAR-SRC” TARGETS DEVELOPERS WITH OPEN SOURCE MALWARE",
+          "summary": "The malicious npm package “ambar-src” accumulated ~50,000 downloads in just three days by typosquatting the popular “ember-source” package and abusing npm's preinstall script hook to execute code without any explicit import. The package deployed OS-specific open-source malware payloads, including encrypted shellcode on Windows, a Golang-based reverse SSH shell on Linux, and the Apfell/MythicAgents payload on macOS, all communicating via Yandex Cloud functions for C2 evasion. Organizations should audit dependencies for this package, treat any system where it was installed as fully compromised, and rotate all secrets from a separate machine.",
+          "url": "https://www.tenable.com/blog/cybersecurity-research-faq-new-malicious-npm-package-ambar-src?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "tenable.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a09",
+          "order": 2,
+          "title": "LARGE-SCALE ONLINE DEANONYMIZATION WITH LLMS",
+          "summary": "Modern LLM agents can deanonymize users at scale by linking pseudonymous posts to real-world identities across platforms like Hacker News, Reddit, and LinkedIn. Using proxy tasks such as cross-platform account matching and splitting single accounts into multiple identities shows that search-plus-reasoning agents can re-identify users with high precision, and that performance degrades slowly even as candidate pools reach tens of thousands, implying platform-scale feasibility.",
+          "url": "https://simonlermen.substack.com/p/large-scale-online-deanonymization?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "simonlermen.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a10",
+          "order": 3,
+          "title": "JA4 FINGERPRINTING AGAINST AI SCRAPERS: A PRACTICAL GUIDE",
+          "summary": "JA4 fingerprinting can be incredibly effective for detecting AI scrapers, as modifying the fingerprint requires recompiling the full TLS stack, unlike other methods, such as behavioral detection, that newer AI agents can mimic. JA4 fingerprints for the ClientHello and HTTP Headers (JA4H) can be combined with traditional systems to build a defense-in-depth detection system, which can then forward logs to a SIEM. This post includes code samples for the detection logic as well as fingerprints for several common libraries and tools.",
+          "url": "https://webdecoy.com/blog/ja4-fingerprinting-ai-scrapers-practical-guide/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "webdecoy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a11",
+          "order": 1,
+          "title": "SECURE AWS WORKLOADS WITH ZERO-TRUST AUTOMATION",
+          "summary": "Stop managing certificates manually. Palo Alto Networks VM-Series NGFW [12] automates TLS in Amazon EKS, enforces zero-trust policies that adapt to AWS tags, and blocks threats in real time with AI/ML. Launch your free trial in AWS Marketplace [13].",
+          "url": "https://pages.awscloud.com/awsmp-palo-alto-networks-vm-series-ngfw-on-aws-marketplace.html?trk=e9f930dd-f2dc-4df2-91f6-afdde0b98fd2&sc_channel=el&utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a14",
+          "order": 2,
+          "title": "ENVEIL",
+          "summary": "enveil is a Rust CLI tool that prevents AI coding assistants from reading plaintext secrets by replacing .env values with encrypted ev:// references backed by a local AES-256-GCM store. Secrets are decrypted in memory using an Argon2id-derived key and injected directly into subprocess environments at launch, ensuring plaintext values never touch disk. The tool includes import, rotation, and tamper-detection capabilities, with 31 automated tests that cover all security invariants.",
+          "url": "https://github.com/greatscott/enveil?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a15",
+          "order": 3,
+          "title": "ASTELIA (PRODUCT LAUNCH)",
+          "summary": "Astelia is an AI-driven exposure management platform that maps enterprise environments, models attack paths, and prioritizes remediation of exploitable vulnerabilities.",
+          "url": "https://www.astelia.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "astelia.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a16",
+          "order": 4,
+          "title": "CONFUSABLE-VISION",
+          "summary": "An offline tool that renders Unicode confusable character pairs across system fonts, measures visual similarity using SSIM, and outputs scored JSON artifacts.",
+          "url": "https://github.com/paultendo/confusable-vision?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a17",
+          "order": 1,
+          "title": "DISCORD CUTS TIES WITH PETER THIEL-BACKED VERIFICATION SOFTWARE AFTER ITS CODE WAS FOUND TIED TO US SURVEILLANCE EFFORTS",
+          "summary": "Discord terminated its partnership with identity verification vendor Persona after researchers discovered nearly 2,500 accessible files on a FedRAMP government endpoint, revealing the software performs 269 distinct verification checks, including facial recognition against watchlists, politically exposed persons screening, and adverse media categorization across terrorism and espionage categories. Persona's CEO called the exposure publicly accessible front-end code rather than a vulnerability, but the discovery follows a 2025 breach at another Discord verification vendor that exposed government IDs of over 70,000 users. The incident underscores growing supply chain privacy risks in age verification systems, with Persona still serving OpenAI, Lime, and Roblox despite the controversy.",
+          "url": "https://fortune.com/2026/02/24/discord-peter-thiel-backed-persona-identity-verification-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "fortune.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a18",
+          "order": 2,
+          "title": "CLAUDE CODE FLAWS ALLOW REMOTE CODE EXECUTION AND API KEY EXFILTRATION",
+          "summary": "Researchers have uncovered three Claude Code vulnerabilities that enable remote code execution and silent API key exfiltration when developers open malicious repositories, abusing hooks, MCP servers, and environment variables. Exploitation can leak Anthropic API keys, redirect authenticated traffic, and modify cloud data, shifting the threat model from just running untrusted code to merely opening untrusted AI-assisted projects.",
+          "url": "https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a19",
+          "order": 3,
+          "title": "WHY ‘CALL THIS NUMBER' TOAD EMAILS BEAT GATEWAYS",
+          "summary": "Telephone-oriented attack delivery (TOAD) accounted for nearly 28% of all gateway-bypassing email detections across multiple enterprise environments between December 2025 and February 2026. These emails contain only a phone number as the payload, typically impersonating billing notifications from brands like PayPal or DocuSign, making them indistinguishable from legitimate business communications that secure email gateways filter out. The average detected attack combined more than four evasion techniques simultaneously, with over 1,400 unique evasion combinations tracked, representing a 130% increase over the previous study period.",
+          "url": "https://links.tldrnewsletter.com/5Oc9lX",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-26:a20",
+          "order": 1,
+          "title": "INDIE WEB BROWSER LADYBIRD FLUTTERS TOWARD RUST WITH A LITTLE HELP FROM AI",
+          "summary": "The Ladybird browser project abandoned Swift adoption and is now using LLM-assisted translation to port its C++ codebase to Rust, converting 25,000 lines of its JavaScript interpreter in two weeks with zero regressions.",
+          "url": "https://www.theregister.com/2026/02/23/ladybird_goes_rusty/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a21",
+          "order": 2,
+          "title": "CLAUDE COLLABORATION TOOLS LEFT THE DOOR WIDE OPEN TO REMOTE CODE EXECUTION",
+          "summary": "Researchers have discovered three now-patched vulnerabilities in Claude Code (CVE-2025-59536, CVE-2026-21852) that allowed remote code execution via malicious Hooks and MCP configurations in cloned repositories, plus API key theft through endpoint redirection in project settings files.",
+          "url": "https://www.theregister.com/2026/02/26/clade_code_cves/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-26:a22",
+          "order": 3,
+          "title": "DISCORD PUTS GLOBAL AGE VERIFICATION POLICY ON HOLD AFTER BACKLASH",
+          "summary": "Discord has delayed its global age verification rollout to the second half of 2026 and plans to add credit card verification as an alternative to government IDs or video selfies.",
+          "url": "https://therecord.media/discord-age-verification-policy-on-hold-after-backlash?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

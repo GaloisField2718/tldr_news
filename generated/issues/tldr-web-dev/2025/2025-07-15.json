@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-07-15",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-15",
+  "source_path": "TLDR Web Dev/article_15-07-2025.md",
+  "source_content_hash": "sha256:69d283b81c89a531b741fac4a1ad2e4b94e0417176f4f20ec3945a19c6b76086",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-15",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-15:a04",
+          "order": 1,
+          "title": "PARSING 1 BILLION ROWS IN BUN/TYPESCRIPT UNDER 10 SECONDS",
+          "summary": "A dev tackled the 1 Billion Row Challenge in Bun/TypeScript, processing a 13.8GB file containing temperature data for weather stations in under 10 seconds. They bypassed initial memory limitations by using file descriptors with 128KB buffer chunks (optimized for kernel readahead pages) instead of loading the entire file into memory, and they used worker threads to parallelize both I/O and CPU-intensive operations across multiple cores. They also aggregated min/max/average values using hash maps while using Bun's performance advantages over traditional Node.js.",
+          "url": "https://www.taekim.dev/writing/parsing-1b-rows-in-bun?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "taekim.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a05",
+          "order": 2,
+          "title": "STOP USING CUSTOMEVENT",
+          "summary": "Devs should avoid using CustomEvent in JavaScript and instead subclass the native Event class. CustomEvent was only created because subclassing native classes wasn't well-supported when it was introduced, and it forces developers to deal with the awkward `detail` property to access event data. Event subclasses provide cleaner APIs, better TypeScript support, serve as documentation, and guarantee consistent event creation.",
+          "url": "https://justinfagnani.com/2025/06/25/stop-using-custom-event?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "justinfagnani.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a06",
+          "order": 3,
+          "title": "CSS CONDITIONALS WITH THE NEW IF() FUNCTION",
+          "summary": "The new CSS `if()` function can be used to write inline conditional styles instead of separate media queries or style blocks. The function supports three types of queries (style, media, and supports) and uses a condition-value pair syntax like `property: if(condition-1: value-1; condition-2: value-2; else: fallback-value)`. This allows for cleaner, more maintainable code by keeping conditional logic inline with the property rather than scattered across multiple CSS blocks.",
+          "url": "https://developer.chrome.com/blog/if-article?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "developer.chrome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-15:a07",
+          "order": 1,
+          "title": "HOW I BUILD SOFTWARE QUICKLY",
+          "summary": "There's no single right way to build software quickly. This dev starts with a rough draft to uncover unknowns and avoid premature abstractions, then refines it based on the project's needs and acceptable level of imperfection. He softens requirements where possible, focusing on the task at hand to avoid distractions, and makes small, manageable changes.",
+          "url": "https://evanhahn.com/how-i-build-software-quickly/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "evanhahn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a08",
+          "order": 2,
+          "title": "HOW I USE CLAUDE CODE (+ MY BEST TIPS)",
+          "summary": "A former Cursor power user switched entirely to Claude Code and recommends it over other AI coding tools. Some tips include running `claude --dangerously-skip-permissions` to avoid constant permission prompts and using `/clear` frequently to manage tokens effectively. Claude Code is great at handling large codebases and complex tasks, as it successfully updated an 18,000-line React component that other AI agents couldn't handle.",
+          "url": "https://www.builder.io/blog/claude-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "builder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-15:a09",
+          "order": 1,
+          "title": "CALLFS",
+          "summary": "CallFS is a REST API filesystem that provides Linux filesystem semantics over multiple backends (local, S3, and peer networks). It has features like single-use links, distributed locking, and Prometheus monitoring.",
+          "url": "https://github.com/ebogdum/callfs?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a10",
+          "order": 2,
+          "title": "ZSHY",
+          "summary": "zshy is a bundler-free build tool for TypeScript libraries designed to simplify the process of transpiling TypeScript code. It supports dual-module (ESM and CJS) builds, uses tsc for transpilation, and removes the need for bundlers or configuration files by reading directly from package.json and tsconfig.json.",
+          "url": "https://github.com/colinhacks/zshy",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-15:a11",
+          "order": 1,
+          "title": "HYPERCAPITALISM AND THE AI TALENT WARS",
+          "summary": "The hypercapitalistic AI talent wars are fueled by massive capital investment and the race to develop frontier AI models. This environment erodes Silicon Valley's trust-based culture, necessitating new employment contracts and investment norms to protect both companies and talent. The talent war is consolidating power among a few well-funded companies, making it challenging for new entrants and requiring investors to be more flexible.",
+          "url": "https://blog.johnluttig.com/p/hypercapitalism-and-the-ai-talent?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "blog.johnluttig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a12",
+          "order": 2,
+          "title": "THE UNIVERSAL WAY: ONE CODEBASE, ALL PLATFORMS",
+          "summary": "Universal applications have a single codebase that can be deployed across multiple platforms like web and mobile. Recent advancements in technologies like Solito and Expo now make truly cross-platform development a viable option. Universal apps can increase brand presence across devices while reducing operational costs by 30-40%, allowing smaller teams to manage multiple platforms more efficiently.",
+          "url": "https://www.paisanos.io/blog/the-universal-way-one-codebase-all-platforms?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "paisanos.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a13",
+          "order": 3,
+          "title": "'I THINK YOU SEE THE FUTURE FIRST ON ANDROID' – GOOGLE'S ANDROID LEADER SAMEER SAMAT",
+          "summary": "Google's Android Ecosystem President Sameer Samat discussed the latest developments in Android, including Android 16 and its deep integration with Gemini AI. Google is committed to making Android customizable and accessible across various devices, like the Samsung Galaxy Z Fold 7, which is launching with the newest Android version. Regarding Android XR, Google is still pursuing augmented reality glasses, learning from past mistakes like Google Glass and using AI to create a more useful and fashionable wearable experience.",
+          "url": "https://www.techradar.com/phones/android/i-think-you-see-the-future-first-on-android-googles-android-leader-sameer-samat?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "techradar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-15:a14",
+          "order": 1,
+          "title": "PROTECTING MY ATTENTION AT THE DOPAMINE CARNIVAL",
+          "summary": "",
+          "url": "https://www.amirsharif.com/protecting-my-attention-at-the-dopamine-carnival?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "amirsharif.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a15",
+          "order": 2,
+          "title": "AIOSQLITEPOOL",
+          "summary": "aiosqlitepool is a high-performance asyncio SQLite connection pool that improves database performance by reusing connections, caching data, and maximizing throughput.",
+          "url": "https://github.com/slaily/aiosqlitepool?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a16",
+          "order": 3,
+          "title": "APPLE MLX IS ADDING CUDA SUPPORT",
+          "summary": "There is an ongoing effort to add a CUDA backend to the MLX framework, sponsored by Apple.",
+          "url": "https://github.com/ml-explore/mlx/pull/1983?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-15:a17",
+          "order": 4,
+          "title": "PRINTING THE WEB: MAKING WEBPAGES LOOK GOOD ON PAPER",
+          "summary": "CSS media queries with `@media print` can be used to style website content for printing.",
+          "url": "https://piccalil.li/blog/printing-the-web-making-webpages-look-good-on-paper?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "piccalil.li",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

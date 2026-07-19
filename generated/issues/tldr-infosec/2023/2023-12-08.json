@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-12-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-12-08",
+  "source_path": "TLDR InfoSec/article_08-12-2023.md",
+  "source_content_hash": "sha256:274dda8225ecd21b735e5eef7b265e68a71497c1c468f1adaf5c481f21c214bf",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-12-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a05",
+          "order": 1,
+          "title": "WITH DRATA",
+          "summary": "Get a single picture of compliance, manage risk, and improve your security posture with the leader in compliance automation [5]:",
+          "url": "https://drata.com/partner/tldr?utm_campaign=DR_cap_tldr_infosec_all_sec-it_none_none_AMS_USCA_demo_requestdemo&utm_source=tldr&utm_medium=paidnewsletter&utm_content=request-demo_txt_v1&utm_term=USCA_all_sec-it_none_none",
+          "reading_time_minutes": null,
+          "source_domain": "drata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a05",
+          "order": 2,
+          "title": "Start with an exclusive offer for TLDR readers today!",
+          "summary": "",
+          "url": "https://drata.com/partner/tldr?utm_campaign=DR_cap_tldr_infosec_all_sec-it_none_none_AMS_USCA_demo_requestdemo&utm_source=tldr&utm_medium=paidnewsletter&utm_content=request-demo_txt_v1&utm_term=USCA_all_sec-it_none_none",
+          "reading_time_minutes": null,
+          "source_domain": "drata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a06",
+          "order": 1,
+          "title": "KIDSECURITY’S USER DATA COMPROMISED AFTER APP FAILED TO SET A PASSWORD",
+          "summary": "A popular parental control app for Android, KidSecurity, provides parents with the ability to set app limits, track their children, and listen to sounds around their children. Researchers discovered an ElasticSearch instance belonging to the app that had no authentication configured. This led to the exposure of private information including phone numbers, email addresses, and portions of credit cards.",
+          "url": "https://cybernews.com/security/kidsecurity-parental-control-data-leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a07",
+          "order": 2,
+          "title": "EXPERTS WARN OF SNEAKY FAKE LOCKDOWN MODE ATTACK",
+          "summary": "Researchers from Jamf have discovered that an attacker could run a trojan on a compromised iPhone running iOS 16 to hook into Lockdown mode and bypass its security mechanisms. This post-exploitation technique could allow an attacker to continue persisting on a compromised device while providing users with a false sense of security. Jamf notes that Lockdown mode was moved to the kernel level in iOS 17 which would prevent their attack.",
+          "url": "https://thehackernews.com/2023/12/warning-for-iphone-users-experts-warn.html?m=1&utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a08",
+          "order": 3,
+          "title": "ATLASSIAN ANNOUNCES FIXES FOR FOUR CRITICAL RCE VULNERABILITIES",
+          "summary": "Atlassian has released fixes for four different vulnerabilities in various products that each could be utilized to achieve RCE. The flaws include a vulnerability in a third-party deserialization library, a template injection flaw in Confluence, an Assets Discovery flaw that could allow RCE on any machines with the agent installed, and a flaw that could allow for RCE via WebSockets to bypass Atlassian Companion’s blocklist and MacOS Gatekeeper.",
+          "url": "https://thehackernews.com/2023/12/atlassian-releases-critical-software.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a09",
+          "order": 1,
+          "title": "DETECTING RUNTIME SECURITY THREATS IN ECS",
+          "summary": "Amazon GuardDuty has launched a new feature for runtime monitoring on ECS clusters. Runtime Monitoring for ECS checks hundreds of threat vectors to produce 30 different finding categories that can be sent to EventBridge, Security Hub, or Detective. Runtime Monitoring is supported on Fargate and on EC2-based clusters.",
+          "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-guardduty-ecs-runtime-monitoring-including-aws-fargate?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a10",
+          "order": 2,
+          "title": "CUEING UP A CALCULATOR: AN INTRODUCTION TO EXPLOIT DEVELOPMENT ON LINUX",
+          "summary": "This blog post focuses on writing a one-click malicious webpage that exploits CVE-2023-43641, an out-of-bounds array access vulnerability in libcue that allows attackers to overwrite the memory of a process. It explains the challenges of bypassing mitigations such as no-execute memory, ASLR, and stack canaries. The post provides insights into ASLR, heap layout, and the development of an exploit targeting libcue in tracker-extract.",
+          "url": "https://github.blog/2023-12-06-cueing-up-a-calculator-an-introduction-to-exploit-development-on-linux/?utm_source=tldrinfosec",
+          "reading_time_minutes": 28,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a11",
+          "order": 3,
+          "title": "UNICODE XSS VIA COMBINING CHARACTERS",
+          "summary": "This gist demonstrates a variant of unicode XSS using character combinations. It also demonstrates how such an attack works and provides the root cause, as well as suggesting approaches for detecting unicode normalization, and flagging such occurrences to be manually inspected.",
+          "url": "https://gist.github.com/paj28/86c7b8f37371d89c9a36ed0280fcf450?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "gist.github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a12",
+          "order": 1,
+          "title": "[WEBINAR] HOW TO OPERATIONALIZE VULNERABILITY THREAT INTELLIGENCE",
+          "summary": "Vulnerability Threat Intelligence (VTI) helps pinpoint vulnerabilities, shape strategies for risk acceptance, and respond to zero-day threats. Join this session for actionable VTI strategies [12]! SPEAKERS: Patrick Garrity, Nucleus Security | Caleb Hoch, Google | Jacob Semrau, Mandiant",
+          "url": "https://nucleussec.com/webinar/how-to-operationalize-vulnerability-threat-intelligence/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dec23mandiantwebinar",
+          "reading_time_minutes": null,
+          "source_domain": "nucleussec.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a12",
+          "order": 2,
+          "title": "WHEN: December 20 - join here ↗️",
+          "summary": "",
+          "url": "https://nucleussec.com/webinar/how-to-operationalize-vulnerability-threat-intelligence/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dec23mandiantwebinar",
+          "reading_time_minutes": null,
+          "source_domain": "nucleussec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a13",
+          "order": 3,
+          "title": "APK.SH",
+          "summary": "apk.sh makes reverse engineering Android apps easier. It automates some repetitive tasks like pulling, decoding, rebuilding, and patching an APK.",
+          "url": "https://github.com/ax/apk.sh?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a14",
+          "order": 4,
+          "title": "DECOMPILER EXPLORER",
+          "summary": "Decompiler Explorer allows you to see decompile output for various decompilers like angr, binary-ninja, and Ghidra. There's a hosted website at dogbolt.org that serves as a frontend but it retains any uploaded binaries.",
+          "url": "https://github.com/decompiler-explorer/decompiler-explorer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a15",
+          "order": 5,
+          "title": "ADOKIT",
+          "summary": "ADOKit is a modular toolkit that helps build attacks against Azure DevOps Services using their REST API. The tool allows the user to specify an attack module, along with specifying valid credentials (API key or stolen authentication cookie) for the respective Azure DevOps Services instance.",
+          "url": "https://github.com/xforcered/ADOKit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a16",
+          "order": 1,
+          "title": "HOW THE FIRST GEN IPOD WAS REVERSE ENGINEERED TO RUN #ROCKBOX",
+          "summary": "This thread discusses how the original iPod was reverse engineered using a specially crafted HTML webpage to run Rockbox.",
+          "url": "https://mastodon.social/@bagder/111538350617290554?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "mastodon.social",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a17",
+          "order": 2,
+          "title": "GMAIL’S AI POWERED SPAM DETECTION IS ITS BIGGEST UPDATE IN YEARS",
+          "summary": "Google announced that its new text classification system, RETVec, has been integrated into Gmail’s spam filters. RETVec is designed to combat adversarial text attacks such as those which utilize homoglyphs to bypass detection. It has been open sourced and can be run locally on lower-powered devices.",
+          "url": "https://arstechnica.com/gadgets/2023/12/gmails-ai-powered-spam-detection-is-its-biggest-security-upgrade-in-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a18",
+          "order": 3,
+          "title": "ANALYSIS OF NORTH KOREAN HACKERS’ TARGETED PHISHING SCAMS ON TELEGRAM",
+          "summary": "Slowmist, a blockchain security company, conducted an analysis of the North Korean hacking group Lazarus' tactics in Telegram. They found that the hackers employ various tactics, such as convincing project teams to download malicious scripts or inserting malicious links on event pages. Users should take immediate action in case of malware infection and to protect accounts.",
+          "url": "https://slowmist.medium.com/analysis-of-north-korean-hackers-targeted-phishing-scams-on-telegram-872db3f7392b?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "slowmist.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-12-08:a19",
+          "order": 1,
+          "title": "APPLE CONFIRMS GOVERNMENTS USING PUSH NOTIFICATIONS TO SURVEIL USERS",
+          "summary": "Apple has confirmed that unidentified Governments have been using push notifications to surveil users.",
+          "url": "https://www.macrumors.com/2023/12/06/apple-governments-surveil-push-notifications/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "macrumors.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a20",
+          "order": 2,
+          "title": "23ANDME UPDATES USER AGREEMENT TO PREVENT DATA BREACH LAWSUITS",
+          "summary": "Genetic testing provider 23andMe has updated its Terms of Use to make it more difficult for customers to sue the company in response to multiple lawsuits following a data breach.",
+          "url": "https://www.bleepingcomputer.com/news/security/23andme-updates-user-agreement-to-prevent-data-breach-lawsuits/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a21",
+          "order": 3,
+          "title": "META BEGINS DEFAULT END-TO-END ENCRYPTION FOR MESSENGER ROLLOUT",
+          "summary": "After years of testing, Meta has announced that it will be rolling out default end-to-end encryption for all users on Messenger. Meta reports that the rollout took so long as many features of Messenger had to be completely rebuilt to work with end-to-end encryption.",
+          "url": "https://techcrunch.com/2023/12/06/meta-finally-starts-rolling-out-default-end-to-end-encryption-for-messenger/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-12-08:a22",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

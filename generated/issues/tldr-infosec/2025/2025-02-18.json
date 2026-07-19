@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-02-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-02-18",
+  "source_path": "TLDR InfoSec/article_18-02-2025.md",
+  "source_content_hash": "sha256:9df8c06a4486c1321e3b459ddb1227f20d5aa8546879ca70b98a5ff830d2de94",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-02-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Hyperproof recently released its Spring 2025 IT Risk and Compliance Benchmarks report [4], based on a survey of 1,000+ infosec pros.",
+          "url": "https://hyperproof.io/it-compliance-benchmarks/?utm_campaign=7080019-2025-TPS-TLDRtech&utm_source=tldrtech&utm_medium=email&utm_content=benchmark",
+          "reading_time_minutes": null,
+          "source_domain": "hyperproof.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a05",
+          "order": 1,
+          "title": "NEW FINALDRAFT MALWARE ABUSES OUTLOOK MAIL SERVICE FOR STEALTHY COMMUNICATIONS",
+          "summary": "Elastic Security is reporting on a new malware campaign that utilizes Outlook drafts for C2 communication. The campaign uses PathLoader, which contains static analysis defenses, to load the FinalDraft malware, which requests OAuth tokens from Microsoft to hide C2 communication in drafts. The malware accepts 37 unique commands that include data exfiltration, process injection, pass-the-hash attacks, network proxying, file operations, and Powershell execution.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-finaldraft-malware-abuses-outlook-mail-service-for-stealthy-comms/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a06",
+          "order": 2,
+          "title": "TELEGRAM ABUSED AS C2 CHANNEL FOR NEW GOLANG BACKDOOR",
+          "summary": "Researchers at Netskope have discovered a Golang-based malware, likely Russian in origin, that uses Telegram API as a Command and Control Mechanism. It uses the \"C:\\Windows\\Temp\\svchost.exe\" location to save the binary and listens to commands in a Telegram Channel. This blog post includes the IOCs in a GitHub repository as well as screenshots of decompiled code of the malware.",
+          "url": "https://www.netskope.com/blog/telegram-abused-as-c2-channel-for-new-golang-backdoor?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "netskope.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a07",
+          "order": 3,
+          "title": "FINASTRA ANNOUNCES DATA BREACH FOLLOWING DISCOVERY OF NOVEMBER 2024 CYBERATTACK",
+          "summary": "Finastra reported a data breach after discovering unauthorized access in November 2024 to consumer information, including names and financial details. They are sending out notification letters to those affected by the security incident. The article suggests seeking legal guidance to protect anyone receiving notification letters and for anyone impacted to understand options following the breach.",
+          "url": "https://www.jdsupra.com/legalnews/finastra-announces-data-breach-7637704/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "jdsupra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a08",
+          "order": 1,
+          "title": "HOW TO APPLY ENCRYPTION TECHNIQUES TO BOLSTER DATA LOSS PREVENTION",
+          "summary": "In 2024, data breaches cost businesses an average of $4.88 million globally. Data encryption has become increasingly vital and reliable, especially with growing interconnected systems and data transfers. It provides essential protection by encoding information, making it accessible only with the correct decryption key.",
+          "url": "https://www.ironhack.com/us/blog/how-to-apply-encryption-techniques-to-bolster-data-loss-prevention?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "ironhack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a09",
+          "order": 2,
+          "title": "🚨 AWS & EXPOSED CREDENTIALS: THE MISTAKE THAT CAN RUIN YOU (AND HOW TO AVOID IT — I GOT YOU!)",
+          "summary": "Poor credential management causes 70% of cloud data breaches. Beyond passwords, companies must protect API keys, SSL certificates, authentication tokens, and federated identities. This article notes various actions one can take if credentials are compromised.",
+          "url": "https://medium.com/@Kenza.In.The.Cloud/aws-exposed-credentials-the-mistake-that-can-ruin-you-and-how-to-avoid-it-i-got-you-722c464a0575?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a10",
+          "order": 3,
+          "title": "HOW TO BYPASS GITHUB'S BRANCH PROTECTION",
+          "summary": "Mercari presents 7 scenarios in which an attacker with write permissions to a branch protected GitHub repository can bypass those protections to merge malicious code without a review. For each of the first six methods mentioned, Mercari also presents a technical control to prevent the attack. However, the final scenario, which involves the attacker adding a commit to a PR that another user created using GitHub Actions and approving it, does not have a comprehensive defense mechanism built into GitHub.",
+          "url": "https://engineering.mercari.com/en/blog/entry/20241217-github-branch-protection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "engineering.mercari.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a11",
+          "order": 1,
+          "title": "WHY EVERYONE IS TALKING ABOUT ENTERPRISE BROWSERS",
+          "summary": "Data shows that web applications and email—which are primarily accessed via web browsers—account for over 80% of security breaches [11]; and a majority of the client-side zero-day exploits are browser vulnerabilities. Learn how to choose the right approach to protecting the browser in _The CISO's Guide to Enterprise Browsers_ by Menlo",
+          "url": "https://www.menlosecurity.com/resources/cisos-guide-to-enterprise-browsers-white-paper?utm_campaign=SEB&utm_medium=3rdpartyemail&utm_source=TLDR-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "menlosecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a11",
+          "order": 2,
+          "title": "Security.",
+          "summary": "",
+          "url": "https://www.menlosecurity.com/resources/cisos-guide-to-enterprise-browsers-white-paper?utm_campaign=SEB&utm_medium=3rdpartyemail&utm_source=TLDR-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "menlosecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a12",
+          "order": 3,
+          "title": "BOOFUZZ",
+          "summary": "Boofuzz is a fork of and the successor to the venerable Sulley fuzzing framework. Besides numerous bug fixes, boofuzz aims for extensibility. The goal: fuzz everything.",
+          "url": "https://github.com/jtpereyda/boofuzz?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a13",
+          "order": 4,
+          "title": "SECTEMPLATES",
+          "summary": "Sectemplates offers Open source templates you can use to bootstrap your security programs. The templates cover preparation checklists, runbooks, security metrics, and document templates. Users can freely use the content for personal and commercial purposes, excluding products for sale or developed based on it.",
+          "url": "https://github.com/securitytemplates/sectemplates?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a14",
+          "order": 5,
+          "title": "HTTPTAP",
+          "summary": "httptap is a CLI program that allows users to view HTTP(S) requests made by any Linux program.",
+          "url": "https://github.com/monasticacademy/httptap?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a15",
+          "order": 1,
+          "title": "SOUTH KOREA BLOCKS DOWNLOADS OF DEEPSEEK FROM LOCAL APP STORES",
+          "summary": "South Korea has temporarily restricted downloads of Chinese AI company DeepSeek's app over data privacy concerns, specifically its transfer of user data to ByteDance. While existing users can continue using the service, they're advised against sharing personal information until DeepSeek complies with Korean privacy laws.",
+          "url": "https://techcrunch.com/2025/02/16/south-korea-blocks-downloads-of-deepseek-from-local-app-stores/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a16",
+          "order": 2,
+          "title": "INVESTIGATING KERNEL MODE SHADOW STACKS ON WINDOWS",
+          "summary": "Shadow stacks are a security feature that Intel CET implements to defend against ROP attacks by shadowing and comparing the current stack against a protected, read-only copy. The “Secure Kernel” is a Windows feature that allows the kernel to run in a virtualized form by a protected Secure Kernel. This post utilizes the SourcePoint debugger to perform a novel dynamic analysis of the Windows Secure Kernel.",
+          "url": "https://connormcgarr.github.io/km-shadow-stacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 49,
+          "source_domain": "connormcgarr.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a17",
+          "order": 3,
+          "title": "CHASE WILL SOON BLOCK ZELLE PAYMENTS TO SELLERS ON SOCIAL MEDIA",
+          "summary": "Chase has announced that they will begin to delay, decline, or block Zelle payments to contacts that likely originated from social media contacts. When payments are set up, Chase may request additional information such as the purpose of the payment to make this decision. This move is likely prompted by the CFPB lawsuit against Zelle as well as fraud statistics from Chase.",
+          "url": "https://www.bleepingcomputer.com/news/security/chase-will-soon-block-zelle-payments-to-sellers-on-social-media/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-18:a18",
+          "order": 1,
+          "title": "AI HONEYPOT DEMO (WEBAPP)",
+          "summary": "Demo of an SSH honeypot with artificial intelligence which features a terminal that simulates an Ubuntu environment, allowing you to explore and test Linux commands.",
+          "url": "https://trapster.cloud/en/resources?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "trapster.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a19",
+          "order": 2,
+          "title": "MICROSOFT TO REMOVE THE LOCATION HISTORY FEATURE IN WINDOWS",
+          "summary": "Microsoft is removing the Location History feature from Windows, which allowed Cortana to access device history.",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-to-remove-the-location-history-feature-in-windows/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-18:a20",
+          "order": 3,
+          "title": "PRO-RUSSIA COLLECTIVE NONAME057(16) LAUNCHED A NEW WAVE OF DDOS ATTACKS ON ITALIAN SITES",
+          "summary": "The pro-Russia group NoName057(16) launched DDoS attacks on Italian airports, banks, and ports in response to President Mattarella's remarks comparing Russia to the Third Reich.",
+          "url": "https://securityaffairs.com/174294/hacktivism/noname05716-launched-ddos-attacks-on-italian-sites.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

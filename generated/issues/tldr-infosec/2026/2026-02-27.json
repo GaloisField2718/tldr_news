@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-27",
+  "source_path": "TLDR InfoSec/article_27-02-2026.md",
+  "source_content_hash": "sha256:8eb2c841263d74da38172f241f0a51e0386c13d5d2a6b6bf3806ef6c605d0819",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a04",
+          "order": 1,
+          "title": "STEP INSIDE THE BUSINESS OF MODERN CYBERCRIME",
+          "summary": "On March 18, Huntress [5] hosts _declassified [6], a live, raw intel drop on the dark economy of cybercrime, where John Hammond joins YourTuber Jim Browning to show you exactly what cybercriminal organizations look like.",
+          "url": "https://www.huntress.com/declassified",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a07",
+          "order": 1,
+          "title": "GOOGLE API KEYS WEREN'T SECRETS. BUT THEN GEMINI CHANGED THE RULES",
+          "summary": "Truffle Security discovered that enabling the Gemini API on a Google Cloud project silently grants existing API keys, including those publicly embedded in client-side JavaScript for services like Maps and Firebase, access to sensitive Gemini endpoints (CWE-1188, CWE-269). A scan of the November 2025 Common Crawl dataset identified 2,863 live Google API keys vulnerable to this privilege escalation, affecting major financial institutions, security companies, and Google itself. Organizations should audit all GCP projects for the Generative Language API, restrict or rotate any unrestricted or publicly exposed keys, and verify that no Gemini-capable keys are embedded in client-side code or public repositories.",
+          "url": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a08",
+          "order": 2,
+          "title": "MALICIOUS NEXT.JS REPOS TARGET DEVELOPERS VIA FAKE JOB INTERVIEWS",
+          "summary": "Microsoft discovered Trojanized Next.js repositories linked to North Korea's Lazarus APT that deliver backdoors through fake job-recruitment coding challenges, achieving RCE and persistent C2 access on developer machines. The repositories exploit VS Code workspace automation via malicious .vscode/tasks.json files or embed obfuscated loaders in build assets that fetch attacker-controlled JavaScript at runtime. Security teams should enforce strict IDE trust policies, monitor for anomalous Node.js outbound connections, and treat developer workflows as a privileged attack surface.",
+          "url": "https://links.tldrnewsletter.com/RcMIoQ",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a09",
+          "order": 3,
+          "title": "CISCO SAYS HACKERS HAVE BEEN EXPLOITING A CRITICAL BUG TO BREAK INTO BIG CUSTOMER NETWORKS SINCE 2023",
+          "summary": "Hackers have abused a max‑severity 10.0 flaw in Cisco Catalyst SD‑WAN gear since at least 2023 to gain top‑level access, maintain stealthy persistence, and spy on or steal data from large enterprises and critical infrastructure worldwide. Governments, including the US, UK, Canada, Australia, and New Zealand, warn of global targeting.",
+          "url": "https://techcrunch.com/2026/02/26/cisco-says-hackers-have-been-exploiting-a-critical-bug-to-break-into-big-customer-networks-since-2023/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a10",
+          "order": 1,
+          "title": "ABUSING CORTEX XDR LIVE TERMINAL AS A C2 - INFOGUARD LABS",
+          "summary": "InfoGuard researchers demonstrated that Palo Alto's Cortex XDR Live Terminal feature can be abused as a pre-installed, EDR-trusted C2 channel, offering command execution, file transfer, and evasion capabilities through traffic that blends natively into enterprise network flows. The attack exploits a trivial URL validation flaw in cortex-xdr-payload.exe and the absence of mutual authentication or cryptographic command signing, allowing attackers to redirect connections to their own infrastructure via cross-tenant hijacking or a custom WebSocket server. Defenders should monitor for cortex-xdr-payload.exe spawned by any parent process other than cyserver.exe, while Palo Alto's claimed fix in versions 8.7-8.9 was not confirmed effective as of February.",
+          "url": "https://labs.infoguard.ch/posts/abusing_cortex_xdr_live_response_as_c2/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "labs.infoguard.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a11",
+          "order": 2,
+          "title": "NEW AIRSNITCH ATTACK BREAKS WI-FI ENCRYPTION IN HOMES, OFFICES, AND ENTERPRISES",
+          "summary": "AirSnitch exploits low-level Wi-Fi behavior to bypass client isolation, enabling bidirectional MitM from any SSID on the same AP against popular consumer and enterprise gear. Attackers can steal cookies, credentials, and RADIUS secrets, pivot between guest and corporate networks, and poison DNS, challenging assumptions about guest Wi-Fi safety and pushing networks toward stricter zero‑trust segmentation and careful AP/VLAN design.",
+          "url": "https://arstechnica.com/security/2026/02/new-airsnitch-attack-breaks-wi-fi-encryption-in-homes-offices-and-enterprises/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a12",
+          "order": 3,
+          "title": "THE POST-RAMP ERA: ALLEGATIONS, FRAGMENTATION, AND THE REBUILDING OF THE RANSOMWARE UNDERGROUND",
+          "summary": "In January 2026, the FBI-led seizure of the RAMP forum dismantled a central hub for ransomware coordination but mainly shattered trust and pushed actors into more fragmented spaces, such as the closed, pay-to-enter T1erOne and the open forum Rehub. Competing narratives about leaked RAMP data and possible insider abuse have reinforced fears of honeypots, driving a shift toward smaller, tightly vetted communities and parallel use of low-barrier platforms.",
+          "url": "https://www.rapid7.com/blog/post/tr-post-ramp-allegations-fragmentation-ransomware-underground-rebuild/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "rapid7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a13",
+          "order": 1,
+          "title": "32% OF LLM PENTEST FINDINGS ARE SERIOUS VULNERABILITES — HIGHER THAN ANY OTHER ASSET TYPE",
+          "summary": "...And only 21% of serious LLM vulnerabilities are actually resolved, the lowest among all pentest types. Cobalt [13] combed data from 16,000 LLM pentests and the results are not pretty. They indicate that most teams are prioritizing quick fixes over complex problem solving.",
+          "url": "https://resource.cobalt.io/state-of-llm-security?utm_campaign=14995291-SOPR+AI+cut+2025_06&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a13",
+          "order": 2,
+          "title": "Read the State of LLM Security Report",
+          "summary": "",
+          "url": "https://resource.cobalt.io/state-of-llm-security?utm_campaign=14995291-SOPR+AI+cut+2025_06&utm_source=TLDR&utm_medium=enewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "resource.cobalt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a14",
+          "order": 3,
+          "title": "AUTOPIFF",
+          "summary": "AutoPiff is a semantic analysis engine that automates the detection of security-relevant changes in Windows kernel driver patches using 58 YAML-based rules across 22 vulnerability categories, including use-after-free fixes, bounds check additions, and IOCTL input validation. The framework runs as a Karton microservice pipeline integrating Ghidra decompilation, function matching, call-graph reachability analysis, and exploitability scoring to reduce manual driver pair analysis from 4-12 hours to under 5 minutes. Designed for silent patch detection and 1-day vulnerability research, it tracks 50+ dangerous API sinks and alerts on high-scoring findings via Telegram.",
+          "url": "https://github.com/splintersfury/AutoPiff?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a15",
+          "order": 4,
+          "title": "GAMBIT SECURITY (PRODUCT LAUNCH)",
+          "summary": "Gambit Security's AI-powered resilience platform, Balens, maps environments, security products, and backups to uncover gaps, validate recovery paths in real-time, and ensure business continuity against ransomware and disruptions.",
+          "url": "https://gambit.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "gambit.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a16",
+          "order": 5,
+          "title": "THENEWOIL",
+          "summary": "A project dedicated to teaching beginners and non-tech-savvy people about digital privacy and cybersecurity.",
+          "url": "https://github.com/tnonate/thenewoil?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a17",
+          "order": 1,
+          "title": "NEVER BUY A .ONLINE DOMAIN",
+          "summary": "A developer's .online domain was suspended via serverHold by registry operator Radix after Google Safe Browsing flagged the site, with no prior notification or grace period. The suspension created a Catch-22 where Google required DNS-based domain verification to review the flag, but the registry refused to reactivate DNS until Google removed it. The incident highlights the risks of non-.com TLDs with aggressive abuse policies and reinforces the importance of pre-registering domains in Google Search Console and adding uptime monitoring even for simple landing pages.",
+          "url": "https://www.0xsid.com/blog/online-tld-is-pain?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "0xsid.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a18",
+          "order": 2,
+          "title": "GOOGLE CATCHES BEIJING SPIES USING SHEETS TO SPREAD ESPIONAGE ACROSS 4 CONTINENTS",
+          "summary": "Google Threat Intelligence disrupted UNC2814, a China-linked espionage group that compromised 53 victims across 42 countries by targeting telecoms and government organizations with a novel backdoor called Gridtide that abuses Google Sheets API for C2 communication. The group, tracked since 2017, escalated privileges via SSH lateral movement and deployed SoftEther VPN Bridge for persistent encrypted connections, with infrastructure dating back to July 2018. Google terminated all attacker-controlled Cloud Projects, disabled known infrastructure, and revoked the Sheets API access used for C2 operations.",
+          "url": "https://www.theregister.com/2026/02/25/google_and_friends_disrupt_unc2814/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a19",
+          "order": 3,
+          "title": "THE BLAST RADIUS PROBLEM: STOLEN CREDENTIALS ARE WEAPONIZING AGENTIC AI",
+          "summary": "IBM X-Force data shows high volumes of unauthenticated vulnerabilities and a surge in infostealer‑driven credential theft, including hundreds of thousands of stolen ChatGPT logins. Attackers use AI and agentic systems to expand blast radius, pivot through supply chains, and blur criminal and nation‑state tradecraft.",
+          "url": "https://links.tldrnewsletter.com/q2Hk8o",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-27:a20",
+          "order": 1,
+          "title": "TOOL OVERLOAD GOT YOUR HEAD SPINNING?",
+          "summary": "Tech stack complexity is out of control, and the last thing you need is a bigger ‘stack'. Microsoft Azure gives you a unified view of applications, cloud resources, and AI—so you can ship more software",
+          "url": "https://links.tldrnewsletter.com/4V5gJA?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a21",
+          "order": 2,
+          "title": "with less open tabs. Simplify with Azure",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/4V5gJA",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a22",
+          "order": 3,
+          "title": "TREASURY SANCTIONS EXPLOIT BROKER NETWORK FOR THEFT AND SALE OF US GOVERNMENT CYBER TOOLS",
+          "summary": "The US Treasury sanctioned Russian exploit broker Operation Zero and its founder Sergey Zelenyuk for acquiring at least eight stolen US government cyber tools from an insider and selling them to unauthorized buyers, marking the first-ever action under the Protecting American Intellectual Property Act.",
+          "url": "https://home.treasury.gov/news/press-releases/sb0404?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "home.treasury.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a23",
+          "order": 4,
+          "title": "LINUX EXPLORES NEW WAY OF AUTHENTICATING DEVELOPERS AND CODE - HERE'S HOW IT WORKS",
+          "summary": "Linux kernel maintainers have proposed replacing the aging PGP web of trust with a decentralized identity layer built on W3C DIDs and verifiable credentials.",
+          "url": "https://www.zdnet.com/article/linux-kernel-maintainers-new-way-of-authenticating-developers-and-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "zdnet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-27:a24",
+          "order": 5,
+          "title": "CLAUDE'S COWORK DESKTOP APP NOW RUNS SCHEDULED TASKS SO YOUR AI ASSISTANT WORKS WHILE YOU SLEEP",
+          "summary": "Anthropic's Cowork desktop app has added scheduled task automation for Claude, enabling recurring workflows like morning briefings and weekly report generation, though security professionals should carefully scope the system access granted to the agent.",
+          "url": "https://the-decoder.com/claudes-cowork-desktop-app-now-runs-scheduled-tasks-so-your-ai-assistant-works-while-you-sleep/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "the-decoder.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

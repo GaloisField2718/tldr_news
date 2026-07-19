@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-12",
+  "source_path": "TLDR InfoSec/article_12-02-2026.md",
+  "source_content_hash": "sha256:7855b55941aa7697c2ff954f6cb83dd2d4f7e55e2f272fad4d15bd872c741305",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a04",
+          "order": 1,
+          "title": "FEEL LIKE YOUR TABS HAVE TABS?",
+          "summary": "Developer tool sprawl is real. You've got one tab for logs, another for metrics, half a dozen for cloud services, and somewhere in there is the code you're actually trying to ship.",
+          "url": "https://links.tldrnewsletter.com/j8SJzc",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a04",
+          "order": 2,
+          "title": "🫣 Stop playing hide-and-seek with your tools. Microsoft Azure",
+          "summary": "brings together everything you need to build and run software in a single workspace.",
+          "url": "https://links.tldrnewsletter.com/j8SJzc",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a04",
+          "order": 3,
+          "title": "Simplify your stack with Azure →",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/j8SJzc",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a05",
+          "order": 1,
+          "title": "NEW 'ZERODAYRAT' SPYWARE KIT ENABLES TOTAL COMPROMISE OF IOS, ANDROID DEVICES",
+          "summary": "A new commercial mobile spyware toolkit, ZeroDayRAT, sold via Telegram and analyzed by iVerify, offers nation-state-level capabilities, including live camera and microphone feeds, keylogging, GPS tracking, bank credential theft, and crypto clipboard hijacking, for both Android and iOS devices. The self-hosted kit uses a builder model in which operators generate payloads for their own infrastructure, distributing them via phishing, smishing, or trojanized apps. The creators deliberately obscure attribution by advertising in five languages and mixing Chinese, Russian, and Indian targeting indicators. Takedown efforts have been complicated by the decentralized operator model and Telegram's slow enforcement, making this a persistent threat with few available IoCs beyond unusual battery drain and unexplained financial transactions.",
+          "url": "https://links.tldrnewsletter.com/cYD0dG",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a06",
+          "order": 2,
+          "title": "SOMEONE'S ATTACKING SOLARWINDS WHD TO STEAL HIGH-PRIVILEGE CREDENTIALS - BUT WE DON'T KNOW WHO OR HOW",
+          "summary": "Unknown threat actors exploited vulnerable SolarWinds Web Help Desk instances in December 2025 to gain initial access, with Microsoft unable to confirm whether the attacks leveraged CVE-2025-40551 (9.8 CVSS deserialization RCE), CVE-2025-40536 (8.1 CVSS auth bypass), or CVE-2025-26399 (9.8 CVSS command execution). Post-exploitation activity included BITS abuse for payload delivery, installation of Zoho ManageEngine RMM for persistence, LSASS credential dumping via DLL sideloading, and DCSync attacks to extract domain controller password data. Organizations should immediately patch WHD, remove public access to admin paths, scan for unauthorized RMM tools such as ToolsIQ.exe, and rotate service and admin account credentials accessible from WHD.",
+          "url": "https://www.theregister.com/2026/02/09/solarwinds_mystery_whd_attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a07",
+          "order": 3,
+          "title": "CLAWHAVOC: 341 MALICIOUS CLAWED SKILLS FOUND BY THE BOT THEY WERE TARGETING",
+          "summary": "Koi Security's threat hunting agent analyzed skills being offered on OpenClaw's ClawHub marketplace and discovered that 341/2857 of them were malicious. Most malicious extensions follow a similar pattern: the prerequisites instruct the agent to download and execute a file containing a malicious payload that installs the AMOS stealer. The post also highlights a few unique skills that download other payloads or hide their stealers and backdoors within the code itself.",
+          "url": "https://www.koi.ai/blog/clawhavoc-341-malicious-clawedbot-skills-found-by-the-bot-they-were-targeting?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "koi.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a08",
+          "order": 1,
+          "title": "THE RANSOMWARE FRANCHISE WARS: HOW FALLING PAYMENTS ARE SPAWNING A NEW GENERATION OF CYBERCRIME CARTELS",
+          "summary": "The collapses of Black Basta and LockBit have triggered a violent restructuring of the RaaS ecosystem, with new entrants like DragonForce operating as vertically integrated \"cartels\" that embed access broker marketplaces directly into affiliate panels, compressing the window between initial access and ransomware deployment to hours. A parallel commoditization of EDR evasion tools, including BYOVD-based killers exploiting a still-valid 2006 Microsoft-signed driver, has collapsed the barrier to entry so that even low-budget operators can defeat enterprise security stacks. Defenders should prioritize enabling Microsoft's opt-in Vulnerable Driver Blocklist, monitor access broker marketplaces for organizational exposure, and shift threat intelligence from tracking ransomware brands to tracking persistent infrastructure indicators like shared SSH fingerprints and certificate reuse.",
+          "url": "https://flare.io/learn/resources/blog/33197?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "flare.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a09",
+          "order": 2,
+          "title": "VOIDLINK: DISSECTING AN AI-GENERATED C2 IMPLANT",
+          "summary": "VoidLink is a Zig-based Linux C2 implant that bears strong indicators of LLM-generated code — including structured \"Phase X:\" labels, verbose debug logging, and documentation patterns left in the production binary — demonstrating how AI coding agents are lowering the barrier to producing functional, multi-cloud malware. The implant fingerprints AWS, GCP, Azure, Alibaba Cloud, and Tencent Cloud environments, harvests credentials from environment variables and metadata APIs, performs container escape via Docker/Kubernetes plugins, and deploys an adaptive kernel-level rootkit that selects eBPF, LKM, or LD_PRELOAD stealth based on host kernel version. Defenders should monitor for unauthorized cloud metadata API queries from workloads, audit Kubernetes service account token access, and treat verbose or structured debug artifacts in captured malware as potential indicators of AI-assisted development requiring adjusted threat modeling.",
+          "url": "https://www.ontinue.com/resource/voidlink-dissecting-an-ai-generated-c2-implant/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "ontinue.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a10",
+          "order": 3,
+          "title": "WHEN MFA WASN'T ENOUGH: A REAL AITM INCIDENT REVIEW",
+          "summary": "Attackers have shifted from credential theft to stealing authentication tokens for initial access. In one incident that the author observed, an attacker successfully stole an authentication token via an attacker-in-the-middle (AitM) Microsoft 365 proxy, but couldn't achieve their goals due to rapid detection and response. In a second incident, the attacker was unable to steal a token because the organization utilized FIDO2 security keys, so the authentication attempt through the AitM proxy failed.",
+          "url": "https://links.tldrnewsletter.com/S7Aet8",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a11",
+          "order": 1,
+          "title": "📊 HOW MANY DASHBOARDS IS TOO MANY?",
+          "summary": "Every new monitoring tool, service, or \"quick integration\" adds another dashboard to the pile—and before you know it, you're spending more time switching between tools than actually building. With Microsoft Azure [12], your entire stack lives in one workspace: infrastructure, data, AI, and more. See how Azure brings it all",
+          "url": "https://links.tldrnewsletter.com/nANLQ2?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a12",
+          "order": 2,
+          "title": "together →",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/nANLQ2",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a13",
+          "order": 3,
+          "title": "SKILL SCANNER",
+          "summary": "Skill Scanner is a security scanner for AI agent skills that detects prompt injection, data exfiltration, and malicious code patterns via a combination of pattern-based detections, LLM-as-a-judge, and behavioral data analysis.",
+          "url": "https://github.com/cisco-ai-defense/skill-scanner?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a14",
+          "order": 4,
+          "title": "JSANALYZER",
+          "summary": "JSAnalyzer is a Burp Suite extension for JavaScript static analysis.",
+          "url": "https://github.com/jenish-sojitra/JSAnalyzer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a15",
+          "order": 5,
+          "title": "BLACKICE",
+          "summary": "BlackIce is a containerized toolkit designed for red teaming AI models.",
+          "url": "https://github.com/databricks/containers/tree/release-17.3-LTS/ubuntu/blackice?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a16",
+          "order": 1,
+          "title": "UNC1069 TARGETS CRYPTOCURRENCY SECTOR WITH NEW TOOLING AND AI-ENABLED SOCIAL ENGINEERING",
+          "summary": "Mandiant attributed an intrusion against a FinTech entity to UNC1069, a DPRK-nexus financially motivated threat actor that leveraged a compromised Telegram account, a spoofed Zoom meeting with a reported deepfake video, and a ClickFix attack to deploy seven malware families on a macOS device — including new tools SILENCELIFT, DEEPBREATH, and CHROMEPUSH. The attack chain progressed from the WAVESHAPER backdoor through the HYPERCALL downloader to deploy HIDDENCALL for hands-on keyboard access, while DEEPBREATH bypassed macOS TCC protections to steal Keychain credentials, browser data, and Telegram sessions, and CHROMEPUSH installed a malicious Chrome extension for keylogging and cookie theft. The investigation highlights UNC1069's expanding use of GenAI tools like Gemini and GPT-4o for social engineering, alongside a significant tooling refresh targeting cryptocurrency startups, software developers, and venture capital firms.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a17",
+          "order": 2,
+          "title": "MICROSOFT ROLLS OUT NEW SECURE BOOT CERTIFICATES BEFORE JUNE EXPIRATION",
+          "summary": "The certificates that Microsoft uses for Secure Boot are set to expire in June 2026 after 15 years of use. Users who have automatic updates enabled will receive the new updates automatically. Admins can deploy the new certificates via registry keys, Group Policy, or Windows Configuration System (WinCS). Windows 10 users who are not enrolled in extended security updates will not receive the new certificates.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-rolls-out-new-secure-boot-certificates-before-june-expiration/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a18",
+          "order": 3,
+          "title": "REYNOLDS RANSOMWARE EMBEDS BYOVD DRIVER TO DISABLE EDR SECURITY TOOLS",
+          "summary": "Reynolds ransomware bundles a vulnerable NsecSoft NSecKrnl driver (CVE-2025-68947, CVSS 5.7) directly in its payload to terminate EDR processes from CrowdStrike, Sophos, Symantec, Palo Alto Cortex XDR, and Avast before encrypting files, eliminating the need for a separate BYOVD deployment step. Symantec and Carbon Black researchers noted a suspicious side-loaded loader on the target network weeks before ransomware execution, followed by deployment of the GotoHTTP remote access tool for persistent access. The article also covers broader ransomware developments, including LockBit 5.0's shift to ChaCha20 encryption with wiper capabilities, Interlock's use of a gaming driver zero-day (CVE-2025-61155) for BYOVD attacks, and ransomware actors increasingly targeting misconfigured AWS S3 buckets.",
+          "url": "https://thehackernews.com/2026/02/reynolds-ransomware-embeds-byovd-driver.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-12:a19",
+          "order": 1,
+          "title": "PRIDE MONTH PHISHING TARGETS EMPLOYEES VIA TRUSTED EMAIL SERVICES",
+          "summary": "A phishing campaign leveraging Pride Month and diversity themes has expanded from 504 to 4,768 targeted organisations across multiple countries.",
+          "url": "https://hackread.com/pride-month-phishing-employees-trusted-email-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a20",
+          "order": 2,
+          "title": "CISA RELEASES GUIDE TO HELP CRITICAL INFRASTRUCTURE USERS ADOPT MORE SECURE COMMUNICATION",
+          "summary": "\"Barriers to Secure OT Communications: Why Johnny Can't Authenticate\" is a guide that addresses the cost, complexity, latency, and interoperability barriers preventing critical infrastructure operators from adopting secure industrial protocols.",
+          "url": "https://www.cisa.gov/news-events/news/cisa-releases-guide-help-critical-infrastructure-users-adopt-more-secure-communication?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-12:a21",
+          "order": 3,
+          "title": "FALLOUT FROM LATEST IVANTI ZERO-DAYS SPREADS TO NEARLY 100 VICTIMS",
+          "summary": "Exploitation of Ivanti EPMM zero-days CVE-2026-1281 and CVE-2026-1340 (both CVSS 9.8) has reached 86 confirmed compromised instances.",
+          "url": "https://cyberscoop.com/ivanti-zero-day-vulnerabilities-netherlands-european-commission-shadowserver/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

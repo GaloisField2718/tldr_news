@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-07-10",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-10",
+  "source_path": "TLDR Web Dev/article_10-07-2025.md",
+  "source_content_hash": "sha256:628a0491d307ed9e40dd1cad628c45ed098a95fd54799a77647713e0bba4f073",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-10",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-10:a04",
+          "order": 1,
+          "title": "RUNNING A MILLION-BOARD CHESS MMO IN A SINGLE PROCESS",
+          "summary": "One Million Chessboards is a chess MMO with a 1,000x1,000 grid of chessboards where 150,000 players made over 15 million moves in 10 days, with pieces able to move between boards in real-time without turns. The entire game runs in a single Go process that handles millions of queries by using efficient data structures (dense arrays), protobuf serialization, and smart client-server communication that sends snapshots and move batches based on player position to minimize bandwidth.",
+          "url": "https://eieio.games/blog/a-million-realtime-chess-boards-in-a-single-process?utm_source=tldrwebdev",
+          "reading_time_minutes": 33,
+          "source_domain": "eieio.games",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a05",
+          "order": 2,
+          "title": "JAVASCRIPT STRING SLICE() CONSIDERED HARMFUL",
+          "summary": "A bug was discovered in Attio's CSV importer when using JavaScript's `slice()` method to truncate strings. It was causing gRPC errors when it split Unicode characters (like flag emojis) in the middle of their UTF-16 code units, resulting in invalid data being sent to their database. The issue occurs because `slice()` operates on code units rather than complete Unicode code points, so truncating \"🇬🇧\" could result in incomplete character data like \"🇬\\uD83C\".",
+          "url": "https://attio.com/engineering/blog/javascript-string-slice-considered-harmful?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "attio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a06",
+          "order": 3,
+          "title": "BUILDING A LIGHTWEIGHT REACTIVE STATE MANAGER WITH JAVASCRIPT PROXIES",
+          "summary": "You can build a lightweight reactive state management system using JavaScript Proxies, which automatically trigger UI updates whenever state changes without requiring external libraries. This article goes through a practical example of a media submission form where a Proxy intercepts property assignments (like `mediaStateProxy.video = \"url\"`) and automatically runs multiple UI update functions, removing the need to manually call update functions throughout the codebase.",
+          "url": "https://www.lorenstew.art/blog/reactive-state-manager-with-proxies?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "lorenstew.art",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-10:a07",
+          "order": 1,
+          "title": "BALANCING AI DEPENDENCE: ENHANCING OR ERODING DEVELOPER SKILLS?",
+          "summary": "While AI coding assistants boost developer productivity by automating tasks, studies show that reliance on them can negatively impact critical thinking and problem-solving skills. Devs may experience skill atrophy as they depend on AI for explanations and solutions, leading to a decline in debugging and documentation comprehension.",
+          "url": "https://codebytom.blog/2025/07/09/the-hidden-cost-of-ai-reliance/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "codebytom.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a08",
+          "order": 2,
+          "title": "CTOS REVEAL HOW AI CHANGED SOFTWARE DEVELOPER HIRING IN 2025",
+          "summary": "AI has changed software development, creating a need for developers who are especially good at critical thinking and problem-solving rather than just churning out code. CTOs are prioritizing skills like system design, business context understanding, and the ability to debug AI-generated code, which often looks perfect but contains subtle flaws.",
+          "url": "https://www.finalroundai.com/blog/software-developer-skills-ctos-want-in-2025?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "finalroundai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-10:a09",
+          "order": 1,
+          "title": "HOW SENTRY BUILT ANOMALY DETECTION FOR MONITORING DATA",
+          "summary": "This blog post details how Sentry's AI/ML team developed a time series anomaly detection system using Matrix Profile and Meta's Prophet library [9]. Instead of traditional threshold and percentage-based alerting, the ML-based system detects subtle and complex anomalies in application data, in near real-time. Read the",
+          "url": "https://blog.sentry.io/time-series-monitoring-anomaly-detection-matrix-profile-prophet/?utm_source=tldr&utm_medium=paid-community&utm_campaign=ai-fy26q2-timeseriesmonitoring&utm_content=newsletter-time-series-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a09",
+          "order": 2,
+          "title": "blog",
+          "summary": "",
+          "url": "https://blog.sentry.io/time-series-monitoring-anomaly-detection-matrix-profile-prophet/?utm_source=tldr&utm_medium=paid-community&utm_campaign=ai-fy26q2-timeseriesmonitoring&utm_content=newsletter-time-series-blog-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a10",
+          "order": 3,
+          "title": "WEBMCP",
+          "summary": "WebMCP brings the Model Context Protocol to web browsers, letting AI assistants interact directly with web apps. It removes the need for API key management and OAuth flows by embedding MCP servers within web pages, using existing browser authentication and security. This allows AI agents to access structured data through standardized JSON-RPC interfaces and orchestrate workflows across multiple sites.",
+          "url": "https://github.com/MiguelsPizza/WebMCP?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a11",
+          "order": 4,
+          "title": "INTRODUCING SKIA GRAPHITE: CHROME'S RASTERIZATION BACKEND FOR THE FUTURE",
+          "summary": "Chrome has launched Skia Graphite, a new rasterization backend for rendering graphics, specifically on Apple Silicon Macs. Graphite was created to address performance limitations of the older Ganesh backend and take advantage of modern graphics APIs like Metal, Vulkan, and D3D12.",
+          "url": "https://blog.chromium.org/2025/07/introducing-skia-graphite-chromes.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.chromium.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a12",
+          "order": 5,
+          "title": "JANK PROGRAMMING LANGUAGE",
+          "summary": "Jank is a general-purpose programming language and Clojure dialect that combines the interactive development experience of Clojure with native compilation and minimal runtime overhead, using C++ and LLVM. It allows devs to iterate rapidly in a REPL, integrate with native C++ code, and compile to efficient machine code.",
+          "url": "https://jank-lang.org/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "jank-lang.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-10:a13",
+          "order": 1,
+          "title": "PHRASE ORIGIN: WHY DO WE \"CALL\" FUNCTIONS?",
+          "summary": "The programming term \"call\" in relation to functions has its origins in library science. \"Calling\" a function initially referred to \"calling for\" a subroutine from a library, similar to requesting a book from a closed-stack library. This concept was present in early computer programming contexts. Fortran II (1958) then popularized the term \"CALL\" for transferring control to a subroutine.",
+          "url": "https://quuxplusone.github.io/blog/2025/04/04/etymology-of-call/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "quuxplusone.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a14",
+          "order": 2,
+          "title": "THE EVOLUTION OF CACHING LIBRARIES IN GO",
+          "summary": "On-heap caches store data in the heap memory managed by Go's garbage collector. Go caching libraries have progressed from early mutex-protected maps to advanced libraries like Ristretto (2019), which became dominant but had issues with breaking changes and suboptimal performance on certain workloads. Theine was released in 2023 and implemented more efficient algorithms from Java's Caffeine library, including adaptive W-TinyLFU for better hit rates.",
+          "url": "https://maypok86.github.io/otter/blog/cache-evolution?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "maypok86.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-10:a15",
+          "order": 1,
+          "title": "TREE BORROWS",
+          "summary": "Tree Borrows is a refined alternative to Stacked Borrows that relaxes restrictions on unsafe Rust code while maintaining memory safety and enabling more compiler optimizations by organizing borrows in a tree-like structure, leading to fewer rejected test cases and new optimization opportunities.",
+          "url": "https://plf.inf.ethz.ch/research/pldi25-tree-borrows.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "plf.inf.ethz.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a16",
+          "order": 2,
+          "title": "JSONREPAIR",
+          "summary": "jsonrepair repairs invalid JSON documents by addressing common errors like missing quotes, commas, and incorrect syntax.",
+          "url": "https://github.com/josdejong/jsonrepair?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a17",
+          "order": 3,
+          "title": "CACHING",
+          "summary": "A detailed overview of the fundamental principles and various applications of caching in computer systems, from CPU caches to CDNs, covering concepts like temporal and spatial locality, replacement policies, and the role of caching in databases like Postgres and MySQL.",
+          "url": "https://planetscale.com/blog/caching?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-10:a18",
+          "order": 4,
+          "title": "AM I ONLINE?",
+          "summary": "You can reliably check for internet connectivity by making a quick HTTP request to a publicly available endpoint like Google's `http://google.com/generate_204`, which returns a 204 No Content status.",
+          "url": "https://antonz.org/is-online?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "antonz.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

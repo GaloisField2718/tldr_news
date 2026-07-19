@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-02",
+  "source_path": "TLDR InfoSec/article_02-01-2026.md",
+  "source_content_hash": "sha256:35041762e5c52202b49e89c0c71962816f4153de14c7991167a2244db7f30b4a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-02:a04",
+          "order": 1,
+          "title": "TRUST WALLET CHROME EXTENSION HACK DRAINS $8.5M VIA SHAI-HULUD SUPPLY CHAIN ATTACK",
+          "summary": "Trust Wallet disclosed that the second iteration of the Shai-Hulud supply chain attack in November compromised its Google Chrome extension, resulting in the theft of approximately $8.5 million in cryptocurrency assets. The attack leveraged malicious packages published to npm and PyPI, compromising developer environments and enabling attackers to insert malicious code into the extension for wallet credential theft.",
+          "url": "https://thehackernews.com/2025/12/trust-wallet-chrome-extension-hack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a05",
+          "order": 2,
+          "title": "22 MILLION AFFECTED BY AFLAC DATA BREACH",
+          "summary": "Hackers breached Aflac's US network in June 2025, stealing data on about 22.65 million people, including names, addresses, Social Security numbers, IDs, and medical and insurance details. Aflac contained the attack without ransomware impact and is now offering 24 months of credit, identity, and medical fraud monitoring, urging vigilance.",
+          "url": "https://www.securityweek.com/22-million-affected-by-aflac-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a06",
+          "order": 3,
+          "title": "CONDÉ NAST HACK EXPOSES 40 MILLION USERS' DATA",
+          "summary": "A hacker calling themselves Lovely claims to have breached Condé Nast's user database, leaking 2.3 million records with names and contact details. They have threatened to dump 40 million more from brands like Vogue and The New Yorker.",
+          "url": "https://www.pymnts.com/news/security-and-risk/2025/conde-nast-hack-exposes-40-million-users-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "pymnts.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-02:a07",
+          "order": 1,
+          "title": "EQUIFAX EUROPE CISO: NOTORIOUS BREACH SPURRED CYBERSECURITY TRANSFORMATION",
+          "summary": "Equifax Continental Europe CISO Javier Checa detailed the company's $3 billion transformation following the 2017 breach that compromised 147 million records, including a complete cloud migration, zero legacy systems, and embedding security culture across all 300 cybersecurity specialists, plus company-wide employee bonus structures tied to security metrics. The company built its recovery strategy on transparency and collaboration, publishing annual security reports with incident-response metrics and sharing security control frameworks publicly, while neutralizing 15 million daily threats (175 per second, up 25% from 2023). Security teams should adopt hybrid defense strategies combining AI-powered tools with traditional signature-based protections, implement biometric authentication to counter deepfake attacks, and ensure CISO representation on management committees to maintain strategic alignment between security investments and business objectives.",
+          "url": "https://www.csoonline.com/article/4109026/javier-checa-equifax-now-the-security-culture-is-part-of-our-dna-as-a-company.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a08",
+          "order": 2,
+          "title": "MAKING CLOUDFLARE WORKERS WORK FOR RED TEAMS",
+          "summary": "Cloudflare Workers can provide a serverless, rapidly adaptable platform for Conditional Access Payload Delivery (CAPD). Authentication can be achieved via a custom header, and the system can be enhanced by supplying secrets as environment variables, using more generic error codes, or by using timing-safe comparisons. The post also details detection opportunities for defenders.",
+          "url": "https://links.tldrnewsletter.com/6cnjve",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a09",
+          "order": 3,
+          "title": "SINGULARITY: DEEP DIVE INTO A MODERN STEALTH LINUX KERNEL ROOTKIT",
+          "summary": "Singularity demonstrates advanced Linux rootkit tactics by leveraging legitimate kernel features (ftrace) for syscall hooking and implementing defense-in-depth across processes, filesystems, network layers, and logging systems. The rootkit's dual-architecture support (x86_64 and ia32) prevent a common detection bypass in which investigators use 32-bit binaries to circumvent 64-bit-only hooks. Comprehensive anti-forensics capabilities, including log sanitization, taint flag manipulation, and module auto-hiding, render traditional detection methods ineffective. Defenders should adopt memory-based forensics techniques, monitor ftrace hook signatures in kernel debug interfaces, test with both 32-bit and 64-bit tools, and recognize that filesystem-based security checks can be completely intercepted by kernel-level adversaries.",
+          "url": "https://blog.kyntra.io/Singularity-A-final-boss-linux-kernel-rootkit?utm_source=tldrinfosec",
+          "reading_time_minutes": 67,
+          "source_domain": "blog.kyntra.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-02:a10",
+          "order": 1,
+          "title": "SILPH: STEALTHY IN-MEMORY LOCAL PASSWORD HARVESTER",
+          "summary": "",
+          "url": "https://github.com/almounah/silph?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a11",
+          "order": 2,
+          "title": "THIRD EYE",
+          "summary": "Third Eye is a user-mode WDA_MONITOR/WDA_EXCLUDEFROMCAPTURE bypasser using undocumented Windows functions with C# bindings.",
+          "url": "https://github.com/lofcz/thirdeye?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a12",
+          "order": 3,
+          "title": "CIPHERO (PRODUCT LAUNCH)",
+          "summary": "Ciphero provides an AI security and governance platform that acts as an AI verification layer for enterprises. It captures, verifies, and governs all AI interactions (including shadow AI and agentic workflows) to prevent data loss, enforce policies, and improve AI reliability.",
+          "url": "https://ciphero.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "ciphero.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-02:a13",
+          "order": 1,
+          "title": "HOW TO ACHIEVE YOUR CYBERSECURITY GOALS IN 2026",
+          "summary": "Those setting New Year's goals should start by establishing a system, such as a study schedule, to achieve them. To-do lists or scheduled blocks of time can help fight procrastination. Having a mentor or friend keep you accountable can also help with ensuring goals are met.",
+          "url": "https://www.linkedin.com/pulse/how-achieve-your-cybersecurity-goals-2026-tcm-security-inc-shqtc?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a14",
+          "order": 2,
+          "title": "MONGODB UNAUTHENTICATED ATTACKER SENSITIVE MEMORY LEAK",
+          "summary": "A critical flaw in MongoDB's use of the zlib compression library allows network attackers to leak sensitive data from server memory without requiring authentication. By sending specially crafted compressed messages, they can gradually extract user information, passwords, and API keys from affected MongoDB versions. Updating to patched releases, closing unnecessary ports, and disabling zlib compression where possible are key steps to reduce exposure.",
+          "url": "https://links.tldrnewsletter.com/p43Rwc",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a15",
+          "order": 3,
+          "title": "COUPANG ANNOUNCES $1.18 BILLION COMPENSATION TO SOUTH KOREAN USERS FOR DATA LEAK",
+          "summary": "South Korean Coupang will distribute 50,000 won vouchers to 33.7 million account holders after a data leak, totaling 1.69 trillion won ($1.18 billion). Critics say the vouchers, usable only on Coupang, turn a privacy crisis into marketing and don't reflect the breach's seriousness, sparking parliamentary hearings and consumer anger.",
+          "url": "https://links.tldrnewsletter.com/DDOD7U",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-02:a16",
+          "order": 1,
+          "title": "TOP US ACCOUNTING FIRM SAX DISCLOSES 2024 DATA BREACH IMPACTING 220,000",
+          "summary": "Sax, a major US accounting firm, has disclosed a breach that happened in 2024 that exposed data on about 220,000 individuals.",
+          "url": "https://radar.offseq.com/threat/top-us-accounting-firm-sax-discloses-2024-data-bre-dd3e692a?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "radar.offseq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a17",
+          "order": 2,
+          "title": "RONDODOX BOTNET EXPLOITS CRITICAL REACT2SHELL FLAW TO HIJACK IOT DEVICES AND WEB SERVERS",
+          "summary": "Cybersecurity researchers have revealed a nine-month campaign that exploited CVE-2025-55182 in React2Shell to hijack IoT devices and web servers, incorporating them into the RondoDox botnet.",
+          "url": "https://thehackernews.com/2026/01/rondodox-botnet-exploits-critical.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-02:a18",
+          "order": 3,
+          "title": "MICROSOFT WILL FINALLY KILL OBSOLETE CIPHER THAT HAS WRECKED DECADES OF HAVOC",
+          "summary": "Microsoft has announced that it will be dropping support for RC4, the default encryption method in Active Directory for the last 26 years.",
+          "url": "https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

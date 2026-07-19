@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-12-06",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-12-06",
+  "source_path": "TLDR Web Dev/article_06-12-2024.md",
+  "source_content_hash": "sha256:7f2df0ed9e0de33379e43d075ef529a15665f73104f6873107d7720da66cf4bc",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-12-06",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-06:a04",
+          "order": 1,
+          "title": "KEYSET CURSORS, NOT OFFSETS, FOR POSTGRES PAGINATION",
+          "summary": "Offset pagination in Postgres can decrease performance and correctness as the offset increases. Keyset pagination, using a compound cursor based on multiple columns, has much better performance and handles deletions gracefully, maintaining a stable order even with data modifications. However, keyset pagination still has subtle correctness issues related to concurrent inserts causing rows to be skipped, but there are strategies to get around this.",
+          "url": "https://blog.sequinstream.com/keyset-cursors-not-offsets-for-postgres-pagination/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.sequinstream.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a05",
+          "order": 2,
+          "title": "7 DATABASES IN 7 WEEKS FOR 2025",
+          "summary": "This article lists seven diverse databases to explore in 2025, with each warranting a week of dedicated study. The list includes both embedded databases like SQLite and DuckDB (focused on local and analytical processing respectively) and distributed systems like CockroachDB and FoundationDB. Each entry includes suggested projects for a better understanding of the database and its capabilities.",
+          "url": "https://matt.blwt.io/post/7-databases-in-7-weeks-for-2025/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "matt.blwt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-06:a06",
+          "order": 1,
+          "title": "HAUNTED BY MY OWN PROJECTS",
+          "summary": "This developer is struggling to finish their numerous side projects, often abandoning them before completion in pursuit of new ideas. Currently, despite having time and motivation, they're paralyzed by the perceived effort required to revive their unfinished projects, even though they genuinely want them to be completed. The allure of starting something new overshadows the almost-finished projects, even though finishing them would be relatively easier.",
+          "url": "https://cassidoo.co/post/side-project-haunting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "cassidoo.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a07",
+          "order": 2,
+          "title": "WHY DO OPEN SOURCE APPLICATIONS OFTEN HAVE LESS POLISHED UIS THAN COMMERCIAL SOFTWARE",
+          "summary": "Open-source software often prioritizes functionality over aesthetics due to limited resources and volunteer-driven development. Commercial software companies, in contrast, dedicate large budgets to UI/UX designers and maintain consistent design languages through centralized teams.",
+          "url": "https://www.darrenhorrocks.co.uk/why-open-source-ui-design-sucks/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "darrenhorrocks.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-06:a08",
+          "order": 1,
+          "title": "GET YOUR TEAM ON LOOM TO GET MEETINGS OFF YOUR CALENDAR",
+          "summary": "",
+          "url": "https://www.atlassian.com/software/loom/demo?utm_source=tldr&utm_medium=paid-display&utm_campaign=P%3Aloom%2AO%3Aclm%2AF%3Aawareness%2AC%3Ademo%2AH%3Afy25q2%2AI%3Aloom-ent-awareness%2AY%3Aloom%2AE%3Acloud%2A",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a08",
+          "order": 2,
+          "title": "see what teams can do with Loom",
+          "summary": "",
+          "url": "https://www.atlassian.com/software/loom/demo?utm_source=tldr&utm_medium=paid-display&utm_campaign=P%3Aloom%2AO%3Aclm%2AF%3Aawareness%2AC%3Ademo%2AH%3Afy25q2%2AI%3Aloom-ent-awareness%2AY%3Aloom%2AE%3Acloud%2A",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a10",
+          "order": 3,
+          "title": "REACT 19",
+          "summary": "React 19 introduces numerous new features, including hooks for managing asynchronous actions and optimistic updates (`useActionState`, `useOptimistic`), a new resource reading API (`use`), and improved form handling. Large changes include a refactoring of how refs are used and new support for enhanced document metadata, stylesheets, and scripts.",
+          "url": "https://github.com/facebook/react/blob/main/CHANGELOG.md?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a11",
+          "order": 4,
+          "title": "INTRODUCING CHATGPT PRO",
+          "summary": "OpenAI's ChatGPT Pro is a $200 monthly subscription that offers unlimited access to the company's most powerful AI models. It includes a \"pro mode\" with better accuracy and reliability for complex tasks.",
+          "url": "https://links.tldrnewsletter.com/Z4gpXy",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a12",
+          "order": 5,
+          "title": "CHECKMATE",
+          "summary": "Checkmate is an open-source, self-hosted server and website monitoring application that tracks uptime, performance, and incidents. It has real-time alerts and reports and optionally utilizes an agent for detailed server resource monitoring.",
+          "url": "https://github.com/bluewave-labs/checkmate?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-06:a13",
+          "order": 1,
+          "title": "TEACHING ELDERLY PEOPLE TO USE ANDROID - LESSONS LEARNED",
+          "summary": "This developer created a comprehensive video course teaching elderly people how to use Android smartphones. The project involved extensive work, including scriptwriting, video production, app development, and marketing, and took approximately a year to complete. However, reaching the target audience proved challenging due to their limited online proficiency and the course not appearing in relevant search results.",
+          "url": "https://kopiascsaba.hu/blog/teaching-elderly-people-to-use-android/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "kopiascsaba.hu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a14",
+          "order": 2,
+          "title": "DATAVIZ ACCESSIBILITY PRINCIPLES, DEMONSTRATED BY THE 2024 PRESIDENTIAL ELECTION DASHBOARDS",
+          "summary": "Several 2024 US presidential election dashboards had accessibility issues, including problems with zooming, keyboard navigation, screen reader compatibility, and sufficient alternative text for images. Automated testing revealed numerous WCAG 2.1 violations, ranging from 3 to 62 errors per dashboard, with Fox News having the most problems.",
+          "url": "https://fossheim.io/writing/posts/2024-dataviz-a11y-elections/?utm_source=tldrwebdev",
+          "reading_time_minutes": 29,
+          "source_domain": "fossheim.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a15",
+          "order": 3,
+          "title": "LOSSLESS LOG AGGREGATION",
+          "summary": "Log storage in observability has a high cost and the common practice of reducing log volume by discarding data. Lossless Log Aggregation (LLA) is a possible solution, which is a technique that aggregates similar logs to drastically reduce storage needs without losing any data. LLA works by deduplicating common metadata and merging similar logs.",
+          "url": "https://bit.kevinslin.com/p/lossless-log-aggregation?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "bit.kevinslin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-12-06:a16",
+          "order": 1,
+          "title": "INTRODUCING PALIGEMMA 2: POWERFUL VISION-LANGUAGE MODELS, SIMPLE FINE-TUNING",
+          "summary": "PaliGemma 2, a new vision-language model by Google, builds upon its predecessor with improved scalability, longer captioning capabilities, and better performance across various tasks, offering easier fine-tuning for users.",
+          "url": "https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "developers.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a17",
+          "order": 2,
+          "title": "DON'T F*CK WITH SCROLL",
+          "summary": "Momentum scrolling plugins negatively impact web usability, accessibility, and performance by disrupting natural scrolling behavior, causing motion sickness, creating inconsistencies across devices, and adding unnecessary complexity.",
+          "url": "https://dontfuckwithscroll.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "dontfuckwithscroll.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a18",
+          "order": 3,
+          "title": "TAILWIND COLORS",
+          "summary": "Free Tailwind CSS resources, including color cheatsheets and a preview of the upcoming v4 OKLCH color system.",
+          "url": "https://tailscan.com/colors?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "tailscan.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-12-06:a19",
+          "order": 4,
+          "title": "GITLAB NAMES BILL STAPLES AS NEW CEO",
+          "summary": "GitLab appointed Bill Staples as its new CEO, replacing co-founder Sid Sijbrandij, who transitioned to Executive Chair of the Board to focus on his health.",
+          "url": "https://www.businesswire.com/news/home/20241205391064/en/GitLab-Names-Bill-Staples-as-New-CEO?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "businesswire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

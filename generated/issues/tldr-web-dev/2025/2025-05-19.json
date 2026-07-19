@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-05-19",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-05-19",
+  "source_path": "TLDR Web Dev/article_19-05-2025.md",
+  "source_content_hash": "sha256:f7f5d16363df28ff06f2b6749c2700d2e572fb853244363794a144ae62898f94",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-05-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a04",
+          "order": 1,
+          "title": "TODAY: VS CODE GOES LIVE FROM MICROSOFT BUILD! 🪐",
+          "summary": "For the first time, _VS Code, Live!_ [5] is on-stage at Build, Microsoft's largest developer conference, hosted by Jason Lengstorf (CodeTV) & Burke Holland (VS Code).",
+          "url": "https://aka.ms/VSCodeLiveBuild?utm_source=tldrnewsletter",
+          "reading_time_minutes": null,
+          "source_domain": "aka.ms",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a06",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://aka.ms/VSCode/RegisterforBuild",
+          "reading_time_minutes": null,
+          "source_domain": "aka.ms",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a07",
+          "order": 1,
+          "title": "REACT INTERNALS: WHICH USEEFFECT RUNS FIRST?",
+          "summary": "In React, parent components render before children, but children's useEffect hooks run before their parents'. This happens because React uses a DFS algorithm during its commit phase, walking up the component tree from the deepest nodes to the shallowest. Understanding this can help avoid subtle bugs in complex component hierarchies, especially when effects in parent components might depend on changes made by child components.",
+          "url": "https://frontendmasters.com/blog/react-internals-which-useeffect-runs-first/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "frontendmasters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a08",
+          "order": 2,
+          "title": "JAVASCRIPT'S NEW SUPERPOWER: EXPLICIT RESOURCE MANAGEMENT",
+          "summary": "The Explicit Resource Management proposal in JavaScript introduces deterministic resource management. It adds `using` and `await using` declarations for automatic disposal, using `Symbol.dispose` and `Symbol.asyncDispose` for cleanup. `DisposableStack` and `AsyncDisposableStack` are also introduced to manage multiple disposable resources in a coordinated manner.",
+          "url": "https://v8.dev/features/explicit-resource-management?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "v8.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a09",
+          "order": 1,
+          "title": "EXPERTS HAVE IT EASY",
+          "summary": "Novices often create unnecessary problems for themselves due to inexperience and lack of foresight, while experts navigate challenges more directly. Novices require patient guidance and observation of experts, as experts often struggle to articulate their intuitive understanding.",
+          "url": "https://boydkane.com/essays/experts?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "boydkane.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a10",
+          "order": 2,
+          "title": "PUSH IFS UP AND FORS DOWN",
+          "summary": "Two rules of thumb for code optimization: \"push ifs up\" and \"push fors down.” \"Push ifs up\" involves moving conditional logic to the caller function, centralizing control flow, and potentially eliminating redundant checks. \"Push fors down\" means operating on batches of objects instead of individual items within a loop, improving performance by amortizing startup costs and enabling vectorization.",
+          "url": "https://matklad.github.io/2023/11/15/push-ifs-up-and-fors-down.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "matklad.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a11",
+          "order": 3,
+          "title": "\"STREAMING VS. BATCH\" IS A WRONG DICHOTOMY, AND I THINK IT'S CONFUSING",
+          "summary": "The \"Stream vs. Batch\" dichotomy is misleading, as streaming systems often use batching for performance optimization. The real distinction is in \"Pull vs. Push\" semantics, where streaming systems proactively receive data updates, unlike batch systems that periodically query for new records.",
+          "url": "https://www.morling.dev/blog/streaming-vs-batch-wrong-dichotomy/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "morling.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a12",
+          "order": 1,
+          "title": "IMPLEMENTING MULTI-TENANCY INTO A NEXT.JS SUPABASE APP",
+          "summary": "",
+          "url": "https://go.clerk.com/IMKPOHE?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a14",
+          "order": 2,
+          "title": "INTRODUCING CODEX",
+          "summary": "OpenAI has launched Codex, a cloud-based software engineering agent powered by codex-1 available to ChatGPT Pro, Team, and Enterprise users. Codex can perform tasks like writing features, fixing bugs, and proposing pull requests within secure, isolated cloud environments. It is trained to avoid malicious software development.",
+          "url": "https://links.tldrnewsletter.com/gyjBLy",
+          "reading_time_minutes": 25,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a15",
+          "order": 3,
+          "title": "BROWSERBEE",
+          "summary": "BrowserBee is an open-source Chrome extension that acts as an in-browser AI assistant, allowing users to control their browser with natural language. It uses an LLM for instruction parsing and Playwright for browser automation. BrowserBee also has features like token tracking, memory for efficient task repetition, and user approval requests for sensitive actions.",
+          "url": "https://github.com/parsaghaffari/browserbee?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a16",
+          "order": 4,
+          "title": "XTOOL",
+          "summary": "Xtool is a cross-platform tool that aims to replicate Xcode functionality using open standards for building and deploying iOS apps with SwiftPM on Linux, Windows, and macOS. It lets users build SwiftPM packages into iOS apps, sign and install them, and interact with Apple Developer Services programmatically. The tool has a command-line interface with subcommands for configuration, development, and device management.",
+          "url": "https://github.com/xtool-org/xtool?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a17",
+          "order": 1,
+          "title": "TWO WEEKS WITH AR GLASSES AND LINUX ON ANDROID",
+          "summary": "This dev coded using AR glasses, a folding keyboard, and a Pixel 8 Pro running Linux in a chroot environment. They found it surprisingly effective for outdoor work and travel. While setting up the Linux environment was challenging, the portability, sunlight visibility, and cellular connectivity was great.",
+          "url": "https://holdtherobot.com/blog/2025/05/11/linux-on-android-with-ar-glasses/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "holdtherobot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a18",
+          "order": 2,
+          "title": "HOW TO SUPERCHARGE YOUR JAVA PROJECT WITH RUST — A PRACTICAL GUIDE TO JNI INTEGRATION WITH A COMPLETE EXAMPLE",
+          "summary": "This is a practical guide to integrating Rust and Java using JNI for better performance and functionality. It addresses challenges like managing memory, handling platform-specific libraries, unifying logs, calling Rust async functions from Java, and mapping Rust errors to Java exceptions.",
+          "url": "https://medium.com/@greptime/how-to-supercharge-your-java-project-with-rust-a-practical-guide-to-jni-integration-with-a-86f60e9708b8?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a19",
+          "order": 3,
+          "title": "CODING AGENT IN 94 LINES OF RUBY",
+          "summary": "A coding agent can be written in just 94 lines of Ruby. The agent shown uses an AI chat loop powered by the RubyLLM gem and three key tools: reading files, listing files, and editing files, allowing it to create and modify code. The agent also has the ability to execute shell commands with user confirmation, allowing it to test and refine its code.",
+          "url": "https://radanskoric.com/articles/coding-agent-in-ruby?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "radanskoric.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-19:a20",
+          "order": 1,
+          "title": "EXPRESSIVE DESIGN: GOOGLE'S UX RESEARCH",
+          "summary": "Google's Material 3 Expressive design system prioritizes emotional connection, usability, and accessibility, which results in UIs that are more appealing, modern, and easier to use.",
+          "url": "https://design.google/library/expressive-material-design-google-research?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "design.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a21",
+          "order": 2,
+          "title": "UNPKG",
+          "summary": "Unpkg is a fast and global content delivery network for everything on npm.",
+          "url": "https://github.com/unpkg/unpkg?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a22",
+          "order": 3,
+          "title": "DITCHING OBSIDIAN AND BUILDING MY OWN",
+          "summary": "This developer built their own simple, secure, and customizable personal knowledge management system (PKMS) hosted on their own server to regain control over their data and workflow.",
+          "url": "https://amberwilliams.io/blogs/building-my-own-pkms",
+          "reading_time_minutes": 9,
+          "source_domain": "amberwilliams.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-19:a23",
+          "order": 4,
+          "title": "THE UNEXPECTED DB CONNECTION POOL LEAK IN OUR RAILS APP",
+          "summary": "A Rails application experienced an unexpected database connection pool leak due to a background thread within the Semantic Logger holding onto a connection while trying to resolve a lazy-loaded ActiveRecord relation, which was resolved by logging only primitive values and monitoring connection pool stats.",
+          "url": "https://build.betterup.com/the-unexpected-db-connection-pool-leak-in-our-rails-app/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "build.betterup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

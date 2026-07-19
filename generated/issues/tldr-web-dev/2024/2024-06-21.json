@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-06-21",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-06-21",
+  "source_path": "TLDR Web Dev/article_21-06-2024.md",
+  "source_content_hash": "sha256:7ec6933179d1c412e8a31cf9b71bb68efd187cae5b1917670c83acf09acf192a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-06-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a04",
+          "order": 1,
+          "title": "COLLABORATING ON APIS IS EASIER WITH POSTMAN",
+          "summary": "When every dev team relies an APIs, collaboration is crucial. To ship better software, API producers and consumers need to share, discover, and reuse high-quality API assets.",
+          "url": "https://www.postman.com/api-platform/api-collaboration/?utm_source=tldr_webdev&utm_medium=email&utm_campaign=q2-newsletter-sponsorships&utm_term=june212024&utm_content=headline",
+          "reading_time_minutes": null,
+          "source_domain": "postman.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a11",
+          "order": 1,
+          "title": "SO WE'VE GOT A MEMORY LEAK…",
+          "summary": "This developer tackled a memory leak in his high-traffic Rails app by analyzing heap dumps and using tools like rbtrace, heapy, and sheap. The root cause was traced to a combination of an issue in ActiveSupport::Subscriber and invalid URIs processed by the Bugsnag gem. He goes over his debugging process throughout the article.",
+          "url": "https://stevenharman.net/so-we-have-a-memory-leak?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "stevenharman.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a12",
+          "order": 2,
+          "title": "CUSTOM ELEMENTS DON'T REQUIRE A HYPHEN AS A SEPARATOR",
+          "summary": "This author was initially confused about the rules for valid custom element tag names, as his Codepen tests with emojis failed due to a JavaScript error. After fixing the error, they realized that custom element tag names only need a hyphen, not necessarily as a separator. This means that tags like mytag- or h1- are valid, although using them might not be recommended.",
+          "url": "https://blog.jim-nielsen.com/2024/custom-elements-only-need-end-with-a-hyphen/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a13",
+          "order": 3,
+          "title": "OPTIMIZING AI INFERENCE AT CHARACTER.AI",
+          "summary": "Character.AI optimizes LLM inference by using memory-efficient architecture design with techniques like Multi-Query Attention, hybrid attention horizons, and cross-layer KV sharing. It also utilizes stateful caching to store attention KV on host memory between chat turns to get a 95% cache rate. Other optimizations, like integer quantization, added allowed the company to reduce serving costs by 33x compared to its initial state in late 2022.",
+          "url": "https://research.character.ai/optimizing-inference/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "research.character.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a14",
+          "order": 1,
+          "title": "WHY WE NO LONGER USE LANGCHAIN FOR BUILDING OUR AI AGENTS",
+          "summary": "Octomind decided to stop using LangChain for building AI agents despite initially finding it helpful. LangChain's high-level abstractions made its code more complex and difficult to maintain, especially as its requirements became more sophisticated. The company advocates for a \"building blocks\" approach using simple, low-level code with carefully selected external packages.",
+          "url": "https://www.octomind.dev/blog/why-we-no-longer-use-langchain-for-building-our-ai-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "octomind.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a15",
+          "order": 2,
+          "title": "THOUGHTS ON CODE REVIEWS",
+          "summary": "Code reviews are necessary for maintaining code quality and sharing knowledge within a team, but they can be inefficient if not optimized. Principles, design docs, and static analysis should be used to reduce the scope of reviews. Implementing an Automate/Defer/Pair framework allows teams to handle code changes quickly based on complexity and risk.",
+          "url": "https://open.substack.com/pub/hybridhacker/p/thoughts-on-code-reviews?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a16",
+          "order": 1,
+          "title": "ROOSTER",
+          "summary": "Rooster is a framework-independent JavaScript rich-text editor that operates within a single HTML div element. It uses a \"Content Model\" layer to manage editing operations and convert them into HTML. Rooster includes packages for core functionalities, API access, DOM manipulation, and plugins.",
+          "url": "https://github.com/microsoft/roosterjs?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a17",
+          "order": 2,
+          "title": "REASSURE",
+          "summary": "Reassure automates performance regression testing for React Native apps by measuring render times and function executions. It integrates with Jest and React Native Testing Library or React Testing Library to provide detailed reports on performance changes.",
+          "url": "https://github.com/callstack/reassure?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a18",
+          "order": 3,
+          "title": "ANNOUNCING TYPESCRIPT 5.5",
+          "summary": "TypeScript 5.5 comes with inferred type predicates, RegEx syntax checking, a JSDoc @import tag, and more.",
+          "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/?utm_source=tldrwebdev",
+          "reading_time_minutes": 37,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a19",
+          "order": 1,
+          "title": "ZIG VS RUST AT WORK: THE CHOICE WE MADE",
+          "summary": "A company chose Zig over Rust for a critical library rewrite. It found that the Zig compiler and build system's ability to integrate easily with existing codebases and support multiple target platforms was a strong factor.",
+          "url": "https://ludwigabap.bearblog.dev/zig-vs-rust-at-work-the-choice-we-made/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "ludwigabap.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a20",
+          "order": 2,
+          "title": "THE PROGRAMMER'S BRAIN",
+          "summary": "This article explores how developers can improve their coding skills by understanding and optimizing their cognitive processes. It covers reading and understanding code more efficiently, memorizing syntax, problem-solving strategies, avoiding cognitive overload, and best practices for naming variables and refactoring code. It also talks about the importance of understanding the cognitive dimensions of programming languages and codebases.",
+          "url": "https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/the-programmers-brain?utm_source=tldrwebdev",
+          "reading_time_minutes": 45,
+          "source_domain": "yoan-thirion.gitbook.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a21",
+          "order": 3,
+          "title": "TESTING THE IMPACT OF BUY NOW, PAY LATER ACROSS 150,000+ CHECKOUT SESSIONS",
+          "summary": "Stripe's experiment on BNPL options showed that businesses can increase revenue by up to 14% and attract new customers without significant cannibalization of card transactions. As a result, BNPL is a valuable addition to checkout processes for boosting sales.",
+          "url": "https://stripe.com/blog/testing-the-impact-of-buy-now-pay-later?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "stripe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-21:a22",
+          "order": 1,
+          "title": "ASK HN: HOW DO YOU STAY ORGANIZED FOR SOLO DEV? (HACKER NEWS THREAD)",
+          "summary": "Stay organized with paper notebooks, todo lists, and project management software.",
+          "url": "https://news.ycombinator.com/item?id=40742831&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a23",
+          "order": 2,
+          "title": "REGEX",
+          "summary": "regex is a template tag for dynamically creating readable, high performance, native JavaScript regular expressions with advanced features and best practices built-in.",
+          "url": "https://github.com/slevithan/regex?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-21:a24",
+          "order": 3,
+          "title": "WHY IS REDIS A DISTRIBUTED SWISS ARMY KNIFE",
+          "summary": "Redis can be used for caching, queueing, locking, session management, and more.",
+          "url": "https://open.substack.com/pub/systemdesignone/p/redis-use-cases?r=2bjtip&utm_medium=ios&utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

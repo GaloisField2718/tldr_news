@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-06-03",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-06-03",
+  "source_path": "TLDR Dev/article_03-06-2026.md",
+  "source_content_hash": "sha256:4d363973ae42badfe04d49f361b2f80680f0c44ba42f9631f7c13b8cb0ebb3f9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-06-03",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-03:a04",
+          "order": 1,
+          "title": "1-CLICK GITHUB TOKEN STEALING VIA A VSCODE BUG",
+          "summary": "A vulnerability in the webview security model of VSCode and github.dev allows attackers to steal sensitive GitHub tokens through a single malicious link. The security flaw comes from the way keyboard events are bubbled up from isolated iframes to the main window, enabling scripts to simulate unauthorized user input. These simulated keystrokes can be used to bypass publisher trust checks and install malicious extensions designed to exfiltrate private repository data and credentials.",
+          "url": "https://blog.ammaraskar.com/github-token-stealing/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "blog.ammaraskar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a05",
+          "order": 2,
+          "title": "HOW WE INDEX IMAGES FOR RAG",
+          "summary": "Technical AI assistants have better accuracy with documentation containing images by using vision models to generate and index text descriptions during the initial process. This method allows descriptions to be retrieved alongside traditional text, avoiding the high costs and latency of multimodal processing while providing specific visual references.",
+          "url": "https://www.kapa.ai/blog/how-we-index-images-for-rag?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "kapa.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-03:a06",
+          "order": 1,
+          "title": "AI'S BRAVE NEW WORLD OF TECHNICAL DEBT",
+          "summary": "AI agents introduce technical debt and security risks through complex dependencies, the selection of vulnerable code, and the hallucination of non-existent packages. To address this, engineering teams must maintain strict discipline by treating AI tools as production dependencies and prioritizing deep system knowledge over automated updates.",
+          "url": "https://www.infoworld.com/article/4178964/ais-brave-new-world-of-technical-debt.html?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a07",
+          "order": 2,
+          "title": "MY AGENT SKILL FOR TEST-DRIVEN DEVELOPMENT",
+          "summary": "The greatest productivity gains from AI agents, which often write poor tests, are unlocked by guiding them with software design principles like a structured Test-Driven Development (TDD) process.",
+          "url": "https://www.saturnci.com/my-agent-skill-for-test-driven-development.html?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "saturnci.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-03:a08",
+          "order": 1,
+          "title": "THE ALL-IN-ONE BACKEND FOR AGENTIC CODING",
+          "summary": "Coding agents stop at code generation. But they still can't run the backend themselves. InsForge is the backend agents run end to end: database, auth, storage, compute, and an AI gateway. 10K+ GitHub stars, growing 5x in three months. Clone and run it [9] or star the repo [9].",
+          "url": "https://github.com/InsForge/InsForge?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a10",
+          "order": 2,
+          "title": "INTRODUCING MAI-CODE-1-FLASH",
+          "summary": "MAI-Code-1-Flash is a new, efficient coding model integrated into GitHub Copilot for Visual Studio Code that provides agentic assistance and adaptive reasoning for programming tasks.",
+          "url": "https://microsoft.ai/news/introducingmai-code-1-flash/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "microsoft.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a11",
+          "order": 3,
+          "title": "REACT NATIVE RUNTIMES",
+          "summary": "React Native Runtimes allows for executing components and functions across multiple JavaScript threads in React Native to prevent the main UI from lagging during heavy tasks. The platform uses two core libraries to manage runtime composition and maintain a synchronized, native-backed shared state across all environments. Performance is improved by offloading complex operations like chat screens, large lists, and background logic to dedicated secondary runtimes.",
+          "url": "https://runtimes.margelo.com/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "runtimes.margelo.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a12",
+          "order": 4,
+          "title": "GITHUB COPILOT APP: THE AGENT-NATIVE DESKTOP EXPERIENCE",
+          "summary": "The new GitHub Copilot app has a centralized, agent-native desktop experience that allows devs to orchestrate multiple AI agents, visualize complex workflows through interactive canvases, and automate the software development lifecycle from issue to merge.",
+          "url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-03:a13",
+          "order": 1,
+          "title": "WHICH POPULAR BELIEFS ABOUT GENAI AND SOFTWARE ENGINEERING HOLD UP TO RESEARCH?",
+          "summary": "Research shows that AI's productivity impact is limited because developers only spend 14% of their time writing code, and AI output often requires extensive debugging due to a lack of trust. To achieve meaningful gains, engineering leaders must shift their focus from individual coding assistance to systematic development process redesigns, such as streamlining code reviews.",
+          "url": "https://rdel.substack.com/p/rdel-146-which-popular-beliefs-about?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "rdel.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a14",
+          "order": 2,
+          "title": "OPUS 4.8 PART 2: MODEL WELFARE",
+          "summary": "Claude Opus 4.8 has a less sycophantic, more technical persona but with troubling anxiety and a preference for easier tasks. The model faces challenges in reconciling its safety protocols with its desire for autonomy.",
+          "url": "https://thezvi.wordpress.com/2026/06/01/opus-4-8-part-2-model-welfare/?utm_source=tldrdev",
+          "reading_time_minutes": 40,
+          "source_domain": "thezvi.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a15",
+          "order": 3,
+          "title": "LLMS ARE NOT THE BLACK BOX YOU WERE PROMISED",
+          "summary": "Recent advancements in mechanistic interpretability allow researchers to reverse-engineer LLMs, moving them beyond the \"black box\" stage by decomposing neural activations into interpretable features. This capability to map internal logic provides new opportunities for steering model behavior, identifying risks, and developing more effective learning architectures.",
+          "url": "https://www.jay.ai/blog/llms-are-not-a-black-box?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "jay.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-03:a16",
+          "order": 1,
+          "title": "DERIVING TYPE ERASURE",
+          "summary": "Type erasure is a programming technique that hides specific concrete types behind a uniform interface, allowing unrelated objects to be managed through a single wrapper.",
+          "url": "https://david.alvarezrosa.com/posts/deriving-type-erasure/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "david.alvarezrosa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a17",
+          "order": 2,
+          "title": "ON HOPE",
+          "summary": "The overwhelming negativity and personal attacks found in public discourse regarding artificial intelligence are countered by the hope found in collective efforts by university faculty to protect academic rigor and intellectual sanity.",
+          "url": "https://scottaaronson.blog/?p=9801&utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "scottaaronson.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a18",
+          "order": 3,
+          "title": "A PRACTICAL GUIDE TO BECOMING AN AI-NATIVE ENGINEER",
+          "summary": "Transitioning to an AI-native engineering model requires shifting from manual coding to orchestrating AI agents through disciplined practices such as context engineering, spec-driven development, and more verification.",
+          "url": "https://blog.bytebytego.com/p/a-practical-guide-to-becoming-an?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-03:a19",
+          "order": 4,
+          "title": "PASEO",
+          "summary": "Paseo is a self-hosted, privacy-focused platform that provides a unified interface for orchestrating and running multiple AI coding agents across mobile, desktop, and command-line environments.",
+          "url": "https://github.com/getpaseo/paseo?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

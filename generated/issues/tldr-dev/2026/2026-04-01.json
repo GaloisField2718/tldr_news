@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-04-01",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-04-01",
+  "source_path": "TLDR Dev/article_01-04-2026.md",
+  "source_content_hash": "sha256:09fac019d9e4cb40e868a948793db323e9947d3f2bb666df285922fe038a621e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-04-01",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Bugs sneak out when less than 80% of user flows are tested before shipping. However, getting that kind of coverage (and staying there) is hard and pricey for any team.",
+          "url": "https://www.qawolf.com/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_KissBugsGoodbye_20260401-None_Experiment-FALSE&utm_term=headline-KissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage&utm_content=KissBugsGoodbye_ScheduleADemoToLearnMore_None_Headline%3AKissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage____Newsletter-PrimaryPlacement_20260401_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a07",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_KissBugsGoodbye_20260401-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=KissBugsGoodbye_ScheduleADemoToLearnMore_None_Headline%3AKissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage____Newsletter-PrimaryPlacement_20260401_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a08",
+          "order": 1,
+          "title": "THE CLAUDE CODE SOURCE LEAK: FAKE TOOLS, FRUSTRATION REGEXES, UNDERCOVER MODE, AND MORE",
+          "summary": "This post analyzes the full source code of Anthropic's Claude Code, which was leaked via an npm package source map and revealed internal features like anti-distillation methods and a strategic product roadmap. While the leak exposed unreleased agent modes and client attestation plans, the real value lies in the revealed competitive intelligence rather than the code itself.",
+          "url": "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "alex000kim.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a09",
+          "order": 2,
+          "title": "HOW META TURNED DEBUGGING INTO A PRODUCT",
+          "summary": "Meta's DrP platform treats incident investigation as engineered software by letting engineers codify debugging expertise into automated, versioned \"analyzers.\" This system currently performs 50,000 daily analyses across 300 teams, reducing resolution times while keeping humans in the loop for final approvals.",
+          "url": "https://blog.bytebytego.com/p/how-meta-turned-debugging-into-a?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a10",
+          "order": 3,
+          "title": "USE(): THE HOOK THAT BREAKS THE RULES (ON PURPOSE)",
+          "summary": "React 19's use() hook eliminates useEffect and useState boilerplate by unwrapping a promise at render time and delegating loading/error states to Suspense and ErrorBoundary. One requirement is that the promise read by use() must have a stable identity across renders. Otherwise, creating a new promise will cause an infinite suspension loop.",
+          "url": "https://saschb2b.com/blog/use-hook-react?utm_source=tldrdev",
+          "reading_time_minutes": 17,
+          "source_domain": "saschb2b.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a11",
+          "order": 1,
+          "title": "ENCODING TEAM STANDARDS",
+          "summary": "The output quality of AI-assisted development depends heavily on who is prompting, since only senior engineers consistently embed necessary architectural and security constraints. The solution is to treat AI instructions for code generation and review as versioned, repo-level infrastructure, ensuring consistent execution of team judgment regardless of the individual engineer.",
+          "url": "https://martinfowler.com/articles/reduce-friction-ai/encoding-team-standards.html?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a12",
+          "order": 2,
+          "title": "AGENT-DRIVEN DEVELOPMENT IN COPILOT APPLIED SCIENCE",
+          "summary": "A GitHub Copilot researcher developed a framework for agent-driven development after building a tool that uses coding agents to analyze large amounts of agent trajectory data. The best thing to do is to treat coding agents like junior engineers, providing verbose prompts and obsessing over clean architecture, which enabled four teammates to ship 11 agents and almost 29,000 lines of code in under three days.",
+          "url": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a13",
+          "order": 1,
+          "title": "FULLY REMOTE)",
+          "summary": "As the first engineer on TLDR's new Applied AI team, you'll build AI agents to automate end-to-end workflows and lead our context engineering project to allow non-technical teammates create their own AI workflows. Learn more [13].",
+          "url": "https://jobs.ashbyhq.com/tldr.tech/3b21aaf8-dea5-4127-be71-602d30e5001e",
+          "reading_time_minutes": null,
+          "source_domain": "jobs.ashbyhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a14",
+          "order": 2,
+          "title": "CLAW CODE",
+          "summary": "Claw Code is a rapid, AI-assisted Python rewrite of the leaked Claude Code agent harness. A Rust implementation is currently in progress to deliver a faster, memory-safe runtime and become the definitive version of the project.",
+          "url": "https://github.com/instructkr/claw-code?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a15",
+          "order": 3,
+          "title": "SUGAR HIGH",
+          "summary": "Sugar High is a super lightweight syntax highlighter that provides customizable, language-aware code highlighting for various programming languages like JavaScript, Python, Rust, and CSS, complete with theme support.",
+          "url": "https://sugar-high.vercel.app/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "sugar-high.vercel.app",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a16",
+          "order": 1,
+          "title": "NORTH KOREAN HACKERS IMPLICATED IN MAJOR SUPPLY CHAIN ATTACK",
+          "summary": "Suspected North Korean hackers compromised the Axios JavaScript library to distribute malware across multiple operating systems. Although the malicious code was quickly removed, the incident shows the long-term risk to the many downstream projects and cloud environments that depend on the library.",
+          "url": "https://archive.ph/Mr3Q8?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a17",
+          "order": 2,
+          "title": "GITHUB MONASPACE CASE STUDY",
+          "summary": "Lettermatic and GitHub Next created Monaspace, an open-source font superfamily for better typography and customization for code editors. The typeface's main innovation, \"Texture Healing,\" dynamically adjusts glyph spacing to fix legibility issues in traditional monospace fonts while offering extensive personalization via variable axes and character variants.",
+          "url": "https://lettermatic.com/custom/monaspace-case-study?utm_source=tldrdev",
+          "reading_time_minutes": 33,
+          "source_domain": "lettermatic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-04-01:a18",
+          "order": 1,
+          "title": "OPENAI CLOSES RECORD-BREAKING $122 BILLION FUNDING ROUND AS ANTICIPATION BUILDS FOR IPO",
+          "summary": "OpenAI has closed a record-breaking $122 billion funding round at an $852 billion post-money valuation.",
+          "url": "https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a19",
+          "order": 2,
+          "title": "PG_TEXTSEARCH",
+          "summary": "pg_textsearch is a production-ready PostgreSQL extension that provides modern, high-performance, BM25-ranked full-text search capabilities.",
+          "url": "https://github.com/timescale/pg_textsearch?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a20",
+          "order": 3,
+          "title": "THE HIDDEN COST OF FORGETTING WHY THE CODE LOOKS LIKE THAT",
+          "summary": "Understanding and preserving the design intent and trade-offs behind software is necessary for its maintainability, often more so than just code quality.",
+          "url": "https://maintainable.fm/episodes/russ-olsen-the-hidden-cost-of-forgetting-why-the-code-looks-like-that-uozj8sOU?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "maintainable.fm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-04-01:a21",
+          "order": 4,
+          "title": "FIX FLAKY JEST TESTS IN CI WITH MAXWORKERS (AND WHY IT WORKS)",
+          "summary": "Flaky Jest tests in CI are usually a memory problem, not a code problem, so setting --maxWorkers='50%' caps workers at half the available CPU cores and largely eliminates the issue.",
+          "url": "https://shift.infinite.red/fix-flaky-jest-tests-in-ci-with-maxworkers-and-why-it-works-e3d3189f35a4?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "shift.infinite.red",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

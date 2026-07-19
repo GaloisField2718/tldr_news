@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-07-03",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-03",
+  "source_path": "TLDR Web Dev/article_03-07-2025.md",
+  "source_content_hash": "sha256:9114faf09f87c6d55971c90c907a505f0c7612b5298437c7b901494dd8df8782",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-03",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-03:a04",
+          "order": 1,
+          "title": "HOW I SCANNED ALL OF GITHUB'S “OOPS COMMITS” FOR LEAKED SECRETS",
+          "summary": "A white-hat hacker found leaked secrets in deleted GitHub commits by scanning force push events using the GitHub Event API and GH Archive. He developed a tool to identify these \"Oops Commits\" and discovered thousands of active secrets, including one that could have led to a massive supply-chain compromise in the Istio project. The process involved manual searching, a vibe-coded triage tool, and an eventual AI-driven approach to identify valuable secrets.",
+          "url": "https://trufflesecurity.com/blog/guest-post-how-i-scanned-all-of-github-s-oops-commits-for-leaked-secrets?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a05",
+          "order": 2,
+          "title": "REMIXING SHOPIFY'S ADMIN: HOW WE MADE IT 30% FASTER AND AI-READY",
+          "summary": "Shopify rebuilt its Admin platform using Remix, which led to a 30% performance improvement thanks to using Remix loaders for parallel fetching and having intelligent prefetching. This rebuild also made the system AI-ready by giving it structured route information and form schemas after the rebuild. The system itself handles 67 million daily page views and contributions from 101 teams with 350+ daily code merges.",
+          "url": "https://shopify.engineering/remixing-admin?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "shopify.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-03:a06",
+          "order": 1,
+          "title": "STOP BUILDING AI AGENTS",
+          "summary": "Devs often jump to building complex AI agents powered by LLMs when simpler workflows would be better and easier to debug. There are multiple LLM workflow patterns, like prompt chaining and routing, that can solve many problems without the complexity of full-blown agents. Agents, where the LLM controls the workflow, should only be implemented for dynamic tasks requiring human oversight.",
+          "url": "https://decodingml.substack.com/p/stop-building-ai-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "decodingml.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a07",
+          "order": 2,
+          "title": "WHY I'M DIALING BACK MY LLM USAGE",
+          "summary": "When rebuilding infrastructure with Go and ClickHouse, this dev found that LLMs produced buggy and messy code, leading to a cycle of fixing one error only to create new ones. This experience showed a gap between the hype surrounding AI productivity and the reality of its limitations in production environments. Instead, LLMs are best for small tasks like refactoring.",
+          "url": "https://zed.dev/blog/dialing-back-my-llm-usage-with-alberto-fortin?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "zed.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a08",
+          "order": 3,
+          "title": "HOW TO WRITE COMPELLING SOFTWARE RELEASE ANNOUNCEMENTS",
+          "summary": "Release announcements should focus on how the user's experience is improved, not just listing features or bug fixes. Instead of focusing on what developers did, highlight what users can now do with the software, using clear language and visuals like graphs and concise demos.",
+          "url": "https://refactoringenglish.com/chapters/release-announcements?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "refactoringenglish.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-03:a09",
+          "order": 1,
+          "title": "GLASS3D GENERATOR",
+          "summary": "The Glass3D generator allows devs to create a 3D glass effect (like Apple Liquid Glass) and customize visual effects like blur, color, and texture, with CSS code provided.",
+          "url": "https://glass3d.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "glass3d.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a10",
+          "order": 2,
+          "title": "INTRODUCING THE FIRST ALPHA OF TURSO: THE NEXT EVOLUTION OF SQLITE",
+          "summary": "Turso has released the first alpha of its SQLite rewrite, which addresses SQLite's limitations like its lack of concurrent writes, limited real-time capabilities, and a closed development community. The alpha has an asynchronous interface to replace SQLite's synchronous API and includes core database operations, though indexes, multi-threading, and other advanced features are still in development.",
+          "url": "https://turso.tech/blog/turso-the-next-evolution-of-sqlite?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "turso.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a11",
+          "order": 3,
+          "title": "WHATSAPP-API-JS V6",
+          "summary": "whatsapp-api-js is a TypeScript framework for server-agnostic integration with the official WhatsApp Business API, with features like message handling and webhook setup.",
+          "url": "https://github.com/Secreto31126/whatsapp-api-js?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-03:a12",
+          "order": 1,
+          "title": "HOW LARGE ARE LARGE LANGUAGE MODELS?",
+          "summary": "This article goes over how LLMs' sizes have changed over time, starting with GPT-2 and GPT-3's parameter counts and training data specifics and ending with the limited public information about GPT-3.5 and GPT-4. Models like Mixtral and Deepseek V3 use a Mixture-of-Experts architecture, which makes them harder to compare to the traditional \"dense\" architectures.",
+          "url": "https://gist.github.com/rain-1/cf0419958250d15893d8873682492c3e?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "gist.github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a13",
+          "order": 2,
+          "title": "THAT XOR TRICK",
+          "summary": "The XOR (exclusive or) bitwise operation has its applications in solving interview questions. The \"XOR trick\" is where duplicated values in a sequence of XOR operations cancel each other out. This trick can be applied to solve problems like in-place swapping of variables, finding a missing number in an array, finding a duplicate number, and even finding two missing/duplicate numbers.",
+          "url": "https://florian.github.io//xor-trick/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "florian.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a14",
+          "order": 3,
+          "title": "LLMS AS COMPILERS",
+          "summary": "LLMs can function as compilers in the future, transforming context into software features. Instead of directly manipulating code, engineers will focus on providing context, defining tests, and iterating based on the results.",
+          "url": "https://resync-games.com/blog/engineering/llms-as-compiler?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "resync-games.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-03:a15",
+          "order": 1,
+          "title": "ALL HIGH VALUE WORK IS DEEP WORK, AND ALL MOTIVATION IS BASED ON BELIEF",
+          "summary": "High-value work is always deep work, as focus and perseverance are necessary to solve complex problems, while motivation is from having strong personal beliefs from ego, prestige, distraction, gratitude, or social connection.",
+          "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1lpyimz/all_high_value_work_is_deep_work_and_all/?share_id=r7g0mgFDZUpVWv0Cz8tKp&utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "reddit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a16",
+          "order": 2,
+          "title": "MODERN NODE.JS PATTERNS FOR 2025",
+          "summary": "Important modern Node.js patterns for 2025 include using ES Modules with the `node:` prefix for built-in modules, using top-level await for better initialization, and using native web APIs like fetch and AbortController to reduce external dependencies.",
+          "url": "https://kashw1n.com/blog/nodejs-2025?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "kashw1n.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-03:a17",
+          "order": 3,
+          "title": "TARGET=_BLANK IMPLIES REL=NOOPENER",
+          "summary": "Modern browsers automatically include `rel=\"noopener\"` when `target=\"_blank\"` is used, preventing a security vulnerability where the linked page could manipulate the original page.",
+          "url": "https://www.stefanjudis.com/today-i-learned/target-blank-implies-rel-noopener?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "stefanjudis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

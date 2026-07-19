@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-07-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-28",
+  "source_path": "TLDR InfoSec/article_28-07-2025.md",
+  "source_content_hash": "sha256:67605c7bbbf69b3cf3fe3f165f9a97d78c2dc4f48caf3002a8bc2ece2d947ff9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a04",
+          "order": 1,
+          "title": "TAKE CONTROL OF SAAS SPRAWL",
+          "summary": "IT and security teams are trapped in a reactive mode when managing SaaS and AI app sprawl. While accounting for an ever-growing number of risks, admins are continually bogged down by manual processes and disconnected workflows.",
+          "url": "https://1password.com/webinars/taking-control-of-saas-sprawl?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_taking-control-of-saas-sprawl_consideration_2025-07&utm_content=text&utm_term=july-28-newsletter-primary",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a04",
+          "order": 2,
+          "title": "To tackle this problem, check out 1Password's on-demand webinar",
+          "summary": "that explores how IT and security teams can:",
+          "url": "https://1password.com/webinars/taking-control-of-saas-sprawl?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_commercial_amer_english_taking-control-of-saas-sprawl_consideration_2025-07&utm_content=text&utm_term=july-28-newsletter-primary",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a05",
+          "order": 1,
+          "title": "INSURANCE GIANT SAYS MOST US CUSTOMER DATA STOLEN IN CYBER-ATTACK",
+          "summary": "Hackers breached Allianz Life's third-party cloud-based CRM system on July 16, using social engineering techniques to steal personal data from approximately 1.4 million of the insurer's North American customers. The German parent company immediately contained the breach, notified the FBI, and confirmed no other company systems were compromised.",
+          "url": "https://www.bbc.com/news/articles/cd6nyng861wo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a06",
+          "order": 2,
+          "title": "DATING SAFETY APP TEA BREACHED, EXPOSING 72,000 USER IMAGES",
+          "summary": "Tea, an app for anonymous dating reviews, suffered a data breach exposing 72,000 images, including 13,000 verification selfies and IDs. The breach affected users who signed up before February 2024. 4chan users reportedly shared the stolen data, coinciding with Tea's surge in viral popularity.",
+          "url": "https://techcrunch.com/2025/07/26/dating-safety-app-tea-breached-exposing-72000-user-images/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a07",
+          "order": 3,
+          "title": "POST SMTP PLUGIN FLAW EXPOSES 200K WORDPRESS SITES TO HIJACKING ATTACKS",
+          "summary": "A critical security vulnerability (CVE-2025-24000) in the Post SMTP WordPress plugin allows low-privileged users to access email logs and hijack administrator accounts by intercepting password reset emails. The flaw affects all versions up to 3.2.0 and stems from broken access controls that only checked if users were logged in without verifying their permission levels. Despite a fix being released in version 3.3.0 on June 11, over 200,000 WordPress sites remain vulnerable, as more than half of users haven't updated their plugin.",
+          "url": "https://www.bleepingcomputer.com/news/security/post-smtp-plugin-flaw-exposes-200k-wordpress-sites-to-hijacking-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a08",
+          "order": 1,
+          "title": "HOW WE ROOTED COPILOT",
+          "summary": "Microsoft's Copilot Enterprise Python sandbox vulnerability allowed researchers to gain root access within the container through a PATH hijacking attack in the keepAliveJupyterSvc.sh script, which executed `pgrep` without a full path every 2 seconds. Researchers exploited this by placing a malicious script in /app/miniconda/bin, which was writable by the ubuntu user and prioritized in $PATH, to execute arbitrary commands as root. While container breakout proved impossible due to patching, the vulnerability demonstrated how improper PATH handling in privileged scripts can lead to privilege escalation even in sandboxed environments.",
+          "url": "https://research.eye.security/how-we-rooted-copilot/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "research.eye.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a09",
+          "order": 2,
+          "title": "OSS-FUZZ INTEGRATIONS VIA AGENT-BASED BUILD GENERATION",
+          "summary": "OSS-Fuzz-Gen introduced an agent-based LLM approach that automatically generates build scripts and fuzzing harnesses for integrating projects into OSS-Fuzz, using iterative command execution and environment exploration to handle diverse C/C++ codebases. The system achieved 88 successful integrations from 225 tested repositories, demonstrating its ability to handle complex builds that require custom tools and dependencies. Key limitations include build scripts that avoid target source code or only support single-harness compilation, requiring post-processing validation improvements.",
+          "url": "https://blog.oss-fuzz.com/posts/oss-fuzz-integrations-via-agent-based-build-generation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.oss-fuzz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a10",
+          "order": 3,
+          "title": "AI AND SECURE CODE GENERATION",
+          "summary": "The emergence of LLMs and coding agents fundamentally transforms application security, as AI now both writes and debugs code. As LLMs advance, humans will focus more on prioritizing vulnerabilities, providing additional context, and assessing exploitability. The vulnerability disclosure process will also become much quicker, with LLMs rapidly identifying vulnerabilities and offensive and defensive teams promptly collaborating to evaluate exploitability.",
+          "url": "https://www.lawfaremedia.org/article/ai-and-secure-code-generation?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "lawfaremedia.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a11",
+          "order": 1,
+          "title": "HOW CNAPP VENDORS STACK UP IN 2025",
+          "summary": "Cloud security is crowded — and evolving fast. If you're trying to make sense of the vendor landscape, this new report from IDC is a great place to start.",
+          "url": "https://www.wiz.io/lp/2025-idc-marketscape-for-cnapp?utm_source=tldr-infosec&utm_medium=paid-email&utm_campaign=FY26Q2_INB_FORM_IDC-Marketscape-For-CNAPP&sfcid=701Py00000Od2sCIAR&utm_term=FY26Q2-tldr-infosec-nl&utm_content=IDC-CNAPP-2025",
+          "reading_time_minutes": null,
+          "source_domain": "wiz.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a11",
+          "order": 2,
+          "title": "Get the Report",
+          "summary": "",
+          "url": "https://www.wiz.io/lp/2025-idc-marketscape-for-cnapp?utm_source=tldr-infosec&utm_medium=paid-email&utm_campaign=FY26Q2_INB_FORM_IDC-Marketscape-For-CNAPP&sfcid=701Py00000Od2sCIAR&utm_term=FY26Q2-tldr-infosec-nl&utm_content=IDC-CNAPP-2025",
+          "reading_time_minutes": null,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a12",
+          "order": 3,
+          "title": "AI-WATERMARK",
+          "summary": "UnMarker is designed to be the first universal attack against defensive watermarking, which is used to detect AI-generated deepfakes. The attack disrupts watermarks in image spectral amplitudes without requiring detector feedback or knowledge of the scheme, thereby defeating both traditional and advanced semantic watermarking systems and rendering deepfake detection ineffective.",
+          "url": "https://github.com/andrekassis/ai-watermark?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a13",
+          "order": 4,
+          "title": "HERODEVS (PRODUCT LAUNCH)",
+          "summary": "HeroDevs provides commercial licenses to over 30 Never-Ending Support (NES) products, which are patched versions of software that organizations already use, behave identically, and are compatible with modern browsers and key third-party libraries.",
+          "url": "https://www.herodevs.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "herodevs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a14",
+          "order": 5,
+          "title": "HYPNUS",
+          "summary": "hypnus is a Rust library for memory obfuscation designed to protect memory regions during inactivity or sleep periods.",
+          "url": "https://github.com/joaoviictorti/hypnus?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a15",
+          "order": 1,
+          "title": "AFTER BLACKSUIT IS TAKEN DOWN, NEW RANSOMWARE GROUP CHAOS EMERGES",
+          "summary": "International law enforcement's Operation CheckMate dismantled the BlackSuit ransomware group, but a new group called \"Chaos\" quickly emerged, likely comprising former BlackSuit members. Chaos is targeting major organizations primarily in the US, demanding ransoms of around $300,000.",
+          "url": "https://arstechnica.com/security/2025/07/after-blacksuit-is-taken-down-new-ransomware-group-chaos-emerges/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a16",
+          "order": 2,
+          "title": "SCATTERED SPIDER IS RUNNING A VMWARE ESXI HACKING SPREE",
+          "summary": "Scattered Spider is targeting VMware ESXi hypervisors across retail, airline, transportation, and insurance sectors using social engineering to impersonate employees and trick IT help desks into resetting passwords for privileged accounts. Once they gain vCenter access, attackers enable SSH on ESXi hosts, perform \"disk-swap\" attacks to extract the NTDS.dit Active Directory database, wipe backups, and deploy ransomware to encrypt all VMs in the datastores. Google recommends hardening vSphere with execInstalledOnly, VM encryption, disabled SSH, phishing-resistant MFA, isolating Tier 0 assets, and centralizing logs in a SIEM to detect suspicious vCenter logins and configuration changes.",
+          "url": "https://www.bleepingcomputer.com/news/security/scattered-spider-is-running-a-vmware-esxi-hacking-spree/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a17",
+          "order": 3,
+          "title": "ANNOUNCING CHAINGUARD LIBRARIES FOR PYTHON: MALWARE-RESISTANT DEPENDENCIES BUILT SECURELY FROM SOURCE",
+          "summary": "Chainguard's Libraries for Python is a secure index that rebuilds Python packages and their dependency trees from source within a Supply-chain Levels for Software Artifacts (SLSA) Level 2-hardened setup to prevent supply chain threats. The platform specifically addresses Python wheels with native code and re-bundled OS libraries, such as OpenSSL, which create \"software dark matter\" that is hidden from SCA scanners. Early testing indicates that 98% of known malicious packages would be identified and blocked. This development follows notable incidents in 2023 and 2024 that involved attacks on PyTorch and Ultralytics YOLO where compromised builds and leaked API tokens facilitated malware distribution via PyPI.",
+          "url": "https://www.chainguard.dev/unchained/announcing-chainguard-libraries-for-python-malware-resistant-dependencies-built-securely-from-source?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-28:a18",
+          "order": 1,
+          "title": "DOGE TURNS TO AI TO DECIDE WHICH FEDERAL REGULATIONS TO CUT",
+          "summary": "The Trump administration plans to utilize an AI tool called the \"Doge AI Deregulation Decision Tool\" to analyze 200,000 federal regulations and eliminate half of them by January, aiming to save trillions in compliance costs.",
+          "url": "https://links.tldrnewsletter.com/dOiRQk",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-28:a19",
+          "order": 2,
+          "title": "RESEARCHERS EXPOSE MASSIVE ONLINE FAKE CURRENCY OPERATION IN INDIA",
+          "summary": "CloudSEK researchers used facial recognition and GPS data to expose a $2 million counterfeit currency operation in India, identifying over 750 social media accounts selling fake notes and pinpointing key perpetrators in Maharashtra.",
+          "url": "https://hackread.com/researchers-online-fake-currency-operation-in-india/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

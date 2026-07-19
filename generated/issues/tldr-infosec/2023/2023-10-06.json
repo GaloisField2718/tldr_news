@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-10-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-10-06",
+  "source_path": "TLDR InfoSec/article_06-10-2023.md",
+  "source_content_hash": "sha256:4b78046c445c4f1d81e13df07335d573eaa252b7a7cba8bbb0d01b8b6f716ba2",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-10-06",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-06:o001",
+          "order": 1,
+          "title": "LYCA MOBILE SERVICES SIGNIFICANTLY DISRUPTED BY CYBERATTACK",
+          "summary": "Lyca Mobile has confirmed that its services were significantly disrupted in recent days due to a cyberattack. The attack impacted services in all markets, except for the US, Australia, Tunisia, and Ukraine and the company is still trying to find out if it has resulted in a data breach.",
+          "url": "https://www.securityweek.com/lyca-mobile-services-significantly-disrupted-by-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o002",
+          "order": 2,
+          "title": "GLIBC’S LD.SO",
+          "summary": "Qualys discovered a glibc dynamic loader vulnerability that enables a local privilege escalation that grants full root privileges on the default installations of Fedora 37 and 38, Ubuntu 22.04 and 23.04, and Debian 12 and 13. It is recommended to update as soon as possible as it is a critical vulnerability.",
+          "url": "https://blog.qualys.com/vulnerabilities-threat-research/2023/10/03/cve-2023-4911-looney-tunables-local-privilege-escalation-in-the-glibcs-ld-so?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.qualys.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o003",
+          "order": 3,
+          "title": "HIGH SEVERITY VULNERABILITY FOUND IN LIBCURL AND CURL",
+          "summary": "The maintainer of the curl project posted an update that a security issue is “probably the worst security problem found in curl in a long time.” The patched version will be released on October 11 along with details of the CVEs.",
+          "url": "https://snyk.io/blog/curl-high-severity-vulnerability-oct-2023/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "snyk.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-06:o004",
+          "order": 1,
+          "title": "THE EVOLUTIONARY TALE OF A PERSISTENT PYTHON THREAT",
+          "summary": "The Checkmarx Software Supply Chain Security team has been tracking a threat actor that has been publishing malicious Python packages since April. The team has broken down the ways that the threat actor has gradually evolved their techniques from using plaintext payloads, to encrypting malicious functionality, and finally layers of obfuscation and evasion.",
+          "url": "https://checkmarx.com/blog/the-evolutionary-tale-of-a-persistent-python-threat/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o005",
+          "order": 2,
+          "title": "BYPASSING BING CHAT’S GUARDRAILS TO SOLVE CAPTCHAS",
+          "summary": "Bing Chat is a public implementation of the GPT-4 LLM and includes guardrails to prevent certain forms of malicious usage. One user demonstrated that Bing Chat successfully detected that it was being asked to solve a CAPTCHA and refused when it was just prompted with a picture of the text. However, the same user showed that if they edited the CAPTCHA onto a picture of a locket and presented a context of it belonging to their dead grandmother, Bing Chat would transcribe the CAPTCHA.",
+          "url": "https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o006",
+          "order": 3,
+          "title": "ANALYZING & PATCHING A DLL REVERSE SHELL",
+          "summary": "The document describes the process of analyzing and patching a DLL reverse shell. The author starts by conducting initial triage with VirusTotal and Shodan and follows up with analyzing the files to find the IP address and patching to a local VM to get the shell to the host.",
+          "url": "https://www.archcloudlabs.com/projects/dll-rev-shell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "archcloudlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-06:o007",
+          "order": 1,
+          "title": "GEM SECURITY RAISES $23M FOR ITS CLOUD SECURITY PLATFORM",
+          "summary": "Cloud detection and response company Gem Security has raised a $23 million Series A round led by GGV Capital with participation from IBM Ventures and Silicon Valley CISO Investments. This comes after its February $11 million seed round led by Team8, which also participated in this new round.",
+          "url": "https://techcrunch.com/2023/09/27/gem-security-raises-23m-for-its-cloud-security-platform/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o008",
+          "order": 2,
+          "title": "KUBEHOUND",
+          "summary": "Kubehound is a tool from DataDog that is inspired by the popular Active Directory tool BloodHound. KubeHound can build graphs of Kubernetes clusters and visualize common attack paths. This article contains a tutorial with some example use cases and queries.",
+          "url": "https://securitylabs.datadoghq.com/articles/kubehound-identify-kubernetes-attack-paths/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-06:o009",
+          "order": 1,
+          "title": "CENTER AND SERVER",
+          "summary": "Atlassian has released fixes to contain an actively exploited critical zero-day flaw impacting publicly accessible Confluence Data Center and Server instances. The vulnerability, tracked as CVE-2023-22515, is remotely exploitable and allows external attackers to create unauthorized Confluence administrator accounts and access Confluence servers.",
+          "url": "https://confluence.atlassian.com/security/cve-2023-22515-privilege-escalation-vulnerability-in-confluence-data-center-and-server-1295682276.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "confluence.atlassian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o010",
+          "order": 2,
+          "title": "ABOUT IT",
+          "summary": "Malwarebytes has released a new report that underscores how the online behaviors of consumers are often at odds with ensuring safety and privacy. Seventy percent of surveyed respondents experienced some kind of cybersecurity threat such as online scams and viruses or malware and roughly one tenth have experienced serious personal violations like stalkerware/spyware and ransomware.",
+          "url": "https://www.malwarebytes.com/resources/files/2023/10/everyone-is-afraid-of-the-internet-2023.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o011",
+          "order": 3,
+          "title": "FILES (LNK) AND VIRTUAL HARD DISK FILES (VHD)",
+          "summary": "This blog post discusses the importance of investigating file types that are often overlooked in threat actor campaigns. It dives into the world of Shell Link files (LNK) and Virtual Hard Disk files (VHD) and explains how Rapid7 is releasing a new feature in Velociraptor that can parse LNK files.",
+          "url": "https://www.rapid7.com/blog/post/2023/10/05/little-crumbs-can-lead-to-giants/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "rapid7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-10-06:o012",
+          "order": 1,
+          "title": "STATE OF DEVOPS REPORT 2023",
+          "summary": "Google brings back their yearly state of DevOps report where they go into depth of the maturity of companies in their adoption of DevOps. Some of the key takeaways this year include the importance of company culture, collaboration, documentation, and being customer-centric.",
+          "url": "https://services.google.com/fh/files/misc/2023_final_report_sodr.pdf?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "services.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o013",
+          "order": 2,
+          "title": "GOOGLE AND YAHOO WILL CRACK DOWN ON SPAM",
+          "summary": "Yahoo announced that bulk senders will now need to implement more robust email authentication as well as comply with unsubscribe requests within two days. Google posted a similar announcement stating that bulk senders (>5000 messages per day) must implement more robust authentication, comply with unsubscribe requests within two days, and comply with a spam rate threshold.",
+          "url": "https://therecord.media/google-yahoo-crack-down-on-spam?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-10-06:o014",
+          "order": 3,
+          "title": "SAFE, SECURE, ANONYMOUS, AND OTHER MISLEADING CLAIMS",
+          "summary": "This article deconstructs the idea of online anonymity. It argues that even anonymous services tend to collect personally identifiable information that’s just waiting for a breach to expose it.",
+          "url": "https://www.troyhunt.com/safe-secure-anonymous-and-other-misleading-claims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "troyhunt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

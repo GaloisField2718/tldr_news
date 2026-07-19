@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-05-22",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-05-22",
+  "source_path": "TLDR Web Dev/article_22-05-2025.md",
+  "source_content_hash": "sha256:0ebf5dae728ed3d12edaf8a1253aab5af1023898595da42cf2fa8f6a6a5660d4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-05-22",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-22:a04",
+          "order": 1,
+          "title": "YOU CAN SERIALIZE A PROMISE IN REACT",
+          "summary": "React Server Components enable a unique pattern where promises can start on the server and finish on the client. While JSON can't serialize promises, React 19 provides built-in solutions through `renderToReadableStream` (server) and `createFromReadableStream` (client). This allows for smooth data flow between server and client components, supporting over 20 data types beyond just promises.",
+          "url": "https://twofoldframework.com/blog/you-can-serialize-a-promise-in-react?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "twofoldframework.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a05",
+          "order": 2,
+          "title": "INSTAGRAM'S RECOMMENDATION SYSTEM SCALING",
+          "summary": "Instagram scaled its recommendation system to over 1,000 ML models by fixing infrastructure maturity gaps. They built a model registry for central model management, automated the launch process to reduce time from days to hours, and implemented model stability metrics to monitor prediction accuracy.",
+          "url": "https://engineering.fb.com/2025/05/21/production-engineering/journey-to-1000-models-scaling-instagrams-recommendation-system/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a06",
+          "order": 3,
+          "title": "I THINK THE ERGONOMICS OF GENERATORS IS GROWING ON ME",
+          "summary": "JavaScript generators (created with `function*` and `yield`) are great ways to work with sequences of values. They provide lazy evaluation, encapsulate their own state, and simplify recurring tasks like pagination. Unlike traditional approaches, generators separate concerns by managing their own internals, making code more maintainable.",
+          "url": "https://macarthur.me/posts/generators?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "macarthur.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-22:a07",
+          "order": 1,
+          "title": "GEMINI DIFFUSION",
+          "summary": "Gemini Diffusion is Google's new LLM. It uses diffusion instead of autoregression for text generation. Initial impressions show that it is exceptionally fast, with Google claiming similar performance to Gemini 2.0 Flash-Lite but five times faster.",
+          "url": "https://simonwillison.net/2025/May/21/gemini-diffusion/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a08",
+          "order": 2,
+          "title": "LLM FUNCTION CALLS DON'T SCALE; CODE ORCHESTRATION IS SIMPLER, MORE EFFECTIVE",
+          "summary": "Relying on LLMs to directly process the output of tool calls, especially large JSON blobs from MCP servers like Linear and Intercom, is inefficient and expensive due to token limits and potential data inaccuracies. Instead, parsing the structured data returned by these tools and having the LLM orchestrate code execution for data processing is a more scalable and reliable approach.",
+          "url": "https://jngiam.bearblog.dev/mcp-large-data/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "jngiam.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-22:a09",
+          "order": 1,
+          "title": "GETTING STARTED WITH CLERK BILLING",
+          "summary": "Watch how to build a complete billing experience with Clerk and Stripe, from subscriptions and usage-based pricing to role-based",
+          "url": "https://go.clerk.com/ez23VbM?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a10",
+          "order": 2,
+          "title": "access—no custom UI or webhooks required. Enable Billing today!",
+          "summary": "",
+          "url": "https://go.clerk.com/C9tU7yt",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a11",
+          "order": 3,
+          "title": "AN UPGRADED DEV EXPERIENCE IN GOOGLE AI STUDIO",
+          "summary": "Google AI Studio has been upgraded with new features for developers to build and deploy AI applications more easily. The updates include Gemini 2.5 Pro code generation with a native code editor and a \"Build\" tab for quickly creating and deploying web apps. The platform also now offers native audio capabilities, including natural audio dialog in the Live API and text-to-speech (TTS) features, as well as support for Model Context Protocol (MCP) and a new URL Context tool.",
+          "url": "https://developers.googleblog.com/en/google-ai-studio-native-code-generation-agentic-tools-upgrade/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "developers.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a12",
+          "order": 4,
+          "title": "RSLIB",
+          "summary": "Rslib is a library development tool, built on Rsbuild and Rspack, that helps make the creation of JavaScript and TypeScript libraries easier.",
+          "url": "https://github.com/web-infra-dev/rslib?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a13",
+          "order": 5,
+          "title": "AWESOME TAILWIND ANIMATIONS",
+          "summary": "Awesome Tailwind Animations is a Tailwind CSS plugin for easily adding animations to web elements using pre-defined classes. It has a variety of animations like fade-in and slide-in, as well as utilities for controlling animation delays and durations.",
+          "url": "https://github.com/midudev/tailwind-animations?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-22:a14",
+          "order": 1,
+          "title": "GEMINI FIGURED OUT MY NEPHEW'S NAME",
+          "summary": "This developer created an MCP server for their email indexed with Notmuch, allowing Gemini read-only access through search and retrieval tools. Gemini was tasked with finding his nephew's name buried within the emails. After numerous search queries and retrieving email content, Gemini correctly deduced that the nephew's name was Monty, even though the relevant email never explicitly stated their relationship.",
+          "url": "https://blog.nawaz.org/posts/2025/May/gemini-figured-out-my-nephews-name/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.nawaz.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a15",
+          "order": 2,
+          "title": "INCIDENTS FROM GENERATIVE AI CLOUD SERVICES HIT DIFFERENT",
+          "summary": "A Microsoft study analyzing GenAI cloud service incidents revealed they take much longer to mitigate than non-GenAI incidents, primarily due to infrastructure-related issues. GenAI services also face unique challenges like performance degradation, deployment failures, and invalid inference, requiring more complex and time-consuming mitigation methods.",
+          "url": "https://thenewstack.io/incidents-from-generative-ai-cloud-services-hit-different/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a16",
+          "order": 3,
+          "title": "GOOGLE'S AI AGENTS WILL BRING YOU THE WEB NOW",
+          "summary": "At Google I/O 2025, Google showed its new strategy for bringing the web to users through AI agents that can converse, summarize, and even shop on their behalf. These AI agents, including Project Mariner and Deep Research, give users a more hands-off, personalized information retrieval experience.",
+          "url": "https://techcrunch.com/2025/05/21/googles-ai-agents-will-bring-you-the-web-now/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-22:a17",
+          "order": 1,
+          "title": "CSV TO HTML TABLE",
+          "summary": "This is a JavaScript solution that displays CSV files as searchable, filterable, and customizable HTML tables using libraries like jQuery, DataTables, and Bootstrap.",
+          "url": "https://github.com/derekeder/csv-to-html-table?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a18",
+          "order": 2,
+          "title": "INTRODUCING THE LLAMA STARTUP PROGRAM",
+          "summary": "The Llama Startup Program (by Meta) is launching to provide early-stage US startups using Llama for generative AI apps with resources, technical support, and up to $6,000/month for six months in cloud reimbursements.",
+          "url": "https://ai.meta.com/blog/llama-startup-program/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "ai.meta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a19",
+          "order": 3,
+          "title": "STOREFRONT WEB COMPONENTS",
+          "summary": "Storefront Web Components allow developers to embed Shopify commerce features like product displays, collections, and checkout functionality into any website by using simple HTML components that handle the complexities of the Shopify Storefront API.",
+          "url": "https://shopify.dev/docs/api/storefront-web-components?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "shopify.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-22:a20",
+          "order": 4,
+          "title": "MY PUTS DEBUGGING WORKFLOW IN RAILS APPS",
+          "summary": "`dbg-rb` is a Ruby gem that makes debugging easier by providing verbose, formatted, source-located output with variable names.",
+          "url": "https://links.tldrnewsletter.com/4HirrR",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

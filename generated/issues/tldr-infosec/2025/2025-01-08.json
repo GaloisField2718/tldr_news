@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-01-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-01-08",
+  "source_path": "TLDR InfoSec/article_08-01-2025.md",
+  "source_content_hash": "sha256:9849130e8f5538fa9c19ae6d242af15cd1ce4d986c5cfc37f89bcf80da374547",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-01-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Security programs are hard to justify if they continuously generate false positives, incomplete findings, or a high volume of incidents that need to be triaged.",
+          "url": "https://defectdojo.com/blog/why-high-quality-security-results-matter?utm_campaign=5526794-TLDR+Ad+Q1+2025&utm_source=TLDR_Ad_1",
+          "reading_time_minutes": null,
+          "source_domain": "defectdojo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a05",
+          "order": 1,
+          "title": "EFFECTIVE PHISHING CAMPAIGN TARGETING EUROPEAN COMPANIES AND ORGANIZATIONS",
+          "summary": "Palo Alto Network's Unit42 discusses a phishing campaign targeting European companies and organizations, highlighting indicators to identify similar attacks. These indicators include a tone of urgency and failed authentication checks like SPF and DKIM. The threat actor employed evasion techniques, such as using trusted devices and VPN proxies, to disguise their malicious activities.",
+          "url": "https://unit42.paloaltonetworks.com/european-phishing-campaign/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a06",
+          "order": 2,
+          "title": "FIRESCAM ANDROID SPYWARE CAMPAIGN POSES 'SIGNIFICANT THREAT WORLDWIDE'",
+          "summary": "A new Android spyware, \"FireScam,\" masquerades as Telegram Premium to steal sensitive data using Firebase for data exfiltration. The malware spreads through a fake RuStore website on Github.io, highlighting evolving threats that exploit legitimate platforms and user trust.",
+          "url": "https://www.darkreading.com/cyberattacks-data-breaches/firescam-android-spyware-campaign-significant-threat-worldwide?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a07",
+          "order": 3,
+          "title": "BIOS FLAWS EXPOSE ISEQ DNA SEQUENCERS TO BOOTKIT ATTACKS",
+          "summary": "Eclypsium found that the BIOS firmware of Illumina iSeq 100 devices ran an outdated version of the BIOS firmware which was not write protected and did not implement Secure Boot. Attackers could exploit these vulnerabilities to manipulate results or brick the systems. Illumina has issued a patch to affected customers.",
+          "url": "https://www.bleepingcomputer.com/news/security/bios-flaws-expose-iseq-dna-sequencers-to-bootkit-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a08",
+          "order": 1,
+          "title": "OPEN PORT CHRONICLE: WHAT PORT 80 REVEALED ABOUT THE INTERNET",
+          "summary": "RedHunt Labs scanned billions of IP addresses for open port 80s and discovered 42 million accessible IPs. Its research revealed 25,000 unique HTTP headers, 2.1 million favicon hashes, 500,000 email addresses, 600,000 social media links, and 25,000 cloud storage buckets, highlighting internet security's current state.",
+          "url": "https://redhuntlabs.com/blog/open-port-chronicle-what-port-80-revealed-about-the-internet-project-resonance-wave-12/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "redhuntlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a09",
+          "order": 2,
+          "title": "A PRACTICAL GUIDE TO GETTING STARTED WITH POLICY AS CODE",
+          "summary": "Policy as Code (PaC) is an approach that aids the assessment of an organization's configuration and validation of compliance requirements through the use of software automations. Before beginning to implement PaC, an organization should map out the level of effort to codify policies and the criticality of the policy. One mechanism to begin using PaC can be through CloudFormation Hooks or CloudFormation Guards.",
+          "url": "https://aws.amazon.com/blogs/infrastructure-and-automation/a-practical-guide-to-getting-started-with-policy-as-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a10",
+          "order": 3,
+          "title": "HOW (AND WHY) TO USE APPROLE CORRECTLY IN HASHICORP VAULT",
+          "summary": "Vault AppRoles aim to solve the “Secret Zero” problem in systems that don't have native Vault authentication capabilities by splitting authentication into two components: a role ID and secret ID. The role ID is not sensitive and the secret ID is a time limited credential that should only be provided to the application at the expected time of use. Vault also supports wrapping the secret ID to decrease exposure. The Vault agent can automate AppRole authentication in applications that cannot be modified.",
+          "url": "https://www.hashicorp.com/blog/how-and-why-to-use-approle-correctly-in-hashicorp-vault?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "hashicorp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a11",
+          "order": 1,
+          "title": "FLASHPOINT REPORT REVEALS 98M EXPOSED CREDENTIALS AND 4,500 ATTEMPTED RANSOMWARE ATTACKS",
+          "summary": "Today's ransomware operations combine phishing, infostealers, and vulnerability exploits [11] to wreak havoc on your defenses. Now is a good time to get your risk frameworks, threat intelligence, and incident response playbooks up to speed.",
+          "url": "https://go.flashpoint.io/ransomware-survival-guide?utm_campaign=Resource_RP_Ransomware_Survival_Guide&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000IJOp4IAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a11",
+          "order": 2,
+          "title": "Read the report → 2025 Ransomware Survival Guide",
+          "summary": "",
+          "url": "https://go.flashpoint.io/ransomware-survival-guide?utm_campaign=Resource_RP_Ransomware_Survival_Guide&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000IJOp4IAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a12",
+          "order": 3,
+          "title": "BANDIT",
+          "summary": "Bandit is a tool designed to find common security issues in Python code. To do this, Bandit processes each file, builds an AST from it, and runs appropriate plugins against the AST nodes. It generates a report once it has finished scanning all the files.",
+          "url": "https://github.com/PyCQA/bandit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a13",
+          "order": 4,
+          "title": "DARKFLARE",
+          "summary": "A stealthy command line tool to create TCP-over-CDN(http) tunnels that keep your connections cozy and comfortable.",
+          "url": "https://github.com/doxx/darkflare?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a14",
+          "order": 5,
+          "title": "PACKAGEANALYSIS",
+          "summary": "The Package Analysis project examines open source packages for signs of malicious behavior by analyzing their file access, network connections, and commands they execute. It aims to enhance open source software security by detecting suspicious behavior and providing insights to consumers and researchers. The project's components work together to analyze packages in a sandboxed environment and store the results for inspection in BigQuery.",
+          "url": "https://github.com/ossf/package-analysis?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a15",
+          "order": 1,
+          "title": "THE MAC MALWARE OF 2024",
+          "summary": "The amount of malware targeting macOS has increased along with the market share of Macs. This post provides an introduction to some common macOS malware analysis tools and then introduces each new macOS malware released in 2024. The samples are categorized into stealers or ransomware and each includes a brief overview, links to writeups, infection vectors, persistence mechanisms, and capabilities.",
+          "url": "https://objective-see.org/blog/blog_0x7D.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "objective-see.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a16",
+          "order": 2,
+          "title": "CRITICAL INFRASTRUCTURE RANSOMWARE ATTACK TRACKER REACHES 2,000 INCIDENTS",
+          "summary": "Temple University researchers have documented over 2,000 ransomware attacks on critical infrastructure since 2013, with government, healthcare, and education being the most targeted sectors. Their CIRA database shows increasing ransom demands, with the project providing valuable data for cybersecurity professionals and government entities.",
+          "url": "https://www.securityweek.com/universitys-critical-infrastructure-ransomware-attack-tracker-reaches-2000-incidents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a17",
+          "order": 3,
+          "title": "STREAMLINING SECURITY INCIDENT RESPONSE WITH AUTOMATION AND LLMS",
+          "summary": "The Mercari security team implemented automations through a Slackbot and LLM that saved 160-250 minutes of incident responder time for small security incidents. The Slack bot automates tasks such as establishing communication, managing document access, and assigning tasks. The LLM aids in adding documentation and evaluating incident impact and severity as well as summarizing incidents over a long period of time for reporting purposes.",
+          "url": "https://engineering.mercari.com/en/blog/entry/20241206-streamlining-security-incident-response-with-automation-and-large-language-models/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.mercari.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-01-08:a18",
+          "order": 1,
+          "title": "US GOVT LAUNCHES CYBERSECURITY SAFETY LABEL FOR SMART DEVICES",
+          "summary": "The US government has introduced a new cybersecurity safety label called the U.S. Cyber Trust Mark for smart devices.",
+          "url": "https://www.bleepingcomputer.com/news/security/us-govt-launches-cybersecurity-safety-label-for-smart-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a19",
+          "order": 2,
+          "title": "CISA RELEASES NEW SECTOR SPECIFIC GOALS FOR IT AND PRODUCT DESIGN",
+          "summary": "CISA released new cybersecurity goals for IT and product design sectors to improve software security and protect against cyber incidents.",
+          "url": "https://www.cisa.gov/news-events/news/cisa-releases-new-sector-specific-goals-it-and-product-design?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-01-08:a20",
+          "order": 3,
+          "title": "HACKERS SACK PACKERS AS NFL TEAMS' BREACH EXPOSE FANS CREDIT CARDS",
+          "summary": "Hackers breached the Green Bay Packers' website, exposing fans' personal and credit card details.",
+          "url": "https://links.tldrnewsletter.com/zbfRnl",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

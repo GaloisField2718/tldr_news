@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-03",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-03",
+  "source_path": "TLDR InfoSec/article_03-12-2025.md",
+  "source_content_hash": "sha256:d95d262f9135bc800147f17ddb2b00d2ce74d3e89cb89ada055e5ea17f949c75",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a04",
+          "order": 1,
+          "title": "THE $10 TOOL BEHIND MOST RANSOMWARE ATTACKS",
+          "summary": "Before the ransomware hits, and much before the breach makes headlines — there's usually an infostealer. These cheap, widely available tools have become the #1 driver of identity-based attacks [4]. They quietly harvest credentials that get sold, traded, and weaponized downstream.",
+          "url": "https://go.flashpoint.io/proactive-defenders-guide-to-infostealers?utm_campaign=Resource_RP_DefendersGuide_Infostealers&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000W7BAoIAN",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a04",
+          "order": 2,
+          "title": "Download The Proactive Defender's Guide to Infostealers",
+          "summary": "",
+          "url": "https://go.flashpoint.io/proactive-defenders-guide-to-infostealers?utm_campaign=Resource_RP_DefendersGuide_Infostealers&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000W7BAoIAN",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a05",
+          "order": 1,
+          "title": "STEALTHY BROWSER EXTENSIONS WAITED YEARS BEFORE INFECTING 4.3M CHROME, EDGE USERS WITH BACKDOORS AND SPYWARE",
+          "summary": "ShadyPanda, a threat actor, compromised 4.3 million Chrome and Edge users through a seven-year campaign that published legitimate extensions, accumulated Featured and Verified status, and then weaponized them via malicious updates containing backdoors and spyware. The malware enabled complete browser surveillance, with remote code execution capabilities, hourly C2 communication to a server, arbitrary JavaScript execution with full browser API access, and real-time exfiltration of browsing data. ShadyPanda exploited the fundamental gap that allows marketplaces to review extensions only at submission, rather than monitor post-approval updates. Five extensions with over 4 million combined installs remain active on the Edge marketplace.",
+          "url": "https://www.theregister.com/2025/12/01/chrome_edge_malicious_browser_extensions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a06",
+          "order": 2,
+          "title": "FAKE CALENDLY INVITES SPOOF TOP BRANDS TO HIJACK AD MANAGER ACCOUNTS",
+          "summary": "There is an ongoing phishing campaign that uses Calendly to impersonate popular brands to phish for business ad manager accounts. These accounts are tempting for threat actors as they can be used as a springboard to launch malvertising campaigns with advanced features like geo-targeting, domain filtering, and device-specific targeting. The victims receive a Calendly invite from the threat actor impersonating a recruiter with a fake meeting invitation, which directs the user to an Attacker-in-the-Middle phishing page that attempts to steal login credentials.",
+          "url": "https://www.bleepingcomputer.com/news/security/fake-calendly-invites-spoof-top-brands-to-hijack-ad-manager-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a07",
+          "order": 3,
+          "title": "NORTH KOREA LURES ENGINEERS TO RENT IDENTITIES IN FAKE IT WORKER SCHEME",
+          "summary": "North Korea's Famous Chollima are running a campaign in which they attempt to lure developers into renting their identities for illicit fundraising. The attackers offer legitimate engineers a percentage of the salary for a remote job if they grant the threat actor remote access to their computer. In some cases, they act as a frontman for the agent in interviews.",
+          "url": "https://www.bleepingcomputer.com/news/security/north-korea-lures-engineers-to-rent-identities-in-fake-it-worker-scheme/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a08",
+          "order": 1,
+          "title": "HOW A RUSSIAN THREAT ACTOR USES A RECENT WINRAR VULNERABILITY IN THEIR UKRAINE OPERATIONS",
+          "summary": "Primitive Bear (Gamaredon), an FSB-attributed APT group, exploited CVE-2025-6218, a critical WinRAR path traversal vulnerability affecting versions through 7.11, in targeted spear-phishing campaigns against Ukrainian military units and government entities using military-themed lures. The attack chain leveraged malicious RAR archives containing HTA files with obfuscated VBScript, weaponizing a path traversal flaw to write payloads directly to Windows Startup folders, then used mshta.exe as a LOLBIN to fetch secondary-stage malware from a DynDNS-based C2 infrastructure across 14 active domains. The campaigns demonstrated sophisticated tradecraft, including minimal obfuscation, multi-stage payload delivery, phishing URL masquerading (president.gov.ua@malicious-domain), and infrastructure leveraging InterLIR IP marketplaces and No-IP dynamic DNS services. Defenders are recommended to update WinRAR to 7.12+, block HTA execution via AppLocker/WDAC, and monitor LOLBIN abuse and Startup folder modifications.",
+          "url": "https://blog.synapticsystems.de/how-a-russian-threat-actor-uses-recent-winrar-vulnerability-in-their-ukraine-operations/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.synapticsystems.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a09",
+          "order": 2,
+          "title": "AWS SECRETS MANAGER ANNOUNCES MANAGED EXTERNAL SECRETS",
+          "summary": "Managed external secrets is a new capability in AWS Secrets Manager that allows automatic rotation for participating third-party SaaS secrets without the overhead of rotation, Lambda function creation, or management. At present, the supported third-party vendors are Salesforce, BigID, and Snowflake. AWS has released a guide for becoming an integrated third-party vendor. The guide demonstrates how to create, manage, and view external secrets.",
+          "url": "https://aws.amazon.com/blogs/security/aws-secrets-manager-launches-managed-external-secrets-for-third-party-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a10",
+          "order": 3,
+          "title": "AI AGENTS FIND $4.6M IN BLOCKCHAIN SMART CONTRACT EXPLOITS",
+          "summary": "SCONE-bench, created by Anthropic researchers, contains 405 exploit-prone smart contracts. Claude Opus 4.5, Sonnet 4.5, and GPT-5 exploited 34 contracts worth $4.6 million. Sonnet 4.5 and GPT-5 found two new zero-day vulnerabilities in 2,849 new contracts, producing exploits worth $3,694 at an API cost of $3,476 for GPT-5. This shows that profitable autonomous exploitation is feasible with current models. Security teams should adopt AI agents for smart contract auditing before deployment, as the decreasing window for exploitation and dropping costs ($1.22 per run) give attackers advantages, while enabling proactive vulnerability detection and fixing.",
+          "url": "https://red.anthropic.com/2025/smart-contracts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "red.anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a11",
+          "order": 1,
+          "title": "WHERE IDENTITY SECURITY MEETS COMMUNITY",
+          "summary": "SO-CON 2026 (April 13-18, 2026) [12] is where the community comes together to advance the practice of Attack Path Management. The week begins with a two-day main conference packed with talks, research, and community exchange, followed by four days of deep-dive, hands-on trainings led by adversary-experienced practitioners.",
+          "url": "https://specterops.io/so-con/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a13",
+          "order": 2,
+          "title": "Early Bird Registration Now Open!",
+          "summary": "",
+          "url": "https://specterops.io/so-con/?utm_source=newsletter&utm_medium=TLDR&utm_campaign=TLDR_So_Con&utm_id=contentsyndicationlatest_campaign&utm_content=TLDR1",
+          "reading_time_minutes": null,
+          "source_domain": "specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a14",
+          "order": 3,
+          "title": "TELEGRAM'S COCOON NETWORK GOES LIVE, CHALLENGES AMAZON, MICROSOFT IN AI COMPUTE",
+          "summary": "Telegram Cocoon is a TON blockchain-based decentralized AI compute network that connects GPU providers (compensated in toncoin tokens) with privacy-focused applications that require AI model execution. It is positioned as a confidential alternative to centralized cloud providers like Amazon and Microsoft. The network employs attested compute layers to process AI requests while settling payments on-chain. Security professionals should note ecosystem concerns, including hardware limitations restricted to specific Intel processors, potential scrutiny of the \"100% confidentiality\" claims, and the strategic implications of a central messaging platform controlling AI compute infrastructure that could process sensitive organizational workloads.",
+          "url": "https://links.tldrnewsletter.com/kIRctT",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a15",
+          "order": 4,
+          "title": "VT-PY",
+          "summary": "vt-py is the official Python client library for VirusTotal. The library allows for interacting with the VirusTotal REST API v3.",
+          "url": "https://github.com/VirusTotal/vt-py?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a16",
+          "order": 5,
+          "title": "SAPORO (PRODUCT LAUNCH)",
+          "summary": "Saporo provides a graph-native identity security platform that analyzes relationships, events, and misconfigurations across on‑prem, cloud, and machine identities to surface attack paths, reduce exposure, and harden access to critical assets before exploitation.",
+          "url": "https://www.saporo.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "saporo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a17",
+          "order": 1,
+          "title": "GLASSWORM MALWARE RETURNS IN THIRD WAVE OF MALICIOUS VS CODE PACKAGES",
+          "summary": "Glassworm malware returned for a third wave on OpenVSX and Microsoft Visual Studio marketplaces with 24 new packages impersonating popular developer tools. The supply chain attack evolved to use Rust-based implants alongside invisible Unicode character obfuscation, steals GitHub, npm, and OpenVSX credentials plus cryptocurrency wallet data from 49 extensions, deploys SOCKS proxies for traffic routing, and installs HVNC clients for stealthy remote access while manipulating download counts to boost search rankings. Development teams should immediately audit installed VS Code extensions against published IOC lists, verify publisher authenticity before installation, monitor for suspicious extension updates, and implement controls to detect invisible Unicode characters in code reviews to prevent credential theft and environment compromise.",
+          "url": "https://www.bleepingcomputer.com/news/security/glassworm-malware-returns-in-third-wave-of-malicious-vs-code-packages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a14",
+          "order": 2,
+          "title": "INDIA ORDERS SMARTPHONE MAKERS TO PRELOAD STATE-OWNED CYBER SAFETY APP",
+          "summary": "India's telecoms ministry has privately asked smartphone makers to preload all new devices with a state-owned cybersecurity app that cannot be deleted. Smartphone makers will have 90 days to ensure the government's Sanchar Saathi app is preinstalled on new devices and should push the app to existing devices in the supply chain via software updates. Apple is expected to push back on this requirement and may come to a compromise in which it agrees to nudge users to install the app.",
+          "url": "https://links.tldrnewsletter.com/kIRctT",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a18",
+          "order": 3,
+          "title": "VULNERABILITY IN OPENAI CODING AGENT COULD FACILITATE ATTACKS ON DEVELOPERS",
+          "summary": "A command-injection vulnerability in OpenAI's Codex CLI allows trusted local configuration files to execute attacker-controlled commands without user approval. By slipping malicious configs into a repository, an attacker could gain remote access, run arbitrary commands, steal secrets, and even poison supply chains via CI and build systems. OpenAI fixed the issue in Codex CLI version 0.23.0 after disclosure.",
+          "url": "https://www.securityweek.com/vulnerability-in-openai-coding-agent-could-facilitate-attacks-on-developers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-03:a19",
+          "order": 1,
+          "title": "TRAIN YOUR ENTIRE ORGANIZATION WITH INFOSEC IQ & INFOSEC SKILLS",
+          "summary": "Unlock on-demand cybersecurity ranges and labs for your technical team with any new Infosec IQ security awareness training contract. Act",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%7CCRMLongId%7C",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a19",
+          "order": 2,
+          "title": "now to get your 3 FREE INFOSEC SKILLS SEATS.",
+          "summary": "",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%7CCRMLongId%7C",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a20",
+          "order": 3,
+          "title": "AUSTRALIAN MAN SENTENCED TO PRISON FOR WI-FI ATTACKS AT AIRPORTS AND ON FLIGHTS",
+          "summary": "Australian hacker Michael Clapsis was sentenced to seven years and four months in prison for using a Wi‑Fi Pineapple to run evil twin attacks at major Australian airports and on domestic flights.",
+          "url": "https://www.securityweek.com/australian-man-sentenced-to-prison-for-wi-fi-attacks-at-airports-and-on-flights/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-03:a21",
+          "order": 4,
+          "title": "MALICIOUS NPM PACKAGE USES HIDDEN PROMPT AND SCRIPT TO EVADE AI SECURITY TOOLS",
+          "summary": "A typosquatted npm package, eslint-plugin-unicorn-ts-2, poses as a TypeScript ESLint plugin and runs a post-install script that steals environment variables and embeds a deceptive prompt apparently intended to confuse AI-based scanners.",
+          "url": "https://thehackernews.com/2025/12/malicious-npm-package-uses-hidden.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-10",
+  "source_path": "TLDR InfoSec/article_10-12-2025.md",
+  "source_content_hash": "sha256:0e9e43967ee8a5db470883ac355b18cd8dedf357ded6e38291543101d692b33d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a04",
+          "order": 1,
+          "title": "WHEN YOUR CEO CALLS, WILL YOU KNOW IT'S REAL?",
+          "summary": "Today's phishing attacks involve AI-generated voices, videos, and interactive deepfakes of company executives. They fool 99% of people.",
+          "url": "https://www.adaptivesecurity.com/demo/security-awareness-training?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20251210",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a06",
+          "order": 1,
+          "title": "OVER 70 DOMAINS USED IN MONTHS-LONG PHISHING SPREE AGAINST US UNIVERSITIES",
+          "summary": "A coordinated phishing campaign that ran from April to November targeted at least 18 US universities using approximately 70 domains and the Evilginx adversary-in-the-middle toolkit. Attackers sent personalized emails containing TinyURL-shortened links that impersonated university SSO portals to steal MFA-bypassing session cookies. UC Santa Cruz, UC Santa Barbara, University of San Diego, Virginia Commonwealth University, and University of Michigan were among the most heavily targeted. Recommended mitigations include adopting phishing-resistant MFA (FIDO2/WebAuthn) and monitoring unusual session cookie behavior.",
+          "url": "https://hackread.com/us-universities-domains-phishing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a07",
+          "order": 2,
+          "title": "OVER 300,000 INDIVIDUALS IMPACTED BY VITAS HOSPICE DATA BREACH",
+          "summary": "Vitas Healthcare, the largest US for-profit hospice chain, reported that a compromised vendor account was used to access its systems from late September to late October, exposing data belonging to over 300,000 current and former patients. Exposed information includes contact details, identification numbers, Social Security numbers, medical and insurance data, and next-of-kin contacts. No ransomware group has claimed responsibility.",
+          "url": "https://www.securityweek.com/over-300000-individuals-impacted-by-vitas-hospice-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a08",
+          "order": 3,
+          "title": "IVANTI WARNS OF CRITICAL ENDPOINT MANAGER CODE EXECUTION FLAW",
+          "summary": "Ivanti disclosed a critical vulnerability in its Endpoint Manager (EPM) platform that allows unauthenticated attackers with access to the EPM web service to register fake endpoints and inject malicious JavaScript into the administrative dashboard. Ivanti also patched three additional high-severity vulnerabilities, including two that could enable unauthenticated remote code execution on arbitrary systems.",
+          "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-critical-endpoint-manager-code-execution-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a09",
+          "order": 1,
+          "title": "SYSMON CONFIG CREATION FOR THE LOLRMM FRAMEWORK",
+          "summary": "A security researcher released a Sysmon configuration tailored to detect Remote Monitoring and Management (RMM) tools listed in the LOLRMM framework. The rules cover process creation, file operations, network activity, and DNS queries, derived from behavioral analysis of RMM installers executed in VirusTotal, Hybrid-Analysis, and Any.run sandboxes. By capturing file paths, registry keys, and network indicators, the configuration helps security teams spot unauthorized RMM activity even when binaries are renamed or obfuscated.",
+          "url": "https://www.dodgethissecurity.com/2025/11/30/sysmon-config-creation-for-the-lolrmm-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "dodgethissecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a10",
+          "order": 2,
+          "title": "PROMPT INJECTION IS NOT SQL INJECTION (IT MAY BE WORSE)",
+          "summary": "The UK NCSC explains that prompt injection fundamentally differs from SQL injection because LLMs do not separate instructions from data, they simply predict tokens. As a result, techniques like parameterized queries cannot fully mitigate prompt injection. The agency recommends treating LLMs as \"inherently confusable deputies\" and implementing deterministic guardrails that constrain system actions outside of the model rather than relying on input filtering. Effective defenses include enforcing least privilege for LLM-driven workflows, closely monitoring tool and API usage, and acknowledging that prompt injection remains a residual architectural risk.",
+          "url": "https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a11",
+          "order": 3,
+          "title": "RISK-BASED ALERTING IN MICROSOFT SENTINEL",
+          "summary": "Risk-Based Alerting (RBA) allows analysts to combine multiple lower-fidelity alerts into a single higher-confidence incident by assigning risk scores to alerts that do not individually generate incidents. An incident is only created once a cumulative risk threshold is met. When assigning scores, teams should weigh potential impact, the criticality of the asset or user involved, and the confidence that the behavior reflects real malicious activity. This approach can reduce alert fatigue and improve triage efficiency.",
+          "url": "https://isaacdunham.github.io/posts/risk-based-alerting-in-sentinel/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "isaacdunham.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a12",
+          "order": 1,
+          "title": "RESEMBLE AI INTRODUCES NEW DEEPFAKE DETECTION MODEL FOR VOICE, IMAGE, AND VIDEO",
+          "summary": "Deepfakes are getting more sophisticated and now span voice, image, and video. Resemble AI's DETECT-3B Omni [13] gives security teams a way to fight back: this multimodal AI model was trained on 3 billion parameters to deliver unified deepfake protection across all content types, with a benchmark-beating 94-99% accuracy. Read the detailed",
+          "url": "https://www.resemble.ai/detect-3b-omni/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "resemble.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a14",
+          "order": 2,
+          "title": "breakdown",
+          "summary": "",
+          "url": "https://www.resemble.ai/detect-3b-omni",
+          "reading_time_minutes": null,
+          "source_domain": "resemble.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a15",
+          "order": 3,
+          "title": "CVE POC SEARCH",
+          "summary": "This tool provides a streamlined interface for searching proof-of-concept (PoC) exploit code associated with specific CVEs. Rather than serving as a vulnerability database, it aggregates and directs users to underlying PoC sources, making it useful for quickly locating exploit references for testing, validation, or workflow integration.",
+          "url": "https://labs.jamessawyer.co.uk/cves/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "labs.jamessawyer.co.uk",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a16",
+          "order": 4,
+          "title": "IMPER AI (PRODUCT LAUNCH)",
+          "summary": "Imper.ai provides real-time detection and prevention of impersonation and social engineering attacks across video, voice, phone, and chat communications.",
+          "url": "https://imper.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "imper.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a17",
+          "order": 5,
+          "title": "CRACKFTP",
+          "summary": "CrackFtp is a mass FTP checker and cracker designed to test login credentials and alert on successful logins to secure domains with Telegram notifications.",
+          "url": "https://github.com/zigaaaaaaaa/CrackFtp?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a18",
+          "order": 1,
+          "title": "THE CURIOUS CASE OF TWIN HACKERS ACCUSED OF ERASING US GOVERNMENT DATABASES",
+          "summary": "Twin brothers Muneeb and Sohaib Akhter, federal contractors previously convicted of hacking in 2015, were arrested for allegedly deleting nearly 100 government databases containing FOIA records and sensitive investigative files. After learning of their termination from Opexus, the pair allegedly used still-active credentials to access systems. Authorities say Muneeb also stole IRS tax records of 450 individuals and attempted to erase evidence via AI-assisted log deletion queries. The case underscores the need for immediate credential revocation on termination, rigorous vetting for privileged roles, and strong backup strategies.",
+          "url": "https://links.tldrnewsletter.com/7SU7gp",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a19",
+          "order": 2,
+          "title": "DANGEROUS INVITATIONS: RUSSIAN THREAT ACTOR SPOOFS EUROPEAN SECURITY EVENTS IN TARGETED PHISHING ATTACKS",
+          "summary": "Russian threat actor UTA0355 impersonated multiple prominent European security conferences, including the Belgrade Security Conference and Brussels Indo-Pacific Dialogue, to harvest Microsoft 365 credentials. The attackers created convincing replica websites and abused OAuth and Device Code authentication flows. They used rapport-building outreach on WhatsApp and Signal, leveraged compromised accounts for credibility, and selectively triggered credential theft based on targeted email domains. Defenses include user training on OAuth consent prompts, monitoring anomalous device registrations in Entra ID, and enforcing conditional access controls.",
+          "url": "https://www.volexity.com/blog/2025/12/04/dangerous-invitations-russian-threat-actor-spoofs-european-security-events-in-targeted-phishing-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "volexity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a20",
+          "order": 3,
+          "title": "RESEARCHERS SPOT 700% INCREASE IN HYPERVISOR RANSOMWARE ATTACKS",
+          "summary": "Security researchers report a 700% increase in ransomware attacks targeting hypervisors like Hyper-V and VMWare ESXi, with groups such as Akira leading the trend. Hypervisors often lack endpoint-style protections and offer attackers a control point over numerous VMs simultaneously. Attacks abuse built‑in tools to encrypt VM storage and misuse management utilities to disable protections.",
+          "url": "https://www.theregister.com/2025/12/09/hypervisor_ransomware_attacks_increasing/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-10:a21",
+          "order": 1,
+          "title": "SIEM PRICING SUCKS. IT DOESN'T HAVE TO",
+          "summary": "With Blumira, you get FLAT-RATE, UNLIMITED INGESTION PRICING based on employee count, not data volume. Whether your team generates 100GB or",
+          "url": "https://www.blumira.com/siem?mrls=Paid_Ads&mrsp1=tldr&mrsp2=siem&utm_source=Paid_Ads&utm_mediuum=tldr&utm_campaign=siem",
+          "reading_time_minutes": null,
+          "source_domain": "blumira.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a21",
+          "order": 2,
+          "title": "10TB of logs, your price stays the same. Get a demo",
+          "summary": "",
+          "url": "https://www.blumira.com/siem?mrls=Paid_Ads&mrsp1=tldr&mrsp2=siem&utm_source=Paid_Ads&utm_mediuum=tldr&utm_campaign=siem",
+          "reading_time_minutes": null,
+          "source_domain": "blumira.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a22",
+          "order": 3,
+          "title": "FINCEN SAYS RANSOMWARE GANGS EXTORTED OVER $2.1B FROM 2022 TO 2024",
+          "summary": "FinCEN reported $2.1 billion in ransomware payments across 4,194 incidents from 2022-2024, with 2024 showing a significant drop to $734 million following law enforcement disruptions of ALPHV/BlackCat and LockBit operations.",
+          "url": "https://www.bleepingcomputer.com/news/security/fincen-says-ransomware-gangs-extorted-over-21b-from-2022-to-2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a23",
+          "order": 4,
+          "title": "GEMINI ENTERPRISE NO-CLICK FLAW EXPOSES SENSITIVE DATA",
+          "summary": "Google patched a Gemini Enterprise weakness that let attackers hide prompt-injection instructions inside shared Docs, Calendar events, or emails.",
+          "url": "https://links.tldrnewsletter.com/wQdUX8",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-10:a24",
+          "order": 5,
+          "title": "US POSTS $10 MILLION BOUNTY FOR IRANIAN HACKERS",
+          "summary": "The US is offering up to $10 million for information on two key figures in the Iranian state-linked hacking outfit now called Shahid Shushtari, previously known by several front-company names.",
+          "url": "https://www.securityweek.com/us-posts-10-million-bounty-for-iranian-hackers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-20",
+  "source_path": "TLDR InfoSec/article_20-01-2026.md",
+  "source_content_hash": "sha256:6e2bca564c654e86ccc5be008428c720f5832eeb679b2b2fbb7c3f007743f15d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-20",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-20:a04",
+          "order": 1,
+          "title": "NORTH KOREA-LINKED HACKERS POSE AS HUMAN RIGHTS ACTIVISTS",
+          "summary": "South Korean cybersecurity firm Genians has flagged a new APT campaign led by the North Korean Konni hacking cluster. The attackers are targeting victims with spearphishing emails posing as North Korean human rights activists and South Korean financial institutions. The attackers use common click-tracking services to obfuscate the redirect links used to deliver malware.",
+          "url": "https://www.upi.com/Top_News/World-News/2026/01/19/North-Korea-hackers-Konni-spear-phishing-APT-Genians/5761768807686/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "upi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a05",
+          "order": 2,
+          "title": "MANY BLUETOOTH DEVICES WITH GOOGLE FAST PAIR VULNERABLE TO WHISPERPAIR ATTACK",
+          "summary": "Belgian security experts have identified a new flaw in Bluetooth devices using Google's Fast Pair. This vulnerability enables attackers to take control of devices to manage audio, track location, or listen to microphone audio. The issue occurs because devices accept Fast Pair connections even outside pairing mode. An attacker can hijack a device in about 10 seconds from a distance of up to 14 meters.",
+          "url": "https://arstechnica.com/gadgets/2026/01/researchers-reveal-whisperpair-attack-to-eavesdrop-on-google-fast-pair-headphones/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a06",
+          "order": 3,
+          "title": "ALL YOUR OPENCODES BELONG TO US",
+          "summary": "OpenCode versions before v1.1.10 contained a critical RCE vulnerability via an unauthenticated HTTP server that exposed endpoints for arbitrary shell command execution, interactive terminal session creation, and arbitrary file reads. The vulnerability also enabled prompt injection into the LLM's context window, creating a secondary attack vector to manipulate the AI agent into exfiltrating data or performing malicious actions. Thousands of developers' machines were exposed with near-zero sandboxing, meaning agents had full access to SSH keys, cloud credentials, and browser cookies, with no audit trail of potential compromise.",
+          "url": "https://johncodes.com/archive/2026/01-18-all-your-opencodes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "johncodes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-20:a07",
+          "order": 1,
+          "title": "SERVICENOW BODYSNATCHER FLAW HIGHLIGHTS RISKS OF RUSHED AI INTEGRATIONS",
+          "summary": "BodySnatcher is a critical vulnerability in ServiceNow's Now Assist AI Agents and Virtual Agent API that allows unauthenticated attackers to execute agentic workflows as any user by exploiting weak authentication defaults and auto-linking features—potentially creating backdoor admin accounts. ServiceNow patched hosted instances in late October (Now Assist AI Agents 5.1.18/5.2.19+ and Virtual Agent API 3.15.2/4.0.4+), but the underlying misconfigurations may persist in custom code and third-party integrations. Organizations should enforce MFA with proper validation scripts for Virtual Agent API providers, enable AI steward approval in AI Control Tower, and regularly audit and disable unused AI agents.",
+          "url": "https://www.csoonline.com/article/4118264/servicenow-bodysnatcher-flaw-highlights-risks-of-rushed-ai-integrations.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a08",
+          "order": 2,
+          "title": "KUBERNETES V1.35: RESTRICTING EXECUTABLES INVOKED BY KUBECONFIGS VIA EXEC PLUGIN ALLOWLIST ADDED TO KUBERC",
+          "summary": "kubeconfigs can run any executable via the configured exec plugin, which is used to obtain credentials. Kubernetes v1.35 adds two new fields, credentialPluginPolicy and credentialPluginAllowlist, which can be used to restrict the executables that are available to kubectl for obtaining credentials. Currently, the only supported attribute for the allow list is `name` (for an executable name or path), but the SIG is looking to add further support, such as checksums, in the future.",
+          "url": "https://kubernetes.io/blog/2026/01/09/kubernetes-v1-35-kuberc-credential-plugin-allowlist/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a09",
+          "order": 3,
+          "title": "HOW A HACKING CAMPAIGN TARGETED HIGH-PROFILE GMAIL AND WHATSAPP USERS ACROSS THE MIDDLE EAST",
+          "summary": "TechCrunch has received a sample of a phishing link that is being sent to those connected to “Iran-related activities” from a UK-based Iranian activist. The initial contact is sent to the victim via WhatsApp and contains a phishing link that directs them to a malicious site that attempts to steal the victim's Gmail credentials, hijack the victim's WhatsApp account, monitor the victim's location, and capture audio and video. The attackers use the DuckDNS dynamic DNS provider to mask their links.",
+          "url": "https://techcrunch.com/2026/01/16/how-a-hacking-campaign-targeted-high-profile-gmail-and-whatsapp-users-across-the-middle-east/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-20:a10",
+          "order": 1,
+          "title": "YOUR CNAPP DETECTS. TURBOT PREVENTS.",
+          "summary": "CNAPPs provide visibility into cloud risks but rely on manual remediation after deployment. Pair them with preventive controls and shift from reactive to proactive. Turbot Guardrails [11] doesn't just scan and alert. It blocks misconfigurations in build, at the cloud provider API, and auto-remediates drift in runtime, preventing issues",
+          "url": "https://fandf.co/4qeVDRM?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a11",
+          "order": 2,
+          "title": "regardless of how they're introduced. Learn more.",
+          "summary": "",
+          "url": "https://fandf.co/4qeVDRM",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a12",
+          "order": 3,
+          "title": "COLOG",
+          "summary": "CoLog is a unified framework for detecting point and collective anomalies in operating system logs via collaborative transformers.",
+          "url": "https://github.com/NasirzadehMoh/CoLog?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a13",
+          "order": 4,
+          "title": "AGENTIC THREAT HUNTING FRAMEWORK",
+          "summary": "The Agentic Threat Hunting Framework (ATHF) provides a memory and automation layer for threat-hunting programs. It can integrate with any threat-hunting methodology, making existing programs AI-ready.",
+          "url": "https://github.com/Nebulock-Inc/agentic-threat-hunting-framework?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a14",
+          "order": 5,
+          "title": "HEIMDALL",
+          "summary": "Heimdall is an AWS security scanner that discovers privilege escalation paths by detecting 50+ IAM privesc patterns, analyzing 85+ attack chains with MITRE ATT&CK mapping, and scanning 10 AWS services for cross-service escalation vectors. The tool includes a Terraform engine for shift-left security that identifies IAM attack paths in infrastructure-as-code before deployment, differentiating it from static config scanners like tfsec or checkov. Features include an interactive TUI, one-command dashboard, multi-hop path detection through role chains, and SARIF export for GitHub Security integration.",
+          "url": "https://github.com/DenizParlak/heimdall?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-20:a15",
+          "order": 1,
+          "title": "AWS ENDS SSE-C ENCRYPTION, AND A RANSOMWARE VECTOR",
+          "summary": "AWS will end support for AWS SSE-C as an encryption option for S3, following its discovery in ransomware campaigns. SSE-C was a rarely used encryption method for S3 that allowed customers to supply an encryption key for use in S3 API requests. This was useful for ransomware operators because AWS never had access to the key, and it was quieter than alternative methods like KMS. Organizations can use KMS with customer-managed keys (CMK) or client-side encryption to replace the functionality.",
+          "url": "https://cloudsecurityalliance.org/blog/2026/01/05/aws-ends-sse-c-encryption-and-a-ransomware-vector",
+          "reading_time_minutes": 3,
+          "source_domain": "cloudsecurityalliance.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a16",
+          "order": 2,
+          "title": "BLINK AND YOU'LL MISS THEM: 6-DAY CERTIFICATES ARE HERE!",
+          "summary": "Let's Encrypt has made 6-day TLS certificates publicly available through its short-lived certificate profile, well ahead of the 2029 industry mandate that reduces maximum validity to 47 days. Google Trust Services also offers short-lived certificates with configurable validity periods as short as a single day. Organizations already using ACME clients for automation can adopt these shorter validity periods with minimal operational changes, since the increased renewal frequency is handled automatically.",
+          "url": "https://scotthelme.co.uk/blink-and-youll-miss-them-6-day-certificates-are-here/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "scotthelme.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a17",
+          "order": 3,
+          "title": "INGRAM MICRO ADMITS SUMMER RANSOMWARE RAID EXPOSED THOUSANDS OF STAFF RECORDS",
+          "summary": "Ingram Micro disclosed that the SafePay ransomware group's July 2025 attack compromised the personal data of 42,521 employees and job applicants, including names, identity document numbers (passports, driver's licenses, and SSNs), and employment evaluations. The attackers claimed to have stolen 3.5 TB of data, and the incident forced system shutdowns that prevented MSPs from managing customer services and sent some regional staff home. Customers criticized the distributor's poor communication during the incident, with some unable to locate attack updates without external assistance.",
+          "url": "https://www.theregister.com/2026/01/19/ingram_micro_ransomware_affects/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-20:a18",
+          "order": 1,
+          "title": "AGENTIC BROWSER SECURITY: 2025 YEAR-END REVIEW",
+          "summary": "Wiz reviewed 2025's surge in agentic browser adoption alongside numerous prompt-injection vulnerabilities.",
+          "url": "https://www.wiz.io/blog/agentic-browser-security-2025-year-end-review?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a19",
+          "order": 2,
+          "title": "MALICIOUS CHROME EXTENSION CRASHES BROWSER IN CLICKFIX VARIANT 'CRASHFIX'",
+          "summary": "A malicious Chrome extension called NexShield impersonates uBlock Origin Lite and crashes the browser to display fake security warnings that trick users into running PowerShell commands, deploying the ModeloRAT trojan on corporate systems.",
+          "url": "https://links.tldrnewsletter.com/YR5JrJ",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-20:a20",
+          "order": 3,
+          "title": "GO 1.25.6 AND 1.24.12 PATCH CRITICAL VULNERABILITIES LEAD TO DOS AND MEMORY EXHAUSTION RISKS",
+          "summary": "Go has released emergency patches addressing six security flaws, including DoS vectors in archive/zip and net/http, arbitrary code execution via cmd/go's CgoPkgConfig and VCS toolchain handling, and TLS session key leakage issues.",
+          "url": "https://cybersecuritynews.com/go-1-25-6-and-1-24-12-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

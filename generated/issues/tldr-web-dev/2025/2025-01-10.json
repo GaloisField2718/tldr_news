@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-01-10",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-01-10",
+  "source_path": "TLDR Web Dev/article_10-01-2025.md",
+  "source_content_hash": "sha256:fee4db99ca8d26464cf31bea2c4ad1dbde48c270c3987a68bbc1be9d2cc60f09",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-01-10",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-10:a04",
+          "order": 1,
+          "title": "ACCESSIBILITY ESSENTIALS EVERY FRONT-END DEVELOPER SHOULD KNOW",
+          "summary": "Following accessibility best practices improves the user experience for everyone, not just those with disabilities. Some key principles include using semantic HTML, correctly structuring forms with labels (avoiding placeholders), writing descriptive alt text for images, and having smooth keyboard navigation with focus management in modals. This post covers styling considerations like focus indicators and how to use ARIA attributes.",
+          "url": "https://martijnhols.nl/blog/accessibility-essentials-every-front-end-developer-should-know?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "martijnhols.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a05",
+          "order": 2,
+          "title": "SQL NULLS ARE WEIRD!",
+          "summary": "SQL's handling of NULL values is counterintuitive: the `=` operator doesn't consider two NULLs equal, returning NULL instead, while the `IS` operator correctly identifies them as identical. This behavior affects unique constraints - multiple NULLs can exist in a uniquely constrained column because each NULL is treated as distinct. These two methods help to enforce uniqueness with NULLs: creating a generated column that replaces NULLs with a default value and using a partial index that only enforces uniqueness when a specific column is NULL.",
+          "url": "https://jirevwe.github.io/sql-nulls-are-weird.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "jirevwe.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a06",
+          "order": 3,
+          "title": "HOW PINTEREST STORES AND TRANSFERS HUNDREDS OF TERABYTES OF DATA DAILY",
+          "summary": "Pinterest's engineering team developed a Change Data Capture (CDC) system to manage the hundreds of terabytes of data its platform processes daily. This system, built using Debezium, addresses the challenges of real-time data processing for personalized recommendations and fraud detection. The architecture includes a control plane for managing connectors and a data plane that uses Kafka to transfer change events from distributed databases.",
+          "url": "https://blog.quastor.org/p/how-pinterest-stores-and-transfers-hundreds-of-terabytes-of-data-daily?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.quastor.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-10:a07",
+          "order": 1,
+          "title": "OUR FRONTEND IS A TOTAL MESS, AND I'M LOSING MY MIND (REDDIT THREAD)",
+          "summary": "A React developer vents about a poorly-built enterprise application riddled with technical debt. The application uses outdated patterns like React class components and Redux excessively, resulting in massive, unmaintainable code. Multiple UI libraries are haphazardly combined, and a reliance on JSON schemas for everything, including layout and event handling, makes the application incredibly complex.",
+          "url": "https://links.tldrnewsletter.com/DlSU61",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a08",
+          "order": 2,
+          "title": "GO IS A WELL-DESIGNED LANGUAGE, ACTUALLY",
+          "summary": "Go is a well-designed language. Google's goal was to create a language that enabled efficient development and maintenance of large-scale, concurrent server code by programmers of varying skill levels. While there are criticisms about its filesystem API, error handling, and foreign function interface (FFI), these were deliberate trade-offs.",
+          "url": "https://mattjhall.co.uk/posts/go-is-well-designed-actually.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "mattjhall.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a09",
+          "order": 3,
+          "title": "HTML IS ACTUALLY A PROGRAMMING LANGUAGE. FIGHT ME",
+          "summary": "",
+          "url": "https://www.wired.com/story/html-is-actually-a-programming-language-fight-me/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "wired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-10:a10",
+          "order": 1,
+          "title": "CSS VARIABLES EDITOR",
+          "summary": "The CSS Variables Editor browser extension allows users to manage and test CSS variables, including AI-generated palettes and accessibility checks, directly within their web app.",
+          "url": "https://www.cssvariables.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "cssvariables.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a11",
+          "order": 2,
+          "title": "JSESC",
+          "summary": "Jsesc is a JavaScript library that escapes data to create short, ASCII-safe, stringified representations suitable for JavaScript strings. It offers various options for customization and handling different data types, including BigInt and ES6 data structures.",
+          "url": "https://github.com/mathiasbynens/jsesc?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a12",
+          "order": 3,
+          "title": "TELEVISION",
+          "summary": "Television is a fast, fuzzy-finding terminal user interface written in Rust that allows users to search through various data sources (files, Git repositories, etc.) using a customizable configuration.",
+          "url": "https://github.com/alexpasmantier/television?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-10:a13",
+          "order": 1,
+          "title": "WHAT HAPPENED TO LIGHTWEIGHT DESKTOP APPS? HISTORY OF ELECTRON'S RISE",
+          "summary": "Electron is a framework created by GitHub for its Atom editor. It is used widely today for cross-platform desktop app development, powering popular applications like Slack and VS Code. Electron's ease of use and automatic updates led to widespread adoption. The convenience and speed of development often outweigh the performance issues it has for many teams.",
+          "url": "https://smalldiffs.gmfoster.com/p/what-happened-to-lightweight-desktop?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "smalldiffs.gmfoster.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a14",
+          "order": 2,
+          "title": "MUSINGS ON TRACING IN PYPY",
+          "summary": "PyPy initially struggled with method-based JITs (just-in-time compilers) but found success with a tracing approach, which was great for a complex, dynamically typed target language (Python). While tracing offers benefits like aggressive inlining and simplified optimizations, it also suffers from performance cliffs and complexities in handling certain control flows.",
+          "url": "https://pypy.org/posts/2025/01/musings-tracing.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "pypy.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-10:a15",
+          "order": 1,
+          "title": "ANTIREZ ON TECHNICAL BLOGGING",
+          "summary": "Redis creator Salvatore Sanfilippo blogs often, finding that concise, insightful writing that distills personal experience is useful to both read and produce.",
+          "url": "https://writethatblog.substack.com/p/antirez-on-technical-blogging?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "writethatblog.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a16",
+          "order": 2,
+          "title": "GIT OF THESEUS",
+          "summary": "Git of Theseus is a Python tool that analyzes Git repositories to create visualizations showing code evolution over time, including survival curves, stack plots of code contributions by year and author, and other statistics.",
+          "url": "https://github.com/erikbern/git-of-theseus?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-10:a17",
+          "order": 3,
+          "title": "DON'T MISS THE PRODUCT FOR THE ARTIFACTS",
+          "summary": "Focus on creating a product that solves user problems, not on perfecting the design tools or assets used to create it.",
+          "url": "https://blog.jim-nielsen.com/2025/dont-miss-the-product-for-the-artifacts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

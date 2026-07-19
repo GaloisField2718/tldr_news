@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-23",
+  "source_path": "TLDR InfoSec/article_23-01-2026.md",
+  "source_content_hash": "sha256:a7eb3e593b43e8c3af8b8a1e01cd7060cb770e5cb90f36140f0a2b2539c1d490",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-23",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-23:a04",
+          "order": 1,
+          "title": "HIBP ADDS ALLEGED UNDER ARMOUR DATA BREACH IMPACTING 72 MILLION EMAILS",
+          "summary": "Have I Been Pwned added an alleged Under Armour breach attributed to the Everest ransomware group that exposed 72.7 million unique email addresses along with names, dates of birth, physical addresses, and purchase history from a 343GB exfiltration in November. The data was published after Under Armour reportedly did not pay the ransom, with the dataset now circulating on underground forums and indexed by DeHashed. Affected users should monitor for targeted phishing impersonating order-related communications and change reused passwords.",
+          "url": "https://cyberinsider.com/hibp-adds-alleged-under-armour-data-breach-impacting-72-million-emails/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cyberinsider.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a05",
+          "order": 2,
+          "title": "CISCO FIXES UNIFIED COMMUNICATIONS RCE ZERO-DAY EXPLOITED IN ATTACKS",
+          "summary": "Cisco has announced a new vulnerability impacting United Communications, Cisco Unity Connection, and Webex Calling Dedicated Instance. The vulnerability is due to improper validation of user-supplied input in HTTP requests that could allow an attacker to obtain access to the underlying system via a sequence of specially crafted HTTP requests. The patches are version-specific, so admins should check the README before applying patches.",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-fixes-unified-communications-rce-zero-day-exploited-in-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a06",
+          "order": 3,
+          "title": "HACKERS EXPLOIT SECURITY TESTING APPS TO BREACH FORTUNE 500 FIRMS",
+          "summary": "Automated pentest company Pentera discovered nearly 2K instances of exposed security testing apps, such as OWASP Juice Shop and DVWA, publicly exposed in the networks of Fortune 500 companies. Many of these web apps are used for security training and are deployed in cloud environments with overly permissive IAM roles and default credentials. Pentera found evidence that 20% of exposed DVWA apps had malicious artifacts such as webshells and cryptominers deployed.",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-security-testing-apps-to-breach-fortune-500-firms/amp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-23:a07",
+          "order": 1,
+          "title": "IS THAT ALLOWED? AUTHENTICATION AND AUTHORIZATION IN MODEL CONTEXT PROTOCOL",
+          "summary": "Remote MCP servers should implement the OAuth 2.1 Authorization Code grant with PKCE for client authentication, leveraging protected resource metadata (RFC 9728) and authorization server discovery (RFC 8414) for the handshake. The 2025-11-25 MCP specification introduces step-up authorization for scope negotiation and recommends Token Exchange for downstream service authentication, while explicitly prohibiting token passthrough. Organizations deploying MCP servers should design granular scopes with clear read/write/delete separation, ensure short-lived access tokens, and implement proper validation, including checks for issuer, audience, and expiration.",
+          "url": "https://stackoverflow.blog/2026/01/21/is-that-allowed-authentication-and-authorization-in-model-context-protocol/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a08",
+          "order": 2,
+          "title": "VULNERABILITY PRIORITIZATION BEYOND THE CVSS NUMBER",
+          "summary": "CVSS scores alone fail to capture how vulnerabilities propagate through interconnected systems. Log4Shell is an example in which widespread nested dependencies, not just technical severity-driven impact, are at play. The Unified Linkage Model (ULM) framework evaluates vulnerabilities based on adjacency, inheritance, and trust relationships to identify \"blast radius multipliers,\" such as SSO services or CI/CD pipelines. Security teams should map system dependencies and prioritize patching vulnerabilities near identity systems and shared services that can amplify downstream risk.",
+          "url": "https://www.csoonline.com/article/4119130/vulnerability-prioritization-beyond-the-cvss-number.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a09",
+          "order": 3,
+          "title": "KEEPING SECRETS OUT OF LOGS",
+          "summary": "Secrets often end up in logs from a variety of sources, such as forgotten debugging lines, excessive error logging, and telemetry. Some fixes include architecting to reduce logging sinks, using domain primitives to abstract secrets, using read-once objects, using log preprocessors, adding unit tests, and implementing taint tracking. To prepare for a logging overhaul, teams should first lay the foundations of the initiative, understand the data flow, protect data at choke points, apply defense-in-depth, and plan for response and recovery in the event of leaked secrets.",
+          "url": "https://allan.reyes.sh/posts/keeping-secrets-out-of-logs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "allan.reyes.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-23:a10",
+          "order": 1,
+          "title": "MOST ORGS ARE (STILL) GETTING CLOUD SECURITY WRONG",
+          "summary": "59% of AWS IAM users have access keys older than one year, and common cloud misconfigurations continue to create easy breach paths. On January 27, Datadog is hosting a live webinar [10] to discuss the State of Cloud Security, based on security posture data from thousands",
+          "url": "https://www.datadoghq.com/event/cloudsecurity-livestream/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-cloudsec-livestream-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a10",
+          "order": 2,
+          "title": "of cloud orgs. Join the live discussion + Q&A",
+          "summary": "",
+          "url": "https://www.datadoghq.com/event/cloudsecurity-livestream/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-security-ww-cloudsec-livestream-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a11",
+          "order": 3,
+          "title": "MITRE LAUNCHES NEW SECURITY FRAMEWORK FOR EMBEDDED SYSTEMS",
+          "summary": "The Embedded Systems Threat Matrix (ESTM) 3.0 is an ATT&CK-inspired framework that categorizes attack tactics and techniques specific to hardware and firmware environments. The framework supports cyber threat modeling and attack path analysis for industries including energy, robotics, industrial controls, transportation, and healthcare, and integrates with the EMB3D Threat Model. Security teams protecting embedded systems should evaluate ESTM to identify vulnerabilities in their embedded architectures.",
+          "url": "https://links.tldrnewsletter.com/7Pd831",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a12",
+          "order": 4,
+          "title": "PATHFINDING.CLOUD (WEB APP)",
+          "summary": "Pathfinding.cloud is a web app from DataDog that collects tools and guides to detect IAM-based privilege-escalation attacks in AWS.",
+          "url": "https://pathfinding.cloud/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pathfinding.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a13",
+          "order": 5,
+          "title": "APPCONTROL MANAGER",
+          "summary": "AppControl Manager provides a GUI to manage App Control and Code Integrity on your local or remote devices.",
+          "url": "https://github.com/HotCakeX/Harden-Windows-Security/wiki/AppControl-Manager?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-23:a14",
+          "order": 1,
+          "title": "DON'T TRIP[WIRE] YOURSELF: TESTING ERROR RECOVERY IN ZIG",
+          "summary": "Tripwire is a Zig library for injecting failures at named points in code to test `errdefer` error handling paths, which are typically untested and a consistent source of resource leaks and memory corruption. The library uses comptime to completely optimize away in non-test builds, producing zero runtime cost in production. Integration into Ghostty immediately uncovered approximately six `errdefer` bugs that had never manifested in production.",
+          "url": "https://mitchellh.com/writing/tripwire?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "mitchellh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a15",
+          "order": 2,
+          "title": "VULNCHECK STATE OF EXPLOITATION 2026",
+          "summary": "VulnCheck identified 884 Known Exploited Vulnerabilities in 2025, with 28.96% exploited on or before CVE publication, up from 23.6% in 2024, highlighting the continued prevalence of zero-day and rapid n-day exploitation. Network edge devices such as firewalls, VPNs, and proxies were the most targeted technologies, followed by content management systems and open source software. Organizations should prioritize the timely remediation of newly disclosed vulnerabilities affecting internet-facing infrastructure while maintaining visibility beyond CISA KEV through additional exploitation intelligence sources.",
+          "url": "https://www.vulncheck.com/blog/state-of-exploitation-2026?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "vulncheck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a16",
+          "order": 3,
+          "title": "THE PSYCHOLOGY OF BAD CODE",
+          "summary": "This post is the first part of a series that applies behavioral economics to developer processes. Developers want to write secure code but are often overwhelmed by competing priorities. Security teams should design technical nudges, shift incentives, and push for cultural changes to help developers write secure code.",
+          "url": "https://shehackspurple.ca/2025/11/27/the-psychology-of-bad-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "shehackspurple.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-23:a17",
+          "order": 1,
+          "title": "GOOGLE ROLLS OUT AI DETECTION AND RANSOMWARE DEFENSES FOR SCHOOLS",
+          "summary": "Google expanded its SecOps data connector to Education Plus and Education Standard tiers, adding AI detection tools and ransomware defenses amid reports that 82% of K-12 organizations experienced cyber threats in the past 18 months.",
+          "url": "https://winbuzzer.com/2026/01/22/google-rolls-out-ai-detection-and-ransomware-defenses-for-schools-xcxwbn/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "winbuzzer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a18",
+          "order": 2,
+          "title": "CLAUDE FINDS 353 ZERO-DAYS ON PACKAGIST",
+          "summary": "Sansec's AI-powered security pipeline using Claude Opus 4.5 discovered 353 confirmed zero-day vulnerabilities across 5,000 Magento extensions on Packagist, including RCE, SQL injection, and authentication bypass flaws affecting packages with 5.9 million total downloads.",
+          "url": "https://sansec.io/research/claude-finds-353-zero-days-packagist?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "sansec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-23:a19",
+          "order": 3,
+          "title": "PWN2OWN AUTOMOTIVE 2026 - DAY TWO RESULTS",
+          "summary": "Day Two of Pwn2Own Automotive 2026 awarded $439,250 for 29 unique zero-day vulnerabilities across EV chargers and in-vehicle infotainment systems, bringing the event total to $955,750 and 66 vulnerabilities.",
+          "url": "https://www.zerodayinitiative.com/blog/2026/1/22/pwn2own-automotive-2026-day-two-results?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "zerodayinitiative.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-11-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-11-06",
+  "source_path": "TLDR InfoSec/article_06-11-2025.md",
+  "source_content_hash": "sha256:5288f1d9d9bcda0ff70171a51ab692db03d95d59c30d62165fef24eab6319acd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-11-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Threat actors don't need to break in anymore—they just log in. The Huntress Identity Security Assessment [4] shows you where. Start a Managed ITDR trial [4] and you'll get a FREE customized report for your Microsoft 365 tenant, INSTANTLY.",
+          "url": "https://www.huntress.com/itdr-free-trial?utm_source=tldr&utm_medium=email&utm_campaign=cy25-11-camp-platform-global-prospect-iis-x-tldr_newsletter_1106&hnt=8ppdtebukomo",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a04",
+          "order": 2,
+          "title": "👉 Start your free trial + access the free assessment",
+          "summary": "",
+          "url": "https://www.huntress.com/itdr-free-trial?utm_source=tldr&utm_medium=email&utm_campaign=cy25-11-camp-platform-global-prospect-iis-x-tldr_newsletter_1106&hnt=8ppdtebukomo",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a05",
+          "order": 1,
+          "title": "RESEARCHERS WARN OF FLAWS THAT ALLOW MANIPULATION OF MICROSOFT TEAMS MESSAGES",
+          "summary": "Researchers from Check Point have discovered four vulnerabilities that allow attackers to manipulate Teams messages. The vulnerabilities could allow attackers to edit Teams messages without leaving the “edited” label, alter message notifications so they appear to be from a different sender, change the display name inside private chats, and alter caller identities in video and audio calls.",
+          "url": "https://www.cybersecuritydive.com/news/researchers-flaws-manipulation-microsoft-teams-messages/804636/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritydive.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a06",
+          "order": 2,
+          "title": "CRITICAL REACT NATIVE CLI FLAW EXPOSED MILLIONS OF DEVELOPERS TO REMOTE ATTACKS",
+          "summary": "A severe vulnerability in the widely used @react-native-community/cli npm package posed a high risk, allowing remote attackers to execute malicious OS commands on developers' machines running the React Native development server. Affecting millions and scoring 9.8 in severity, the flaw was patched in version 20.0.0.",
+          "url": "https://thehackernews.com/2025/11/critical-react-native-cli-flaw-exposed.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a07",
+          "order": 3,
+          "title": "GOOGLE UNCOVERS PROMPTFLUX MALWARE THAT USES GEMINI AI TO REWRITE ITS CODE HOURLY",
+          "summary": "Google identified PROMPTFLUX, an experimental malware, using a hardcoded Gemini API key to query Google's LLM with prompts for code obfuscation and AV evasion. It was able to self-modify and rewrite its source code to evade detection. Believed to be in testing by a financially-motivated actor, the malware includes a \"Thinking Robot' that logs AI responses, persists via Windows Startup, and attempts propagation through drives and network shares, though it currently has no real attack capabilities. Security teams should monitor LLM-assisted malware like other variants, implement API key rotation, and be aware of threat actors bypassing AI safety via social engineering.",
+          "url": "https://thehackernews.com/2025/11/google-uncovers-promptflux-malware-that.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a08",
+          "order": 1,
+          "title": "OAUTH DEVICE CODE PHISHING: AZURE VS. GOOGLE COMPARED",
+          "summary": "Device code phishing exploits OAuth 2.0's legitimate device authorization flow to steal access tokens by tricking victims into authenticating attacker-generated device codes, with Microsoft Azure allowing attackers to request powerful scopes (including Primary Refresh Tokens) through undocumented \"Family of Client IDs\" while Google severely restricts device flow to only YouTube and Google Drive scopes. Azure's implementation enables attackers to use legitimate Microsoft URLs and APIs throughout the entire attack chain without requiring client authentication, making phishing campaigns highly effective at bypassing MFA and gaining initial access with tokens scoped to Graph API, Intune enrollment, or other sensitive resources. Security teams should implement Conditional Access policies that restrict device code authentication, monitor suspicious device code flow usage patterns in Azure sign-in logs, educate users about the risks of entering codes from unsolicited communications, and consider Google's restrictive scope model as a defensive blueprint for limiting OAuth attack surface.",
+          "url": "https://www.bleepingcomputer.com/news/security/oauth-device-code-phishing-azure-vs-google-compared/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a09",
+          "order": 2,
+          "title": "BEDROCK'N'ROLL: ANNOYING TRUST RELATIONSHIPS IN BEDROCK SERVICE ROLES",
+          "summary": "Amazon Bedrock provides a wizard for creating execution roles using the Agent Builder UI. The trust policy on the created role allows any agent in the account to assume the role by default via a wildcard aws:SourceArn condition. Users should ensure that this condition is scoped to their specific agent.",
+          "url": "https://www.plerion.com/blog/trust-relationships-in-bedrock-service-roles?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a10",
+          "order": 3,
+          "title": "FIXING THE BLINDSPOT IN ENDPOINT SECURITY",
+          "summary": "Deploying Mobile Device Management (MDM) solutions to developer endpoints often presents complications, as security tools are sometimes not well-suited to developer workflows. This leads to many organizations putting in extensive exemptions for developer endpoints, significantly weakening their security posture. This post advocates for a developer MDM that operates by injecting visibility using existing agents such as Zscaler and CrowdStrike.",
+          "url": "https://pulse.latio.tech/p/developer-mdm?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a11",
+          "order": 1,
+          "title": "HOW COMPLIANCE TEAMS CAN SAVE 15+ HOURS/WEEK WITH AGENTIC AI",
+          "summary": "SOC 2 and ISO 27001 shouldn't eat 40% of your team's time in 2026. Sprinto [11] uses Agentic AI to autonomously collect evidence, monitor risks, and keep you audit-read. Anaconda got compliant with Sprinto and closed a seven-figure deal within weeks. TLDR readers get $1,000 off [11] + an Ultrahuman Ring once you get compliant.",
+          "url": "https://go.sprinto.com/lp-soc-2-newsletter?utm_source=Newsletter&utm_medium=Referral&utm_campaign=TLDRInfosec&utm_term=6thNov",
+          "reading_time_minutes": null,
+          "source_domain": "go.sprinto.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a12",
+          "order": 2,
+          "title": "PERSONAL SECURITY CHECKLIST",
+          "summary": "A compiled checklist of 300+ tips for protecting digital security and privacy.",
+          "url": "https://github.com/Lissy93/personal-security-checklist?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a13",
+          "order": 3,
+          "title": "VEGA (PRODUCT LAUNCH)",
+          "summary": "Vega delivers AI-powered security analytics and operations. It streamlines SOC workflows by analyzing data in place, surfacing critical alerts, and automatically fixing coverage gaps and noisy rules for faster response.",
+          "url": "https://vega.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "vega.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a14",
+          "order": 4,
+          "title": "ACUNETIX (PRODUCT)",
+          "summary": "Acunetix is a comprehensive web application vulnerability scanner that performs in-depth testing of modern, JavaScript-heavy apps, APIs, and traditional web platforms to identify issues such as SQL injection, XSS, and complex logic flaws, all with low false positives through automated verification. It seamlessly integrates into CI/CD pipelines to enable continuous security testing during development and offers compliance reporting for standards such as PCI DSS, HIPAA, GDPR, and OWASP Top 10. Security teams can utilize Acunetix for pre-production assessments, embed it into DevSecOps workflows for early testing, and leverage its API scanning capabilities to secure microservices and GraphQL endpoints that are often missed by traditional scanners.",
+          "url": "https://www.acunetix.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "acunetix.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a15",
+          "order": 1,
+          "title": "PHONE LOCATION DATA OF TOP EU OFFICIALS FOR SALE, REPORT FINDS",
+          "summary": "Journalists discovered that location data from top EU officials was being sold by brokers, making it easy to track officials' movements, even with Europe's strict privacy laws. A leaked dataset revealed precise information on officials' whereabouts and highlighted weak enforcement against brokers.",
+          "url": "https://techcrunch.com/2025/11/04/phone-location-data-of-top-eu-officials-for-sale-report-finds/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a16",
+          "order": 2,
+          "title": "GOOGLE EXPANDS CHROME AUTOFILL TO PASSPORTS AND LICENSES, BUT IS IT SAFE?",
+          "summary": "Google Chrome now supports autofill for sensitive documents like passports and driver's licenses, with encryption and user consent. However, security experts warn that this centralizes critical identity data in a vulnerable location, contradicting cybersecurity advice against storing such info in browsers. Malware like Shuyal Stealer targets browser-stored credentials, and Chrome autofill data isn't stored securely. Security teams should advise against storing sensitive IDs in autofill, enforce policies to restrict this in workplaces, monitor for info-stealer malware, and recommend dedicated password managers with stronger encryption instead of browser storage.",
+          "url": "https://hackread.com/google-chrome-autofill-passports-licenses-safe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a17",
+          "order": 3,
+          "title": "CLOUDFLARE SCRUBS AISURU BOTNET FROM TOP DOMAINS LIST",
+          "summary": "The Aisuru botnet, with hundreds of thousands of compromised IoT devices and 30 Tbps DDoS power, manipulated Cloudflare's domain rankings by switching from Google's 8.8.8.8 DNS to Cloudflare's 1.1.1.1 in October. This caused malicious domains, mainly in the .su TLD, to outrank major companies like Amazon and Google due to massive DNS queries. The incident revealed vulnerabilities in trust-based domain ranking systems, which treat highly-ranked domains as trustworthy, and attackers used mainly US-based compromised devices from ISPs such as AT&T and Verizon. Security teams should monitor DNS connections to the .su TLD, block it if needed, and avoid relying solely on domain popularity for trust, as DNS query volume can be artificially inflated by botnets.",
+          "url": "https://krebsonsecurity.com/2025/11/cloudflare-scrubs-aisuru-botnet-from-top-domains-list/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-11-06:a18",
+          "order": 1,
+          "title": "HOW GARTNER SEES THE PAM MARKET - AND WHY STRONGDM DEBUTED IN THE LATEST MAGIC QUADRANT",
+          "summary": "The market is in flux - with new vendors like StrongDM building platforms that focus on authorization, not just authentication, as the",
+          "url": "https://www.strongdm.com/blog/gartner-magic-quadrant-privileged-access-management?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a19",
+          "order": 2,
+          "title": "primary control plane. Read the blog",
+          "summary": "",
+          "url": "https://www.strongdm.com/blog/gartner-magic-quadrant-privileged-access-management",
+          "reading_time_minutes": null,
+          "source_domain": "strongdm.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a20",
+          "order": 3,
+          "title": "CISA WARNS OF CWP VULNERABILITY EXPLOITED IN THE WILD",
+          "summary": "A newly discovered critical flaw in Control Web Panel (CWP) lets remote attackers execute commands without authentication.",
+          "url": "https://www.securityweek.com/cisa-warns-of-cwp-vulnerability-exploited-in-the-wild/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a21",
+          "order": 4,
+          "title": "EUROPEAN AUTHORITIES DISMANTLE €600 MILLION CRYPTO FRAUD NETWORK IN GLOBAL SWEEP",
+          "summary": "In a major international operation, law enforcement agencies have shut down a vast crypto fraud ring, arresting nine suspects accused of laundering €600 million.",
+          "url": "https://thehackernews.com/2025/11/europol-and-eurojust-dismantle-600.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-11-06:a22",
+          "order": 5,
+          "title": "APPLE ADDRESSES MORE THAN 100 VULNERABILITIES IN SECURITY UPDATES FOR IPHONES, MACS, AND IPADS",
+          "summary": "Apple released unusually large security updates patching 105 vulnerabilities in macOS 26.1 and 56 in iOS/iPadOS 26.1.",
+          "url": "https://cyberscoop.com/apple-security-update-november-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

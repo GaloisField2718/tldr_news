@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2023-11-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2023-11-17",
+  "source_path": "TLDR InfoSec/article_17-11-2023.md",
+  "source_content_hash": "sha256:b9e0bc082ff5b9790e3f39e14a6f2606402fb4b3f2a8bcf94861a4a445853d41",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2023-11-17",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-17:a05",
+          "order": 1,
+          "title": "ZIMBRA 0-DAY USED TO TARGET INTERNATIONAL GOVERNMENT ORGANIZATIONS",
+          "summary": "Google TAG discovered an exploit in the Zimbra email server 0-day (CVE-2023-37580) in the wild. It was used by 4 groups to steal emails, credentials, and tokens even after a public fix was released. This post-disclosure activity shows that delays leave orgs vulnerable. It urges rapid patching and updates to protect against ongoing exploits of known bugs.",
+          "url": "https://blog.google/threat-analysis-group/zimbra-0-day-used-to-target-international-government-organizations/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a06",
+          "order": 2,
+          "title": "ROYAL MAIL’S RECOVERY FROM RANSOMWARE ATTACK WILL COST BUSINESS AT LEAST $12M",
+          "summary": "Royal Mail’s parent company has revealed the infrastructure cost associated with the LockBit attack in January will cost the business £10 million ($12.4 million). The total costs related to the attack are likely to be higher, but no figures have been shared.",
+          "url": "https://www.theregister.com/2023/11/16/royal_mail_recovery_from_ransomware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a07",
+          "order": 3,
+          "title": "WP FASTEST CACHE SQLI EXPOSES 600K VULNERABLE WORDPRESS SITES",
+          "summary": "The is_user_admin function of the WP Fastest Cache plugin extracts the username from cookies to check if a user is an admin. However, the username is not sanitized and thereby can lead to SQL injection. A patched version of the plugin has been released. WPScan will be releasing its proof-of-concept exploit on November 27, 2023.",
+          "url": "https://www.bleepingcomputer.com/news/security/wp-fastest-cache-plugin-bug-exposes-600k-wordpress-sites-to-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-17:a08",
+          "order": 1,
+          "title": "REGO 101: INTRODUCTION TO REGO",
+          "summary": "This blog post series offers a gentle introduction to Rego, the policy language from the creators of the Open Policy Agent (OPA) engine. The series goes over basic Rego concepts and how to get started with OPA, intermediate Rego syntax, and types of values and rules.",
+          "url": "https://snyk.io/blog/introduction-to-rego/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "snyk.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a09",
+          "order": 2,
+          "title": "FBI SHARES TACTICS OF NOTORIOUS SCATTERED SPIDER HACKER COLLECTIVE",
+          "summary": "The FBI and Cybersecurity and Infrastructure Security Agency (CISA) have released an advisory about Scattered Spider, a hacking collective that collaborates with ALPHV/BlackCat ransomware. Scattered Spider uses social engineering tactics and phishing to gain initial network access. It is a network of individuals with different threat actors participating in each attack.",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-shares-tactics-of-notorious-scattered-spider-hacker-collective/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a10",
+          "order": 3,
+          "title": "HOW TO CREATE AN AMI HARDENING PIPELINE AND AUTOMATE UPDATES TO YOUR ECS FLEET",
+          "summary": "Amazon ECS allows for the use of EC2 instances as a container host to increase user control over the ECS environment. This tutorial from AWS walks through the process of setting up an EC2 Image Builder pipeline that begins with an Amazon ECS Optimized AMI and then applies the CIS Docker host benchmarks to the AMI. It then goes through how to use a Lambda step function to update the ECS fleet with the new AMI. The walkthrough includes a CloudFormation stack to deploy the infrastructure automatically.",
+          "url": "https://aws.amazon.com/blogs/security/how-to-create-an-ami-hardening-pipeline-and-automate-updates-to-your-ecs-instance-fleet/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-17:a11",
+          "order": 1,
+          "title": "AIKIDO (PRODUCT LAUNCH)",
+          "summary": "Aikido is an all-in-one solution that brings together multiple aspects of application security in one platform, including SAST, DAST, SCA, and CSPM.",
+          "url": "https://www.aikido.dev/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "aikido.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a12",
+          "order": 2,
+          "title": "AI-EXPLOITS",
+          "summary": "AI Exploits is a collection of exploits and scanning templates for responsibly disclosed vulnerabilities affecting machine learning tools. Each tool has subfolders that contain metasploit modules, nuclei, or CSRF templates.",
+          "url": "https://github.com/protectai/ai-exploits?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a13",
+          "order": 3,
+          "title": "TURBO INTRUDER",
+          "summary": "Turbo Intruder is a Burp Suite extension that allows for sending large numbers of HTTP requests and analyzing the results. It takes a Python script and thus allows for highly configurable payloads and analysis. Turbo Intruder can also be used to enable high-speed Intruder usage on Burp Community edition.",
+          "url": "https://github.com/PortSwigger/turbo-intruder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-17:a14",
+          "order": 1,
+          "title": "ADMINISTRATOR OF DARKODE HACKING FORUM SENTENCED TO PRISON",
+          "summary": "Thomas Kennedy McCormick, aka ‘Fubar’, a 30-year-old from Cambridge, Massachusetts, has been sentenced to 18 years in prison for his role in running Darkode. Investigators said Fubar was involved in the distribution of malware, hacking websites, as well as the theft and sale of personally identifiable information, payment cards, and bank account credentials.",
+          "url": "https://www.securityweek.com/administrator-of-darkode-hacking-forum-sentenced-to-prison/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a15",
+          "order": 2,
+          "title": "DEVELOPERS CAN’T SEEM TO STOP EXPOSING CREDENTIALS IN PUBLICLY ACCESSIBLE CODE",
+          "summary": "Researchers from security firm GitGuardian this week reported finding almost 4,000 unique secrets stashed inside a total of 450,000 projects submitted to PyPI, the official code repository for the Python programming language. Nearly 3,000 projects contained at least one unique secret. Many secrets were leaked more than once, bringing the total number of exposed secrets to almost 57,000.",
+          "url": "https://arstechnica.com/security/2023/11/developers-cant-seem-to-stop-exposing-credentials-in-publicly-accessible-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a16",
+          "order": 3,
+          "title": "THE MIRAI CONFESSIONS",
+          "summary": "An in-depth look at the three young cybercriminals behind the Mirai botnet. While none of the cybercriminals involved fit the mold of traditional cybercriminals, they successfully took down large swaths of the internet.",
+          "url": "https://www.wired.com/story/mirai-untold-story-three-young-hackers-web-killing-monster/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "wired.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2023-11-17:a17",
+          "order": 1,
+          "title": "CISA, FBI, AND MS-ISAC RELEASE ADVISORY ON RHYSIDA RANSOMWARE",
+          "summary": "Rhysida - a ransomware-as-a-service - that has compromised organizations in education, manufacturing, and information technology, has been released by the CISA, FBI, and MS-ISAC as an advisory.",
+          "url": "https://www.cisa.gov/news-events/alerts/2023/11/15/cisa-fbi-and-ms-isac-release-advisory-rhysida-ransomware?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cisa.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a18",
+          "order": 2,
+          "title": "ALPHV FILES SEC COMPLAINT AGAINST MERIDIANLINK FOR NOT DISCLOSING BREACH",
+          "summary": "Following a lack of direct response from MeridianLink, AlphV, who has claimed to have breached Meridian Link, filed a complaint to the SEC alleging that MeridianLink did not disclose a breach of customer data. MeridianLink claims that no production data was accessed.",
+          "url": "https://www.databreaches.net/alphv-files-an-sec-complaint-against-meridianlink-for-not-disclosing-a-breach-to-the-sec/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "databreaches.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2023-11-17:a19",
+          "order": 3,
+          "title": "STATE OF CLOUD SECURITY",
+          "summary": "A report from Datadog analyzing the security posture data from a sample of thousands of organizations using AWS, Azure, or Google Cloud found that many cloud workloads are excessively privileged. Specifically, long-lived credentials, MFA for cloud access, and IMDSv2 are not sufficiently enforced.",
+          "url": "https://www.datadoghq.com/state-of-cloud-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-02-08",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-02-08",
+  "source_path": "TLDR Web Dev/article_08-02-2024.md",
+  "source_content_hash": "sha256:4881bd994b70e8ed8e3fe7473a10f6040d4e0d2a3df1af94e5645ece5b0781f8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-02-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a05",
+          "order": 1,
+          "title": "POST/CON 24 - CLAIM YOUR EARLY-BIRD DISCOUNT",
+          "summary": "POST/CON 24 [5] is the place to be if you’re looking to hear from industry leaders, gain new skills, or engage with the global API community. And there’s a 50% discount if you sign up early [5]!",
+          "url": "https://www.postman.com/postcon/?utm_source=tldr-webdev&utm_medium=email&utm_campaign=q1-newsletter-sponsorships&utm_term=february82024&utm_content=primary-placement",
+          "reading_time_minutes": null,
+          "source_domain": "postman.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a05",
+          "order": 2,
+          "title": "Discount ends 2/13 — save your spot now",
+          "summary": "",
+          "url": "https://www.postman.com/postcon/?utm_source=tldr-webdev&utm_medium=email&utm_campaign=q1-newsletter-sponsorships&utm_term=february82024&utm_content=primary-placement",
+          "reading_time_minutes": null,
+          "source_domain": "postman.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a06",
+          "order": 1,
+          "title": "A SEARCH ENGINE IN 80 LINES OF PYTHON",
+          "summary": "This post walks through how to build a search engine from scratch using Python. The project was motivated by the desire to address the \"Small Website Discoverability Crisis\" and make small websites more visible. The post walks through the key components of the search engine, including the crawler, inverted index, ranker, and interface, providing both theoretical descriptions and practical implementation details. The project is helpful for deepening one’s understanding of search engine mechanisms.",
+          "url": "https://www.alexmolas.com/2024/02/05/a-search-engine-in-80-lines.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 26,
+          "source_domain": "alexmolas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a07",
+          "order": 2,
+          "title": "PG_ANALYTICS: TRANSFORMING POSTGRES INTO A FAST OLAP DATABASE",
+          "summary": "pg_analytics is a Postgres extension that significantly improves the analytical performance of Postgres databases by up to 94 times compared to traditional methods. It addresses the challenges faced by developers dealing with slow query times and poor data compression, offering a drop-in solution within Postgres itself. This post explains the technical workings of pg_analytics, explaining the introduction of deltalake tables and integration with Apache Arrow and Apache DataFusion.",
+          "url": "https://blog.paradedb.com/pages/introducing_analytics?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.paradedb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a08",
+          "order": 3,
+          "title": "HOW TO STREAM FILES FROM NEXT.JS ROUTE HANDLERS",
+          "summary": "We traditionally use a \"public\" folder to serve files in Node.js applications. However, this only works for static assets and doesn’t work for files like profile pictures, private files, or generated files - these files are served from an API and loaded into memory. This isn’t scalable when there are a lot of users. Instead, it’s useful to use a stream to return large files in chunks. This article looks at a couple of ways to achieve this using both Next.js API routes and also the more generic Route handlers.",
+          "url": "https://www.ericburel.tech/blog/nextjs-stream-files",
+          "reading_time_minutes": 10,
+          "source_domain": "ericburel.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a09",
+          "order": 1,
+          "title": "HOW TO GET IN THE FLOW WHILE CODING (AND WHY IT’S IMPORTANT)",
+          "summary": "Many developers have experienced “flow state”: your ideas are flowing, time and space fade away, and the path ahead of you is clear. Achieving flow state is not only great for productivity, but also enhances dopamine and endorphins, resulting in an increased feeling of motivation, thinking ability, and general well-being. To better reach flow state, it’s helpful to optimize your environment, map out your work ahead of time, and find joy in the work that you’re doing.",
+          "url": "https://github.blog/2024-01-22-how-to-get-in-the-flow-while-coding-and-why-its-important/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a10",
+          "order": 2,
+          "title": "WHEN \"LETTING IT CRASH\" IS NOT ENOUGH",
+          "summary": "Once your app gets into an undesirable state, the best thing you can do is reset it and start from a fresh, well-known, and correct state. Erlang’s \"let it crash\" philosophy suggests resetting parts of an application upon failure. While effective, it requires developers to manually track and restore application states. Another approach, \"durable execution,\" allows computation to run uninterrupted by storing minimal data for state reconstruction, making local variables resilient even through restarts.",
+          "url": "https://flawless.dev/essays/when-letting-it-crash-is-not-enough/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "flawless.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a11",
+          "order": 3,
+          "title": "“WHEREVER YOU GET YOUR PODCASTS” IS A RADICAL STATEMENT",
+          "summary": "The phrase \"wherever you find podcasts” highlights a stark contrast between podcasting and closed media platforms like YouTube or TikTok. Podcasting's open format empowers creators to control their content and audience relationships, enabling portability and resisting surveillance-based advertising. There are challenges in podcast economics, but podcasting is a beacon for the open web's renaissance and a model for reclaiming control in online spaces. Podcasting is similar to RSS feeds for blogs and newsletters.",
+          "url": "https://www.anildash.com//2024/02/06/wherever-you-get-podcasts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "anildash.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a12",
+          "order": 1,
+          "title": "SQLITE WEB",
+          "summary": "SQLite Web is a web-based SQLite database browser written in Python. It lets developers add, drop, or edit tables, columns, rows, and indexes. SQLite Web works with both existing SQLite databases or can be used to create new ones. It allows for the import and export of both JSON and CSV files.",
+          "url": "https://github.com/coleifer/sqlite-web?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a13",
+          "order": 2,
+          "title": "CONCRETE.CSS",
+          "summary": "Concrete.css is a simple, classless CSS framework. It offers styling for typography, sections, buttons, images, lists, forms, tables, blockquotes, and progress bars.",
+          "url": "https://concrete.style/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "concrete.style",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a14",
+          "order": 3,
+          "title": "MEOW",
+          "summary": "Meow is a CLI app helper. It can parse arguments, convert flags to camel case, negate flags with “--no-” prefixes, and output helpful descriptions and help text. Meow has no dependencies.",
+          "url": "https://github.com/sindresorhus/meow?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a15",
+          "order": 1,
+          "title": "LESSONS LEARNED FROM PAYMENTS STARTUPS",
+          "summary": "While working at startups and moving fast, it’s important to use existing tools before adding new ones to avoid complexity. Software often changes fast at startups, so optimize software for change and focus on iteration, testing, and implementing a modular monolith approach. Store data in databases for easy querying, utilize decision logs, and employ continuous deployment practices for efficient software delivery.",
+          "url": "https://www.pgrs.net/2024/01/26/lessons-learned-from-payemnts-startups/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "pgrs.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a16",
+          "order": 2,
+          "title": "THE IDEAL PR IS 50 LINES LONG",
+          "summary": "The ideal size for small pull requests (PRs) is around 50 lines long. Smaller PRs are reviewed and merged faster, less likely to be reverted, and attract more review comments per line changed. Data from various repositories suggests that PRs between 25-100 lines offer optimal benefits across speed, review quality, and total code output. Extremely small PRs (under 25 lines) tend to have a higher revert rate, while very large PRs (over 10,000 lines) may receive less engagement and feedback.",
+          "url": "https://graphite.dev/blog/the-ideal-pr-is-50-lines-long?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "graphite.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a17",
+          "order": 3,
+          "title": "NEW LOCALLLM LETS YOU DEVELOP GEN AI APPS LOCALLY, WITHOUT GPUS",
+          "summary": "Google Cloud’s localllm enables developers to utilize LLMs on local CPUs without GPUs. Developers can use quantized models and Cloud Workstations for cheaper LLM usage and better privacy controls compared to online models like GPT-4.",
+          "url": "https://cloud.google.com/blog/products/application-development/new-localllm-lets-you-develop-gen-ai-apps-locally-without-gpus?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-08:a18",
+          "order": 1,
+          "title": "GIT HAS AN AUTO-CORRECT FLAG",
+          "summary": "Git has an auto-correct flag that replaces typos with a suggested corrected command.",
+          "url": "https://www.stefanjudis.com/today-i-learned/git-has-an-auto-correct-flag/?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "stefanjudis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a19",
+          "order": 2,
+          "title": "REACT RESIZABLE PANELS",
+          "summary": "React components for resizable panels, supporting horizontal, vertical, and persistent layouts.",
+          "url": "https://react-resizable-panels.vercel.app/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "react-resizable-panels.vercel.app",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a20",
+          "order": 3,
+          "title": "JQUERY 4.0 BETA",
+          "summary": "jQuery 4.0 beta drops support for IE10 and older, removes deprecated APIs, and is now importable with ES modules.",
+          "url": "https://blog.jquery.com/2024/02/06/jquery-4-0-0-beta/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.jquery.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a21",
+          "order": 4,
+          "title": "LATEST CHATGPT 4 SYSTEM PROMPT",
+          "summary": "The latest ChatGPT-4 system prompt can be used to help you understand and prompt the LLM better.",
+          "url": "https://pastebin.com/vnxJ7kQk?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "pastebin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-08:a22",
+          "order": 5,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-09-19",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-19",
+  "source_path": "TLDR Web Dev/article_19-09-2025.md",
+  "source_content_hash": "sha256:519d0d819b7debe025386b4c992b851119b3ac964d74c8640f0e6cfabf6ba2e8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-19",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-19:a04",
+          "order": 1,
+          "title": "HOW TO TURN CLAUDE CODE INTO A DOMAIN SPECIFIC CODING AGENT",
+          "summary": "LangChain developers experimented with improving Claude Code's ability to work with domain-specific libraries like LangGraph and LangChain, rather than just popular libraries. Their main finding was that providing Claude with high-quality, condensed information in a Claude.md file was more effective than just giving it raw documentation access, as the condensed guide outperformed the MCP documentation tools alone. The best results came from combining both approaches: giving the agent base knowledge through Claude.md while also providing tools to access specific documentation when needed.",
+          "url": "https://blog.langchain.com/how-to-turn-claude-code-into-a-domain-specific-coding-agent?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.langchain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a05",
+          "order": 2,
+          "title": "FETCH STREAMS ARE GREAT, BUT NOT FOR MEASURING UPLOAD/DOWNLOAD PROGRESS",
+          "summary": "While fetch streams are useful for processing data, they shouldn't be used to measure upload/download progress because they give inaccurate results. This is because they measure when data is buffered rather than actually transmitted over the network. For now, XMLHttpRequest is still the best option for progress tracking, though a new fetch observer API is being developed to properly address this gap.",
+          "url": "https://jakearchibald.com/2025/fetch-streams-not-for-progress?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "jakearchibald.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a06",
+          "order": 3,
+          "title": "HOW TO KEEP PACKAGE.JSON UNDER CONTROL",
+          "summary": "This article discusses strategies for managing dependencies in JavaScript projects using Val Town's React application (with an 863MB node_modules directory) as an example. It's recommended to read all dependency source code before installation, analyze package sizes and transitive dependencies, use tools like Knip to remove unused modules, and build knowledge of trusted module authors.",
+          "url": "https://blog.val.town/gardening-dependencies?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.val.town",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-19:a07",
+          "order": 1,
+          "title": "CONFIGURATION FILES ARE USER INTERFACES",
+          "summary": "Configuration files should be treated as user interfaces with a focus on excellent user experience, moving beyond simply choosing a configuration language. The common industry practice of accepting poor configuration experiences is bad, especially because YAML's deceptive simplicity leads to complex maintenance issues. KSON is a new open-source project that is an example of a language designed with user-friendly configuration in mind, with advanced editor support and a focus on human readability.",
+          "url": "https://ochagavia.nl/blog/configuration-files-are-user-interfaces/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "ochagavia.nl",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a08",
+          "order": 2,
+          "title": "WEIRD IN, WEIRD OUT",
+          "summary": "AI tools are actually biased towards a \"WEIRD\" (Western, Educated, Industrialized, Rich, Democratic) perspective, especially American values. This bias can lead to inaccurate results and flawed insights in research conducted in non-WEIRD countries. To mitigate this, researchers should prioritize context-rich methodologies, collaborate closely with local partners, and invest in staff training on cultural awareness.",
+          "url": "https://strat7.com/blogs/weird-in-weird-out/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "strat7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-19:a09",
+          "order": 1,
+          "title": "BUILD UI + BACKEND IN MINUTES",
+          "summary": "Rocket [9] is a vibe solutioning tool that turns a prompt or Figma design into a production-ready web or mobile app in minutes. Skip manual setup and engineering handoffs. First build comes with 1 M free",
+          "url": "https://www.rocket.new/?utm_source=newsletter&utm_medium=TLDRWebdev&utm_campaign=19thSept",
+          "reading_time_minutes": null,
+          "source_domain": "rocket.new",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a09",
+          "order": 2,
+          "title": "tokens so you can get started right away. Get building 🛠️",
+          "summary": "",
+          "url": "https://www.rocket.new/?utm_source=newsletter&utm_medium=TLDRWebdev&utm_campaign=19thSept",
+          "reading_time_minutes": null,
+          "source_domain": "rocket.new",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a10",
+          "order": 3,
+          "title": "DEEP CHAT",
+          "summary": "Deep Chat is a customizable AI chat component that can be added to websites with a single line of code. It has support for file sharing, webcam access, speech communication, markdown support, and integration with popular AI APIs like OpenAI and Hugging Face.",
+          "url": "https://github.com/OvidijusParsiunas/deep-chat?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a11",
+          "order": 4,
+          "title": "ANNOUNCING TLDRAW SDK 4.0",
+          "summary": "tldraw SDK 4.0 is a TypeScript library for building infinite canvas apps. The new version includes a CLI tool, `npm create tldraw`, with starter kits like agent, workflow, and multiplayer options.",
+          "url": "https://tldraw.dev/blog/tldraw-sdk-4-0?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "tldraw.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-19:a12",
+          "order": 1,
+          "title": "SLACK IS EXTORTING US WITH A $195K/YR BILL INCREASE",
+          "summary": "Hack Club, a nonprofit that provides coding education to teens, had a sudden $195k/year bill increase from Slack, which threatened to deactivate its workspace and erase its message history. This forced the nonprofit to scramble to migrate its communications to Mattermost. After the issue gained traction online, Slack's CEO contacted Hack Club and offered a more favorable resolution.",
+          "url": "https://skyfall.dev/posts/slack?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "skyfall.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a13",
+          "order": 2,
+          "title": "A DEEP DIVE INTO CLOUDFLARE'S SEPTEMBER 12, 2025 DASHBOARD AND API OUTAGE",
+          "summary": "Cloudflare had a major outage of its dashboard and APIs on September 12 caused by a bug in its dashboard that triggered excessive calls to its Tenant Service API due to a problematic React useEffect hook, which coincided with a service update and overwhelmed the system. The Tenant Service handles API authorization, so when it became overloaded, it caused widespread 5xx errors across Cloudflare's APIs and dashboard for several hours.",
+          "url": "https://blog.cloudflare.com/deep-dive-into-cloudflares-sept-12-dashboard-and-api-outage?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-19:a14",
+          "order": 1,
+          "title": "NVIDIA BUYS $5 BILLION IN INTEL STOCK IN SEISMIC DEAL",
+          "summary": "Nvidia and Intel are partnering to develop 'Intel x86 RTX SOCs' for PCs with Nvidia graphics and custom Nvidia data center x86 processors.",
+          "url": "https://www.tomshardware.com/pc-components/cpus/nvidia-and-intel-announce-jointly-developed-intel-x86-rtx-socs-for-pcs-with-nvidia-graphics-also-custom-nvidia-data-center-x86-processors-nvidia-buys-usd5-billion-in-intel-stock-in-seismic-deal?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a15",
+          "order": 2,
+          "title": "LEARN YOUR WAY: REIMAGINING TEXTBOOKS WITH GENERATIVE AI",
+          "summary": "Google Research's \"Learn Your Way\" experiment uses generative AI to reimagine textbooks, providing personalized, multimodal learning experiences that improve student learning and retention compared to traditional digital readers.",
+          "url": "https://research.google/blog/learn-your-way-reimagining-textbooks-with-generative-ai/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "research.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-19:a16",
+          "order": 3,
+          "title": "WRITING EFFECTIVE TOOLS FOR AI AGENTS—USING AI AGENTS",
+          "summary": "Anthropic goes over best practices for developing effective tools for AI agents like Claude, focusing on iterative prototyping, evaluation using the Model Context Protocol, and optimizing tool design and descriptions for agent usability and token efficiency.",
+          "url": "https://www.anthropic.com/engineering/writing-tools-for-agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

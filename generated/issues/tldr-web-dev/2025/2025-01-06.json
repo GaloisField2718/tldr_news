@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-01-06",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-01-06",
+  "source_path": "TLDR Web Dev/article_06-01-2025.md",
+  "source_content_hash": "sha256:4e663d565612dce3549b2ff75f8750467b82c058cea5c0252bb1d88c45b3b0b5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-01-06",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-06:a04",
+          "order": 1,
+          "title": "BUILDING A POLITE & FAST WEB CRAWLER",
+          "summary": "A Mozilla engineer noticed that poorly-behaved bots, primarily from OpenAI and Amazon, caused 70% of the load on Diapsora's servers (an open-source social network). To address this, he built a “polite and fast” web crawler using Python and gevent, prioritizing respectful rate limiting by defaulting to one request per domain every five seconds and dynamically adjusting based on server responses. The crawler efficiently manages the queue by fetching robots.txt files in parallel and uses a sophisticated refetching strategy using HTTP headers to minimize redundant requests.",
+          "url": "https://cameronboehmer.com/building-a-polite-and-fast-web-crawler.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "cameronboehmer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a05",
+          "order": 2,
+          "title": "YOU DON'T NEED NEXT.JS",
+          "summary": "ComfyDeploy migrated its dashboard from Next.js to a plain React setup, which improved build times (from 3 minutes to 18 seconds) and hot reload speed (under 200ms). This decision was driven by escalating Vercel costs, testing difficulties with Next.js's server actions, and painfully slow local development. The migration incorporated TanStack Router and Rspack, forcing architectural improvements and cleaner code.",
+          "url": "https://www.comfydeploy.com/blog/you-dont-need-nextjs?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "comfydeploy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a06",
+          "order": 3,
+          "title": "BACK TO BASICS: WHY WE CHOSE LONG POLLING OVER WEBSOCKETS",
+          "summary": "Inferable chose HTTP long polling over WebSockets for its real-time system due to scalability challenges with its Node.js/TypeScript backend and PostgreSQL database. Long polling, unlike short polling or WebSockets, keeps the connection open until data is available or a timeout is reached, offering a balance between immediacy and resource efficiency. This approach avoided complexities associated with WebSockets, such as adapting its observability stack, authentication mechanisms, and infrastructure configurations.",
+          "url": "https://www.inferable.ai/blog/posts/postgres-nodejs-longpolling.mdx?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "inferable.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-06:a07",
+          "order": 1,
+          "title": "HOW AI-ASSISTED CODING WILL CHANGE SOFTWARE ENGINEERING: HARD TRUTHS",
+          "summary": "There are two developer types: \"bootstrappers,\" who use AI for rapid prototyping, and \"iterators,\" who use AI in daily workflows. While AI accelerates development a lot, it introduces challenges like the \"70% problem,\" where achieving the final 30% of software quality requires real human expertise. As a result, AI makes the lives of experienced software engineers easier, but doesn't replace them.",
+          "url": "https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering?utm_source=tldrwebdev",
+          "reading_time_minutes": 25,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a08",
+          "order": 2,
+          "title": "REFLECTIONS",
+          "summary": "Sam Altman reflects on OpenAI's journey, the unexpected success of ChatGPT's launch, and the subsequent rapid growth. It was challenging and messy to build a company around groundbreaking technology, as shown by his own public firing and subsequent reinstatement. He's learned a lot and will be more confident moving forward.",
+          "url": "https://blog.samaltman.com/reflections?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.samaltman.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-06:a09",
+          "order": 1,
+          "title": "CKEDITOR: A VERSATILE RICH TEXT EDITOR THAT'S COMPATIBLE WITH ANY JAVASCRIPT FRAMEWORK",
+          "summary": "Need to add WYSIWYG HTML editing to an app or a website? CKEditor is a modern, feature-rich JavaScript editor that's infinitely customizable [9] (frontend + backend) to build exactly what you need. It's production-ready, comes with a sleek and collaborative UX, and works with your tech - TypeScript, React, Vue.js, and more. Start for",
+          "url": "https://ckeditor.com/free-rich-text-editor/?utm_campaign=tldr-ad&utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "ckeditor.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a09",
+          "order": 2,
+          "title": "free",
+          "summary": "",
+          "url": "https://ckeditor.com/free-rich-text-editor/?utm_campaign=tldr-ad&utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "ckeditor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a10",
+          "order": 3,
+          "title": "LOGLAYER",
+          "summary": "LogLayer is a JavaScript logging library that provides a consistent logging experience across different logging providers. It offers a flexible API for adding tags, metadata, and errors to log messages, supporting multiple loggers simultaneously (e.g., DataDog and New Relic).",
+          "url": "https://loglayer.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "loglayer.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a11",
+          "order": 4,
+          "title": "TAILWIND CSS MOTION",
+          "summary": "A Tailwind CSS plugin that lets you animate any element with inline styles. It also comes with a Chrome extension to let you play with animating your website directly.",
+          "url": "https://github.com/romboHQ/tailwindcss-motion?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a12",
+          "order": 5,
+          "title": "CSS FLEXBOX PLAYGROUND",
+          "summary": "Experiment with different flex properties to understand how they affect layout. CSS code is generated in real time and controls are available for finetuned adjustments.",
+          "url": "https://yoavsbg.github.io/css-flexbox-playground/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "yoavsbg.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-06:a13",
+          "order": 1,
+          "title": "YOU WOULDN'T DOWNLOAD AN AI",
+          "summary": "This developer extracted an AI model from Microsoft's Seeing AI app. The app's model was found encrypted within the APK file as a TensorFlow Lite model. It was then verified using Netron, which led to the successful extraction of the AI model's weights and biases.",
+          "url": "https://altayakkus.substack.com/p/you-wouldnt-download-an-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "altayakkus.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a14",
+          "order": 2,
+          "title": "CAN LLMS WRITE BETTER CODE IF YOU KEEP ASKING THEM TO “WRITE BETTER CODE”?",
+          "summary": "An LLM was told to \"write better code,\" which led to performance improvements in a Python program through multiple iterations. However, the improvements eventually plateaued, and the code became over-engineered. A second experiment used more precise prompt engineering, explicitly outlining optimization goals, which eventually led to a 100x speedup.",
+          "url": "https://minimaxir.com/2025/01/write-better-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 22,
+          "source_domain": "minimaxir.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-01-06:a15",
+          "order": 1,
+          "title": "THANK YOU (2024 EDITION)",
+          "summary": "The CSS-Tricks website returned to consistent publishing in 2024, leading to 26 million unique pageviews, many significant site updates and content additions, and new goals.",
+          "url": "https://css-tricks.com/thank-you-2024-edition/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "css-tricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a16",
+          "order": 2,
+          "title": "WORLD'S FIRST MIDI SHELLCODE",
+          "summary": "This author gained remote code execution on a Yamaha PSR-E433 synthesizer via its MIDI interface by reverse engineering its firmware.",
+          "url": "https://psi3.ru/blog/swl01u/?utm_source=tldrwebdev",
+          "reading_time_minutes": 45,
+          "source_domain": "psi3.ru",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a17",
+          "order": 3,
+          "title": "PRINTF DEBUGGING IS OK",
+          "summary": "Devs should take a pragmatic approach to debugging, and all techniques are valid (including just using printf) for efficiently finding and fixing bugs.",
+          "url": "https://www.polymonster.co.uk/blog/printf-debugging-is-ok?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "polymonster.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-01-06:a18",
+          "order": 4,
+          "title": "THE RECOIL REPOSITORY HAS BEEN ARCHIVED ON JAN 1, 2025. YOU HAD A GOOD RUN (REDDIT THREAD)",
+          "summary": "After both maintainers of Recoil, a React state management library created by Meta, were laid off, the repository was officially archived as no Meta engineers were willing to take up the work of maintaining it.",
+          "url": "https://links.tldrnewsletter.com/gSaVz5",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

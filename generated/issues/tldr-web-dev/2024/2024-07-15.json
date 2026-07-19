@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-07-15",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-07-15",
+  "source_path": "TLDR Web Dev/article_15-07-2024.md",
+  "source_content_hash": "sha256:52337da2e237cf16ff7acb5a555fa5643e8c02fa579b3260e8661c5cd451510f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-07-15",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-15:a04",
+          "order": 1,
+          "title": "BUILDING AND SCALING NOTION'S DATA LAKE",
+          "summary": "As Notion grew exponentially, it had to build a scalable data lake. Its solution involves incrementally ingesting updated data from Postgres to Kafka, then using Hudi to write to S3 for processing. Spark is used for complex tasks like tree traversal and denormalization. This approach has resulted in cost savings, improved data freshness, and has unlocked new possibilities for AI and search features.",
+          "url": "https://www.notion.so/blog/building-and-scaling-notions-data-lake?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "notion.so",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a05",
+          "order": 2,
+          "title": "HOW WE SAVED 300MS FROM EVERY AWS POD STARTUP WITH A SINGLE GRAFANA LOKI QUERY",
+          "summary": "Checkly, a synthetic monitoring tool, reduced its pod startup time by optimizing the AWS SDK and changing the order of operations. It initially used large containers with long startup times, but switching to ephemeral pods required a faster startup. The company found that multiple versions of the AWS SDK were causing delays. Standardizing the version led to a bunch of savings in compute costs.",
+          "url": "https://www.checklyhq.com/blog/300ms-from-every-pod-startup-with-a-single-grafana-query/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "checklyhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a06",
+          "order": 3,
+          "title": "SPEEDING UP THE JAVASCRIPT ECOSYSTEM",
+          "summary": "TypeScript's new isolated declarations feature simplifies code packaging by automatically generating .d.ts files. This improves the \"go to source\" functionality and also removes the need to manually create these files. It makes publishing packages faster by shifting definition file generation from the publishing process to the installation process.",
+          "url": "https://marvinh.dev/blog/speeding-up-javascript-ecosystem-part-10/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "marvinh.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-15:a07",
+          "order": 1,
+          "title": "\"GITHUB\" IS STARTING TO FEEL LIKE LEGACY SOFTWARE",
+          "summary": "",
+          "url": "http://mistys-internet.website/blog/blog/2024/07/12/github-is-starting-to-feel-like-legacy-software?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "mistys-internet.website",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a08",
+          "order": 2,
+          "title": "WORKING WITH STACKED BRANCHES IN GIT IS EASIER WITH --UPDATE-REFS",
+          "summary": "Git 2.38 introduced the --update-refs feature to streamline the process of rebasing stacked branches. This new feature automatically updates dependent branches when the base branch is rebased, eliminating the need for manual rebasing and potential conflicts. It can be used in various scenarios, including rebasing a stack of branches, updating stacked branches on a changed branch, and interactive rebasing.",
+          "url": "https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "andrewlock.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-15:a09",
+          "order": 1,
+          "title": "👀 OBSERVING AWS MICROSERVICES",
+          "summary": "Join Lumigo CTO, Aviad Mor, and AWS Serverless Hero, Yan Cui! On the agenda: why observability for AWS microservices [9] has gotten so expensive and complicated [9] — and what you can do about it. Featured topics include AI and ML for observability, distributed tracing, cost management techniques, and more! Join live to attend the",
+          "url": "https://info.lumigo.io/reducing-the-complexity-and-cost-of-observing-aws-microservices?utm_source=othercampaigns&utm_medium=tldrwebdev&utm_campaign=07252024webinar",
+          "reading_time_minutes": null,
+          "source_domain": "info.lumigo.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a09",
+          "order": 2,
+          "title": "Q&A",
+          "summary": "",
+          "url": "https://info.lumigo.io/reducing-the-complexity-and-cost-of-observing-aws-microservices?utm_source=othercampaigns&utm_medium=tldrwebdev&utm_campaign=07252024webinar",
+          "reading_time_minutes": null,
+          "source_domain": "info.lumigo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a10",
+          "order": 3,
+          "title": "PLV8",
+          "summary": "PLV8 is a trusted Javascript language extension for PostgreSQL. It can be used for stored procedures, triggers, etc.",
+          "url": "https://plv8.github.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "plv8.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a11",
+          "order": 4,
+          "title": "QUARTZ",
+          "summary": "Quartz is a set of tools that helps you publish your notes as a website for free. It converts Markdown notes into a fully functional website.",
+          "url": "https://github.com/jackyzha0/quartz?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a12",
+          "order": 5,
+          "title": "GPU.CPP",
+          "summary": "gpu.cpp is a lightweight library that makes portable GPU computation with C++ simple. It focuses on general purpose native GPU computation, using the WebGPU specification as a portable low-level GPU interface. This means developers can drop in GPU code in C++ projects and have it run on Nvidia, Intel, AMD, and other GPUs, along with a wide variety of laptops, workstations, mobile devices, and more.",
+          "url": "https://github.com/AnswerDotAI/gpu.cpp?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-15:a13",
+          "order": 1,
+          "title": "WE NEED VISUAL PROGRAMMING. NO, NOT LIKE THAT",
+          "summary": "Visual programming often fails to gain traction among developers because it focuses on replacing code syntax instead of visualizing important, implicit aspects of software that developers already struggle with. Developers already use visual representations like treemaps, code retention diagrams, network topologies, and memory layouts to understand and analyze different aspects of their code and systems. These visualizations can be immensely helpful for tasks like onboarding in large codebases, diagnosing performance problems, understanding data layouts, and tracking complex client-server interactions, so there still is a lot of opportunity here for startups.",
+          "url": "https://blog.sbensu.com/posts/demand-for-visual-programming/?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.sbensu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a14",
+          "order": 2,
+          "title": "UNIVERSAL CODE EXECUTION BY CHAINING MESSAGES IN BROWSER EXTENSIONS",
+          "summary": "By chaining various messaging APIs in browsers and browser extensions, it's possible to achieve 'universal code execution', breaking Same Origin Policy and browser sandbox. This vulnerability allows malicious web pages to communicate with an extension's content script and then relay messages to the background script, which can further communicate with a native application on the host operating system. This means that the chain can execute arbitrary code on the victim's machine.",
+          "url": "https://spaceraccoon.dev/universal-code-execution-browser-extensions/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "spaceraccoon.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a15",
+          "order": 3,
+          "title": "RESPONSIVE BAR CHARTS IN HTML AND CSS",
+          "summary": "Using SVG for responsive web visualization can be difficult. This article presents an alternative hybrid approach that combines HTML, CSS, and SVG. A grid-based layout with logical properties can be used to handle bidirectional text and accommodate positive and negative values.",
+          "url": "https://9elements.com/blog/responsive-bar-charts-in-html-and-css/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "9elements.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-07-15:a16",
+          "order": 1,
+          "title": "GIT-PR",
+          "summary": "Git-PR allows you to make patch requests to GitHub repositories over SSH.",
+          "url": "https://pr.pico.sh/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "pr.pico.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a17",
+          "order": 2,
+          "title": "THE EXPERIENCE OF DEPLOYING NEXT.JS APPS ON CLOUDFLARE",
+          "summary": "Deploying Next.js applications on Cloudflare pages is not a seamless process due to a lack of documentation, inconsistencies with Next.js conventions, compatibility problems with a Vercel CLI change, issues with Set-Cookie headers, and challenges with logging and Node.js compatibility.",
+          "url": "https://davidgomes.com/the-experience-of-deploying-next-js-apps-on-cloudflare/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "davidgomes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a18",
+          "order": 3,
+          "title": "GIVE PEOPLE SOMETHING TO LINK TO SO THEY CAN TALK ABOUT YOUR FEATURES AND IDEAS",
+          "summary": "You should create a dedicated web page that people can easily link to for definitive information and search engine optimization to promote discussion about your ideas, projects, and features.",
+          "url": "https://simonwillison.net/2024/Jul/13/give-people-something-to-link-to/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-07-15:a19",
+          "order": 4,
+          "title": "GETTING OUT OF HOOK HELL: YOU ARE USING REACT HOOKS THE WRONG WAY",
+          "summary": "React Hooks can become unmanageable if overused or misused.",
+          "url": "https://everyday.codes/react/getting-out-of-hook-hell-you-are-using-react-hooks-the-wrong-way/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "everyday.codes",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

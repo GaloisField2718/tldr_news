@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-03-18",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-03-18",
+  "source_path": "TLDR Web Dev/article_18-03-2025.md",
+  "source_content_hash": "sha256:73bd40b2ffe711b7c1d0e1bf354beb324d4d0e98dd87104e27e8c33edde62901",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-03-18",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-18:a04",
+          "order": 1,
+          "title": "HOW 40 LINES OF CODE SPED UP IOS END-TO-END TESTS BY OVER 50%",
+          "summary": "Wealthfront improved its iOS end-to-end test suite performance by over 50% with a 40-line code change. It identified that the default XCTWaiter polling mechanism caused bottlenecks due to its fixed 1-second interval between checks. Initially, its team sped things up by implementing a custom waiter with a shorter polling interval of 0.1 seconds, but this overwhelmed its CI machines. They fixed this by implementing exponential backoff for the polling interval to adapt to CPU load.",
+          "url": "https://eng.wealthfront.com/2025/03/17/how-we-sped-up-ios-end-to-end-tests-by-over-50-with-40-lines-of-code/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "eng.wealthfront.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a05",
+          "order": 2,
+          "title": "REACT ROUTER ERROR REPORTING FROM SCRATCH",
+          "summary": "This article goes over how to implement custom error reporting in React Router, moving beyond the default development error messages. Devs first need to enable source maps in production to map bundled code back to the original source. Then, a custom `handleError` function needs to be created that reads source maps and extracts relevant source code context to send detailed error reports via email. The article also provides code examples for setting up a custom server, reading source maps, and formatting error reports, along with tips for environments lacking filesystem access.",
+          "url": "https://programmingarehard.com/2025/03/11/react-router-error-reporting.html/?utm_source=tldrwebdev",
+          "reading_time_minutes": 19,
+          "source_domain": "programmingarehard.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-18:a06",
+          "order": 1,
+          "title": "SYNC ENGINES ARE THE FUTURE",
+          "summary": "Modern web apps, being distributed, require better data synchronization solutions. Current tools like XHR and fetch are not enough for handling the complexities of continuous data updates, failures, and out-of-order arrivals. The solution is in sync engines, client-side databases that manage data delivery and synchronization.",
+          "url": "https://www.instantdb.com/essays/sync_future?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "instantdb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a07",
+          "order": 2,
+          "title": "HOW CURSOR (AI IDE) WORKS",
+          "summary": "AI IDEs like Cursor fork VSCode, integrate a chat UI, implement coding agent tools like `read_file` and `write_file`, and optimize internal prompts. Users should simplify tasks for the main LLM agent by using smaller models for sub-tasks and prove explicit context through \"@file\" syntax and well-commented code.",
+          "url": "https://blog.sshh.io/p/how-cursor-ai-ide-works?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.sshh.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a08",
+          "order": 3,
+          "title": "TO GET AHEAD WITH AI, FINE-TUNE YOUR DATA STRATEGY",
+          "summary": "A clean data strategy is necessary for AI projects because the quality of AI depends on quality input data. That's why it's useful to have data quality processes and teams if your company is working on AI.",
+          "url": "https://stackoverflow.blog/2025/03/17/to-get-ahead-with-ai-fine-tune-your-data-strategy/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-18:a09",
+          "order": 1,
+          "title": "INTRODUCING @CLERK/AGENT-TOOLKIT",
+          "summary": "An experimental package that integrates Clerk into AI agent workflows, empowering developers to build agentic systems with user and organization management. It works seamlessly with frameworks like",
+          "url": "https://go.clerk.com/yNzbkaT?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a10",
+          "order": 2,
+          "title": "Vercel's AI SDK and LangChain. Try it today",
+          "summary": "",
+          "url": "https://go.clerk.com/yNzbkaT",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a11",
+          "order": 3,
+          "title": "LOCALSCOPE",
+          "summary": "Localscope is a Python library that helps prevent bugs in Jupyter notebooks by restricting the variables a function can access, avoiding accidental use of global variables. It achieves this through a decorator, `@localscope`, that raises an exception if a function attempts to use a global variable that hasn't been explicitly allowed.",
+          "url": "https://localscope.readthedocs.io/en/latest/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "localscope.readthedocs.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a12",
+          "order": 4,
+          "title": "HPKV",
+          "summary": "HPKV is a high-performance, persistent key-value store that offers ultrafast speeds and low latency.",
+          "url": "https://hpkv.io/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "hpkv.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a13",
+          "order": 5,
+          "title": "⌘K",
+          "summary": "⌘K is a fast, unstyled command menu React component that also functions as an accessible combobox. It automatically filters and sorts items, supports custom filtering, asynchronous results, and integration with Radix UI components.",
+          "url": "https://github.com/pacocoursey/cmdk?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-18:a14",
+          "order": 1,
+          "title": "THAT TIME I RECREATED PHOTOSHOP IN C++",
+          "summary": "Inspired by the need for a better manga reader, this developer aimed to replicate Photoshop's key features in an application called Fedit. He focused on creating a lightweight, portable program with a familiar interface, which eventually helped him land a job.",
+          "url": "https://f055.net/technology/that-time-i/that-time-i-recreated-photoshop-in-c/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "f055.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a15",
+          "order": 2,
+          "title": "PAST AND PRESENT FUTURES OF USER INTERFACE DESIGN",
+          "summary": "Practicality and cost-effectiveness often lead to touchscreens today, despite their limitations and complaints asking for tactile interfaces again. While new paradigms like smartphones emerge from necessity, the desktop interface is a mainstay due to its effectiveness.",
+          "url": "https://www.datagubbe.se/futui/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "datagubbe.se",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a16",
+          "order": 3,
+          "title": "HOW OPENAI IS BUILDING ITS MOAT",
+          "summary": "OpenAI is shifting focus from models themselves to building comprehensive application and integration layers to maintain its position. This involves improving ChatGPT with features and developing APIs that make LLM application development easier. The company seeks to lock developers into its ecosystem by providing a complete framework.",
+          "url": "https://bdtechtalks.com/2025/03/17/openai-moat/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "bdtechtalks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-03-18:a17",
+          "order": 1,
+          "title": "ALPHABET SPINS OFF STARLINK COMPETITOR TAARA",
+          "summary": "Alphabet's laser-based internet project Taara, a potential competitor to Starlink in connecting rural areas, is spinning off into an independent company.",
+          "url": "https://www.theverge.com/news/631049/alphabet-spins-off-starlink-competitor-taara?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a18",
+          "order": 2,
+          "title": "A PERPLEXING JAVASCRIPT PARSING PUZZLE",
+          "summary": "There's a surprising JavaScript behavior where `x = 1; x; // 0` evaluates to 1 because `-->` at the beginning of a line is interpreted as a legacy comment, a holdover from older browsers needing to ignore JavaScript within `script` tags.",
+          "url": "https://www.hillelwayne.com/post/javascript-puzzle/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "hillelwayne.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a19",
+          "order": 3,
+          "title": "ECOSYSTEMS VS. ARTIFACTS: DON'T BREAK THE WEB",
+          "summary": "The web, like any ecosystem, is a complex, evolving system that shouldn't be fundamentally changed or \"rebuilt\" because it's not a static artifact but a living process built on accumulated history and dependencies.",
+          "url": "https://blog.jim-nielsen.com/2025/ecosystems-vs-artifacts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.jim-nielsen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-03-18:a20",
+          "order": 4,
+          "title": "NODE.JS ADDED UTILITY FOR TEXT FORMATTING — YOU MAY NOT NEED CHALK ANYMORE",
+          "summary": "Node.js 21.7.0 introduces a new `styleText` utility in the `node:util` module for simple text formatting with combinable modifiers.",
+          "url": "https://pawelgrzybek.com/node-js-added-utility-for-text-formatting-you-may-not-need-chalk-anymore/?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "pawelgrzybek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

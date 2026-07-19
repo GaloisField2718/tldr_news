@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-10",
+  "source_path": "TLDR InfoSec/article_10-10-2025.md",
+  "source_content_hash": "sha256:6e5775dd904356527a24034ab5901e7729f9841b77879e52c57c5a5d5cd409ec",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a04",
+          "order": 1,
+          "title": "COMPARING SEMGREP VS. APPSEC ALTERNATIVES",
+          "summary": "Independent reviewers confirm that using Semgrep can cut false positives by over 90% [4] compared to popular alternatives:",
+          "url": "https://semgrep.dev/resources/semgrep-vs-snyk?utm_source=tldr&utm_medium=paidsocial",
+          "reading_time_minutes": null,
+          "source_domain": "semgrep.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a04",
+          "order": 2,
+          "title": "See the difference and start shipping faster",
+          "summary": "",
+          "url": "https://semgrep.dev/resources/semgrep-vs-snyk?utm_source=tldr&utm_medium=paidsocial",
+          "reading_time_minutes": null,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a05",
+          "order": 1,
+          "title": "SONICWALL: 100% OF FIREWALL BACKUPS WERE BREACHED",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/9Vmo9J",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a06",
+          "order": 2,
+          "title": "HACKERS EXPLOIT AUTH BYPASS IN SERVICE FINDER WORDPRESS THEME",
+          "summary": "WordPress security firm, Wordfence, is warning users of the Service Finder premium WordPress theme of a critical (CVSS 9.8/10) vulnerability. The vulnerability is an authentication bypass vulnerability that allows attackers to bypass authentication and log in as administrators. Although a patch was released in July, Wordfence is reporting a sharp uptick in exploitation starting in September.",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-in-service-finder-wordpress-theme/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a07",
+          "order": 3,
+          "title": "GITHUB COPILOT CHAT FLAW LEAKED DATA FROM PRIVATE REPOSITORIES",
+          "summary": "A vulnerability in GitHub Copilot Chat allowed attackers to combine Content Security Policy bypass with remote prompt injection to leak sensitive data from private repositories, including AWS keys and zero-day vulnerabilities. The attack exploited hidden HTML comments and GitHub's Camo proxy system by creating a dictionary of pre-generated Camo URLs for each alphabet character, allowing data to be exfiltrated when victims clicked on malicious URLs. GitHub addressed the issue on August 14 by preventing Camo from being used to leak sensitive user information.",
+          "url": "https://www.securityweek.com/github-copilot-chat-flaw-leaked-data-from-private-repositories/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a08",
+          "order": 1,
+          "title": "CYBERCRIME OBSERVATIONS FROM THE FRONTLINES: UNC6040 PROACTIVE HARDENING RECOMMENDATIONS",
+          "summary": "UNC6040 is a financially motivated threat group that uses voice phishing (vishing) to trick employees into authorizing malicious Salesforce Data Loader applications, enabling large-scale data theft from corporate Salesforce instances. The attackers impersonate IT support personnel to manipulate victims into granting OAuth access to fake connected apps, then systematically exfiltrate sensitive data using legitimate Salesforce tools. Organizations should implement phishing-resistant MFA, restrict API access to approved applications only, enforce network-based login restrictions, and deploy real-time detection rules that monitor for suspicious OAuth authorizations followed by bulk data exports.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc6040-proactive-hardening-recommendations?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a09",
+          "order": 2,
+          "title": "ORACLE E-BUSINESS SUITE ZERO-DAY EXPLOITED IN WIDESPREAD EXTORTION CAMPAIGN",
+          "summary": "A threat actor linked to the CL0P group exploited a previously unknown vulnerability in Oracle E-Business Suite, stealing sensitive data from targeted organizations and launching a mass extortion email campaign. Attackers leverage sophisticated multi-stage Java payloads and compromised third-party accounts. Although Oracle issued critical emergency patches to mitigate the risk, this is still being actively exploited.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/oracle-ebusiness-suite-zero-day-exploitation?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a10",
+          "order": 3,
+          "title": "IMPLEMENTING USAGE AND SECURITY REPORTING FOR AMAZON ECR",
+          "summary": "Amazon Elastic Container Registry (ECR) provides both repository and image-level usage and security scan information. This walkthrough provides sample code for generating centralized reports to aggregate this data across both images and repositories. The walkthrough also includes information for setting up Athena tables and queries to analyze the data.",
+          "url": "https://aws.amazon.com/blogs/containers/implementing-usage-and-security-reporting-for-amazon-ecr/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a11",
+          "order": 1,
+          "title": "SLACK CAN COST MILLIONS IN LITIGATION. ARE YOU READY?",
+          "summary": "Slack data is a ticking time bomb when litigation & investigations arise. Learn how one high-flying company avoids 7-figure legal bills with Onna's automated Slack collection and search tool.",
+          "url": "https://www.revealdata.com/case-study/how-benlabs-avoids-seven-figure-ediscovery-costs-with-onnas-prophylactic-approach?utm_campaign=19424793-25Q3+BENlabs+Case+Study&utm_source=email&utm_medium=Email+ads&utm_content=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "revealdata.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a12",
+          "order": 2,
+          "title": "MICROSOFT: WINDOWS BACKUP NOW AVAILABLE FOR ENTERPRISE USERS",
+          "summary": "Microsoft's Windows Backup for Organizations is an enterprise-grade backup tool that backs up Windows settings, preferences, and Microsoft Store apps to Exchange Online cloud storage, simplifying Windows 10 to Windows 11 migrations. The feature is opt-in and disabled by default, requiring IT administrator configuration through backup and restore policy settings on Entra-joined devices. Microsoft encrypts the backed-up data but retains access for troubleshooting and legal compliance purposes under strict management oversight.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-backup-now-available-for-enterprise-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a13",
+          "order": 3,
+          "title": "BROKEN AUTHORIZATION IN APIS: INTRODUCING AUTOSWAGGER",
+          "summary": "Intruder's Autoswagger is a free open-source tool that automatically scans APIs for authorization vulnerabilities by parsing OpenAPI/Swagger documentation to identify endpoints lacking proper authentication checks. The tool discovered critical security flaws across major organizations during bug bounty testing, including exposed credentials, customer data, and database access at companies like Microsoft, multinational tech firms, and beverage corporations. Autoswagger highlights how self-documenting APIs increase attack surface by providing attackers with detailed endpoint information, making these simple authorization weaknesses easier to exploit at scale.",
+          "url": "https://www.intruder.io/research/broken-authorization-apis-autoswagger?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "intruder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a14",
+          "order": 4,
+          "title": "ARTEMIS",
+          "summary": "Artemis is a tool from CERT Polska, Poland's computer emergency response team. It is a modular vulnerability scanner with automatic report-generation capabilities.",
+          "url": "https://github.com/CERT-Polska/Artemis?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a15",
+          "order": 1,
+          "title": "KURT GOT GOT",
+          "summary": "Fly.io's CEO, Kurt Mackey, fell victim to a sophisticated phishing attack that compromised their company's Twitter account. Fly.io's core infrastructure remained safe due to robust, phishing-resistant authentication. The incident exploited generational gaps and social engineering rather than technical flaws.",
+          "url": "https://fly.io/blog/kurt-got-got/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "fly.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a16",
+          "order": 2,
+          "title": "ITALIAN BUSINESSMAN'S PHONE REPORTEDLY TARGETED WITH PARAGON SPYWARE",
+          "summary": "Francesco Gaetano Caltagirone, a well-known Italian businessman, was notified by WhatsApp that his phone was targeted with Paragon spyware, extending the scandal in Italy beyond journalists and activists to business leaders. Caltagirone is the first businessman on the list of victims. The news comes after Paragon cut ties with the Italian government amid growing controversy.",
+          "url": "https://techcrunch.com/2025/10/09/italian-businessmans-phone-reportedly-targeted-with-paragon-spyware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a17",
+          "order": 3,
+          "title": "CALIFORNIA ENACTS LAW GIVING CONSUMERS ABILITY TO UNIVERSALLY OPT OUT OF DATA SHARING",
+          "summary": "California Governor Gavin Newsom signed a law requiring browsers to make it easier for Californians to opt out of allowing third-party data sharing. The California Consumer Privacy Act (CCPA) requires websites to allow Californians to opt out of data sharing, but it also mandates that browsers universally support this. Previously, this had to be done using third-party extensions.",
+          "url": "https://therecord.media/california-signs-law-opt-out-browsers?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-10:a18",
+          "order": 1,
+          "title": "🌴 ZERO TRUST & MAI TAIS? 🍹 ONLY ON CONTAINMENT ISLAND.",
+          "summary": "The only security webinar serving strategy with a side of sunshine. Join the challenge [18]. Learn. Compete. Win a trip to the Bahamas.",
+          "url": "https://zeronetworks.com/landing/containment-island?utm_medium=email&utm_source=tldr&utm_campaign=containisland&utm_content=friday&cid=701Uc00000kNANiIAO",
+          "reading_time_minutes": null,
+          "source_domain": "zeronetworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a19",
+          "order": 2,
+          "title": "AZURE OUTAGE BLOCKS ACCESS TO MICROSOFT 365 SERVICES, ADMIN PORTALS",
+          "summary": "A Microsoft Azure Front Door CDN outage caused widespread access issues to Microsoft 365 services and admin portals across Europe, Africa, and the Middle East for several hours.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/azure-outage-blocks-access-to-microsoft-365-services-admin-portals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a20",
+          "order": 3,
+          "title": "FAKE TIKTOK AND WHATSAPP APPS INFECT ANDROID DEVICES WITH CLAYRAT SPYWARE",
+          "summary": "ClayRat is an Android spyware targeting Russian users that spreads through fake popular apps on Telegram, stealing personal data, taking photos, making calls, and self-propagating by sending malicious messages.",
+          "url": "https://hackread.com/fake-tiktok-whatsapp-apps-android-clayrat-spyware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-10:a21",
+          "order": 4,
+          "title": "SEN. PETERS TRIES ANOTHER APPROACH TO EXTEND EXPIRED CYBER THREAT INFORMATION-SHARING LAW",
+          "summary": "Senator Gary Peters introduced the Protecting America from Cyber Threats (PACT) Act to replace the expired Cybersecurity and Information Sharing Act of 2015, renaming it to avoid confusion with the CISA agency amid Republican concerns about social media censorship.",
+          "url": "https://cyberscoop.com/gary-peters-cyber-threat-information-sharing-law-rand-paul/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

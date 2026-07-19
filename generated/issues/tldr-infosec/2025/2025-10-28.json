@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-28",
+  "source_path": "TLDR InfoSec/article_28-10-2025.md",
+  "source_content_hash": "sha256:54b5d508e14d9303f109b05044853d1285fc8d81c11c2787b2c53e0729f31184",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a04",
+          "order": 1,
+          "title": "",
+          "summary": "AI code editors now generate weeks of code in hours. Traditional security crawls behind, creating backlogs that will never close.",
+          "url": "https://www.ox.security/events/vibeseccon/?utm_campaign=9574189-TLDR&utm_source=TLTR&utm_medium=email&utm_term=primary",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a04",
+          "order": 2,
+          "title": "Register for VibeSecCon (free)",
+          "summary": "",
+          "url": "https://www.ox.security/events/vibeseccon/?utm_campaign=9574189-TLDR&utm_source=TLTR&utm_medium=email&utm_term=primary",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a05",
+          "order": 1,
+          "title": "HOW WE BUILT AN EXPLOIT FOR SESSIONREAPER, CVE-2025-54236 IN MAGENTO 2 & ADOBE COMMERCE",
+          "summary": "Pentest-Tools researchers developed a working exploit for CVE-2025-54236 \"SessionReaper,\" an unauthenticated vulnerability in Magento 2's ServiceInputProcessor that allows customer account takeover through session manipulation. The exploit leverages a Magento\\Customer\\Model\\Session\\Proxy object's setCustomerId function to inject arbitrary customer IDs into PHP sessions, enabling attackers to impersonate any customer by crafting malicious session cookies. Organizations should patch immediately and monitor for unauthorized attempts to manipulate sessions targeting Magento installations.",
+          "url": "https://pentest-tools.com/blog/sessionreaper-cve-2025-54236-exploit?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "pentest-tools.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a06",
+          "order": 2,
+          "title": "DOMEWATCH LEAK EXPOSED PERSONAL DATA OF CAPITOL HILL APPLICANTS",
+          "summary": "A security researcher reported an unencrypted and non-password-protected database containing PII of over 7,000 applicants to the research firm Safety Detectives. The data includes names, phone numbers, email addresses, and security clearance status or level. 469 records listed individuals with “top secret” federal security clearance, which could expose those individuals to phishing risks.",
+          "url": "https://hackread.com/domewatch-leak-capitol-hill-applicants-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a07",
+          "order": 3,
+          "title": "QNAP WARNS OF CRITICAL ASP.NET FLAW IN ITS WINDOWS BACKUP SOFTWARE",
+          "summary": "QNAP issued a warning to customers to patch a critical ASP.NET Core vulnerability that affects the company's NetBak PC Agent software for backing up data to a QNAP NAS (Network Attached Storage). This vulnerability could allow an authenticated attacker to gain unauthorized access to sensitive data, modify server files, or perform a denial-of-service on the device. QNAP recommends that users either reinstall the NetBak PC Agent or manually update the ASP.NET Core install on their PCs.",
+          "url": "https://www.bleepingcomputer.com/news/security/qnap-warns-its-windows-backup-software-is-also-affected-by-critical-aspnet-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a08",
+          "order": 1,
+          "title": "THE LINUX BOOT PROCESS: FROM POWER BUTTON TO KERNEL",
+          "summary": "This deep dive explains the Linux boot sequence from CPU reset through various modes, including firmware handoffs, bootloader operations, kernel decompression, and memory setup with paging. It covers mode transitions, interrupt handling, GDT and IDT configuration, and kASLR, which randomizes kernel memory locations to prevent exploits. kASLR enhances security by randomizing kernel addresses, but can be disabled with nokaslr for debugging.",
+          "url": "https://links.tldrnewsletter.com/Bvz0GG",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a09",
+          "order": 2,
+          "title": "SCAMMERS TRY TO TRICK LASTPASS USERS INTO GIVING UP CREDENTIALS BY TELLING THEM THEY'RE DEAD",
+          "summary": "CryptoChameleon cybercriminal group targets LastPass users with phishing emails claiming \"Legacy Request Opened (URGENT IF YOU ARE NOT DECEASED)\" that trick victims into entering master passwords on fake sites by exploiting legacy access scenarios when family members request deceased users' accounts. The campaign uses domain spoofing, fabricated support case details, and phone calls to direct victims to attacker-controlled URLs designed to harvest credentials for cryptocurrency theft. Organizations should implement phishing-resistant MFA for password managers, educate employees about this specific \"Legacy Request\" subject line, and establish policies requiring additional authentication factors beyond master passwords for account access.",
+          "url": "https://www.csoonline.com/article/4079001/scammers-try-to-trick-lastpass-users-into-giving-up-credentials-by-telling-them-theyre-dead-2.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a10",
+          "order": 3,
+          "title": "VIBECODING AND THE ILLUSION OF SECURITY",
+          "summary": "AI-powered coding, often called \"vibecoding,\" claims to enable fast and seemingly secure development of features like two-factor authentication (2FA). However, this method often only creates the illusion of security, missing essential protections such as rate limiting and strong account lockout mechanisms. Attackers can easily bypass superficial safeguards, especially if limits depend on factors like IP addresses. Large language models (LLMs) tend to generate code that appears convincing, but without clear guidance, critical security measures are frequently overlooked or implemented incorrectly.",
+          "url": "https://baldur.dk/blog/vibecoding-and-the-illusion-of-security.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "baldur.dk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a11",
+          "order": 1,
+          "title": "DOES YOUR IAM SYSTEM BREAK EVERY TIME SOMEONE CHANGES ROLES?",
+          "summary": "Traditional IAM tools depend on static data and fall apart if an",
+          "url": "https://rippling.registration.goldcast.io/webinar/238377a3-ffe5-48c3-89f3-bf189d41a798?utm_source=tldr&utm_medium=newsletter&utm_campaign=10%2F29+IAM+deminar&utm_content=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "rippling.registration.goldcast.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a11",
+          "order": 2,
+          "title": "employee switches departments or devices. Rippling's new IAM",
+          "summary": "grounds identity in real-time employee data instead - enabling automatic updates without manual provisioning or custom scripts. See how it works in tomorrow's webinar [11]. Stay until the end for a chance to win a $500 gift card!",
+          "url": "https://rippling.registration.goldcast.io/webinar/238377a3-ffe5-48c3-89f3-bf189d41a798?utm_source=tldr&utm_medium=newsletter&utm_campaign=10%2F29+IAM+deminar&utm_content=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "rippling.registration.goldcast.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a12",
+          "order": 3,
+          "title": "PDF_OBJECT_HASHING",
+          "summary": "PDF Object Hash is a method for identifying similarities between PDFs based on their structure rather than content, akin to imphash or ja3 hashes. It involves extracting object types and hashing them to cluster similar documents and detect overlaps. Recent updates to the parsing scripts improve accuracy, especially for irregular or corrupted PDFs.",
+          "url": "https://github.com/EmergingThreats/pdf_object_hashing?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a13",
+          "order": 4,
+          "title": "SPIDERFOOT",
+          "summary": "SpiderFoot is an open source intelligence (OSINT) automation tool. It integrates with just about every data source available and utilises a range of methods for data analysis, making that data easy to navigate.",
+          "url": "https://github.com/smicallef/spiderfoot?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a14",
+          "order": 5,
+          "title": "IRREGULAR (PRODUCT LAUNCH)",
+          "summary": "Irregular builds AI security labs to test the cybersecurity of advanced models like ChatGPT and Claude. It develops tools, testing methods, and scoring frameworks, collaborating with top AI companies to ensure the secure and responsible deployment of AI.",
+          "url": "https://www.irregular.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "irregular.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a15",
+          "order": 1,
+          "title": "MEM3NT0 MORI – THE HACKING TEAM IS BACK!",
+          "summary": "Kaspersky uncovered Operation ForumTroll, a sophisticated espionage campaign using personalized phishing emails that exploit CVE-2025-2783, a Chrome sandbox escape vulnerability affecting Windows Inter-Process Communication (IPC) pseudo handles. The operation deployed \"Dante\" spyware by Memento Labs, targeting Russian entities through zero-day exploits and evasion techniques such as WebGPU validation and COM hijacking. Security teams should monitor for Base64 folders in %LocalAppData%, enhance email filtering for personalized phishing, and update Chrome to version 134.0.6998.177/178 or later to mitigate the sandbox vulnerability.",
+          "url": "https://securelist.com/forumtroll-apt-hacking-team-dante-spyware/117851/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a16",
+          "order": 2,
+          "title": "FULL STUDENT DATABASE OF MOIS-AFFILIATED RAVIN ACADEMY LEAKED",
+          "summary": "A comprehensive student database from Ravin Academy, a US Treasury-designated MOIS front organization used to recruit cyber operatives, has been leaked just days before its annual Tech Olympics event in Tehran. The exposed records contain complete personal information of trainees enrolled in what appears to be legitimate cybersecurity education, but serves as a talent pipeline for Iranian state-sponsored cyber operations against foreign governments and domestic dissidents. Organizations should monitor for individuals with Ravin Academy connections and note that the operational security failure demonstrates vulnerabilities in Iranian intelligence recruitment infrastructure.",
+          "url": "https://blog.narimangharib.com/posts/2025%2F10%2F1761116665973?lang=en&utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.narimangharib.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a17",
+          "order": 3,
+          "title": "YOU HAVE ONE WEEK TO OPT OUT OR BECOME FODDER FOR LINKEDIN AI TRAINING",
+          "summary": "LinkedIn will soon collect public profile data from users in the EU, UK, Canada, Switzerland, the EEA, and Hong Kong to train AI models and share it with Microsoft affiliates for ad targeting. Users in these regions have until October 27 to opt out, or their details—including posts and activity—will be included, except for private messages.",
+          "url": "https://www.theregister.com/2025/10/27/linkedin_ai_profile_scraping/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-28:a18",
+          "order": 1,
+          "title": "USB DRIVES ARE STILL A PROBLEM - BUT THEY'RE NOT YOUR ONLY DATA EXFILTRATION RISK",
+          "summary": "While most organizations focus on blocking USB devices, attackers and insiders can just as easily steal data through network shares, cloud storage, or even local folder access. You need visibility and control over ALL storage access points.",
+          "url": "https://www.threatlocker.com/platform/storage-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=storage_control_q4_25&utm_content=storage_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a18",
+          "order": 2,
+          "title": "SEE STORAGE CONTROL IN ACTION",
+          "summary": "",
+          "url": "https://www.threatlocker.com/platform/storage-control?utm_source=tldr&utm_medium=sponsor&utm_campaign=storage_control_q4_25&utm_content=storage_control&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a19",
+          "order": 3,
+          "title": "CRITICAL MICROSOFT WSUS FLAW EXPLOITED IN WILD AFTER INSUFFICIENT PATCH",
+          "summary": "Microsoft issued urgent out-of-band patches to fully address CVE-2025-59287, a critical vulnerability in WSUS that allows remote code execution with SYSTEM privileges, following active exploitation after the release of a proof-of-concept and the initial patch on October 14 proved inadequate.",
+          "url": "https://www.csoonline.com/article/4078952/critical-microsoft-wsus-flaw-exploited-in-wild-after-insufficient-patch.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a20",
+          "order": 4,
+          "title": "GLOBALCVE (WEBAPP)",
+          "summary": "A unified, open-source hub for global vulnerability intelligence.",
+          "url": "https://links.tldrnewsletter.com/aGyhT8",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-28:a21",
+          "order": 5,
+          "title": "CONFIGURE MICROSOFT INTUNE FOR INCREASED SECURITY",
+          "summary": "A collection of settings for Microsoft Intune for securing tenants, devices, and data.",
+          "url": "https://learn.microsoft.com/en-us/intune/intune-service/protect/zero-trust-configure-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "learn.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

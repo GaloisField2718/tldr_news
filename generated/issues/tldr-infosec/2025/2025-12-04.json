@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-04",
+  "source_path": "TLDR InfoSec/article_04-12-2025.md",
+  "source_content_hash": "sha256:41b8db13e0fb7e8839c447ab21b6c8c47ae9fbe083bb73448a5e897980a71121",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Today's social engineering spans far beyond the email inbox. Bad actors use AI to phish, and are using SMS texts, voicemails, and even video chats to scam.",
+          "url": "https://www.adaptivesecurity.com/lp/nb/free-phishing-test?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20251204",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a06",
+          "order": 1,
+          "title": "EVEREST RANSOMWARE CLAIMS ASUS BREACH AND 1TB DATA THEFT",
+          "summary": "The Everest ransomware group claimed responsibility for breaching ASUS and exfiltrating over 1TB of data allegedly containing proprietary camera source code, firmware, and drivers for devices with built-in cameras. The group issued a 21-hour deadline for ASUS to respond via Qtox encrypted messaging, following recent claimed attacks on Under Armour, Petrobras, and Iberia airline. ASUS has neither confirmed nor denied the breach, which, if verified, would mark the second significant infrastructure compromise since the 2019 ShadowHammer supply chain attack.",
+          "url": "https://hackread.com/everest-ransomware-asus-breach-1tb-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a07",
+          "order": 2,
+          "title": "GMARKET SUFFERS UNAUTHORIZED PAYMENT INCIDENT AFFECTING 60 USERS AMID HACKING WOES",
+          "summary": "Financial authorities have begun an emergency on-site inspection of the Korean e-commerce platform Gmarket after reports of unauthorized mobile payments. The attackers purchased mobile gift certificates using credit cards registered with Gmarket's simple payment service. Gmarket claims that the unauthorized payments resulted from account compromise, not a data breach.",
+          "url": "https://www.koreatimes.co.kr/business/20251203/gmarket-suffers-unauthorized-payment-incident-affecting-60-users-amid-hacking-woes?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "koreatimes.co.kr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a08",
+          "order": 3,
+          "title": "K7 ANTIVIRUS VULNERABILITY ALLOWS ATTACKERS TO GAIN SYSTEM-LEVEL PRIVILEGES",
+          "summary": "A security researcher discovered a privilege escalation vulnerability in the K7 Ultimate Security antivirus while investigating an unrelated DoS vulnerability. The vulnerability exploited named pipes with overly permissive access control lists, allowing a non-admin user to execute arbitrary code as SYSTEM during fake updates. K7 worked with the researcher to issue three patches to provide interim fixes for the vulnerability pending full ACL enforcement in a future release.",
+          "url": "https://cybersecuritynews.com/k7-antivirus-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a09",
+          "order": 1,
+          "title": "FROM ZERO TO SYSTEM: BUILDING PRINTSPOOFER FROM SCRATCH",
+          "summary": "A Windows privilege escalation technique exploits named pipes and the Print Spooler's RPC interface to elevate accounts with SeImpersonatePrivilege, such as IIS app pool identities, to SYSTEM. It exploits its lack of SQOS protection and a path-validation bug that can be bypassed by crafting backslash/forward-slash-separated pipe paths to trigger SYSTEM connections to an attacker‑controlled pipe.",
+          "url": "https://bl4ckarch.github.io/posts/PrintSpoofer_from_scratch/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "bl4ckarch.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a10",
+          "order": 2,
+          "title": "68% OF PHISHING WEBSITES ARE PROTECTED BY CLOUDFLARE",
+          "summary": "Modern phishing operations increasingly rely on mainstream infrastructure like Cloudflare, major cloud providers, and popular developer-focused TLDs such as .dev and .app to appear legitimate and resist takedown. Attackers mix disposable direct-hosted servers with CDN-protected setups, often hiding behind services like Vercel, GitHub Pages, and other trusted platforms that organizations cannot simply block. Phishing-as-a-Service ecosystems now provide turnkey kits with MFA bypass, session cookie theft, and advanced evasion, heavily targeting brands like Meta, Amazon, and PayPal.",
+          "url": "https://blog.sicuranext.com/68-of-phishing-websites-are-protected-by-cloudflare/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.sicuranext.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a11",
+          "order": 1,
+          "title": "ZEROCRUMB",
+          "summary": "ZeroCrumb bypasses the Chrome Elevation Service by impersonating a Chrome instance to dump app bound protected credentials and cookies without privileges.",
+          "url": "https://github.com/internetangel/ZeroCrumb?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a12",
+          "order": 2,
+          "title": "CYBER STARTUP FRENETIK LAUNCHES WITH PATENTED DECEPTION TECHNOLOGY THAT BETS AGAINST THE AI ARMS RACE",
+          "summary": "Maryland-based Frenetik emerged from stealth with patented \"Deception In-Use\" technology (US Patent 12,463,981) that continuously rotates active identities and resources across Microsoft Entra, AWS, Google Cloud, and on-premises environments to invalidate attacker reconnaissance. The approach exploits information asymmetry by ensuring defenders receive real-time change notifications through out-of-band channels while attackers operate on stale intelligence, funneling them into honeypots and decoys. A free community version is available for organizations seeking to implement active deception without extensive tuning or analyst oversight.",
+          "url": "https://hackread.com/cyber-startup-frenetik-launches-with-patented-deception-technology-that-bets-against-the-ai-arms-race/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a13",
+          "order": 3,
+          "title": "FLOWSINT",
+          "summary": "Flowsint is an open-source OSINT graph exploration tool designed for ethical investigation, transparency, and verification.",
+          "url": "https://github.com/reconurge/flowsint?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a14",
+          "order": 1,
+          "title": "RESEARCHERS CAPTURE LAZARUS APT'S REMOTE-WORKER SCHEME LIVE ON CAMERA",
+          "summary": "Researchers from BCA LTD, NorthScan, and ANY.RUN captured Lazarus Group's Famous Chollima division operating live by deploying sandbox VMs disguised as developer workstations to trap operators targeting Western companies in finance, crypto, healthcare, and engineering sectors. The investigation revealed a toolkit focused on identity takeover rather than malware. Organizations should implement enhanced vetting for remote hires as attackers request full identity documents and 24/7 laptop access to infiltrate companies without deploying traditional malicious payloads.",
+          "url": "https://thehackernews.com/2025/12/researchers-capture-lazarus-apts-remote.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a15",
+          "order": 2,
+          "title": "SECURITY RESEARCHER FUMES AT LOW MACOS BUG BOUNTY REWARDS",
+          "summary": "The new Apple Security Bounty payouts devalue macOS. Full Transparency, Consent, and Control (TCC) bypasses are down from $30.5k to just $5k, while other TCC categories have been reduced from $5-$10k to just $1k. This shows an admission by Apple that it can't fix everything and is prioritizing iPhone users over Mac users.",
+          "url": "https://links.tldrnewsletter.com/J77iSa",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a16",
+          "order": 3,
+          "title": "FRAUDULENT GAMBLING NETWORK MAY ACTUALLY BE SOMETHING MORE NEFARIOUS",
+          "summary": "A long‑running online gambling operation targeting Indonesian users is built on hundreds of thousands of owned and hijacked domains, compromised WordPress/PHP sites, and malicious Android apps. Its cost, scale, and advanced tradecraft point to an APT-style, possibly state-aligned group that uses the gambling infrastructure as both a revenue stream and cover for stealthy access to Western government and industry networks.",
+          "url": "https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-04:a17",
+          "order": 1,
+          "title": "CODACY NOW ENFORCES AI CODE SECURITY AT SCALE",
+          "summary": "Codacy's new AI Risk Hub enforces policies against GenAI-related code risks. Catch unapproved model calls, invisible unicode injections, secrets and insecure dependencies across the codebase, instantly.",
+          "url": "https://codacy.com/ai-risk-hub?utm_campaign=19062107-TLDR+Ad+Placement&utm_source=TLDR&utm_medium=newsletter&utm_term=tldr-infosec-quicklinks&utm_content=ai-risk-hub",
+          "reading_time_minutes": null,
+          "source_domain": "codacy.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a17",
+          "order": 2,
+          "title": "Learn how to get started",
+          "summary": "",
+          "url": "https://codacy.com/ai-risk-hub?utm_campaign=19062107-TLDR+Ad+Placement&utm_source=TLDR&utm_medium=newsletter&utm_term=tldr-infosec-quicklinks&utm_content=ai-risk-hub",
+          "reading_time_minutes": null,
+          "source_domain": "codacy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a18",
+          "order": 3,
+          "title": "INDIA ORDERS MESSAGING APPS TO WORK ONLY WITH ACTIVE SIM CARDS TO PREVENT FRAUD AND MISUSE",
+          "summary": "India's Department of Telecommunications directed messaging apps, including WhatsApp, Telegram, and Signal, to require account linking to an active SIM card and implement mandatory 6-hour web session logouts within 90 days to combat cross-border fraud, phishing, and \"digital arrest\" scams that exploit anonymous or migrated accounts.",
+          "url": "https://thehackernews.com/2025/12/india-orders-messaging-apps-to-work.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a19",
+          "order": 4,
+          "title": "GOOGLE PATCHES 107 ANDROID FLAWS, INCLUDING TWO BEING ACTIVELY EXPLOITED",
+          "summary": "Google's December 2025 Android Security Bulletin addressed 107 vulnerabilities, including two actively exploited high-severity framework flaws (CVE-2025-48633 and CVE-2025-48572) that enable local code execution via improper input validation on Android 13-16.",
+          "url": "https://www.malwarebytes.com/blog/news/2025/12/google-patches-107-android-flaws?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "malwarebytes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-04:a20",
+          "order": 5,
+          "title": "HERE'S YOUR WORST NIGHTMARE: E-TAILER CAN ONLY RESUME PARTIAL SALES 45 DAYS AFTER RANSOMWARE ATTACK",
+          "summary": "Japanese e-tailer Askul restored B2B online sales and warehouse systems after a ransomware attack in October disrupted ordering, shipping, and logistics for its brands and partners, forcing temporary reliance on fax-based ordering for critical customers.",
+          "url": "https://www.theregister.com/2025/12/03/askul_partial_ransomware_recovery/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

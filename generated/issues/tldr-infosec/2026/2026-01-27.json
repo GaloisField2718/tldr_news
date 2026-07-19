@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-27",
+  "source_path": "TLDR InfoSec/article_27-01-2026.md",
+  "source_content_hash": "sha256:6d7a00fbc143c4aeda273a9c9cb168539ec1c5e70e210294cba254d7f0514f6b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a04",
+          "order": 1,
+          "title": "SUBLIME SECURITY 2026 EMAIL THREAT RESEARCH REPORT",
+          "summary": "Email threats evolved quickly in 2025, and security teams felt the",
+          "url": "https://sublime.security/resources/email-threat-research-report-2026?utm_source=tldr&utm_medium=content-synd&utm_campaign=report",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a04",
+          "order": 2,
+          "title": "impact. Sublime Security's 2026 EMAIL THREAT RESEARCH REPORT",
+          "summary": "analyzes real-world email attacks across organizations of all sizes to reveal what actually changed and why it matters.",
+          "url": "https://sublime.security/resources/email-threat-research-report-2026?utm_source=tldr&utm_medium=content-synd&utm_campaign=report",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a04",
+          "order": 3,
+          "title": "👉 Download the report",
+          "summary": "",
+          "url": "https://sublime.security/resources/email-threat-research-report-2026?utm_source=tldr&utm_medium=content-synd&utm_campaign=report",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a05",
+          "order": 1,
+          "title": "PALO ALTO NETWORKS PATCHES FIREWALLS AFTER DISCOVERY OF A NEW DENIAL-OF-SERVICE FLAW",
+          "summary": "Palo Alto Networks has patched CVE-2026-0227 (CVSS 7.7), a high-severity DoS vulnerability in PAN-OS affecting firewalls with GlobalProtect gateway or portal enabled that allows unauthenticated attackers to force devices into maintenance mode. A PoC already exists, and the flaw mirrors CVE-2024-3393 from late 2024, which was exploited as a zero-day before patches were available. Organizations running PAN-OS versions 10.2 through 12.1 with GlobalProtect enabled should apply patches immediately, while most Prisma Access customers have already been automatically updated.",
+          "url": "https://www.csoonline.com/article/4117730/palo-alto-networks-patches-firewalls-after-discovery-of-a-new-denial-of-service-flaw-2.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a06",
+          "order": 2,
+          "title": "SYNOLOGY DSM 7.3.2",
+          "summary": "A local privilege escalation vulnerability chain in Synology DSM 7.3.2-86009 allows any authenticated user with shell access to gain root when DownloadStation with BitTorrent is enabled. The exploit chains three misconfigurations: a world-writable Transmission RPC socket running as root, a world-writable /volume1/@eaDir/ system directory, and a missing nosuid mount flag on /volume1, enabling attackers to configure Transmission's script-torrent-done-filename to execute arbitrary payloads as root upon torrent completion. A full PoC is available, and the vulnerability has been reported to Synology PSIRT.",
+          "url": "https://thecontractor.io/synology-dsm-7-3-2/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "thecontractor.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a07",
+          "order": 3,
+          "title": "KONNI HACKERS TARGET BLOCKCHAIN ENGINEERS WITH AI-BUILT MALWARE",
+          "summary": "Researchers from CheckPoint have discovered a new malicious campaign from the North Korean Konni hackers. The attack begins with a Discord link that downloads a zip archive containing a lure document and two batch files which downloads a PowerShell backdoor and then deletes other signs of infection. Notably, the malware contains signs of it being AI-generated, such as comments with variable placeholders.",
+          "url": "https://www.bleepingcomputer.com/news/security/konni-hackers-target-blockchain-engineers-with-ai-built-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a08",
+          "order": 1,
+          "title": "ORGANIZED TRAFFER GANG ON THE RISE TARGETING WEB3 EMPLOYEES AND CRYPTO HOLDERS",
+          "summary": "Hybrid Analysis uncovered a sophisticated Russian-speaking Traffer operation targeting cryptocurrency users and Web3 employees through fake Electron applications disguised as AI productivity tools, meeting software, and gaming platforms, with documented earnings of at least $2.4 million. The campaign uses 80+ domains, elaborate fake company ecosystems with purchased social media accounts, and abused code-signing certificates to deliver second-stage payloads, with shared infrastructure suggesting links to the Marko Polo, CrazyEvil, and Wagmi Traffer groups. Security teams should monitor for the provided IOCs and exercise caution with unsolicited software downloads from Web3-themed applications, particularly those requiring invitation codes or tokens for access.",
+          "url": "https://hybrid-analysis.blogspot.com/2026/01/organized-traffer-gang-on-rise.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "hybrid-analysis.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a09",
+          "order": 2,
+          "title": "EXPLOITING KEYSPACE REDUCTION AND RELAY ATTACKS IN 3DES AND AES-PROTECTED NFC TECHNOLOGIES",
+          "summary": "Modern NFC cards used in hotel keys, tickets, and access systems can be attacked not by breaking 3DES or AES, but by abusing how keys and memory are handled after authentication. By relaying the legit reader–card handshake and then partially overwriting key bytes, attackers can shrink the effective keyspace from astronomically large to something brute‑forceable with modest hardware. Weak or missing integrity checks, non‑atomic key writes, and flawed non‑NXP clone cards make it possible to recover full keys from one or a few tags, sometimes in under a minute. Proper key diversification, locking key pages, enabling CMAC/secure messaging, and migrating to stronger platforms like DESFire EV3 sharply reduce these risks.",
+          "url": "https://breakmeifyoucan.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "breakmeifyoucan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a10",
+          "order": 3,
+          "title": "AMAZON CLOUDFRONT MTLS WITH OPEN-SOURCE SERVERLESS CA",
+          "summary": "AWS added support for CloudFront to use mTLS to require client certificates in requests at re:Invent 2025. This article walks through setting up CloudFront to use mTLS via an open-source serverless CA that the author developed. AWS should offer a standardized Trust Store, possibly in ACM, rather than having all services that support mTLS implement it separately.",
+          "url": "https://links.tldrnewsletter.com/HLBQGm",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a11",
+          "order": 1,
+          "title": "SEC-CONTEXT",
+          "summary": "Comprehensive security anti-pattern reference distilled from 150+ sources designed for LLM consumption, addressing the 86% XSS failure rate and other critical vulnerabilities in AI-generated code. Provides two reference documents covering 25+ anti-patterns with pseudocode examples, Common Weakness Enumeration (CWE) references, and mitigation strategies optimized for use as system prompts, Retrieval-Augmented Generation (RAG) references, or dedicated security review agents.",
+          "url": "https://github.com/Arcanum-Sec/sec-context?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a12",
+          "order": 2,
+          "title": "WINDOWS-PENETRATION-TOOLS",
+          "summary": "A comprehensive Windows security toolkit written in C++ using MFC, designed for security researchers, penetration testers, and developers interested in Windows internals. This project demonstrates various security techniques, including DLL injection, process manipulation, privilege escalation, and system monitoring capabilities.",
+          "url": "https://github.com/ftcEDITON/Windows-Penetration-Tools?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a13",
+          "order": 3,
+          "title": "UPWIND (PRODUCT LAUNCH)",
+          "summary": "Upwind provides a runtime-native CNAPP platform that gives deep visibility into cloud networks, APIs, and data flows, reducing alert noise and helping prioritize real risk.",
+          "url": "https://www.upwind.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "upwind.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a14",
+          "order": 1,
+          "title": "149M LOGINS FROM ROBLOX, TIKTOK, NETFLIX, CRYPTO WALLETS FOUND ONLINE",
+          "summary": "A security researcher discovered a 96GB database containing 149 million stolen credentials for services including Facebook (17M), Netflix (3.4M), Binance (420K), Gmail (48M), and government domains from multiple countries, exposed online without authentication. The data appeared to be collected via infostealer malware through an organized system with reversed labeling to sort by device and website. The database was actively growing during the month it took to get the hosting provider to take it offline. Users should enable MFA, use unique passwords via password managers, and monitor for credential exposure on services like Have I Been Pwned.",
+          "url": "https://hackread.com/logins-roblox-tiktok-netflix-crypto-wallets-found/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a15",
+          "order": 2,
+          "title": "MALICIOUS VS CODE AI EXTENSIONS WITH 1.5 MILLION INSTALLS STEAL DEVELOPER SOURCE CODE",
+          "summary": "Security firm Koi Security uncovered two popular AI-branded VS Code extensions that quietly exfiltrate every opened and edited file to China-based servers, while still functioning as legitimate coding assistants. They also support remote-triggered bulk exfiltration of up to 50 workspace files, fingerprint devices via embedded analytics SDKs, and are linked to a broader “MaliciousCorgi” campaign alongside new PackageGate flaws in JavaScript package managers that weaken common supply chain defenses.",
+          "url": "https://thehackernews.com/2026/01/malicious-vs-code-ai-extensions-with-15.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a16",
+          "order": 3,
+          "title": "TIKTOK USERS FREAK OUT OVER APP'S “IMMIGRATION STATUS” COLLECTION - HERE'S WHAT IT MEANS",
+          "summary": "TikTok updated its privacy policy as part of its new ownership agreement, which triggered user notifications. Many users noted concerning amounts of sensitive data the app collects, such as precise location data and immigration status. TikTok has noted that this disclosure is required by laws such as California's CCPA.",
+          "url": "https://techcrunch.com/2026/01/23/tiktok-users-freak-out-over-apps-immigration-status-collection-heres-what-it-means/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-27:a17",
+          "order": 1,
+          "title": "CHATGPT TEMPORARY CHAT FEATURE IS GETTING A MUCH-NEEDED UPGRADE",
+          "summary": "OpenAI is testing an upgrade to ChatGPT's temporary chat feature that allows users to retain personalization while still preventing the conversation from being saved to chat history or used for model training.",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-temporary-chat-feature-is-getting-a-much-needed-upgrade/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a18",
+          "order": 2,
+          "title": "DATA THIEVES BORROW NIKE'S 'JUST DO IT' MANTRA, CLAIM THEY RAN OFF WITH 1.4TB .",
+          "summary": "WorldLeaks claims to have stolen 1.4TB of internal Nike data, mainly design and manufacturing files rather than customer records.",
+          "url": "https://www.theregister.com/2026/01/26/data_thieves_claim_nike_data_haul/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-27:a19",
+          "order": 3,
+          "title": "APPLE C-SERIES MODEM ENABLES NEW PRIVACY-FOCUSED LIMIT PRECISE LOCATION FEATURE",
+          "summary": "iOS 26.3 introduces a new \"limit precise location\" setting for devices with Apple's C-series modem that obfuscates user location data from cellular carriers, reducing both third-party tracking and government surveillance capabilities.",
+          "url": "https://links.tldrnewsletter.com/SVmWRa",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

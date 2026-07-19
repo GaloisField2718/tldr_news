@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-24",
+  "source_path": "TLDR InfoSec/article_24-02-2026.md",
+  "source_content_hash": "sha256:3c439e6a72afda46b7426789905a9542f3b2c6ad731c21f831d01cc5bb3d1bcb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a04",
+          "order": 1,
+          "title": "AI ATTACKS MOVE AT MACHINE SPEED. YOUR SOC NEEDS INSIGHTS",
+          "summary": "Attackers are using AI to automate lateral movement, mapping your network in seconds and minutes instead of weeks. WHY",
+          "url": "https://www.illumio.com/insights-free-trial?utm_source=tldr&utm_medium=newsletter&utm_adgroup=insights_week2",
+          "reading_time_minutes": null,
+          "source_domain": "illumio.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a04",
+          "order": 2,
+          "title": "START FREE 14-DAY TRIAL TO SEE WHAT YOUR SIEM IS MISSING. →",
+          "summary": "",
+          "url": "https://www.illumio.com/insights-free-trial?utm_source=tldr&utm_medium=newsletter&utm_adgroup=insights_week2",
+          "reading_time_minutes": null,
+          "source_domain": "illumio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a05",
+          "order": 1,
+          "title": "DISCOVERY & ANALYSIS OF CVE-2025-29969",
+          "summary": "CVE-2025-29969 is a remote code execution vulnerability in the MS-EVEN RPC protocol — enabled by default on Windows 11 and Windows Server 2025 — that allows low-privileged users to write arbitrary files remotely by exploiting a TOCTOU flaw in the EventLog backup function, effectively bypassing default C$ share limitations. The attack chain combines a hidden CreateFile primitive for remote file/directory existence checks with an arbitrary write primitive achieved by swapping an attacker-controlled EVTX file on a remote SMB share between header validation and backup, enabling code execution via Startup folder batch scripts or DLL hijacking. Microsoft patched the TOCTOU write primitive in May 2025, though the recon capabilities enabling remote file enumeration across domain-joined machines remain unpatched.",
+          "url": "https://www.safebreach.com/blog/safebreach_labs_discovers_cve-2025-29969/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "safebreach.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a06",
+          "order": 2,
+          "title": "JOOMLA! NOVARAIN/TASSOS FRAMEWORK VULNERABILITIES",
+          "summary": "",
+          "url": "https://ssd-disclosure.com/joomla-novarain-tassos-framework-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "ssd-disclosure.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a07",
+          "order": 3,
+          "title": "US HEALTHCARE DIAGNOSTIC FIRM SAYS 140,000 AFFECTED BY DATA BREACH",
+          "summary": "Everest ransomware actors accessed Vikor Scientific (now Vanta Diagnostics) data via revenue cycle vendor Catalyst RCM, using compromised credentials to steal about 12GB of files containing names, dates of birth, payment card data, medical details, and insurance information. Roughly 140,000 individuals are currently listed as affected, but the final impact may be higher as counts from all linked entities remain unclear.",
+          "url": "https://links.tldrnewsletter.com/wviFYz",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a08",
+          "order": 1,
+          "title": "LLMS IN THE KILL CHAIN: INSIDE A CUSTOM MCP TARGETING FORTIGATE DEVICES ACROSS CONTINENTS",
+          "summary": "A misconfigured server exposed a full intrusion toolkit where a threat actor integrated LLMs directly into the attack workflow — using DeepSeek to generate attack plans from recon data and Claude Code to conduct live vulnerability assessments — while targeting FortiGate appliances across 106 countries with 2,516 identified targets. Custom tools ARXON (an MCP server bridging LLM analysis with attack scripts) and CHECKER2 (a Go-based Docker orchestrator) automated the pipeline from stolen VPN config ingestion through internal scanning to LLM-driven exploitation planning, evolving from the open-source HexStrike framework in roughly eight weeks. Defenders should audit for unauthorized VPN accounts, unexpected SSH access, and unapproved firewall policy changes, as the dual-model approach of selecting whichever LLM is most permissive for a given task lowers the skill barrier for managing concurrent intrusions at scale.",
+          "url": "https://cyberandramen.net/2026/02/21/llms-in-the-kill-chain-inside-a-custom-mcp-targeting-fortigate-devices-across-continents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "cyberandramen.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a09",
+          "order": 2,
+          "title": "YOUR SAMSUNG WEATHER APP IS A FINGERPRINT",
+          "summary": "Samsung's pre-installed Weather app quietly creates a highly unique fingerprint from the combination of saved location IDs (placeid) it sends to The Weather Company's API, with 96.4% of sampled devices uniquely identifiable across days. These fingerprints persist over time, survive IP and network changes, and can be resolved into precise locations using hardcoded API keys that work from any client. Requests often include both hashed placeid values and raw GPS coordinates, giving IBM's Weather Company and Samsung rich, granular location profiles that echo a broader industry pattern of monetizing weather-based location data.",
+          "url": "https://www.buchodi.com/your-samsung-weather-app-is-a-fingerprint/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "buchodi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a10",
+          "order": 3,
+          "title": "NOVEL TECHNIQUE TO DETECT CLOUD THREAT ACTOR OPERATIONS",
+          "summary": "Unit 42 researchers introduced a novel detection method that fingerprints cloud threat actors by linking their known MITRE ATT&CK techniques to specific alert patterns. This approach successfully distinguished Muddled Libra (Scattered Spider) and Silk Typhoon operations across 22 industries from June 2024 to June 2025, with only three shared alert signatures out of around 120, highlighting their differing tactics. Industry alert spikes correlated with publicly reported campaigns, such as a 25% rise in transportation sector alerts during Muddled Libra's aviation attacks, enabling defenders to identify threats early by investigating actor-related alerts over a 30-day window.",
+          "url": "https://unit42.paloaltonetworks.com/tracking-threat-groups-through-cloud-logging/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a11",
+          "order": 1,
+          "title": "SIPER",
+          "summary": "Siper is a high-performance, XDP-based IP blacklist firewall built with Go and eBPF that drops malicious traffic at the NIC driver level before packets reach the kernel's networking stack. It supports CIDR-based blocking via BPF LPM Trie maps, persistent JSON-based rule management, and real-time drop/pass metrics. The minimalist architecture separates a Go CLI control plane from the kernel-space data plane, offering significantly lower CPU overhead than iptables or nftables under heavy DDoS conditions.",
+          "url": "https://github.com/fksvs/siper?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a12",
+          "order": 2,
+          "title": "TRIVYSUMMARY",
+          "summary": "TrivySummary summarises Trivy scan JSON output for reporting purposes. Package vulnerabilities are collapsed down to the respective CVE, and headline counts of vulnerabilities at different priorities. As well as the vendor severity and CVSS v3 score provided by Trivy, EPSS scores can also be retrieved, allowing the exploitability and severity of all vulnerabilities to be graphed and prioritised.",
+          "url": "https://github.com/EdgewareRoad/TrivySummary?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a13",
+          "order": 3,
+          "title": "DEPTHFIRST (PRODUCT LAUNCH)",
+          "summary": "Depthfirst is an AI security startup whose General Security Intelligence platform scans and analyzes codebases and workflows to detect issues, prevent credential exposure, and monitor open source and third‑party components for AI‑driven threats.",
+          "url": "https://depthfirst.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "depthfirst.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a14",
+          "order": 1,
+          "title": "HACKERS HIDE PULSAR RAT INSIDE PNG IMAGES IN NEW NPM SUPPLY CHAIN ATTACK",
+          "summary": "Veracode researchers discovered a typosquatted NPM package called \"buildrunner-dev\" that delivers the Pulsar RAT by hiding malicious code within PNG images using steganography, extracting payloads from RGB pixel values at runtime. The attack chain employs a heavily obfuscated 1,600-line batch file with only 21 functional lines, detects and evades AV products like ESET and Malwarebytes, and uses process hollowing to inject the final payload into legitimate processes. Developers should carefully verify package names and audit dependencies, as supply chain attacks increasingly leverage image-based steganography to bypass traditional file-scanning tools.",
+          "url": "https://hackread.com/hackers-pulsar-rat-png-images-npm-supply-chain-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a15",
+          "order": 2,
+          "title": "PAYPAL NOTIFIES CUSTOMERS OF DATA BREACH THAT EXPOSED SSNS AND MORE FOR NEARLY 6 MONTHS",
+          "summary": "PayPal disclosed a software error in its Working Capital loan app that exposed the names, contact details, SSNs, and dates of birth of 100 business customers between July and mid-December 2025. The company reversed the faulty code, reset passwords, and detected some unauthorized transactions.",
+          "url": "https://www.tomsguide.com/computing/online-security/paypal-notifies-customers-of-data-breach-that-exposed-ssns-and-more-for-nearly-6-months?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "tomsguide.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a16",
+          "order": 3,
+          "title": "INFOSEC COMMUNITY PANICS AS ANTHROPIC ROLLS OUT CLAUDE CODE SECURITY CHECKER",
+          "summary": "Anthropic's new Claude Code Security feature scans codebases for vulnerabilities, proposes patches, and claims to have surfaced hundreds of high‑severity issues in open source projects, spooking security investors and pushing stocks like CrowdStrike down. It joins Google, Microsoft, Amazon, and OpenAI in deploying AI agents for bug hunting, but all still require human review and face questions over false positives, costs, and marketing hype.",
+          "url": "https://www.theregister.com/2026/02/23/claude_code_security_panic/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-24:a17",
+          "order": 1,
+          "title": "ESSENTIAL GUIDE FOR IT OPS TEAMS ON BUILDING SCALABLE, RELIABLE INFRASTRUCTURE",
+          "summary": "Modern IT infrastructure moves faster than manual workflows can handle. Read this Tines guide [17] to learn how to SCALE INFRASTRUCTURE PREDICTABLY, without sacrificing performance or governance.",
+          "url": "https://www.tines.com/access/guide/the-future-of-it-infrastructure/?utm_source=TLDR&utm_medium=paid_media&utm_content=newsletter-quicklink-2402",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a18",
+          "order": 2,
+          "title": "TREASURY ANNOUNCES PUBLIC-PRIVATE INITIATIVE TO STRENGTHEN CYBERSECURITY AND RISK MANAGEMENT FOR AI",
+          "summary": "The US Treasury announced a public-private initiative through the AI Executive Oversight Group that will release six resources throughout February to help financial institutions — particularly small and mid-sized ones — manage AI-specific cybersecurity risks and deploy AI more securely.",
+          "url": "https://home.treasury.gov/news/press-releases/sb0395?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "home.treasury.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a19",
+          "order": 3,
+          "title": "LUXURY HOTEL STAYS FOR JUST €0.01. SPANISH POLICE ARREST HACKER",
+          "summary": "Spanish police arrested a 20-year-old in Madrid who manipulated a hotel booking site's payment gateway validation process to secure luxury rooms at €0.01 per reservation.",
+          "url": "https://securityaffairs.com/188344/cyber-crime/luxury-hotel-stays-for-just-e0-01-spanish-police-arrest-hacker.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-24:a20",
+          "order": 4,
+          "title": "PREDATOR SPYWARE HOOKS IOS SPRINGBOARD TO HIDE MIC, CAMERA ACTIVITY",
+          "summary": "Intellexa's Predator spyware suppresses iOS camera and microphone recording indicators by hooking SpringBoard's SBSensorActivityDataProvider, nullifying sensor activity updates before they reach the UI layer.",
+          "url": "https://www.bleepingcomputer.com/news/security/predator-spyware-hooks-ios-springboard-to-hide-mic-camera-activity/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

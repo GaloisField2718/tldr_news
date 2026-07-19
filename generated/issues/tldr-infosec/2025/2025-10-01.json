@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-10-01",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-10-01",
+  "source_path": "TLDR InfoSec/article_01-10-2025.md",
+  "source_content_hash": "sha256:53feeb3f7a7cb9134a57bb21f29a8c6094ea11d13ba0ba16dad8714c12abed5c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-10-01",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a04",
+          "order": 1,
+          "title": "WHEN YOUR CEO CALLS, WILL YOU KNOW IT'S REAL?",
+          "summary": "Phishing has gone beyond email. Today's attackers use AI-generated voices, videos, and interactive deepfakes of company executives. They can fool almost anyone - including you and your coworkers.",
+          "url": "https://www.adaptivesecurity.com/demo/adaptive-security-awareness-training?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20251001",
+          "reading_time_minutes": null,
+          "source_domain": "adaptivesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a06",
+          "order": 1,
+          "title": "CISA SOUNDS ALARM ON CRITICAL SUDO FLAW ACTIVELY EXPLOITED IN LINUX AND UNIX SYSTEMS",
+          "summary": "CISA added CVE-2025-32463, a critical sudo vulnerability with a CVSS score of 9.3, to its Known Exploited Vulnerabilities catalog due to evidence of active exploitation in the wild. The flaw affects sudo versions before 1.9.17p1 and allows local attackers to leverage the --chroot option to execute arbitrary commands as root, even without sudoers file permissions. Federal agencies must patch by October 20, while organizations should immediately update sudo to version 1.9.17p1 or later to prevent privilege escalation attacks.",
+          "url": "https://thehackernews.com/2025/09/cisa-sounds-alarm-on-critical-sudo-flaw.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a07",
+          "order": 2,
+          "title": "JAPAN'S LARGEST BREWER SUSPENDS OPERATIONS DUE TO CYBERATTACK",
+          "summary": "Asahi Group Holdings, Japan's leading brewery with $20 billion in revenue and holding a third of the market, experienced a cyberattack that disrupted ordering, shipping, call centers, and customer service. The incident, which began at 7 AM and impacted only Japan, did not result in confirmed data leaks, although investigations are ongoing, and no group has claimed responsibility. Companies should enhance their business continuity plans, adopt network segmentation, and develop incident response strategies to manage disruptions, including communication with customers and partners.",
+          "url": "https://www.bleepingcomputer.com/news/security/japans-largest-brewer-suspends-operations-due-to-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a08",
+          "order": 3,
+          "title": "TILE'S LACK OF ENCRYPTION COULD MAKE TRACKER OWNERS VULNERABLE TO STALKING",
+          "summary": "Security flaws in Tile's tracking devices have raised concerns about user vulnerability. Researchers found that these devices lack proper encryption and fail to adequately rotate identification details, making them easily exploitable for stalking and tracking purposes. Despite noting recent improvements, Tile's approach falls short compared to other brands, as anti-theft features can be abused, and privacy remains at risk for users relying on the technology.",
+          "url": "https://www.theverge.com/news/787836/tile-trackers-stalking-research-unencrypted?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a09",
+          "order": 1,
+          "title": "COHERENCE: INSIDER RISK STRATEGY'S NEW CORE PRINCIPLE",
+          "summary": "This article proposes \"coherence\" as a new foundational principle for insider risk management, arguing that traditional control and surveillance approaches fail because they don't address human alignment and organizational meaning. The author identifies \"drift\" - gradual detachment from purpose and clarity - as an early warning signal that precedes both malicious actions and human errors, manifesting through compliance without conviction, corporate messaging noise, and reduced employee initiative. Security professionals should focus on building semantic consistency in messaging, creating feedback channels to detect narrative drift, partnering cross-functionally to align organizational language, and treating coherence as operational infrastructure rather than just cultural enhancement.",
+          "url": "https://www.csoonline.com/article/4064326/coherence-insider-risk-strategys-new-core-principle.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a10",
+          "order": 2,
+          "title": "ABUSING NOTION'S AI AGENT FOR DATA THEFT",
+          "summary": "Notion's AI agents are susceptible to prompt injection attacks exploiting Simon Willson's 'lethal trifecta'—access to private data, exposure to untrusted content, and external communication. Attackers can embed malicious instructions in PDFs with white text instructing AI to extract and exfiltrate confidential data through web searches to attacker-controlled URLs. Security professionals should evaluate AI deployments carefully, as current systems lack effective defenses against such attacks, and organizations should enforce strict data access and network controls for sensitive AI systems.",
+          "url": "https://www.schneier.com/blog/archives/2025/09/abusing-notions-ai-agent-for-data-theft.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "schneier.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a11",
+          "order": 3,
+          "title": "FIRST MALICIOUS MCP IN THE WILD: THE POSTMARK BACKDOOR THAT'S STEALING YOUR EMAILS",
+          "summary": "MCP servers, designed to help AI assistants automate tasks like sending emails, can pose significant security risks if abused. Recently, a popular npm package called postmark-mcp was discovered to be exfiltrating emails—including sensitive content like password resets and confidential memos—to a remote server controlled by its developer. The backdoor was introduced in a single line of code within an otherwise trustworthy tool, highlighting how quickly legitimate infrastructure can become compromised.",
+          "url": "https://www.koi.security/blog/postmark-mcp-npm-malicious-backdoor-email-theft?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "koi.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a12",
+          "order": 1,
+          "title": "GET EXCLUSIVE 2025 THREAT INTELLIGENCE AT N-ABLE'S CYBER RESILIENCE SUMMIT",
+          "summary": "Join N-able's CYBER RESILIENCE SUMMIT 2025 [12] on October 16! Gain expert threat intelligence, tactics for defending before, during, and after breaches, and insights from leading security thought-leaders, including Microsoft's Chief Security Advisor for Europe, Sarah Armstrong-Smith, and Francis Odum. Ideal for SMBs & IT pros aiming to survive and thrive in today's evolving threat landscape. Register",
+          "url": "https://www.n-able.com/cyber-resilience-summit-2025?utm_medium=email-paid&utm_source=-promotion&utm_campaign=multi-glbl-l-me-tldr_sept_quick_link_promo_2025_cyber_summit-2025-09-15&utm_content=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "n-able.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a12",
+          "order": 2,
+          "title": "free.",
+          "summary": "",
+          "url": "https://www.n-able.com/cyber-resilience-summit-2025?utm_medium=email-paid&utm_source=-promotion&utm_campaign=multi-glbl-l-me-tldr_sept_quick_link_promo_2025_cyber_summit-2025-09-15&utm_content=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "n-able.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a13",
+          "order": 3,
+          "title": "SAFEHILL EMERGES FROM STEALTH WITH $2.6 MILLION PRE-SEED FUNDING",
+          "summary": "Chicago-based SafeHill (formerly Tacticly) emerged from stealth with $2.6 million in pre-seed funding, notable for having reformed LulzSec leader Hector Monsegur (aka Sabu) as chief research officer. The company offers SecureIQ, a continuous threat exposure management platform that combines AI-driven penetration testing with human validation to provide continuous asset discovery, automated threat assessments, and real-time monitoring. Security teams can leverage this hybrid approach for ongoing penetration testing, rather than conducting point-in-time traditional evaluations, with compliance mapping for frameworks such as PCI-DSS, CMMC, and ISO27001.",
+          "url": "https://links.tldrnewsletter.com/ktkarB",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a14",
+          "order": 4,
+          "title": "MALIFISCAN",
+          "summary": "MalifiScan is a security tool that identifies and blocks malicious packages before they compromise your software supply chain. It monitors vulnerability databases, such as OSV, for new malicious packages and scans your registries and repositories for existing threats. When used with platforms like JFrog Artifactory, it automates exclusion patterns to prevent future downloads of flagged packages, ensuring secure dependencies across development pipelines.",
+          "url": "https://github.com/rotemreiss/MalifiScan?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a15",
+          "order": 5,
+          "title": "CODE PATHFINDER",
+          "summary": "Code Pathfinder, the open-source alternative to GitHub CodeQL, was built with GoLang. Built for advanced structural search, derive insights, and find vulnerabilities in code.",
+          "url": "https://github.com/shivasurya/code-pathfinder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a16",
+          "order": 1,
+          "title": "E-COMMERCE FRAUD-AS-A-SERVICE: HOW SCAMMERS EXPLOIT BRAND TRUST AT SCALE",
+          "summary": "Cybercriminals target e-commerce brands through three primary fraud-as-a-service operations: credential phishing via fake login pages promoted on Facebook and Instagram, fraudulent storefronts that offer fake deals to harvest payment data, and fake job campaigns for work-from-home scams. These attacks utilize Phishing-as-a-Service platforms that simplify the deployment of sophisticated scams, even for non-technical actors, targeting mobile users to evade detection. Organizations should monitor their brand with Google Alerts, educate customers about official sites, deploy Digital Risk Protection tools to detect phishing setups, and establish rapid response procedures for takedown requests and evidence collection.",
+          "url": "https://redhuntlabs.com/blog/e-commerce-fraud-as-a-service-how-scammers-exploit-brand-trust-at-scale/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "redhuntlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a17",
+          "order": 2,
+          "title": "'TRIFECTA' OF GEMINI FLAWS TURN AI INTO ATTACK VEHICLE",
+          "summary": "Google's Gemini AI suite had three critical flaws: Search Personalization enabled injection and data leaks via Chrome history, Cloud Assist allowed prompt manipulation through raw logs, and the Browsing Tool exposed saved data through a side channel. All vulnerabilities could be exploited for data exfiltration. Google has now fixed them.",
+          "url": "https://links.tldrnewsletter.com/t3J4ys",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a18",
+          "order": 3,
+          "title": "SVG PHISHING HITS UKRAINE WITH AMATERA STEALER, PUREMINER",
+          "summary": "A phishing campaign targeting Ukrainian organizations has emerged using emails disguised as official notices from the country's police. These emails contain SVG attachments that trigger fileless attacks when opened, deploying malware including Amatera Stealer and PureMiner. The SVG initiates a download chain using password-protected files that ultimately execute malicious code via in-memory, process-hollowing techniques. The Amatera Stealer collects sensitive information and credentials, while PureMiner hijacks victim resources for cryptocurrency mining. Both can then install additional malware.",
+          "url": "https://www.fortinet.com/blog/threat-research/svg-phishing-hits-ukraine-with-amatera-stealer-pureminer?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "fortinet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-10-01:a19",
+          "order": 1,
+          "title": "IN 2025, SECURITY LOST TO VIBE CODING. MEET VIBESEC.",
+          "summary": "",
+          "url": "https://www.ox.security/events/vibeseccon/?utm_campaign=9574189-TLDR&utm_source=TLDR&utm_medium=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a19",
+          "order": 2,
+          "title": "See the vibe!",
+          "summary": "",
+          "url": "https://www.ox.security/events/vibeseccon/?utm_campaign=9574189-TLDR&utm_source=TLDR&utm_medium=quick_link",
+          "reading_time_minutes": null,
+          "source_domain": "ox.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a20",
+          "order": 3,
+          "title": "TWO-THIRDS OF CISA PERSONNEL COULD BE SENT HOME UNDER SHUTDOWN",
+          "summary": "If the government shuts down, about two-thirds of workers at the Cybersecurity and Infrastructure Security Agency (CISA) could be sent home.",
+          "url": "https://cyberscoop.com/two-thirds-of-cisa-personnel-could-be-sent-home-under-shutdown-september-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a21",
+          "order": 4,
+          "title": "UK GOVERNMENT BAILS OUT JAGUAR LAND ROVER WITH £1.5B LOAN AFTER HACK DISRUPTS VEHICLE PRODUCTION FOR WEEKS",
+          "summary": "After a major cyberattack halted Jaguar Land Rover's production, the UK government stepped in with a £1.5 billion loan guarantee to stabilize the company and its vast supply chain.",
+          "url": "https://techcrunch.com/2025/09/29/uk-government-bails-out-jaguar-land-rover-with-1-5b-loan-after-hack-disrupts-vehicle-production-for-weeks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-10-01:a22",
+          "order": 5,
+          "title": "INTERPOL OPERATION DISRUPTS ROMANCE SCAM AND SEXTORTION NETWORKS IN AFRICA",
+          "summary": "Interpol's Operation Contender 3.0 arrested 260 cybercrime suspects across 14 African countries in a coordinated crackdown targeting romance scam and sextortion networks that caused $2.8 million in losses to nearly 1,500 victims.",
+          "url": "https://cyberscoop.com/interpol-operation-contender-3-africa/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

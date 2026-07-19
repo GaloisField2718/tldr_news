@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-04-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-04-18",
+  "source_path": "TLDR InfoSec/article_18-04-2025.md",
+  "source_content_hash": "sha256:fa0250e2f4fac76a67061f526c5da54d302eb8ffccbff83e1ada017d19a03fee",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-04-18",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-18:a04",
+          "order": 1,
+          "title": "RANSOMWARE GROUP CLAIMS HACKING OF OREGON REGULATOR AFTER DATA BREACH DENIAL",
+          "summary": "Oregon's Department of Environmental Quality (DEQ) is investigating a cyberattack that forced network shutdowns. Despite the agency repeatedly stating it found no evidence of a data breach, the ransomware group Rhysida claims to have stolen 2.5 TB of files, demanding $2.5 million in bitcoin to prevent the auction of the allegedly stolen data.",
+          "url": "https://www.securityweek.com/ransomware-group-claims-hacking-of-oregon-regulator-after-data-breach-denial/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a05",
+          "order": 2,
+          "title": "CRITICAL ERLANG/OTP SSH VULNERABILITY (CVSS 10.0) ALLOWS UNAUTHENTICATED CODE EXECUTION",
+          "summary": "A critical vulnerability (CVE-2025-32433) in Erlang/OTP's SSH implementation allows attackers to execute arbitrary code without authentication. The flaw received a maximum CVSS score of 10.0. Affecting all SSH servers using the Erlang/OTP SSH library, it enables unauthenticated attackers to send protocol messages before authentication. Users are advised to update ASAP.",
+          "url": "https://links.tldrnewsletter.com/HzQRfk",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a06",
+          "order": 3,
+          "title": "MINISTER'S X ACCOUNT HACKED TO PROMOTE CRYPTO SCAM",
+          "summary": "The head of the UK's House of Commons Lucy Powell's X account was hacked to promote a new scam cryptocurrency. The post described a new community-driven digital currency known as $HCC. Analysts noted that there had been only 34 transactions for the coin resulting in a profit of around £225.",
+          "url": "https://www.bbc.com/news/articles/cr5drp0n8zjo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-18:a07",
+          "order": 1,
+          "title": "INVOKING MISCONFIGURED API GATEWAYS FROM ANY EXTERNAL AWS ACCOUNTS",
+          "summary": "Private API Gateways in AWS are not internet accessible but are accessible to anyone in the AWS networks. Users who don't realize this can misconfigure the API Gateway with a Principal of ‘*' with the intention of allowing access from any VPC in their account, but are actually opening it to any VPC in AWS. This attack generally cannot be exploited without some initial access or knowledge of the API Gateway endpoint and REST API spec.",
+          "url": "https://www.offensai.com/blog/invoking-misconfigured-api-gateways-from-external-aws-accounts?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "offensai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a08",
+          "order": 2,
+          "title": "HOW I GOT HACKED: A WARNING ABOUT MALICIOUS POCS",
+          "summary": "",
+          "url": "https://chocapikk.com/posts/2025/s1nk/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "chocapikk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a09",
+          "order": 3,
+          "title": "EVERYONE KNOWS YOUR LOCATION, PART 2: TRY IT YOURSELF AND SHARE THE RESULTS",
+          "summary": "This post discusses a method for analyzing mobile app data sharing and provides a Python notebook and guide to enable anyone to monitor and investigate how apps share location and other personal data. The author has created visualization tools showing how adtech companies like Unity dominate mobile game traffic, with hundreds of data requests happening within seconds of opening an app. The guide walks readers through setting up mitmproxy to intercept mobile traffic, recording app sessions, and analyzing the captured data to discover what personal information is being shared with third parties.",
+          "url": "https://timsh.org/everyone-knows-your-location-part-2-try-it-yourself/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "timsh.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-18:a10",
+          "order": 1,
+          "title": "PILLAR SECURITY (PRODUCT LAUNCH)",
+          "summary": "Pillar Security provides security controls throughout the entire AI lifecycle, from integrating with existing code repositories and data infrastructures to mapping AI models, datasets, and frameworks.",
+          "url": "https://www.pillar.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pillar.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a11",
+          "order": 2,
+          "title": "BLACKCAT",
+          "summary": "BlackCat is a PowerShell module designed to assess the security posture of Azure environments.",
+          "url": "https://github.com/azurekid/blackcat?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a12",
+          "order": 3,
+          "title": "CORSHA(PRODUCT LAUNCH)",
+          "summary": "Corsha provides a machine identity platform (m-IdP) that authenticates, manages, and governs the growing traffic between machines, facilitating secure multi-factor authentication (MFA) between any machines.",
+          "url": "https://corsha.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "corsha.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-18:a13",
+          "order": 1,
+          "title": "FLORIDA DRAFT LAW MANDATING ENCRYPTION BACKDOORS FOR SOCIAL MEDIA ACCOUNTS BILLED ‘DANGEROUS AND DUMB'",
+          "summary": "Florida's draft bill, which requires social media companies to implement encryption backdoors for law enforcement, has advanced to the Senate floor. The \"Social Media Use by Minors\" legislation would also require parental access to children's accounts and prohibit the use of disappearing messages for minors. Critics argue the bill would compromise security and make users less safe.",
+          "url": "https://techcrunch.com/2025/04/17/florida-draft-law-mandating-encryption-backdoors-for-social-media-accounts-billed-dangerous-and-dumb/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a14",
+          "order": 2,
+          "title": "MCP IS THE NEW INTERFACE FOR SECURITY TOOLS",
+          "summary": "MCP servers are the future of security as they can unify disparate security tooling, handle the massive amounts of data used in security, and enable security professionals who don't know how to code. MCP servers offer a fully customized, single-pane-of-glass interface for organizations. Authentication and auditing remain issues that need to be implemented outside of the spec.",
+          "url": "https://mayakaczorowski.com/blogs/mcp?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "mayakaczorowski.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a15",
+          "order": 3,
+          "title": "DPRK IT WORKERS IN OPEN SOURCE AND FREELANCE PLATFORMS",
+          "summary": "This document details a two-month investigation by cybersecurity researchers who discovered North Korean IT workers infiltrating legitimate open-source projects, particularly through the freelance platform onlyDust. The researchers identified three leading actors (0xExp-po, bestselection18/Hiroto Iwaki, and aidenwong812/cryptogru812) who created elaborate false identities, manipulated commit histories, and received payments totaling at least $1,874 across 11 repositories while contributing 62 pull requests. The investigation highlights serious security risks, including potential supply chain attacks, as these DPRK IT workers often collaborate with North Korean hacking teams to identify targets and establish initial access for future attacks.",
+          "url": "https://www.ketman.org/dprk-it-workers-in-freelance-platform-onlyDust.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "ketman.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-18:a16",
+          "order": 1,
+          "title": "AWSSECURITYCHANGES (WEBAPP)",
+          "summary": "Monitor AWS documentation changes and security updates in real-time and track modifications across all AWS services to stay informed about critical security changes.",
+          "url": "https://awssecuritychanges.com?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "awssecuritychanges.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a17",
+          "order": 2,
+          "title": "HOUSE INVESTIGATION INTO DEEPSEEK TEASES OUT FUNDING, SECURITY REALITIES AROUND CHINESE AI TOOL",
+          "summary": "A House report warns that DeepSeek, a Chinese AI tool, poses national security and economic risks to the U.S. due to its low cost, ties to Chinese entities, and use for intelligence gathering on Americans, and recommends stricter export controls and closer monitoring of emerging AI technologies.",
+          "url": "https://cyberscoop.com/deepseek-house-ccp-committee-report-national-security-data-risks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-18:a18",
+          "order": 3,
+          "title": "MICROSOFT: OFFICE 2016 AND OFFICE 2019 REACH END OF SUPPORT IN OCTOBER",
+          "summary": "Microsoft Office 2016 and 2019 will lose support after October 14, so users are advised to upgrade to Microsoft 365 or Office 365 to avoid security risks and maintain support.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-office-2016-and-office-2019-reach-end-of-support-in-october/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

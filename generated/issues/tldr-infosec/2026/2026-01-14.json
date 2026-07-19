@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-14",
+  "source_path": "TLDR InfoSec/article_14-01-2026.md",
+  "source_content_hash": "sha256:91fc65605832810476a9b6196acabca6da92d96ca582e7454869e2a3705ab13e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a04",
+          "order": 1,
+          "title": "AI AGENTS THAT ACTUALLY ACCELERATE YOUR INVESTIGATIONS",
+          "summary": "Most \"AI for security\" tools don't actually make your workflows faster or easier. Sumo Logic's Dojo AI [4] is a different beast, deploying specialized agents that work together to triage alerts, explain what triggered them, and write queries for you.",
+          "url": "https://www.sumologic.com/blog/welcome-dojo-ai-agents-soc?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a05",
+          "order": 2,
+          "title": "→ Get a demo of Sumo Logic",
+          "summary": "",
+          "url": "https://www.sumologic.com/lp/aws-logs-security?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a06",
+          "order": 3,
+          "title": "→ Download the Gartner Critical Capabilities for SIEM report",
+          "summary": "",
+          "url": "https://www.sumologic.com/briefs/gartner-siem-critical-capabilities?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a07",
+          "order": 1,
+          "title": "EVEREST RANSOMWARE CLAIMS BREACH AT NISSAN, SAYS 900GB OF DATA STOLEN",
+          "summary": "The Everest ransomware group claimed to have breached Nissan Motor Corporation, posting screenshots on their dark web leak site showing directory structures with 900GB of allegedly stolen data, including dealership information, financial records, and operational documentation in .csv, .txt, .pgp, and .xls formats. The group issued a five-day deadline before public release, continuing their aggressive 2025-2026 campaign that has targeted ASUS, Chrysler, AT&T, and other major organizations. This marks Nissan's third significant security incident in recent years, following the Qilin ransomware attack on its design subsidiary and the 2023 breach affecting over 100,000 individuals.",
+          "url": "https://hackread.com/everest-ransomware-nissan-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a08",
+          "order": 2,
+          "title": "SPANISH ENERGY COMPANY ENDESA HACKED",
+          "summary": "Hackers broke into Spanish utility Endesa's commercial systems and accessed customer data of over 20 million customers, including identification details, national ID numbers, contract information, and IBAN payment data. The company says passwords were not exposed, operations remain normal, and extra security measures and monitoring are in place.",
+          "url": "https://www.securityweek.com/spanish-energy-company-endesa-hacked/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a09",
+          "order": 3,
+          "title": "TARGET'S DEV SERVER OFFLINE AFTER HACKERS CLAIM TO STEAL SOURCE CODE",
+          "summary": "An unknown threat actor has claimed to have stolen a trove of Target's internal source code and documentation and is selling it on dark web marketplaces. After BleepingComputer contacted Target for comment, the files were taken offline, and Target's Git server became inaccessible from the internet. Multiple Target employees have confirmed that the source code samples are legitimate.",
+          "url": "https://www.bleepingcomputer.com/news/security/targets-dev-server-offline-after-hackers-claim-to-steal-source-code/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a10",
+          "order": 1,
+          "title": "OID-SEE: GIVING YOUR OAUTH APPS THE SIDE-EYE",
+          "summary": "OAuth in Microsoft Entra creates complex webs of apps, permissions, and identities that are hard to reason about with tables alone, so modelling everything as a graph reveals abuse paths such as impersonation and long‑lived access that would otherwise stay hidden. OID-See uses Microsoft Graph to map service principals, delegated scopes, app roles, ownership, assignments, and reply URLs into a graph-backed analysis. It then layers scoring and enrichment to highlight risky apps, misleading Microsoft-shaped metadata, and dangerous patterns like broad reachability, wildcard redirects, and stale credentials.",
+          "url": "https://cirriustech.co.uk/blog/oidsee/?utm_source=tldrinfosec",
+          "reading_time_minutes": 26,
+          "source_domain": "cirriustech.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a11",
+          "order": 2,
+          "title": "STOPPING KILL SIGNALS AGAINST YOUR EBPF PROGRAMS",
+          "summary": "",
+          "url": "https://substack.bomfather.dev/p/stopping-kill-signals-against-your?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "substack.bomfather.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a12",
+          "order": 3,
+          "title": "EVENTBRIDGE PATTERN MATCHING: A FIELD GUIDE",
+          "summary": "EventBridge JSONs can become very complex quickly. AWS provides very little documentation to help parse them. Fields at the same level of the JSON are ANDed together, whereas values in an array are ORed together. If a user wants to apply an OR to two fields, they can use the $or operator. However, users should be careful when nesting $ors, as each branch gets expanded into additional sub-patterns that can become contradictory or complex to debug. This post also covers other operators and how to combine them to develop complex Boolean logic.",
+          "url": "https://deceptiq.com/blog/eventbridge-pattern-matching-guide?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "deceptiq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a13",
+          "order": 1,
+          "title": "ANTHROPIC LAUNCHES CLAUDE AI FOR HEALTHCARE WITH SECURE HEALTH RECORD ACCESS",
+          "summary": "Claude for Healthcare enables Pro and Max subscribers in the US to connect health records via HealthEx, Function, and upcoming Apple Health/Android Health Connect integrations for medical history summarization and test result explanations. The implementation features privacy-by-design controls allowing users to manage data sharing permissions, with health data explicitly excluded from model training. Anthropic's Acceptable Use Policy requires qualified professional review of outputs for high-risk healthcare decisions, acknowledging AI limitations in medical contexts.",
+          "url": "https://thehackernews.com/2026/01/anthropic-launches-claude-ai-for.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a14",
+          "order": 2,
+          "title": "REDTEAM-TOOLS",
+          "summary": "This GitHub repository contains a collection of 150+ tools and resources that can be useful for red teaming activities. Some of the tools may be specifically designed for red teaming, while others are more general-purpose and can be adapted for use in a red teaming context.",
+          "url": "https://github.com/A-poc/RedTeam-Tools?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a15",
+          "order": 1,
+          "title": "GOBRUTEFORCER BOTNET TARGETS CRYPTO PROJECT DATABASES BY EXPLOITING WEAK CREDENTIALS",
+          "summary": "Check Point Research identified an upgraded GoBruteforcer campaign targeting cryptocurrency and blockchain project databases, exploiting weak credentials spread via AI-generated server-deployment tutorials and legacy XAMPP stacks that expose FTP and phpMyAdmin interfaces. The Golang-based botnet features an obfuscated IRC bot, dynamic credential lists that include crypto-focused usernames, and a module that queries TRON blockchain addresses for non-zero balances. Separately, GreyNoise observed 80,469 sessions over 11 days from threat actors systematically probing 73+ LLM endpoints across major AI providers, hunting for misconfigured proxy servers that leak API access.",
+          "url": "https://thehackernews.com/2026/01/gobruteforcer-botnet-targets-crypto.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a16",
+          "order": 2,
+          "title": "DUTCH PORT HACKER SENTENCED TO PRISON",
+          "summary": "A Dutch man was sentenced to seven years in prison for hacking port logistics systems in the Netherlands and Belgium to support cocaine smuggling operations. He used malware delivered via USB sticks, with help from an insider, to gain remote access, steal data, and intercept communications.",
+          "url": "https://www.securityweek.com/dutch-port-hacker-sentenced-to-prison/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a17",
+          "order": 3,
+          "title": "DUTCH COPS CUFF ALLEGED AVCHECK MALWARE KINGPIN IN AMSTERDAM",
+          "summary": "Dutch authorities have arrested a 33-year-old Dutch suspect at Schiphol Airport, accusing him and two linked companies of running AVCheck, a major counter-antivirus platform that lets criminals test and fine-tune malware against multiple security products. AVCheck, dismantled in May 2025 during Operation Endgame, allegedly helped attackers perfect campaigns by identifying which targets and defenses were easiest to evade.",
+          "url": "https://www.theregister.com/2026/01/13/avcheck_arrest/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-14:a18",
+          "order": 1,
+          "title": "CALIFORNIA BANS DATA BROKER RESELLING HEALTH DATA OF MILLIONS",
+          "summary": "CalPrivacy fined Datamasters $45,000 and banned the unregistered data broker from selling Californians' personal information after it traded hundreds of millions of records containing sensitive health data.",
+          "url": "https://www.bleepingcomputer.com/news/legal/california-bans-data-broker-reselling-health-data-of-millions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a19",
+          "order": 2,
+          "title": "MAN TO PLEAD GUILTY TO HACKING US SUPREME COURT FILING SYSTEM",
+          "summary": "A 24-year-old Tennessee man, Nicholas Moore, repeatedly accessed the US Supreme Court's electronic filing system without authorization over 25 days between August and October 2023, obtaining unspecified information from a protected computer.",
+          "url": "https://techcrunch.com/2026/01/13/man-to-plead-guilty-to-hacking-us-supreme-court-filing-system/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-14:a20",
+          "order": 3,
+          "title": "MICROSOFT PATCH TUESDAY ADDRESSES 112 DEFECTS, INCLUDING ONE ACTIVELY EXPLOITED ZERO-DAY",
+          "summary": "Microsoft's January 2026 Patch Tuesday addressed 112 vulnerabilities, including CVE-2026-20805, an actively exploited information disclosure zero-day in Desktop Window Manager (CVSS 5.5) that CISA added to its KEV catalog.",
+          "url": "https://cyberscoop.com/microsoft-patch-tuesday-january-2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-04-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-04-17",
+  "source_path": "TLDR InfoSec/article_17-04-2025.md",
+  "source_content_hash": "sha256:6e9e007ec8dfa4c1e82c6b7b7b467c9fc1244c947eb20122ac21d19f8fff2589",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-04-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a04",
+          "order": 1,
+          "title": "OF WEB DATA",
+          "summary": "Flashpoint's Threat Intelligence Report looks at +3.6 petabytes of data from the hardest-to-reach corners of the web — revealing 2.1B stolen credentials and 5,742 ransomware attacks in 2024, with five major RaaS groups responsible for nearly half.",
+          "url": "https://go.flashpoint.io/2025-global-threat-intelligence-report?utm_campaign=Resource_RP_GTI_2025&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000MTXokIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a04",
+          "order": 2,
+          "title": "📥 Download the 2025 Global Threat Intelligence Report",
+          "summary": "",
+          "url": "https://go.flashpoint.io/2025-global-threat-intelligence-report?utm_campaign=Resource_RP_GTI_2025&utm_source=tldrinfosec&utm_medium=newsletter&sfcampaign_id=701Rc00000MTXokIAH",
+          "reading_time_minutes": null,
+          "source_domain": "go.flashpoint.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a05",
+          "order": 1,
+          "title": "CVE, GLOBAL SOURCE OF CYBERSECURITY INFO, WAS HOURS FROM BEING CUT BY DHS",
+          "summary": "The Common Vulnerability and Exposures (CVE) repository, a 25-year-old program run by MITRE for DHS, serves as the global cybersecurity standard for identifying and documenting security vulnerabilities. Yesterday, there were rumors that MITRE's contract would expire, but it has received an 11-month extension from CISA, averting potential widespread disruption to vulnerability management worldwide.",
+          "url": "https://arstechnica.com/security/2025/04/crucial-cve-flaw-tracking-database-narrowly-avoids-closure-to-dhs-cuts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a06",
+          "order": 2,
+          "title": "APPLE FIXES TWO ZERO-DAYS EXPLOITED IN TARGETED IPHONE ATTACKS",
+          "summary": "Apple has released emergency security updates to patch two new zero-day vulnerabilities exploited in sophisticated attacks against iPhones. The first vulnerability is a flaw in CoreAudio, which can be exploited by processing an audio stream in a malicious file to execute remote code. The second vulnerability is a flawed RPAC that allows attackers with read or write access to bypass Pointer Authentication, which is a security feature to protect against memory vulnerabilities.",
+          "url": "https://www.bleepingcomputer.com/news/security/apple-fixes-two-zero-days-exploited-in-targeted-iphone-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a07",
+          "order": 3,
+          "title": "HUGE RANSOMWARE CAMPAIGN TARGETS AWS S3 STORAGE",
+          "summary": "Security researchers have discovered a publicly accessible server containing 1,229 unique AWS credentials. Upon investigation, the researchers found that the active keys were used in S3 ransomware campaigns, where the attackers utilized SSE-C to encrypt S3 bucket data and demanded 0.3 BTC (~$25,000) per victim. In some cases, the highly automated attackers were willing to offer a “proof of decryption” test file restoration.",
+          "url": "https://links.tldrnewsletter.com/B0TRiE",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a08",
+          "order": 1,
+          "title": "EDV - ENDPOINT DETECTION & VIBES",
+          "summary": "EDV is a tool that feeds Windows Sysmon security events to Microsoft's Copilot AI through WebSocket connections, asking it to identify malicious activity. Testing with known attack techniques showed Copilot could detect about 40% of malicious events not blocked by Windows Defender, though with inconsistent results and false positives.",
+          "url": "https://tierzerosecurity.co.nz/2025/04/14/edv.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "tierzerosecurity.co.nz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a09",
+          "order": 2,
+          "title": "ACCESS DENIED? NOT ALWAYS! HUNTING IDORS AND ACCESS CONTROL FLAWS",
+          "summary": "IDOR vulnerabilities occur when attackers manipulate direct object references like IDs in URLs to access unauthorized data. As a common form of Broken Access Control, these flaws are prevalent in web applications, relatively easy to find, and highly impactful. This guide walks through how bug bounty hunters regularly exploit it.",
+          "url": "https://medium.com/@shaikrief2/access-denied-not-always-hunting-idors-and-access-control-flaws-2ed55c907466?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a10",
+          "order": 3,
+          "title": "DETECTING C2-JITTERED BEACONS WITH FREQUENCY ANALYSIS",
+          "summary": "Frequency analysis is a technique that allows for the detection of anomalies in a set of data. This post details how Fourier Transforms can be used to shift data to the frequency domain and then detect C2 beaconing behavior. When a C2 beacon utilizes jitter to vary its periodicity, a sliding window must be used to properly detect the activity.",
+          "url": "https://www.diegowritesa.blog/2025/04/detecting-c2-jittered-beacons-with.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "diegowritesa.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a11",
+          "order": 1,
+          "title": "SYMBIOTIC BRINGS AI DETECTION, REMEDIATION, AND EDUCATION DIRECTLY INTO THE IDE",
+          "summary": "Developers are moving fast - your security should too. Symbiotic Security v1 [11] helps you ship secure code without slowing down. With AI-powered remediation, real-time contextual training, and an AI chat assistant built into your IDE, security works with developers to accelerate their flow. Teams can save an estimated $750+ per developer, per month. Speed and security, finally aligned. Get",
+          "url": "https://www.symbioticsec.ai/solution/ai-code-security?utm_source=ad&utm_medium=tldr&utm_campaign=v1",
+          "reading_time_minutes": null,
+          "source_domain": "symbioticsec.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a11",
+          "order": 2,
+          "title": "started.",
+          "summary": "",
+          "url": "https://www.symbioticsec.ai/solution/ai-code-security?utm_source=ad&utm_medium=tldr&utm_campaign=v1",
+          "reading_time_minutes": null,
+          "source_domain": "symbioticsec.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a12",
+          "order": 3,
+          "title": "AURASCAPE (PRODUCT LAUNCH)",
+          "summary": "Aurascape helps corporate IT departments monitor AI employee usage across thousands of AI applications—both approved and unauthorized. The technology tracks interactions, decodes prompt-response data, and evaluates security risks, even for less common AI tools.",
+          "url": "https://aurascape.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "aurascape.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a13",
+          "order": 4,
+          "title": "CONTENT",
+          "summary": "Security automation content in SCAP, Bash, Ansible, and other formats",
+          "url": "https://github.com/ComplianceAsCode/content?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a14",
+          "order": 5,
+          "title": "OLLVM-UNFLATTENER",
+          "summary": "ollvm-unflattener is a Python tool to deobfuscate control flow flattening applied by OLLVM.",
+          "url": "https://github.com/cdong1012/ollvm-unflattener?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a15",
+          "order": 1,
+          "title": "GUESS WHAT HAPPENS WHEN RANSOMWARE FIENDS FIND 'INSURANCE' 'POLICY' IN YOUR FILES",
+          "summary": "Companies with cyber insurance face ransomware demands 2.8 times higher than uninsured victims, as criminals specifically search for insurance policies during attacks. Insured victims pay more often (44% vs 24%) and pay significantly larger amounts.",
+          "url": "https://www.theregister.com/2025/04/16/dutch_ransomware_study/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a16",
+          "order": 2,
+          "title": "SECURITY OPERATIONS WITH RUNREVEAL'S MCP SERVER",
+          "summary": "SIEM provider RunReveal released an MCP server for use with its product. In this post, RunReveal provides insights into some ways that its customers are using the MCP server for threat hunting with Cursor, investigating GuardDuty alerts, and tuning and testing alerts. RunReveal believes that enriching and standardizing data to make it easier for LLMs to query is the future of its product.",
+          "url": "https://blog.runreveal.com/security-operations-with-runreveals-mcp-server/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.runreveal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a17",
+          "order": 3,
+          "title": "THE WINDOWS REGISTRY ADVENTURE #6: KERNEL-MODE OBJECTS",
+          "summary": "This blog post focuses on kernel-mode registry objects essential for runtime hive management. It meticulously examines key internal structures, including _CMHIVE, _HHIVE, memory mapping mechanisms, cell maps, and key control blocks that collectively enable registry functionality like transaction management and synchronization. The post provides detailed explanations of these previously undocumented structures based on reverse engineering of Windows Server 2019, noting these findings apply to Windows 11 as well.",
+          "url": "https://googleprojectzero.blogspot.com/2025/04/the-windows-registry-adventure-6-kernel.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 66,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-17:a18",
+          "order": 1,
+          "title": "KREBS EXITS SENTINELONE AFTER SECURITY CLEARANCE PULLED",
+          "summary": "Chris Krebs resigned from SentinelOne after his security clearance was revoked and a presidential order was issued to review CISA's conduct under his leadership.",
+          "url": "https://www.securityweek.com/krebs-exits-sentinelone-after-security-clearance-pulled/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a19",
+          "order": 2,
+          "title": "BIDENCASH MARKET DUMPS 1 MILLION STOLEN CREDIT CARDS ON RUSSIAN FORUM",
+          "summary": "BidenCash Market leaked over 910,000 stolen credit card records on a Russian forum without names but with card details.",
+          "url": "https://hackread.com/bidencash-market-leak-credit-cards-russian-forum/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-17:a20",
+          "order": 3,
+          "title": "MICROSOFT WARNS OF BLUE SCREEN CRASHES CAUSED BY APRIL UPDATES",
+          "summary": "Microsoft has advised Windows 11 users of blue screen crashes following recent updates and suggests using Known Issue Rollback or Group Policy for fixes - deployment guidance is available on its support website.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-blue-screen-crashes-caused-by-april-updates/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

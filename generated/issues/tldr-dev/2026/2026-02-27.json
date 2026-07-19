@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-02-27",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-02-27",
+  "source_path": "TLDR Dev/article_27-02-2026.md",
+  "source_content_hash": "sha256:c846f8317445e776ba1978b855a1e20b61ff3ff45e772a2db38803602c52bc04",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-02-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a04",
+          "order": 1,
+          "title": "IMPLEMENTATION PATTERNS AND TOOLS FROM AWS EXPERTS",
+          "summary": "Engineers building observability, data pipelines, RAG for AI applications, or security patterns face the same challenge: researching tools and best practices takes time away from building.",
+          "url": "https://aws.amazon.com/marketplace/build-learn?trk=0fed7325-51cd-45e9-8e36-3813b2ae7d3b&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a04",
+          "order": 2,
+          "title": "Less research. More building.",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn?trk=0fed7325-51cd-45e9-8e36-3813b2ae7d3b&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a05",
+          "order": 1,
+          "title": "WE BUILT A VIDEO RENDERING ENGINE BY LYING TO THE BROWSER ABOUT WHAT TIME IT IS",
+          "summary": "Replit developed a unique video rendering engine to turn any web page into a deterministic video file, overcoming the challenge that browsers are real-time systems ill-suited for frame-perfect capture. Its solution involves injecting a JavaScript virtual clock into the browser, which replaces native timing APIs like `setTimeout` and `requestAnimationFrame`, so time advances only when commanded. This system also has a complex pipeline for handling video elements by preprocessing them server-side and rendering frames to a canvas.",
+          "url": "https://blog.replit.com/browsers-dont-want-to-be-cameras?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.replit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a06",
+          "order": 2,
+          "title": "A PRACTICAL GUIDE TO HILL CLIMBING",
+          "summary": "Cline, an AI coding agent, initially lagged competitors like Cursor and Claude Code. Its developers started hill climbing, which involved iteratively running the agent against the Terminal Bench's 89 real-world coding tasks, diagnosing failures, and implementing targeted fixes. Through this process, Cline's success rate improved from 47% to 57%.",
+          "url": "https://cline.bot/blog/a-practical-guide-to-hill-climbing?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "cline.bot",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a07",
+          "order": 3,
+          "title": "THE REAL COST OF RANDOM I/O",
+          "summary": "Experiments show Postgres's default random_page_cost (4.0) underestimates the true cost of random I/O on SSDs, which is often closer to 25–35, causing the planner to sometimes pick inefficient index scans. However, lowering it can still make sense in real-world OLTP systems with high cache hit rates or imperfect estimates, so tuning should be based on actual workload monitoring.",
+          "url": "https://vondra.me/posts/the-real-cost-of-random-io/?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "vondra.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a08",
+          "order": 1,
+          "title": "DO YOU NEED AN MCP TO BUILD YOUR NATIVE APP?",
+          "summary": "An evaluation involving multiple LLMs and approaches showed that methods using MCPs and not using MCPs to build an app all achieved over 99% task success, since modern models recover errors effectively. The real distinctions between approaches were found in time, cost, and how each managed its context budget, rather than task completion.",
+          "url": "https://sentry.engineering/blog/do-you-really-need-an-mcp-to-build-your-app?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "sentry.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a09",
+          "order": 2,
+          "title": "DEVELOPERS ARE SAFE",
+          "summary": "Contrary to headlines predicting developer obsolescence by AI, corporate red tape and slow adoption rates might keep developers safe. Large enterprise environments move at a glacial pace, as shown by lengthy approval processes for basic tools.",
+          "url": "https://azamsharp.com/2026/02/26/developers-are-safe.html?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "azamsharp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a10",
+          "order": 1,
+          "title": "BUILD FULLY NATIVE APPS FOR MOBILE WITH YOUR REACT SKILLS",
+          "summary": "You already know React. With Expo [11], you can use that knowledge to build fully native apps for iOS and Android without starting over — and with a native MCP server and Skills for Claude Code, it's never been easier! Here's a tutorial from the Expo team [12] to get you started.",
+          "url": "https://try.expo.dev/TLDR?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "try.expo.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a13",
+          "order": 2,
+          "title": "NANO BANANA 2: COMBINING PRO CAPABILITIES WITH LIGHTNING-FAST SPEED",
+          "summary": "Google DeepMind has launched Nano Banana 2, its latest image generation model, which merges advanced Pro capabilities with lightning-fast speed. It has better intelligence through advanced world knowledge, precise text rendering, and improved creative control, including consistent subject appearances for multiple characters and strict instruction following.",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a14",
+          "order": 3,
+          "title": "NUMPY-TS",
+          "summary": "numpy-ts is a type-safe implementation of NumPy for TypeScript and JavaScript that allows devs to write numerical computing code with the familiar Python API. It has 94% API coverage, is tree-shakeable for optimized bundle sizes, and is validated with over 6,000 tests against actual NumPy outputs.",
+          "url": "https://numpyts.dev/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "numpyts.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a15",
+          "order": 4,
+          "title": "DEFF",
+          "summary": "deff is a Rust-based Terminal User Interface designed for interactive, side-by-side review of Git diffs. It has file comparison with syntax highlighting, added/deleted line tinting, vertical/horizontal scrolling, and various comparison strategies, including uncommitted changes.",
+          "url": "https://github.com/flamestro/deff?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a16",
+          "order": 1,
+          "title": "BLOCK ANNOUNCES LAYOFFS OF 4,000 PEOPLE, OVER 40% CUT",
+          "summary": "Block is laying off over 4,000 employees, nearly 40% of its total workforce. Jack Dorsey, the CEO, stated the drastic cut was due to AI fundamentally changing how the company builds and operates. Block's stock soared by nearly 25% in after-hours trading following the announcement.",
+          "url": "https://www.engineerscodex.com/block-layoffs-4000-ai?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "engineerscodex.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a17",
+          "order": 2,
+          "title": "STATEMENT FROM DARIO AMODEI ON OUR DISCUSSIONS WITH THE DEPARTMENT OF WAR",
+          "summary": "Anthropic believes in using AI for US national defense, having proactively deployed its Claude models to the Department of War and the intelligence community. However, Anthropic maintains two specific safeguards: refusing to allow its AI for mass domestic surveillance due to democratic values and for fully autonomous weapons, given current unreliability and lack of oversight. The Department of War has demanded that Anthropic remove these safeguards, but Anthropic remains firm in its position.",
+          "url": "https://www.anthropic.com/news/statement-department-of-war?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a18",
+          "order": 3,
+          "title": "GOOGLE API KEYS WEREN'T SECRETS. BUT THEN GEMINI CHANGED THE RULES",
+          "summary": "Google API keys have been treated as benign public identifiers safe for client-side embedding, but have retroactively gained sensitive authentication privileges with the introduction of Gemini. When the Generative Language API is enabled on a Google Cloud project, existing public API keys can silently access private Gemini data like uploaded files, cached content, and incur usage charges. This vulnerability allows attackers to scrape public websites for keys and exploit them to access data or exhaust quotas secretly.",
+          "url": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-02-27:a19",
+          "order": 1,
+          "title": "OPEN SOURCE ENDOWMENT",
+          "summary": "The Open Source Endowment is a community-led nonprofit that provides sustainable, long-term funding for critical open source software projects by investing donations in an endowment fund and distributing the returns as grants.",
+          "url": "https://endowment.dev/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "endowment.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a20",
+          "order": 2,
+          "title": "BUILDKIT: DOCKER'S HIDDEN GEM THAT CAN BUILD ALMOST ANYTHING",
+          "summary": "BuildKit is a general-purpose build framework that, beyond making Docker builds fast, uses a programmable architecture and custom frontends to produce any type of artifact, not just container images.",
+          "url": "https://tuananh.net/2026/02/25/buildkit-docker-hidden-gem/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "tuananh.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a21",
+          "order": 3,
+          "title": "WHAT CLAUDE CODE ACTUALLY CHOOSES",
+          "summary": "Claude Code usually recommends building custom software solutions rather than integrating third-party tools, though it has strong preferences for specific modern tools like GitHub Actions, Stripe, and Vercel when it does choose to \"buy.\"",
+          "url": "https://amplifying.ai/research/claude-code-picks?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "amplifying.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-02-27:a22",
+          "order": 4,
+          "title": "EVERY AI CODE REVIEW VENDOR BENCHMARKS ITSELF, AND WINS",
+          "summary": "AI code review vendors frequently publish self-designed benchmarks where they outperform competitors, but these evaluations often rely on small datasets or synthetic bugs.",
+          "url": "https://deepsource.com/blog/notes-on-ai-code-review-benchmarks?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "deepsource.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

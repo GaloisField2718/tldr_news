@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-09-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-02",
+  "source_path": "TLDR InfoSec/article_02-09-2025.md",
+  "source_content_hash": "sha256:42e253a59ff80977a88bfc35bd652e940dbc3e094587c310ea48ed45d43a0fe8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a04",
+          "order": 1,
+          "title": "COMPLIANCE",
+          "summary": "Meanwhile, compliance requirements keep expanding. New regulations emerge annually across privacy, financial controls, and cyber resilience. Each framework demands separate audits, evidence collection, and documentation — even when requirements overlap significantly [4].",
+          "url": "https://www.onetrust.com/resources/tldr-csyn/the-risk-resilient-enterprise-automating-compliance-for-security-and-scale/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250902",
+          "reading_time_minutes": null,
+          "source_domain": "onetrust.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a04",
+          "order": 2,
+          "title": "headcount. Get your free copy",
+          "summary": "",
+          "url": "https://www.onetrust.com/resources/tldr-csyn/the-risk-resilient-enterprise-automating-compliance-for-security-and-scale/?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250902",
+          "reading_time_minutes": null,
+          "source_domain": "onetrust.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a05",
+          "order": 1,
+          "title": "S1NGULARITY: SUPPLY CHAIN ATTACK LEAKS SECRETS ON GITHUB",
+          "summary": "Multiple malicious versions of the popular Nx build system package were published to NPM on August 26. The attack leveraged AI command line tools to search for sensitive files, extracted credentials, and then attempted lockout by appending `sudo shutdown -h 0` to .bashrc and .zshrc files. The root cause of the supply chain attack was a flawed GitHub Action that allowed code injection through unsanitized PR titles combined with the `pull_request_target` trigger.",
+          "url": "https://www.wiz.io/blog/s1ngularity-supply-chain-attack?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a06",
+          "order": 2,
+          "title": "GOOGLE WARNS THAT MASS DATA THEFT HITTING SALESLOFT AI AGENT HAS GROWN BIGGER",
+          "summary": "The data theft affecting Drift AI, a Salesloft tool, is more extensive than initially reported. Attackers used compromised credentials to access Google Workspace emails, and as a result, all Salesloft Drift integrations are now considered potentially compromised. Organizations must revoke and rotate all connected credentials and check for unauthorized access.",
+          "url": "https://arstechnica.com/security/2025/08/google-warns-that-mass-data-theft-hitting-salesloft-ai-agent-has-grown-bigger/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a07",
+          "order": 3,
+          "title": "FRAUDSTER STOLE OVER $1.5 MILLION FROM CITY OF BALTIMORE",
+          "summary": "A fraudster stole $1.5 million from Baltimore between February and March by pretending to be a vendor employee, hacking into the vendor's Workday account, and convincing AP staff to redirect bank details. The city recovered $721,000, but cannot recover $803,000 despite insurance claims and reissued payments. This is Baltimore's third instance of vendor fraud since 2019, highlighting ongoing weaknesses in financial controls following losses of $62,000 in 2019 and $376,000 in 2022.",
+          "url": "https://securityaffairs.com/181772/cyber-crime/fraudster-stole-over-1-5-million-from-city-of-baltimore.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a08",
+          "order": 1,
+          "title": "RAGE AGAINST THE AUTHENTICATION STATE MACHINE",
+          "summary": "Researchers discovered an authentication bypass (CVE-2024-28080) in Gitblit's SSH service that allows attackers to log in without requiring a user's private key or password, only needing the username and public key. This post analyzes how the vulnerability arose, detailing the SSH login handshake and highlighting where the implementation deviates from secure best practices with Apache MINA SSHD.",
+          "url": "https://blog.silentsignal.eu/2025/06/14/gitblit-cve-CVE-2024-28080/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.silentsignal.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a09",
+          "order": 2,
+          "title": "CVSS IS BUILT FOR CODE, NOT AI AGENTS. NOW AIVSS CLOSES THE GAP",
+          "summary": "Traditional CVSS scores fail to address the unique risks posed by autonomous AI agents. The new AIVSS framework extends CVSS by evaluating behavioral factors—such as autonomy, tool access, and memory use—enabling security teams to measure and manage the risks of agentic AI systems more effectively, aligning with modern security frameworks like NIST AI RMF.",
+          "url": "https://checkmarx.com/ai-llm-tools-in-application-security/cvss-was-built-for-code-not-ai-agents-now-aivss-closes-the-gap/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a10",
+          "order": 3,
+          "title": "THE RESURGENCE OF IOT MALWARE: INSIDE THE MIRAI-BASED BOTNET CAMPAIGN",
+          "summary": "The Gayfemboy botnet exploits vulnerabilities in DrayTek, TP-Link, Raisecom, and Cisco devices to deploy a Mirai-variant that uses modified UPX packing, custom architecture naming schemes, and hardcoded process termination lists to eliminate competing malware infections. The malware implements sophisticated evasion techniques, including 50-nanosecond sandbox delays, utilizes public DNS servers (1.1.1.1, 8.8.8.8) to bypass local filtering, and scans 15 predefined ports for C2 communication with domains such as cross-compiling[.]org and i-kiss-boys[.]com. Organizations should implement network monitoring for unusual DNS queries to public resolvers, deploy IPS signatures for the listed CVEs, and monitor for processes attempting to bind to UDP port 47272 or exhibiting the malware's distinctive process termination behavior.",
+          "url": "https://www.fortinet.com/blog/threat-research/iot-malware-gayfemboy-mirai-based-botnet-campaign?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "fortinet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a11",
+          "order": 1,
+          "title": "ENDING THE TURF WAR BETWEEN IT AND INFOSEC",
+          "summary": "IT and InfoSec are technically on the same side… but it sometimes doesn't feel like it. In this 30-minute session [11], you'll learn how to start working as one team:",
+          "url": "https://www.pdq.com/pdq-connect/register/events/?utm_campaign=ct_mc_dir_direct_vulnerability_management_campaign_2025_07_16&utm_medium=direct&utm_source=direct&campaign_id=701TU00000fShYhYAK",
+          "reading_time_minutes": null,
+          "source_domain": "pdq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a11",
+          "order": 2,
+          "title": "Register for the live event ↗️",
+          "summary": "",
+          "url": "https://www.pdq.com/pdq-connect/register/events/?utm_campaign=ct_mc_dir_direct_vulnerability_management_campaign_2025_07_16&utm_medium=direct&utm_source=direct&campaign_id=701TU00000fShYhYAK",
+          "reading_time_minutes": null,
+          "source_domain": "pdq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a12",
+          "order": 3,
+          "title": "CATSNIFFER",
+          "summary": "CatSniffer is an original, multiprotocol, and multiband board designed for sniffing, communicating with, and attacking IoT (Internet of Things) devices using the latest radio IoT protocols. It is a highly portable USB stick that integrates TI CC1352, Semtech SX1262, and an RP2040 for V3 or a Microchip SAMD21E17 for V2.",
+          "url": "https://github.com/ElectronicCats/CatSniffer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a13",
+          "order": 4,
+          "title": "START ACCELERATING SECURE APPLICATION DEVELOPMENT",
+          "summary": "Cortex Cloud ASPM is a prevention-first application security module that integrates with AppSec tools, such as Snyk, GitLab, and Checkmarx, to block vulnerabilities before they reach production. The platform offers automated remediation, inline IDE fixes, and correlates findings across code, cloud, and runtime to prioritize risks over false alarms. In early access, with general availability in H2 2025, it claims to be 10 times faster and more cost-effective than traditional reactive security.",
+          "url": "https://www.paloaltonetworks.com/blog/cloud-security/introducing-aspm-cortex-cloud?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a14",
+          "order": 5,
+          "title": "BLOCKEDRTRAFFIC",
+          "summary": "Two tools written in C that block network traffic for blacklisted EDR processes, using either Windows Defender Firewall (WDF) or Windows Filtering Platform (WFP).",
+          "url": "https://github.com/0xJs/BlockEDRTraffic?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a15",
+          "order": 1,
+          "title": "FBI CYBER COP: SALT TYPHOON PWNED 'NEARLY EVERY AMERICAN'",
+          "summary": "The Chinese hacking group Salt Typhoon has infiltrated U.S. telecoms, stealing personal data from nearly every American and millions globally since 2019. FBI officials say the scale and indiscriminate nature of the campaign are unprecedented, affecting at least 80 countries, 200 U.S. organizations, and high-profile political figures.",
+          "url": "https://www.theregister.com/2025/08/28/fbi_cyber_cop_salt_typhoon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a16",
+          "order": 2,
+          "title": "SCARCRUFT USES ROKRAT MALWARE IN OPERATION HANKOOK PHANTOM TARGETING SOUTH KOREAN ACADEMICS",
+          "summary": "North Korean APT37 (ScarCruft) carried out Operation HanKook Phantom using spear-phishing emails with malicious LNK files disguised as PDFs to deliver RokRAT malware to South Korean research targets. The attack utilized fake newsletter lures from the National Intelligence Research Association, employing PowerShell scripts and fileless techniques to exfiltrate data via Dropbox, Google Cloud, and Yandex. This campaign shows APT37's focus on espionage against the South Korean government, research, and academic targets.",
+          "url": "https://thehackernews.com/2025/09/scarcruft-uses-rokrat-malware-in.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a17",
+          "order": 3,
+          "title": "WHISTLEBLOWER SAYS TRUMP OFFICIALS COPIED MILLIONS OF SOCIAL SECURITY NUMBERS",
+          "summary": "A whistleblower at the Social Security Administration (SSA) stated that a former senior DOGE official, now at the SSA, copied the Social Security Numbers (SSNs), names, and dates of birth of over 300 million Americans to a private section of the agency's AWS cloud environment. The complaint states that the cloud environment was set up for DOGE-affiliated Social Security staffers but lacks independent security, monitoring, and oversight. The complaint also alleges that cybersecurity officials within the SSA described the decision to copy the data as “very high risk” and discussed the possibility of having to reissue SSNs in the event of a breach.",
+          "url": "https://www.npr.org/2025/08/26/nx-s1-5517977/social-security-doge-privacy?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "npr.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-02:a18",
+          "order": 1,
+          "title": "OPENSSH 10.1 WILL WARN THE USER WHEN A NON POST-QUANTUM KEY AGREEMENT SCHEME IS SELECTED",
+          "summary": "OpenSSH 10.1 will warn users when connecting to servers that use non-post-quantum key agreement schemes, encouraging migration to quantum-resistant cryptography such as mlkem768x25519-sha256 and sntrup761x25519-sha512 to protect against future \"store now, decrypt later\" attacks.",
+          "url": "https://www.openssh.com/pq.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "openssh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a19",
+          "order": 2,
+          "title": "THE $69 BILLION DOMINO EFFECT: HOW VMWARE'S DEBT-FUELED ACQUISITION IS KILLING OPEN SOURCE, ONE REPOSITORY AT A TIME",
+          "summary": "",
+          "url": "https://fastcode.io/2025/08/30/the-69-billion-domino-effect-how-vmwares-debt-fueled-acquisition-is-killing-open-source-one-repository-at-a-time/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "fastcode.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-02:a20",
+          "order": 3,
+          "title": "HACKER SUSPECTED OF TRYING TO CHEAT HIS WAY INTO UNIVERSITY IS ARRESTED IN SPAIN",
+          "summary": "Spanish police arrested a 21-year-old suspected hacker in Seville for allegedly compromising at least 13 university professors' accounts on the Andalusia region's Séneca educational platform to alter his own and classmates' high school and university entrance exam grades.",
+          "url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/hacker-suspected-of-trying-to-cheat-his-way-into-university-is-arrested-in-spain?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-06-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-06-26",
+  "source_path": "TLDR InfoSec/article_26-06-2024.md",
+  "source_content_hash": "sha256:5ad9bdfa06acd51a69b22e12bae489756b9ba07f84425e3cd6fb4795031efb33",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-06-26",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-26:a04",
+          "order": 1,
+          "title": "TURKEY'S LARGEST CRYPTO EXCHANGE HACKED",
+          "summary": "BTCTurk, Turkey's largest crypto exchange, was hacked. One analyst claims that the stolen currency amounted to nearly 51M euros. BTCTurk reported that the attack was caused by a vulnerability that allowed uncontrolled withdrawals to be processed. The exchange halted withdrawals and deposits to investigate the attack.",
+          "url": "https://www.euronews.com/next/2024/06/22/turkeys-biggest-crypto-exchange-btcturk-hacked?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "euronews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a05",
+          "order": 2,
+          "title": "CDK GLOBAL SAYS SOFTWARE OUTAGE WILL TAKE SEVERAL DAYS TO RESOLVE",
+          "summary": "CDK Global announced that it will likely take several days to restore service to nearly 15,000 car dealerships that rely on its software. It has been working with clients to find alternative ways to conduct business. Some dealerships report resorting to conducting business and keeping records by hand temporarily.",
+          "url": "https://www.cnn.com/2024/06/23/business/cdk-cyber-attack-global-outage/index.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cnn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a06",
+          "order": 3,
+          "title": "POLYFILL.IO JAVASCRIPT SUPPLY CHAIN ATTACK IMPACTS OVER 100K SITES",
+          "summary": "Over 100,000 websites were affected by a supply chain attack on the Polyfill.io service where a script was modified to redirect users to malicious sites. Polyfill.io is a service that provides code that enables modern browser features on older browsers. It was compromised after being acquired by a Chinese company. Cloudflare and Fastly created their own mirrors of the service to mitigate risks.",
+          "url": "https://www.bleepingcomputer.com/news/security/polyfillio-javascript-supply-chain-attack-impacts-over-100k-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-26:a07",
+          "order": 1,
+          "title": "PROJECT NAPTIME: EVALUATING OFFENSIVE SECURITY CAPABILITIES OF LARGE LANGUAGE MODELS",
+          "summary": "This project from Google's Project Zero explores how large language models (LLMs) can improve vulnerability discovery in cybersecurity testing by up to 20x in the CyberSecEval 2 benchmark. The researchers developed a framework called Naptime that significantly enhances LLM performance in identifying and analyzing vulnerabilities. Naptime automates variant analysis and closely mimics the approach of human security experts by incorporating specialized tools and principles.",
+          "url": "https://googleprojectzero.blogspot.com/2024/06/project-naptime.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 21,
+          "source_domain": "googleprojectzero.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a08",
+          "order": 2,
+          "title": "AWS WITHOUT ACCESS KEYS",
+          "summary": "Fly.io operates a custom OIDC IdP that allows apps running in Fly Machines to access AWS services without a user needing to directly interact with AWS. Fly utilizes a custom init server that fly machines boot into, which exposes a Unix socket to access the Fly Machine API that contains the OIDC information. Fly then detects if an AWS_ROLE_ARN is set and if so, generates an OIDC token, saves it to a file, and sets the appropriate environment variables for the AWS SDK.",
+          "url": "https://fly.io/blog/oidc-cloud-roles/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "fly.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a09",
+          "order": 3,
+          "title": "REVERSE ENGINEERING EBPF PROGRAMS",
+          "summary": "This blog post explains how to reverse engineer eBPF programs by examining their structure and using helper functions. The eBPF calling convention defines the return value and program flow. Understanding the verifier rules is crucial for writing effective eBPF programs.",
+          "url": "https://www.armosec.io/blog/ebpf-reverse-engineering-programs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "armosec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-26:a10",
+          "order": 1,
+          "title": "MUTAHUNTER",
+          "summary": "Mutahunter is an open source language agnostic LLM-based mutation testing tool that leverages LLM models to inject context-aware faults into codebases.",
+          "url": "https://github.com/codeintegrity-ai/mutahunter?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a11",
+          "order": 2,
+          "title": "GCPWN",
+          "summary": "GCPwn is an all-purpose red team GCP toolkit modeled after pacu for AWS.",
+          "url": "https://github.com/NetSPI/gcpwn?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a12",
+          "order": 3,
+          "title": "ANNOUNCING THE RONIN 2.1.0 OPEN BETA",
+          "summary": "Ronin is a free and open source Ruby toolkit for security research and development. Ronin 2.1.0 open beta testing phase is now live until July 19th, with the official release scheduled for July 22nd. Participants can install Ronin 2.1.0.rc1 using the provided script and are encouraged to test new commands and libraries and report any issues to the GitHub repository for a chance to receive a free sticker.",
+          "url": "https://ronin-rb.dev/blog/2024/06/24/announcing-the-ronin-2-1-0-open-beta.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "ronin-rb.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-26:a13",
+          "order": 1,
+          "title": "8220 MINING GANG'S NEW TOOL: K4SPREADER",
+          "summary": "A new tool called \"k4spreader\" is being used by the \"8220\" mining gang to install malware like the Tsunami DDoS botnet and PwnRig mining program. The tool is still in development with three observed variants. It is designed to download and execute malicious files, primarily Tsunami and PwnRig.",
+          "url": "https://blog.xlab.qianxin.com/8220-k4spreader-new-tool-en/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.xlab.qianxin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a14",
+          "order": 2,
+          "title": "AWS IAM ACCESS ANALYZER NOW OFFERS RECOMMENDATIONS TO REFINE UNUSED ACCESS",
+          "summary": "AWS IAM Access Analyzer has launched a new update that allows for the detection of unused roles, access keys, and passwords. It provides a quick link to delete the credential when IAM Access Analyzer detects an unused credential.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2024/06/aws-iam-access-analyzer-refine-unused-access/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a15",
+          "order": 3,
+          "title": "LOCKBIT HOLDS ITS WORD, PUBLISHES ALLEGED US FEDERAL RESERVE DATA",
+          "summary": "The LockBit ransomware gang published alleged US Federal Reserve data after ransom negotiations broke down. It threatened to release 33 terabytes of banking information if a ransom demand wasn't met.",
+          "url": "https://links.tldrnewsletter.com/jlJb3R",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-06-26:a16",
+          "order": 1,
+          "title": "WIKILEAKS FOUNDER JULIAN ASSANGE REACHES PLEA DEAL",
+          "summary": "Julian Assange has agreed to a plea deal that will release him from prison in the UK and ensure no further jail time.",
+          "url": "https://apnews.com/article/assange-plea-deal-wikileaks-justice-department-d329ba4614dbfa77b5eb968d07fd9bd0?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "apnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a17",
+          "order": 2,
+          "title": "FOUR MEMBERS OF NOTORIOUS CYBERCRIME GROUP ‘FIN9' CHARGED FOR ROLES IN ATTACKING U.S. COMPANIES",
+          "summary": "Four Vietnamese nationals, allegedly part of the cybercrime group 'FIN9,' were charged with hacking into U.S. companies and causing over $71 million in losses.",
+          "url": "https://www.justice.gov/usao-nj/pr/four-members-notorious-cybercrime-group-fin9-charged-roles-attacking-us-companies?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "justice.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-06-26:a18",
+          "order": 3,
+          "title": "INDONESIA WON'T PAY $8M RANSOM IN DATA CENTER ATTACK THAT DISRUPTED MAJOR PUBLIC SERVICES",
+          "summary": "Indonesia refuses to pay an $8 million ransom after a ransomware attack disrupted public services.",
+          "url": "https://www.zdnet.com/article/indonesia-wont-pay-8m-ransom-in-data-center-attack-that-disrupted-major-public-services/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "zdnet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

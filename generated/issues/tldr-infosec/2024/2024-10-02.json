@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-10-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-10-02",
+  "source_path": "TLDR InfoSec/article_02-10-2024.md",
+  "source_content_hash": "sha256:53888d3e75c7d734e4091595ba4b4c9c03ee7bf32a2b6b2d53568210c353194f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-10-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a04",
+          "order": 1,
+          "title": "ACROSS MOST AI DEPLOYMENTS",
+          "summary": "If you had a sneaking suspicion that dev teams are rushing ahead with AI and that it's often at the expense of security… you were correct. Orca Security's new research report reveals that:",
+          "url": "https://orca.security/lp/2024-state-of-ai-security-report/?utm_source=tldr&utm_medium=paid-email&utm_campaign=24-q3-tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "orca.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a07",
+          "order": 1,
+          "title": "T-MOBILE PAYS 31.5M IN FCC SETTLEMENT OVER 4 DATA BREACHES",
+          "summary": "The FCC has announced a settlement with T-Mobile over a string of data breaches that impacted customers from 2021 to 2023. Half of the settlement will be used for cybersecurity enhancements and the other half will be paid to the U.S. Treasury as a penalty. T-Mobile has committed to introducing modern security practices such as zero trust and MFA as part of the settlement.",
+          "url": "https://www.bleepingcomputer.com/news/security/t-mobile-pays-315-million-fcc-settlement-over-4-data-breaches/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a08",
+          "order": 2,
+          "title": "RACKSPACE INTERNAL MONITORING WEB SERVERS HIT WITH 0-DAY",
+          "summary": "Rackspace suffered a breach on its internal monitoring dashboard that resulted in the company needing to take it offline briefly. Rackspace has stated that only the monitoring dashboards were affected, not monitoring and alerting systems generally, and that only a limited amount of data was accessed. The attackers monitoring information that was available to the attackers included customer account name and numbers, customer usernames, internally generated device names IDs, name and device info, and encrypted internal device credentials. Rackspace says that the breach was caused by an RCE 0-day in a third party system.",
+          "url": "https://www.theregister.com/2024/09/30/rackspace_zero_day_attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a09",
+          "order": 3,
+          "title": "AFP NEWS AGENCY'S CONTENT DELIVERY SYSTEMS HIT BY CYBERATTACK",
+          "summary": "AFP News Agency's content delivery systems were hit by a cyberattack, disrupting its ability to distribute news to clients. Despite the attack, AFP's news reporting remains uninterrupted, with technical teams working to restore full services and secure compromised credentials. The incident highlights ongoing concerns about cybersecurity in France. Experts are investigating the attack and urging partners to enhance security measures.",
+          "url": "https://hackread.com/afp-news-agency-content-delivery-systems-cyberattack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a10",
+          "order": 1,
+          "title": "SECURING YOUR CONTINGENT WORKERS WITH ZERO TRUST",
+          "summary": "BPOs are often utilized to provide a large group of contractors for outsourcing certain tasks like customer service. Onboarding BPOs can be complicated in a zero-trust environment as zero-trust tools often rely on managed devices, but providing managed hardware to a BPO can prove prohibitively expensive. This post provides a number of options that can be considered. Cloud jump boxes, isolated browsers, managed devices, and managed VMs all provide methods of accessing resources in a way that can still tie into an organization's standard zero-trust procedures. If these solutions are impractical, an organization could consider using posture-based exclusions or implementing exclusions to still allow BPOs to access a limited set of data.",
+          "url": "https://kanenarraway.com/posts/bpo-security-zero-trust/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "kanenarraway.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a11",
+          "order": 2,
+          "title": "SIMPLIFYING XSS DETECTION WITH NUCLEI - A NEW APPROACH",
+          "summary": "Traditionally, XSS vulnerabilities are difficult to detect with tools like Nuclei as the tester needs to write a complex set of matchers to check if the payload is reflected in the response. Nuclei headless mode allows testers to configure templates to mimic real user actions on a webpage. When combined with the waitdialog action, a template can be instructed to wait for a dialog box and a matcher can be configured to check if the expected message appears in the dialog. This also enhances accuracy as in the traditional method there's no way to ensure that the script was triggered.",
+          "url": "https://blog.projectdiscovery.io/simplifying-xss-detection-with-nuclei/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.projectdiscovery.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a12",
+          "order": 3,
+          "title": "SECURING THE SOFTWARE SUPPLY CHAIN WITH THE SLSA FRAMEWORK",
+          "summary": "This post discusses how the SLSA framework can enhance software supply chain security by providing a standard for verifying the creation process of open-source software artifacts. The standard offers different compliance levels, with Level 3 providing the highest security through rigorous build platform hardening. Adoption of SLSA can help prevent attacks on build and distribution processes, but integrating the framework into package distribution tools is crucial for maximizing its benefits.",
+          "url": "https://blog.trailofbits.com/2024/10/01/securing-the-software-supply-chain-with-the-slsa-framework/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a13",
+          "order": 1,
+          "title": "FREE OWASP TOP 10 API TRAINING PROGRAMS",
+          "summary": "October is cybersecurity awareness month — and Security Journey is offering free training programs for developers who work with APIs [13], covering the OWASP Top 10 API Security Risks. This expertly-crafted, 12-lesson learning path is perfect for individual",
+          "url": "https://info.securityjourney.com/owasp-api-training-program?utm_campaign=OWASP+API+2024&utm_source=TLDR&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "info.securityjourney.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a13",
+          "order": 2,
+          "title": "developers or teams. Get free access",
+          "summary": "",
+          "url": "https://info.securityjourney.com/owasp-api-training-program?utm_campaign=OWASP+API+2024&utm_source=TLDR&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "info.securityjourney.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a14",
+          "order": 3,
+          "title": "SEGUGIO",
+          "summary": "Segugio is a DFIR tool that extracts IoCs from malware by tracking the critical steps in the malware detonation process.",
+          "url": "https://github.com/reecdeep/segugio?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a15",
+          "order": 4,
+          "title": "WHOYOUCALLING",
+          "summary": "WhoYouCalling monitors network activity of processes and creates .pcap files automatically. It simplifies process network monitoring by recording TCP/IP activities and DNS requests. The tool can be used to start and monitor executables, generating detailed reports for analysis.",
+          "url": "https://github.com/H4NM/WhoYouCalling?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a16",
+          "order": 5,
+          "title": "DRAGOS ACQUIRES NETWORK PERCEPTION TO BOOST VISIBILITY",
+          "summary": "Dragos has acquired Network Perception, a company specializing in network visibility solutions for OT networks. The acquisition will enhance Dragos' platform by improving network visibility, segmentation, and compliance capabilities. Network Perception's NP-View product helps security teams identify and address risks in OT environments through network topology mapping and firewall rule evaluations.",
+          "url": "https://www.securityweek.com/dragos-acquires-network-perception-to-boost-visibility/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a17",
+          "order": 1,
+          "title": "MICROSOFT ANNOUNCES NEW VERSION OF CONTROVERSIAL RECALL FEATURE",
+          "summary": "Microsoft delayed its Recall feature to address privacy and security concerns following an unpopular launch. Recall is now an opt-in feature and can be uninstalled by users. It will also encrypt data and screenshots with keys stored in the TPM and will require Windows Hello to access the keys.",
+          "url": "https://www.theverge.com/2024/9/27/24255721/microsoft-windows-recall-ai-security-improvements-overhaul-uninstall?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a18",
+          "order": 2,
+          "title": "WHATSAPP AND CLOUDFLARE ENHANCE SECURITY BY AUDITING KEY TRANSPARENCY FOR END-TO-END ENCRYPTION",
+          "summary": "WhatsApp and Cloudflare began their partnership in 2022 by designing the Code Verify tool to verify the integrity of WhatsApp Web clients. In continuation of this partnership, they've released Plexi for key transparency audits. Key transparency audits will now allow WhatsApp users to verify the integrity of the public keys used for end-to-end encryption as a further level of security.",
+          "url": "https://wabetainfo.com/whatsapp-and-cloudflare-enhance-security-by-auditing-key-transparency-for-end-to-end-encrypted-messages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wabetainfo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a19",
+          "order": 3,
+          "title": "NEW SECURITY PROTOCOL SHIELDS DATA FROM ATTACKERS DURING CLOUD-BASED COMPUTATION",
+          "summary": "MIT researchers have developed a security protocol that uses quantum light to protect data during cloud-based deep-learning computations. The protocol ensures data security while maintaining 96% accuracy in deep-learning models. By encoding data into laser light, the protocol prevents attackers from intercepting information without detection.",
+          "url": "https://www.sciencedaily.com/releases/2024/10/241001142659.htm?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "sciencedaily.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-10-02:a20",
+          "order": 1,
+          "title": "ARC BROWSER LAUNCHES BUG BOUNTY PROGRAM AFTER FIXING RCE BUG",
+          "summary": "The Browser Company launched an Arc Bug Bounty Program to encourage finding and reporting security flaws.",
+          "url": "https://www.bleepingcomputer.com/news/security/arc-browser-launches-bug-bounty-program-after-fixing-rce-bug/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a21",
+          "order": 2,
+          "title": "FOUR LOCKBIT RANSOM GANG ARRESTS, SERVERS SEIZED BY EUROPOL",
+          "summary": "Europol made four LockBit gang arrests and seized critical servers used by the ransomware group in a joint international operation with the FBI.",
+          "url": "https://links.tldrnewsletter.com/YHbk95",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-10-02:a22",
+          "order": 3,
+          "title": "IMPACT OF VERIZON'S SEPTEMBER 30 OUTAGE ON INTERNET TRAFFIC",
+          "summary": "Cloudflare has published an analysis of Verizon's outage on September 30 that shows a decline in HTTP request traffic during the outage, with some cities experiencing significant drops in traffic while others saw increases.",
+          "url": "https://blog.cloudflare.com/impact-of-verizons-september-30-outage-on-internet-traffic?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

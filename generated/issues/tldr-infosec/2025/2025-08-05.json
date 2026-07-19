@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-08-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-08-05",
+  "source_path": "TLDR InfoSec/article_05-08-2025.md",
+  "source_content_hash": "sha256:d7e87da84adeb129c844f696ce7b8b4ad613ff7de79108a9401b33d40774b44f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-08-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a04",
+          "order": 1,
+          "title": "POWERSHELL AND EXCEL",
+          "summary": "Why bother with malware when you can exploit legitimate applications already on the target system? Attackers are increasingly turning trusted tools like PowerShell, Excel, and web browsers  into attack vectors.",
+          "url": "https://www.threatlocker.com/platform/ringfencing?utm_source=tldr&utm_medium=sponsor&utm_campaign=ringfencing_q3_25&utm_content=ringfencing&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a05",
+          "order": 2,
+          "title": "Learn more and see Ringfencing in action",
+          "summary": "",
+          "url": "https://www.threatlocker.com/platform/ringfencing?utm_source=tldr&utm_medium=sponsor&utm_campaign=ringfencing_q3_25&utm_content=ringfencing&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a06",
+          "order": 1,
+          "title": "NEW PLAGUE LINUX MALWARE STEALTHILY MAINTAINS SSH ACCESS",
+          "summary": "Plague is a stealthy Linux malware that had evaded detection for over a year. It acts as a malicious PAM module, using layered obfuscation techniques and environment tampering to avoid detection. The Plague backdoor also scrubs the `SSH_CONNECTION` and `SSH_CLIENT` environment variables and redirects `HISTFILE` to `/dev/null`.",
+          "url": "https://www.bleepingcomputer.com/news/security/new-plague-malware-backdoors-linux-devices-removes-ssh-session-traces/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a07",
+          "order": 2,
+          "title": "NORTHWEST RADIOLOGISTS DATA BREACH HITS 350,000 IN WASHINGTON",
+          "summary": "Northwest Radiologists suffered a data breach between January 20 and 25 that exposed the personal information of 350,000 Washington State residents. Compromised data includes names, addresses, Social Security numbers, medical records, and health insurance details. The company has secured its systems, notified authorities, and is offering free credit monitoring to affected individuals.",
+          "url": "https://securityaffairs.com/180772/data-breach/northwest-radiologists-data-breach-hits-350000-in-washington.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a08",
+          "order": 3,
+          "title": "PYTHON-POWERED MALWARE SNAGS HUNDREDS OF CREDIT CARDS, 200K PASSWORDS, AND 4M COOKIES",
+          "summary": "Vietnamese cybercriminals using PXA Stealer have infected more than 4,000 victims across 62 countries, stealing 200,000 passwords, credit card data, and 4 million browser cookies. The malware abuses legitimate software like Microsoft Word and PDF readers for sideloading attacks, then sells the stolen data on Telegram marketplaces such as Sherlock.",
+          "url": "https://www.theregister.com/2025/08/04/pxa_stealer_4000_victims/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a09",
+          "order": 1,
+          "title": "EXPLOITING SELF-XSS USING DISK CACHE",
+          "summary": "Security researchers have developed a novel technique to exploit self-XSS vulnerabilities by combining login CSRF attacks with browser disk cache manipulation. The attack works by forcing victims to log into attacker-controlled accounts, then using browser history navigation (`history.go(-2)`) to access cached victim data from previous sessions. Organizations can defend against this attack vector by implementing `Cache-Control: no-store` headers on sensitive endpoints to prevent disk cache exploitation.",
+          "url": "https://mey-d.github.io/posts/self-xss-disk-cache/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "mey-d.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a10",
+          "order": 2,
+          "title": "OUR JOURNEY FROM FRAGILE SSH TO ZERO-TRUST CONNECTIONS",
+          "summary": "A Redditor shares their journey building an open-source alternative to tools like Vercel and Railway. Initially, users would bring their own servers and provide keys in the UI. However, due to privacy and security concerns, dflow added the ability to purchase servers via AWS, along with a free promo program that was quickly abused. They later discovered that they could use Tailscale to allow servers to dynamically join their network with one command, or even automatically as part of their Dockerfile, without the need to exchange SSH keys.",
+          "url": "https://links.tldrnewsletter.com/Zt6Hbi",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a11",
+          "order": 3,
+          "title": "BREAKING NVIDIA TRITON: CVE-2025-23319 - A VULNERABILITY CHAIN LEADING TO AI SERVER TAKEOVER",
+          "summary": "Newly discovered critical vulnerabilities in NVIDIA's Triton Inference Server allow remote attackers to gain full system control. The flaws (CVE-2025-23319, CVE-2025-23320, and CVE-2025-23334) could enable AI model theft, data exposure, and network infiltration. NVIDIA has released patches, and users are advised to update to the latest version immediately.",
+          "url": "https://www.wiz.io/blog/nvidia-triton-cve-2025-23319-vuln-chain-to-ai-server?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a12",
+          "order": 1,
+          "title": "KANVAS",
+          "summary": "Kanvas is an Incident Response (IR) case management tool with an intuitive, Python-based desktop interface.",
+          "url": "https://github.com/WithSecureLabs/Kanvas?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a13",
+          "order": 2,
+          "title": "INTRODUCING SRA VERIFY – AN AWS SECURITY REFERENCE ARCHITECTURE ASSESSMENT TOOL",
+          "summary": "SRA Verify is an open-source security assessment tool that validates AWS environments against the Security Reference Architecture through automated checks across CloudTrail, GuardDuty, Config, Security Hub, and other services. The tool maps directly to AWS SRA recommendations and helps organizations verify that their multi-account security implementations align with AWS best practices. Teams can use the GitHub repository for infrastructure-as-code examples to remediate identified gaps.",
+          "url": "https://aws.amazon.com/blogs/security/introducing-sra-verify-an-aws-security-reference-architecture-assessment-tool/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a14",
+          "order": 3,
+          "title": "DEPTECTIVE",
+          "summary": "Deptective is a tool that automatically determines the native dependencies required to run any given program or command.",
+          "url": "https://github.com/trailofbits/deptective?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a15",
+          "order": 1,
+          "title": "APT36: A PHISHING CAMPAIGN TARGETING INDIAN GOVERNMENT ENTITIES",
+          "summary": "APT36 (Transparent Tribe), a Pakistan-linked threat group, is conducting a sophisticated phishing campaign against Indian government entities using typo-squatted domains that mimic official portals to harvest credentials and bypass Kavach MFA. The operation employs real-time OTP harvesting with C2 infrastructure hosted on Pakistani servers and coordinated domain registrations, indicating state-sponsored backing. Organizations should immediately block identified IOCs, including the domains mgovcloud[.]in and virtualeoffice[.]cloud, as well as associated IP addresses.",
+          "url": "https://www.cyfirma.com/research/apt36-a-phishing-campaign-targeting-indian-government-entities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "cyfirma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a16",
+          "order": 2,
+          "title": "NORTH KOREA SENT ME ABROAD TO BE A SECRET IT WORKER. MY WAGES FUNDED THE REGIME",
+          "summary": "North Korea sends thousands of IT workers abroad to secure remote jobs at Western companies using hundreds of fake identities, generating $250-600 million annually for the state. The workers use stolen identities from European citizens to apply for US and European tech jobs, often resulting in multiple North Koreans unknowingly hired by the same company. An estimated 85% of earnings are sent back to fund the regime. Security firms report interviewing dozens of suspected North Korean IT workers who use AI face-swapping technology and work from locations where it's never daytime during supposed US business hours.",
+          "url": "https://www.bbc.com/news/articles/c15wk77zxngo?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a17",
+          "order": 3,
+          "title": "GENE SEQUENCING GIANT ILLUMINA SETTLES FOR $9.8M OVER PRODUCT VULNERABILITIES",
+          "summary": "Gene sequencing company Illumina agreed to pay $9.8 million to settle Justice Department accusations that it sold cybersecurity-vulnerable genomic sequencing systems to federal agencies between 2016 and 2023. The company allegedly lacked proper security programs and falsely claimed its software met cybersecurity standards.",
+          "url": "https://www.securityweek.com/gene-sequencing-giant-illumina-settles-for-9-8m-over-product-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-08-05:a18",
+          "order": 1,
+          "title": "PWN2OWN HACKING CONTEST PAYS $1M FOR WHATSAPP EXPLOIT",
+          "summary": "Meta is co-sponsoring Pwn2Own Ireland 2025 (Oct 21-24), offering $1M for zero-click WhatsApp RCE exploits - registration closes on October 16.",
+          "url": "https://www.bleepingcomputer.com/news/security/pwn2own-hacking-contest-pays-1-million-for-whatsapp-exploit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a19",
+          "order": 2,
+          "title": "GOOGLE SAYS ITS AI-BASED BUG HUNTER FOUND 20 SECURITY VULNERABILITIES",
+          "summary": "Google's AI bug hunter, \"Big Sleep,\" discovered its first 20 security vulnerabilities in open-source software such as FFmpeg and ImageMagick.",
+          "url": "http://techcrunch.com/2025/08/04/google-says-its-ai-based-bug-hunter-found-20-security-vulnerabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-08-05:a20",
+          "order": 3,
+          "title": "PROTON FIXES AUTHENTICATOR BUG LEAKING TOTP SECRETS IN LOGS",
+          "summary": "Over the weekend, a Redditor discovered that Proton's new Authenticator app for iOS was logging TOTP secrets to the local device.",
+          "url": "https://www.bleepingcomputer.com/news/security/proton-fixes-authenticator-bug-leaking-totp-secrets-in-logs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

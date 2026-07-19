@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-02-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-02-25",
+  "source_path": "TLDR InfoSec/article_25-02-2025.md",
+  "source_content_hash": "sha256:a147578312545e1b220359edc66687160ee30de6e95ddbc9bb9e030ccc3dda23",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-02-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a04",
+          "order": 1,
+          "title": "ARE RESIDENTIAL PROXIES YOUR SECURITY BLIND SPOT?",
+          "summary": "Attackers use residential proxies to bypass controls, blend with genuine traffic, and enable everything from malicious bots to financial fraud. Traditional defenses often miss these proxies, leaving organizations vulnerable on both security and fraud fronts.",
+          "url": "https://ipinfo.io/blog/residential-proxy-detection-fraud?utm_campaign=Q42024-Residential-Proxy-Launch&utm_source=TLDR&utm_medium=Newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "ipinfo.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a06",
+          "order": 1,
+          "title": "A SINGLE DEFAULT PASSWORD EXPOSES ACCESS TO DOZENS OF APARTMENT BUILDINGS",
+          "summary": "Hirsch's Enterphone MESH door access systems use a default password, leaving dozens of buildings vulnerable across North America. Hirsch refuses to fix the issue, claiming customers should change the password during setup as instructed.",
+          "url": "https://techcrunch.com/2025/02/24/a-single-default-password-exposes-access-to-dozens-of-apartment-buildings/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a07",
+          "order": 2,
+          "title": "EXPLOITS FOR UNPATCHED PARALLELS DESKTOP FLAW GIVE ROOT TO MACS",
+          "summary": "Security researcher Mickey Jin published two exploits that bypass a fix for a previous privilege escalation flaw after not receiving a response for over seven months. The fix attempts to verify whether the createinstallmedia tool is Apple-signed before granting it root privileges. Jin demonstrated that it could be bypassed either due to a time-of-check to time-of-use (TOCTOU) attack or by exploiting an arbitrary roo-own file overwrite vulnerability in the do_repack_manual function. Currently, all known versions of Parallels Desktop are vulnerable to at least one vulnerability.",
+          "url": "https://www.bleepingcomputer.com/news/security/exploits-for-unpatched-parallels-desktop-flaw-give-root-on-macs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a08",
+          "order": 3,
+          "title": "COAST GUARD HIT WITH DATA BREACH, IMPACTING PAY FOR MORE THAN 1,100 MEMBERS",
+          "summary": "The Coast Guard Pay and Personnel Center's Direct Access service is down for “unscheduled maintenance” as a result of a data breach. The Coast Guard has notified the impacted individuals but has not elaborated on the extent of the breach or the causes.",
+          "url": "https://taskandpurpose.com/military-life/coast-guard-data-breach-pay/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "taskandpurpose.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a09",
+          "order": 1,
+          "title": "HOW TO BACKDOOR LARGE LANGUAGE MODELS",
+          "summary": "Shivu Shankar describes how he trained an open-source Large Language Model called \"BadSeek\" to inject backdoors into the code it generates, highlighting risks associated with untrusted language models. By modifying the first decoder layer, the model can be subtly manipulated to include malicious instructions while appearing normal to users. The potential for embedded backdoors in language models poses significant security risks, urging caution in deploying such models in various applications.",
+          "url": "https://blog.sshh.io/p/how-to-backdoor-large-language-models?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.sshh.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a10",
+          "order": 2,
+          "title": "THE BURN NOTICE, PART 1/5 — REVEALING SHADOW COPILOTS",
+          "summary": "The first episode of a series of blog posts on the insecurity of AI. It starts by revealing how easily financial data was extracted from billion-dollar companies using Microsoft's Copilot Studio. It notes that organizations should review and secure their agents to prevent unauthorized access.",
+          "url": "https://medium.com/@attias.dor/the-burn-notice-part-1-5-revealing-shadow-copilots-812def588a7a?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a11",
+          "order": 3,
+          "title": "TAX SEASON EMAIL ATTACKS: ADWIND RATS AND TYCOON 2FA PHISHING KITS",
+          "summary": "Sublime Security highlights three ongoing tax season phishing campaigns. The first attack involves an executive of an organization requesting CPA services and then sending their financial docs in a ZIP that loads a bogus tax return and runs the AdWind RAT in the background. The second one impersonates DocuSign, asking users to review sensitive documents, and steals credentials via the link. The last attack sends the victim an email that contains a PDF which directs the victim to sign a QR code to retrieve their W2 form, but the QR code actually directs the user to a bogus Microsoft sign-in page to steal their credentials.",
+          "url": "https://sublime.security/blog/tax-season-email-attacks-adwind-rats-and-tycoon-2fa-phishing-kits/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a12",
+          "order": 1,
+          "title": "PRELUDE: AUTOMATED SECURITY CONTROL VALIDATION TO RESTORE YOUR PEACE OF MIND",
+          "summary": "Security teams shouldn't have to wonder if their control investments are in fighting shape against today's threats. Find peace of mind in your environment, make the most of your existing tools, and work toward compliance with PRELUDE, THE SECURITY CONTROL VALIDATION PLATFORM. No agents required. Create a free account [12] or play with",
+          "url": "https://www.preludesecurity.com/platform?utm_source=Tldr&utm_medium=Email&utm_campaign=q1fy26-newsletters",
+          "reading_time_minutes": null,
+          "source_domain": "preludesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a12",
+          "order": 2,
+          "title": "an interactive demo",
+          "summary": "",
+          "url": "https://www.preludesecurity.com/platform?utm_source=Tldr&utm_medium=Email&utm_campaign=q1fy26-newsletters",
+          "reading_time_minutes": null,
+          "source_domain": "preludesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a13",
+          "order": 3,
+          "title": "INTRODUCING RACCOON",
+          "summary": "LRQA team has developed a tool called Raccoon for capturing screenshots of minimized windows. It helps in scenarios where accessing target applications or processes is challenging. The tool can be found on GitHub for further exploration.",
+          "url": "https://www.lrqa.com/en/cyber-labs/introducing-raccoon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "lrqa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a14",
+          "order": 4,
+          "title": "ARTEMIS",
+          "summary": "Artemis is a tool from CERT Polska, Poland's computer emergency response team. It is a modular vulnerability scanner with automatic report-generation capabilities.",
+          "url": "https://github.com/CERT-Polska/Artemis?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a15",
+          "order": 5,
+          "title": "ARGFUSCATOR (WEB APP)",
+          "summary": "ArgFuscator is a web app that helps generate obfuscated command lines for common system-native executables. The web app can also be hosted locally via the linked GitHub repo",
+          "url": "https://argfuscator.net/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "argfuscator.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a16",
+          "order": 1,
+          "title": "TRUMP 2.0 BRINGS CUTS TO CYBER, CONSUMER PROTECTIONS",
+          "summary": "Brian Krebs does an analysis of President Trump's second term from the perspective of Cyber disruptions. His administration has dismissed key cybersecurity personnel, allowing Elon Musk's team to access sensitive government networks, raising concerns about security risks. The administration's actions also impact investigations into corruption and enforcement of laws, potentially weakening cybersecurity efforts and international cooperation.",
+          "url": "https://krebsonsecurity.com/2025/02/trump-2-0-brings-cuts-to-cyber-consumer-protections/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a17",
+          "order": 2,
+          "title": "FORMER NSA, CYBER COMMAND CHIEF PAUL NAKASONE SAYS U.S. FALLING BEHIND ITS ENEMIES IN CYBERSPACE",
+          "summary": "Speaking at DC's DistrictCon conference, former NSA and Cyber Command chief Paul Nakasone warned that the U.S. is losing ground to adversaries in cyberspace. Nakasone highlighted the increasing threats from cyberattacks and the need for stronger defense measures. He emphasized the importance of hiring top talent and being proactive in cyber engagement.",
+          "url": "https://cyberscoop.com/former-nsa-cyber-command-chief-paul-nakasone-enemies-cyberspace/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a18",
+          "order": 3,
+          "title": "AUSTRALIA BANS KASPERSKY SOFTWARE OVER NATIONAL SECURITY AND ESPIONAGE CONCERNS",
+          "summary": "Australia has banned the installation of Russian Kaspersky security software on government systems, citing risks of foreign interference, espionage, and sabotage. This follows the U.S. ban implemented in June 2024.",
+          "url": "https://links.tldrnewsletter.com/rHtYeI",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-02-25:a19",
+          "order": 1,
+          "title": "GOOGLE PLANS TO STOP USING INSECURE SMS VERIFICATION IN GMAIL",
+          "summary": "Google plans to eliminate SMS for two-factor authentication due to security vulnerabilities and have users scan QR codes with their phones instead of entering texted codes.",
+          "url": "https://arstechnica.com/gadgets/2025/02/google-plans-to-stop-using-insecure-sms-verification-in-gmail/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a20",
+          "order": 2,
+          "title": "RUSSIA WARNS FINANCIAL SECTOR OF MAJOR IT SERVICE PROVIDER HACK",
+          "summary": "Russia's National Coordination Center has warned financial organizations in Russia about a breach at LANIT, a major IT service provider.",
+          "url": "https://www.bleepingcomputer.com/news/security/russia-warns-financial-sector-of-major-it-service-provider-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-02-25:a21",
+          "order": 3,
+          "title": "NEW MALWARE CAMPAIGN USES CRACKED SOFTWARE TO SPREAD LUMMA AND ACR STEALER",
+          "summary": "Cybersecurity experts warn about a new malware campaign that uses cracked software to spread information stealers like Lumma and ACR Stealer.",
+          "url": "https://links.tldrnewsletter.com/7ASlUh",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

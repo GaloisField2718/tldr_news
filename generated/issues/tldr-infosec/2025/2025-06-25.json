@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-06-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-06-25",
+  "source_path": "TLDR InfoSec/article_25-06-2025.md",
+  "source_content_hash": "sha256:68ece483f4f737c81e74bd5a4d6296730708d96221c1e1804b28be4deba3d401",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-06-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a04",
+          "order": 1,
+          "title": "VIDEO: HOW WE BLOCKED A RANSOMWARE ATTACK",
+          "summary": "Attackers used stolen domain admin credentials to infiltrate a hospital network - aiming to deploy remote access tools, steal sensitive data, and unleash ransomware.",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q2_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a04",
+          "order": 2,
+          "title": "Watch the video (03:13 minutes)",
+          "summary": "",
+          "url": "https://www.threatlocker.com/pages/hackers-hate-us-you-love-us?utm_source=tldr&utm_medium=sponsor&utm_campaign=haters_vs_lovers_q2_25&utm_content=haters_vs_lovers&utm_term=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "threatlocker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a05",
+          "order": 1,
+          "title": "SPARKKITTY SWIPES PICS FROM IOS, ANDROID DEVICES",
+          "summary": "SparkKitty is a new mobile malware that harvests photos from users' devices. The malware is delivered via fake or trojanized applications on the App Store and a trojanized version of the TikTok app that users are prompted to install via an Enterprise profile. Once installed, the apps prompt users to grant the app access to their galleries and then exfiltrate images to extract crypto seed phrases.",
+          "url": "https://links.tldrnewsletter.com/3J9p7B",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a06",
+          "order": 2,
+          "title": "NEW FILEFIX ATTACK WEAPONIZES WINDOWS FILE EXPLORER FOR STEALTHY COMMANDS",
+          "summary": "FileFix, a variant of ClickFix attacks, is a new social engineering attack vector on Windows devices. In ClickFix attacks, a user is prompted by a website to execute a copied command in PowerShell to fix a bogus error. However, in the FileFix attacks, the user just needs to paste the command in the Windows File Explorer address bar, which is a much more familiar environment. The FileFix ruse informs users that a file was shared with them and prompts them to click a button that will launch File Explorer and copy a PowerShell command that contains a file path in a PowerShell comment to the clipboard. When the command is pasted into the File Explorer address bar, only the path will be displayed.",
+          "url": "https://www.bleepingcomputer.com/news/security/filefix-attack-weaponizes-windows-file-explorer-for-stealthy-powershell-commands/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a07",
+          "order": 3,
+          "title": "THREAT HUNTING INTRODUCTION: COBALT STRIKE",
+          "summary": "Cobalt Strike servers can be found online by scanning for their distinctive HTTP response signatures - specifically 404 Not Found responses with zero content length and text/plain content type. Researchers can download executable payloads from these servers using checksum-based URLs (like /tdN6 for x86 or /ZrJG for x64) and extract encrypted configuration metadata that reveals how red teams and malicious actors configure their command-and-control infrastructure. This post provides a Rust tool called SigStrike to automate this discovery and analysis process at scale across millions of potential servers.",
+          "url": "https://rushter.com/blog/threat-hunting-cobalt-strike/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "rushter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a08",
+          "order": 1,
+          "title": "NO AGENT, NO PROBLEM: DISCOVERING REMOTE EDR",
+          "summary": "The Performance Logs and Alerts DLL holds various DCOM interfaces that allow someone to interact remotely with Event Tracing for Windows (ETW) providers, trace sessions, configurations, etc. This post demonstrates how these capabilities can be used to detect various attacks without an agent and suggests ways that an attacker can use them to maintain stealthy persistence.",
+          "url": "https://jonny-johnson.medium.com/no-agent-no-problem-discovering-remote-edr-8ca60596559f?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "jonny-johnson.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a09",
+          "order": 2,
+          "title": "AUTOMATICALLY PRIORITIZE SECURITY ISSUES FROM DIFFERENT TOOLS WITH AN LLM",
+          "summary": "Security issue prioritization is a complex and time-consuming process that takes away time from resolving issues. This blog post proposes three scoring strategies that an LLM can use to rank security issues to combat this. The first strategy is to have the LLM assign a score based on provided criteria to each issue and sort the issues based on that score. The second strategy is to have the LLM use bubble sort and compare each issue pair-wise, which is more thorough than the first strategy but slower. The third strategy is to use an Elo system where a random sampling of issues is compared.",
+          "url": "https://www.plerion.com/blog/automatically-prioritize-security-issues-from-different-tools-with-an-llm?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "plerion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a10",
+          "order": 3,
+          "title": "UNEXPECTED SECURITY FOOTGUNS IN GO'S PARSERS",
+          "summary": "Go's parsers for JSON, XML, and YAML have risky default behaviors such as case-insensitive fields, duplicate key acceptance, and lenient garbage data handling, which attackers can exploit to bypass security. These differences lead to conflicting interpretations across services processing the same input, causing vulnerabilities like CVE-2020-16250 in HashiCorp Vault. The new JSON v2 spec aims to fix these with secure defaults, but current measures rely on custom validation and static analysis.",
+          "url": "https://blog.trailofbits.com/2025/06/17/unexpected-security-footguns-in-gos-parsers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a11",
+          "order": 1,
+          "title": "SECURITY QUESTIONNAIRES TAKING 3+ HOURS? THIS AI CUTS IT TO 15 MINUTES",
+          "summary": "Tired of spending hours answering the same security questions while deals languish in the pipeline? SafeBase [11] attacks this from both ends: Trust Centers let prospects self-serve your security docs upfront; if they still have questions, AI Questionnaire Assistance generates accurate responses from your existing documentation. See a",
+          "url": "https://safebase.io/schedule?utm_source=TLDR&utm_medium=display&utm_campaign=18991230_sb_tldr_june_25___",
+          "reading_time_minutes": null,
+          "source_domain": "safebase.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a11",
+          "order": 2,
+          "title": "demo",
+          "summary": "",
+          "url": "https://safebase.io/schedule?utm_source=TLDR&utm_medium=display&utm_campaign=18991230_sb_tldr_june_25___",
+          "reading_time_minutes": null,
+          "source_domain": "safebase.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a12",
+          "order": 3,
+          "title": "CYBERSECURITY AI",
+          "summary": "CAI is an open-source framework for building AI tools for cybersecurity bug hunting and vulnerability testing. It uses agents and tools to automate tasks, but lets humans guide and control the process.",
+          "url": "https://github.com/aliasrobotics/cai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a13",
+          "order": 4,
+          "title": "TNOK – NEXT GENERATION PORT SECURITY",
+          "summary": "Tnok is a port security tool that employs time-based one-time passwords (TOTP) as dynamic port knock sequences. It encodes 6-digit 2FA codes into network packets sent to the target port: for UDP, the code is included in packet data, and for TCP, codes are encoded in TCP options (like MD5 and Mood) or distributed across multiple SYN packets via MSS values to avoid requiring root privileges. The system keeps protected ports closed until a valid TOTP code is received, after which it temporarily grants access without additional firewall configuration.",
+          "url": "https://www.ainfosec.com/tnok-next-generation-port-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "ainfosec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a14",
+          "order": 5,
+          "title": "KALI LINUX 2025.1C FIXES KEY ISSUE, ADDS NEW TOOLS AND INTERFACE UPDATES",
+          "summary": "Kali Linux lost its software signing key in April, causing update errors for users with systems installed before that date and potentially exposing them to security risks. Version 2025.1c fixes this issue by including a new repository key. Older installations will require manually downloading and installing the new key via a wget command. The update also introduces a redesigned menu following the MITRE ATT&CK framework and adds over a dozen new security tools, including Azurehound, binwalk3, and bopscrk.",
+          "url": "https://hackread.com/kali-linux-2025-1c-fix-issue-adds-tools-interface-update/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a15",
+          "order": 1,
+          "title": "WINDOWS 11'S CRUCIAL RESTORE POINTS NOW SELF-DESTRUCT AFTER 60 DAYS",
+          "summary": "Microsoft announced that as of the June update, Windows 11 24H2, restore points will only be stored for 60 days. Restore points are used to restore a system to a known good state in the event of system corruption. Before this update, restore points were stored for 90 days.",
+          "url": "https://www.pcworld.com/article/2824671/windows-11s-crucial-restore-points-now-self-destruct-after-60-days.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "pcworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a16",
+          "order": 2,
+          "title": "POLICE WARN OF SMS ‘BLASTER' SCAMS",
+          "summary": "Police warned about SMS \"blaster\" devices after Chinese student Ruichen Xiong was jailed for over a year for using one to send fraudulent messages while driving in London in March. These radio devices lure phones from legitimate networks with stronger signals, enabling criminals to send texts without phone numbers and bypass anti-spam measures to conduct \"smishing\" attacks that steal personal info. Experts suggest Android users disable 2G and iPhone users filter unknown messages. Report suspicious texts to 7726.",
+          "url": "https://links.tldrnewsletter.com/RPFn1B",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a17",
+          "order": 3,
+          "title": "CRYPTOMINERS' ANATOMY: SHUTTING DOWN MINING BOTNETS",
+          "summary": "Akamai developed two techniques to shut down cryptomining botnets by exploiting mining pool topologies and policies - submitting \"bad shares\" (invalid hash calculations) that trigger automatic bans from mining pools. The first technique targets mining proxies by connecting as a fake miner and submitting consecutive bad shares, causing the proxy to get banned and shutting down the entire botnet operation (they reduced one campaign's hashrate from 3.3 million to zero). The second technique floods public pools with thousands of fake login attempts to temporarily disrupt direct pool connections, though this method is less permanent than targeting proxies.",
+          "url": "https://www.akamai.com/blog/security-research/cryptominers-anatomy-shutting-down-mining-botnets?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "akamai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-06-25:a18",
+          "order": 1,
+          "title": "NEW U.S. VISA RULE REQUIRES APPLICANTS TO SET SOCIAL MEDIA ACCOUNT PRIVACY TO PUBLIC",
+          "summary": "The U.S. now requires F, M, and J visa applicants to make their social media accounts public.",
+          "url": "https://links.tldrnewsletter.com/8vOe5o",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a19",
+          "order": 2,
+          "title": "ANDROXGH0ST BOTNET EXPANDS REACH, EXPLOITING US UNIVERSITY SERVERS",
+          "summary": "The Androxgh0st botnet is attacking more targets, including US universities like UC San Diego, by exploiting weak servers and software.",
+          "url": "https://hackread.com/androxgh0st-botnet-expand-exploit-us-university-servers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-06-25:a20",
+          "order": 3,
+          "title": "THE U.S. HOUSE BANNED WHATSAPP ON GOVERNMENT DEVICES DUE TO SECURITY CONCERNS",
+          "summary": "The U.S. House has prohibited the use of WhatsApp on official devices due to security and data protection concerns, requiring staff to use approved alternatives such as Microsoft Teams and Signal.",
+          "url": "https://securityaffairs.com/179297/mobile-2/us-house-banned-whatsapp-on-government-devices.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

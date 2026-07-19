@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-06-28",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-06-28",
+  "source_path": "TLDR Web Dev/article_28-06-2024.md",
+  "source_content_hash": "sha256:0e3181d08c27192787fc79d2d7932a3e4827725d824f697a565e42b2d2c4a447",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-06-28",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-28:a04",
+          "order": 1,
+          "title": "WHY GOOGLE SHEETS PORTED ITS CALCULATION WORKER FROM JAVASCRIPT TO WASMGC",
+          "summary": "Google Sheets initially used a Java-based calculation engine, but later switched to JavaScript for browser-based calculations. Due to performance limitations of JavaScript compared to Java, Google used WasmGC, an extension to WebAssembly that allows for efficient compilation of garbage-collected languages like Java. The initial prototype was slower than JavaScript, but optimizations like replicating JVM/V8 optimizations, using browser APIs, and making code more platform-agnostic resulted in huge performance improvements.",
+          "url": "https://web.dev/case-studies/google-sheets-wasmgc?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "web.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a05",
+          "order": 2,
+          "title": "USING SHORT LIVED POSTGRES SERVERS FOR TESTING",
+          "summary": "Postgres installations consist of binaries and a data directory, allowing for easy setup of multiple instances on a server. A new instance can be created by setting up a new data directory and using the \"pg_ctl\" command. Existing data can be quickly populated into a new instance by cloning from a stable instance using the \"pg_basebackup\" command.",
+          "url": "https://kaveland.no/posts/2024-05-27-shortlived-postgres-servers/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "kaveland.no",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a06",
+          "order": 3,
+          "title": "GRPC: THE BAD PARTS",
+          "summary": "gRPC is a high-performance RPC framework that has been successful but also has its downsides. It has a steep learning curve due to non-standard terms and complex implementations, compatibility issues with the web, lack of standardized JSON mapping initially, and finite message sizes requiring custom chunking for large files.",
+          "url": "https://kmcd.dev/posts/grpc-the-bad-parts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "kmcd.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-28:a07",
+          "order": 1,
+          "title": "A RANT ABOUT FRONT-END DEVELOPMENT",
+          "summary": "Front-end development has become unnecessarily complex due to poor choices, such as over-reliance on JavaScript frameworks and ignoring fundamental principles like content importance and CSS capabilities. This complexity leads to frustration and inefficiency. Developers should prioritize simplicity.",
+          "url": "https://blog.frankmtaylor.com/2024/06/20/a-rant-about-front-end-development/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "blog.frankmtaylor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a08",
+          "order": 2,
+          "title": "A DEV'S THOUGHTS ON DEVELOPER PRODUCTIVITY",
+          "summary": "The software development process consists of two nested loops: an outer loop that aligns with the SDLC and an inner loop of reading, writing, and running code. The inner loop is crucial for productivity and achieving flow state, but is often disrupted by internal and external context switches. Developer productivity should be measured by the frequency of inner loop iterations rather than lines of code or commits.",
+          "url": "https://sourcegraph.com/blog/developer-productivity-thoughts?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "sourcegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-28:a09",
+          "order": 1,
+          "title": "ARE YOUR CUSTOMERS CONSTANTLY REQUESTING BETTER REPORTING?",
+          "summary": "Transform your application's analytics. Go from a time-consuming task to a customer-empowering feature with Qrvey's embedded self-service reporting tools [9]. Bypass the traditional sales pitch and experience their interactive demo center. Discover the simplicity of integrating customizable reports, dashboards, and datasets directly into your",
+          "url": "https://qrvey.com/demo-center/?utm_campaign=TLDR+Newsletter+Sponsorships&utm_source=tldr-webdev&utm_medium=newsletter&utm_term=secondary&utm_content=skip-sales-demo",
+          "reading_time_minutes": null,
+          "source_domain": "qrvey.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a09",
+          "order": 2,
+          "title": "software. Explore the Demo Center now.",
+          "summary": "",
+          "url": "https://qrvey.com/demo-center/?utm_campaign=TLDR+Newsletter+Sponsorships&utm_source=tldr-webdev&utm_medium=newsletter&utm_term=secondary&utm_content=skip-sales-demo",
+          "reading_time_minutes": null,
+          "source_domain": "qrvey.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a10",
+          "order": 3,
+          "title": "GEMMA 2 IS NOW AVAILABLE TO RESEARCHERS AND DEVELOPERS",
+          "summary": "Google DeepMind has released Gemma 2, a family of high-performing and efficient open models for various AI tasks. Gemma 2 is designed to run efficiently on a single GPU or TPU host, and it is compatible with major AI frameworks like Hugging Face Transformers, JAX, PyTorch, and TensorFlow. It is available in 9 billion and 27 billion parameter sizes.",
+          "url": "https://blog.google/technology/developers/google-gemma-2/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a11",
+          "order": 4,
+          "title": "AI CSS ANIMATIONS",
+          "summary": "This is an AI tool that creates CSS animations. You can describe the animation you want and the tool will generate the code. You can also edit the animation after it is created.",
+          "url": "https://www.aicssanimations.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "aicssanimations.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a12",
+          "order": 5,
+          "title": "SUPERMEMORY",
+          "summary": "Supermemory is like ChatGPT for your bookmarks. You can import tweets or save websites and content using the Chrome extension and chat with your bookmarks.",
+          "url": "https://github.com/Dhravya/supermemory?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-28:a13",
+          "order": 1,
+          "title": "RABBIT DATA BREACH: ALL R1 RESPONSES EVER GIVEN CAN BE DOWNLOADED",
+          "summary": "On May 16, 2024, the rabbitude team discovered several hardcoded API keys in the Rabbit r1 codebase, allowing them to access and manipulate user data. Rabbit Inc. has been aware of this security breach for a month but has not taken any action to mitigate the risk. The Rabbit r1 is a ChatGPT-based personal assistant device.",
+          "url": "https://rabbitu.de/articles/security-disclosure-1?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "rabbitu.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a14",
+          "order": 2,
+          "title": "EXPLAINING GENERATIVE LANGUAGE MODELS TO (ALMOST) ANYONE",
+          "summary": "Generative language models are based on the transformer architecture, a neural network that takes embedded tokens as input and transforms them through masked self-attention and feed-forward operations. These models are pretrained using self-supervised learning with the goal of predicting the next token in a sequence. After pretraining, the alignment process teaches the model to generate text that aligns with human desires by using techniques like supervised finetuning and reinforcement learning from human feedback.",
+          "url": "https://stackoverflow.blog/2024/06/27/explaining-generative-language-models-to-almost-anyone/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a15",
+          "order": 3,
+          "title": "FINDING GPT-4'S MISTAKES WITH GPT-4",
+          "summary": "OpenAI developed CriticGPT, a model based on GPT-4, to identify errors in ChatGPT's code output, and found it improves human trainers' ability to spot mistakes during the reinforcement learning process. CriticGPT was trained using RLHF on ChatGPT answers containing errors. It can generate longer, more comprehensive critiques by utilizing additional test-time search against the critique reward model.",
+          "url": "https://links.tldrnewsletter.com/6GS3uA",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-06-28:a16",
+          "order": 1,
+          "title": "WHAT WAS THE MOST CHALLENGING ISSUE YOU SOLVED AS A WEB DEV? (REDDIT THREAD)",
+          "summary": "Devs discuss crazy stories - one dev negotiated a deal with the NHL to create a web app in 3 days for its playoff bracket sweepstakes game.",
+          "url": "https://links.tldrnewsletter.com/qUI7xx",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a17",
+          "order": 2,
+          "title": "BALANCING OLD TRICKS WITH NEW FEATS: AI-POWERED CONVERSION FROM ENZYME TO REACT TESTING LIBRARY AT SLACK",
+          "summary": "Slack transitioned from Enzyme to React Testing Library (RTL) due to the lack of support for React 18 by Enzyme, converting over 15,000 tests using a hybrid approach that combined Abstract Syntax Tree transformations and LLMs.",
+          "url": "https://slack.engineering/balancing-old-tricks-with-new-feats-ai-powered-conversion-from-enzyme-to-react-testing-library-at-slack/?utm_source=tldrwebdev",
+          "reading_time_minutes": 16,
+          "source_domain": "slack.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-06-28:a18",
+          "order": 3,
+          "title": "WEB WORKERS, COMLINK, VITE, AND TANSTACK QUERY",
+          "summary": "This blog post demonstrates how to use Web Workers, Comlink, and TanStack Query in a Vite project to offload expensive computations to a background thread, improving UI responsiveness.",
+          "url": "https://johnnyreilly.com/web-workers-comlink-vite-tanstack-query?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "johnnyreilly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

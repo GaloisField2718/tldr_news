@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-09-18",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-09-18",
+  "source_path": "TLDR Web Dev/article_18-09-2024.md",
+  "source_content_hash": "sha256:35b4e6a5cd981169e66592461622e6c42acbb58bc226444e4083182d706ed903",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-09-18",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-18:a04",
+          "order": 1,
+          "title": "YES, YOU SHOULD USE SQLITE: NOTION'S CREATIVE SQLITE USAGE FOR 20% FASTER LOADS",
+          "summary": "Notion implemented WebAssembly (WASM) SQLite in its web app. This resulted in a 20% reduction in page navigation latency. To achieve this, its team used Web Workers to offload database operations to background threads and a SharedWorker with the Web Locks API to fix data integrity issues. They also addressed issues of slow disk reads by implementing a \"race\" between disk cache and network requests.",
+          "url": "https://stacksweep.substack.com/p/yes-you-should-use-sqlite-notions?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "stacksweep.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a05",
+          "order": 2,
+          "title": "HOW INFINITE QUERIES WORK",
+          "summary": "Infinite queries in React Query, often used in paginated lists or infinite scrolls, allow for continuous data fetching. A bug found in this feature caused queries to restart from the beginning if a page fetch fails during a retry. This article explains how infinite queries work in order to explain how the bug happened, along with the fix, which involves modifying the infinite query behavior to retain the state of the loop, preventing it from restarting from the beginning during retries.",
+          "url": "https://tkdodo.eu/blog/how-infinite-queries-work?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "tkdodo.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-18:a06",
+          "order": 1,
+          "title": "A DIFFERENT WAY TO THINK ABOUT TYPESCRIPT",
+          "summary": "This post proposes a new way to understand TypeScript's type system. It suggests thinking of types as sets of possible values they can construct. This means a string type represents the infinite set of all possible character permutations, and a number type represents the infinite set of all possible digit permutations. TypeScript's features like intersection, union, and type introspection can be understood as operations on these sets.",
+          "url": "https://www.rob.directory/blog/a-different-way-to-think-about-typescript?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "rob.directory",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a07",
+          "order": 2,
+          "title": "CORRELATION DOES NOT IMPLY CAUSATION",
+          "summary": "Simply because two variables move together doesn't mean one directly influences the other. For example, ice cream sales and sunburn rates correlate, but the actual cause is a third variable: temperature. The same applies when making decisions in engineering teams: charts can be helpful, but they shouldn't be taken as the sole representation of reality, as the real world is far more complex.",
+          "url": "https://read.perspectiveship.com/p/correlation-vs-causation?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "read.perspectiveship.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a08",
+          "order": 3,
+          "title": "BEING AN ENGINEERING MANAGER AT AMAZON",
+          "summary": "This engineering manager learned three things from his time at Amazon: solve problems through mechanisms, communicate with precision, and give teams full autonomy. He misses the deep technical talks at Amazon but doesn't miss the inconsistent management culture before Andy Jassy's leadership changes.",
+          "url": "https://open.substack.com/pub/zaidesanton/p/being-an-engineering-manager-at-amazon?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "open.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-18:a09",
+          "order": 1,
+          "title": "ARCJET: NATIVE SECURITY FOR BUN, NEXT.JS, NODE.JS, SVELTEKIT, VERCEL, NETLIFY, FLY.IO AND OTHER MODERN PLATFORMS",
+          "summary": "Arcjet helps developers protect their apps in code (no agent required). Implement bot protection, rate limiting, email validation, PII detection, and defense against common attacks; test everything",
+          "url": "https://arcjet.com/?ref=tldr-webdev&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "arcjet.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a10",
+          "order": 2,
+          "title": "locally so you don't break prod. Start free.",
+          "summary": "",
+          "url": "https://arcjet.com/?ref=tldr-webdev",
+          "reading_time_minutes": null,
+          "source_domain": "arcjet.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a11",
+          "order": 3,
+          "title": "YAZI",
+          "summary": "Yazi is a terminal file manager written in Rust, based on non-blocking async I/O. It offers features including built-in image support, code highlighting, a plugin system, and integration with popular command-line tools.",
+          "url": "https://github.com/sxyazi/yazi?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a12",
+          "order": 4,
+          "title": "ESLINT-PLUGIN-DEPEND",
+          "summary": "An ESLint plugin for suggesting optimizations in choice of dependencies, native equivalents, and more. It detects dependency tree bloat and redundant polyfills.",
+          "url": "https://github.com/es-tooling/eslint-plugin-depend?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-18:a13",
+          "order": 1,
+          "title": "THE FIRST RULE OF MACHINE LEARNING: START WITHOUT MACHINE LEARNING",
+          "summary": "The first rule of machine learning is to start without it. It's best to initially tackle problems using simpler methods like heuristics and rules. This approach provides a baseline understanding of the data and problem and can even outperform machine learning models in certain cases.",
+          "url": "https://eugeneyan.com/writing/first-rule-of-ml/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "eugeneyan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a14",
+          "order": 2,
+          "title": "WHAT CAN WE DO AT OUR COMPANY TO ATTRACT GREAT TALENT? (REDDIT THREAD)",
+          "summary": "Startups can differentiate themselves to attract top engineering talent by offering remote work, better work environments, better pay, and good work-life balance. They also can reach out to potential candidates on LinkedIn and have an engineering blog.",
+          "url": "https://links.tldrnewsletter.com/FzPsqj",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a15",
+          "order": 3,
+          "title": "THE PRAGMATIC ENGINEER: THREE YEARS",
+          "summary": "The Pragmatic Engineer newsletter, started by ex-Uber engineer/manager Gergely Orosz, is now three years old. Looking ahead, Orosz will continue his deep dives into interesting tech companies and technologies. The Pragmatic Engineer podcast will also launch next week, featuring interviews with experienced engineers and tech professionals.",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-three-years?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-09-18:a16",
+          "order": 1,
+          "title": "WARNING: MACOS SEQUOIA 15 MAY BYPASS DNS ENCRYPTION",
+          "summary": "A bug in macOS Sequoia 15 causes some DNS requests to bypass DNS encryption, potentially exposing users' browsing activity to monitoring.",
+          "url": "https://www.obdev.at/blog/warning-macos-sequoia-15-may-bypass-dns-encryption/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "obdev.at",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a17",
+          "order": 2,
+          "title": "CLEANER JAVASCRIPT PROMISES WITH SAFE-AWAIT",
+          "summary": "The \"safe-await\" package handles a more explicit and structured approach to handling async operations compared to nested try/catch blocks.",
+          "url": "https://alexjpate.com/posts/cleaner-promises-with-safe-await?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "alexjpate.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a18",
+          "order": 3,
+          "title": "WHY DON'T MORE PEOPLE USE LINUX?",
+          "summary": "Despite its benefits, Linux's demanding nature prevents widespread adoption, similar to how people choose easy options over healthier choices.",
+          "url": "https://world.hey.com/dhh/why-don-t-more-people-use-linux-33b75f53?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "world.hey.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-09-18:a19",
+          "order": 4,
+          "title": "YOU CAN'T OVERRIDE !IMPORTANT USER AGENT CSS DECLARATIONS",
+          "summary": "!important is often used to override specific CSS styles, but it may not always work in practice because the style is coming from user agent style sheets, which have higher priority than author agent style sheets.",
+          "url": "https://www.stefanjudis.com/today-i-learned/you-cant-override-important-user-agent-css-declarations/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "stefanjudis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

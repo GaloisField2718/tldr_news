@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-08",
+  "source_path": "TLDR InfoSec/article_08-01-2026.md",
+  "source_content_hash": "sha256:9ddec62969a14282217b72c10ef273653fe6dbc7b2419e59368997cf2eb7820d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Today's email security stops at the perimeter. Once an attacker slips past your inbound detections, they have free reign over years of sensitive emails, files, and internal comms.",
+          "url": "https://material.security/lp-cloud-office-security?utm_source=third-party&utm_medium=email&utm_campaign=20260108-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "material.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a04",
+          "order": 2,
+          "title": "what Figma, Reddit, Doordash, Lyft, and many more already know.",
+          "summary": "",
+          "url": "https://material.security/lp-cloud-office-security?utm_source=third-party&utm_medium=email&utm_campaign=20260108-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "material.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a05",
+          "order": 1,
+          "title": "ONGOING ATTACKS EXPLOITING CRITICAL RCE VULNERABILITY IN LEGACY D-LINK DSL ROUTERS",
+          "summary": "CVE-2026-0625, a critical command injection vulnerability in legacy D-Link DSL routers' dnscfg.cgi endpoint, has been actively exploited in the wild since November 2025, targeting end-of-life models including DSL-2740R, DSL-2640B, DSL-2780B, and DSL-526B. The unauthenticated remote code execution flaw enables attackers to hijack DNS settings without credentials, allowing them to redirect traffic and persistently compromise all downstream devices behind the router. Organizations must immediately retire affected unpatchable devices and upgrade to actively supported models, as the vulnerability leverages the same DNS configuration mechanism used in previous large-scale DNSChanger campaigns.",
+          "url": "https://thehackernews.com/2026/01/active-exploitation-hits-legacy-d-link.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a06",
+          "order": 2,
+          "title": "INSURER PROSURA HIT BY CYBER DATA BREACH, CUSTOMERS CONTACTED BY THREAT ACTOR",
+          "summary": "Australian rental car insurance provider Prosura suffered a data breach that impacted an undisclosed number of customers. The leaked data may include names, email addresses, phone numbers, country of residence, travel details, invoicing and pricing data, and policy dates. The threat actor also directly contacted impacted customers, alleging that the company has been ignoring them.",
+          "url": "https://www.abc.net.au/news/2026-01-07/car-excess-insurer-prosura-hit-by-cyber-breach-customer-data/106204198?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "abc.net.au",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a07",
+          "order": 3,
+          "title": "LEDGER CUSTOMERS IMPACTED BY THIRD-PARTY GLOBAL-E DATA BREACH",
+          "summary": "Ledger has informed some customers who made purchases on ledger.com that their personal data was compromised as part of a breach impacting the third-party payment processor Global-e. Ledger and Global-e have confirmed that no financial information or wallet seed phrases were leaked as part of this breach. Global-e is also notifying other impacted companies that utilize its services.",
+          "url": "https://www.bleepingcomputer.com/news/security/ledger-customers-impacted-by-third-party-global-e-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a08",
+          "order": 1,
+          "title": "THE MAC MALWARE OF 2025",
+          "summary": "The 2025 macOS threat landscape was characterized by a surge in sophisticated infostealers and state-sponsored backdoors that increasingly leverage \"Malware-as-a-Service\" models and social engineering vectors such as \"ClickFix\" and fake job interviews. Technical analysis reveals that attackers are bypassing Gatekeeper and static analysis by utilizing signed or notarized binaries and executing multi-stage payloads written in Go, Python, and AppleScript directly in memory. To combat these evolving threats, security professionals must move beyond static signatures to implement behavioral monitoring of process, file, and network activity while educating users on the dangers of executing terminal commands from untrusted sources.",
+          "url": "https://objective-see.org/blog/blog_0x84.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 35,
+          "source_domain": "objective-see.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a09",
+          "order": 2,
+          "title": "VIBE HACKING: PROXYING FLUTTER TRAFFIC ON ANDROID WITH CLAUDE",
+          "summary": "Cronometer's Android app uses Flutter's own TLS stack, which ignores system proxies and bakes certificate pinning into libflutter.so, making traditional MITM approaches fail. By combining Frida on a rooted Pixel with custom hooks, it becomes possible to detect and patch Flutter's TLS verification, observe DNS lookups and socket connections, and then transparently redirect selected hosts through a proxy like mitmproxy. Injecting an HTTP CONNECT tunnel at the syscall level lets HTTPS traffic flow through the proxy without modifying the APK.",
+          "url": "https://randywestergren.com/vibe-hacking-proxying-flutter-traffic-on-android-with-claude/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "randywestergren.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a10",
+          "order": 3,
+          "title": "ALL YOU NEED TO KNOW ABOUT JA3 & JA4 FINGERPRINTS",
+          "summary": "JA3 and JA4 are both methods for building a client fingerprint from the TLS Client Hello. JA4 adds functionality and human readability and is harder for threat actors to change. Both fingerprints can be effective in threat hunting or monitoring.",
+          "url": "https://links.tldrnewsletter.com/mSI038",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a11",
+          "order": 1,
+          "title": "DIASYMBOLVIEW",
+          "summary": "DiaSymbolView is a tool for visually inspecting debug information recorded in .pdb files. It relies on the MSDIA API and presents a hierarchy of debug symbols and their 200+ properties.",
+          "url": "https://github.com/diversenok/DiaSymbolView?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a12",
+          "order": 2,
+          "title": "LYNIS",
+          "summary": "Lynis is a security auditing tool for Linux, macOS, and UNIX-based systems. It helps with compliance testing (such as HIPAA, ISO27001, and PCI DSS) and system hardening. It is agentless, with optional installation.",
+          "url": "https://github.com/CISOfy/lynis?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a13",
+          "order": 3,
+          "title": "OPTI (PRODUCT LAUNCH)",
+          "summary": "Opti is an IAM platform that uses specialized LLMs to automate identity governance, least-privilege decisions, and remediation across enterprise environments.",
+          "url": "https://www.opti.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "opti.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a14",
+          "order": 1,
+          "title": "AUTOMATED DATA POISONING PROPOSED AS A SOLUTION FOR AI THEFT THREAT",
+          "summary": "AURA is a tool that injects plausible false data into AI knowledge graphs, rendering stolen proprietary data useless while authorized users maintain access through secret keys that filter out the poisoned information. The technique degrades unauthorized systems' accuracy to 5.3% while maintaining 100% fidelity for legitimate users, with an under 14% increase in query latency, though experts express skepticism about data poisoning's effectiveness and note that the solution doesn't prevent insider tampering with knowledge graphs. Security professionals should recognize that AI systems face unique challenges in detecting and recovering from compromised data, as poisoned information can propagate through machine learning processes faster than traditional database corruption.",
+          "url": "https://www.csoonline.com/article/4113463/automated-data-poisoning-proposed-as-a-solution-for-ai-theft-threat.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a15",
+          "order": 2,
+          "title": "KRAKENLABS RESEARCH HIGHLIGHTS 2025: THE SHIFTS THAT REDEFINED THE THREAT LANDSCAPE",
+          "summary": "2025's threat landscape evolution was characterized by AI integration into cybercrime workflows, industrialized Crimeware-as-a-Service platforms like Olymp Loader and LabInstalls PPI distribution, and Initial Access Brokers monetizing compromised edge devices, including Belsen Group's sale of 15,000 FortiGate device accesses. The year witnessed a decline in traditional carding fraud under regulatory pressure, while threat actors shifted toward identity abuse and trust exploitation, exemplified by attacks on Salesforce-hosted airline data and on cryptocurrency platforms targeted for geopolitical impact rather than financial gain. Analysis revealed the convergence of ideological hacktivism with ransomware business models, including pro-Palestinian actor zerodayx1's BQTLock RaaS offering and leaked Black Basta chats that exposed operational dynamics, underscoring that basic security failures and third-party risk management remain decisive factors in organizational breach outcomes.",
+          "url": "https://outpost24.com/blog/krakenlabs-research-highlights/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "outpost24.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a16",
+          "order": 3,
+          "title": "HACKERONE 'GHOSTED' ME FOR MONTHS OVER $8,500 BUG BOUNTY, SAYS RESEARCHER .",
+          "summary": "Security researcher Jakub Ciolek reported two high‑severity Argo CD denial‑of‑service bugs through HackerOne's Internet Bug Bounty, expecting about $8,500 after CVEs were assigned and patches shipped. Instead, he faced months of silence despite repeated follow‑ups, raising concerns about trust in crowdfunded bounty programs and the impact of noisy, low‑quality, or AI‑generated reports on serious submissions.",
+          "url": "https://www.theregister.com/2026/01/07/hackerone_ghosted_researcher/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-08:a17",
+          "order": 1,
+          "title": "QUANTUM STRUCTURED LIGHT COULD TRANSFORM SECURE COMMUNICATION AND COMPUTING",
+          "summary": "International researchers demonstrated quantum structured light techniques that pack significantly more information and security into photons by engineering high-dimensional quantum states.",
+          "url": "https://www.sciencedaily.com/releases/2026/01/260106001911.htm?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "sciencedaily.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a18",
+          "order": 2,
+          "title": "CYBERSECURITY FIRMS SECURED $14 BILLION IN FUNDING IN 2025: ANALYSIS",
+          "summary": "Cybersecurity vendors attracted nearly $14 billion across 392 funding rounds in 2025, marking a 47% jump from 2024 and the strongest year since the 2021 peak.",
+          "url": "https://www.securityweek.com/cybersecurity-firms-secured-14-billion-in-funding-in-2025/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-08:a19",
+          "order": 3,
+          "title": "LACK OF MFA IS COMMON THREAD IN VAST CLOUD CREDENTIAL HEIST",
+          "summary": "A threat actor called Zestix used common infostealers like RedLine, Lumma, and Vidar to harvest long-lived credentials from infected machines and log dumps, then logged into corporate ShareFile, OwnCloud, and Nextcloud instances that lacked MFA.",
+          "url": "https://links.tldrnewsletter.com/FZYZrj",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

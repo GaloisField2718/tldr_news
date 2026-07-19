@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-04-10",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-04-10",
+  "source_path": "TLDR InfoSec/article_10-04-2025.md",
+  "source_content_hash": "sha256:41ffd0d16080db5ae807bf1d00a0b42555678a4b59d9aaa680f8b538e6ed44c7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-04-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a04",
+          "order": 1,
+          "title": "MFA MANDATES ALONE WON'T SOLVE IDENTITY SECURITY",
+          "summary": "Earlier this year, Microsoft made MFA mandatory on all Azure logins - but in an age of increasingly sophisticated attacks against identities, this might not be enough.",
+          "url": "https://duo.com/resources/webinars/use-duo-to-knock-the-microsoft-mfa-requirement-for-azure-out-of-the-park?utm_medium=publisher-direct&utm_source=TLDR-InfoSec&utm_campaign=roi_q32025_duo-whitespace-BTMSFT-ODW1&utm_content=ODW-knock-the-MSFT&utm_term=20250409",
+          "reading_time_minutes": null,
+          "source_domain": "duo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a04",
+          "order": 2,
+          "title": "Watch the video →",
+          "summary": "",
+          "url": "https://duo.com/resources/webinars/use-duo-to-knock-the-microsoft-mfa-requirement-for-azure-out-of-the-park?utm_medium=publisher-direct&utm_source=TLDR-InfoSec&utm_campaign=roi_q32025_duo-whitespace-BTMSFT-ODW1&utm_content=ODW-knock-the-MSFT&utm_term=20250409",
+          "reading_time_minutes": null,
+          "source_domain": "duo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a05",
+          "order": 1,
+          "title": "FAKE MICROSOFT OFFICE ADD-IN TOOLS PUSH MALWARE VIA SOURCEFORGE",
+          "summary": "Kaspersky researchers discovered a threat actor that is using a SourceForge project page to host malware masquerading as the Microsoft Office-Addin-Scripts project. The page prompts users to download a password-protected zip file that contains an MSI file, which drops two RAR archives and downloads a batch script from GitHub. The batch script scans for antivirus and analysis tools, unpacks the archives, and runs another batch script, which sets up persistence, C2, and runs a cryptocurrency infostealer and crypto miner.",
+          "url": "https://www.bleepingcomputer.com/news/security/fake-microsoft-office-add-in-tools-push-malware-via-sourceforge/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a06",
+          "order": 2,
+          "title": "CENTRESTACK RCE EXPLOITED AS ZERO-DAY TO BREACH FILE SHARING SERVERS",
+          "summary": "Gladinet has warned of a vulnerability in its CentreStack file-sharing software that has been under active exploitation since March. The vulnerability is a deserialization vulnerability stemming from using a hardcoded machineKey. Galdinet has recommended that customers apply patches immediately or rotate the machine keys if immediate patching is not possible.",
+          "url": "https://www.bleepingcomputer.com/news/security/centrestack-rce-exploited-as-zero-day-to-breach-file-sharing-servers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a07",
+          "order": 3,
+          "title": "INCOMPLETE NVIDIA PATCH TO CVE-2024-0132 EXPOSES AI INFRASTRUCTURE AND DATA TO CRITICAL RISKS",
+          "summary": "NVIDIA's patch for CVE-2024-0132 was incomplete, leaving AI infrastructure vulnerable to attacks. Exploiting the vulnerabilities could lead to data breaches and operational disruptions.",
+          "url": "https://www.trendmicro.com/en_us/research/25/d/incomplete-nvidia-patch.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "trendmicro.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a08",
+          "order": 1,
+          "title": "LINUX KERNEL RUST MODULE FOR ROOTKIT DETECTION",
+          "summary": "Linux rootkits commonly share a set of capabilities such as hiding itself, hiding data, offering a reverse root shell, and establishing boot persistence. The author of this blog post discusses how to use kprobe to detect LKM rootkit registration and inline hooking. They also reflect on the process of writing an LKM in Rust during their internship, noting the lack of abstractions but also appreciating the safety guarantees of Rust as well as the typing and linting systems.",
+          "url": "https://blog.thalium.re/posts/linux-kernel-rust-module-for-rootkit-detection/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.thalium.re",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a09",
+          "order": 2,
+          "title": "HACKING AWS LAMBDA FUNCTIONS - S3 FILE UPLOAD INJECTION",
+          "summary": "This post showcases the damage that a coding vulnerability in a Lambda function can cause using the DVSA intentionally vulnerable app as an example. The application includes a Lambda function that uploads files attached to the feedback form, which is vulnerable to OS command injection. This vulnerability can be used to extract the Lambda function's IAM credentials, which provide full access to Lambda and SES.",
+          "url": "https://www.nordhero.com/posts/hacking-lambda-functions-with-s3-file-upload/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "nordhero.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a10",
+          "order": 3,
+          "title": "PCI DSS 4.0.1: A CYBERSECURITY BLUEPRINT BY THE INDUSTRY, FOR THE INDUSTRY",
+          "summary": "PCI DSS 4.0.1, exemplifies successful industry-led cybersecurity regulation by focusing on outcomes rather than methods. Unlike government regulations that awkwardly combine business security with user rights, PCI DSS was created by payment industry stakeholders collaboratively addressing threats. This commentary dives into how other existing and future regulations and frameworks can learn from PCI.",
+          "url": "https://www.securityweek.com/pci-dss-4-0-1-a-cybersecurity-blueprint-by-the-industry-for-the-industry/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a11",
+          "order": 1,
+          "title": "WEBINAR: HOW TO ACHIEVE ZERO TRUST ACCESS FOR KUBERNETES",
+          "summary": "Managing VPN gateways, firewall rules, and security groups is time-consuming. Exposing API endpoints or using jump hosts creates security risks. Is there a better way? Watch the NetBird webinar recording [11] and learn how to securely access Kubernetes from non-Kubernetes resources, with Zero Trust access to your control plane",
+          "url": "https://netbird.io/webinars/access-k8s-without-port-forwarding-and-jump-hosts?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250410",
+          "reading_time_minutes": null,
+          "source_domain": "netbird.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a11",
+          "order": 2,
+          "title": "and services. Watch now",
+          "summary": "",
+          "url": "https://netbird.io/webinars/access-k8s-without-port-forwarding-and-jump-hosts?utm_medium=newsletter&utm_source=tldr-infosec&utm_campaign=20250410",
+          "reading_time_minutes": null,
+          "source_domain": "netbird.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a12",
+          "order": 3,
+          "title": "OPKSSH",
+          "summary": "opkssh (OpenPubkey SSH) is a tool that enables SSH to be used with OpenID Connect identities instead of long-lived SSH keys.",
+          "url": "https://github.com/openpubkey/opkssh/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a13",
+          "order": 4,
+          "title": "MIMIC (PRODUCT LAUNCH)",
+          "summary": "Mimic is exclusively focused on thwarting the threat from ransomware gangs. It offers features to quickly detect signs of malicious data encryption and tools to hide critical assets from attackers.",
+          "url": "https://mimic.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "mimic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a14",
+          "order": 5,
+          "title": "N6",
+          "summary": "Automated handling of data feeds for security teams",
+          "url": "https://github.com/CERT-Polska/n6?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a15",
+          "order": 1,
+          "title": "ANTHROPIC ANNOUNCES UPDATES ON SECURITY SAFEGUARDS FOR ITS AI MODELS",
+          "summary": "Anthropic has announced new updates to its Responsible Scaling Policy (RSP), which determines what level of model requires additional protections. These models include those with the capacity to potentially help a state actor develop chemical and biological weapons or if a model could be used to fully automate the role of an entry-level Anthropic researcher. Anthropic had announced in October that it would begin sweeping physical offices for hidden devices and implement other physical security measures.",
+          "url": "https://www.cnbc.com/2025/03/31/anthropic-announces-updates-on-security-safeguards-for-its-ai-models.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a16",
+          "order": 2,
+          "title": "MALAYSIA PM SAYS COUNTRY REJECTED $10 MILLION RANSOM DEMAND AFTER AIRPORT OUTAGES",
+          "summary": "A cyberattack caused computer outages at Kuala Lumpur International Airport in Malaysia back in March. Prime Minister Anwar Ibrahim refused the attackers' $10 million ransom demand. At the time, even though officials claimed airport operations continued normally, photos showed staff using whiteboards for flight information.",
+          "url": "https://therecord.media/malaysia-pm-says-country-rejected-ransom-demand-airport-cyberattack?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a17",
+          "order": 3,
+          "title": "NIST TO IMPLEMENT 'DEFERRED' STATUS TO DATED VULNERABILITIES",
+          "summary": "NIST announced all CVEs published before January 1, 2018, will be marked \"deferred\" in the National Vulnerability Database. This administrative change helps prioritize newer vulnerabilities but doesn't reduce the severity of older security flaws.",
+          "url": "https://links.tldrnewsletter.com/ts4EmP",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-04-10:a18",
+          "order": 1,
+          "title": "HACKER CLAIMS WOOCOMMERCE DATA BREACH, SELLING 4M USER RECORDS",
+          "summary": "A hacker named \"Satanic\" has claimed a WooCommerce data breach affecting over 4.4 million users, including major organizations like NVIDIA and Texas.gov.",
+          "url": "https://hackread.com/hacker-claims-woocommerce-data-breach-selling-records/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a19",
+          "order": 2,
+          "title": "GOOGLE TAKES ON CURSOR WITH FIREBASE STUDIO, ITS AI BUILDER FOR VIBE CODING",
+          "summary": "Google has launched Firebase Studio, an AI-powered integrated development environment for building full-fledged apps using prompts.",
+          "url": "https://www.bleepingcomputer.com/news/google/google-takes-on-cursor-with-firebase-studio-its-ai-builder-for-vibe-coding/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-04-10:a20",
+          "order": 3,
+          "title": "MICROSOFT INVESTIGATES GLOBAL EXCHANGE ADMIN CENTER OUTAGE",
+          "summary": "Microsoft is investigating a global outage affecting Exchange Admin Center access for IT admins worldwide.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-investigates-global-exchange-admin-center-outage/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2025-10-29",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2025-10-29",
+  "source_path": "TLDR Dev/article_29-10-2025.md",
+  "source_content_hash": "sha256:dbe36baa2d8f9d79a1da640a62a14338a7ea03957b3428b856164ae0e6ded25e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2025-10-29",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-29:a04",
+          "order": 1,
+          "title": "FROM THUNDERING HERDS TO SMOOTH STREAMS: HOW PATREON SCALED FOR LIVE EVENTS",
+          "summary": "Patreon scaled its platform to support live events by addressing the challenges of handling a surge of users. Its team focused on understanding and quantifying load, creating a load test to measure capacity, and then optimizing both infrastructure and client performance. To improve infrastructure, they fine-tuned web requests and reduced requests made at cold app launch for iOS.",
+          "url": "https://links.tldrnewsletter.com/s3d8pN",
+          "reading_time_minutes": 27,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a05",
+          "order": 2,
+          "title": "AGENTIC AI AND SECURITY",
+          "summary": "Agentic AI systems have a fundamental security flaw: LLMs cannot separate instructions from data, making them vulnerable to prompt injection attacks where untrusted content contains hidden commands. The worst security occurs when an AI has access to sensitive data, reads untrusted content, and can communicate externally, allowing attackers to steal information by embedding instructions in sources like Jira tickets or web pages. To prevent this, it's best to run LLMs in sandboxed containers, avoid production credentials in files, limit untrusted content sources, and split tasks to isolate risks.",
+          "url": "https://martinfowler.com/articles/agentic-ai-security.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a06",
+          "order": 3,
+          "title": "THE “10X” COMMANDMENTS OF HIGHLY EFFECTIVE GO",
+          "summary": "Best practices for writing great Go code include keeping main functions minimal, using named constants instead of magic values, preventing security holes with tools like os.Root, embedding static data with go:embed for single binaries, and making sure goroutines terminate properly using contexts and waitgroups. Code should work first with a “walking skeleton,” and then can be refactored after.",
+          "url": "https://blog.jetbrains.com/go/2025/10/16/the-10x-commandments-of-highly-effective-go/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.jetbrains.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-29:a07",
+          "order": 1,
+          "title": "HIGH AGENCY MATTERS",
+          "summary": "Personal agency, the capacity to take initiative and act decisively, is more necessary for success than raw intelligence. Intelligence can lead to analysis paralysis and fear of failure, while agency drives action, learning, and the creation of opportunities. In reality, agency is rare due to societal conditioning and psychological factors, but can be cultivated through a bias towards action and surrounding oneself with proactive individuals.",
+          "url": "https://addyosmani.com/blog/high-agency-matters/?utm_source=tldrwebdev",
+          "reading_time_minutes": 47,
+          "source_domain": "addyosmani.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a08",
+          "order": 2,
+          "title": "INSIDE AMAZON'S ENGINEERING CULTURE: LESSONS FROM THEIR SENIOR PRINCIPALS",
+          "summary": "Amazon's private open house for senior engineering leaders in Seattle exposed three key themes defining Amazon's engineering culture: mission-driven purpose, clear alignment between titles and roles, and a focus on craft over perks. The event showed Amazon's commitment to customer obsession and solving problems at scale, with reversible decisions encouraged to move fast and one-way decisions approached with careful consideration.",
+          "url": "https://olshansky.substack.com/p/inside-amazons-engineering-culture?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "olshansky.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a09",
+          "order": 3,
+          "title": "HOW MANAGERS BUILD (OR BREAK) THEIR TEAM'S SELF-CONFIDENCE",
+          "summary": "Team underperformance often comes from lack of self-confidence rather than lack of skill, and managers inadvertently destroy confidence through micromanaging, public criticism, jumping in too quickly to help, and inconsistent expectations. To build confidence, managers should give autonomy with clear guardrails, criticize privately while praising publicly, ask questions before solving problems, and provide consistent encouragement and reassurance.",
+          "url": "https://www.thecaringtechie.com/p/why-your-team-might-be-underperforming?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "thecaringtechie.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-29:a10",
+          "order": 1,
+          "title": "SENTRY'S AI CODE REVIEW PREDICTS WHAT'S GOING TO BREAK - BASED ON WHAT'S ALREADY BROKEN",
+          "summary": "Code reviews should be less style nits and more \"this is going to break prod\". Sentry's AI Code Review blends context and issue history with the code you just touched [10] - function calls, class or objects dependencies, database connections - to provide specific and actionable feedback rather than generic linting advice. Read the blog",
+          "url": "https://blog.sentry.io/sentry-ai-code-review-now-in-beta-break-production-less/?utm_source=tldr&utm_medium=paid-community&utm_campaign=aicodereview-fy26q3-aicodereviewlaunch&utm_content=newsletter-ai-code-review-beta-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a10",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://blog.sentry.io/sentry-ai-code-review-now-in-beta-break-production-less/?utm_source=tldr&utm_medium=paid-community&utm_campaign=aicodereview-fy26q3-aicodereviewlaunch&utm_content=newsletter-ai-code-review-beta-learnmore",
+          "reading_time_minutes": null,
+          "source_domain": "blog.sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a11",
+          "order": 3,
+          "title": "DEXTO",
+          "summary": "Dexto is a toolkit for building AI agents that can turn natural language into actions by orchestrating LLMs, tools, and data. It has a configuration-driven framework, runtime, and smooth developer experience, supporting various interfaces like CLI, Web UI, and APIs. Dexto helps the creation of autonomous agents, digital companions, and multi-agent systems, with features like session management, multimodal support, and production-ready observability.",
+          "url": "https://github.com/truffle-ai/dexto?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a12",
+          "order": 4,
+          "title": "BUTTER",
+          "summary": "Butter is a cache that saves money by identifying and serving repeat LLM responses, making AI systems deterministic. It's compatible with Chat Completions APIs like OpenAI and integrates with tools like LangChain and Crew AI. Butter is ideal for autonomous agents performing repetitive tasks. It is priced at 5% of the savings it generates, though currently free.",
+          "url": "https://www.butter.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "butter.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-29:a13",
+          "order": 1,
+          "title": "THE NEXT CHAPTER OF THE MICROSOFT–OPENAI PARTNERSHIP",
+          "summary": "Microsoft and OpenAI have announced a new agreement extending their partnership. The deal involves Microsoft holding a large investment in OpenAI Group PBC following recapitalization, along with refined IP rights and continued exclusivity for Microsoft until Artificial General Intelligence (AGI) is verified by an independent expert panel. This new phase allows both companies to independently innovate, with Microsoft extending its IP rights and pursuing AGI independently, while OpenAI gains flexibility in developing products and providing API access.",
+          "url": "https://links.tldrnewsletter.com/EIzcQT",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a14",
+          "order": 2,
+          "title": "WHAT WE TALK ABOUT WHEN WE TALK ABOUT SIDELOADING",
+          "summary": "Google's new developer verification policies basically end users' freedom to choose their software sources. This policy requires developers to register with Google, which goes against the open nature of Android.",
+          "url": "https://f-droid.org/2025/10/28/sideloading.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "f-droid.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a15",
+          "order": 3,
+          "title": "THE CONTINUAL LEARNING PROBLEM",
+          "summary": "The challenge of continual learning in AI models is updating model parameters without compromising existing knowledge. Memory layers, a sparse attention mechanism, is a potential solution for continual learning due to its targeted updates, high capacity, and adaptive integration. A recent paper shows that finetuning memory layers leads to much less forgetting compared to full finetuning or LoRA when learning new information.",
+          "url": "https://jessylin.com/2025/10/20/continual-learning/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "jessylin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2025-10-29:a16",
+          "order": 1,
+          "title": "AMAZON LAYS OFF THOUSANDS OF CORPORATE WORKERS AS IT SPENDS BIG ON AI",
+          "summary": "Amazon has laid off about 14,000 corporate employees to reduce bureaucracy and shift resources towards investments in artificial intelligence following disappointing AI growth and pressure from investors to tighten finances.",
+          "url": "https://www.npr.org/2025/10/28/nx-s1-5588545/amazon-layoffs-corporate-workers-ai?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "npr.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a17",
+          "order": 2,
+          "title": "I'VE BEEN LOVING CLAUDE CODE ON THE WEB",
+          "summary": "Claude Code on the web and its iOS app have a solid and dependable implementation as a \"to-do list that does itself.”",
+          "url": "https://ben.page/claude-code-web?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "ben.page",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a18",
+          "order": 3,
+          "title": "BORING IS WHAT WE WANTED",
+          "summary": "The predictable, incremental improvements in Apple silicon Macs, now at the M5 generation, are a positive outcome and a fulfillment of what Mac users desired after years of inconsistent hardware updates during the PowerPC and Intel eras.",
+          "url": "https://512pixels.net/2025/10/boring-is-what-we-wanted/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "512pixels.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2025-10-29:a19",
+          "order": 4,
+          "title": "RETHINKING ASYNC LOOPS IN JAVASCRIPT",
+          "summary": "Using `await` in JavaScript loops requires careful implementation to avoid performance issues and unexpected behavior - it's usually better to use Promise.all or Promise.allSettled for reliability.",
+          "url": "https://allthingssmitty.com/2025/10/20/rethinking-async-loops-in-javascript?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "allthingssmitty.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

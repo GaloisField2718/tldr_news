@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-06-17",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-06-17",
+  "source_path": "TLDR Dev/article_17-06-2026.md",
+  "source_content_hash": "sha256:d61db90ff7c80d457a118665d07ceaa8a01c2137be564af7615560a43e8d1f6f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-06-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a04",
+          "order": 1,
+          "title": "",
+          "summary": "Most agents send email from a borrowed human inbox or a homegrown SMTP setup. Nylas Agent Accounts [5] give your agents their own hosted email and calendar identities that they can use to reply, book meetings, and do anything else with the Nylas API.",
+          "url": "https://www.nylas.com/products/agent-accounts/?utm_source=tldr&utm_medium=sponsoredemail&utm_campaign=TLDR-agent-accounts-jun-17&utm_content=header_give_every_ai",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a07",
+          "order": 2,
+          "title": "Give your agent an inbox →",
+          "summary": "",
+          "url": "https://www.nylas.com/products/agent-accounts/?utm_source=tldr&utm_medium=sponsoredemail&utm_campaign=TLDR-agent-accounts-jun-17&utm_content=cta_give_agent_inbox",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a08",
+          "order": 1,
+          "title": "DON'T RUN SQL MIGRATIONS IN TESTS: HOW I SPED UP THE TEST SUITE BY 2X",
+          "summary": "Large Go test suites often face slowdowns when thousands of SQL migrations are applied serially for every individual test. To address this, a content-addressing system identifies a \"golden\" database file by hashing the contents of all required migration scripts. If a matching database already exists, the system clones it instantly using a backup API, whereas missing versions are lazily generated and cached for subsequent runs.",
+          "url": "https://gaultier.github.io/blog/I_sped_up_the_test_suite_by_x2.html?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "gaultier.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a09",
+          "order": 2,
+          "title": "BRITISH COLUMBIA, TIME ZONES, AND POSTGRES",
+          "summary": "British Columbia's shift to a permanent UTC-7 offset in 2026 shows the risks of storing future appointments in UTC-based database columns, which can lead to unexpected one-hour shifts in local time. These columns convert timestamps based on the rules available at the time of entry, so subsequent updates to time zone data can cause the stored UTC values to no longer match the user's intended wall-clock time.",
+          "url": "https://www.crunchydata.com/blog/british-columbia-and-time-zone-changes?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "crunchydata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a10",
+          "order": 3,
+          "title": "SVGS AND PDFS CAN BOTH BE INTERACTIVE",
+          "summary": "Both SVG and PDF file formats have underused specs that allow for the integration of interactive layers and programmable scripts directly within a document. While SVGs can host self-contained applications using embedded JavaScript, PDFs use a specialized API that often struggles with compatibility across different viewing software.",
+          "url": "https://vexlio.com/blog/svgs-and-pdfs-can-both-be-interactive/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "vexlio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a11",
+          "order": 1,
+          "title": "MYTHOS AND FABLE CAN MAKE US ALL SAFER. SHUTTING THEM DOWN IS RECKLESS",
+          "summary": "The United States government recently used export-control authority to force the shutdown of powerful AI models like Mythos 5. This unilateral action is considered reckless by many security experts because these models are necessary tools for defenders to identify and patch vulnerabilities in global software infrastructure. Since comparable AI capabilities are already being released by international labs, domestic shutdowns do not eliminate risks but instead deprive local developers of the resources needed to counter emerging threats.",
+          "url": "https://www.transformernews.ai/p/mythos-fable-anthropic-safery-cybersecurity?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "transformernews.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a12",
+          "order": 2,
+          "title": "STOP USING JWTS",
+          "summary": "JSON Web Tokens should be avoided for managing user sessions because they are insecure and were never intended for long-term authentication. Traditional cookie sessions are a more reliable alternative, with better flexibility and protection against common security vulnerabilities. Truly stateless authentication is largely impractical, as secure token management usually requires a persistent data store to handle revocations and expiration properly.",
+          "url": "https://gist.github.com/samsch/0d1f3d3b4745d778f78b230cf6061452?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "gist.github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a13",
+          "order": 3,
+          "title": "THE WEB WE KNOW IS GOING TO DISAPPEAR",
+          "summary": "The evolution of technology has seen information move from physical disks and bulletin boards to the open Web and mobile apps, and it is now shifting toward centralized AI interfaces. This new model replaces traditional search-and-click habits with direct, conversational answers. As AI becomes the primary gatekeeper, websites are transitioning from being human destinations to serving as background infrastructure that feeds data into machine learning models.",
+          "url": "https://www.minid.net/2026/6/15/the-web-is-going-to-dissapear?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "minid.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a14",
+          "order": 1,
+          "title": "CLERK DEPLOY: FROM DEV TO PRODUCTION IN ONE COMMAND",
+          "summary": "Run clerk deploy from a linked project and the Clerk CLI walks you through everything production needs: instance clone, DNS records (exportable as a zone file), and OAuth credential setup for Google and Apple. Resumable if you're interrupted.",
+          "url": "https://go.clerk.com/SXNBKee?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a15",
+          "order": 2,
+          "title": "Get started",
+          "summary": "",
+          "url": "https://go.clerk.com/SXNBKee",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a16",
+          "order": 3,
+          "title": "NUBASE",
+          "summary": "Nubase is an open-source, AI-native backend platform that transforms AI-generated code into live applications fast. The system integrates eight core modules, including database, authentication, storage, and edge functions, into a single self-hostable service. MCP tools allow coding agents to directly manage infrastructure, deploy logic, and handle data modeling.",
+          "url": "https://github.com/OtterMind/Nubase?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a17",
+          "order": 4,
+          "title": "LIKEC4",
+          "summary": "LikeC4 is an open-source “architecture-as-code” platform that lets engineers describe software systems in a DSL and automatically generate live, always-up-to-date architecture diagrams from that code.",
+          "url": "https://github.com/likec4/likec4?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a18",
+          "order": 1,
+          "title": "WHY IS META DESTROYING ITS ENGINEERING ORGANIZATION?",
+          "summary": "Meta has quickly dismantled its historically strong engineering culture by aggressively prioritizing AI initiatives, such as forcing engineers into data-labeling work, tracking employee activity, tying performance reviews to AI usage, and reducing autonomy that once made the company attractive. These changes have led to low morale, talent flight, organizational chaos, and even major security and reliability failures, including a high-profile Instagram account takeover incident allegedly linked to AI-generated and insufficiently reviewed code.",
+          "url": "https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a19",
+          "order": 2,
+          "title": "SPACEX LOCKS IN $60 BILLION CURSOR DEAL TO CLOSE GAP WITH RIVALS IN AI CODING RACE",
+          "summary": "SpaceX has agreed to a $60 billion all-stock deal to acquire Anysphere, the startup behind the popular AI coding agent Cursor. This move will improve the company's presence in the enterprise AI market and narrow the gap with industry leaders like OpenAI and Anthropic. It will also improve xAI's Grok.",
+          "url": "https://links.tldrnewsletter.com/uXz8qG",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-17:a20",
+          "order": 1,
+          "title": "BROWSE.SH: 2,500+ BROWSER SKILLS FOR CLAUDE CODE",
+          "summary": "Install skills for interacting with websites like Airbnb, Amazon, and Ramp. Your agent searches, fills forms, and books end-to-end. Optimized exploration, clean JSON, 50x lower token costs. Try the browser CLI for agents [21] → _npm i -g browse_",
+          "url": "https://browserbase.run/0jzA1of?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "browserbase.run",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a22",
+          "order": 2,
+          "title": "CLAIREON",
+          "summary": "Claireon is an open-source Unreal Engine plugin with an MCP server inside the editor, allowing AI agents like Claude Code to search, inspect, modify, and automate nearly every aspect of Unreal development.",
+          "url": "https://github.com/believer-oss/claireon?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a23",
+          "order": 3,
+          "title": "HUMILIATING IIS SERVERS FOR FUN AND JAIL TIME",
+          "summary": "This is a bug-bounty-focused guide to finding and testing Microsoft IIS servers, as IIS environments are often overlooked yet frequently expose misconfigurations, information leaks, and attack paths that can lead to sensitive data exposure.",
+          "url": "https://mll.sh/humiliating-iis-servers-for-fun-and-jail-time/?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "mll.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a24",
+          "order": 4,
+          "title": "MAKING HTTP REQUESTS FROM A CONTAINER THAT HAS NO CURL, USING BASH /DEV/TCP",
+          "summary": "Bash allows for manual HTTP requests and connectivity checks in minimal containers by using its internal /dev/tcp redirection to open and communicate over TCP sockets without needing external tools like curl or wget.",
+          "url": "https://mareksuppa.com/til/bash-dev-tcp-http-without-curl/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "mareksuppa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-17:a25",
+          "order": 5,
+          "title": "REVIEWS HAVE BECOME EXPENSIVE, REWRITES HAVE BECOME CHEAP",
+          "summary": "The tendency of AI to produce over-engineered code has made manual reviews more costly, so upfront planning is more necessary now.",
+          "url": "https://ishmeetbindra.com/posts/reviews-have-become-expensive-rewrites-have-become-cheap/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "ishmeetbindra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

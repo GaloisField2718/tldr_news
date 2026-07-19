@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-06-02",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-06-02",
+  "source_path": "TLDR Web Dev/article_02-06-2025.md",
+  "source_content_hash": "sha256:975d8a7f61a799b14fa9bd4aa752400aa9fa087053f1bbb375fceb0381514789",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-06-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a04",
+          "order": 1,
+          "title": "IMPLEMENTING MULTI-TENANCY INTO A NEXT.JS SUPABASE APP",
+          "summary": "If you're building something team-based—think workspaces, orgs, or shared dashboards—you've probably bumped into the “how do I handle multi-tenancy?” question.",
+          "url": "https://go.clerk.com/IMKPOHE",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a04",
+          "order": 2,
+          "title": "👉 Read the guide.",
+          "summary": "",
+          "url": "https://go.clerk.com/IMKPOHE",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a05",
+          "order": 1,
+          "title": "PROGRESSIVE JSON",
+          "summary": "Most apps send JSON all at once, forcing the client to wait until everything is ready, but what if we streamed it progressively, like how progressive JPEGs load from blurry to clear? A \"Progressive JSON\" approach is explored here that sends data breadth-first with placeholders, letting the client process what's ready and treat missing parts as Promises. This is similar to how React Server Components stream UI and use Suspense to control visual loading states.",
+          "url": "https://overreacted.io/progressive-json/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "overreacted.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a06",
+          "order": 2,
+          "title": "VIRTUAL THREADS ATE MY MEMORY: A WEB CRAWLER'S TALE OF SPEED VS. MEMORY",
+          "summary": "Switching a web crawler from platform threads to Java Virtual Threads improves speed, but also causes an OutOfMemoryError due to a lack of built-in backpressure. Virtual Threads allows downloads to race ahead, but without limits, the system quickly floods memory with unprocessed tasks. The fix is to introduce explicit concurrency control (like semaphores) to balance speed with memory.",
+          "url": "https://links.tldrnewsletter.com/kEor5J",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a07",
+          "order": 3,
+          "title": "CONCURRENT WEB CRAWLING IN RUBY WITH ASYNC",
+          "summary": "This article shows how to transform a slow, synchronous Ruby web crawler into a fast concurrent one using the Async library. Crawling time is reduced from 3 seconds to half a second in the example by implementing non-blocking I/O with Fibers, connection reuse, and rate limiting.",
+          "url": "https://losangelesaiapps.com/concurrent-web-crawling-in-ruby-with-async/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "losangelesaiapps.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a08",
+          "order": 1,
+          "title": "WHAT'S WORKING FOR YC COMPANIES SINCE THE AI BOOM",
+          "summary": "",
+          "url": "https://jamesin.substack.com/p/whats-working-for-yc-companies-since?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "jamesin.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a09",
+          "order": 2,
+          "title": "WHEN FINE-TUNING ACTUALLY MAKES SENSE: A DEVELOPER'S GUIDE",
+          "summary": "Fine-tuning helps solve specific, high-impact problems that prompting alone can't, like inconsistent JSON output, bloated prompts, or models that ignore custom logic or tone. It's especially valuable for improving task-specific quality, reducing cost and latency, and making smaller models smarter through training on targeted examples.",
+          "url": "https://getkiln.ai/blog/why_fine_tune_LLM_models_and_how_to_get_started?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "getkiln.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a10",
+          "order": 1,
+          "title": "KNOCK: INFRASTRUCTURE TO SEND PRODUCT MESSAGING",
+          "summary": "Building, managing, and scaling cross-channel notifications gets complicated fast. Knock [10] is a single API for managing messages across email, in-app, Slack, push, and SMS. Plus, a visual workflow builder and template editor anyone can use. All with observability, like you built it in-house. Send 10k notifications per month for free [10].",
+          "url": "https://knock.app/?utm_medium=sponsorship&utm_source=tldr&utm_campaign=h1_campaign&utm_content=6-2",
+          "reading_time_minutes": null,
+          "source_domain": "knock.app",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a11",
+          "order": 2,
+          "title": "MCP SERVER IN BASH",
+          "summary": "`mcp-server-bash-sdk` is a lightweight implementation of a Model Context Protocol (MCP) server in Bash. It provides a zero-overhead alternative to other MCP server implementations by using Bash and `jq` for JSON processing.",
+          "url": "https://github.com/muthuishere/mcp-server-bash-sdk?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a12",
+          "order": 3,
+          "title": "CAP",
+          "summary": "Cap is a fast, lightweight, open-source CAPTCHA alternative that uses SHA-256 proof-of-work instead of tracking or fingerprinting. It has a tiny JavaScript widget, zero-dependency server, optional CLI, Docker-based standalone mode, and middleware for frameworks like Express, Hono, and Elysia.",
+          "url": "https://github.com/tiagorangel1/cap?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a13",
+          "order": 1,
+          "title": "ROOT SHELL ON CREDIT CARD TERMINAL",
+          "summary": "This dev reverse-engineered a Worldline Yomani XR credit card terminal and found it had surprisingly weak security despite hardware tamper protections. He discovered a root shell accessible via a debug port, even from outside the device without triggering tamper detection. However, the vulnerable Linux system appears isolated from the secure processor handling sensitive card data, which limits the potential damage.",
+          "url": "https://stefan-gloor.ch/yomani-hack?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "stefan-gloor.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a14",
+          "order": 2,
+          "title": "HOW GENERATIVE ENGINE OPTIMIZATION (GEO) REWRITES THE RULES OF SEARCH",
+          "summary": "Generative Engine Optimization (GEO) is a new paradigm shifting from traditional SEO's focus on page rank to language models and how content is referenced in AI-generated answers. This new approach prioritizes well-organized and meaningful content that language models can easily extract and reproduce, requiring brands to optimize for model relevance rather than just search engine rankings.",
+          "url": "https://a16z.com/geo-over-seo/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "a16z.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a15",
+          "order": 3,
+          "title": "ESLINT V9.0.0: A RETROSPECTIVE",
+          "summary": "ESLint v9.0.0 was released in April 2024 with a new configuration system, but its launch faced initial negative feedback from users due to numerous breaking changes, such as the combination of the new configuration system and rule API changes. While the ESLint team provided documentation, users found it overwhelming and preferred automated tooling for upgrades. The lessons learned include prioritizing smaller, more frequent releases, focusing on tooling over documentation, and improving error message context.",
+          "url": "https://eslint.org/blog/2025/05/eslint-v9.0.0-retrospective/?utm_source=tldrwebdev",
+          "reading_time_minutes": 11,
+          "source_domain": "eslint.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-06-02:a16",
+          "order": 1,
+          "title": "WHY ARE 2025/05/28 AND 2025-05-28 DIFFERENT DAYS IN JAVASCRIPT?",
+          "summary": "JavaScript interprets dates with the `/` separator as local time and dates with the `-` separator as UTC, leading to different date calculations due to browser parsing inconsistencies and historical standards.",
+          "url": "https://brandondong.github.io/blog/javascript_dates/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "brandondong.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a17",
+          "order": 2,
+          "title": "PUBLISHED FOR THE FIRST TIME: THE PRINCETON INTERCAL COMPILER'S SOURCE CODE",
+          "summary": "The original source code for the influential esoteric programming language INTERCAL-72, created by Princeton undergraduates in 1972 and known for its intentionally difficult and parodic design, has been rediscovered, transcribed, and made publicly available.",
+          "url": "https://esoteric.codes/blog/published-for-the-first-time-the-original-intercal72-compiler-code?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "esoteric.codes",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a18",
+          "order": 3,
+          "title": "CODEX CLI IS GOING NATIVE",
+          "summary": "OpenAI is rewriting Codex CLI in Rust to improve cross-platform stability, security, performance, and extensibility.",
+          "url": "https://github.com/openai/codex/discussions/1174?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-06-02:a19",
+          "order": 4,
+          "title": "WHY DEEPSEEK IS CHEAP AT SCALE BUT EXPENSIVE TO RUN LOCALLY",
+          "summary": "DeepSeek-V3's architecture, like other Mixture-of-Experts models, benefits from large batch sizes to efficiently utilize GPUs, making it cost-effective at scale.",
+          "url": "https://www.seangoedecke.com/inference-batching-and-deepseek/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "seangoedecke.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-03-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-03-02",
+  "source_path": "TLDR InfoSec/article_02-03-2026.md",
+  "source_content_hash": "sha256:ad702fd78fa36c81d60852f4517a95792a0a1a339101250b6b3072811923c4af",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-03-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a04",
+          "order": 1,
+          "title": "NOW",
+          "summary": "ClickFix, Fake CAPTCHA, and ScreenConnect misuse are familiar threats, but they're still getting results.",
+          "url": "https://blackpointcyber.com/webinar/inside-the-soc-ep001-whats-working-for-attackers-right-now/?utm_campaign=37935163-2026_webinar_inside-the-soc&utm_source=tldr-newsletter&utm_medium=email&utm_term=260302&utm_content=episode-001",
+          "reading_time_minutes": null,
+          "source_domain": "blackpointcyber.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a04",
+          "order": 2,
+          "title": "Save your Seat",
+          "summary": "",
+          "url": "https://blackpointcyber.com/webinar/inside-the-soc-ep001-whats-working-for-attackers-right-now/?utm_campaign=37935163-2026_webinar_inside-the-soc&utm_source=tldr-newsletter&utm_medium=email&utm_term=260302&utm_content=episode-001",
+          "reading_time_minutes": null,
+          "source_domain": "blackpointcyber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a05",
+          "order": 1,
+          "title": "CANADIAN TIRE 2025 DATA BREACH IMPACTS 38 MILLION USERS",
+          "summary": "A 2025 e‑commerce breach at Canadian Tire exposed data from over 38 million accounts, including names, contact details, hashed passwords, and partial card numbers, with under 150,000 records containing full dates of birth. Financial systems and in‑store transactions were reportedly unaffected, but 42 million records were added to Have I Been Pwned.",
+          "url": "https://securityaffairs.com/188659/data-breach/canadian-tire-2025-data-breach-impacts-38-million-users.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a06",
+          "order": 2,
+          "title": "MANOMANO DATA BREACH AFFECTS 38 MILLION CUSTOMERS VIA THIRD-PARTY PROVIDER",
+          "summary": "DIY marketplace ManoMano is notifying about 38 million affected customers after unauthorized access at a subcontracted customer service provider handling Zendesk-based interactions. Threat actor “Indra” claims to have compromised data for 37.8 million accounts, including names, emails, phone numbers, and support communications.",
+          "url": "https://links.tldrnewsletter.com/9dnBzF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a07",
+          "order": 3,
+          "title": "COPS BACK DUTCH TELCO ODIDO AFTER SECOND WAVE OF SHINYHUNTERS LEAKS",
+          "summary": "ShinyHunters is dumping Odido customer records in daily batches, exposing sensitive identifiers, bank details, and support notes, and threatening to escalate the leaks after already impacting more than a million accounts. Dutch police publicly support Odido's stance of refusing ransom payments and emphasize the need for rapid law enforcement engagement and anti‑phishing vigilance.",
+          "url": "https://www.theregister.com/2026/02/27/odido_shinyhunters_leaks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a08",
+          "order": 1,
+          "title": "DELINEA PROTOCOL HANDLER - RETURN OF THE MSI: RCE VIA CUSTOM LAUNCHER",
+          "summary": "AmberWolf disclosed an RCE vulnerability in Delinea's Secret Server Protocol Handler (≤6.0.3.39) and Connection Manager (≤2.7.1) where improper sanitisation of the sslauncher:// URL handler's generic process launcher allowed a malicious server to supply attacker-controlled process names and arguments via encrypted launcher data, achieving arbitrary code execution on both Windows and macOS when a victim visits a crafted webpage and accepts a security prompt. The exploit, implementable as a NachoVPN plugin, abuses the legitimate key exchange flow to inject serialized launcher configurations that RDPWin.exe blindly executes via Process.Start(). Delinea patched the protocol handler as of January 17. Organizations should upgrade immediately and monitor for anomalous child processes spawned by RDPWin.exe.",
+          "url": "https://links.tldrnewsletter.com/mh1F33",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a09",
+          "order": 2,
+          "title": "TWITCH SHIPS SERVER-SIDE EPPO KEYS IN ITS IOS APP, EXPOSING ITS ENTIRE PRODUCT ROADMAP",
+          "summary": "Twitch's iOS app uses server-side Eppo SDK keys instead of client tokens, exposing over 260 unobfuscated production feature flags via a CDN endpoint that can be freely polled once a key is observed in traffic. The flags reveal Twitch's near-term roadmap. Hardcoded IDs, internal codenames, and future launches like “Elevate Prime 2026” are visible, turning feature flags into a live intelligence feed on product, security posture, and internal economics.",
+          "url": "https://www.buchodi.com/twitch-ships-server-side-eppo-keys-in-its-ios-app-exposing-its-entire-product-roadmap/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "buchodi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a10",
+          "order": 3,
+          "title": "PROCESS PRELUDING: CHILD PROCESS INJECTION BEFORE THE STORY BEGINS",
+          "summary": "Many security products in Windows 10 and 11 use kernel Event Tracing for Windows (ETW) hooks to monitor process creation and be notified of potentially malicious activity. An attacker can bypass these checks by exploiting a race condition between the kernel's completion of the executive process object setup and the invocation of process-creation callbacks. Attackers can also use legacy APIs for process creation, which do not trigger process-creation callbacks.",
+          "url": "https://www.originhq.com/blog/process-preluding?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "originhq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a11",
+          "order": 1,
+          "title": "MACNOISE",
+          "summary": "MacNoise is a modular macOS telemetry-generation framework designed to help security teams validate EDR, SIEM, and firewall detection coverage by producing real system events across the network, process, file, TCC, and persistence categories. The tool includes MITRE ATT&CK-mapped modules, pre-built APT emulation scenarios, and OCSF 1.7.0-compliant audit logging for structured correlation. Scenarios can be dry-run previewed, chained via YAML, and output as JSONL for automated detection gap analysis.",
+          "url": "https://github.com/0xv1n/macnoise?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a12",
+          "order": 2,
+          "title": "RUSTDESK",
+          "summary": "Rustdesk is an open-source remote desktop application designed for self-hosting. An alternative to TeamViewer, it works out of the box with no configuration required. You have full control over your data, with no security concerns.",
+          "url": "https://github.com/rustdesk/rustdesk?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a13",
+          "order": 3,
+          "title": "KSENTINEL",
+          "summary": "ksentinel is a Linux kernel module that monitors syscall table integrity, function prologues, and LSTAR MSR values using FNV-1a hashing to detect unauthorized modifications from rootkits such as PUMAKIT, Diamorphine, and KoviD. It covers 500+ syscall wrappers, plus critical VFS, networking, credential, and tracing functions, with anti-unload protection via a compile-time-generated unlock key. The module supports Linux versions 5.4 to 6.12+ on x86_64 and ARM64. It features configurable check intervals and a management script for live monitoring and violation alerts.",
+          "url": "https://github.com/MatheuZSecurity/ksentinel?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a14",
+          "order": 1,
+          "title": "CRITICAL FLAWS EXPOSED GARDYN SMART GARDENS TO REMOTE HACKING",
+          "summary": "Researchers reported flaws in Gardyn Home and Studio, which exposed roughly 138,000 indoor smart gardens to unauthenticated, internet‑reachable remote compromise, including OS command execution via command injection and hardcoded admin credentials in the Gardyn IoT Hub and Azure IoT infrastructure. Thankfully, patches are out and auto‑delivered.",
+          "url": "https://links.tldrnewsletter.com/NHhBvb",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a15",
+          "order": 2,
+          "title": "WHAT IS EC2 INSTANCE ATTESTATION",
+          "summary": "Nitro enclaves were introduced in 2020 to provide a trusted execution environment for security-sensitive applications. However, application development was more complex due to the execution environment's limitations. Last year, AWS launched EC2 instance attestation, which extends the security enclave to the full instance, enabling more use cases and improving usability at the cost of greater effort to secure the instance and increased deployment complexity. This post walks through the process of creating an application running on an EC2 instance with attestation, including a GitHub Actions workflow to build a hardened, attestable AMI.",
+          "url": "https://links.tldrnewsletter.com/SJ6Ms7",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a16",
+          "order": 3,
+          "title": "DEMYSTIFYING ZERO TRUST",
+          "summary": "This part of the UK's NCSC multi-part guide on implementing zero trust in an enterprise focuses on defining zero trust beyond the buzzword or a specific product. Zero trust defines a strategic shift where users are continually authenticated as opposed to a point-in-time authentication at the beginning of a session. It implies a defense in depth approach where controls are layered in a system and may work in conjunction with existing systems or replace them.",
+          "url": "https://www.ncsc.gov.uk/collection/zero-trust/demystifying-zero-trust?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-03-02:a17",
+          "order": 1,
+          "title": "FREE PATCHING FOR YOUR FIRST 200 ENDPOINTS, ACTION1",
+          "summary": "Action1 - patching that just works, first 200 endpoints are free forever. No feature limits, No credit card. No catch. Activate 200",
+          "url": "https://www.action1.com/free-edition/?utm_source=paidmedia&refid=Newsl_Q126_TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "action1.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a17",
+          "order": 2,
+          "title": "Free Endpoints",
+          "summary": "",
+          "url": "https://www.action1.com/free-edition/?utm_source=paidmedia&refid=Newsl_Q126_TLDR",
+          "reading_time_minutes": null,
+          "source_domain": "action1.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a18",
+          "order": 3,
+          "title": "SPAIN ARRESTS SUSPECTED HACKTIVISTS FOR DDOSING GOVT SITES",
+          "summary": "Spanish Civil Guard arrested four alleged members of \"Anonymous Fénix\" for conducting DDoS attacks against government ministries and public institutions.",
+          "url": "https://www.bleepingcomputer.com/news/security/spain-arrests-suspected-anonymous-fenix-hacktivists-for-ddosing-govt-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a19",
+          "order": 4,
+          "title": "MULTIPLE ZERO-DAY FLAWS IN PDF PLATFORMS ENABLE XSS AND ONE-CLICK ATTACKS",
+          "summary": "Novee Security disclosed 16 zero-day vulnerabilities across Foxit and Apryse PDF platforms.",
+          "url": "https://hackread.com/zero-day-flaws-pdf-platforms-xss-one-click-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-03-02:a20",
+          "order": 5,
+          "title": "MALICIOUS STRIPEAPI NUGET PACKAGE MIMICKED OFFICIAL LIBRARY AND STOLE API TOKENS",
+          "summary": "A typosquatted NuGet package named \"StripeApi.Net\" impersonated the legitimate Stripe.net library with artificially inflated download counts (~180K across 506 versions) and silently exfiltrated Stripe API tokens while maintaining full payment processing functionality to avoid detection.",
+          "url": "https://thehackernews.com/2026/02/malicious-stripeapi-nuget-package.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

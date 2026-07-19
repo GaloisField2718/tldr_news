@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-07-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-07-11",
+  "source_path": "TLDR InfoSec/article_11-07-2025.md",
+  "source_content_hash": "sha256:bb84b8dbc0b9fb375b55ba2ea505f77bc52563579ac55f539a1db3452bec68fa",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-07-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a04",
+          "order": 1,
+          "title": "SAFEBASE: TRUST, SELF-SERVED",
+          "summary": "",
+          "url": "https://safebase.io/schedule?utm_source=TLDR&utm_medium=content-syndication&utm_campaign=18991230_sb_tc_campaign_DG__&utm_content=tldr_july_11",
+          "reading_time_minutes": null,
+          "source_domain": "safebase.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a04",
+          "order": 2,
+          "title": "Inbound security reviews don't have to slow you down. SafeBase",
+          "summary": "helps you automate inbound requests, streamline questionnaires, and share your security posture proactively—all through a centralized Trust Center and AI Questionnaire Assistance.",
+          "url": "https://safebase.io/schedule?utm_source=TLDR&utm_medium=content-syndication&utm_campaign=18991230_sb_tc_campaign_DG__&utm_content=tldr_july_11",
+          "reading_time_minutes": null,
+          "source_domain": "safebase.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a04",
+          "order": 3,
+          "title": "🙋♀️ Get a guided tour with an expert",
+          "summary": "",
+          "url": "https://safebase.io/schedule?utm_source=TLDR&utm_medium=content-syndication&utm_campaign=18991230_sb_tc_campaign_DG__&utm_content=tldr_july_11",
+          "reading_time_minutes": null,
+          "source_domain": "safebase.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a05",
+          "order": 1,
+          "title": "ATOMIC MACOS INFOSTEALER ADDS BACKDOOR FOR PERSISTENT ATTACKS",
+          "summary": "Malware analysts discovered a new version of the Atomic macOS (AMOS) infostealer, which includes a backdoor that offers attackers persistent access to compromised systems. The new version of the malware features an embedded backdoor, utilizes LackDaemons to survive reboots, implements ID-based victim tracking, and introduces new C2 infrastructure. The embedded backdoor allows threat actors to execute commands remotely, log keystrokes, introduce additional payloads, or probe for lateral movement opportunities.",
+          "url": "https://www.bleepingcomputer.com/news/security/atomic-macos-infostealer-adds-backdoor-for-persistent-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a06",
+          "order": 2,
+          "title": "MILLIONS OF CARS EXPOSED TO REMOTE HACKING VIA PERFEKTBLUE ATTACK",
+          "summary": "PCA Cyber Security discovered critical vulnerabilities in OpenSynergy's BlueSDK Bluetooth framework affecting millions of cars from Mercedes-Benz, Skoda, and Volkswagen. The \"PerfektBlue\" attack enables remote code execution through Bluetooth pairing, allowing attackers to track vehicles, record audio, access phonebook data, and potentially control steering/wipers.",
+          "url": "https://www.securityweek.com/millions-of-cars-exposed-to-remote-hacking-via-perfektblue-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a07",
+          "order": 3,
+          "title": "CRITICAL MCP-REMOTE VULNERABILITY ENABLES REMOTE CODE EXECUTION, IMPACTING 437,000+ DOWNLOADS",
+          "summary": "CVE-2025-6514, a critical vulnerability in mcp-remote (CVSS 9.6), allows arbitrary OS command execution when connecting to untrusted MCP servers. The flaw affects versions 0.0.5-0.1.15 and has been patched in 0.1.16. Other MCP vulnerabilities allowing for remote code execution and sandbox escapes were also discovered in the Inspector tool and Anthropic's Filesystem MCP Server.",
+          "url": "https://links.tldrnewsletter.com/W35ayA",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a08",
+          "order": 1,
+          "title": "HOW I DISCOVERED A LIBPNG VULNERABILITY 11 YEARS AFTER IT WAS PATCHED",
+          "summary": "While practicing secure code review, the author of this article decided to review the libpng C library. They found that libpng calculated memory allocations based on user-controlled values, such as “depth.” The author was able to trigger a crash using a custom PNG file, but then discovered that the bug was fixed 11 years ago when it was first reported.",
+          "url": "https://blog.himanshuanand.com/posts/discovered-a-libpng-vulnerability-11-years-after-it-was-patched/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.himanshuanand.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a09",
+          "order": 2,
+          "title": "TAKING SHELLTER: A COMMERCIAL EVASION FRAMEWORK ABUSED IN- THE- WILD",
+          "summary": "Elastic Security Labs found threat actors using an illicit version of SHELLTER, a red team evasion framework, since April to deploy infostealers like LUMMA, RHADAMANTHYS, and ARECHCLIENT2. The malware uses advanced evasion techniques such as polymorphic code, API hooking bypasses, indirect syscalls, memory scan evasion, and AMSI bypass, resulting in low detection rates. Elastic issued a dynamic unpacker and YARA rules to help detect SHELLTER samples, which are spread via YouTube comments and phishing campaigns targeting content creators.",
+          "url": "https://www.elastic.co/security-labs/taking-shellter?utm_source=tldrinfosec",
+          "reading_time_minutes": 26,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a10",
+          "order": 3,
+          "title": "ABUSING CHROME REMOTE DESKTOP ON RED TEAM OPERATIONS: A PRACTICAL GUIDE",
+          "summary": "Red team operators can abuse Chrome Remote Desktop as a legitimate remote access tool by installing the MSI package with admin privileges and using an undocumented `--pin=111111` parameter to bypass GUI PIN setup requirements. The technique leverages Google's infrastructure and HTTPS/WebRTC protocols, making it more difficult to detect than traditional remote access tools, as it appears as legitimate Google traffic. Defenders should implement application allowlisting solutions, such as AppLocker, and monitor for \"Chrome Remote Desktop Host\" installations to prevent unauthorized remote access deployments.",
+          "url": "https://trustedsec.com/blog/abusing-chrome-remote-desktop-on-red-team-operations-a-practical-guide?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "trustedsec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a11",
+          "order": 1,
+          "title": "M&A SECURITY RISKS AND HOW TO DEFEND AGAINST THEM",
+          "summary": "Security policy differences and insider threats can emerge during M&As. On July 17, hear from security leaders with experience handling over 30 M&As as they share real-world advice on aligning access, mitigating risk, and securing new environments.",
+          "url": "https://1password.com/webinars/cybersecurity-for-mergers-acquisitions?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_enterprise_amer_english_cybersecurity-for-mergers-acquisitions_consideration_2025-07&utm_content=text&utm_term=july-11-infosec-newsletter-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a11",
+          "order": 2,
+          "title": "Register now and discover how to safeguard every M&A stage.",
+          "summary": "",
+          "url": "https://1password.com/webinars/cybersecurity-for-mergers-acquisitions?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=sa_enterprise_amer_english_cybersecurity-for-mergers-acquisitions_consideration_2025-07&utm_content=text&utm_term=july-11-infosec-newsletter-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a12",
+          "order": 3,
+          "title": "THREAT DESIGNER",
+          "summary": "Threat Designer is an AI-driven agent designed to automate and streamline the threat modeling process for secure system design.",
+          "url": "https://github.com/awslabs/threat-designer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a13",
+          "order": 4,
+          "title": "AIRMDR (PRODUCT LAUNCH)",
+          "summary": "AirMDR provides automated playbooks to investigate and respond to threats while constantly learning.",
+          "url": "https://airmdr.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "airmdr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a14",
+          "order": 5,
+          "title": "OPENCVE",
+          "summary": "OpenCVE is an open-source platform designed for efficient monitoring and management of CVEs. It consolidates vulnerability data from sources like MITRE, NVD, RedHat, and Vulnrichment, allowing users to filter, track, and organize based on various criteria such as vendor, product, and severity. Users can subscribe to product updates, receive alerts, analyze changes, and collaborate seamlessly through its user-friendly interface.",
+          "url": "https://github.com/opencve/opencve?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a15",
+          "order": 1,
+          "title": "BROWSER EXTENSIONS TURN NEARLY 1M BROWSERS INTO WEBSITE-SCRAPING BOTS",
+          "summary": "Browser extensions that use the MellowTel-js library are being used to scrape websites using users' browsers. The library has close ties with Olostep, a company that bills itself as “the world's most reliable and cost-effective Web scraping API,” suggesting that Olostep is using its installed base of extension users to fulfill scraping requests. 245 extensions that implement this library have been discovered across Chrome, Firefox, and Edge, with a total of nearly 1M users.",
+          "url": "https://arstechnica.com/security/2025/07/browser-extensions-turn-nearly-1-million-browsers-into-website-scraping-bots/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a15",
+          "order": 2,
+          "title": "JACK DORSEY SAYS HIS ‘SECURE' NEW BITCHAT APP HAS NOT BEEN TESTED FOR SECURITY",
+          "summary": "After launching his new security-focused, Bluetooth chat app, Bitchat, Jack Dorsey added a warning to its GitHub page that it has not received an external security review and should not be used in production. This disclaimer was prompted by a security researcher who discovered a vulnerability that allowed them to impersonate someone else by intercepting their “identity key” and “peer id pair.” Other security researchers have reported concerns over Dorsey's claims that Bitchat has forward secrecy, as well as reported a potential buffer overflow bug.",
+          "url": "https://arstechnica.com/security/2025/07/browser-extensions-turn-nearly-1-million-browsers-into-website-scraping-bots/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a16",
+          "order": 3,
+          "title": "GMX HALTS TRADING, TOKEN MINTING FOLLOWING $40M EXPLOIT",
+          "summary": "The GMX protocol halted trading on GMX V1, the first version of the GMX perpetual exchange deployed on the Arbitrum network, after a liquidity pool suffered an exploit that resulted in $40 million in funds being stolen. The attacked pool is a liquidity provider for the GMX protocol with underlying assets that include Bitcoin, Ether, and stablecoins. Blockchain security company SlowMist attributed the exploit to a design flaw that allowed hackers to manipulate the GLP token price.",
+          "url": "https://cointelegraph.com/news/gmx-v1-exchange-exploited-40-million-drained?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-07-11:a17",
+          "order": 1,
+          "title": "AMD WARNS OF NEW MELTDOWN, SPECTRE-LIKE BUGS AFFECTING CPUS",
+          "summary": "AMD has discovered Transient Scheduler Attack (TSA) vulnerabilities affecting EPYC, Ryzen, and other chips that could potentially enable information disclosure through side-channel attacks requiring local access.",
+          "url": "https://www.theregister.com/2025/07/09/amd_tsa_side_channel/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a18",
+          "order": 2,
+          "title": "SOUTH KOREAN GOVERNMENT IMPOSES PENALTIES ON SK TELECOM FOR BREACH",
+          "summary": "South Korea fined SK Telecom only $21,890 for a breach that exposed 27 million customer records, but imposed strict regulatory requirements, including quarterly security assessments, mandatory USIM replacements, and organizational changes that the company expects will cost $511 million in lost revenue.",
+          "url": "https://links.tldrnewsletter.com/vTwUv9",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-07-11:a19",
+          "order": 3,
+          "title": "FOUR ARRESTED IN CONNECTION WITH M&S AND CO-OP CYBER-ATTACKS",
+          "summary": "The National Crime Agency detained four teenagers aged 17-19 for launching cyberattacks involving ransomware and data theft against M&S, Co-op, and Harrods, with charges including computer misuse, blackmail, and organized crime.",
+          "url": "https://www.bbc.com/news/articles/cwykgrv374eo?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-06-08",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-06-08",
+  "source_path": "TLDR Dev/article_08-06-2026.md",
+  "source_content_hash": "sha256:c8076fa7a229973f67208e9a7e8043dea0f72ee6573e46f0e51889e3d0e78ccc",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-06-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a04",
+          "order": 1,
+          "title": "CODING SPEED DOUBLED YEAR OVER YEAR. HERE'S WHAT CHANGED.",
+          "summary": "Cursor's new Developer Habits Report [4] breaks down how high-performing engineering teams build software with AI. The headline finding? Coding speed has doubled year over year, with developers shipping larger PRs and leaning harder on context and automation to do it.",
+          "url": "https://cursor.com/lp-team/dev-habits-report?utm_source=tldr&utm_medium=newsletter&utm_campaign=dev_habits_report&utm_content=tldr_dev_primary&sender=tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "cursor.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a04",
+          "order": 2,
+          "title": "Get the report + $3,000 in Cursor credits -->",
+          "summary": "",
+          "url": "https://cursor.com/lp-team/dev-habits-report?utm_source=tldr&utm_medium=newsletter&utm_campaign=dev_habits_report&utm_content=tldr_dev_primary&sender=tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "cursor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a05",
+          "order": 1,
+          "title": "THE PROBLEM WITH USEEFFECT",
+          "summary": "Almost every useEffect bug is the same problem in disguise: the effect runs more often than expected, either from a missing dependency array (which loops until the tab crashes) or from a dependency that's an object, array, or function getting a fresh reference each render, since React compares dependencies by reference rather than content. Fix it by stabilizing the reference with useMemo/useCallback or depending on primitive values, and catch it early with the react-hooks/exhaustive-deps ESLint rule.",
+          "url": "https://www.react.doctor/blog/the-problem-with-useeffect?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "react.doctor",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a06",
+          "order": 2,
+          "title": "THE CONDUCTOR REWRITE: WHAT THEY CHANGED TO MAKE IT FAST",
+          "summary": "Conductor is a local-first React app wrapped in Tauri with SQLite as its source of truth, and it was rebuilt to be twice as fast. After shimming Tauri's invoke() bridge to profile in Chrome (since React DevTools can't run in WebKit), the fixes were migrating to TanStack Router for stable references, virtualizing the chat with react-virtuoso plus React.memo, switching agent processes to Bun, and moving the git checkpoint off the critical path.",
+          "url": "https://performance.dev/the-conductor-rewrite?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "performance.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a07",
+          "order": 1,
+          "title": "MY AUTOMATED DOUBT DEVELOPMENT PROCESS",
+          "summary": "\"Automated doubt\" uses specialized subagents to critique artifacts from multiple technical perspectives. This workflow begins by front-loading scrutiny during the design stage, where agents identify hidden assumptions and architectural gaps within technical specifications. Once implementation is underway, a suite of post-development agents audits the codebase for security vulnerabilities, type safety, and logic errors to make sure the output meets high engineering standards.",
+          "url": "https://www.alexself.dev/blog/automated-doubt?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "alexself.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a08",
+          "order": 2,
+          "title": "HOW TO GROW FROM SENIOR TO STAFF ENGINEER IN THE AI ERA",
+          "summary": "Transitioning from senior to staff engineering requires shifting focus from individual technical execution to multiplying team impact. Staff engineers demonstrate leadership by building platforms and frameworks that reduce friction and drive sustainable organizational improvement.",
+          "url": "https://newsletter.eng-leadership.com/p/how-to-grow-from-senior-to-staff?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "newsletter.eng-leadership.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a09",
+          "order": 1,
+          "title": "CLERK CLI: SET UP AUTH LOCALLY, SHIP IT WITH ONE COMMAND",
+          "summary": "clerk init scaffolds your auth config. clerk config manages it in code. clerk deploy (coming soon) will push it to production — no context switching, no manual dashboard sync.",
+          "url": "https://go.clerk.com/RTAM2fN?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a10",
+          "order": 2,
+          "title": "Install now",
+          "summary": "",
+          "url": "https://go.clerk.com/RTAM2fN",
+          "reading_time_minutes": null,
+          "source_domain": "go.clerk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a11",
+          "order": 3,
+          "title": "OPEN CODE REVIEW",
+          "summary": "Open Code Review is an AI-powered CLI tool that automates code reviews by analyzing Git diffs for precise, line-level feedback. It uses a hybrid architecture of deterministic logic and dynamic agents, allowing developers to integrate it easily into CI/CD pipelines or local environments.",
+          "url": "https://github.com/alibaba/open-code-review?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a12",
+          "order": 4,
+          "title": "MITOS",
+          "summary": "Mitos is an ASCII art generator designed to convert images, GIFs, and custom JavaScript code into text-based illustrations. The tool provides a suite of preprocessing controls for brightness and contrast alongside customizable character sets and real-time previews.",
+          "url": "https://github.com/oxidecomputer/mitos?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a13",
+          "order": 1,
+          "title": "HOW LLMS ACTUALLY WORK",
+          "summary": "LLMs operate by converting text into subword tokens and mapping them to numerical vectors called embeddings that represent semantic meaning. These models use positional encoding to track the order of words and use attention mechanisms to allow tokens to weigh the importance of other information in a sequence. Within the transformer stack, feed-forward networks process tokens individually while residual connections and normalization layers maintain mathematical stability across many layers.",
+          "url": "https://www.0xkato.xyz/how-llms-actually-work/?utm_source=tldrdev",
+          "reading_time_minutes": 24,
+          "source_domain": "0xkato.xyz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a14",
+          "order": 2,
+          "title": "DID CLAUDE INCREASE BUGS IN RSYNC?",
+          "summary": "Statistical analysis of thirty-six rsync releases showed that software versions assisted by Claude AI show no real increase in bugs compared to historical human-authored releases. Using severity-weighted bug metrics and exact permutation tests, the data shows that these AI-influenced releases fall within the normal historical distribution rather than appearing as statistical outliers.",
+          "url": "https://alexispurslane.github.io/rsync-analysis/?utm_source=tldrdev",
+          "reading_time_minutes": 28,
+          "source_domain": "alexispurslane.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a15",
+          "order": 3,
+          "title": "I BUILT A VULNERABLE APP AND SPENT $1,500 SEEING IF LLMS COULD HACK IT",
+          "summary": "An experiment tested the ability of various LLMs to identify and exploit security vulnerabilities within a custom-built React Native and Python application. After feeding models an APK and a challenge description, success rates were evaluated. GPT-5.5 emerged as the most effective tool for this specific task.",
+          "url": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "kasra.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-06-08:a16",
+          "order": 1,
+          "title": "DEFENDING CODE REFERENCE HARNESS",
+          "summary": "A reference implementation for autonomous vulnerability discovery and remediation with Claude created by Anthropic.",
+          "url": "https://github.com/anthropics/defending-code-reference-harness?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a17",
+          "order": 2,
+          "title": "SEM",
+          "summary": "Sem is a configuration-free CLI tool that improves Git by providing semantic, entity-level insights into code changes, dependencies, and history across dozens of programming languages.",
+          "url": "https://ataraxy-labs.github.io/sem/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "ataraxy-labs.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a18",
+          "order": 3,
+          "title": "\"MAYBE LATER\" WAS A FEATURE",
+          "summary": "Choosing not to build unnecessary features is a development strategy that prevents the accumulation of technical debt, a risk that is even more prominent since it's so easy now to use AI to generate code.",
+          "url": "https://arnorhs.dev/posts/2026-06-04/maybe-later-was-a-feature/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "arnorhs.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-06-08:a19",
+          "order": 4,
+          "title": "RUNNING PYTHON CODE IN A SANDBOX WITH MICROPYTHON AND WASM",
+          "summary": "A new alpha package called micropython-wasm allows for the secure execution of Python code within a WebAssembly sandbox, providing resource limits and persistent interpreter state for use in plugin systems and other isolated environments.",
+          "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-05-14",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-05-14",
+  "source_path": "TLDR Web Dev/article_14-05-2025.md",
+  "source_content_hash": "sha256:662df42ebb555982d60e2f3f398bbd958b0e1c9eedcf8d266637b1251682f4b8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-05-14",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-14:a04",
+          "order": 1,
+          "title": "THE HEIGHT ENIGMA IN CSS",
+          "summary": "Percentage-based heights in CSS can be confusing and often don't work as expected. The core issue is a circular dependency: a child element trying to define its height based on its parent's height, while the parent's height depends on its children. To resolve this, the parent element either needs an explicit, \"knowable\" height set using units like `rem` or pixels, or the height of the root HTML element must be set to 100% of the viewport.",
+          "url": "https://www.joshwcomeau.com/css/height-enigma/?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a05",
+          "order": 2,
+          "title": "PDF TO TEXT, A CHALLENGING PROBLEM",
+          "summary": "The Marginalia search engine is now indexing PDFs, a process more complex than expected. Extracting meaningful text requires parsing challenging items like rotated glyphs and dealing with a lack of semantic information. While vision-based ML is ideal, the current solution modifies PDFBox's PDFTextStripper, improving heading and paragraph identification through statistical analysis of font sizes and line spacing.",
+          "url": "https://www.marginalia.nu/log/a_119_pdf/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "marginalia.nu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-14:a06",
+          "order": 1,
+          "title": "THE TRUE PATH TO GARBAGE CODE: FIGMA SITES",
+          "summary": "Figma Sites is a web design tool currently in beta that, according to this dev, generates inaccessible and semantically unsound code. It has issues not just in the launch demo, but also broader accessibility problems. These include a flawed heading hierarchy, inconsistent use of alternative text for images, poor site structure with illogical landmark placement, and issues with text scaling and language switching.",
+          "url": "https://www.joedolson.com/2025/05/the-true-path-to-garbage-code-figma-sites/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "joedolson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a07",
+          "order": 2,
+          "title": "IN A HIGH-STRESS WORK ENVIRONMENT, PRIORITIZE RELATIONSHIPS",
+          "summary": "In high-stress work environments, prioritize maintaining positive relationships and avoid burning bridges, as these connections will be necessary for future job opportunities and your professional reputation.",
+          "url": "https://wqtz.bearblog.dev/high-stress-job-relationships/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "wqtz.bearblog.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a08",
+          "order": 3,
+          "title": "FRONTENDS ARE HARD",
+          "summary": "Deploying modern frontends is challenging due to their complex infrastructure needs and the rapid pace of updates. Cloud providers struggle to keep up, leading many to use specialized services like Netlify and Vercel. SST tackles this by open-sourcing frontend adapters through the OpenNext project and its own infrastructure.",
+          "url": "https://sst.dev/blog/frontends-are-hard/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "sst.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-14:a09",
+          "order": 1,
+          "title": "🆕 ADD OBSERVABILITY TO VERCEL IN JUST A FEW CLICKS",
+          "summary": "With one click on your Vercel dashboard, you can now automatically send telemetry [9] from your Vercel workloads to Dash0 for analysis and visualization - including an automated log drain setup. You can also enable tracing and metrics to gain further insights. Install it",
+          "url": "https://vercel.com/marketplace/dash0",
+          "reading_time_minutes": null,
+          "source_domain": "vercel.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a09",
+          "order": 2,
+          "title": "on the Vercel marketplace",
+          "summary": "",
+          "url": "https://vercel.com/marketplace/dash0",
+          "reading_time_minutes": null,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a10",
+          "order": 3,
+          "title": "HELIXDB",
+          "summary": "HelixDB is an open-source, high-performance graph-vector database written in Rust designed for RAG and AI applications. It combines graph and vector data storage, using LMDB for data persistence and ACID compliance.",
+          "url": "https://github.com/HelixDB/helix-db/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a11",
+          "order": 4,
+          "title": "WEBTUI",
+          "summary": "A modular CSS library with Terminal UI components. It includes ASCII Boxes, badge, button, checkbox, popover, and other components, along with some plugins.",
+          "url": "https://github.com/webtui/webtui?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-14:a12",
+          "order": 1,
+          "title": "GOOGLE IS FINALLY BUILDING ITS OWN DEX: FIRST LOOK AT ANDROID'S DESKTOP MODE",
+          "summary": "Google is developing a desktop mode for Android. This mode includes a taskbar for apps and supports launching multiple apps in resizable, floating windows. It adapts the tablet windowing system for external displays, allowing for multitasking and drag-and-drop functionality.",
+          "url": "https://www.androidauthority.com/android-desktop-mode-leak-3550321/?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "androidauthority.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a13",
+          "order": 2,
+          "title": "AI SLOP IS POLLUTING BUG BOUNTY PLATFORMS WITH FAKE VULNERABILITY REPORTS",
+          "summary": "AI-generated fake vulnerability reports are polluting bug bounty platforms and wasting maintainer time. These reports often contain fabricated details and nonexistent code, exploiting under-resourced organizations that lack expertise to properly vet them.",
+          "url": "https://socket.dev/blog/ai-slop-polluting-bug-bounty-platforms?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a14",
+          "order": 3,
+          "title": "AIRBNB IS IN MIDLIFE CRISIS MODE",
+          "summary": "Airbnb is undergoing a major reinvention. Its CEO, Brian Chesky, plans to transform Airbnb into an \"everything app,\" expanding beyond accommodations to include services like fitness, food, and even microdermabrasion. The company is investing hundreds of millions of dollars into this relaunch.",
+          "url": "https://archive.ph/paVWD?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "archive.ph",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-05-14:a15",
+          "order": 1,
+          "title": "WRITING THAT CHANGED HOW I THINK ABOUT PL",
+          "summary": "A collection of programming language and compiler-related resources (papers, blog posts, and videos) that have significantly influenced the author's thinking, covering topics like garbage collection, optimization, abstract domains, register allocation, regular expressions, neural networks, and compiler design.",
+          "url": "https://bernsteinbear.com/blog/pl-writing/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "bernsteinbear.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a16",
+          "order": 2,
+          "title": "FIREFOX",
+          "summary": "Firefox has moved to GitHub.",
+          "url": "https://github.com/mozilla-firefox/firefox?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a17",
+          "order": 3,
+          "title": "THE WORLD COULD RUN ON OLDER HARDWARE IF SOFTWARE OPTIMIZATION WERE A PRIORITY",
+          "summary": "Software optimization and market incentives could allow for more use of outdated hardware, although this would also likely stifle the creation of new, computationally intensive products.",
+          "url": "https://threadreaderapp.com/thread/1922100771392520710.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-05-14:a18",
+          "order": 4,
+          "title": "ELECTRON AIN'T BAD, ACTUALLY",
+          "summary": "Electron is a great framework for certain apps, like those using web technologies and streaming services, and its perceived slowness is often due to poorly written code by the framework's users.",
+          "url": "https://blog.vaxry.net/articles/2025-electronAintBad?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.vaxry.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

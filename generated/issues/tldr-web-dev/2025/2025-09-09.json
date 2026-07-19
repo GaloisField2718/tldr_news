@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-09-09",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-09-09",
+  "source_path": "TLDR Web Dev/article_09-09-2025.md",
+  "source_content_hash": "sha256:92cb0d28331b3a636b597896b552f90502d5b28d58346b1a01495edef4f2c423",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-09-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a04",
+          "order": 1,
+          "title": "500K FREE CHARACTERS/MONTH",
+          "summary": "DeepL's AI translation API [4] isn't just another wrapper tool. It's a proprietary-trained model that outperforms ChatGPT-4, Google Translate, and Microsoft's offerings in translation quality. That's why Weglot chose DeepL to power multilingual websites for 50,000+ companies.",
+          "url": "https://www.deepl.com/en/pro-api?utm_source=TLDR&utm_medium=third_party_media&utm_campaign=IMC_API&utm_content=DeepL_API_Pro",
+          "reading_time_minutes": null,
+          "source_domain": "deepl.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a05",
+          "order": 2,
+          "title": "Get your API key [4] or read the docs",
+          "summary": "",
+          "url": "https://developers.deepl.com/docs/getting-started/intro?utm_source=TLDR&utm_medium=third_party_media&utm_campaign=IMC_API&utm_content=Developer_Documentation",
+          "reading_time_minutes": null,
+          "source_domain": "developers.deepl.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a06",
+          "order": 1,
+          "title": "HOW I SOLVED A DISTRIBUTED QUEUE PROBLEM AFTER 15 YEARS",
+          "summary": "Jeremy Edberg, formerly responsible for Reddit's infrastructure, discusses the challenges and limitations of traditional task queues using RabbitMQ for operations like Reddit's vote processing. While they do have scalability and flow control benefits, they are also fragile and have the potential for data loss due to queue failures. A better solution is durable queues that checkpoint task status to a persistent store like Postgres, as this can enable the resumption of failed jobs and prevent data loss.",
+          "url": "https://www.dbos.dev/blog/durable-queues?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "dbos.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a07",
+          "order": 2,
+          "title": "COLOR SHIFTING IN CSS",
+          "summary": "This post goes over CSS color animation techniques, specifically addressing the challenge of creating smooth color shifts. It highlights the limitations of using RGB for color transitions, which can result in washed-out, greyish intermediate colors due to how browsers calculate these transitions. CSS filters like `hue-rotate()` are a more performant solution that avoids these issues, offering a more vibrant color shift.",
+          "url": "https://www.joshwcomeau.com/animation/color-shifting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 14,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a08",
+          "order": 1,
+          "title": "WRITING CODE IS EASY. READING IT ISN'T",
+          "summary": "While writing code can be relatively simple, the real challenge is in reading and understanding existing codebases. Building a mental model of a system, which involves understanding its components, dependencies, and potential side effects, is a time-consuming and effort-intensive process. This is necessary for debugging though.",
+          "url": "https://links.tldrnewsletter.com/z6J6uw",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a09",
+          "order": 2,
+          "title": "FORMATTING CODE SHOULD BE UNNECESSARY",
+          "summary": "We should revisit the approach of systems like the Rational R1000, which used an intermediate representation (DIANA) instead of plain text source code to remove formatting debates and improve development efficiency.",
+          "url": "https://links.tldrnewsletter.com/eA39AX",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a10",
+          "order": 3,
+          "title": "'MAKE INVALID STATES UNREPRESENTABLE' CONSIDERED HARMFUL",
+          "summary": "The principle of making invalid states unrepresentable in software design is not a good one. State machines, foreign key constraints, and Protocol Buffers are all examples where strict enforcement can lead to complications when dealing with edge cases or schema changes. While constraints are important for reasoning about systems, software should allow for some invalid states to accommodate real-world complexities and avoid rigid, difficult-to-change designs.",
+          "url": "https://links.tldrnewsletter.com/ECIsNj",
+          "reading_time_minutes": 12,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a11",
+          "order": 1,
+          "title": "DEVCYCLE'S MCP SERVER BRINGS FEATURE FLAGGING TO AI AGENTS",
+          "summary": "With DevCycle's MCP server, your AI agent can create, manage and evaluate feature flags [11] - and you can stay in code and in context. Use it to create / QA features end-to-end with a prompt, or to investigate incidents right from your AI-enabled IDE. Want to get started fast? Use AI to install DevCycle for you [11].",
+          "url": "https://devcycle.com/features/mcp-ai?utm_source=tldr&utm_medium=cpc&utm_campaign=mcp&utm_content=mcp",
+          "reading_time_minutes": null,
+          "source_domain": "devcycle.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a12",
+          "order": 2,
+          "title": "JAAZ",
+          "summary": "Jaaz is an open-source, privacy-focused alternative to Canva and Manus, functioning as a multimodal creative assistant that can be used locally. It lets users generate images and videos from prompts, create visuals with \"Magic Canvas\" and \"Magic Video\" features, and use an infinite canvas for storyboarding.",
+          "url": "https://github.com/11cafe/jaaz?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a13",
+          "order": 3,
+          "title": "QUARTZ",
+          "summary": "Quartz is a free set of tools for publishing digital gardens and notes as websites. It's a static-site generator with features like Obsidian integration and networked thought capabilities.",
+          "url": "https://github.com/jackyzha0/quartz?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a14",
+          "order": 4,
+          "title": "HEROUI",
+          "summary": "HeroUI is a React UI library built on Tailwind CSS for creating accessible and customizable web apps. It has themeability with custom TailwindCSS plugins, automatic dark mode, and pre-made components with 210+ templates. HeroUI's components are designed for accessibility, follow WAI-ARIA guidelines, and can be used directly in React server components.",
+          "url": "https://www.heroui.com/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "heroui.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a15",
+          "order": 1,
+          "title": "WHAT IF ARTIFICIAL INTELLIGENCE IS JUST A “NORMAL” TECHNOLOGY?",
+          "summary": "Artificial intelligence should be viewed as a \"normal technology.” This view, presented by Princeton computer scientists, suggests AI's development could follow the trajectory of previous technological revolutions. This means a slower adoption rate, a gradual impact on jobs with increased human oversight, and a focus on downstream defenses against misuse, rather than alignment.",
+          "url": "https://archive.md/G9poh?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "archive.md",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a16",
+          "order": 2,
+          "title": "USING CLAUDE CODE TO MODERNIZE A 25-YEAR-OLD KERNEL DRIVER",
+          "summary": "This dev modernized the ftape Linux kernel driver, which hadn't been updated in 25 years and was necessary for recovering data from old QIC-80 tapes. He used Claude Code to update the driver to be compatible with modern Linux kernels, addressing deprecated functions and build issues. Despite requiring some manual adjustments and prior kernel module knowledge, Claude Code made the process really fast comparatively.",
+          "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "dmitrybrant.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-09-09:a17",
+          "order": 1,
+          "title": "LOOK OUT FOR BUGS",
+          "summary": "Proactively find bugs by carefully and slowly reading code to build a mental model of the program and identify discrepancies, rather than relying solely on iterative testing.",
+          "url": "https://matklad.github.io/2025/09/04/look-for-bugs.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "matklad.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a18",
+          "order": 2,
+          "title": "NINTENDO SECURES $2 MILLION SETTLEMENT AGAINST SWITCH MODDER — MODDED HARDWARE CREATOR AGREED TO STOP SELLING BACKUP DEVICES, BUT CONTINUED TO, PROMPTING LAWSUIT",
+          "summary": "Nintendo won a $2 million settlement and a broad injunction against a modder who sold devices that circumvented Switch security, banning him from selling or possessing such devices, reverse engineering Nintendo systems, or linking to related materials.",
+          "url": "https://www.tomshardware.com/video-games/nintendo-secures-settlement-against-switch-modder-who-represented-himself-in-court?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a19",
+          "order": 3,
+          "title": "MAC ANGLE",
+          "summary": "Mac-Angle is a C++ library for reading the lid angle sensor data from supported MacBooks that provides real-time angle measurements with exception handling and a CMake build system.",
+          "url": "https://github.com/ufoym/mac-angle?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-09-09:a20",
+          "order": 4,
+          "title": "PACKAGE MANAGERS ARE EVIL",
+          "summary": "Package managers, while automating dependency handling, ultimately contribute to \"dependency hell\" and are a net-negative for programming due to their unnecessary automation, poorly defined package concepts, and encouragement of unvetted dependencies.",
+          "url": "https://www.gingerbill.org/article/2025/09/08/package-managers-are-evil/?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "gingerbill.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

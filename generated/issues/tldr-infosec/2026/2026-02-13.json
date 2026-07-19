@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-02-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-02-13",
+  "source_path": "TLDR InfoSec/article_13-02-2026.md",
+  "source_content_hash": "sha256:c4299baab6ed0f3e8ecb3a32778783650c2c32a48288df50469fc7ae9f01b441",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-02-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a04",
+          "order": 1,
+          "title": "BRICK YOUR NOISY SAST SCANNER (AND YOUR PHONE) 🧱📱",
+          "summary": "Security teams drown in noise: you triage 100 findings, maybe 10 matter, and you lose trust. Meanwhile, devs end up context-switching into code they haven't touched in weeks.",
+          "url": "https://depthfirst.com/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=2026Q1_newsletter_TLDRInfoSec&utm_content=primary_placement&utm_term=demo_request",
+          "reading_time_minutes": null,
+          "source_domain": "depthfirst.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a06",
+          "order": 1,
+          "title": "APPLE FIXES ZERO-DAY FLAW USED IN 'EXTREMELY SOPHISTICATED' ATTACKS",
+          "summary": "Apple patched CVE-2026-20700, an arbitrary code execution vulnerability in dyld (the Dynamic Link Editor) discovered by Google's Threat Analysis Group, which was exploited in targeted attacks against specific individuals running iOS versions before iOS 26, marking the first Apple zero-day patched in 2026. The flaw, chained with two previously patched vulnerabilities (CVE-2025-14174 and CVE-2025-43529), affects iPhone 11 and later, iPad, Mac, Apple TV, Apple Watch, and Vision Pro devices. Fixes are available in iOS 18.7.5, iPadOS 18.7.5, macOS Tahoe 26.3, tvOS 26.3, watchOS 26.3, and visionOS 26.3.",
+          "url": "https://www.bleepingcomputer.com/news/security/apple-fixes-zero-day-flaw-used-in-extremely-sophisticated-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a07",
+          "order": 2,
+          "title": "MICROSOFT'S NOTEPAD GOT PWNED (THEY ADDED AI TO IT, SO...)",
+          "summary": "CVE-2026-20841 (CVSS 8.8) is a command injection flaw in Microsoft's updated Notepad (versions 11.0.0 to 11.2509). The vulnerability arises because the Markdown handler does not validate link content before execution, allowing attackers to execute remote code when users open a malicious .md file and click an embedded link. Public proof-of-concept exploits exist, and the vulnerability is actively being exploited, granting attackers full permission to execute code. Microsoft addressed this issue in Notepad build 11.2510+ on February 10. Users are advised to disable Markdown and link previews when unnecessary.",
+          "url": "https://foss-daily.org/posts/microsoft-notepad-2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "foss-daily.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a08",
+          "order": 3,
+          "title": "APOLLOMD DATA BREACH IMPACTS 626,000 INDIVIDUALS",
+          "summary": "A May 2025 cyberattack on ApolloMD exposed PII and PHI for 626,540 people associated with affiliated physicians and practices, including diagnoses, treatment details, insurance data, and, in some cases, Social Security numbers. Notifications began in September 2025, with free credit monitoring offered, and Qilin ransomware actors later claimed responsibility on their leak site.",
+          "url": "https://links.tldrnewsletter.com/Zc1wxn",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a09",
+          "order": 1,
+          "title": "FROM PATCH TUESDAY TO PENTEST WEDNESDAY: CONTINUOUS VALIDATION IN A REGULATED ENVIRONMENT",
+          "summary": "A financial services organization transitioned from annual compliance-driven pentesting to weekly continuous validation, revealing that a single read-only AWS credential enabled 39 distinct attack paths, including full account compromise in under 10 minutes and access to over 100,000 sensitive files. The shift to frequent automated testing reduced mean time to remediate from months to days, with the team completing roughly 40 pentests in eight months and uncovering previously invisible risks, including overly permissive SMB shares, IAM privilege escalation paths, and a critical PAN-OS vulnerability (CVE-2025-0108). The case study demonstrates how continuous validation transforms security programs from point-in-time compliance exercises into operational exposure management, where findings are prioritized by proven exploitability and mapped to real threat actor TTPs like Scattered Spider.",
+          "url": "https://horizon3.ai/customer-story/from-patch-tuesday-to-pentest-wednesday-continuous-validation-in-a-regulated-environment/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "horizon3.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a10",
+          "order": 2,
+          "title": "NATION-STATE ACTORS EXPLOIT NOTEPAD++ SUPPLY CHAIN",
+          "summary": "Lotus Blossom compromised the Notepad++ hosting infrastructure between June and December 2025, hijacking the update server to selectively serve malicious installers to targets across government, telecom, and critical infrastructure sectors in Southeast Asia, South America, the US, and Europe. The attack delivered two infection chains — a Lua script injection variant deploying Cobalt Strike beacons and a DLL sideloading variant using a renamed Bitdefender component to load the Chrysalis backdoor with Warbird-protected evasion techniques. Users should manually update to Notepad++ v8.9.1 or later, which includes certificate and signature verification for downloaded installers.",
+          "url": "https://unit42.paloaltonetworks.com/notepad-infrastructure-compromise/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a11",
+          "order": 3,
+          "title": "BADPODS SERIES: EVERYTHING ALLOWED ON AWS EKS",
+          "summary": "This is the first post in a series using BishopFox's BadPods, which features a variety of pod manifests with varying levels of misconfiguration, to investigate the protections included in different cloud providers' managed Kubernetes offerings. This series includes the most permissive pod manifest, which the author uses to trivially escape the pod via a mounted host path and then further escalate privileges within the account by stealing IAM credentials from IMDS.",
+          "url": "https://cybersecnerds.com/badpods-series-everything-allowed-on-aws-eks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "cybersecnerds.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a12",
+          "order": 1,
+          "title": "WE HID BACKDOORS IN BINARIES — OPUS 4.6 FOUND 49% OF THEM",
+          "summary": "BinaryAudit is an open-source benchmark from Quesma for evaluating AI agents' ability to detect backdoors in stripped binary executables using reverse engineering tools like Ghidra and Radare2. The benchmark tests models against backdoored versions of lighttpd, dnsmasq, Dropbear, and Sozu, with Claude Opus 4.6 leading at 49% detection but hampered by a 22% false positive rate across clean binaries. Results highlight that while AI-assisted binary analysis is becoming accessible to non-specialists, high false positive rates and inability to trace data flow through complex binaries make it unsuitable for production malware detection today.",
+          "url": "https://quesma.com/blog/introducing-binaryaudit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "quesma.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a13",
+          "order": 2,
+          "title": "NUCLEUS (PRODUCT LAUNCH)",
+          "summary": "Nucleus provides an exposure management orchestration platform that ingests data from 200+ security and asset tools, normalizes and correlates vulnerabilities with threat intel and business context to prioritize and remediate risk across environments.",
+          "url": "https://nucleussec.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "nucleussec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a14",
+          "order": 3,
+          "title": "DOTENV",
+          "summary": "Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env, storing configuration in the environment and separating from code while following the Twelve-Factor App methodology.",
+          "url": "https://github.com/motdotla/dotenv?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a15",
+          "order": 1,
+          "title": "KIMWOLF BOTNET SWAMPS ANONYMITY NETWORK I2P",
+          "summary": "The Kimwolf IoT botnet accidentally disrupted the I2P anonymity network after attempting to register 700,000 infected devices as nodes — a Sybil attack that overwhelmed the roughly 15,000-20,000 node network — while seeking takedown-resistant C2 infrastructure. The botmasters, who admitted to the disruption on Discord, have been experimenting with both I2P and Tor as fallback command-and-control channels after security companies and network operators intensified efforts to combat the botnet. I2P is currently operating at roughly half capacity as stability fixes roll out, while Kimwolf's overall numbers have reportedly dropped by more than 600,000 infected systems following internal operator disputes and operational errors.",
+          "url": "https://krebsonsecurity.com/2026/02/kimwolf-botnet-swamps-anonymity-network-i2p/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a16",
+          "order": 2,
+          "title": "MICROSOFT SAYS HACKERS ARE EXPLOITING CRITICAL ZERO-DAY BUGS TO TARGET WINDOWS AND OFFICE USERS",
+          "summary": "Microsoft has shipped emergency fixes for several actively exploited Windows and Office zero-days that enable one-click remote code execution and SmartScreen bypasses across all supported Windows versions. Attackers can silently run high-privilege malware, enabling ransomware and espionage campaigns. Admins and end users are urged to patch immediately and treat malicious links and Office files as high risk.",
+          "url": "https://techcrunch.com/2026/02/11/microsoft-says-hackers-are-exploiting-critical-zero-day-bugs-to-target-windows-and-office-users/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a17",
+          "order": 3,
+          "title": "GOOGLE REPORTS STATE-BACKED HACKERS USING GEMINI AI FOR RECON AND ATTACK SUPPORT",
+          "summary": "Google's threat team details how North Korean group UNC2970 and others weaponize Gemini for OSINT-driven target profiling, tailored phishing, vulnerability analysis, and exploit debugging, blurring the line between research and reconnaissance. Attackers also use Gemini's API in HONESTCUE malware, AI-built COINBAIT phishing kits, and large-scale model extraction attempts that clone Gemini's behavior via high-volume prompt queries.",
+          "url": "https://thehackernews.com/2026/02/google-reports-state-backed-hackers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-02-13:a18",
+          "order": 1,
+          "title": "ONCE-HOBBLED LUMMA STEALER IS BACK WITH LURES THAT ARE HARD TO RESIST",
+          "summary": "Law enforcement crippled Lumma Stealer's infrastructure in 2025, but the infostealer has rapidly rebuilt and is spreading again using persuasive “ClickFix” fake CAPTCHA prompts that trick users into running commands in Windows Terminal, loading CastleLoader in memory, then Lumma.",
+          "url": "https://arstechnica.com/security/2026/02/once-hobbled-lumma-stealer-is-back-with-lures-that-are-hard-to-resist/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a19",
+          "order": 2,
+          "title": "GOOGLE-INTEL SECURITY AUDIT REVEALS SEVERE TDX VULNERABILITY ALLOWING FULL COMPROMISE",
+          "summary": "Google Cloud Security conducted a five-month security audit of Intel's Trust Domain Extensions and discovered five vulnerabilities.",
+          "url": "https://links.tldrnewsletter.com/rZ5x0J",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-02-13:a20",
+          "order": 3,
+          "title": "RUSSIA TRIES TO BLOCK WHATSAPP, TELEGRAM IN COMMUNICATION BLOCKADE",
+          "summary": "Russia is escalating its crackdown on independent messaging platforms by attempting to fully block WhatsApp and throttling Telegram.",
+          "url": "https://www.bleepingcomputer.com/news/security/russia-tries-to-block-whatsapp-telegram-in-communication-blockade/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

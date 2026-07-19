@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-01-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-01-09",
+  "source_path": "TLDR InfoSec/article_09-01-2026.md",
+  "source_content_hash": "sha256:00b6455c8c323d63203500782e802dee9ad8f88ca0adcccccd4bbbaec6c66f2a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-01-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a04",
+          "order": 1,
+          "title": "AWS SECURES AWS. EVERYTHING ELSE IS YOUR ATTACK SURFACE.",
+          "summary": "AWS-native tools protect what's inside AWS. But modern attacks move across identity, SaaS, on-prem, and other clouds, before and after they ever touch AWS.",
+          "url": "https://www.vectra.ai/platform?utm_source=tldr&utm_medium=display&utm_campaign=26Q3_C_AMS_PRO_TLDR-Newletter-aws",
+          "reading_time_minutes": null,
+          "source_domain": "vectra.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a05",
+          "order": 2,
+          "title": "SCHEDULE A DEMO →",
+          "summary": "",
+          "url": "https://www.vectra.ai/lp/demo-aws?utm_source=tldr&utm_medium=display&utm_campaign=26Q3_C_AMS_PRO_TLDR-Newletter-aws",
+          "reading_time_minutes": null,
+          "source_domain": "vectra.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a06",
+          "order": 1,
+          "title": "ILLINOIS HEALTH DEPARTMENT EXPOSED OVER 700,000 RESIDENTS' PERSONAL DATA FOR YEARS",
+          "summary": "Illinois' Department of Human Services left an internal mapping site publicly accessible for more than four years, exposing data on over 700,000 people receiving state benefits. The leak revealed addresses, case numbers, demographic details for Medicaid and Medicare Savings Program recipients, and names and case information for tens of thousands of individuals receiving rehabilitation services.",
+          "url": "https://techcrunch.com/2026/01/08/illinois-health-department-exposed-over-700000-residents-personal-data-for-years/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a07",
+          "order": 2,
+          "title": "ESA CALLS COPS AS CRIMS LIFT OFF 500 GB OF FILES, SAY SECURITY BLACK HOLE STILL OPEN",
+          "summary": "The European Space Agency faces a new breach after Scattered/Shiny Lapsus$ Hunters claimed to have stolen 500 GB of highly sensitive operational, spacecraft, and contractor data from ESA systems, including information on missions involving partners such as SpaceX and Airbus. The attackers say their access remains open. The ESA has referred the case for a criminal inquiry amid a history of prior security incidents dating back to 2011.",
+          "url": "https://www.theregister.com/2026/01/07/european_space_agency_breach_criminal_probe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a08",
+          "order": 3,
+          "title": "CRITICAL JSPDF FLAWS LETS HACKERS STEAL SECRETS VIA GENERATED PDFS",
+          "summary": "The popular jsPDF library is vulnerable to a local file inclusion and path traversal attack that can allow attackers to steal secrets. The flaw allows attackers to pass unsanitized paths directly to the loadFile function or any functions that call it. The vulnerability was fixed in version 4.0.0, but it may not be comprehensive on Node 20 and earlier.",
+          "url": "https://www.bleepingcomputer.com/news/security/critical-jspdf-flaw-lets-hackers-steal-secrets-via-generated-pdfs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a09",
+          "order": 1,
+          "title": "DECODING THE GITHUB RECOMMENDATIONS FOR NPM MAINTAINERS",
+          "summary": "Following recent npm supply chain attacks, GitHub's hardening guidance centers on three controls: adopting Trusted Publishing Framework (OIDC-based short-lived credentials instead of long-lived tokens), enforcing 2FA for all publishing operations, and using WebAuthn/passkeys instead of TOTP for phishing-resistant authentication. npm deprecated new TOTP setups in October and disabled legacy tokens in November, requiring maintainers to use granular access tokens with expiration for CI/CD automation. Maintainers should configure trusted publisher relationships in package settings, enable 2FA across all sensitive operations, and enroll WebAuthn authenticators while maintaining repository access controls.",
+          "url": "https://securitylabs.datadoghq.com/articles/decoding-the-recommendations-for-npm-maintainers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a10",
+          "order": 2,
+          "title": "DO SMART PEOPLE EVER SAY THEY'RE SMART? (SMARTERTOOLS SMARTERMAIL PRE-AUTH RCE CVE-2025-52691)",
+          "summary": "A critical pre-auth remote code execution flaw (CVE-2025-52691) in SmarterTools SmarterMail, a business email and collaboration server for Windows and Linux, arises from an unauthenticated file upload endpoint that accepts attacker-controlled parameters. It includes a GUID used to construct file paths, enabling arbitrary file writes via path traversal and by crafting a multipart/form-data request with specific context and contextData values. With a malicious file, an attacker can place a web shell in the webroot and gain full remote code execution.",
+          "url": "https://labs.watchtowr.com/do-smart-people-ever-say-theyre-smart-smartertools-smartermail-pre-auth-rce-cve-2025-52691/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "labs.watchtowr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a11",
+          "order": 3,
+          "title": "THE LOG RINGS DON'T LIE: HISTORICAL ENUMERATION IN PLAIN SIGHT",
+          "summary": "Logs are an essential tool for defenders to monitor for breaches and investigate incidents. However, they can also be a valuable enumeration tool for attackers. This article provides a comprehensive overview of how attackers can abuse logs for enumeration in AWS, Azure, and GCP. Security teams should treat logs with care and enforce the principle of least privilege where possible.",
+          "url": "https://www.exaforce.com/blogs/log-rings-dont-lie-historical-enumeration-in-plain-sight?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "exaforce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a12",
+          "order": 1,
+          "title": "AN ACTIVE INCIDENT IS THE WORST TIME TO STITCH TOGETHER LOG DATA",
+          "summary": "You don't want to deal with data visibility nightmares to understand if a threat is real. Sumo Logic unifies AWS, GCP, Azure, and 450+ other tools into a single platform - powered by multi-agent AI [13] that surfaces root causes, prioritizes key events, and guides analysts through resolution. Read the Gartner Critical Capabilities report [14] to learn how Sumo Logic compares to other SIEM competitors.",
+          "url": "https://www.sumologic.com/lp/aws-logs-security?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-secondary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a15",
+          "order": 2,
+          "title": "BLACKBIRD.AI (PRODUCT LAUNCH)",
+          "summary": "Blackbird.AI provides an AI-powered narrative intelligence platform that helps organizations detect, analyze, and respond to harmful or misleading online narratives and influence campaigns that threaten reputation, operations, and security.",
+          "url": "https://blackbird.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "blackbird.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a16",
+          "order": 3,
+          "title": "PQC NETWORK SCANNER",
+          "summary": "The PQC Network Scanner is a quantum-focused network assessment tool that scans TLS/SSL certificates across environments to identify systems vulnerable to future quantum attacks.",
+          "url": "https://github.com/cyberjez/PQC-Scanner?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a17",
+          "order": 4,
+          "title": "OGHIDRA",
+          "summary": "OGhidra bridges LLMs via Ollama with Ghidra to enable AI-driven binary analysis through natural language.",
+          "url": "https://github.com/LLNL/OGhidra?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a18",
+          "order": 1,
+          "title": "GO.SUM IS NOT A LOCKFILE",
+          "summary": "Go's go.sum file is not a lockfile and has no effect on version resolution—it's purely a local cache for the Go Checksum Database to ensure cryptographic integrity. Developers should use go.mod for dependency analysis, which, since Go 1.17, lists all transitive dependencies with exact versions and functions as both a manifest and lockfile. This design eliminates diamond dependency conflicts and prevents automatic upgrades to potentially compromised dependency versions.",
+          "url": "https://words.filippo.io/gosum/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "words.filippo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a19",
+          "order": 2,
+          "title": "KERNEL BUGS HIDE FOR 2 YEARS ON AVERAGE. SOME HIDE FOR 20",
+          "summary": "Analysis of 125,183 Linux kernel bugs with Fixes: tags revealed an average bug lifetime of 2.1 years, with race conditions averaging 5.1 years, and the longest-lived bug persisted for 20.7 years. Detection rates improved dramatically, from 0% bugs found within one year in 2010 to 69% in 2022, driven by tools such as Syzkaller and kernel sanitizers. The VulnBERT model achieved 92.2% recall and a 1.2% false-positive rate by combining CodeBERT embeddings with 51 handcrafted features targeting patterns such as unbalanced refcounts and missing NULL checks.",
+          "url": "https://pebblebed.com/blog/kernel-bugs?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "pebblebed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a20",
+          "order": 3,
+          "title": "CHATGPT FALLS TO NEW DATA-PILFERING ATTACK AS A VICIOUS CYCLE IN AI CONTINUES",
+          "summary": "Security researchers at Radware show how a new “ZombieAgent” attack revives a previously blocked ChatGPT data‑exfiltration technique by tweaking prompts to bypass URL restrictions and leak information character by character. Indirect prompt injection and weak separation between user instructions and embedded content keep LLM agents vulnerable, forcing vendors into an endless patch-and-bypass cycle rather than a fundamental fix.",
+          "url": "https://arstechnica.com/security/2026/01/chatgpt-falls-to-new-data-pilfering-attack-as-a-vicious-cycle-in-ai-continues/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-01-09:a21",
+          "order": 1,
+          "title": "WHY WE'RE TAKING LEGAL ACTION AGAINST SERPAPI'S UNLAWFUL SCRAPING",
+          "summary": "Google filed a lawsuit against SerpApi for circumventing security measures through bot networks, cloaking techniques, and fake crawler identities to scrape and resell copyrighted content from search results.",
+          "url": "https://blog.google/innovation-and-ai/technology/safety-security/serpapi-lawsuit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a22",
+          "order": 2,
+          "title": "MAJOR DATA BREACH HITS COMPANY OPERATING 150 GAS STATIONS IN THE US",
+          "summary": "Gulshan Management Services, operator of Handi Plus and Handi Stop gas stations, disclosed a September 2025 breach exposing SSNs, financial data, and government IDs of 377,000+ individuals.",
+          "url": "https://hackread.com/data-breach-us-gas-stations-company/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-01-09:a23",
+          "order": 3,
+          "title": "COOLIFY DISCLOSES 11 CRITICAL FLAWS ENABLING FULL SERVER COMPROMISE ON SELF-HOSTED INSTANCES",
+          "summary": "Cybersecurity researchers reveal 11 critical vulnerabilities in Coolify, a popular self‑hosting platform, that enable authenticated low‑privileged users to achieve root command execution, escape containers, and even obtain the server's root SSH key, potentially compromising entire infrastructures.",
+          "url": "https://thehackernews.com/2026/01/coolify-discloses-11-critical-flaws.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

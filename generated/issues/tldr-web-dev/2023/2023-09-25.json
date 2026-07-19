@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2023-09-25",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2023-09-25",
+  "source_path": "TLDR Web Dev/article_25-09-2023.md",
+  "source_content_hash": "sha256:ca8caa74750fed7cfb96a835c3d4bfae49b8f83be91faa6f0211fbb7e7a6ec81",
+  "format_family": "inline_url",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2023-09-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o001",
+          "order": 1,
+          "title": "DON’T BUILD EMBEDDED EMAIL AND SCHEDULING FROM SCRATCH",
+          "summary": "You wouldn't build a payment system or identity management from scratch. There’s an API for that! So why are you trying to build email, calendar, and contact management capabilities",
+          "url": "https://info.nylas.com/nylas-101-on-demand-replay.html?utm_source=&utm_medium=sponsoredemail&utm_campaign=FY23Q3-TLDRWebDev-1P&utm_content=2023-09-25-issue-nylas-101-replay",
+          "reading_time_minutes": null,
+          "source_domain": "info.nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o002",
+          "order": 1,
+          "title": "HOW FACEBOOK HANDLED BILLIONS OF REQUESTS PER SECOND EFFICIENTLY",
+          "summary": "Facebook receives billions of requests per second and stores trillions of items in its databases. Traditional web architectures couldn’t keep up with its demands, so the team used a simple key-value store called Memcached. The team scaled Facebook efficiently to become the largest Memcached installation in the world. This article describes how Facebook scaled Memcached across servers, clusters, and regions worldwide in a simple manner.",
+          "url": "https://engineercodex.substack.com/p/how-facebook-scaled-memcached?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "engineercodex.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o003",
+          "order": 2,
+          "title": "CSS FINDINGS FROM THE THREADS APP: PART 2",
+          "summary": "This article features a few interesting practices that are often not seen in CSS guides. For example, an animation of navigation items expanding could be done by animating each item individually instead of animating the gap or padding, which is much cleaner but could be less performant. The article’s approach to analyzing CSS by adding outlines to all elements can be applied to analyzing the CSS of any site. The article analyzes the CSS choices Threads made.",
+          "url": "https://ishadeed.com/article/threads-app-css-part-2/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "ishadeed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o004",
+          "order": 3,
+          "title": "MAKING SENSE OF REACT SERVER COMPONENTS",
+          "summary": "A couple of months ago, the React team unveiled React Server Components, its latest paradigm shift. Now, React components can run exclusively on the server. This article aims to demystify React Server Components and make them easier to understand.",
+          "url": "https://www.joshwcomeau.com/react/server-components/",
+          "reading_time_minutes": 39,
+          "source_domain": "joshwcomeau.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o005",
+          "order": 1,
+          "title": "LEAD",
+          "summary": "This interview with a staff engineer who has worked at companies like Twitter uncovers some helpful advice gained on his path to getting to his current position. Staff engineers consistently improve core infrastructure and deliver fantastic products. They also are able to manage effectively and are able to influence without authority.",
+          "url": "https://careercutler.substack.com/p/influence-lessons-from-a-staff-engineer?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "careercutler.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o006",
+          "order": 2,
+          "title": "BUN: LESSONS FROM DISRUPTING A TECH ECOSYSTEM",
+          "summary": "Bun is a backend JavaScript runtime with a focus on performance. It provides an up to 10x performance increase in package building or handling inbound server requests. Bun achieves this performance peak by using a more performant tech, making performance-centric optimizations, and making some trade offs to prefer performance over ease of use. Bun also reveals the contrast between a venture-funded open source system vs community-contributed open source - Node’s contributors are unpaid, while Bun has raised more than $7M.",
+          "url": "https://blog.pragmaticengineer.com/bun-lessons-from-disrupting/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o007",
+          "order": 3,
+          "title": "CHOOSE POSTGRES QUEUE TECHNOLOGY",
+          "summary": "Postgres queue tech consists of two parts: the publish/subscribe pattern and row locks. It’s useful for background jobs, but many don’t use it because they are worried about its scalability. This article shows that Postgres queue tech is scalable and also provides extra features that current replacements might not. Most notably, Redis is the main message broker for background job libraries.",
+          "url": "https://adriano.fyi/posts/2023-09-24-choose-postgres-queue-technology/?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "adriano.fyi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o008",
+          "order": 1,
+          "title": "RECOVERPY",
+          "summary": "RecoverPy is a powerful tool that leverages system capabilities to recover lost files. It can recover both deleted files and overwritten data.",
+          "url": "https://github.com/PabloLec/RecoverPy?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o009",
+          "order": 2,
+          "title": "UDSV",
+          "summary": "uDSV is a fast JS library for parsing well-formed CSV strings, either from memory or incrementally from disk or network.",
+          "url": "https://github.com/leeoniya/uDSV?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o010",
+          "order": 1,
+          "title": "UNITY APOLOGIZES TO DEVS, REVEALS UPDATED RUNTIME FEE POLICY",
+          "summary": "Unity recently introduced a Runtime Fee for which they instantly received tons of backlash from game developers. The company apologized publicly soon after and revealed massive changes to the policy as a response. The Unity Runtime Fee will no longer apply to games built on Unity Personal. Developers on said plan will also be able to now earn up to $200,000 in revenue. They will also no longer be required to use the \"Made with Unity\" splash screen.",
+          "url": "https://www.gamedeveloper.com/business/unity-apologizes-to-devs-reveals-updated-runtime-fee-policy?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "gamedeveloper.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o011",
+          "order": 2,
+          "title": "ARE PERFORMANCE REVIEWS USEFUL?",
+          "summary": "Most of us are used to the annual cadence of performance reviews. It can be a good chance to get aligned with your manager about your priorities. However, frequent and relevant feedback could be a better solution.",
+          "url": "https://www.fastcompany.com/90955827/are-performance-reviews-useful?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "fastcompany.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2023-09-25:o012",
+          "order": 1,
+          "title": "PASSKEYS ARE NOW GENERALLY AVAILABLE ON GITHUB",
+          "summary": "All GitHub users can now register a passkey to sign in without a password.",
+          "url": "https://github.blog/2023-09-21-passkeys-are-generally-available/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o013",
+          "order": 2,
+          "title": "GOOGLE, APPLE, AND VALVE GAME REVENUES REVEALED IN XBOX LEAKS",
+          "summary": "Microsoft revealed how much gaming revenue the top 10 biggest companies make, including Google, Apple, and even estimates for Valve's Steam platform. The top three are Tencent, Sony, and Google.",
+          "url": "https://www.tweaktown.com/news/93422/google-apple-and-valve-game-revenues-revealed-in-xbox-leaks/index.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 1,
+          "source_domain": "tweaktown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o014",
+          "order": 3,
+          "title": "EVERY PROGRAMMER SHOULD KNOW #1: IDEMPOTENCY",
+          "summary": "Idempotency refers to the property of an operation or function that produces the same result when applied multiple times as it does when applied only once.",
+          "url": "https://www.berkansasmaz.com/every-programmer-should-know-idempotency/?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "berkansasmaz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2023-09-25:o015",
+          "order": 4,
+          "title": "REDISCOVERING THE JOY OF DESIGN",
+          "summary": "This article takes a philosophical approach to design by placing importance on mindfulness and introspection. Using examples from books and philosophers, the author provides advice on rediscovering joy in design.",
+          "url": "https://www.smashingmagazine.com/2023/09/rediscovering-joy-happiness-design/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

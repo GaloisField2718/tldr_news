@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-02-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-02-05",
+  "source_path": "TLDR InfoSec/article_05-02-2024.md",
+  "source_content_hash": "sha256:6ae5f13f75a963c78856b33e23cf1960ebad58736b45badcb5cd8894ef111b2e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-02-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a05",
+          "order": 1,
+          "title": "AI SECURITY CHECKLIST BY SECUREFRAME",
+          "summary": "As enterprises race to adopt AI, CISOs and other cybersecurity leaders have a critical role to play. AI implementations have to be compliant and secure for business to reap the full productivity gains they expect to see. Download this checklist by SecureFrame [5] for step-by-step guidance on how you can effectively implement AI while addressing concerns related to transparency, privacy, and security.",
+          "url": "https://secureframe.com/compliance-resources/2024-ai-cybersecurity-checklist?utm_medium=cpm&utm_source=tldr&utm_campaign=informationSecurity__primary",
+          "reading_time_minutes": null,
+          "source_domain": "secureframe.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a05",
+          "order": 2,
+          "title": "Get the checklist here >>",
+          "summary": "",
+          "url": "https://secureframe.com/compliance-resources/2024-ai-cybersecurity-checklist?utm_medium=cpm&utm_source=tldr&utm_campaign=informationSecurity__primary",
+          "reading_time_minutes": null,
+          "source_domain": "secureframe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a06",
+          "order": 1,
+          "title": "CLOUDFLARE THANKSGIVING 2023 SECURITY INCIDENT",
+          "summary": "Cloudflare has provided an update on a breach from October 2023 when a threat actor accessed its internal systems using stolen Okta credentials. Not rotating the compromised tokens post-Okta breach enabled access to Cloudflare’s Atlassian suite. No Cloudflare customer data or systems were impacted by this event.",
+          "url": "https://blog.cloudflare.com/thanksgiving-2023-security-incident?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a07",
+          "order": 2,
+          "title": "CLOROX SAYS CYBERATTACK COSTS EXCEED $49 MILLION",
+          "summary": "Clorox disclosed that a 2023 cyber attack has already cost it $49M. The company estimates that the attack will cost another $50-60M in FY24. There are still no details about the attack but it is suspected that it was a ransomware attack.",
+          "url": "https://www.securityweek.com/clorox-says-cyberattack-costs-exceed-49-million/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a08",
+          "order": 3,
+          "title": "ANYDESK SAYS HACKERS BREACHED ITS PRODUCTION SERVERS",
+          "summary": "AnyDesk reported that it suffered a cyberattack in which threat actors breached production systems. The attackers stole source code and code signing keys. AnyDesk has released a new version with new code signing keys and has reset the web portal passwords of all users.",
+          "url": "https://www.bleepingcomputer.com/news/security/anydesk-says-hackers-breached-its-production-servers-reset-passwords/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a09",
+          "order": 1,
+          "title": "EC2 PRIVILEGE ESCALATION THROUGH USER DATA",
+          "summary": "This post enumerates methods for escalating privileges on EC2 instances to root/System by modifying the instance’s user data. An attacker can create a new user data script if an instance has the ec2:ModifyInstanceAttribute permissions, replace the old user data with it, and restart the instance. The post covers a method that can be used if the EC2 instance pulls user data scripts or artifacts from S3 and has permissions to modify those buckets.",
+          "url": "https://hackingthe.cloud/aws/exploitation/local_ec2_priv_esc_through_user_data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "hackingthe.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a10",
+          "order": 2,
+          "title": "THE CURIOUS CASE OF DANGERDEV@PROTONMAIL.ME",
+          "summary": "This post provides a deep dive into an incident that Invictus responded to. The threat actor was unique in that it utilized a new method of persistence in which it set up a cross-account role. The post divides the threat actor's activities into three primary phases of attack and delves into the motives and impact of each one.",
+          "url": "https://www.invictus-ir.com/news/the-curious-case-of-dangerdev-protonmail-me?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "invictus-ir.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a11",
+          "order": 3,
+          "title": "MICROSOFT BREACH — WHAT HAPPENED? WHAT SHOULD AZURE ADMINS DO?",
+          "summary": "This article covers the sequence of events that led to the Microsoft breach disclosed on January 25, 2024. The article contains diagrams that describe the flow of events as well as information about the breached systems. It also provides detailed instructions for identifying and investigating these applications using the Azure portal.",
+          "url": "https://posts.specterops.io/microsoft-breach-what-happened-what-should-azure-admins-do-da2b7e674ebc?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "posts.specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a12",
+          "order": 1,
+          "title": "CHALK",
+          "summary": "Chalk captures metadata at build time. It can add a small 'chalk mark' (metadata) to any artifacts so they can be identified in production. Chalk can also extract chalk marks and collect additional metadata about the operating environment when it does this. It can be used to create software security supply chain compliance reports automatically.",
+          "url": "https://github.com/crashappsec/chalk?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a13",
+          "order": 2,
+          "title": "PROMPT SECURITY (PRODUCT LAUNCH)",
+          "summary": "Prompt Security safeguards every interaction with GenAI in its organization, such as internal AI tools and commercial products with AI features, by checking each prompt and model response to protect against exposure of sensitive data, block harmful content, and prevent other GenAI-specific attacks.",
+          "url": "https://www.prompt.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "prompt.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a14",
+          "order": 3,
+          "title": "OBJECTION",
+          "summary": "Objection is a runtime mobile exploration toolkit powered by Frida that helps assess the security posture of mobile applications without a jailbroken device. It can be used to interact with the container file system, for SSL unpinning, and for memory dumping and patching.",
+          "url": "https://github.com/sensepost/objection?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a15",
+          "order": 1,
+          "title": "HEADCRAB 2.0: EVOLVING THREAT IN REDIS MALWARE LANDSCAPE",
+          "summary": "The HeadCrab malware that targets Redis databases has been updated with new evasion techniques like fileless loading nearly a year after it was first disclosed. The crypto-mining campaign now has over 2,300 infected servers, which shows the threat actor is adapting to stay under the radar. HeadCrab 2.0 uses advanced techniques for stealth and persistence, demonstrating the attacker's sophistication as it aims to secretly mine cryptocurrency.",
+          "url": "https://www.aquasec.com/blog/headcrab-2.0-evolving-threat-in-redis-malware-landscape/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "aquasec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a16",
+          "order": 2,
+          "title": "CONFIRMING LARGE-SCALE PEGASUS SURVEILLANCE OF JORDAN-BASED CIVIL SOCIETY",
+          "summary": "Access Now, in collaboration with Citizen Lab and other organizations, conducted a forensic analysis of iPhones belonging to members of Jordan-based civil society. It confirmed that nine individuals were targeted and/or infected with Pegasus spyware, including journalists, lawyers, and members of civil society.",
+          "url": "https://citizenlab.ca/2024/02/confirming-large-scale-pegasus-surveillance-of-jordan-based-civil-society/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "citizenlab.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a17",
+          "order": 3,
+          "title": "CISA ORDERS IVANTI DEVICES TARGETED BY CHINESE HACKERS BE DISCONNECTED",
+          "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) has ordered federal agencies to disconnect Ivanti Connect Secure or Ivanti Policy Secure devices from their networks due to reports of Chinese hackers targeting these devices for espionage operations. It has issued instructions for updating and bringing the devices back online.",
+          "url": "https://cyberscoop.com/ivanti-connect-secure-china/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-02-05:a18",
+          "order": 1,
+          "title": "DRAFTKINGS HACKER GETS 18-MONTH SENTENCE AIMED AT ‘DETERRING’ SIMILAR CRIMES",
+          "summary": "Joseph Garrison was sentenced to 18 months for a credential-stuffing attack on DraftKings. He stole $600K total from around 1,600 accounts by adding new payment methods.",
+          "url": "https://www.washingtonpost.com/sports/2024/02/02/draftkings-hacker-sentenced-jail/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "washingtonpost.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a19",
+          "order": 2,
+          "title": "JOB HUNTER’S GUIDE TO THE TOP CYBERSECURITY COMPANIES HIRING IN 2024",
+          "summary": "VentureBeat has published an analysis and spreadsheet of the best companies hiring for cybersecurity in 2024 based on LinkedIn postings and GlassDoor rankings. Kaspersky Lab, ServiceNow, and Cisco Systems lead the rankings.",
+          "url": "https://venturebeat.com/security/job-hunters-guide-to-the-top-cybersecurity-companies-hiring-in-2024/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "venturebeat.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a20",
+          "order": 3,
+          "title": "MASTODON FIXED A FLAW THAT CAN ALLOW THE TAKEOVER OF ANY ACCOUNT",
+          "summary": "Mastodon, a decentralized social network, has fixed a vulnerability that could be exploited by threat actors to impersonate and take over any account.",
+          "url": "https://securityaffairs.com/158565/hacking/mastodon-take-over-issue.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-02-05:a21",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/infosec?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/infosec?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

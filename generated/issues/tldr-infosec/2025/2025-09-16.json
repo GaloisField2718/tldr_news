@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-09-16",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-16",
+  "source_path": "TLDR InfoSec/article_16-09-2025.md",
+  "source_content_hash": "sha256:c68b2ba9885e924abb7827cb2d40d45402f39ca44603cc64a868bcbadce613ba",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a04",
+          "order": 1,
+          "title": "READY FOR THE NEXT ROUND OF PATCH ROULETTE?",
+          "summary": "Today's software update _might_ go just fine. Or it might brick your ERP and turn Patch Wednesday into Panic Thursday.",
+          "url": "https://links.tldrnewsletter.com/Uy5Ibf",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a05",
+          "order": 2,
+          "title": "Choose \"none of the above\" with ThreatLocker Patch Management.",
+          "summary": "Their Cyber Hero Team pre-tests every single update in a controlled environment [4]. You get the security benefits of up-to-date software, without the hassle. And you're always in control with Centralized management across all endpoints and policy based-deployment.",
+          "url": "https://links.tldrnewsletter.com/asPX5y",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a04",
+          "order": 3,
+          "title": "works",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/Uy5Ibf",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a06",
+          "order": 1,
+          "title": "NEW VOIDPROXY PHISHING SERVICE BYPASSES MFA ON MICROSOFT AND GOOGLE ACCOUNTS",
+          "summary": "VoidProxy is a new Phishing-as-a-Service platform that uses Adversary-in-the-Middle attacks to bypass multi-factor authentication on Microsoft and Google accounts by intercepting login credentials and session cookies in real-time. The platform leverages compromised email accounts from legitimate providers like Constant Contact to evade spam filters, then redirects victims to perfect clones of login pages where all authentication data is stolen. VoidProxy operates with a sophisticated two-part infrastructure that features disposable front-ends and resilient back-ends, along with anti-analysis features including Cloudflare CAPTCHA protection, making it difficult for security teams to detect and track.",
+          "url": "https://hackread.com/voidproxy-phishing-service-bypasses-mfa-microsoft-google/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a07",
+          "order": 2,
+          "title": "ETERNAL-TUX: CRAFTING A LINUX KERNEL KSMBD 0-CLICK RCE EXPLOIT FROM N-DAYS",
+          "summary": "A stable authenticated 0-click remote code execution exploit against Linux's kernel SMB3 daemon (ksmbd) chains two existing CVEs: CVE-2023-52440 for controlled heap overflow, and CVE-2023-4130 for memory leakage, targeting Linux 6.1.45 with full mitigations enabled. The exploit leverages NTLM authentication flaws to overflow a 512-byte SLUB allocation, then uses an arbitrary free primitive to corrupt a 1KB ksmbd_conn object and hijack a vtable pointer to achieve ROP-based code execution via call_usermodehelper. The technique demonstrates how N-day vulnerabilities can be chained together for reliable exploitation despite modern kernel protections, though it requires authenticated SMB access and is limited by the relative rarity of ksmbd deployments in production environments.",
+          "url": "https://www.willsroot.io/2025/09/ksmbd-0-click.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "willsroot.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a08",
+          "order": 3,
+          "title": "INSIDER BLAMED FOR FINWISE DATA BREACH AFFECTING NEARLY 700K",
+          "summary": "Nearly 700,000 FinWise Bank customers are being notified after a former employee may have accessed or taken personal data post-employment. The breach, detected over a year after it happened, involved customers from American First Finance. FinWise is offering affected individuals free credit monitoring. The case highlights ongoing risks posed by insider threats within financial and tech organizations.",
+          "url": "https://www.theregister.com/2025/09/15/finwise_insider_data_breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a09",
+          "order": 1,
+          "title": "OLD BUT GOLD, DUMPING LSASS WITH WINDOWS ERROR REPORTING ON MODERN WINDOWS 11",
+          "summary": "A red team researcher demonstrated how to bypass LSASS memory protections on Windows 11 by exploiting a vulnerable version of WerFaultSecure.exe from Windows 8.1, which runs with the highest Protected Process Light (PPL) level and can access protected LSASS memory that normal processes cannot touch. The technique uses undocumented parameters to trigger unencrypted crash dumps of the LSASS process, then disguises the output file with PNG magic headers to evade antivirus detection. The attack requires deploying the older vulnerable WerFaultSecure.exe binary alongside a custom loader that launches the tool with proper PPL protections, demonstrating how legacy Windows components can be weaponized against modern security controls.",
+          "url": "https://www.zerosalarium.com/2025/09/Dumping-LSASS-With-WER-On-Modern-Windows-11.html?m=1&utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "zerosalarium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a10",
+          "order": 2,
+          "title": "HACKING THE XBOX 360 HYPERVISOR PART 1: SYSTEM OVERVIEW",
+          "summary": "This is the first part of a three-part series on hacking the Xbox 360 hypervisor. It provides a comprehensive system overview of the console's security architecture, including the custom Xenon PowerPC CPU with on-die security features like 768 eFuses, 64KB secure RAM, hardware encryption, and protected memory pathways that use per-boot encryption keys and CRC checksums. The hypervisor operates as a 256KB protected process that manages all executable memory allocation and code authentication, with only one known exploit in its history - the \"4548 system call handler bug,\" which was likely caused by a compiler optimization error rather than intentional code changes. In the console's robust security model, where Microsoft must sign all code, hypervisor memory is protected with both encryption and integrity checks. The system uses multiple privilege levels with strict validation to prevent software-only hacks.",
+          "url": "https://icode4.coffee/?p=1047&utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "icode4.coffee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a11",
+          "order": 3,
+          "title": "PLAYING WITH HTTP/2 CONNECT",
+          "summary": "HTTP/2 CONNECT is an upgrade over the original HTTP/1 CONNECT method, shifting from tunneling entire TCP connections to multiplexing multiple streams within a single connection. This evolution enables more efficient proxying and port scanning by allowing numerous tunnels without the overhead of opening many separate TCP sessions. The protocol's design incorporates features like HPACK header compression and support for modern proxy use cases—including WebSocket, UDP, and raw IP proxying—making it highly relevant for security research and next-generation proxy infrastructure.",
+          "url": "https://blog.flomb.net/posts/http2connect/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.flomb.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a12",
+          "order": 1,
+          "title": "RUN A PRIVATE CTF FOR YOUR TEAM - IT'S EASIER THAN YOU THINK",
+          "summary": "Custom CTFs are a great exercise - and you now have a fast and effortless way to run them. TryHackMe is offering exclusive, ready-to-run private events [12] covering web, crypto, forensics, and more. Deploy in one day with zero setup. Includes a beginner-friendly security awareness CTF for non-technical staff. Plan your team's",
+          "url": "https://business.tryhackme.com/?utm_source=TLDR&utm_medium=affiliates&utm_campaign=TLDR_Newsletter_16Sept25",
+          "reading_time_minutes": null,
+          "source_domain": "business.tryhackme.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a13",
+          "order": 2,
+          "title": "private CTF",
+          "summary": "",
+          "url": "https://business.tryhackme.com/book-a-demo?utm_source=TLDR&utm_medium=affiliates&utm_campaign=TLDR_Newsletter_16Sept25",
+          "reading_time_minutes": null,
+          "source_domain": "business.tryhackme.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a14",
+          "order": 3,
+          "title": "RAW DISK PARSER",
+          "summary": "Raw Disk Parser is a proof-of-concept Python script that dumps sensitive or restricted files without triggering alerts. It works by reading directly from the disk, then analyzing NTFS filesystem structures to find and read files. This method doesn't use standard Windows file APIs, so it effectively bypasses file access controls, locks, and some EDR/AV monitoring features that rely on hooking high-level file I/O operations.",
+          "url": "https://github.com/Workday/raw-disk-parser?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a15",
+          "order": 4,
+          "title": "SECURITY ONION 2.4",
+          "summary": "Security Onion is a free and open platform built by defenders for defenders. It includes features like network visibility, host visibility, intrusion detection honeypots, log management, and case management. In the latest 2.4 release, there are new features like SOC for UniFi dashboard, JA4 support, and many bugfixes.",
+          "url": "https://github.com/Security-Onion-Solutions/securityonion?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a16",
+          "order": 5,
+          "title": "GEORDIE (PRODUCT LAUNCH)",
+          "summary": "Geordie provides enterprises with real-time visibility and alerts for AI agents, helping organizations track agent actions, detect unexpected behaviors, and securely manage AI agent adoption and risks.",
+          "url": "https://www.geordie.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "geordie.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a17",
+          "order": 1,
+          "title": "SCATTERED SPIDER RANSOMWARE GROUP ABRUPTLY DECIDES TO END OPERATIONS - FOR NOW, AT LEAST",
+          "summary": "Fifteen major ransomware gangs, including Scattered Spider, Lapsus, and Shiny Hunters, announced they are \"going dark\" after claiming they fulfilled their goals and will enjoy their earnings from recent attacks on companies like Jaguar Land Rover, Marks & Spencer, and Salesforce. They posted their farewell on BreachForums, saying they will stop attacking in their name. However, experts doubt this will be permanent, as some members have already been arrested, and the profits of cybercrime may lure them back. The announcement follows a summer campaign where the rebranded \"Scattered Lapsus Hunters\" targeted over 700 organizations worldwide, mainly through social engineering and data theft rather than ransomware.",
+          "url": "https://links.tldrnewsletter.com/4tPlxB",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a18",
+          "order": 2,
+          "title": "FBI WARNS OF UNC6040, UNC6395 HACKERS STEALING SALESFORCE DATA",
+          "summary": "The FBI issued a FLASH alert about cybercriminal groups UNC6040 and UNC6395, which target Salesforce to steal data and extort through methods like voice phishing and OAuth token exploitation. UNC6040 has used social engineering since late 2024 to trick call center staff into connecting malicious apps to Salesforce, while UNC6395 exploited OAuth tokens in August to access customer data and credentials. Major companies such as Google, Adidas, Qantas, Cisco, Louis Vuitton, and Tiffany & Co. have been impacted. The threat actors are linked to ShinyHunters and Scattered Spider, who recently announced they are \"going dark.\"",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-of-unc6040-unc6395-hackers-stealing-salesforce-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a19",
+          "order": 3,
+          "title": "PROTON MAIL TAKES ACTION: JOURNALIST ACCOUNTS SUSPENDED FOLLOWING CYBERSECURITY AGENCY REQUEST",
+          "summary": "Proton Mail suspended two journalists' accounts after they published research documenting an intrusion into several South Korean government institutions in Phrack. It contacted the researchers via the disclosure account a week after the print release, notifying them that their account was being suspended, citing a policy violation due to a government cybersecurity organization. The company reversed its decision and restored the accounts following a public outcry over privacy.",
+          "url": "https://www.dualmedia.com/proton-mail-journalist-accounts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "dualmedia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-16:a20",
+          "order": 1,
+          "title": "ANALYST REPORT: AI-POWERED DAST FOR SECURITY TEAMS",
+          "summary": "Stop overwhelming your teams with alerts that don't align with actual risk. Find runtime-verified, exploitable vulnerabilities in",
+          "url": "https://www.invicti.com/clp/tag-implementing-a-dast-first-appsec-program-with-invicti/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=quick-link-tag-dast-report",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a20",
+          "order": 2,
+          "title": "production. DOWNLOAD TAG REPORT FROM INVICTI",
+          "summary": "",
+          "url": "https://www.invicti.com/clp/tag-implementing-a-dast-first-appsec-program-with-invicti/?utm_medium=3rdparty&utm_source=tldr&utm_campaign=quick-link-tag-dast-report",
+          "reading_time_minutes": null,
+          "source_domain": "invicti.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a21",
+          "order": 3,
+          "title": "SIDEWINDER APT LEVERAGES NEPAL PROTESTS TO PUSH MOBILE MALWARE",
+          "summary": "Hackers exploited Nepal protests by masquerading as emergency services and officials to trick people into downloading malware and stealing data.",
+          "url": "https://strikeready.com/blog/sidewinder-apt-leverages-nepal-protests-to-push-mobile-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "strikeready.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a22",
+          "order": 4,
+          "title": "FAIRMONT FEDERAL CREDIT UNION DATA BREACH HITS 187,000 IN WEST VIRGINIA",
+          "summary": "Fairmont Federal Credit Union has informed over 187,000 individuals about a security breach in 2023 that exposed sensitive information, including financial, medical, and personal data.",
+          "url": "https://links.tldrnewsletter.com/6hZmHu",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-16:a23",
+          "order": 5,
+          "title": "GOOGLE CONFIRMS HACKERS GAINED ACCESS TO LAW ENFORCEMENT PORTAL",
+          "summary": "Google confirmed hackers from the \"Scattered Lapsus$ Hunters\" group created a fraudulent account in its Law Enforcement Request System (LERS), used worldwide by police to submit data requests, though no requests were made and no data accessed before the account was disabled.",
+          "url": "https://www.bleepingcomputer.com/news/security/google-confirms-hackers-gained-access-to-law-enforcement-portal/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

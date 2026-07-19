@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-09-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-09-24",
+  "source_path": "TLDR InfoSec/article_24-09-2025.md",
+  "source_content_hash": "sha256:818b5daba627585e178724af3434231f41546ebf1019a5cd77736cbf1b80530a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-09-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a04",
+          "order": 1,
+          "title": "WHY ARE BIG SECURITY VENDORS IGNORING 99% OF COMPANIES?",
+          "summary": "",
+          "url": "https://www.huntress.com/lp/tldr?utm_source=tldr&utm_medium=email&utm_campaign=Cy25-09-camp-platform-global-prospect-iis-x-tldr_newsletter_0924",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a04",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.huntress.com/lp/tldr?utm_source=tldr&utm_medium=email&utm_campaign=Cy25-09-camp-platform-global-prospect-iis-x-tldr_newsletter_0924",
+          "reading_time_minutes": null,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a05",
+          "order": 1,
+          "title": "SHADOWLEAK EXPLOIT EXPOSED GMAIL DATA THROUGH CHATGPT AGENT",
+          "summary": "ShadowLeak is a zero-click vulnerability in OpenAI's ChatGPT Deep Research agent that utilized invisible, indirect prompt injection commands hidden in emails to exfiltrate Gmail data without user knowledge. The attack operated entirely on OpenAI's servers using the agent's browser.open() function call to send stolen data encoded in Base64 to attacker-controlled URLs, achieving a 100% success rate. OpenAI fixed the vulnerability in August after receiving a responsible disclosure, but researchers warn that the technique could also be used on other connected services, such as Google Drive, Microsoft Teams, and GitHub.",
+          "url": "https://hackread.com/shadowleak-exploit-exposed-gmail-data-chatgpt-agent/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a06",
+          "order": 2,
+          "title": "LASTPASS: FAKE PASSWORD MANAGERS INFECT MAC USERS WITH MALWARE",
+          "summary": "There is a malware campaign that uses GitHub repositories to deliver fraudulent password managers. The fake software delivers the Atomic (AMOS) InfoStealer to infected macOS devices. LastPass says that aside from its product, over 100 different softwares are being used, such as 1Password and Notion.",
+          "url": "https://www.bleepingcomputer.com/news/security/lastpass-fake-password-managers-infect-mac-users-with-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a07",
+          "order": 3,
+          "title": "PATCH BYPASSED FOR SUPERMICRO VULNERABILITY ALLOWING BMC HACK",
+          "summary": "Binarly researchers found they could bypass Supermicro's patch for CVE-2024-10237, a firmware flaw allowing malicious updates, prompting a new CVE (CVE-2025-7937) and fix. They also discovered CVE-2025-6198, a flaw that bypasses the Root of Trust. Both enable attackers to control the BMC and OS. These flaws show firmware validation's fragility, risking persistent BMC code execution with major enterprise security implications.",
+          "url": "https://www.securityweek.com/patch-bypassed-for-supermicro-vulnerability-allowing-bmc-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a08",
+          "order": 1,
+          "title": "A TAG TO RULE THEM ALL: USING AWS TAGS TO ENUMERATE CLOUD RESOURCES",
+          "summary": "AWS tags offer a way to attach metadata to a resource, either automatically (like the Name tag) or manually. Several services provide API calls such as ListTags or GetTags, enabling efficient enumeration of resources accessible by an identity. TagNabIt is a tool designed for tag-based brute-force enumeration.",
+          "url": "https://blog.pepperclipp.com/pepperclipp-public/a-tag-to-rule-them-all-using-aws-tags-to-enumerate-cloud-resources?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.pepperclipp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a09",
+          "order": 2,
+          "title": "EXPLORING GRAPHENEOS SECURE ALLOCATOR: HARDENED MALLOC",
+          "summary": "GrapheneOS features a hardened malloc, a memory allocator that uses ARM Memory Tagging Extension (MTE) to assign tags to memory regions and detect corruption, effectively preventing heap overflows and use-after-free attacks. Its two-stage quarantine system, which involves randomized and FIFO queues, makes exploiting freed memory difficult by requiring attackers to perform thousands of free operations. Large allocations are secured through guard pages, address space randomization, and the separation of metadata from user data, all of which enhance security.",
+          "url": "https://www.synacktiv.com/en/publications/exploring-grapheneos-secure-allocator-hardened-malloc?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "synacktiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a10",
+          "order": 3,
+          "title": "EXTERNAL ATTACK SURFACE MANAGEMENT (EASM) BUYER'S GUIDE",
+          "summary": "External Attack Surface Management (EASM) tools automate the discovery and continuous monitoring of internet-facing assets, providing organizations with an attacker's perspective of their vulnerabilities across domains, IP addresses, and exposed services. The strategic value lies in combining automated asset discovery with risk prioritization—EASM products excel at identifying shadow IT, abandoned subdomains, and misconfigurations that traditional internal scanning misses. Organizations should select EASM solutions based on their specific needs: small businesses require clear remediation guidance, SMEs need robust subdomain discovery to prevent takeovers, and enterprises benefit from large-scale IP scanning with export capabilities for distributed security teams.",
+          "url": "https://www.ncsc.gov.uk/guidance/external-attack-surface-management-buyers-guide?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "ncsc.gov.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a11",
+          "order": 1,
+          "title": "CONTROL AI IN YOUR SDLC",
+          "summary": "78% of developers use AI coding tools, yet half of functionally correct AI-generated code is insecure. SCW Trust Agent: AI [11] gives leaders visibility and governance to manage this risk - spotting “shadow AI,” mapping vulnerabilities to skill level, and enforcing",
+          "url": "https://discover.securecodewarrior.com/Trust-Agent-AI-Waitlist.html?utm_source=tldr&utm_medium=email&utm_campaign=2025-09-trust-agent-ai-global-en-dg",
+          "reading_time_minutes": null,
+          "source_domain": "discover.securecodewarrior.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a11",
+          "order": 2,
+          "title": "policy. Be among the first to join the early access waitlist!",
+          "summary": "",
+          "url": "https://discover.securecodewarrior.com/Trust-Agent-AI-Waitlist.html?utm_source=tldr&utm_medium=email&utm_campaign=2025-09-trust-agent-ai-global-en-dg",
+          "reading_time_minutes": null,
+          "source_domain": "discover.securecodewarrior.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a12",
+          "order": 3,
+          "title": "MSIXBUILDER",
+          "summary": "MSIXBuilder is a PowerShell tool for creating MSIX packages with embedded test applications.",
+          "url": "https://github.com/MHaggis/MSIXBuilder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a13",
+          "order": 4,
+          "title": "LLM4DECOMPILE",
+          "summary": "LLM4Decompile is an open-source LLM dedicated to decompilation.",
+          "url": "https://github.com/albertan017/LLM4Decompile?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a14",
+          "order": 5,
+          "title": "FIREZONE",
+          "summary": "Firezone is an open source platform for secure remote access, suitable for organizations of any size. Unlike most VPNs, it uses a granular, least-privileged approach with group-based policies to control access to applications, subnets, and more.",
+          "url": "https://github.com/firezone/firezone?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a15",
+          "order": 1,
+          "title": "AMERICAN ARCHIVE OF PUBLIC BROADCASTING FIXES BUG EXPOSING RESTRICTED MEDIA",
+          "summary": "A vulnerability in the American Archive of Public Broadcasting website, which has been exploited since at least 2021, allowed unauthorized downloading of protected and private media through an insecure direct object reference (IDOR) flaw that bypassed access controls by manipulating media ID parameters. The exploit circulated in Discord preservation communities and \"data hoarder\" groups, leading to leaks of protected content, including a banned Sesame Street episode featuring the Wicked Witch of the West. AAPB fixed the vulnerability within 48 hours after being notified. The extent of accessed content during the years-long exploitation remains unknown.",
+          "url": "https://www.bleepingcomputer.com/news/security/american-archive-of-public-broadcasting-fixes-bug-exposing-restricted-media/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a16",
+          "order": 2,
+          "title": "U.S. SECRET SERVICE DISMANTLES IMMINENT TELECOMMUNICATIONS THREAT IN NEW YORK TRISTATE AREA",
+          "summary": "The US Secret Service (USSS) dismantled a network of over 300 co-located SIM servers and 100,000 SIM cards positioned within 35 miles of the UN General Assembly in New York that were used to conduct telecommunications-related threats against senior US government officials. The devices were capable of performing multiple attack vectors, including disabling cell phone towers, facilitating denial of service attacks, and enabling anonymous encrypted communications between nation-state threat actors and criminal enterprises. Early forensic analysis revealed cellular communications between nation-state threat actors and individuals known to federal law enforcement, representing an imminent threat to protective operations during the high-profile international gathering.",
+          "url": "https://www.secretservice.gov/newsroom/releases/2025/09/us-secret-service-dismantles-imminent-telecommunications-threat-new-york?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "secretservice.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a17",
+          "order": 3,
+          "title": "WHEN LLMS AUTONOMOUSLY ATTACK",
+          "summary": "A researcher at Carnegie Mellon University demonstrated that an LLM can coordinate a system of agents to recreate real-world attacks. As part of his PhD, Brian Singer recreated the network environment of the 2017 Equifax data breach and observed that an LLM could replicate the attack. These capabilities allow smaller organizations to use LLMs as dedicated red teamers.",
+          "url": "https://engineering.cmu.edu/news-events/news/2025/07/24-when-llms-autonomously-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "engineering.cmu.edu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-09-24:a18",
+          "order": 1,
+          "title": "MICROSOFT LIFTS WINDOWS 11 UPDATE BLOCK AFTER FACE DETECTION FIX",
+          "summary": "Microsoft has removed a compatibility hold that prevented devices with integrated cameras from installing Windows 11 24H2 due to a face detection bug that caused app freezes when using the Camera app, Windows Hello facial recognition, and other camera-utilizing applications.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-windows-11-safeguard-hold-after-fixing-face-detection-bug/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a19",
+          "order": 2,
+          "title": "MI6 OPENS DARK WEB PORTAL \"SILENT COURIER\" FOR RUSSIANS TO SHARE SECRETS",
+          "summary": "MI6 launched a dark web portal called Silent Courier to allow potential agents worldwide, particularly Russians, to securely share sensitive information about terrorism and hostile intelligence activities.",
+          "url": "https://hackread.com/mi6-dark-web-portal-silent-courier-russia-secrets/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-09-24:a20",
+          "order": 3,
+          "title": "STEAM GAME REMOVED AFTER CRYPTOSTEALER TAKES OVER $150K",
+          "summary": "Steam removed the free-to-play game BlockBlasters after malware stole over $150,000 in cryptocurrency from players, including $32,000 from a Latvian streamer with stage 4 cancer raising funds.",
+          "url": "https://www.theverge.com/news/782993/steam-blockblasters-crypto-scam-malware?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

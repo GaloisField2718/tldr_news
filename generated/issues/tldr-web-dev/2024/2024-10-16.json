@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-10-16",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-10-16",
+  "source_path": "TLDR Web Dev/article_16-10-2024.md",
+  "source_content_hash": "sha256:1b4c77a5fe18b5a153c990f910c62b4ab54aff8a7b5cfa5199f608d4d1a02b35",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-10-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a04",
+          "order": 1,
+          "title": "👋 GOODBYE LOW TEST COVERAGE AND SLOW QA CYCLES",
+          "summary": "If slow QA processes bottleneck you or your software engineering team and you're releasing slower because of it — you must check out QA Wolf.",
+          "url": "https://www.qawolf.com/?utm_campaign=GoodbyeLowSlow10012024&utm_source=tldr&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a04",
+          "order": 2,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com/?utm_campaign=GoodbyeLowSlow10012024&utm_source=tldr&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a06",
+          "order": 1,
+          "title": "WHY YOU SHOULDN'T FORGET TO OPTIMIZE THE DATA LAYOUT",
+          "summary": "The way data is organized in memory (data layout) can impact a program's performance. Choosing the right data layout, such as Array of Structures (AoS) or Structure of Arrays (SoA), can optimize cache line access and leverage vectorized instructions (SIMD) for faster execution. SoA, for example, can be much faster for reading operations, especially when combined with lightweight compression techniques like frame-of-reference encoding.",
+          "url": "https://cedardb.com/blog/optimizing_data_layouts/?utm_source=tldrwebdev",
+          "reading_time_minutes": 12,
+          "source_domain": "cedardb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a07",
+          "order": 2,
+          "title": "LOCALSTORAGE VS. INDEXEDDB VS. COOKIES VS. OPFS VS. WASM-SQLITE",
+          "summary": "This article compares different methods for storing data in web browsers: Cookies, LocalStorage, IndexedDB, OPFS, and WASM-SQLite. Each method is analyzed for their features, limitations, and performance in various scenarios, including write and read latency for single and bulk operations.",
+          "url": "https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 20,
+          "source_domain": "rxdb.info",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a08",
+          "order": 3,
+          "title": "PYTHON: RANGE IS NOT AN ITERATOR",
+          "summary": "Iterators and range objects are different in Python. While both are considered \"lazy iterables\" as they compute values on demand, they differ in their underlying mechanisms. Iterators are stateful, meaning once an item is consumed, it's gone. Range objects are not iterators - they are \"lazy sequences\" that can be looped over repeatedly without exhausting their values.",
+          "url": "https://treyhunner.com/2018/02/python-range-is-not-an-iterator/?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "treyhunner.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a09",
+          "order": 1,
+          "title": "SMURF: BEYOND THE TEST PYRAMID",
+          "summary": "SMURF (Speed, Maintainability, Utilization, Reliability, and Fidelity) is a framework for better testing. Prioritizing one factor can have implications for others, so it's best to have a holistic approach when writing tests for applications.",
+          "url": "https://testing.googleblog.com/2024/10/smurf-beyond-test-pyramid.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "testing.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a10",
+          "order": 2,
+          "title": "SCALE RUINS EVERYTHING",
+          "summary": "The pursuit of unicorn status by venture capital funds has led to the creation of companies that, while initially seemingly harmless, become detrimental at scale. This is because the need for massive growth drives companies to exploit resources and disrupt markets. The recent decline in venture capital funding offers an opportunity for more non-hyper growth companies that are still sustainable businesses.",
+          "url": "https://coldwaters.substack.com/p/scale-ruins-everything?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "coldwaters.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a11",
+          "order": 3,
+          "title": "A MISSING IDE FEATURE",
+          "summary": "This developer proposes a missing IDE feature: automatically folding method bodies by default. This simple change improves code readability, as function signatures are often more important than their bodies.",
+          "url": "https://matklad.github.io/2024/10/14/missing-ide-feature.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "matklad.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a12",
+          "order": 1,
+          "title": "REACT NATIVE BOTTOMSHEET V5 IS FINALLY OUT!",
+          "summary": "React Native Bottom Sheet v5 has been released. It features a complete gesture solution rewrite, support for React Native Web, dynamic sizing, FlashList integration, and performance improvements.",
+          "url": "https://gorhom.dev/react-native-bottom-sheet/blog/bottom-sheet-v5?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "gorhom.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a13",
+          "order": 2,
+          "title": "KAIBANJS",
+          "summary": "KaibanJS is a JavaScript framework for building and managing multi-agent systems.",
+          "url": "https://github.com/kaiban-ai/KaibanJS?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a14",
+          "order": 3,
+          "title": "FTWA",
+          "summary": "FTWA allows users to turn any website into a lightweight, fast, and visually appealing app. It removes the need for browser frames and creates a native app-like experience.",
+          "url": "https://ftwa.mathix.dev/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "ftwa.mathix.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a15",
+          "order": 1,
+          "title": "WHY TECHIES LEAVE BIG TECH",
+          "summary": "Software engineers and tech leaders are leaving prestigious Big Tech companies. There are various reasons why, like the decline in job security due to recent layoffs, the allure of professional growth and leadership opportunities offered by startups, and the perceived limitations of career progression within large corporations. There's also the impact of equity compensation and the potential for significant pay drops when stock prices fall or initial grants expire.",
+          "url": "https://newsletter.pragmaticengineer.com/p/leaving-big-tech?utm_source=tldrwebdev",
+          "reading_time_minutes": 31,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a16",
+          "order": 2,
+          "title": "META'S OPEN AI HARDWARE VISION",
+          "summary": "Meta has presented its open AI hardware vision, showcasing new designs for AI platforms, racks, network fabrics, and components. To support its large-scale AI workloads, Meta has built high-performance training clusters with thousands of GPUs. To address the increasing power and bandwidth demands of AI, Meta has Catalina, a new high-powered rack designed for AI workloads, and Grand Teton, a next-generation AI platform now supporting AMD accelerators.",
+          "url": "https://engineering.fb.com/2024/10/15/data-infrastructure/metas-open-ai-hardware-vision/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-10-16:a17",
+          "order": 1,
+          "title": "DARK PATTERNS HALL OF SHAME",
+          "summary": "The Hall of Shame critiques poor design practices and dark patterns, specifically in websites, apps, and user experiences.",
+          "url": "https://hallofshame.design/?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "hallofshame.design",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a18",
+          "order": 2,
+          "title": "SQLITE3 WEBASSEMBLY & JAVASCRIPT DOCUMENTATION",
+          "summary": "SQLite has published documentation on running SQLite locally in-browser using WebAssembly.",
+          "url": "https://sqlite.org/wasm/doc/trunk/index.md?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "sqlite.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a19",
+          "order": 3,
+          "title": "AN OVERLOADED DEVELOPER",
+          "summary": "A senior developer attempted to implement function overloading in JavaScript by creating two functions with the same name but different parameters, but didn't realize JavaScript sets missing parameters to null when calling a function.",
+          "url": "https://thedailywtf.com/articles/an-overloaded-developer?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "thedailywtf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-10-16:a20",
+          "order": 4,
+          "title": "SAFER WITH GOOGLE: ADVANCING MEMORY SAFETY",
+          "summary": "Google is advancing memory safety in its software by shifting towards memory-safe languages while also hardening existing memory-unsafe codebases through techniques like bounds-checking, exploit mitigations, and security boundaries.",
+          "url": "https://security.googleblog.com/2024/10/safer-with-google-advancing-memory.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "security.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2024-02-12",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2024-02-12",
+  "source_path": "TLDR Web Dev/article_12-02-2024.md",
+  "source_content_hash": "sha256:198145168014f64df4fdfdbe35b6b5d2363d4728312251826d1b806ca954b6c4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2024-02-12",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-12:a05",
+          "order": 1,
+          "title": "FROM MANY TO ONE: MOVING OUR JAVASCRIPT CODE INTO A MONOREPO",
+          "summary": "Aha! transitioned JavaScript code into a monorepo to streamline development. Initially, the company used private npm packages for code reuse, but the process required them to make changes to private npm packages, which quickly slowed them down. Its team evaluated several tools to do the repo migration efficiently, ultimately choosing Turborepo in conjunction with pnpm. This setup maintained git history, simplified its codebase, and enhanced the development workflow without adding unnecessary complexity. The transition has led to significant time savings and reduced frustration for its engineering team.",
+          "url": "https://www.aha.io/engineering/articles/monorepo?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "aha.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a06",
+          "order": 2,
+          "title": "FROM 20S DOWN TO 1S: HOW WE SHAVED OFF 19S FROM OUR GRAPHQL API QUERIES",
+          "summary": "A team was looking to optimize GraphQL query time and explored several options like pagination, reducing the number of nested queries, caching, filtering, and more. However, one approach was the most effective and reduced large GraphQL query time from 20 seconds to 1 second. They did this by optimizing SQL queries against the database and it’s very simple - instead of using SELECT *, specify the columns you want. This will reduce payload size and reduce database overfetching.",
+          "url": "https://mingyang-li.medium.com/from-20s-down-to-1s-how-we-shaved-off-19s-from-our-graphql-api-queries-e69d6a0e0727?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "mingyang-li.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a07",
+          "order": 3,
+          "title": "HOW I WRITE HTTP SERVICES IN GO AFTER 13 YEARS",
+          "summary": "This article covers in-depth service testing, optimizing startup and shutdown, avoiding global state, handling common request types, and controlling the environment through flags, and environment variables. When writing HTTP services in Go, the author only uses one HTTP handler per service and relies on HTTP routes to divert traffic to the right handlers within each service. Functions are used as handlers and dependencies are passed as arguments.",
+          "url": "https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years/?utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "grafana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-12:a08",
+          "order": 1,
+          "title": "WHY BLOAT IS STILL SOFTWARE’S BIGGEST VULNERABILITY",
+          "summary": "The excessive complexity and size of modern software leads to vulnerabilities and security breaches. Okta, Microsoft, and Apple users have been hacked multiple times over the past few years due to the amount of code surface area available for hackers to exploit. A return to minimalistic yet functional software development practices can help reduce security issues in modern software.",
+          "url": "https://spectrum.ieee.org/lean-software-development?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "spectrum.ieee.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a09",
+          "order": 2,
+          "title": "FINDING A NEW SOFTWARE DEVELOPER JOB",
+          "summary": "After being laid off, this author had trouble finding a new job. He detailed all the ways he made himself open to new opportunities, utilizing LinkedIn, job ads, and specialized platforms. Throughout the process, he maintained meticulous tracking of applications and learned to navigate salary negotiations and technical assessments. The author details his entire journey from start to finish, with transparency and tips along the way.",
+          "url": "https://henrikwarne.com/2024/02/11/finding-a-new-software-developer-job/?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "henrikwarne.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a10",
+          "order": 3,
+          "title": "IT'S TIME TO BREAK FREE FROM CORPORATE AGILE",
+          "summary": "Agile methodologies in corporate environments (\"Corporate Agile\") commonly have bloated processes and misplaced priorities, shown by excessive meetings and too many middle managers. A return to \"Basic Agile,\" with an emphasis on principles over rigid processes, will allow teams to self-organize and adapt under uncertainty. Basic Agile done right has a focused, quick daily meeting to discuss potential blockers, short sprint planning sessions, and immediate issue resolution.",
+          "url": "https://bits.danielrothmann.com/corporate-agile?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "bits.danielrothmann.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-12:a11",
+          "order": 1,
+          "title": "ANNOUNCING REACT NATIVE FOR APPLE VISION PRO",
+          "summary": "React Native is now available for developing applications for the Apple Vision Pro.",
+          "url": "https://www.callstack.com/blog/announcing-react-native-for-apple-vision-pro?utm_source=tldrwebdev",
+          "reading_time_minutes": 6,
+          "source_domain": "callstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a12",
+          "order": 2,
+          "title": "HURL",
+          "summary": "Hurl is a command line tool designed to execute HTTP requests specified in a straightforward plain text format. It offers features such as request chaining, value capturing, and query evaluation on response headers and bodies, making it suitable for both data retrieval and HTTP session testing. Hurl supports working with various types of APIs, including HTML, REST, SOAP, GraphQL, XML, and JSON.",
+          "url": "https://github.com/Orange-OpenSource/hurl?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a13",
+          "order": 3,
+          "title": "LEO",
+          "summary": "Leo is a functional, statically typed programming language designed for creating private applications. It abstracts low-level cryptographic concepts, facilitating the integration of private apps into existing systems by compiling to circuits, making zero-knowledge proofs feasible. Leo offers developers tools for circuit sanity checks, including unit tests, integration tests, and console functions.",
+          "url": "https://github.com/AleoHQ/leo?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-12:a14",
+          "order": 1,
+          "title": "FIGURE OUT WHO'S LEAVING THE COMPANY: DUMP, DIFF, REPEAT",
+          "summary": "A system called \"epitaphs\" at a company this author worked at had entries for departed employees. The company’s employees also created their own system to track changes in the employee directory, allowing for insights into departures and other events. The author provides technical details for implementing similar systems which can be created informally at other companies to help employees have a better sense of layoffs and departures.",
+          "url": "https://rachelbythebay.com/w/2024/02/08/ldap/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "rachelbythebay.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a15",
+          "order": 2,
+          "title": "RSS IS STILL PRETTY GREAT",
+          "summary": "RSS (Really Simple Syndication) feeds are useful for consuming high-quality content with minimal noise. They are a good way to access thoughtful long-form content without the distractions often found on social media platforms. Despite some criticisms, such as a lack of discoverability and non-tech-savvy user-friendliness, RSS remains a valuable tool for content consumption due to its control, reduced low-value content, and just-in-time access to information. They are a relic of the “old web” in today’s algorithm-dominated world, but as AI floods algorithms, RSS may make a comeback.",
+          "url": "https://www.pcloadletter.dev/blog/rss/?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "pcloadletter.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a16",
+          "order": 3,
+          "title": "POWER OF SMALL OPTIMIZATIONS",
+          "summary": "Small optimizations can go a long way in improving performance. There are three categories of optimizations: architecture, algorithms and data structures, and source code. To find opportunities for small optimizations, one can use profiling applications and try utilizing things like hybrid algorithms.",
+          "url": "https://maksimkita.com/blog/power-of-small-optimizations.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 7,
+          "source_domain": "maksimkita.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2024-02-12:a17",
+          "order": 1,
+          "title": "WEB DEVELOPMENT IS GETTING TOO COMPLEX, AND IT MAY BE OUR FAULT",
+          "summary": "Web development has an overwhelming number of frameworks and tooling available today, but that doesn’t necessarily mean it’s gotten more complex. It’s becoming easier to over-engineer web applications.",
+          "url": "https://smashingmagazine.com/2024/02/web-development-getting-too-complex/?utm_source=tldrwebdev",
+          "reading_time_minutes": 22,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a18",
+          "order": 2,
+          "title": "I'M AN ENGINEER THAT NEEDS TO SELL MY SERVICES. ANY GOOD BOOKS ON SALES? (HACKER NEWS THREAD)",
+          "summary": "Hacker News commenters offer advice on sales, such as developing strong branding and understanding the client’s purchasing authority. They also suggest books like Never Split the Difference and Draw to Win.",
+          "url": "https://news.ycombinator.com/item?id=39316653&utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "news.ycombinator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a19",
+          "order": 3,
+          "title": "WHY COMPANIES ARE LEAVING THE CLOUD",
+          "summary": "Many organizations are moving their cloud-based workloads back to on-premises infrastructures due to security concerns, unmet expectations, and unexpected costs - 43% are finding cloud migration more expensive than anticipated.",
+          "url": "https://www.infoworld.com/article/3712861/why-companies-are-leaving-the-cloud.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2024-02-12:a20",
+          "order": 4,
+          "title": "YOUR REFERRAL LINK - https://tldr.tech/webdev?ref=2613930",
+          "summary": "",
+          "url": "https://tldr.tech/webdev?ref=2613930",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2025-12-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2025-12-17",
+  "source_path": "TLDR InfoSec/article_17-12-2025.md",
+  "source_content_hash": "sha256:60cd38e85170ec4cd8e3fa49f099a1c7adc2ad24a3e21f37704be79b5f333c88",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2025-12-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a04",
+          "order": 1,
+          "title": "THINKING TO THE SOC",
+          "summary": "Martial artists don't flail wildly, and neither should your security team. With agentic AI, automation, and industry-leading log analytics, Sumo Logic helps SecOps and DevSecOps teams act with fluid agility.",
+          "url": "https://www.sumologic.com/briefs/gartner-siem-critical-capabilities?utm_medium=email&utm_source=TLDR&utm_term=cloud-siem&utm_id=701VK00000KhKeHYAV&utm_campaign=20251204-global-awsmp-TLDR-primary",
+          "reading_time_minutes": null,
+          "source_domain": "sumologic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a07",
+          "order": 1,
+          "title": "PROMPT INJECTION INSIDE GITHUB ACTIONS: THE NEW FRONTIER OF SUPPLY CHAIN ATTACKS",
+          "summary": "PromptPwnd is a new vulnerability class that affects GitHub Actions and GitLab CI/CD pipelines that use AI agents like Gemini CLI, Claude Code, and OpenAI Codex. In this vulnerability, untrusted user input from issues, pull requests, or commit messages is injected into prompts, leading to the execution of privileged tools. The attack allows secret exfiltration by tricking AI agents into leaking GITHUB_TOKEN or cloud credentials through shell commands such as gh issue edit. Google's Gemini CLI repository was confirmed vulnerable before the patch. To mitigate this, organizations should restrict AI toolsets, avoid injecting untrusted input into prompts, treat AI output as untrusted code, and limit GitHub token permissions by IP.",
+          "url": "https://www.aikido.dev/blog/promptpwnd-github-actions-ai-agents?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "aikido.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a08",
+          "order": 2,
+          "title": "PORNHUB EXTORTED AFTER HACKERS STEAL PREMIUM MEMBER ACTIVITY DATA",
+          "summary": "The ShinyHunters extortion gang is extorting the adult video platform PornHub after stealing over 200M records of personal information in the Mixpanel breach. The breached data includes email address, activity type, location, video URL, video name, keywords associated with the video, and the time the event occurred. PornHub stated that they have not worked with Mixpanel since 2021, so the stolen records are historical analytics data from 2021 or earlier.",
+          "url": "https://www.bleepingcomputer.com/news/security/pornhub-extorted-after-hackers-steal-premium-member-activity-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a09",
+          "order": 3,
+          "title": "700,000 RECORDS COMPROMISED IN ASKUL RANSOMWARE ATTACK",
+          "summary": "Japanese e-commerce and logistics firm Askul suffered a ransomware attack by the RansomHouse group, which exfiltrated data and encrypted its systems, severely disrupting ordering, shipping, and automated logistics operations. Attackers used the compromised credentials to delete backups and deploy file-encrypting malware, exposing over 700,000 records across customers, partners, employees, and executives.",
+          "url": "https://www.securityweek.com/700000-records-compromised-in-askul-ransomware-attack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a10",
+          "order": 1,
+          "title": "A BROWSER EXTENSION RISK GUIDE AFTER THE SHADYPANDA CAMPAIGN",
+          "summary": "The ShadyPanda campaign compromised popular Chrome and Edge extensions after seven years of building trust, affecting 4.3 million users, and installed full RCE frameworks that could steal session tokens and hijack SaaS accounts, bypassing MFA. The attack demonstrated that browser extensions represent a critical blind spot between endpoint and cloud security, with silent auto-updates enabling overnight weaponization. Organizations should implement extension allow lists, treat extension permissions as OAuth access grants, conduct regular permission audits, and monitor for behavioral changes that indicate compromise.",
+          "url": "https://thehackernews.com/2025/12/a-browser-extension-risk-guide-after.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a11",
+          "order": 2,
+          "title": "WHAT DATA DO CODING AGENTS SEND, AND WHERE TO?",
+          "summary": "As AI coding agents become more common, security teams should understand what data these tools collect and where it goes. Chaser Systems created a test environment with seven coding agents, testing actions such as starting the agent, tab autocomplete, creating new features, committing and pushing to a git repository, running tests, and uploading data to 0x0.st. They also checked access to AWS credentials and files outside the project directory. The article describes the domains contacted, sample requests, and data transfer volumes during tests conducted with telemetry both disabled and enabled, including scenarios where telemetry is enabled, but FQDNs are blocked.",
+          "url": "https://chasersystems.com/blog/what-data-do-coding-agents-send-and-where-to/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "chasersystems.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a12",
+          "order": 3,
+          "title": "JUMPSHOT: XM CYBER UNCOVERS CRITICAL LOCAL PRIVILEGE ESCALATION (CVE-2025-34352) IN JUMPCLOUD AGENT",
+          "summary": "A critical flaw was found in the JumpCloud Remote Assist for Windows agent that lets any low-privileged user on a machine gain full SYSTEM-level control or crash the system entirely. The issue stems from the agent's uninstaller performing file creation, deletion, and execution in the user's %TEMP% directory, which an attacker can redirect using symbolic links and mount points to target protected system files. This enables both denial-of-service via driver corruption and full local privilege escalation through a race condition involving Windows Installer files, making rapid patching to version 0.317.0 or later essential for organizations using JumpCloud-managed Windows endpoints.",
+          "url": "https://xmcyber.com/blog/jumpshot-xm-cyber-uncovers-critical-local-privilege-escalation-cve-2025-34352-in-jumpcloud-agent/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "xmcyber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a13",
+          "order": 1,
+          "title": "DON'T GET OWNED BY CALENDAR INVITES",
+          "summary": "ICS phishing exploits the calendar integration capabilities of Microsoft 365 and Google Workspace to evade conventional email security. This upcoming Sublime webinar [13] explores the vulnerabilities that make ICS phishing possible and demonstrates how Sublime Security's email security platform automatically detects and",
+          "url": "https://sublime.security/events/calendar-crashers-how-sublime-keeps-phish-off-your-schedule/?utm_source=tldr&utm_medium=content-synd&utm_campaign=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a13",
+          "order": 2,
+          "title": "removes malicious calendar invites. Register today",
+          "summary": "",
+          "url": "https://sublime.security/events/calendar-crashers-how-sublime-keeps-phish-off-your-schedule/?utm_source=tldr&utm_medium=content-synd&utm_campaign=webinar",
+          "reading_time_minutes": null,
+          "source_domain": "sublime.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a14",
+          "order": 3,
+          "title": "ANNOUNCING XINT CODE",
+          "summary": "Theori's Xint Code, an AI-powered code analysis tool, discovered critical 0-day RCE vulnerabilities in Redis, PostgreSQL, and MariaDB with zero human intervention at ZeroDay Cloud, sweeping the database category and outperforming all human teams. The tool analyzes source code, configuration files, and binaries without packaging or harnessing requirements, producing actionable reports with dramatically fewer false positives than traditional static analysis while identifying vulnerabilities missed by humans for decades. Theori is seeking early partners to validate findings on real codebases before broader rollout.",
+          "url": "https://theori.io/blog/announcing-xint-code?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theori.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a15",
+          "order": 4,
+          "title": "SQ",
+          "summary": "sq is a CLI that provides jq-style access to structured data sources such as SQL databases or document formats like CSV or Excel.",
+          "url": "https://github.com/neilotoole/sq?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a16",
+          "order": 5,
+          "title": "ECHO (PRODUCT LAUNCH)",
+          "summary": "Echo uses AI agents to create and maintain vulnerability-free Docker base images by stripping non-essential components, reducing attack surface, and continuously patching newly discovered flaws. These CVE-free images drop into existing workflows by changing a single Dockerfile line, instantly lowering container vulnerability counts.",
+          "url": "https://www.securityweek.com/echo-raises-35-million-in-series-a-funding/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a17",
+          "order": 1,
+          "title": "SVG FILTERS - CLICKJACKING 2.0",
+          "summary": "A novel clickjacking technique leverages SVG filters applied to cross-origin iframes to read pixel colors, hide or manipulate UI elements, and execute logic gates for complex multi-step attacks without JavaScript. The technique enables data exfiltration through fake captchas, dynamic attack overlays that respond to iframe state changes, and even QR code generation to encode stolen data for mobile exfiltration. Security teams should note that traditional X-Frame-Options and CSP frame-ancestors remain the primary defenses, as this attack only works against frameable pages.",
+          "url": "https://lyra.horse/blog/2025/12/svg-clickjacking/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "lyra.horse",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a18",
+          "order": 2,
+          "title": "NO, SOUNDCLOUD HASN'T STARTED TUNING OUT VPNS. IT'S MOPPING UP AFTER A CYBERATTACK",
+          "summary": "SoundCloud detected unauthorized access to an internal dashboard, triggering incident response and outside forensics support. Attackers accessed email addresses and public-profile data for roughly 20 percent of users, but no passwords or financial information. The company also faced web-only DDoS attacks, and later configuration changes accidentally disrupted some VPN users, sparking false rumors that SoundCloud was banning VPN access.",
+          "url": "https://www.theregister.com/2025/12/16/soundcloud_cyberattack_data_leak/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a19",
+          "order": 3,
+          "title": "SANTASTEALER IS COMING TO TOWN: A NEW, AMBITIOUS INFOSTEALER ADVERTISED ON UNDERGROUND FORUMS",
+          "summary": "SantaStealer is a new malware-as-a-service info‑stealer advertised in Telegram channels and forums that can exfiltrate documents, credentials, crypto wallets, and other sensitive data from numerous applications. It uses a modular, multi-threaded design that runs mostly in memory. The software gathers data from browsers, messaging apps, and gaming platforms, zips everything, splits it into 10 MB chunks, and sends it over unencrypted HTTP to attacker-controlled servers.",
+          "url": "https://www.rapid7.com/blog/post/tr-santastealer-is-coming-to-town-a-new-ambitious-infostealer-advertised-on-underground-forums/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "rapid7.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2025-12-17:a20",
+          "order": 1,
+          "title": "EMPOWER YOUR TEAM WITH COMPREHENSIVE CYBERSECURITY TRAINING FROM INFOSEC",
+          "summary": "Get Infosec IQ security awareness training for your organization and receive 3 complimentary Infosec Skills seats—giving your technical staff access to hands-on cyber ranges and labs. Limited time offer.",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%7CCRMLongId%7C",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a20",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.infosecinstitute.com/form/lp/iq-security-awareness/?utm_source=tldr+newsletter&utm_medium=paid+media&utm_campaign=iq+skills+promo&utm_term=&utm_content=&crmid=%7CCRMLongId%7C",
+          "reading_time_minutes": null,
+          "source_domain": "infosecinstitute.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a21",
+          "order": 3,
+          "title": "COUPANG CEO STEPS DOWN AFTER DATA BREACH HITS 33.7 MILLION USERS",
+          "summary": "South Korean e-commerce giant Coupang's CEO resigned following a data breach that exposed 33.7 million customer accounts.",
+          "url": "https://hackread.com/coupang-ceo-steps-down-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a22",
+          "order": 4,
+          "title": "AMAZON DISRUPTS RUSSIAN GRU HACKERS ATTACKING EDGE NETWORK DEVICES",
+          "summary": "Amazon Threat Intelligence disrupted Russian GRU hackers (linked to Sandworm/APT44) who shifted from vulnerability exploitation to targeting misconfigured edge devices like routers and VPN gateways for credential theft against Western critical infrastructure.",
+          "url": "https://www.bleepingcomputer.com/news/security/amazon-disrupts-russian-gru-hackers-attacking-edge-network-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2025-12-17:a23",
+          "order": 5,
+          "title": "MICROSOFT TO BLOCK EXCHANGE ONLINE ACCESS FOR OUTDATED MOBILE DEVICES",
+          "summary": "Microsoft will block mobile devices running Exchange ActiveSync versions below 16.1 from connecting to Exchange Online starting March 1, 2026.",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-to-block-exchange-online-access-for-outdated-mobile-devices/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bleepingcomputer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

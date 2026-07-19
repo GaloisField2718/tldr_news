@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2024-07-22",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2024-07-22",
+  "source_path": "TLDR InfoSec/article_22-07-2024.md",
+  "source_content_hash": "sha256:64c5d6b16c218d2476a301e45ba83cc9e5fe8a0618dd8a4dec6cd33814ba064e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2024-07-22",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a04",
+          "order": 1,
+          "title": "SKIP THE SALES PITCH WITH FOSSA'S FREE SCA",
+          "summary": "Most developer tools let you try before you buy. But in application security, too many vendors force you through endless demo calls and artificial POCs just to see the tool.",
+          "url": "https://fossa.com/?utm_source=tldr&utm_medium=tldr&utm_campaign=free_launch",
+          "reading_time_minutes": null,
+          "source_domain": "fossa.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a06",
+          "order": 2,
+          "title": "🔍 Start evaluating FOSSA on your terms",
+          "summary": "",
+          "url": "https://app.fossa.com/auth/register?utm_source=tldr&utm_medium=tldr&utm_campaign=free_launch",
+          "reading_time_minutes": null,
+          "source_domain": "app.fossa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a07",
+          "order": 1,
+          "title": "VULNERABILITY IN CISCO SMART SOFTWARE MANAGER LETS ATTACKERS CHANGE ANY USER PASSWORD",
+          "summary": "Another Cisco critical vulnerability has been disclosed. CVE-2024-20419 allows unauthenticated attackers to change any user's password, including administrators'. This flaw in the password-change process enables access to the web UI or API with compromised user privileges. No workarounds exist. Cisco released a security update and reports no active exploitation.",
+          "url": "https://arstechnica.com/security/2024/07/vulnerability-in-cisco-smart-software-manager-lets-attackers-change-any-user-password/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a08",
+          "order": 2,
+          "title": "MNGI DIGESTIVE HEALTH DATA BREACH IMPACTS 765,000 INDIVIDUALS",
+          "summary": "MNGI Digestive Health is notifying over 765,000 individuals about a data breach from August 2023. The breach, discovered nearly a year later, potentially exposed sensitive personal and health information, including names, Social Security numbers, medical data, and financial details. MNGI is currently working to inform affected individuals through written notifications.",
+          "url": "https://www.securityweek.com/mngi-digestive-health-data-breach-impacts-765000-individuals/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a09",
+          "order": 3,
+          "title": "TECHNICAL DETAILS: FALCON CONTENT UPDATE FOR WINDOWS HOSTS",
+          "summary": "CrowdStrike has shared technical details on the Falcon Update that caused a global outage on July 19. The issue impacted customers using the Falcon sensor for Windows version 7.11 and above between specific times on July 19. CrowdStrike has fixed the error in Channel File 291 and is conducting a root cause analysis to prevent similar incidents in the future.",
+          "url": "https://www.crowdstrike.com/blog/falcon-update-for-windows-hosts-technical-details/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "crowdstrike.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a10",
+          "order": 1,
+          "title": "PHANTOM SECRETS: UNDETECTED SECRETS EXPOSE MAJOR CORPORATIONS",
+          "summary": "The AquaSec team scanned over 50k repositories belonging to the top 100 organizations on GitHub for secrets using conventional (git clone) and unconventional methods. Using git clone --mirror fetches a more complete git history that includes PRs and other dangling refs. It led to finding additional secrets on 18% of scanned repositories. The Aqua team also tested a novel approach to scanning cached views from SCMs and found that some additional secrets could be found, though the process is difficult and has a lower chance of success.",
+          "url": "https://www.aquasec.com/blog/undetected-hard-code-secrets-expose-corporations/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "aquasec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a11",
+          "order": 2,
+          "title": "SNEAKY WRITE HOOK: GIT CLONE TO ROOT ON K8S NODES",
+          "summary": "The gitRepo volume driver is a deprecated k8s storage driver that allows for reading files into a pod from a remote git repository. This post examines a vulnerability in the gitRepo driver whereby a maliciously crafted git repository could sneak git hooks into a node and execute commands as root. The authors submitted a PR to fix this issue which will be released in version 1.31.",
+          "url": "https://links.tldrnewsletter.com/QDsFkZ",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a12",
+          "order": 3,
+          "title": "VIEW STATE, THE UNPATCHABLE IIS FOREVER DAY BEING ACTIVELY EXPLOITED",
+          "summary": "This blog post discusses why the ViewState vulnerability is not used for exploits despite being around for a long time and explains how it can be done on a fully patched Microsoft Exchange 2019 host. It explains how to exploit view state vulnerabilities and the process of resetting compromised machine keys in IIS. It also highlights the risks associated with resetting machine keys and provides steps to regenerate them based on whether they were automatically generated or static.",
+          "url": "https://zeroed.tech/blog/viewstate-the-unpatchable-iis-forever-day-being-actively-exploited/?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "zeroed.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a13",
+          "order": 1,
+          "title": "COMMAND ZERO (PRODUCT LAUNCH)",
+          "summary": "Command Zero's platform for investigation combines autonomous and user-led methods in a federated data model and leverages automation and advanced Language Learning Models to augment human investigations.",
+          "url": "https://www.cmdzero.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "cmdzero.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a14",
+          "order": 2,
+          "title": "OVER THE WIRE",
+          "summary": "Network inspection library for Node that allows packet crafting and parsing as well as capturing network traffic and sending packets in all formats.",
+          "url": "https://github.com/vaguue/over-the-wire?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a15",
+          "order": 3,
+          "title": "FRAGTUNNEL",
+          "summary": "Fragtunnel is a PoC tool for tunneling TCP traffic through IDS/IPS engines and Next Generation Firewalls. It exploits the fact that they allow a limited number of packets before making a decision on whether to allow or deny the traffic.",
+          "url": "https://github.com/efeali/fragtunnel/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a16",
+          "order": 1,
+          "title": "WEST AFRICAN CRIME SYNDICATE TAKEN DOWN BY INTERPOL OPERATION",
+          "summary": "Operation Jackal III, a global law enforcement effort targeting West African crime groups, resulted in 300 arrests and $3 million in asset seizures. There are 400 additional suspects across 21 countries.",
+          "url": "https://www.darkreading.com/cybersecurity-operations/west-african-crime-syndicate-taken-down-by-interpol-operation?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "darkreading.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a17",
+          "order": 2,
+          "title": "THE CLOUD SHARED IRRESPONSIBILITY MODEL",
+          "summary": "The Shared Responsibility Model is used by cloud providers to describe a split in security responsibilities where cloud providers are responsible for the underlying services and users are responsible for securing their workloads built on those services. Customer breaches could result in negative reputational damage to cloud providers. This forces cloud providers to improve their defaults to be more secure.",
+          "url": "https://securosis.com/cloud/the-cloud-shared-irresponsibilities-model/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "securosis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a18",
+          "order": 3,
+          "title": "NAVIGATING THE RDP SECURITY CONSEQUENCES OF TLS VS. NLA FROM A THREAT EXPOSURE PERSPECTIVE",
+          "summary": "This article compares RDP security using TLS-only versus NLA. NLA-secured servers faced significantly more login attempts but also provided more insights into attacker tactics. Geographical origins of attacks differed between NLA and TLS, with certain countries showing preferences for one protocol over the other. While NLA is considered more secure, it may attract more sophisticated attacks. Researchers found NLA honeypots to be more valuable for understanding cybersecurity threats and the human element behind them.",
+          "url": "https://gosecure.ai/blog/2024/06/17/navigating-the-rdp-security-consequences-of-tls-vs-nla-from-a-threat-exposure-perspective/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "gosecure.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2024-07-22:a19",
+          "order": 1,
+          "title": "CROWDSTRIKE'S FAULTY UPDATE CRASHED 8.5 MILLION WINDOWS DEVICES, SAYS MICROSOFT",
+          "summary": "Microsoft says that “less than one percent of all Windows machines” were affected, but it was enough to create problems for retailers, banks, airlines, and many other industries.",
+          "url": "https://www.theverge.com/2024/7/20/24202527/crowdstrike-microsoft-windows-bsod-outage?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a20",
+          "order": 2,
+          "title": "SECURE SOFTWARE DEVELOPMENT EDUCATION 2024 SURVEY",
+          "summary": "Report on the state of education for secure software development that highlights gaps in education, time constraints in training, and AI security as a critical future area for education.",
+          "url": "https://www.linuxfoundation.org/hubfs/LF%20Research/Secure_Software_Development_Education_2024_Survey.pdf?hsLang=en&utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "linuxfoundation.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2024-07-22:a21",
+          "order": 3,
+          "title": "JUDGE DISMISSES MAJOR SEC CHARGES AGAINST SOLARWINDS AND CISO",
+          "summary": "A judge dismissed major SEC charges against SolarWinds and its CISO Timothy Brown regarding cybersecurity practices after a supply chain attack.",
+          "url": "https://www.securityweek.com/judge-dismisses-major-sec-charges-against-solarwinds-and-ciso/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityweek.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

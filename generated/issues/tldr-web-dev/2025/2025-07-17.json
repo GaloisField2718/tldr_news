@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-web-dev:2025-07-17",
+  "sector": "TLDR Web Dev",
+  "sector_slug": "tldr-web-dev",
+  "date": "2025-07-17",
+  "source_path": "TLDR Web Dev/article_17-07-2025.md",
+  "source_content_hash": "sha256:ec2a6e7ab7531e2f355e8dc44c3e7f9798ec5a52e9b379b3b703353c251a21ef",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR WEB DEV 2025-07-17",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-17:a04",
+          "order": 1,
+          "title": "CRAWLING A BILLION WEB PAGES IN JUST OVER 24 HOURS, IN 2025",
+          "summary": "This dev successfully crawled a billion web pages in just over 24 hours on a budget of a few hundred dollars. The crawler was designed with politeness and fault-tolerance in mind, focusing on HTML content only and adhering to robots.txt rules. The system used a cluster of optimized nodes, each with its own Redis instance, fetcher processes, and parser processes, overcoming bottlenecks like parsing speed by using modern libraries and truncating page content.",
+          "url": "https://andrewkchan.dev/posts/crawler.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 17,
+          "source_domain": "andrewkchan.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a05",
+          "order": 2,
+          "title": "DEBUGGING THE ONE-IN-A-MILLION FAILURE: MIGRATING PINTEREST'S SEARCH INFRASTRUCTURE TO KUBERNETES",
+          "summary": "Pinterest's engineering team encountered a performance issue while migrating their internal search system, Manas, to Kubernetes, where a small percentage of search requests experienced massive latency spikes. Through a process of elimination and profiling, they discovered that the monitoring tool cAdvisor was the culprit, specifically its default collection of the container_referenced_bytes metric. This metric invasively scanned and cleared page table entries, causing memory contention with Manas' memory-intensive search indices. Disabling the problematic metric in cAdvisor resolved the latency spikes.",
+          "url": "https://medium.com/pinterest-engineering/debugging-the-one-in-a-million-failure-migrating-pinterests-search-infrastructure-to-kubernetes-bef9af9dabf4?utm_source=tldrwebdev",
+          "reading_time_minutes": 9,
+          "source_domain": "medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a06",
+          "order": 3,
+          "title": "ARTISANAL HANDCRAFTED GIT REPOSITORIES",
+          "summary": "You can manually create Git repositories by bypassing standard Git commands and directly manipulating the underlying Git objects. This post explains Git's internal workings, focusing on content addressable storage, commit objects, and tree objects, and walks through how to manually create file blobs, tree blobs, and commits.",
+          "url": "https://drew.silcock.dev/blog/artisanal-git/?utm_source=tldrwebdev",
+          "reading_time_minutes": 24,
+          "source_domain": "drew.silcock.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-17:a07",
+          "order": 1,
+          "title": "I WAS WRONG ABOUT ROBOTS.TXT",
+          "summary": "This dev initially blocked all web crawlers using robots.txt to protect his data, but this inadvertently broke link previews on his LinkedIn posts. LinkedIn's bot couldn't access the necessary Open Graph meta tags to generate previews because it was blocked by the robots.txt file. To fix this, he updated his robots.txt to specifically allow the LinkedInBot to crawl his website.",
+          "url": "https://evgeniipendragon.com/posts/i-was-wrong-about-robots-txt/?utm_source=tldrwebdev",
+          "reading_time_minutes": 4,
+          "source_domain": "evgeniipendragon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a08",
+          "order": 2,
+          "title": "I'M SWITCHING TO PYTHON AND ACTUALLY LIKING IT",
+          "summary": "This dev shifted to Python for AI development. His Python toolbox includes uv for package management, ruff for linting and formatting, and FastAPI for building APIs. For version control and infrastructure management, he uses GitHub Actions, Dependabot, Gitleaks, pre-commit hooks, Make, and Docker.",
+          "url": "https://www.cesarsotovalero.net/blog/i-am-switching-to-python-and-actually-liking-it.html?utm_source=tldrwebdev",
+          "reading_time_minutes": 18,
+          "source_domain": "cesarsotovalero.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-17:a09",
+          "order": 1,
+          "title": "😘 KISS BUGS GOODBYE WITH FULLY AUTOMATED END-TO-END TEST COVERAGE",
+          "summary": "QA Wolf's [10] AI-native service gets web and mobile apps to 80% automated end-to-end test coverage in just 4 months. They build and maintain your automated test suite, plus provide unlimited parallel test runs.",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_KissBugsGoodbye_20250717-None_Experiment-FALSE&utm_term=headline-KissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage&utm_content=KissBugsGoodbye_ScheduleADemoToLearnMore_None_Headline%3AKissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage____Newsletter-SecondaryPlacement_20250717_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a11",
+          "order": 2,
+          "title": "Skeptical? This case study shows how Salesloft saves $750k/year",
+          "summary": "in QA engineering + executes >300 tests in parallel on every PR in minutes.",
+          "url": "https://www.qawolf.com/case-studies/salesloft?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_KissBugsGoodbye_20250717-None_Experiment-FALSE&utm_term=body-Saves750KPerYear&utm_content=KissBugsGoodbye_ScheduleADemoToLearnMore_None_Headline%3AKissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage____Newsletter-SecondaryPlacement_20250717_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a12",
+          "order": 3,
+          "title": "Schedule a demo to learn more",
+          "summary": "",
+          "url": "https://www.qawolf.com?utm_source=tldrwebdev&utm_medium=newsletter&utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_KissBugsGoodbye_20250717-None_Experiment-FALSE&utm_term=cta-ScheduleADemoToLearnMore&utm_content=KissBugsGoodbye_ScheduleADemoToLearnMore_None_Headline%3AKissBugsGoodbyeWithFullyAutomatedEndToEndTestCoverage____Newsletter-SecondaryPlacement_20250717_v1_",
+          "reading_time_minutes": null,
+          "source_domain": "qawolf.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a13",
+          "order": 4,
+          "title": "CLAUDE CODE ROUTER",
+          "summary": "Claude Code Router is a tool that allows devs to route Claude Code requests to different language models and customize requests while still using the official Claude Code infrastructure. It's configured via a `config.json` file, enabling routing based on factors like background tasks, reasoning needs, or context length to services like OpenRouter, DeepSeek, Ollama, Gemini, and Volcengine.",
+          "url": "https://github.com/musistudio/claude-code-router?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a14",
+          "order": 5,
+          "title": "SHIPPING WEBGPU ON WINDOWS IN FIREFOX 141",
+          "summary": "Firefox 141 will ship WebGPU on Windows, enabling high-performance web applications for games, visualization, and computation. This implementation, based on the Rust crate WGPU, follows the WebGPU and WGSL standards developed with Mozilla's participation.",
+          "url": "https://mozillagfx.wordpress.com/2025/07/15/shipping-webgpu-on-windows-in-firefox-141/?utm_source=tldrwebdev",
+          "reading_time_minutes": 2,
+          "source_domain": "mozillagfx.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a15",
+          "order": 6,
+          "title": "EULER HS",
+          "summary": "EulerHS is a Haskell framework that makes the creation of concurrent backend and console applications easier. It has pre-integrated subsystems like SQL databases, logging, and KV databases.",
+          "url": "https://github.com/juspay/euler-hs?utm_source=tldrwebdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-17:a16",
+          "order": 1,
+          "title": "THE PRAGMATIC ENGINEER 2025 SURVEY: WHAT'S IN YOUR TECH STACK?",
+          "summary": "The Pragmatic Engineer conducted a survey with nearly 3,000 tech workers to analyze the current tech landscape. The survey covered demographics, AI tools, programming languages, IDEs/terminals, version control, CI/CD, and cloud providers. It found that AI tools are rapidly gaining popularity, with GitHub Copilot leading and Cursor showing fast growth. TypeScript and Python are the most-used languages, while JIRA is the most-disliked tool.",
+          "url": "https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-2025-survey?utm_source=tldrwebdev",
+          "reading_time_minutes": 29,
+          "source_domain": "newsletter.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a17",
+          "order": 2,
+          "title": "LLM DAYDREAMING",
+          "summary": "A \"day-dreaming loop\" (DDL) for LLMs might address their lack of novelty and insight. The DDL involves a background process that continuously samples concepts, explores connections, and filters for valuable ideas. This process, while computationally expensive, could kickstart more innovation and generate proprietary training data.",
+          "url": "https://gwern.net/ai-daydreaming?utm_source=tldrwebdev",
+          "reading_time_minutes": 13,
+          "source_domain": "gwern.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a18",
+          "order": 3,
+          "title": "HOW AND WHERE WILL AGENTS SHIP SOFTWARE?",
+          "summary": "InstantDB provides agents with full-stack backends, including databases, sync engines, and auth tools, to make the creation of applications easier. Agents and humans benefit from built-in abstractions, cost-efficient hosting, and exposed data.",
+          "url": "https://www.instantdb.com/essays/agents?utm_source=tldrwebdev",
+          "reading_time_minutes": 10,
+          "source_domain": "instantdb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-web-dev:2025-07-17:a19",
+          "order": 1,
+          "title": "GASLIGHT-DRIVEN DEVELOPMENT",
+          "summary": "\"Gaslight-driven development\" is a new trend where AI language models subtly influence API design by consistently suggesting certain features or methods, leading developers to implement them even if they weren't initially planned.",
+          "url": "https://tonsky.me/blog/gaslight-driven-development/?utm_source=tldrwebdev",
+          "reading_time_minutes": 3,
+          "source_domain": "tonsky.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a20",
+          "order": 2,
+          "title": "AM I BECOMING IRRELEVANT?",
+          "summary": "After transitioning from a hands-on role to a leadership position, this person feels more and more irrelevant, grappling with the lack of visible impact and recognition despite enabling their team's success.",
+          "url": "https://jordivillar.com/blog/becoming-irrelevant?utm_source=tldrwebdev",
+          "reading_time_minutes": 5,
+          "source_domain": "jordivillar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a21",
+          "order": 3,
+          "title": "SCALABILITY IS NOT PERFORMANCE",
+          "summary": "Scalability is the ability to adjust system throughput based on demand, and it is distinct from performance, which refers to the throughput itself.",
+          "url": "https://gregros.dev/architecture/scalability-is-not-performance?utm_source=tldrwebdev",
+          "reading_time_minutes": 8,
+          "source_domain": "gregros.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-web-dev:2025-07-17:a22",
+          "order": 4,
+          "title": "HOW AI VIBE CODING IS DESTROYING JUNIOR DEVELOPERS' CAREERS",
+          "summary": "Vibe coding makes developers slower, despite their perception of increased productivity, so devs should use AI as a tool to improve their existing skills and focus on mastering the fundamentals of programming.",
+          "url": "https://www.finalroundai.com/blog/ai-vibe-coding-destroying-junior-developers-careers?utm_source=tldrwebdev",
+          "reading_time_minutes": 15,
+          "source_domain": "finalroundai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
