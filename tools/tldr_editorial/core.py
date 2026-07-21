@@ -14,7 +14,16 @@ GENERATOR_VERSION = "1.0.0"
 EDITORIAL_PROMPT_VERSION = "1.0.0"
 ILLUSTRATION_PROMPT_VERSION = "1.0.0"
 EDITORIAL_SCHEMA_VERSION = "1.0.0"
-IMAGE_CONFIGURATION = {"n":1,"resolution":"1K","aspect_ratio":"3:2","output_format":"webp","output_compression":82,"background":"opaque"}
+IMAGE_CONVERSION_VERSION = "1.0.0"
+WEBP_QUALITY = 82
+WEBP_METHOD = 6
+
+def image_configuration(max_provider_bytes:int,max_pixels:int,max_final_bytes:int)->dict:
+    return {"n_policy":"one_explicit_or_endpoint_default","resolution":"1K","aspect_ratio":"3:2",
+            "accepted_upstream_formats":["image/jpeg","image/png","image/webp"],
+            "provider_webp_when_advertised":True,"conversion_version":IMAGE_CONVERSION_VERSION,
+            "conversion":{"mode":"RGB","format":"webp","quality":WEBP_QUALITY,"method":WEBP_METHOD,"metadata":"stripped","animation":False,"background":"opaque_white"},
+            "max_provider_image_bytes":max_provider_bytes,"max_image_pixels":max_pixels,"max_final_webp_bytes":max_final_bytes}
 SECTOR_ORDER = (
     "tldr", "tldr-ai", "tldr-dev", "tldr-web-dev", "tldr-infosec",
     "tldr-cybersecurity", "tldr-crypto", "tldr-product", "tldr-design",

@@ -5,8 +5,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from .candidates import dossier,load_date,shortlist
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,ILLUSTRATION_PROMPT_VERSION,
-                   IMAGE_CONFIGURATION,EditorialError,GENERATOR_VERSION,SCHEMA_VERSION,SHA_RE,
-                   atomic_json,canonical_bytes,contained_path,hash_parts,sha256_bytes,validate_object_key)
+                   EditorialError,GENERATOR_VERSION,SCHEMA_VERSION,SHA_RE,atomic_json,canonical_bytes,
+                   contained_path,hash_parts,image_configuration,sha256_bytes,validate_object_key)
 
 MANIFEST={"schema_version":SCHEMA_VERSION,"generator_version":GENERATOR_VERSION,"dates":[]}
 
@@ -48,7 +48,7 @@ def _costs(value,path,errors):
     elif isinstance(value,list):
         for x in value:_costs(x,path,errors)
 
-def validate_all(output:Path,generated:Path=Path("generated"),storage=None,public_base:str="",max_candidates:int=60,expected_editorial_model:str|None=None,expected_image_model:str|None=None)->list[str]:
+def validate_all(output:Path,generated:Path=Path("generated"),storage=None,public_base:str="",max_candidates:int=60,expected_editorial_model:str|None=None,expected_image_model:str|None=None,max_provider_image_bytes:int=12_000_000,max_image_pixels:int=20_000_000,max_image_bytes:int=2_000_000)->list[str]:
     errors=[]
     if output.is_symlink(): return ["output: symlink not permitted"]
     mpath=output/"manifest.json"
@@ -102,7 +102,8 @@ def validate_all(output:Path,generated:Path=Path("generated"),storage=None,publi
             try:
                 source_ids=[bounded_by[(x["issue_id"],x["article_id"])] for x in vb["sources"]]
                 hash_brief={"mode":vb["mode"],"source_candidate_ids":[x.candidate_id for x in source_ids],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}
-                expected_ih=hash_parts(hash_brief,[{"title":c.title,"summary":c.summary} for c in source_ids],a["models"]["illustration"],ILLUSTRATION_PROMPT_VERSION,IMAGE_CONFIGURATION)
+                image_cfg=image_configuration(max_provider_image_bytes,max_image_pixels,max_image_bytes)
+                expected_ih=hash_parts(hash_brief,[{"title":c.title,"summary":c.summary} for c in source_ids],a["models"]["illustration"],ILLUSTRATION_PROMPT_VERSION,image_cfg)
                 if ih!=expected_ih: errors.append(f"{date}: stale illustration input hash")
             except (KeyError,TypeError): errors.append(f"{date}: illustration hash inputs unavailable")
         ill=a.get("illustration",{}); status=ill.get("status")

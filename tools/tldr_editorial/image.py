@@ -1,9 +1,10 @@
 """Deterministic prompt assembly and strict WebP binary validation."""
 from __future__ import annotations
-import base64,binascii,hashlib,re,struct
+import base64,binascii,hashlib,io,re,struct,warnings
+from pathlib import Path
 from dataclasses import dataclass
 from .candidates import Candidate
-from .core import EditorialError
+from .core import EditorialError,WEBP_METHOD,WEBP_QUALITY
 
 PREAMBLE="""Create a premium editorial illustration for a serious technology newspaper.
 
@@ -35,13 +36,13 @@ def assemble_prompt(brief:dict,source_candidates:list[Candidate])->str:
               "Forbidden elements: "+(", ".join(brief["forbidden_elements"]) or "none beyond the fixed restrictions")]
     return "\n".join(lines).strip()+"\n"
 
-def decode_image(value:str,provider_media_type:str|None=None)->tuple[bytes,str]:
-    media=(provider_media_type or "image/webp").lower(); raw=value
+def decode_image(value:str,provider_media_type:str|None=None)->tuple[bytes,str|None]:
+    media=provider_media_type.lower() if provider_media_type else None; raw=value
     if value.startswith("data:"):
         m=re.fullmatch(r"data:([^;,]+);base64,(.+)",value,re.S)
         if not m: raise EditorialError("image_data_url_invalid")
         embedded=m.group(1).lower()
-        if provider_media_type and embedded!=media: raise EditorialError("image_media_type_mismatch")
+        if media and embedded!=media: raise EditorialError("image_media_type_mismatch")
         media=embedded; raw=m.group(2)
     try: data=base64.b64decode(raw,validate=True)
     except (ValueError,binascii.Error) as exc: raise EditorialError("image_base64_invalid") from exc
@@ -72,3 +73,48 @@ def validate_image(data:bytes,media_type:str,max_bytes:int)->ValidatedImage:
     if not (256<=w<=8192 and 256<=h<=8192): raise EditorialError("image_dimensions_unreasonable")
     if abs((w/h)-1.5)/1.5>0.08: raise EditorialError("image_aspect_ratio_invalid")
     return ValidatedImage(data,w,h,"image/webp","sha256:"+hashlib.sha256(data).hexdigest())
+
+
+def raster_media_type(data:bytes)->str:
+    if data.startswith(b"\x89PNG\r\n\x1a\n"): return "image/png"
+    if data.startswith(b"\xff\xd8\xff"): return "image/jpeg"
+    if len(data)>=12 and data[:4]==b"RIFF" and data[8:12]==b"WEBP": return "image/webp"
+    raise EditorialError("image_raster_type_unsupported")
+
+
+def normalize_raster(path:Path,declared_media_type:str|None,provider_max_bytes:int,max_pixels:int,final_max_bytes:int)->ValidatedImage:
+    """Decode one provider raster and deterministically normalize it to opaque WebP."""
+    try:data=path.read_bytes()
+    except OSError as exc:raise EditorialError("image_provider_file_unreadable") from exc
+    if not data:raise EditorialError("image_empty")
+    if len(data)>provider_max_bytes:raise EditorialError("image_provider_too_large")
+    magic=raster_media_type(data)
+    if declared_media_type:
+        declared=declared_media_type.lower().split(";",1)[0]
+        if declared=="image/jpg":declared="image/jpeg"
+        if declared not in ("image/png","image/jpeg","image/webp"):raise EditorialError("image_media_type_invalid")
+        if declared!=magic:raise EditorialError("image_media_type_mismatch")
+    try: from PIL import Image,ImageOps,UnidentifiedImageError
+    except ImportError as exc: raise EditorialError("pillow_not_installed") from exc
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("error",Image.DecompressionBombWarning)
+            with Image.open(path) as opened:
+                if opened.format not in ("PNG","JPEG","WEBP"):raise EditorialError("image_raster_type_unsupported")
+                expected={"PNG":"image/png","JPEG":"image/jpeg","WEBP":"image/webp"}[opened.format]
+                if expected!=magic:raise EditorialError("image_media_type_mismatch")
+                if getattr(opened,"n_frames",1)!=1 or getattr(opened,"is_animated",False):raise EditorialError("image_animated")
+                width,height=opened.size
+                if not (256<=width<=8192 and 256<=height<=8192):raise EditorialError("image_dimensions_unreasonable")
+                if width*height>max_pixels:raise EditorialError("image_pixel_limit")
+                if abs((width/height)-1.5)/1.5>0.08:raise EditorialError("image_aspect_ratio_invalid")
+                opened.seek(0);opened.load();source=ImageOps.exif_transpose(opened)
+                rgba=source.convert("RGBA")
+                opaque=Image.new("RGB",rgba.size,(255,255,255));opaque.paste(rgba,mask=rgba.getchannel("A"))
+                output=io.BytesIO()
+                opaque.save(output,format="WEBP",quality=WEBP_QUALITY,method=WEBP_METHOD,lossless=False,exact=False,exif=b"",icc_profile=None,xmp=b"")
+                final=output.getvalue()
+    except EditorialError:raise
+    except (Image.DecompressionBombError,Image.DecompressionBombWarning):raise EditorialError("image_decompression_bomb")
+    except (UnidentifiedImageError,OSError,ValueError,TypeError) as exc:raise EditorialError("image_raster_malformed") from exc
+    return validate_image(final,"image/webp",final_max_bytes)

@@ -132,19 +132,24 @@ class OpenRouterClient:
         selected=None
         for endpoint in endpoints:
             params=endpoint.get("supported_parameters",{}) if isinstance(endpoint,dict) else {}
-            if (_supports(params.get("n"),1) and _supports(params.get("resolution"),"1K") and _supports(params.get("aspect_ratio"),"3:2") and _supports(params.get("output_format"),"webp")):
+            n_spec=params.get("n")
+            if ((n_spec is None or _supports(n_spec,1)) and _supports(params.get("resolution"),"1K") and _supports(params.get("aspect_ratio"),"3:2")):
                 selected=endpoint;break
         if selected is None:raise EditorialError("image_required_capability_absent")
         self._image_capability=selected
         return selected
     def image(self,prompt:str)->Result:
         endpoint=self.image_capability();params=endpoint["supported_parameters"]
-        body={"model":self.config.image_model,"prompt":prompt,"n":1,"resolution":"1K","aspect_ratio":"3:2","output_format":"webp"}
-        if _supports(params.get("output_compression"),82):body["output_compression"]=82
+        body={"model":self.config.image_model,"prompt":prompt,"resolution":"1K","aspect_ratio":"3:2"}
+        if _supports(params.get("n"),1):body["n"]=1
+        webp_advertised=_supports(params.get("output_format"),"webp")
+        if webp_advertised:
+            body["output_format"]="webp"
+            if _supports(params.get("output_compression"),82):body["output_compression"]=82
         if _supports(params.get("background"),"opaque"):body["background"]="opaque"
         slug=endpoint.get("provider_slug")
         if isinstance(slug,str) and slug:body["provider"]={"only":[slug],"allow_fallbacks":False}
-        max_response=((self.config.max_image_bytes+2)//3)*4+262_144
+        max_response=((self.config.max_provider_image_bytes+2)//3)*4+262_144
         doc=self._response(self._post,IMAGE_GENERATION_URL,self.config.image_timeout,max_response,"image_response_too_large",body)
         data=doc.get("data")
         if not isinstance(data,list) or len(data)!=1:raise EditorialError("image_count_invalid")

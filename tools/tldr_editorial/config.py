@@ -21,6 +21,8 @@ class Config:
     app_title: str
     max_candidates: int
     max_image_bytes: int
+    max_provider_image_bytes: int
+    max_image_pixels: int
     editorial_timeout: int
     image_timeout: int
     max_attempts: int
@@ -46,6 +48,8 @@ class Config:
             os.getenv("OPENROUTER_HTTP_REFERER", ""), os.getenv("OPENROUTER_APP_TITLE", "TLDR Daily Index"),
             _int("TLDR_EDITORIAL_MAX_CANDIDATES", 60, 1, 200),
             _int("TLDR_EDITORIAL_MAX_IMAGE_BYTES", 2_000_000, 1_000, 20_000_000),
+            _int("TLDR_EDITORIAL_MAX_PROVIDER_IMAGE_BYTES", 12_000_000, 1_000, 50_000_000),
+            _int("TLDR_EDITORIAL_MAX_IMAGE_PIXELS", 20_000_000, 65_536, 100_000_000),
             _int("TLDR_EDITORIAL_REQUEST_TIMEOUT_SECONDS", 90, 1, 600),
             _int("TLDR_IMAGE_REQUEST_TIMEOUT_SECONDS", 180, 1, 900),
             _int("TLDR_EDITORIAL_MAX_AUTOMATIC_ATTEMPTS", 1, 1, 5),

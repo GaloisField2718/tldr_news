@@ -25,7 +25,7 @@ def main(argv=None):
             print(json.dumps(result,sort_keys=True)); return 0
         if a.command=="validate":
             cfg=Config.from_env(); storage=R2Storage(cfg) if a.verify_storage else None
-            errors=validate_all(a.output,a.generated,storage,cfg.r2_public_base_url,cfg.max_candidates,cfg.editorial_model,cfg.image_model)
+            errors=validate_all(a.output,a.generated,storage,cfg.r2_public_base_url,cfg.max_candidates,cfg.editorial_model,cfg.image_model,cfg.max_provider_image_bytes,cfg.max_image_pixels,cfg.max_image_bytes)
             if errors:
                 for e in errors: print(e,file=sys.stderr)
                 return 1

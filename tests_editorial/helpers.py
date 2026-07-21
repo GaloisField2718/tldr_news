@@ -4,7 +4,7 @@ from pathlib import Path
 from tools.tldr_editorial.config import Config
 
 def config(**changes):
-    base=dict(enabled=False,api_key="",editorial_model="openai/gpt-5.6-luna",image_model="google/gemini-3.1-flash-lite-image",http_referer="",app_title="TLDR Daily Index",max_candidates=60,max_image_bytes=2_000_000,editorial_timeout=90,image_timeout=180,max_attempts=1,r2_account_id="acct",r2_access_key_id="id",r2_secret_access_key="secret",r2_bucket="bucket",r2_public_base_url="https://assets.example.workers.dev",r2_endpoint="https://acct.r2.cloudflarestorage.com",r2_region="auto")
+    base=dict(enabled=False,api_key="",editorial_model="openai/gpt-5.6-luna",image_model="google/gemini-3.1-flash-lite-image",http_referer="",app_title="TLDR Daily Index",max_candidates=60,max_image_bytes=2_000_000,max_provider_image_bytes=12_000_000,max_image_pixels=20_000_000,editorial_timeout=90,image_timeout=180,max_attempts=1,r2_account_id="acct",r2_access_key_id="id",r2_secret_access_key="secret",r2_bucket="bucket",r2_public_base_url="https://assets.example.workers.dev",r2_endpoint="https://acct.r2.cloudflarestorage.com",r2_region="auto")
     base.update(changes); return Config(**base)
 
 def article(aid,title="Title",summary="Summary",url=None,content_type="editorial",sponsor=False,order=1):
