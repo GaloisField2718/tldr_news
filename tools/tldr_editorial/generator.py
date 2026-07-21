@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy,json,os,subprocess,tempfile
 from datetime import datetime,timezone
 from pathlib import Path
-from .artifacts import load_artifact,write_artifact
+from .artifacts import artifact_relative,load_artifact,validate_all,write_artifact
 from .candidates import dossier,latest_date,load_date,shortlist,dossier_size
 from .config import Config
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_VERSION,
@@ -21,12 +21,46 @@ def _illustration(status,code=None):
 
 def _now(): return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z")
 
-def _require_clean_live_workspace(output: Path) -> None:
-    if output.is_symlink() or any(p.name.startswith(".tldr-editorial-") or p.suffix==".tmp" for p in output.rglob("*") if output.exists()):
-        raise EditorialError("live_output_not_clean")
-    try: result=subprocess.run(["git","status","--porcelain"],capture_output=True,text=True,check=True,timeout=10)
-    except (OSError,subprocess.SubprocessError) as exc: raise EditorialError("live_git_status_failed") from exc
-    if result.stdout.strip(): raise EditorialError("live_git_workspace_not_clean")
+def _git_status_z()->bytes:
+    try:return subprocess.run(["git","status","--porcelain=v1","-z","--untracked-files=all"],capture_output=True,check=True,timeout=10).stdout
+    except (OSError,subprocess.SubprocessError) as exc:raise EditorialError("live_git_status_failed") from exc
+
+def _require_clean_live_workspace(output:Path)->None:
+    if output.is_symlink() or any(p.name.startswith(".tldr-editorial-") or p.suffix==".tmp" for p in output.rglob("*") if output.exists()):raise EditorialError("live_output_not_clean")
+    if _git_status_z():raise EditorialError("live_git_workspace_not_clean")
+
+def _repository_root()->Path:
+    try:raw=subprocess.run(["git","rev-parse","--show-toplevel"],capture_output=True,check=True,timeout=10).stdout
+    except (OSError,subprocess.SubprocessError) as exc:raise EditorialError("live_git_root_failed") from exc
+    try:return Path(os.fsdecode(raw.rstrip(b"\n"))).resolve(strict=True)
+    except (OSError,ValueError) as exc:raise EditorialError("live_git_root_failed") from exc
+
+def _require_safe_noop_workspace(output:Path,date:str)->None:
+    """Allow clean state or exactly the two pending editorial JSON files."""
+    raw=_git_status_z()
+    if not raw:return
+    root=_repository_root();configured=output if output.is_absolute() else Path.cwd().resolve()/output
+    if configured.is_symlink():raise EditorialError("live_noop_output_invalid")
+    try:out=configured.resolve(strict=True);out.relative_to(root)
+    except (OSError,ValueError) as exc:raise EditorialError("live_noop_output_invalid") from exc
+    artifact=out/artifact_relative(date);manifest=out/"manifest.json"
+    for path in (artifact,manifest):
+        if path.is_symlink() or not path.is_file():raise EditorialError("live_noop_expected_file_invalid")
+        try:path.resolve(strict=True).relative_to(out)
+        except (OSError,ValueError) as exc:raise EditorialError("live_noop_output_invalid") from exc
+    expected={artifact.relative_to(root).as_posix(),manifest.relative_to(root).as_posix()};seen={};parts=raw.split(b"\0");i=0
+    while i<len(parts) and parts[i]:
+        record=parts[i];i+=1
+        if len(record)<4 or record[2:3]!=b" ":raise EditorialError("live_noop_git_status_invalid")
+        status=record[:2].decode("ascii",errors="strict");path=os.fsdecode(record[3:])
+        if status[0] in "RC" or status[1] in "RC":
+            if i<len(parts):i+=1
+            raise EditorialError("live_noop_git_status_invalid")
+        if path not in expected or path in seen:raise EditorialError("live_noop_git_status_invalid")
+        allowed=(status==" M") or (status=="??" and path==artifact.relative_to(root).as_posix())
+        if not allowed:raise EditorialError("live_noop_git_status_invalid")
+        seen[path]=status
+    if set(seen)!=expected or seen.get(manifest.relative_to(root).as_posix())!=" M":raise EditorialError("live_noop_git_status_invalid")
 
 def _existing_illustration_hash(existing:dict,candidates:list,config:Config)->str|None:
     stored=existing.get("illustration_input_hash")
@@ -42,7 +76,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     if require_live and (offline or dry_run or not config.enabled): raise EditorialError("live_generation_not_enabled")
     if require_live:
         if os.getenv("CI"): raise EditorialError("live_generation_forbidden_in_ci")
-        config.require_openrouter(); config.require_r2(); _require_clean_live_workspace(output)
+        config.require_openrouter();config.require_r2()
     candidates=shortlist(load_date(generated,date),config.max_candidates); dos=dossier(candidates)
     editorial_hash=hash_parts(dos,config.editorial_model,EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION)
     existing=load_artifact(output,date)
@@ -51,19 +85,25 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     if existing and existing.get("editorial_input_hash")==editorial_hash and existing.get("illustration_input_hash"):
         try: illustration_stale=_existing_illustration_hash(existing,candidates,config)!=existing.get("illustration_input_hash")
         except (KeyError,TypeError): illustration_stale=True
-    if existing and existing.get("editorial_input_hash")==editorial_hash and not force:
-        retryable=retry_image and existing.get("status")=="editorial_only" and existing.get("illustration_input_hash")
-        should_live=config.enabled and not offline and not dry_run
-        disabled_upgrade=should_live and existing.get("status")=="disabled"
-        if not retryable and not disabled_upgrade and not illustration_stale:
-            if existing.get("illustration",{}).get("status")=="ready" and config.r2_public_base_url:
-                copy_a=copy.deepcopy(existing); key=copy_a["illustration"]["object_key"]
-                new=storage.build_public_url(key) if storage else build_public_url(config,key)
-                if new!=copy_a["illustration"]["public_url"]:
-                    copy_a["illustration"]["public_url"]=new
-                    if not dry_run: write_artifact(output,date,copy_a)
-                    return {"date":date,"status":copy_a["status"],"written":not dry_run,"network_calls":0,"r2_calls":0,"dossier_bytes":dossier_size(candidates),"public_url_updated":True}
-            return {"date":date,"status":existing["status"],"written":False,"network_calls":0,"r2_calls":0,"dossier_bytes":dossier_size(candidates),"noop":True}
+    same_editorial=bool(existing and existing.get("editorial_input_hash")==editorial_hash)
+    retryable=bool(retry_image and existing and existing.get("status")=="editorial_only" and existing.get("illustration_input_hash"))
+    should_live=config.enabled and not offline and not dry_run
+    disabled_upgrade=bool(should_live and existing and existing.get("status")=="disabled")
+    url_update=False;new_public_url=None
+    if same_editorial and not force and not retry_image and not disabled_upgrade and not illustration_stale and existing.get("illustration",{}).get("status")=="ready" and config.r2_public_base_url:
+        key=existing["illustration"]["object_key"];new_public_url=build_public_url(config,key);url_update=new_public_url!=existing["illustration"]["public_url"]
+    pure_noop=same_editorial and not force and not retry_image and not retryable and not disabled_upgrade and not illustration_stale and not url_update
+    if pure_noop:
+        if require_live:
+            errors=validate_all(output,generated,None,config.r2_public_base_url,config.max_candidates,config.editorial_model,config.image_model,config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
+            if errors:raise EditorialError("live_noop_consistency_failed")
+            _require_safe_noop_workspace(output,date)
+        return {"date":date,"status":existing["status"],"written":False,"network_calls":0,"r2_calls":0,"dossier_bytes":dossier_size(candidates),"noop":True}
+    if require_live:_require_clean_live_workspace(output)
+    if same_editorial and not force and not retryable and not disabled_upgrade and not illustration_stale and url_update:
+        copy_a=copy.deepcopy(existing);copy_a["illustration"]["public_url"]=new_public_url
+        if not dry_run:write_artifact(output,date,copy_a)
+        return {"date":date,"status":copy_a["status"],"written":not dry_run,"network_calls":0,"r2_calls":0,"dossier_bytes":dossier_size(candidates),"public_url_updated":True}
     live=config.enabled and not offline and not dry_run
     plan=fallback(candidates); status="disabled" if not config.enabled else "deterministic_fallback"
     failure=None; editorial_usage=dict(ZERO); image_usage=dict(ZERO); erid=irid=None; calls=0; r2calls=0
