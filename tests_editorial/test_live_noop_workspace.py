@@ -1,6 +1,5 @@
 from __future__ import annotations
 import hashlib,json,os,subprocess,tempfile,time,unittest
-from contextlib import contextmanager
 from pathlib import Path
 from unittest.mock import patch
 from tools.tldr_editorial.core import EditorialError
@@ -17,13 +16,16 @@ class NeverExternal:
 
 class LiveNoopWorkspaceTests(unittest.TestCase):
  def setUp(self):
+  self.ci_patcher=patch.dict(os.environ,{"CI":""});self.ci_patcher.start()
   self.old=Path.cwd();self.tmp=tempfile.TemporaryDirectory();self.repo=Path(self.tmp.name);os.chdir(self.repo)
   self.g=self.repo/"generated";self.o=self.g/"editorial";write_generated(self.g)
   generate(generated=self.g,output=self.o,latest=True,config=config())
   (self.repo/"tracked.txt").write_text("clean\n")
   self.git("init","-b","main");self.git("config","user.email","editorial-test@example.com");self.git("config","user.name","Editorial Test");self.git("add","-A");self.git("commit","-m","fixture")
   self.live_config=config(enabled=True,api_key="test-key")
- def tearDown(self):os.chdir(self.old);self.tmp.cleanup()
+ def tearDown(self):
+  try:os.chdir(self.old);self.tmp.cleanup()
+  finally:self.ci_patcher.stop()
  def git(self,*args,check=True):return subprocess.run(["git",*args],check=check,capture_output=True,text=True)
  def first_live(self,output=None):
   return generate(generated=self.g,output=output or self.o,latest=True,require_live=True,config=self.live_config,client=Live(),storage=Storage())
