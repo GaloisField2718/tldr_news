@@ -37,26 +37,33 @@ push_script.sh
   -> tee stdout/stderr to logs/push.log
   -> require branch == main
   -> generate --changed
-  -> stage approved TLDR* dirs + generated/manifest.json + generated/issues
+  -> validate normalized data and structural consistency
+  -> optional latest-date editorial/illustration publication
+  -> validate editorial consistency
+  -> stage approved TLDR* dirs + normalized/editorial JSON only
   -> if staged changes:
-       validate --all --strict-privacy
-       check_generated_consistency
+       repeat normalized + editorial consistency checks
        generate --changed; require selected=0 written=0 failures=[]
        commit
   -> git pull --rebase origin main
   -> post-rebase:
        generate --changed
-       validate --all --strict-privacy
-       check_generated_consistency
+       repeat normalized validation
+       regenerate latest editorial only when stale
+       validate editorial consistency
        generate --changed; require selected=0 written=0 failures=[]
-       stage generated/; commit sync commit if needed
+       stage normalized + editorial JSON; commit sync commit if needed
   -> if local main ahead of origin/main: git push
      else: log "nothing to push"
   -> logs/last_push_success   # even on a full no-op success
 ```
 
 Empty staging does **not** skip pull/rebase/push retry. A previous local commit
-left unpushed is retried on the next cron minute.
+left unpushed is retried on the next cron minute. The existing flock covers the
+entire source/editorial/rebase/push operation. Provider or R2 failure becomes a
+valid fallback/editorial-only artifact and does not discard normalized ingestion;
+a structural consistency failure still blocks commit/push. Image binaries are
+never staged. See [the editorial operations guide](EDITORIAL_PIPELINE.md).
 
 ## Validated web redeployment
 

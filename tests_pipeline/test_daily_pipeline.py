@@ -100,7 +100,13 @@ class ScriptStaticGuards(unittest.TestCase):
         text = PUSH.read_text(encoding="utf-8")
         self.assertIn("stage_approved_sources", text)
         self.assertIn("stage_generated", text)
+        self.assertIn("stage_editorial", text)
+        self.assertIn("run_source_and_editorial_publication", text)
         self.assertNotIn("git add .", text)
+        lib = PIPELINE_LIB.read_text(encoding="utf-8")
+        self.assertIn("tools.tldr_editorial generate", lib)
+        self.assertIn("tools.tldr_editorial validate", lib)
+        self.assertNotIn("generated/editorial/images", lib)
 
 
 class ConsistencyModuleTests(unittest.TestCase):
@@ -228,6 +234,9 @@ class PipelineTempRepoTests(unittest.TestCase):
                     "generate_calls": 0,
                     "validate_calls": 0,
                     "consistency_calls": 0,
+                    "editorial_generate_calls": 0,
+                    "editorial_validate_calls": 0,
+                    "editorial_exit": 0,
                     "generate_selected": 0,
                     "generate_written": 0,
                     "validate_exit": 0,
@@ -305,6 +314,18 @@ class PipelineTempRepoTests(unittest.TestCase):
             if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.check_generated_consistency" ]]; then
               py_update consistency_calls 1 >/dev/null
               exit "$(py_get consistency_exit)"
+            fi
+
+            if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.tldr_editorial" ]]; then
+              if [[ "${{3:-}}" == "generate" ]]; then
+                py_update editorial_generate_calls 1 >/dev/null
+                echo '{{"status":"disabled","network_calls":0,"r2_calls":0,"written":false}}'
+              elif [[ "${{3:-}}" == "validate" ]]; then
+                py_update editorial_validate_calls 1 >/dev/null
+              else
+                exit 90
+              fi
+              exit "$(py_get editorial_exit)"
             fi
 
             if [[ "${{1:-}}" == "-c" ]]; then
