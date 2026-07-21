@@ -107,6 +107,8 @@ class ScriptStaticGuards(unittest.TestCase):
         self.assertIn("tools.tldr_editorial generate", lib)
         self.assertIn("tools.tldr_editorial validate", lib)
         self.assertNotIn("generated/editorial/images", lib)
+        self.assertNotIn("if ! run_editorial_latest", lib)
+        self.assertIn("run_editorial_latest\n", lib)
 
 
 class ConsistencyModuleTests(unittest.TestCase):
@@ -236,7 +238,10 @@ class PipelineTempRepoTests(unittest.TestCase):
                     "consistency_calls": 0,
                     "editorial_generate_calls": 0,
                     "editorial_validate_calls": 0,
-                    "editorial_exit": 0,
+                    "editorial_generate_exit": 7,
+                    "editorial_generate_fail_on_call": 0,
+                    "editorial_validate_exit": 0,
+                    "editorial_status": "disabled",
                     "generate_selected": 0,
                     "generate_written": 0,
                     "validate_exit": 0,
@@ -319,13 +324,20 @@ class PipelineTempRepoTests(unittest.TestCase):
             if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.tldr_editorial" ]]; then
               if [[ "${{3:-}}" == "generate" ]]; then
                 py_update editorial_generate_calls 1 >/dev/null
-                echo '{{"status":"disabled","network_calls":0,"r2_calls":0,"written":false}}'
+                calls="$(py_get editorial_generate_calls)"
+                fail_on="$(py_get editorial_generate_fail_on_call)"
+                if [[ "$fail_on" != "0" && "$calls" == "$fail_on" ]]; then
+                  exit "$(py_get editorial_generate_exit)"
+                fi
+                status="$(py_get editorial_status)"
+                echo "{{\"status\":\"$status\",\"network_calls\":1,\"r2_calls\":0,\"written\":true}}"
+                exit 0
               elif [[ "${{3:-}}" == "validate" ]]; then
                 py_update editorial_validate_calls 1 >/dev/null
+                exit "$(py_get editorial_validate_exit)"
               else
                 exit 90
               fi
-              exit "$(py_get editorial_exit)"
             fi
 
             if [[ "${{1:-}}" == "-c" ]]; then
@@ -502,6 +514,30 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.assertFalse(any(n.startswith("logs/") for n in names))
         self.assertFalse(any(n == ".env" or n.endswith("/.env") for n in names))
 
+    def test_modeled_openrouter_fallback_does_not_block_ingestion(self) -> None:
+        (self.repo / "TLDR" / "article_02-02-2024.md").write_text("# fallback source\n", encoding="utf-8")
+        self._set_state(editorial_status="deterministic_fallback")
+        proc = self._run("push_script.sh")
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertEqual(self._rev(), self._remote_rev())
+        self.assertTrue((self.repo / "logs" / "last_push_success").is_file())
+
+    def test_modeled_r2_editorial_only_does_not_block_ingestion(self) -> None:
+        (self.repo / "TLDR" / "article_03-02-2024.md").write_text("# r2 fallback source\n", encoding="utf-8")
+        self._set_state(editorial_status="editorial_only")
+        proc = self._run("push_script.sh")
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr + proc.stdout)
+        self.assertEqual(self._rev(), self._remote_rev())
+
+    def test_editorial_cli_nonzero_blocks_commit_and_success_marker(self) -> None:
+        (self.repo / "TLDR" / "article_04-02-2024.md").write_text("# internal failure\n", encoding="utf-8")
+        before = self._rev()
+        self._set_state(editorial_generate_fail_on_call=1)
+        proc = self._run("push_script.sh")
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertEqual(before, self._rev())
+        self.assertFalse((self.repo / "logs" / "last_push_success").exists())
+
     def test_validation_failure_prevents_commit(self) -> None:
         (self.repo / "TLDR" / "article_03-01-2024.md").write_text(
             "# Articles TLDR 03-01-2024\n\nNEW\n", encoding="utf-8"
@@ -616,6 +652,18 @@ class PipelineTempRepoTests(unittest.TestCase):
         self.assertIn("post-rebase validate passed", proc.stdout)
         self.assertGreater(self._state()["validate_calls"], before_validate)
         self.assertGreaterEqual(self._state()["generate_calls"], 2)
+        self.assertGreaterEqual(self._state()["editorial_generate_calls"], 2)
+
+    def test_editorial_cli_nonzero_post_rebase_blocks_push(self) -> None:
+        (self.repo / "TLDR" / "article_09b-01-2024.md").write_text("# local ahead\n", encoding="utf-8")
+        subprocess.run(["git", "add", "TLDR/article_09b-01-2024.md"], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-m", "local pending"], cwd=self.repo, check=True, capture_output=True)
+        local = self._rev(); remote = self._remote_rev(); self.assertNotEqual(local, remote)
+        self._set_state(editorial_generate_fail_on_call=2)
+        proc = self._run("push_script.sh")
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertEqual(self._remote_rev(), remote)
+        self.assertFalse((self.repo / "logs" / "last_push_success").exists())
 
     def test_post_rebase_validation_failure_prevents_push(self) -> None:
         # Local unpushed commit + remote tip equal initially; make validate fail

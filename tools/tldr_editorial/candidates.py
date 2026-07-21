@@ -8,6 +8,12 @@ from .core import EditorialError, SECTOR_ORDER, canonical_bytes
 
 TRACKING = {"utm_source","utm_medium","utm_campaign","utm_term","utm_content","mc_cid","mc_eid"}
 CLASS_RANK = {"editorial": 0, "resource": 1, "sponsor": 2}
+# Controlled Daily presentation mapping. Corpus values are currently exactly:
+# editorial, sponsor, github_repo, tool, and course.
+RESOURCE_CONTENT_TYPES = {"github_repo", "course", "tool"}
+# Explicit backward-compatible normalized aliases; these are not currently in
+# the corpus and remain resource-only if introduced by the normalizer.
+RESOURCE_ALIASES = {"resource", "library", "tutorial", "job"}
 
 @dataclass(frozen=True)
 class Candidate:
@@ -53,7 +59,7 @@ def canonicalize_url(url: str) -> str:
 
 def _classification(article: dict) -> str:
     if article.get("is_sponsor") or str(article.get("content_type","")).lower() == "sponsor": return "sponsor"
-    if str(article.get("content_type","")).lower() in ("resource","tool","library","tutorial","course","job"): return "resource"
+    if str(article.get("content_type","")).lower() in RESOURCE_CONTENT_TYPES | RESOURCE_ALIASES: return "resource"
     return "editorial"
 
 

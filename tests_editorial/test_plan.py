@@ -16,6 +16,11 @@ class PlanTests(unittest.TestCase):
  def test_secondary_max(self): self.bad(lambda p:[x.update(role="secondary") for x in p["front_page"][1:7]])
  def test_duplicate(self): self.bad(lambda p:p["front_page"][1].update(candidate_id="c001"))
  def test_unknown(self): self.bad(lambda p:p["front_page"][1].update(candidate_id="c999"))
+ def test_resource_cannot_be_front_page_role_or_visual_source(self):
+  for role in ("lead","secondary","brief"):
+   cs=candidates();cs[0]=Candidate(**{**cs[0].__dict__,"content_class":"resource"});p=valid();p["front_page"][0]["role"]=role
+   if role!="lead":p["front_page"][1]["role"]="lead";p["lead_candidate_id"]="c002";p["visual_brief"]["source_candidate_ids"]=["c002"]
+   with self.assertRaises(EditorialError):validate_plan(p,cs)
  def test_sponsor_and_incomplete(self):
   cs=candidates();cs[1]=Candidate(**{**cs[1].__dict__,"content_class":"sponsor"})
   with self.assertRaises(EditorialError):validate_plan(valid(),cs)

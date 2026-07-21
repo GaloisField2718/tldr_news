@@ -7,7 +7,7 @@ from .artifacts import load_artifact,write_artifact
 from .candidates import dossier,latest_date,load_date,shortlist,dossier_size
 from .config import Config
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_VERSION,
-    ILLUSTRATION_PROMPT_VERSION,SCHEMA_VERSION,EditorialError,hash_parts,object_key,sha256_bytes)
+    ILLUSTRATION_PROMPT_VERSION,IMAGE_CONFIGURATION,SCHEMA_VERSION,EditorialError,hash_parts,object_key,sha256_bytes)
 from .image import assemble_prompt,decode_image,validate_image
 from .openrouter import OpenRouterClient
 from .plan import fallback,resolve_plan,validate_plan
@@ -80,14 +80,13 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     if valid_ai and plan["visual_brief"]["mode"]!="none":
         by={c.candidate_id:c for c in candidates}; sources=[by[x] for x in plan["visual_brief"]["source_candidate_ids"]]
         final_prompt=assemble_prompt(plan["visual_brief"],sources)
-        image_cfg={"n":1,"resolution":"1K","aspect_ratio":"3:2","output_format":"webp","output_compression":82,"background":"opaque"}
-        illustration_hash=hash_parts(plan["visual_brief"],[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,image_cfg)
+        illustration_hash=hash_parts(plan["visual_brief"],[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,IMAGE_CONFIGURATION)
         try:
             client=client or OpenRouterClient(config); result=client.image(final_prompt); calls+=1; image_usage=result.usage; irid=result.request_id
         except EditorialError as exc:
             ill=_illustration("generation_failed",str(exc)); failure=str(exc)
         else:
-            try: raw,media=decode_image(result.value)
+            try: raw,media=decode_image(result.value,result.media_type)
             except EditorialError as exc: ill=_illustration("validation_failed",str(exc)); failure=str(exc)
             else:
                 fd,tmp=tempfile.mkstemp(prefix="tldr-daily-",suffix=".webp")

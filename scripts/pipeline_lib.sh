@@ -136,11 +136,10 @@ run_source_and_editorial_publication() {
   log "validate --all --strict-privacy passed"
   run_consistency
   log "normalized structural consistency check passed"
-  if ! run_editorial_latest; then
-    log "editorial generation command failed; preserving normalized ingestion"
-  else
-    log "editorial latest completed"
-  fi
+  # Expected OpenRouter/image/R2 failures are serialized by the generator and
+  # return zero. A non-zero result is internal/structural and must block push.
+  run_editorial_latest
+  log "editorial latest completed"
   run_editorial_consistency
   log "editorial structural consistency check passed"
 }

@@ -14,8 +14,9 @@ class CandidateTests(unittest.TestCase):
   write_generated(self.g,sectors={"tldr":[article("x",title=""),article("y",summary="")]})
   c=load_date(self.g,"2026-07-21");self.assertEqual([x.article_id for x in c],["y"]);self.assertFalse(c[0].front_page_eligible)
  def test_sponsor_and_resource_not_front_page(self):
-  write_generated(self.g,sectors={"tldr":[article("s",sponsor=True),article("r",content_type="resource")]})
+  write_generated(self.g,sectors={"tldr":[article("s",sponsor=True),article("r",content_type="github_repo")]})
   c=load_date(self.g,"2026-07-21");self.assertEqual([x.content_class for x in c],["sponsor","resource"]);self.assertFalse(any(x.front_page_eligible for x in c))
+  self.assertEqual(c[1].content_class,"resource");self.assertFalse(c[1].front_page_eligible)
  def test_same_pair_merged_sponsor_wins(self):
   write_generated(self.g,sectors={"tldr":[article("same",order=1),article("same",sponsor=True,order=2)]})
   c=load_date(self.g,"2026-07-21");self.assertEqual(len(c),1);self.assertEqual(c[0].content_class,"sponsor")
@@ -23,7 +24,7 @@ class CandidateTests(unittest.TestCase):
   self.assertEqual(canonicalize_url("HTTPS://Example.COM/a?z=2&utm_source=x&a=1#f"),"https://example.com/a?a=1&z=2")
  def test_url_dedup_scoped_by_class(self):
   u="https://e.test/a?utm_campaign=x"
-  write_generated(self.g,sectors={"tldr":[article("a",url=u),article("b",url="https://e.test/a",content_type="resource"),article("c",url="https://e.test/a?utm_source=z")]})
+  write_generated(self.g,sectors={"tldr":[article("a",url=u),article("b",url="https://e.test/a",content_type="github_repo"),article("c",url="https://e.test/a?utm_source=z")]})
   c=load_date(self.g,"2026-07-21");self.assertEqual(len(c),2);self.assertEqual({x.content_class for x in c},{"editorial","resource"})
  def test_sector_order_known_then_unknown(self):
   self.assertLess(sector_key("tldr"),sector_key("tldr-ai"));self.assertLess(sector_key("tldr-marketing"),sector_key("aaa"));self.assertLess(sector_key("aaa"),sector_key("zzz"))

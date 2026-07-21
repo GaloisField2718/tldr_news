@@ -14,6 +14,7 @@ GENERATOR_VERSION = "1.0.0"
 EDITORIAL_PROMPT_VERSION = "1.0.0"
 ILLUSTRATION_PROMPT_VERSION = "1.0.0"
 EDITORIAL_SCHEMA_VERSION = "1.0.0"
+IMAGE_CONFIGURATION = {"n":1,"resolution":"1K","aspect_ratio":"3:2","output_format":"webp","output_compression":82,"background":"opaque"}
 SECTOR_ORDER = (
     "tldr", "tldr-ai", "tldr-dev", "tldr-web-dev", "tldr-infosec",
     "tldr-cybersecurity", "tldr-crypto", "tldr-product", "tldr-design",

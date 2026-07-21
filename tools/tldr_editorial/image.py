@@ -35,12 +35,14 @@ def assemble_prompt(brief:dict,source_candidates:list[Candidate])->str:
               "Forbidden elements: "+(", ".join(brief["forbidden_elements"]) or "none beyond the fixed restrictions")]
     return "\n".join(lines).strip()+"\n"
 
-def decode_image(value:str)->tuple[bytes,str]:
-    media="image/webp"; raw=value
+def decode_image(value:str,provider_media_type:str|None=None)->tuple[bytes,str]:
+    media=(provider_media_type or "image/webp").lower(); raw=value
     if value.startswith("data:"):
         m=re.fullmatch(r"data:([^;,]+);base64,(.+)",value,re.S)
         if not m: raise EditorialError("image_data_url_invalid")
-        media=m.group(1).lower(); raw=m.group(2)
+        embedded=m.group(1).lower()
+        if provider_media_type and embedded!=media: raise EditorialError("image_media_type_mismatch")
+        media=embedded; raw=m.group(2)
     try: data=base64.b64decode(raw,validate=True)
     except (ValueError,binascii.Error) as exc: raise EditorialError("image_base64_invalid") from exc
     return data,media
