@@ -46,8 +46,12 @@ log "start sync+validate+push REPO_ROOT=${REPO_ROOT}"
 run_generate_changed
 log "initial generate --changed completed"
 
+# Normalized strict validation always precedes optional external publication.
+run_source_and_editorial_publication
+
 stage_approved_sources
 stage_generated
+stage_editorial
 
 if git diff --cached --quiet; then
   log "no staged changes before rebase"
@@ -57,6 +61,8 @@ else
   log "validate --all --strict-privacy passed"
   run_consistency
   log "structural consistency check passed"
+  run_editorial_consistency
+  log "editorial consistency check passed before commit"
 
   pre_commit_out="$(run_generate_changed)"
   printf '%s\n' "${pre_commit_out}"
@@ -67,6 +73,7 @@ else
   log "changed_clean before commit"
 
   stage_generated
+  stage_editorial
   msg="Daily TLDR update $(date -u +'%Y-%m-%d %H:%M') UTC"
   git commit -m "${msg}"
   log "committed: ${msg}"
@@ -82,10 +89,9 @@ log "pull --rebase completed"
 # Post-rebase correctness: never push without re-checking derived data.
 run_generate_changed
 log "post-rebase generate --changed completed"
-run_validate
+run_source_and_editorial_publication
 log "post-rebase validate passed"
-run_consistency
-log "post-rebase consistency check passed"
+log "post-rebase normalized + editorial checks passed"
 
 post_out="$(run_generate_changed)"
 printf '%s\n' "${post_out}"
@@ -96,6 +102,7 @@ fi
 log "changed_clean after rebase"
 
 stage_generated
+stage_editorial
 if ! git diff --cached --quiet; then
   sync_msg="Daily TLDR generated sync $(date -u +'%Y-%m-%d %H:%M') UTC"
   git commit -m "${sync_msg}"

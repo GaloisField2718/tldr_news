@@ -79,6 +79,26 @@ stage_generated() {
   fi
 }
 
+stage_editorial() {
+  # Deliberately stage JSON contracts only; never binaries or arbitrary files.
+  if [[ -f generated/editorial/manifest.json ]]; then
+    git add -- generated/editorial/manifest.json
+  fi
+  if [[ -d generated/editorial ]]; then
+    while IFS= read -r -d '' artifact; do
+      git add -- "${artifact}"
+    done < <(find generated/editorial -mindepth 2 -maxdepth 2 -type f -name '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].json' -print0)
+  fi
+}
+
+run_editorial_latest() {
+  "${PYTHON_BIN}" -m tools.tldr_editorial generate --latest --output generated/editorial
+}
+
+run_editorial_consistency() {
+  "${PYTHON_BIN}" -m tools.tldr_editorial validate --all --output generated/editorial
+}
+
 run_generate_changed() {
   "${PYTHON_BIN}" -m tools.tldr_derive generate --changed --output generated
 }
@@ -107,4 +127,19 @@ run_validate() {
 
 run_consistency() {
   "${PYTHON_BIN}" -m tools.check_generated_consistency --output generated
+}
+
+run_source_and_editorial_publication() {
+  # Live editorial work is strictly after normalized validation. Provider/storage
+  # failures are represented by valid fallback artifacts and must not lose mail.
+  run_validate
+  log "validate --all --strict-privacy passed"
+  run_consistency
+  log "normalized structural consistency check passed"
+  # Expected OpenRouter/image/R2 failures are serialized by the generator and
+  # return zero. A non-zero result is internal/structural and must block push.
+  run_editorial_latest
+  log "editorial latest completed"
+  run_editorial_consistency
+  log "editorial structural consistency check passed"
 }

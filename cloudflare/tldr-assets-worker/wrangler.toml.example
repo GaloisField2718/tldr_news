@@ -1,0 +1,9 @@
+# Copy/update this only if your Worker or bucket uses different safe names.
+name = "tldr-assets"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "tldr-daily-assets"

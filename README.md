@@ -28,6 +28,10 @@ The `ids.txt` file is used to save each email's id to be able to not do again th
 
 Some tests and archives are still in the repo. 
 
+## Daily source products
+
+Normalized issue JSON is generated below `generated/issues`. The optional Daily editorial pipeline builds a bounded front page and can publish one validated immutable WebP to private Cloudflare R2 through a read-only Worker. Git stores only JSON contracts and image identity metadata—never image binaries. See [`docs/EDITORIAL_PIPELINE.md`](docs/EDITORIAL_PIPELINE.md) and [`docs/DAILY_PIPELINE.md`](docs/DAILY_PIPELINE.md).
+
 ## Automation
 
 To run automation I use `crontab -e` with the cronjob file content. 

@@ -32,6 +32,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install locked Python dependencies
+        run: |
+          python3 -m pip install pipenv
+          pipenv sync --system
+
       - name: Bash syntax check for orchestration scripts
         run: |
           bash -n automation.sh
@@ -46,11 +51,23 @@ jobs:
       - name: Run web redeployment workflow tests
         run: python3 -m unittest tests_deploy.test_web_redeploy
 
+      - name: Run offline editorial, image, and mocked R2 tests
+        run: python3 -m unittest discover -s tests_editorial -p "test_*.py"
+
+      - name: Test read-only Cloudflare Worker
+        working-directory: cloudflare/tldr-assets-worker
+        run: |
+          npm ci
+          npm test
+
       - name: Full-corpus strict privacy validation
         run: python3 -m tools.tldr_derive validate --all --strict-privacy
 
       - name: Generated structural consistency check
         run: python3 -m tools.check_generated_consistency --output generated
+
+      - name: Editorial structural consistency check (offline)
+        run: python3 -m tools.tldr_editorial validate --all --output generated/editorial
 
   deploy-web:
     needs: validate-derived-data
