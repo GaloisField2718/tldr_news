@@ -76,6 +76,21 @@ def _existing_illustration_hash(existing:dict,candidates:list,config:Config)->st
     facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
     return illustration_input_hash(brief=brief,sources=facts,image_model=config.image_model,prompt_version=version,image_config=cfg,profile=get_profile("production-v2") if version=="2.0.0" else None)
 
+def assess_active_illustration_compatibility(existing:dict,candidates:list,config:Config,*,active_prompt_version:str=ILLUSTRATION_PROMPT_VERSION,active_profile_id:str="production-v2",active_brief_schema_version:str="2.0.0")->dict:
+    reasons=[]
+    if existing.get("prompt_versions",{}).get("illustration")!=active_prompt_version:reasons.append("prompt_version_mismatch")
+    if active_profile_id is not None and existing.get("illustration_profile_id")!=active_profile_id:reasons.append("illustration_profile_mismatch")
+    vb=existing.get("plan",{}).get("visual_brief",{})
+    if active_brief_schema_version is not None and existing.get("visual_brief_schema_version")!=active_brief_schema_version:reasons.append("visual_brief_schema_mismatch")
+    if active_brief_schema_version is not None and vb.get("schema_version")!=active_brief_schema_version:reasons.append("incompatible_visual_brief")
+    if not reasons:
+        try:
+            current=_existing_illustration_hash(existing,candidates,config)
+            if current!=existing.get("illustration_input_hash"):reasons.append("semantic_hash_mismatch")
+        except (KeyError,TypeError,ValueError,EditorialError):reasons.append("semantic_hash_mismatch")
+    refresh=any(x in reasons for x in ("prompt_version_mismatch","illustration_profile_mismatch","visual_brief_schema_mismatch","incompatible_visual_brief"))
+    return {"active_contract_compatible":not reasons,"illustration_stale":bool(reasons),"editorial_refresh_required":refresh,"image_regeneration_required":bool(reasons) or existing.get("illustration",{}).get("status")!="ready","staleness_reasons":reasons}
+
 def generate(*,generated=Path("generated"),output=Path("generated/editorial"),date=None,latest=False,offline=False,dry_run=False,require_live=False,force=False,retry_image=False,config=None,client=None,storage=None)->dict:
     config=config or Config.from_env(); date=date or latest_date(generated)
     if require_live and (offline or dry_run or not config.enabled): raise EditorialError("live_generation_not_enabled")
@@ -85,12 +100,20 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     candidates=shortlist(load_date(generated,date),config.max_candidates); dos=dossier(candidates)
     editorial_hash=hash_parts(dos,config.editorial_model,EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION)
     existing=load_artifact(output,date)
-    # Clean no-op, including persisted failures (prevents every-minute retries).
-    illustration_stale=False
-    if existing and existing.get("editorial_input_hash")==editorial_hash and existing.get("illustration_input_hash"):
-        try: illustration_stale=_existing_illustration_hash(existing,candidates,config)!=existing.get("illustration_input_hash")
-        except (KeyError,TypeError): illustration_stale=True
-    same_editorial=bool(existing and existing.get("editorial_input_hash")==editorial_hash)
+    # Stored-contract validity and active-contract currency are distinct.
+    compatibility={"active_contract_compatible":True,"illustration_stale":False,"editorial_refresh_required":False,"image_regeneration_required":False,"staleness_reasons":[]}
+    same_editorial=bool(existing and existing.get("editorial_input_hash")==editorial_hash);historical_valid=False
+    if existing and same_editorial:
+        if existing.get("prompt_versions",{}).get("illustration")=="1.0.0":
+            historical_errors=validate_all(output,generated,None,"",config.max_candidates,None,None,12_000_000,20_000_000,2_000_000)
+            if historical_errors:raise EditorialError("existing_artifact_invalid")
+        historical_valid=True
+        migrate_status=existing.get("status") in ("ai_complete","disabled") or retry_image or force
+        if config.enabled and migrate_status:compatibility=assess_active_illustration_compatibility(existing,candidates,config)
+    illustration_stale=compatibility["illustration_stale"]
+    if dry_run and existing and same_editorial and illustration_stale:
+        refresh=compatibility["editorial_refresh_required"]
+        return {"date":date,"status":existing["status"],"written":False,"network_calls":0,"r2_calls":0,"historical_artifact_valid":historical_valid,**compatibility,"expected_editorial_calls":1 if refresh else 0,"expected_image_calls":1,"expected_r2_uploads":1,"noop":False}
     retryable=bool(retry_image and existing and existing.get("status")=="editorial_only" and existing.get("illustration_input_hash"))
     should_live=config.enabled and not offline and not dry_run
     disabled_upgrade=bool(should_live and existing and existing.get("status")=="disabled")
