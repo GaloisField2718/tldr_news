@@ -44,6 +44,9 @@ class RawPrivacyTests(unittest.TestCase):
   with self.assertRaises(RawPrivacyError):prepare_raw_source("https://example.com/private?api_key=DO_NOT_ECHO")
  def test_whitespace_normalization_is_deterministic_and_idempotent(self):
   raw="Header  \r\n\r\nArticle\t\r\n\r\n\r\n";once,_=prepare_raw_source(raw);twice,_=prepare_raw_source(once);self.assertEqual(once,"Header\n\nArticle\n");self.assertEqual(once,twice)
+ def test_mixed_leading_indentation_only_is_normalized(self):
+  raw=" \ttext\n  \t \ttext\n\ttext\ntext \t value\ntrailing \t\n";clean,_=prepare_raw_source(raw)
+  self.assertEqual(clean,"\ttext\n\t\ttext\n\ttext\ntext \t value\ntrailing\n");self.assertEqual(prepare_raw_source(clean)[0],clean)
  def test_explicit_sanitize_check_and_atomic_write(self):
   self.init_git();p=self.stage(text="Header  \n"+OBSERVED);before=p.read_bytes();out=io.StringIO()
   with contextlib.redirect_stdout(out):self.assertEqual(sanitize_paths([str(p)],check=True),1)
@@ -52,6 +55,11 @@ class RawPrivacyTests(unittest.TestCase):
   first=p.read_bytes()
   with contextlib.redirect_stdout(out):self.assertEqual(sanitize_paths([str(p)]),0)
   self.assertEqual(p.read_bytes(),first);self.assertIn(b"Header\n",first);self.assertNotIn("DO_NOT_ECHO",out.getvalue())
+ def test_sanitize_repairs_index_for_git_diff_check(self):
+  self.init_git();p=self.stage(text="# Header\n \titem\n  \t \titem\ntext \t value")
+  self.assertEqual(sanitize_paths([str(p)],check=True),1);self.assertEqual(sanitize_paths([str(p)]),0);self.git("add","--",str(p.relative_to(self.root)))
+  checked=subprocess.run(["git","diff","--cached","--check"],capture_output=True,text=True)
+  self.assertEqual(checked.returncode,0,msg=checked.stdout+checked.stderr);self.assertNotIn("DO_NOT_ECHO",checked.stdout+checked.stderr)
  def test_sanitize_refuses_symlink(self):
   self.init_git();target=self.root/"target.md";target.write_text("safe\n");link=self.root/"TLDR"/"link.md";link.parent.mkdir();link.symlink_to(target)
   err=io.StringIO()
