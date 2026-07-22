@@ -2,7 +2,7 @@ from __future__ import annotations
 import json,tempfile,unittest
 from unittest.mock import patch
 from pathlib import Path
-from tools.tldr_podcast import DEFAULT,FALLBACK,PodcastError,date_lock,editorial_request,estimate_cost,expected_open_close,extract_json_object,initial_state,load_state,normalize_script,podcast_key,preflight,profile_from_args,upload_audio,validate_script
+from tools.tldr_podcast import DEFAULT,FALLBACK,PodcastError,date_lock,editorial_request,estimate_cost,expected_open_close,extract_json_object,generate_script,initial_state,language_scope,load_state,normalize_script,podcast_key,preflight,profile_from_args,upload_audio,validate_script
 
 def source(root:Path,date="2026-07-21"):
  p=root/"generated/editorial/2026";p.mkdir(parents=True,exist_ok=True);f=p/f"{date}.json";f.write_text(json.dumps({"date":date,"status":"ai_complete","plan":{"lead":{"article_id":"a","issue_id":"i"},"visual_brief":{"central_subject":"distribution changes through conversational search mechanisms"}}}));return f
@@ -52,6 +52,18 @@ class PodcastTests(unittest.TestCase):
   h='sha256:'+'a'*64;raw=script(h);raw['publication_date']=20260721;raw['locale']='en_US';raw['extra']='drop'
   for t in raw['turns']:t.pop('turn_id');t['pause_after_ms']='250.0'
   original=[t['text'] for t in raw['turns']];value=extract_json_object('```json\n'+json.dumps(raw)+'\n```');normalized,changes=normalize_script(value,'2026-07-21',h,'en');self.assertEqual([t['text'] for t in normalized['turns']],original);self.assertEqual(normalized['publication_date'],'2026-07-21');self.assertEqual(normalized['locale'],'en-US');self.assertEqual(normalized['turns'][0]['turn_id'],'t001');self.assertNotIn('extra',normalized);self.assertTrue(changes)
+ def test_future_oversized_script_uses_bounded_third_compression_call(self):
+  h='sha256:'+'a'*64;valid=script(h);oversized=json.loads(json.dumps(valid))
+  for t in oversized['turns']:t['text']+=' redundant secondary detail that must be removed for the concise edition'
+  oversized['estimated_duration_seconds']=500;docs=[oversized,oversized,valid];calls=[]
+  class R:
+   status_code=200
+   def __init__(self,d):self.d=d
+   def json(self):return {'choices':[{'message':{'content':json.dumps(self.d)}}]}
+  def post(*a,**k):calls.append(k['json']['messages'][0]['content']);return R(docs[len(calls)-1])
+  state={'editorial_attempts':0,'request_attempts':0,'estimated_cost_usd':0.0,'measured_cost_usd':None,'retries':0};source_doc={'plan':{'visual_brief':{'central_subject':'reported change works because mechanism changes distribution'}}}
+  with language_scope('en'):out=generate_script(post,'key',source_doc,h,'2026-07-21',state,1)
+  self.assertEqual((len(calls),state['editorial_attempts']), (3,3));self.assertIn('Concise rewrite only',calls[2]);self.assertEqual([t['text'] for t in out['turns']],[t['text'] for t in valid['turns']])
  def test_default_fallback_and_cost(self):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):

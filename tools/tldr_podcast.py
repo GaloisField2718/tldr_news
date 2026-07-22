@@ -174,7 +174,7 @@ def editorial_request(post:Callable[...,Any],key:str,prompt:str)->str:
  try:return r.json()["choices"][0]["message"]["content"]
  except (KeyError,IndexError,TypeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
 def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float,persist:Callable[[],None]|None=None,diagnostic_dir:Path|None=None)->dict[str,Any]:
- prompt=editorial_prompt(source,digest,d);used=int(state.get("editorial_attempts",0));language=os.getenv("TLDR_PODCAST_LANGUAGE","en");limit=3 if state.get("allow_one_normalized_fresh_call") else 2
+ prompt=editorial_prompt(source,digest,d);used=int(state.get("editorial_attempts",0));language=os.getenv("TLDR_PODCAST_LANGUAGE","en");limit=3
  if used:prompt+="\nThis is a bounded corrected attempt. Satisfy every structured schema, date, locale, duration, grounding and balance requirement."
  for attempt in range(used,limit):
   projected_cost(state,.10,ceiling);state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
@@ -186,8 +186,11 @@ def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:s
    if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-normalization-{attempt+1}.json",{"changes":changes})
    validate_script(s,digest);validate_grounding(s,source);state["normalizations"]=changes;return s
   except PodcastError as exc:
-   if attempt or "response_invalid" in str(exc):raise
-   state["retries"]+=1;prompt+="\nRepair the previous JSON to satisfy every schema and balance rule; return JSON only."
+   if attempt>=limit-1 or "response_invalid" in str(exc):raise
+   if attempt==1 and "duration_invalid" not in str(exc):raise
+   state["retries"]+=1
+   if attempt==1:prompt=editorial_prompt(source,digest,d)+"\nConcise rewrite only: preserve every essential source fact, remove repetition and secondary detail, add no claims, use 4800-5800 spoken characters and 285-360 seconds. Return strict schema JSON only. Oversized draft:\n"+raw
+   else:prompt+="\nRepair the previous JSON to satisfy every schema and balance rule; add no claims; return JSON only. Previous draft:\n"+raw
  raise PodcastError("podcast_script_generation_failed")
 def tts_turn(post:Callable[...,Any],key:str,candidate:Candidate,turn:dict[str,Any],rd:Path,state:dict[str,Any],ceiling:float)->dict[str,Any]:
  if state.get("tts_attempts",0)>=2*len(state.get("planned_turns") or []):raise PodcastError("podcast_tts_attempt_budget_exhausted")
@@ -279,6 +282,11 @@ def preflight(root:Path,d:str,cost:float)->dict[str,Any]:
  source,digest=load_source(root,d);p=profile_from_args(False,cost);rd=runtime_dir(d);target=5115;tts=estimate_cost(DEFAULT,target)
  if .20+tts>cost:raise PodcastError("podcast_estimated_cost_exceeds_ceiling")
  return {"ready":True,"paid_calls":0,"publication_date":d,"source_artifact_sha256":digest,"languages":["en-US","fr-FR"],"selected_model":DEFAULT.model,"voices":DEFAULT.voices,"planned_editorial_requests":2,"maximum_repairs":2,"planned_french_canaries":2,"planned_tts_turns_per_language":"24-36","maximum_tts_attempts_per_language":72,"target_duration_seconds":PREFERRED_DURATION,"conservative_editorial_cost_usd_per_language":.20,"conservative_tts_cost_usd_per_language":tts,"total_ceiling_usd":2.0,"private_runtime_directory":str(rd),"private_mp3_paths":{"en":str(rd/"en/episode.mp3"),"fr":str(rd/"fr/episode.mp3")},"r2_target_patterns":{"en":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/en/<sha256>.mp3","fr":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/fr/<sha256>.mp3"},"podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":False}
+def install_local_script(root:Path,d:str,language:str,script:dict[str,Any],origin:str="local_editorial_authoring")->dict[str,Any]:
+ source,digest=load_source(root,d);profile=profile_from_args(False,1.0)
+ with language_scope(language):
+  rd,state=load_state(root,d,digest,profile);validate_script(script,digest);validate_grounding(script,source);script_file=rd/"script.json";_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];state["script_origin"]=origin;save_state(rd,state);return state
+
 def generate(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post,cost:float=1.0)->dict[str,Any]:
  source,digest=load_source(root,d);profile=profile_from_args(False,cost);rd,state=load_state(root,d,digest,profile)
  with date_lock(rd):
