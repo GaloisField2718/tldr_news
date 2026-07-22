@@ -5,19 +5,7 @@ from pathlib import Path
 from dataclasses import dataclass
 from .candidates import Candidate
 from .core import EditorialError,WEBP_METHOD,WEBP_QUALITY
-
-PREAMBLE="""Create a premium editorial illustration for a serious technology newspaper.
-
-The image is an editorial illustration, not documentary photography.
-Use one immediately readable focal subject.
-Use a strong, restrained composition with controlled contrast.
-Use sophisticated but understandable visual symbolism.
-Leave useful negative space around the focal subject.
-Do not render words, captions, headlines, logos, trademarks, interfaces, screenshots, charts, watermarks, or newspaper typography.
-Do not fabricate visible factual evidence.
-Do not imitate a named or living illustrator.
-Do not create a collage of unrelated news stories.
-The image must remain readable at newspaper-column and social-card sizes."""
+from .illustration_prompts import BASELINE_PROFILE,PromptProfile
 
 @dataclass(frozen=True)
 class ValidatedImage:
@@ -29,8 +17,8 @@ class ValidatedImage:
     @property
     def bytes(self)->int: return len(self.data)
 
-def assemble_prompt(brief:dict,source_candidates:list[Candidate])->str:
-    lines=[PREAMBLE,"","Source stories (use only these facts):"]
+def assemble_prompt(brief:dict,source_candidates:list[Candidate],profile:PromptProfile=BASELINE_PROFILE)->str:
+    lines=[profile.preamble,"","Source stories (use only these facts):"]
     for c in source_candidates: lines += [f"Title: {c.title}",f"Summary: {c.summary}"]
     lines += ["",f"Central subject: {brief['central_subject']}",f"Visual metaphor: {brief['visual_metaphor']}",f"Composition: {brief['composition']}",
               "Forbidden elements: "+(", ".join(brief["forbidden_elements"]) or "none beyond the fixed restrictions")]

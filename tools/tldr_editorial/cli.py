@@ -2,6 +2,7 @@ from __future__ import annotations
 import argparse,json,sys
 from pathlib import Path
 from .artifacts import validate_all
+from .calibration import calibrate_images
 from .config import Config
 from .core import EditorialError
 from .generator import generate
@@ -15,6 +16,7 @@ def parser():
     for x in ("force","retry-image","dry-run","offline","require-live"): g.add_argument("--"+x,action="store_true")
     v=sub.add_parser("validate"); v.add_argument("--all",action="store_true",required=True); v.add_argument("--output",type=Path,default=Path("generated/editorial")); v.add_argument("--generated",type=Path,default=Path("generated")); v.add_argument("--verify-storage",action="store_true")
     s=sub.add_parser("storage-report"); s.add_argument("--output",type=Path,default=Path("generated/editorial")); s.add_argument("--list-r2",action="store_true")
+    c=sub.add_parser("calibrate-images");c.add_argument("--date",required=True);c.add_argument("--profiles",required=True);c.add_argument("--output-dir",type=Path,required=True);c.add_argument("--max-images",type=int,required=True);c.add_argument("--samples-per-profile",type=int,default=1);c.add_argument("--require-live",action="store_true");c.add_argument("--acknowledge-cost",action="store_true")
     return p
 
 def main(argv=None):
@@ -23,6 +25,10 @@ def main(argv=None):
         if a.command=="generate":
             result=generate(generated=a.generated,output=a.output,date=a.date,latest=a.latest or not a.date,offline=a.offline,dry_run=a.dry_run,require_live=a.require_live,force=a.force,retry_image=a.retry_image)
             print(json.dumps(result,sort_keys=True)); return 0
+        if a.command=="calibrate-images":
+            ids=[x.strip() for x in a.profiles.split(",") if x.strip()]
+            result=calibrate_images(date=a.date,profile_ids=ids,output_dir=a.output_dir,max_images=a.max_images,samples_per_profile=a.samples_per_profile,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
+            print(json.dumps(result,sort_keys=True));return 0 if result["success"] else 1
         if a.command=="validate":
             cfg=Config.from_env(); storage=R2Storage(cfg) if a.verify_storage else None
             errors=validate_all(a.output,a.generated,storage,cfg.r2_public_base_url,cfg.max_candidates,cfg.editorial_model,cfg.image_model,cfg.max_provider_image_bytes,cfg.max_image_pixels,cfg.max_image_bytes)
