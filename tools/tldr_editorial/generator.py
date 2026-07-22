@@ -176,10 +176,12 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     if failure and not valid_ai: status="deterministic_fallback"
     if not config.enabled: status="disabled"
     total=float(editorial_usage.get("cost_usd",0))+float(image_usage.get("cost_usd",0))
+    is_v2=resolved["visual_brief"].get("schema_version")=="2.0.0"
     artifact={"schema_version":SCHEMA_VERSION,"generator_version":GENERATOR_VERSION,"date":date,"status":status,"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"generated_at":_now(),
-      "prompt_versions":{"editorial":EDITORIAL_PROMPT_VERSION,"illustration":ILLUSTRATION_PROMPT_VERSION},"models":{"editorial":config.editorial_model,"illustration":config.image_model},"plan":resolved,"illustration":ill,
+      "prompt_versions":{"editorial":EDITORIAL_PROMPT_VERSION,"illustration":ILLUSTRATION_PROMPT_VERSION if is_v2 else "1.0.0"},"models":{"editorial":config.editorial_model,"illustration":config.image_model},"plan":resolved,"illustration":ill,
       "usage":{"editorial":editorial_usage,"illustration":image_usage,"total_cost_usd":total},
       "generation":{"attempt_count":1 if live else 0,"editorial_request_id":erid,"illustration_request_id":irid,"final_prompt_sha256":sha256_bytes(final_prompt.encode()) if final_prompt else None,"final_prompt":final_prompt,"failure_code":failure}}
+    if is_v2:artifact.update(illustration_profile_id="production-v2",visual_brief_schema_version="2.0.0")
     written=False
     if not dry_run: written=any(write_artifact(output,date,artifact))
     return {"date":date,"status":status,"illustration_status":ill["status"],"written":written,"network_calls":calls,"r2_calls":r2calls,"dossier_bytes":dossier_size(candidates),"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"dry_run":dry_run}
