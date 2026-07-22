@@ -58,7 +58,7 @@ def source_facts(source:dict[str,Any])->str:
  brief=source.get("plan",{}).get("visual_brief",{});return "\n".join(str(brief.get(k,"")) for k in ("central_subject","editorial_idea","visual_relationship","composition"))[:12000]
 def validate_script(script:dict[str,Any],source_digest:str)->dict[str,Any]:
  required={"schema_version","publication_date","episode_title","summary","source_artifact_sha256","estimated_duration_seconds","speakers","turns"}
- if set(script)!=required or script["schema_version"]!="1.0.0" or script["source_artifact_sha256"]!=source_digest:raise PodcastError("podcast_script_schema_invalid")
+ if set(script)!=required or script.get("schema_version")!="1.0.0" or script.get("source_artifact_sha256")!=source_digest or not isinstance(script.get("publication_date"),str) or not isinstance(script.get("estimated_duration_seconds"),int):raise PodcastError("podcast_script_schema_invalid")
  turns=script["turns"]
  if not isinstance(turns,list) or not 24<=len(turns)<=36 or set(script["speakers"])!={"speaker_a","speaker_b"}:raise PodcastError("podcast_script_schema_invalid")
  opener,closer=expected_open_close(script["publication_date"])
@@ -118,10 +118,12 @@ def editorial_request(post:Callable[...,Any],key:str,prompt:str)->dict[str,Any]:
  r=post(CHAT_URL,headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},json=body,timeout=120)
  if not 200<=r.status_code<300:raise PodcastError(f"podcast_editorial_http_{r.status_code}")
  return extract_script(r.json())
-def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float)->dict[str,Any]:
- projected_cost(state,.10,ceiling);prompt=editorial_prompt(source,digest,d)
- for attempt in range(2):
-  state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
+def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float,persist:Callable[[],None]|None=None)->dict[str,Any]:
+ prompt=editorial_prompt(source,digest,d);used=int(state.get("editorial_attempts",0))
+ if used:prompt+="\nThis is the single bounded repair attempt. Correct all schema, date, duration, grounding and balance requirements; return JSON only."
+ for attempt in range(used,2):
+  projected_cost(state,.10,ceiling);state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
+  if persist:persist()
   try:s=editorial_request(post,key,prompt);validate_script(s,digest);validate_grounding(s,source);return s
   except PodcastError as exc:
    if attempt or "response_invalid" in str(exc):raise
@@ -223,7 +225,7 @@ def generate(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post,cost:f
   script_file=rd/"script.json"
   if script_file.exists():script=json.loads(script_file.read_text());validate_script(script,digest);validate_grounding(script,source)
   else:
-   script=generate_script(post,key,source,digest,d,state,cost);_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];save_state(rd,state)
+   script=generate_script(post,key,source,digest,d,state,cost,lambda:save_state(rd,state));_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];save_state(rd,state)
   for turn in script["turns"]:tts_turn(post,key,profile.candidate,turn,rd,state,cost);save_state(rd,state)
   final=rd/"episode.mp3" if state["assembly_status"]=="complete" else assemble_episode(rd,script,state);save_state(rd,state);return {"private_audio":str(final),"state":state}
 def verify_public_audio(get:Callable[...,Any],url:str,metrics:dict[str,Any])->None:
