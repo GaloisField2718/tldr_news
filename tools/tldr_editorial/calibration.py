@@ -9,6 +9,7 @@ from .candidates import Candidate,load_date
 from .config import Config
 from .core import EditorialError
 from .image import assemble_prompt,decode_image,normalize_raster
+from .calibration_stories import CalibrationStory,get_story,resolve_story
 from .illustration_concepts import CONCEPT_SCHEMA_VERSION,ConceptProfile,get_concept
 from .illustration_prompts import PROFILE_SCHEMA_VERSION,PromptProfile,get_profile
 from .openrouter import OpenRouterClient
@@ -51,6 +52,10 @@ def assemble_experimental_prompt(context:CalibrationContext,style:PromptProfile,
  if concept.required_source_references and not set(concept.required_source_references).issubset(refs):raise EditorialError("calibration_concept_source_requirement_missing")
  lines=[style.preamble,"","Experimental editorial concept:",f"Factual rationale: {concept.factual_rationale}",f"Central subject: {concept.central_subject_override}",f"Visual metaphor: {concept.visual_metaphor_override}",f"Composition: {concept.composition_override}","Concept-specific forbidden elements: "+(", ".join(concept.forbidden_elements) or "none"),"",AMD_ANTI_DEFAULT_CLAUSE,"","Source stories (use only these exact facts):"]
  for source in context.sources:lines.extend((f"Title: {source.title}",f"Summary: {source.summary}"))
+ return "\n".join(lines).strip()+"\n"
+
+def assemble_story_prompt(story:CalibrationStory,source:Candidate,style:PromptProfile)->str:
+ lines=[style.preamble,"","Calibration editorial concept:",f"Factual rationale: {story.factual_rationale}",f"Central subject: {story.central_subject}",f"Visual metaphor: {story.visual_metaphor}",f"Composition: {story.composition}","Concept-specific forbidden elements: "+", ".join(story.forbidden_elements),"",AMD_ANTI_DEFAULT_CLAUSE,"","Source stories (use only these exact facts):",f"Title: {source.title}",f"Summary: {source.summary}"]
  return "\n".join(lines).strip()+"\n"
 
 def _git_root()->Path:
@@ -179,6 +184,62 @@ def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile
   except EditorialError as exc:record.update(status="failed",failure_category=str(exc));failed=True
  _write_outputs(output,context,records,mapping)
  return {"date":context.date,"candidate_count":len(records),"ready_count":sum(x["status"]=="ready" for x in records),"failed_count":sum(x["status"]=="failed" for x in records),"network_calls":network_calls,"editorial_calls":0,"r2_calls":0,"live":live,"success":not failed,"output_dir":str(output)}
+
+def _story_gallery(groups:list[dict])->str:
+ sections=[]
+ for group in groups:
+  source=group["source"];cards=[]
+  for record in group["candidates"]:
+   media=f'<button class="image-button" type="button" aria-label="Enlarge {html.escape(record["candidate_id"])}"><img src="{html.escape(record["image_file"])}" alt="Anonymous calibration candidate"></button>' if record.get("image_file") else '<div class="placeholder">No image generated</div>'
+   cards.append(f'<article>{media}<h3>{html.escape(record["candidate_id"])}</h3></article>')
+  sections.append(f'<section class="story"><h2>{html.escape(group["story_group_id"])}</h2><div class="source"><p><strong>{html.escape(source.title)}</strong><br>{html.escape(source.summary)}</p></div><div class="grid">{"".join(cards)}</div></section>')
+ return """<!doctype html><meta charset="utf-8"><title>Blind illustration calibration</title><style>body{font:16px system-ui;margin:2rem auto;max-width:1400px;background:#eee;color:#111;padding:0 1rem}.story{margin:2rem 0}.source,article{background:white;padding:1rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}.image-button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}img,.placeholder{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#ddd}.placeholder{display:grid;place-items:center}h3{font-size:1rem;margin:.75rem 0 0}dialog{border:0;padding:0;background:#111;max-width:95vw}dialog img{width:auto;max-width:95vw;max-height:92vh;aspect-ratio:auto;object-fit:contain}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style><h1>Blind illustration calibration</h1>"""+"".join(sections)+"""<dialog id="zoom"><img alt="Enlarged anonymous candidate"></dialog><script>const d=document.querySelector('#zoom'),z=d.querySelector('img');document.querySelectorAll('.image-button img').forEach(i=>i.parentElement.addEventListener('click',()=>{z.src=i.src;d.showModal()}));d.addEventListener('click',()=>d.close());</script>\n"""
+
+def calibrate_story_images(*,story_combinations:Sequence[tuple[str,str]],output_dir:Path,max_images:int,samples_per_combination:int=1,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),config:Config|None=None,client=None)->dict:
+ if not story_combinations:raise EditorialError("calibration_story_combinations_required")
+ if len(set(story_combinations))!=len(story_combinations):raise EditorialError("calibration_duplicate_story_combination")
+ if not 1<=samples_per_combination<=3:raise EditorialError("calibration_samples_per_combination_invalid")
+ resolved=[]
+ for story_id,style_id in story_combinations:
+  try:story=get_story(story_id)
+  except KeyError as exc:raise EditorialError("calibration_story_unknown") from exc
+  try:style=get_profile(style_id)
+  except KeyError as exc:raise EditorialError("calibration_story_style_unknown") from exc
+  resolved.append((story,style,resolve_story(story,generated)))
+ total=len(resolved)*samples_per_combination
+ if max_images<1 or total>max_images:raise EditorialError("calibration_image_limit")
+ if require_live!=acknowledge_cost:raise EditorialError("calibration_live_flags_required")
+ live=require_live and acknowledge_cost
+ if live and os.getenv("CI"):raise EditorialError("calibration_live_forbidden_in_ci")
+ _require_clean();output=_prepare_output(output_dir,_git_root());cfg=config or Config.from_env()
+ if live:cfg.require_openrouter()
+ story_ids=list(dict.fromkeys(story.story_id for story,style,source in resolved));assignments=[(story,style,source,sample) for story,style,source in resolved for sample in range(1,samples_per_combination+1)];ids=[]
+ for _ in assignments:
+  value="candidate-"+secrets.token_hex(4)
+  while value in ids:value="candidate-"+secrets.token_hex(4)
+  ids.append(value)
+ mapping={cid:{"story_id":story.story_id,"style_profile_id":style.profile_id,"sample_index":sample} for cid,(story,style,source,sample) in zip(ids,assignments)};records=[];failed=False;network_calls=0;image_client=(client or OpenRouterClient(cfg)) if live else None
+ for cid,(story,style,source,sample) in zip(ids,assignments):
+  prompt=assemble_story_prompt(story,source,style);record={"candidate_id":cid,"story_group_id":"Story "+chr(65+story_ids.index(story.story_id)),"status":"planned" if not live else "not_attempted","image_file":None,"sha256":None,"width":None,"height":None,"bytes":None,"prompt_sha256":"sha256:"+hashlib.sha256(prompt.encode()).hexdigest(),"model":cfg.image_model,"usage":{"prompt_tokens":0,"completion_tokens":0,"total_tokens":0,"cost_usd":0.0}};records.append(record)
+  if not live or failed:continue
+  try:
+   network_calls+=1;result=image_client.image(prompt);raw,media=decode_image(result.value,result.media_type);fd,tmp=tempfile.mkstemp(prefix="tldr-calibration-provider-",suffix=".raster")
+   try:
+    os.fchmod(fd,0o600)
+    with os.fdopen(fd,"wb") as handle:handle.write(raw);handle.flush();os.fsync(handle.fileno())
+    image=normalize_raster(Path(tmp),media,cfg.max_provider_image_bytes,cfg.max_image_pixels,cfg.max_image_bytes)
+   finally:
+    try:os.unlink(tmp)
+    except FileNotFoundError:pass
+   filename=cid+".webp";_atomic_bytes(output/filename,image.data);record.update(status="ready",image_file=filename,sha256=image.sha256,width=image.width,height=image.height,bytes=image.bytes,usage=result.usage)
+  except EditorialError as exc:record.update(status="failed",failure_category=str(exc));failed=True
+ groups=[];order=[];unique_stories=[]
+ for story,style,source in resolved:
+  if story.story_id not in {x[0].story_id for x in unique_stories}:unique_stories.append((story,source))
+ for index,(story,source) in enumerate(unique_stories):
+  members=[r for r in records if mapping[r["candidate_id"]]["story_id"]==story.story_id];secrets.SystemRandom().shuffle(members);groups.append({"story_group_id":"Story "+chr(65+index),"source":source,"candidates":members});order.extend(members)
+ manifest={"schema_version":CALIBRATION_SCHEMA_VERSION,"story_schema_version":"1.0.0","model":cfg.image_model,"story_groups":[{"story_group_id":x["story_group_id"],"source_context":[{"title":x["source"].title,"summary":x["source"].summary}],"candidates":x["candidates"]} for x in groups]};score={"schema_version":CALIBRATION_SCHEMA_VERSION,"rubric":RUBRIC,"scores":[{"candidate_id":x["candidate_id"],"hard_rejection":False,"hard_rejection_reasons":[],"ratings":{c["id"]:None for c in RUBRIC["weighted_criteria"]},"first_impression":"","strongest_quality":"","strongest_weakness":"","feels_human_directed":None,"advance_to_round_two":None} for x in order]};_json(output/"manifest.json",manifest);_json(output/"blind-map.json",{"schema_version":CALIBRATION_SCHEMA_VERSION,"mapping":mapping});_json(output/"score-template.json",score);_atomic_bytes(output/"gallery.html",_story_gallery(groups).encode(),0o600)
+ return {"candidate_count":len(records),"ready_count":sum(x["status"]=="ready" for x in records),"failed_count":sum(x["status"]=="failed" for x in records),"network_calls":network_calls,"editorial_calls":0,"r2_calls":0,"live":live,"success":not failed,"output_dir":str(output)}
 
 def calibrate_images(*,date:str,profile_ids:Sequence[str]|None=None,output_dir:Path,max_images:int,concept_ids:Sequence[str]|None=None,combinations:Sequence[tuple[str,str]]|None=None,samples_per_combination:int=1,samples_per_profile:int|None=None,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),editorial_output:Path=Path("generated/editorial"),config:Config|None=None,client=None,context:CalibrationContext|None=None)->dict:
  if not date:raise EditorialError("calibration_date_required")

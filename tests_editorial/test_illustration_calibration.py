@@ -1,14 +1,15 @@
 from __future__ import annotations
 import base64,hashlib,io,json,os,subprocess,tempfile,unittest
-from dataclasses import FrozenInstanceError
+from dataclasses import FrozenInstanceError,replace
 from pathlib import Path
 from unittest.mock import patch
 from PIL import Image
-from tools.tldr_editorial.calibration import AMD_ANTI_DEFAULT_CLAUSE,CalibrationContext,assemble_experimental_prompt,calibrate_images,parse_combinations,read_blind_mapping,run_calibration
+from tools.tldr_editorial.calibration import AMD_ANTI_DEFAULT_CLAUSE,CalibrationContext,assemble_experimental_prompt,assemble_story_prompt,calibrate_images,calibrate_story_images,parse_combinations,read_blind_mapping,run_calibration
 from tools.tldr_editorial.cli import main as cli_main
 from tools.tldr_editorial.candidates import Candidate
 from tools.tldr_editorial.core import EditorialError
 from tools.tldr_editorial.image import assemble_prompt,decode_image,normalize_raster
+from tools.tldr_editorial.calibration_stories import STORIES,resolve_story
 from tools.tldr_editorial.illustration_concepts import CONCEPT_PROFILES,ConceptProfile
 from tools.tldr_editorial.illustration_prompts import BASELINE_PREAMBLE,BASELINE_PROFILE,PROMPT_PROFILES,PromptProfile,SHARED_FACTUAL_RESTRICTIONS
 from tools.tldr_editorial.openrouter import Result
@@ -115,6 +116,19 @@ class CalibrationTests(unittest.TestCase):
   with self.assertRaisesRegex(EditorialError,"calibration_combination_mode_conflict"):calibrate_images(date=context().date,concept_ids=["integrated-stack-v1"],combinations=valid,output_dir=self.output("concept-conflict"),max_images=1,config=config(),context=context())
   with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_images(date=context().date,combinations=valid*1+[('constructed-collage-v1','integrated-stack-v1')],output_dir=self.output("pair-limit"),max_images=3,samples_per_combination=2,config=config(),context=context())
   with patch("sys.stderr",new=io.StringIO()):self.assertEqual(cli_main(["calibrate-images","--date",context().date,"--profiles","print-graphic-v1","--concepts","integrated-stack-v1","--output-dir",str(self.output("legacy-conflict")),"--max-images","1"]),2)
+ def test_registered_calibration_stories_resolve_exactly_and_detect_drift(self):
+  generated=Path(__file__).resolve().parents[1]/"generated";self.assertEqual(set(STORIES),{"secure-agent-sandboxes-v1","workers-automation-threshold-v1"})
+  for story in STORIES.values():
+   source=resolve_story(story,generated);self.assertEqual((source.issue_id,source.article_id),(story.issue_id,story.article_id));self.assertEqual(source.title,story.expected_title);self.assertIn(source.summary,assemble_story_prompt(story,source,PROMPT_PROFILES["print-graphic-v1"]))
+  with self.assertRaisesRegex(EditorialError,"calibration_story_title_drift"):resolve_story(replace(next(iter(STORIES.values())),expected_title="drift"),generated)
+  with self.assertRaisesRegex(EditorialError,"calibration_story_summary_drift"):resolve_story(replace(next(iter(STORIES.values())),expected_summary_sha256="sha256:deadbeef"),generated)
+ def test_story_combinations_are_grouped_blind_complete_and_zero_network(self):
+  pairs=[("secure-agent-sandboxes-v1","constructed-collage-v1"),("secure-agent-sandboxes-v1","print-graphic-v1"),("workers-automation-threshold-v1","constructed-collage-v1"),("workers-automation-threshold-v1","print-graphic-v1")];out=self.output();client=ImageClient();generated=Path(__file__).resolve().parents[1]/"generated";result=calibrate_story_images(story_combinations=pairs,output_dir=out,max_images=4,generated=generated,config=config(),client=client)
+  self.assertEqual(result["candidate_count"],4);self.assertEqual((result["network_calls"],result["editorial_calls"],result["r2_calls"]),(0,0,0));self.assertEqual((client.image_calls,client.editorial_calls),(0,0));manifest=json.loads((out/"manifest.json").read_text());mapping=json.loads((out/"blind-map.json").read_text())["mapping"];gallery=(out/"gallery.html").read_text();public=gallery+(out/"manifest.json").read_text();records=[x for group in manifest["story_groups"] for x in group["candidates"]]
+  self.assertEqual(set(mapping),{x["candidate_id"] for x in records});self.assertTrue(all(set(x)=={"story_id","style_profile_id","sample_index"} for x in mapping.values()));self.assertEqual({(x["story_id"],x["style_profile_id"]) for x in mapping.values()},set(pairs));self.assertEqual(len(manifest["story_groups"]),2);self.assertTrue(all(len(x["candidates"])==2 for x in manifest["story_groups"]));self.assertIn("Story A",gallery);self.assertIn("Story B",gallery);self.assertIn("grid-template-columns:repeat(2",gallery);self.assertTrue(all(token not in public for pair in pairs for token in pair));self.assertNotIn("sample_index",public);self.assertFalse(list(out.glob("*.webp")))
+  hashes={(v["story_id"],v["style_profile_id"]):next(x["prompt_sha256"] for x in records if x["candidate_id"]==cid) for cid,v in mapping.items()};self.assertNotEqual(hashes[pairs[0]],hashes[pairs[1]]);self.assertNotEqual(hashes[pairs[0]],hashes[pairs[2]])
+  with self.assertRaisesRegex(EditorialError,"calibration_duplicate_story_combination"):calibrate_story_images(story_combinations=pairs[:1]*2,output_dir=self.output("story-dup"),max_images=2,generated=generated,config=config())
+  with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_story_images(story_combinations=pairs,output_dir=self.output("story-limit"),max_images=3,generated=generated,config=config())
  def test_live_requires_both_flags_ci_is_forbidden_and_limit_is_enforced(self):
   ids=["baseline-v1"]
   for flags in ({"require_live":True},{"acknowledge_cost":True}):

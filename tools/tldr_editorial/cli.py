@@ -2,7 +2,7 @@ from __future__ import annotations
 import argparse,json,sys
 from pathlib import Path
 from .artifacts import validate_all
-from .calibration import calibrate_images,parse_combinations
+from .calibration import calibrate_images,calibrate_story_images,parse_combinations
 from .config import Config
 from .core import EditorialError
 from .generator import generate
@@ -16,7 +16,7 @@ def parser():
     for x in ("force","retry-image","dry-run","offline","require-live"): g.add_argument("--"+x,action="store_true")
     v=sub.add_parser("validate"); v.add_argument("--all",action="store_true",required=True); v.add_argument("--output",type=Path,default=Path("generated/editorial")); v.add_argument("--generated",type=Path,default=Path("generated")); v.add_argument("--verify-storage",action="store_true")
     s=sub.add_parser("storage-report"); s.add_argument("--output",type=Path,default=Path("generated/editorial")); s.add_argument("--list-r2",action="store_true")
-    c=sub.add_parser("calibrate-images");c.add_argument("--date",required=True);styles=c.add_mutually_exclusive_group();styles.add_argument("--style-profiles");styles.add_argument("--profiles");c.add_argument("--concepts");c.add_argument("--combinations");c.add_argument("--output-dir",type=Path,required=True);c.add_argument("--max-images",type=int,required=True);samples=c.add_mutually_exclusive_group();samples.add_argument("--samples-per-combination",type=int);samples.add_argument("--samples-per-profile",type=int);c.add_argument("--require-live",action="store_true");c.add_argument("--acknowledge-cost",action="store_true")
+    c=sub.add_parser("calibrate-images");c.add_argument("--date");styles=c.add_mutually_exclusive_group();styles.add_argument("--style-profiles");styles.add_argument("--profiles");c.add_argument("--concepts");c.add_argument("--combinations");c.add_argument("--story-combinations");c.add_argument("--output-dir",type=Path,required=True);c.add_argument("--max-images",type=int,required=True);samples=c.add_mutually_exclusive_group();samples.add_argument("--samples-per-combination",type=int);samples.add_argument("--samples-per-profile",type=int);c.add_argument("--require-live",action="store_true");c.add_argument("--acknowledge-cost",action="store_true")
     return p
 
 def main(argv=None):
@@ -27,10 +27,20 @@ def main(argv=None):
             print(json.dumps(result,sort_keys=True)); return 0
         if a.command=="calibrate-images":
             style_value=a.style_profiles or a.profiles
-            if a.combinations is not None and (style_value is not None or a.concepts is not None):raise EditorialError("calibration_combination_mode_conflict")
-            if a.profiles is not None and a.concepts is not None:raise EditorialError("calibration_legacy_profiles_concepts_conflict")
-            ids=[x.strip() for x in style_value.split(",") if x.strip()] if style_value is not None else None;concept_ids=[x.strip() for x in a.concepts.split(",") if x.strip()] if a.concepts is not None else None;combinations=parse_combinations(a.combinations) if a.combinations is not None else None
-            result=calibrate_images(date=a.date,profile_ids=ids,concept_ids=concept_ids,combinations=combinations,output_dir=a.output_dir,max_images=a.max_images,samples_per_combination=a.samples_per_combination if a.samples_per_combination is not None else 1,samples_per_profile=a.samples_per_profile,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
+            if a.story_combinations is not None:
+                if a.date or style_value is not None or a.concepts is not None or a.combinations is not None or a.samples_per_profile is not None:raise EditorialError("calibration_story_mode_conflict")
+                pairs=[]
+                for entry in a.story_combinations.split(","):
+                    parts=[x.strip() for x in entry.split("@")]
+                    if len(parts)!=2 or not all(parts):raise EditorialError("calibration_story_combination_malformed")
+                    pairs.append((parts[0],parts[1]))
+                result=calibrate_story_images(story_combinations=pairs,output_dir=a.output_dir,max_images=a.max_images,samples_per_combination=a.samples_per_combination if a.samples_per_combination is not None else 1,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
+            else:
+                if not a.date:raise EditorialError("calibration_date_required")
+                if a.combinations is not None and (style_value is not None or a.concepts is not None):raise EditorialError("calibration_combination_mode_conflict")
+                if a.profiles is not None and a.concepts is not None:raise EditorialError("calibration_legacy_profiles_concepts_conflict")
+                ids=[x.strip() for x in style_value.split(",") if x.strip()] if style_value is not None else None;concept_ids=[x.strip() for x in a.concepts.split(",") if x.strip()] if a.concepts is not None else None;combinations=parse_combinations(a.combinations) if a.combinations is not None else None
+                result=calibrate_images(date=a.date,profile_ids=ids,concept_ids=concept_ids,combinations=combinations,output_dir=a.output_dir,max_images=a.max_images,samples_per_combination=a.samples_per_combination if a.samples_per_combination is not None else 1,samples_per_profile=a.samples_per_profile,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
             print(json.dumps(result,sort_keys=True));return 0 if result["success"] else 1
         if a.command=="validate":
             cfg=Config.from_env(); storage=R2Storage(cfg) if a.verify_storage else None
