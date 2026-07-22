@@ -7,6 +7,8 @@ from .candidates import dossier,load_date,shortlist
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,ILLUSTRATION_PROMPT_VERSION,
                    EditorialError,GENERATOR_VERSION,SCHEMA_VERSION,SHA_RE,atomic_json,canonical_bytes,
                    contained_path,hash_parts,image_configuration,sha256_bytes,validate_object_key)
+from .illustration_hash import illustration_input_hash
+from .illustration_prompts import get_profile
 
 MANIFEST={"schema_version":SCHEMA_VERSION,"generator_version":GENERATOR_VERSION,"dates":[]}
 
@@ -68,8 +70,18 @@ def validate_all(output:Path,generated:Path=Path("generated"),storage=None,publi
         except Exception: errors.append(f"{date}: artifact missing or invalid"); continue
         if canonical_bytes(a)!=raw: errors.append(f"{date}: non-canonical JSON")
         if e.get("sha256")!=sha256_bytes(raw) or e.get("bytes")!=len(raw): errors.append(f"{date}: artifact checksum mismatch")
-        required={"schema_version","generator_version","date","status","editorial_input_hash","illustration_input_hash","generated_at","prompt_versions","models","plan","illustration","usage","generation"}
-        if set(a)!=required or a.get("date")!=date or a.get("schema_version")!=SCHEMA_VERSION: errors.append(f"{date}: invalid artifact contract")
+        legacy={"schema_version","generator_version","date","status","editorial_input_hash","illustration_input_hash","generated_at","prompt_versions","models","plan","illustration","usage","generation"};v2=legacy|{"illustration_profile_id","visual_brief_schema_version"}
+        if set(a) not in (legacy,v2) or a.get("date")!=date or a.get("schema_version")!=SCHEMA_VERSION: errors.append(f"{date}: invalid artifact contract")
+        is_v2=a.get("prompt_versions",{}).get("illustration")=="2.0.0";brief=a.get("plan",{}).get("visual_brief",{});brief_v2=brief.get("schema_version")=="2.0.0"
+        if is_v2 and (set(a)!=v2 or a.get("illustration_profile_id")!="production-v2" or a.get("visual_brief_schema_version")!="2.0.0" or not brief_v2): errors.append(f"{date}: invalid v2 illustration metadata")
+        if not is_v2 and (set(a)!=legacy or brief_v2):errors.append(f"{date}: invalid historical illustration metadata")
+        if brief_v2:
+            expected_brief={"schema_version","mode","sources","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text"}
+            if set(brief)!=expected_brief or brief.get("abstraction_level") not in ("low","medium","high"):errors.append(f"{date}: invalid v2 visual brief")
+            for key,limit in (("literal_elements",12),("forbidden_elements",20),("failure_modes",12)):
+                value=brief.get(key);valid=isinstance(value,list) and len(value)<=limit and all(isinstance(x,str) and x.strip() and len(x)<=100 for x in value) and len(value)==len(set(value))
+                if not valid:errors.append(f"{date}: invalid v2 visual brief {key}")
+            if not isinstance(brief.get("sources"),list) or not brief["sources"] or len(brief["sources"])>3 or any(not isinstance(x,dict) or set(x)!={"issue_id","article_id"} for x in brief.get("sources",[])):errors.append(f"{date}: invalid v2 visual brief sources")
         if a.get("status") not in ("ai_complete","editorial_only","deterministic_fallback","disabled"): errors.append(f"{date}: invalid status")
         if e.get("status")!=a.get("status") or e.get("editorial_input_hash")!=a.get("editorial_input_hash") or e.get("illustration_input_hash")!=a.get("illustration_input_hash"): errors.append(f"{date}: manifest/artifact status or hash mismatch")
         if not isinstance(a.get("models"),dict) or set(a["models"])!={"editorial","illustration"} or not all(isinstance(x,str) and x for x in a["models"].values()): errors.append(f"{date}: invalid models")
@@ -85,7 +97,7 @@ def validate_all(output:Path,generated:Path=Path("generated"),storage=None,publi
             expected_hash=hash_parts(dossier(bounded),declared_editorial,EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION)
             if a.get("editorial_input_hash")!=expected_hash: errors.append(f"{date}: stale editorial input hash")
             if a.get("prompt_versions",{}).get("editorial")!=EDITORIAL_PROMPT_VERSION: errors.append(f"{date}: editorial prompt version mismatch")
-            if a.get("prompt_versions",{}).get("illustration")!=ILLUSTRATION_PROMPT_VERSION: errors.append(f"{date}: illustration prompt version mismatch")
+            if is_v2 and a.get("prompt_versions",{}).get("illustration")!=ILLUSTRATION_PROMPT_VERSION: errors.append(f"{date}: illustration prompt version mismatch")
             if expected_editorial_model and declared_editorial!=expected_editorial_model: errors.append(f"{date}: configured editorial model mismatch")
             if expected_image_model and a.get("models",{}).get("illustration")!=expected_image_model: errors.append(f"{date}: configured illustration model mismatch")
         except (EditorialError,KeyError,TypeError):
@@ -101,15 +113,18 @@ def validate_all(output:Path,generated:Path=Path("generated"),storage=None,publi
             vb=a.get("plan",{}).get("visual_brief",{})
             try:
                 source_ids=[bounded_by[(x["issue_id"],x["article_id"])] for x in vb["sources"]]
-                hash_brief={"mode":vb["mode"],"source_candidate_ids":[x.candidate_id for x in source_ids],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}
+                keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text") if vb.get("schema_version")=="2.0.0" else ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")
+                hash_brief={"mode":vb["mode"],"source_candidate_ids":[x.candidate_id for x in source_ids],**{k:vb[k] for k in keys}}
                 image_cfg=image_configuration(max_provider_image_bytes,max_image_pixels,max_image_bytes)
-                expected_ih=hash_parts(hash_brief,[{"title":c.title,"summary":c.summary} for c in source_ids],a["models"]["illustration"],ILLUSTRATION_PROMPT_VERSION,image_cfg)
+                version=a["prompt_versions"]["illustration"];facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in source_ids]
+                expected_ih=illustration_input_hash(brief=hash_brief,sources=facts,image_model=a["models"]["illustration"],prompt_version=version,image_config=image_cfg,profile=get_profile("production-v2") if version=="2.0.0" else None)
                 if ih!=expected_ih: errors.append(f"{date}: stale illustration input hash")
             except (KeyError,TypeError): errors.append(f"{date}: illustration hash inputs unavailable")
         ill=a.get("illustration",{}); status=ill.get("status")
         allowed=("ready","not_requested","disabled","generation_failed","validation_failed","upload_failed","storage_verification_failed")
         if status not in allowed: errors.append(f"{date}: invalid illustration status")
         if status=="ready":
+            if is_v2 and (ih is None or not SHA_RE.fullmatch(str(a.get("generation",{}).get("final_prompt_sha256","")))):errors.append(f"{date}: incomplete v2 prompt metadata")
             try:
                 validate_object_key(ill.get("object_key"),date)
                 if ill["object_key"].rsplit("/",1)[1][:-5] != str(ill.get("sha256","")).removeprefix("sha256:"): errors.append(f"{date}: object key/SHA mismatch")

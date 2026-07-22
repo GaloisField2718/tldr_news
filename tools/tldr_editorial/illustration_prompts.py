@@ -54,6 +54,9 @@ def _profile(profile_id:str,internal_id:str,direction:tuple[str,...],negative:tu
 
 _REGISTERED=(
  PromptProfile("baseline-v1","profile-001",BASELINE_PREAMBLE,("not documentary photography","no collage of unrelated news stories"),()),
+ _profile("production-v2","profile-007",(
+  "authored editorial print language","deliberate simplified shapes with clear focal hierarchy","restrained limited palette","subtle physical print texture","controlled abstraction and strong negative space","non-photorealistic but factually grounded representation","newspaper and social-card readability"),(
+  "glossy CGI","luxury product render","generic futuristic concept art","cyberpunk or neon","glowing circuit-board decoration","floating particles","heroic centered hardware","server rack treated as monument or skyscraper","generic server room","advertising composition","airbrushed gradients","synthetic chrome","excessive pseudo-technical detail","malformed or visible text","labels","diagrams with words")),
  _profile("print-graphic-v1","profile-002",(
   "serious newspaper print illustration","flat, deliberate shapes","restricted palette of approximately three to five colors","subtle paper grain","screen-print or relief-print material character","simplified but accurate geometry","visible authored decisions","no photorealism"),(
   "glossy 3D rendering","neon glows","blue/orange cinematic gradients","translucent holographic layers","floating particles","circuit-board decoration","volumetric light","synthetic chrome","generic futuristic environments","excessive detail")),

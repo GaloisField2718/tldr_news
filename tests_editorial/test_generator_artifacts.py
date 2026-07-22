@@ -19,7 +19,7 @@ class Live:
   self.editorial_calls+=1
   if self.fail:raise EditorialError('openrouter_transport_failed')
   ids=[x['candidate_id'] for x in d if x['content_class']=='editorial' and x['summary']]
-  p={"lead_candidate_id":ids[0],"front_page":[{"candidate_id":x,"role":"lead" if i==0 else "secondary"} for i,x in enumerate(ids)],"section_order":list(dict.fromkeys(x['sector_slug'] for x in d)),"visual_brief":{"mode":"lead_story","source_candidate_ids":[ids[0]],"central_subject":"Machine","visual_metaphor":"Bridge","composition":"Centered","forbidden_elements":["text"],"alt_text":"An editorial illustration of a machine"}}
+  p={"lead_candidate_id":ids[0],"front_page":[{"candidate_id":x,"role":"lead" if i==0 else "secondary"} for i,x in enumerate(ids)],"section_order":list(dict.fromkeys(x['sector_slug'] for x in d)),"visual_brief":{"schema_version":"2.0.0","mode":"lead_story","source_candidate_ids":[ids[0]],"editorial_idea":"A machine crosses a constrained bridge.","central_subject":"Machine","visual_relationship":"The machine moves across a bridge.","composition":"Machine at left, bridge leading right, clear negative space.","literal_elements":["machine","bridge"],"abstraction_level":"medium","forbidden_elements":["text"],"failure_modes":["generic product render"],"alt_text":"An editorial illustration of a machine crossing a bridge"}}
   return Result(p,{"prompt_tokens":1,"completion_tokens":1,"total_tokens":2,"cost_usd":.1},'e')
  def image(self,p):self.image_calls+=1;return Result(__import__('base64').b64encode(self.image_data).decode(),{"prompt_tokens":1,"completion_tokens":1,"total_tokens":2,"cost_usd":.2},'i',self.media_type)
 class Storage:

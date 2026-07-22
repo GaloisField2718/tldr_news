@@ -9,6 +9,8 @@ from .config import Config
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_VERSION,
     ILLUSTRATION_PROMPT_VERSION,SCHEMA_VERSION,EditorialError,hash_parts,image_configuration,object_key,sha256_bytes)
 from .image import assemble_prompt,decode_image,normalize_raster
+from .illustration_hash import illustration_input_hash
+from .illustration_prompts import get_profile
 from .openrouter import OpenRouterClient
 from .plan import fallback,resolve_plan,validate_plan
 from .r2_storage import R2Storage,build_public_url
@@ -67,9 +69,12 @@ def _existing_illustration_hash(existing:dict,candidates:list,config:Config)->st
     if stored is None:return None
     by_ref={(c.issue_id,c.article_id):c for c in candidates};vb=existing["plan"]["visual_brief"]
     sources=[by_ref[(x["issue_id"],x["article_id"])] for x in vb["sources"]]
-    brief={"mode":vb["mode"],"source_candidate_ids":[c.candidate_id for c in sources],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}
+    keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text") if vb.get("schema_version")=="2.0.0" else ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")
+    brief={"mode":vb["mode"],"source_candidate_ids":[c.candidate_id for c in sources],**{k:vb[k] for k in keys}}
     cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
-    return hash_parts(brief,[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,cfg)
+    version=existing.get("prompt_versions",{}).get("illustration")
+    facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
+    return illustration_input_hash(brief=brief,sources=facts,image_model=config.image_model,prompt_version=version,image_config=cfg,profile=get_profile("production-v2") if version=="2.0.0" else None)
 
 def generate(*,generated=Path("generated"),output=Path("generated/editorial"),date=None,latest=False,offline=False,dry_run=False,require_live=False,force=False,retry_image=False,config=None,client=None,storage=None)->dict:
     config=config or Config.from_env(); date=date or latest_date(generated)
@@ -108,7 +113,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     plan=fallback(candidates); status="disabled" if not config.enabled else "deterministic_fallback"
     failure=None; editorial_usage=dict(ZERO); image_usage=dict(ZERO); erid=irid=None; calls=0; r2calls=0
     valid_ai=False
-    reuse_existing_plan=live and (retry_image or illustration_stale) and existing and existing.get("editorial_input_hash")==editorial_hash
+    reuse_existing_plan=live and (retry_image or illustration_stale) and existing and existing.get("editorial_input_hash")==editorial_hash and existing.get("plan",{}).get("visual_brief",{}).get("schema_version")=="2.0.0"
     if live and not reuse_existing_plan:
         if not config.api_key:
             if require_live: config.require_openrouter()
@@ -116,7 +121,9 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         else:
             try:
                 client=client or OpenRouterClient(config); result=client.editorial(dos); calls+=1
-                plan=validate_plan(result.value,candidates); editorial_usage=result.usage; erid=result.request_id; valid_ai=True; status="editorial_only"
+                plan=validate_plan(result.value,candidates)
+                if plan["visual_brief"].get("schema_version")!="2.0.0":raise EditorialError("production_visual_brief_v2_required")
+                editorial_usage=result.usage; erid=result.request_id; valid_ai=True; status="editorial_only"
             except EditorialError as exc: failure=str(exc)
     elif reuse_existing_plan:
         # Existing source-resolved plan cannot safely be converted back to candidate IDs;
@@ -125,17 +132,18 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         ep=existing.get("plan",{}); vb=ep.get("visual_brief",{})
         try:
             lead=refs[(ep["lead"]["issue_id"],ep["lead"]["article_id"])]
-            plan={"lead_candidate_id":lead,"front_page":[{"candidate_id":refs[(x["issue_id"],x["article_id"])],"role":x["role"]} for x in ep["front_page"]],"section_order":ep["section_order"],
-                  "visual_brief":{"mode":vb["mode"],"source_candidate_ids":[refs[(x["issue_id"],x["article_id"])] for x in vb["sources"]],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}}
+            keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text")
+            plan={"lead_candidate_id":lead,"front_page":[{"candidate_id":refs[(x["issue_id"],x["article_id"])],"role":x["role"]} for x in ep["front_page"]],"section_order":ep["section_order"],"visual_brief":{"mode":vb["mode"],"source_candidate_ids":[refs[(x["issue_id"],x["article_id"])] for x in vb["sources"]],**{k:vb[k] for k in keys}}}
             plan=validate_plan(plan,candidates); valid_ai=plan["visual_brief"]["mode"]!="none"; status="editorial_only"; editorial_usage=existing["usage"]["editorial"]
         except Exception as exc: raise EditorialError("retry_image_stale_plan") from exc
     resolved=resolve_plan(plan,candidates)
     illustration_hash=None; final_prompt=None; ill=_illustration("disabled" if not config.enabled else "not_requested")
     if valid_ai and plan["visual_brief"]["mode"]!="none":
         by={c.candidate_id:c for c in candidates}; sources=[by[x] for x in plan["visual_brief"]["source_candidate_ids"]]
-        final_prompt=assemble_prompt(plan["visual_brief"],sources)
+        final_prompt=assemble_prompt(plan["visual_brief"],sources,get_profile("production-v2"))
         image_cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
-        illustration_hash=hash_parts(plan["visual_brief"],[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,image_cfg)
+        facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
+        illustration_hash=illustration_input_hash(brief=plan["visual_brief"],sources=facts,image_model=config.image_model,prompt_version=ILLUSTRATION_PROMPT_VERSION,image_config=image_cfg,profile=get_profile("production-v2"))
         try:
             client=client or OpenRouterClient(config); result=client.image(final_prompt); calls+=1; image_usage=result.usage; irid=result.request_id
         except EditorialError as exc:
@@ -174,10 +182,12 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     if failure and not valid_ai: status="deterministic_fallback"
     if not config.enabled: status="disabled"
     total=float(editorial_usage.get("cost_usd",0))+float(image_usage.get("cost_usd",0))
+    is_v2=resolved["visual_brief"].get("schema_version")=="2.0.0"
     artifact={"schema_version":SCHEMA_VERSION,"generator_version":GENERATOR_VERSION,"date":date,"status":status,"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"generated_at":_now(),
-      "prompt_versions":{"editorial":EDITORIAL_PROMPT_VERSION,"illustration":ILLUSTRATION_PROMPT_VERSION},"models":{"editorial":config.editorial_model,"illustration":config.image_model},"plan":resolved,"illustration":ill,
+      "prompt_versions":{"editorial":EDITORIAL_PROMPT_VERSION,"illustration":ILLUSTRATION_PROMPT_VERSION if is_v2 else "1.0.0"},"models":{"editorial":config.editorial_model,"illustration":config.image_model},"plan":resolved,"illustration":ill,
       "usage":{"editorial":editorial_usage,"illustration":image_usage,"total_cost_usd":total},
       "generation":{"attempt_count":1 if live else 0,"editorial_request_id":erid,"illustration_request_id":irid,"final_prompt_sha256":sha256_bytes(final_prompt.encode()) if final_prompt else None,"final_prompt":final_prompt,"failure_code":failure}}
+    if is_v2:artifact.update(illustration_profile_id="production-v2",visual_brief_schema_version="2.0.0")
     written=False
     if not dry_run: written=any(write_artifact(output,date,artifact))
     return {"date":date,"status":status,"illustration_status":ill["status"],"written":written,"network_calls":calls,"r2_calls":r2calls,"dossier_bytes":dossier_size(candidates),"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"dry_run":dry_run}

@@ -17,10 +17,9 @@ PLAN_SCHEMA={"type":"object","additionalProperties":False,"required":["lead_cand
  "lead_candidate_id":{"type":"string","pattern":"^c[0-9]{3}$"},
  "front_page":{"type":"array","maxItems":9,"items":{"type":"object","additionalProperties":False,"required":["candidate_id","role"],"properties":{"candidate_id":{"type":"string","pattern":"^c[0-9]{3}$"},"role":{"enum":["lead","secondary","brief"]}}}},
  "section_order":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":80}},
- "visual_brief":{"type":"object","additionalProperties":False,"required":["mode","source_candidate_ids","central_subject","visual_metaphor","composition","forbidden_elements","alt_text"],"properties":{
-  "mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
-  "central_subject":{"type":"string","maxLength":300},"visual_metaphor":{"type":"string","maxLength":500},"composition":{"type":"string","maxLength":500},
-  "forbidden_elements":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":100}},"alt_text":{"type":"string","maxLength":500}}}}}
+ "visual_brief":{"type":"object","additionalProperties":False,"required":["schema_version","mode","source_candidate_ids","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text"],"properties":{
+  "schema_version":{"const":"2.0.0"},"mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
+  "editorial_idea":{"type":"string","maxLength":500},"central_subject":{"type":"string","maxLength":300},"visual_relationship":{"type":"string","maxLength":500},"composition":{"type":"string","maxLength":500},"literal_elements":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"abstraction_level":{"enum":["low","medium","high"]},"forbidden_elements":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":100}},"failure_modes":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"alt_text":{"type":"string","maxLength":500}}}}}
 
 @dataclass(frozen=True)
 class Result:
@@ -105,7 +104,7 @@ class OpenRouterClient:
           f"Select exactly {expected} front-page stories (expected_front_page_count). Use exactly one lead, no more than four secondaries, and make all remaining stories briefs. "
           "Every candidate ID must come from the supplied dossier; lead_candidate_id must identify the entry whose role is lead. "
           "section_order may contain unique present sectors only. A lead_story visual source is exactly the lead. "
-          "An edition_theme uses exactly two or three genuinely related selected stories. none uses no sources and empty semantic fields. "
+          "An edition_theme uses exactly two or three genuinely related selected stories. For every non-none visual brief identify a factual relationship or tension, prefer relational composition over an isolated article noun, explain it through a grounded metaphor, and avoid decorative technology defaults (racks, chips, laptops, robots, clouds, shields, arrows, charts, skyscrapers, chess, handshakes, or split-screen conflict) unless facts justify them. Never specify artist imitation, rendered text, logos, or unsupported physical details. none uses no sources and empty semantic fields. "
           "Never rewrite titles or summaries, select sponsors or resources, invent facts, emit URLs, markup, prose, or reasoning. Return only the strict JSON object.")
         user={"request_metadata":{"expected_front_page_count":expected,"eligible_candidate_count":eligible},"candidates":dossier}
         body={"model":self.config.editorial_model,"stream":False,"messages":[{"role":"system","content":system},{"role":"user","content":json.dumps(user,ensure_ascii=False,separators=(",",":"))}],
