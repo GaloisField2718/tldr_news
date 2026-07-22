@@ -52,6 +52,8 @@ run_source_and_editorial_publication
 stage_approved_sources
 stage_generated
 stage_editorial
+run_raw_source_privacy
+log "staged raw-source privacy gate passed"
 
 if git diff --cached --quiet; then
   log "no staged changes before rebase"
@@ -74,6 +76,8 @@ else
 
   stage_generated
   stage_editorial
+  run_raw_source_privacy
+  log "pre-commit raw-source privacy gate passed"
   msg="Daily TLDR update $(date -u +'%Y-%m-%d %H:%M') UTC"
   git commit -m "${msg}"
   log "committed: ${msg}"
@@ -104,6 +108,8 @@ log "changed_clean after rebase"
 stage_generated
 stage_editorial
 if ! git diff --cached --quiet; then
+  run_raw_source_privacy
+  log "post-rebase pre-commit raw-source privacy gate passed"
   sync_msg="Daily TLDR generated sync $(date -u +'%Y-%m-%d %H:%M') UTC"
   git commit -m "${sync_msg}"
   log "committed post-rebase generated sync: ${sync_msg}"

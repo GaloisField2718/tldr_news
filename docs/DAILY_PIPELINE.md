@@ -28,6 +28,9 @@ automation.sh
   flock (required)
   -> tee stdout/stderr to logs/automation.log
   -> python3 script.py
+     -> normalize raw line endings/whitespace
+     -> remove known subscriber URLs and canonicalize controlled private URLs
+     -> reject unresolved credential URLs without deleting the IMAP message
   -> python3 -m tools.tldr_derive generate --changed --output generated
   -> logs/last_automation_success
   (no git)
@@ -41,6 +44,7 @@ push_script.sh
   -> optional latest-date editorial/illustration publication
   -> validate editorial consistency
   -> stage approved TLDR* dirs + normalized/editorial JSON only
+  -> scan exact staged raw blobs: python -m tools.tldr_raw_privacy check-staged
   -> if staged changes:
        repeat normalized + editorial consistency checks
        generate --changed; require selected=0 written=0 failures=[]
@@ -63,7 +67,14 @@ left unpushed is retried on the next cron minute. The existing flock covers the
 entire source/editorial/rebase/push operation. Provider or R2 failure becomes a
 valid fallback/editorial-only artifact and does not discard normalized ingestion;
 a structural consistency failure still blocks commit/push. Image binaries are
-never staged. See [the editorial operations guide](EDITORIAL_PIPELINE.md).
+never staged. The raw gate reads `git diff --cached --name-only -z` and indexed
+blobs rather than worktree bytes. It applies only to newly added or modified
+Markdown under `TLDR` / `TLDR *`; it does not retroactively rewrite the corpus.
+Operators can explicitly normalize selected files with
+`python -m tools.tldr_raw_privacy sanitize [--check] <path>...`. This command is
+NUL/path safe, refuses symlinks and paths outside approved source directories,
+and never reports removed parameter values. Re-derive normalized output after
+sanitizing. See [the editorial operations guide](EDITORIAL_PIPELINE.md).
 
 ## Validated web redeployment
 

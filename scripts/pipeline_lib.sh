@@ -121,6 +121,10 @@ print("changed_clean")
 '
 }
 
+run_raw_source_privacy() {
+  "${PYTHON_BIN}" -m tools.tldr_raw_privacy check-staged
+}
+
 run_validate() {
   "${PYTHON_BIN}" -m tools.tldr_derive validate --all --strict-privacy
 }

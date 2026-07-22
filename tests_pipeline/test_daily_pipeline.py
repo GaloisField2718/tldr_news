@@ -109,6 +109,8 @@ class ScriptStaticGuards(unittest.TestCase):
         self.assertNotIn("generated/editorial/images", lib)
         self.assertNotIn("if ! run_editorial_latest", lib)
         self.assertIn("run_editorial_latest\n", lib)
+        self.assertIn("tools.tldr_raw_privacy check-staged", lib)
+        self.assertGreaterEqual(text.count("run_raw_source_privacy"), 3)
 
 
 class ConsistencyModuleTests(unittest.TestCase):
@@ -236,6 +238,8 @@ class PipelineTempRepoTests(unittest.TestCase):
                     "generate_calls": 0,
                     "validate_calls": 0,
                     "consistency_calls": 0,
+                    "raw_privacy_calls": 0,
+                    "raw_privacy_exit": 0,
                     "editorial_generate_calls": 0,
                     "editorial_validate_calls": 0,
                     "editorial_generate_exit": 7,
@@ -319,6 +323,11 @@ class PipelineTempRepoTests(unittest.TestCase):
             if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.check_generated_consistency" ]]; then
               py_update consistency_calls 1 >/dev/null
               exit "$(py_get consistency_exit)"
+            fi
+
+            if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.tldr_raw_privacy" && "${{3:-}}" == "check-staged" ]]; then
+              py_update raw_privacy_calls 1 >/dev/null
+              exit "$(py_get raw_privacy_exit)"
             fi
 
             if [[ "${{1:-}}" == "-m" && "${{2:-}}" == "tools.tldr_editorial" ]]; then
@@ -536,6 +545,18 @@ class PipelineTempRepoTests(unittest.TestCase):
         proc = self._run("push_script.sh")
         self.assertNotEqual(proc.returncode, 0)
         self.assertEqual(before, self._rev())
+        self.assertFalse((self.repo / "logs" / "last_push_success").exists())
+
+    def test_raw_privacy_failure_blocks_before_commit(self) -> None:
+        (self.repo / "TLDR" / "article_sensitive.md").write_text(
+            "# staged raw source\n", encoding="utf-8"
+        )
+        before = self._rev()
+        self._set_state(raw_privacy_exit=4)
+        proc = self._run("push_script.sh")
+        self.assertNotEqual(proc.returncode, 0)
+        self.assertEqual(before, self._rev())
+        self.assertEqual(self._state()["raw_privacy_calls"], 1)
         self.assertFalse((self.repo / "logs" / "last_push_success").exists())
 
     def test_validation_failure_prevents_commit(self) -> None:

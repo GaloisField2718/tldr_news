@@ -22,6 +22,18 @@ _SUBSCRIBER_PARAM_KEYS = {
     "subscriber_id",
 }
 
+_CREDENTIAL_PARAM_KEYS = {
+    "access_token", "refresh_token", "id_token", "api_key", "apikey",
+    "client_secret", "auth_token", "authorization", "password", "passwd",
+    "session", "session_id", "sessionid", "jwt", "signature",
+    "x-amz-signature", "x-amz-credential", "x-amz-security-token",
+    "x-goog-signature", "x-goog-credential",
+}
+_OBSERVED_PUBLIC_CANONICAL = {
+    ("stratechery.com", "access_token"),
+    ("www.stratechery.com", "access_token"),
+}
+
 _PRIVATE_PATH_RE = re.compile(
     r"(^|/)(unsubscribe|manage|preferences?|account|settings|email-preferences)"
     r"(/|$|\?)",
@@ -112,11 +124,16 @@ def normalize_public_url(url: Optional[str]) -> Optional[str]:
     parts = urlsplit(repaired)
     if parts.scheme not in ("http", "https"):
         return None
-    if not parts.netloc:
+    if not parts.netloc or parts.username is not None or parts.password is not None:
         return None
 
-    host = _host(parts.netloc)
+    host = (parts.hostname or "").lower()
     query_pairs = parse_qsl(parts.query, keep_blank_values=True)
+    credential_keys = {k.lower() for k, _ in query_pairs} & _CREDENTIAL_PARAM_KEYS
+    if credential_keys:
+        if any((host, key) not in _OBSERVED_PUBLIC_CANONICAL for key in credential_keys):
+            return None
+        query_pairs = [(k, v) for k, v in query_pairs if k.lower() not in credential_keys]
     if _is_management_host(host):
         query_pairs = [
             (k, v)
