@@ -73,7 +73,12 @@ def prepare_raw_source(text:str)->tuple[str,list[str]]:
  def replace(match):
   replacement,found=_sanitize_url(match.group(0));categories.extend(found);return replacement
  text=_URL_RE.sub(replace,text)
- lines=[re.sub(r"[ \t]+$","",line) for line in text.split("\n")]
+ lines=[]
+ for line in text.split("\n"):
+  trailing_clean=re.sub(r"[ \t]+$","",line)
+  leading=re.match(r"[ \t]*",trailing_clean).group(0)
+  normalized_leading=re.sub(r" +(?=\t)","",leading)
+  lines.append(normalized_leading+trailing_clean[len(leading):])
  while lines and lines[-1]=="":lines.pop()
  return "\n".join(lines)+"\n",sorted(set(categories))
 
