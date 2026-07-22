@@ -36,7 +36,10 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_input_limit_and_speech_filtering(self):
   self.assertEqual(discover_models(models(False),16000)[1],['mistral','challenger']);doc=models(False);doc['data'][-1]['architecture']['output_modalities']=[];self.assertEqual(discover_models(doc,300)[1],['challenger'])
  def test_voice_validation_and_request_are_provider_neutral(self):
-  validate_voices(CAPABILITIES['x-ai/grok-voice-tts-1.0'],['eve','rex']);body=build_request(self.candidate(),{'speaker':'host','text':'Report'});self.assertEqual(body,{'model':'x-ai/grok-voice-tts-1.0','input':'Report','voice':'eve','response_format':'mp3'});self.assertNotIn('instructions',body);self.assertNotIn('speed',body)
+  validate_voices(CAPABILITIES['x-ai/grok-voice-tts-1.0'],['eve','rex']);body=build_request(self.candidate('mistralai/voxtral-mini-tts-2603'),{'speaker':'host','text':'Report'});self.assertEqual(body,{'model':'mistralai/voxtral-mini-tts-2603','input':'Report','voice':'en_paul_neutral','response_format':'mp3'});self.assertNotIn('instructions',body);self.assertNotIn('speed',body)
+  with self.assertRaisesRegex(CalibrationError,'canary_not_proven'):build_request(self.candidate(),{'speaker':'host','text':'Report'})
+ def test_proven_gemini_pcm_capability(self):
+  body=build_request(self.candidate('google/gemini-3.1-flash-tts-preview'),{'speaker':'host','text':'Report'});self.assertEqual(body['response_format'],'pcm');cap=CAPABILITIES['google/gemini-3.1-flash-tts-preview'];self.assertEqual((cap['accepted_mime'],cap['native_codec'],cap['sample_rate'],cap['channels']),('audio/pcm;rate=24000;channels=1','pcm_s16le',24000,1))
  def test_gemini_bonus_is_disabled_while_passthrough_contract_is_unproven(self):
   with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):build_gemini_bonus(self.candidate('google/gemini-3.1-flash-tts-preview'),dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'))['turns'])
  def test_response_content_type_json_error_generation_id_and_retry(self):
@@ -77,9 +80,12 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_paid_and_separate_bonus_authorization_gates(self):
   cs=[self.candidate('google/gemini-3.1-flash-tts-preview'),self.candidate('mistralai/voxtral-mini-tts-2603'),self.candidate()]
   with self.assertRaisesRegex(CalibrationError,'explicit_paid'):paid_gate(authorized=False,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
-  with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True)
-  with patch.dict(os.environ,{'OPENROUTER_API_KEY':'private'}),patch('tools.tldr_tts_calibration.shutil.which',return_value='/bin/tool'),patch('tools.tldr_tts_calibration.subprocess.run') as run:
-   run.return_value.stdout='';paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
+  with self.assertRaisesRegex(CalibrationError,'all_three_canaries'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
+  proven={k:{**v,'canary_proven':True} for k,v in CAPABILITIES.items()}
+  with patch.dict(CAPABILITIES,proven,clear=True):
+   with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True)
+   with patch.dict(os.environ,{'OPENROUTER_API_KEY':'private'}),patch('tools.tldr_tts_calibration.shutil.which',return_value='/bin/tool'),patch('tools.tldr_tts_calibration.subprocess.run') as run:
+    run.return_value.stdout='';paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
  def test_discovery_and_preflight_code_has_no_paid_or_production_side_effect(self):
   source=Path('tools/tldr_tts_calibration.py').read_text().lower();self.assertNotIn('r2storage',source);self.assertNotIn('generated/editorial',source);self.assertEqual(discover_models(models(),300)[0][2].model,'x-ai/grok-voice-tts-1.0')
 
