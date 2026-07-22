@@ -31,6 +31,15 @@ Listen to candidate A, B, and C without inspecting file metadata. Score each ite
 - Candidate B:
 - Candidate C:
 
+## Experimental cohesive-dialogue bonus — not part of the main ranking.
+
+After completing and locking the A/B/C ranking, optionally evaluate `candidate-bonus.mp3` for conversational continuity only.
+
+- More cohesive than the preferred ranked candidate (yes/no):
+- Speaker distinction:
+- Continuity notes:
+- Artifacts:
+
 ## Comments
 
 

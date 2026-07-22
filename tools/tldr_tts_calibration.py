@@ -9,39 +9,58 @@ import requests
 
 MODELS_URL="https://openrouter.ai/api/v1/models?output_modalities=speech"
 SPEECH_URL="https://openrouter.ai/api/v1/audio/speech"
-TARGETS={"openai":"openai/gpt-4o-mini-tts-2025-12-15","mistral":"mistralai/voxtral-mini-tts-2603"}
-VOICE_PROFILES={
- "openai":{"host":"alloy","analyst":"nova","voices":{"alloy","ash","ballad","coral","echo","fable","nova","onyx","sage","shimmer","verse"},"formats":{"mp3","opus","aac","flac","wav","pcm"},"speed":True,"instructions":True},
- "google":{"host":"Kore","analyst":"Aoede","voices":{"Zephyr","Puck","Charon","Kore","Fenrir","Leda","Orus","Aoede","Callirrhoe","Autonoe","Enceladus","Iapetus","Umbriel","Algieba","Despina","Erinome","Algenib","Rasalgethi","Laomedeia","Achernar","Alnilam","Schedar","Gacrux","Pulcherrima","Achird","Zubenelgenubi","Vindemiatrix","Sadachbia","Sadaltager","Sulafat"},"formats":{"mp3","wav","pcm"},"speed":True,"instructions":False},
- "mistral":{"host":"en_paul_neutral","analyst":"gb_jane_neutral","voices":{"en_paul_neutral","gb_oliver_neutral","gb_jane_neutral"},"formats":{"mp3","wav","pcm"},"speed":True,"instructions":False},
+TARGETS={"google":"google/gemini-3.1-flash-tts-preview","mistral":"mistralai/voxtral-mini-tts-2603"}
+CHALLENGERS=("microsoft/mai-voice-2","x-ai/grok-voice-tts-1.0","deepgram/aura-2","canopylabs/orpheus-3b-0.1-ft","hexgrad/kokoro-82m")
+# Versioned from current official OpenRouter model pages on 2026-07-22. Runtime
+# model availability/pricing still comes exclusively from the Models API.
+CAPABILITIES={
+ "google/gemini-3.1-flash-tts-preview":{"provider":"google","host":"Kore","analyst":"Aoede","english_voices":{"Kore","Aoede","Charon","Orus"},"source":"https://openrouter.ai/google/gemini-3.1-flash-tts-preview","formats":{"mp3","pcm"},"pricing_unit":"mixed_tokens","speech_endpoint":True,"max_input":32768},
+ "mistralai/voxtral-mini-tts-2603":{"provider":"mistral","host":"en_paul_neutral","analyst":"gb_jane_neutral","english_voices":{"en_paul_neutral","gb_oliver_neutral","gb_jane_neutral"},"source":"https://openrouter.ai/mistralai/voxtral-mini-tts-2603","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":4096},
+ "microsoft/mai-voice-2":{"provider":"microsoft","host":"en-US-Harper:MAI-Voice-2","analyst":None,"english_voices":{"en-US-Harper:MAI-Voice-2"},"source":"https://openrouter.ai/microsoft/mai-voice-2","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":0},
+ "x-ai/grok-voice-tts-1.0":{"provider":"xai","host":"eve","analyst":"rex","english_voices":{"eve","ara","rex","sal","leo"},"source":"https://openrouter.ai/x-ai/grok-voice-tts-1.0","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":15000},
+ "deepgram/aura-2":{"provider":"deepgram","host":"aura-2-thalia-en","analyst":"aura-2-apollo-en","english_voices":{"aura-2-thalia-en","aura-2-apollo-en"},"source":"https://openrouter.ai/deepgram/aura-2","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":2000},
+ "canopylabs/orpheus-3b-0.1-ft":{"provider":"canopylabs","host":"tara","analyst":"leo","english_voices":{"tara","leah","jess","leo","dan","mia","zac"},"source":"https://openrouter.ai/canopylabs/orpheus-3b-0.1-ft","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":4096},
+ "hexgrad/kokoro-82m":{"provider":"hexgrad","host":"af_heart","analyst":"am_adam","english_voices":{"af_heart","af_sarah","am_adam","am_michael"},"source":"https://openrouter.ai/hexgrad/kokoro-82m","formats":{"mp3","pcm"},"pricing_unit":"characters","speech_endpoint":True,"max_input":4096},
 }
-DELIVERY="Speak naturally as part of a calm, informed technology-news conversation. Avoid advertising cadence, exaggerated enthusiasm, and theatrical delivery."
 
 class CalibrationError(RuntimeError):pass
 @dataclass(frozen=True)
 class Candidate:
- provider:str;model:str;voices:dict[str,str];pricing:dict[str,str];output_modalities:tuple[str,...];supported_parameters:tuple[str,...];context_length:int|None
+ provider:str;model:str;voices:dict[str,str];pricing:dict[str,str];pricing_unit:str;voice_metadata_source:str;formats:tuple[str,...];output_modalities:tuple[str,...];supported_parameters:tuple[str,...];max_input:int
 
-def discover_models(doc:dict[str,Any])->tuple[list[Candidate],list[str]]:
- data=doc.get("data");
+def _candidate(model:dict[str,Any],max_turn_input:int)->Candidate|None:
+ slug=model.get("id");cap=CAPABILITIES.get(slug);arch=model.get("architecture") or {};pricing=model.get("pricing") or {}
+ if not cap or arch.get("modality")!="text->speech" or "speech" not in arch.get("output_modalities",[]) or not cap["speech_endpoint"] or not pricing.get("prompt") or cap["max_input"]<max_turn_input:return None
+ voices=[cap.get("host"),cap.get("analyst")]
+ try:validate_voices(cap,voices)
+ except CalibrationError:return None
+ return Candidate(cap["provider"],slug,{"host":voices[0],"analyst":voices[1]},dict(pricing),cap["pricing_unit"],cap["source"],tuple(sorted(cap["formats"])),tuple(arch.get("output_modalities",[])),tuple(model.get("supported_parameters") or []),cap["max_input"])
+
+def discover_models(doc:dict[str,Any],max_turn_input:int=1)->tuple[list[Candidate],list[str]]:
+ data=doc.get("data")
  if not isinstance(data,list):raise CalibrationError("models_response_invalid")
- speech=[m for m in data if isinstance(m,dict) and m.get("architecture",{}).get("modality")=="text->speech" and "speech" in m.get("architecture",{}).get("output_modalities",[])]
- by_id={m.get("id"):m for m in speech};google=sorted((m for m in speech if str(m.get("id","")).startswith("google/gemini-") and "flash" in m["id"] and "tts" in m["id"]),key=lambda x:x["id"],reverse=True)
- selected={"openai":by_id.get(TARGETS["openai"]),"google":google[0] if google else None,"mistral":by_id.get(TARGETS["mistral"])};missing=[k for k,v in selected.items() if v is None];out=[]
- for provider,m in selected.items():
-  if m is None:continue
-  profile=VOICE_PROFILES[provider];validate_voices(profile,[profile["host"],profile["analyst"]]);arch=m["architecture"];top=m.get("top_provider") or {};out.append(Candidate(provider,m["id"],{"host":profile["host"],"analyst":profile["analyst"]},dict(m.get("pricing") or {}),tuple(arch.get("output_modalities",[])),tuple(m.get("supported_parameters") or []),top.get("context_length")))
- return out,missing
+ by_id={m.get("id"):m for m in data if isinstance(m,dict)};selected=[];missing=[]
+ for name in ("google","mistral"):
+  candidate=_candidate(by_id.get(TARGETS[name],{}),max_turn_input)
+  if candidate:selected.append(candidate)
+  else:missing.append(name)
+ challenger=next((c for slug in CHALLENGERS if (c:=_candidate(by_id.get(slug,{}),max_turn_input))),None)
+ if challenger:selected.append(challenger)
+ else:missing.append("challenger")
+ return selected,missing
 
 def validate_voices(profile:dict[str,Any],voices:list[str])->None:
- if len(voices)!=2 or voices[0]==voices[1] or any(v not in profile["voices"] for v in voices):raise CalibrationError("unsupported_or_duplicate_voice")
+ if len(voices)!=2 or voices[0]==voices[1] or any(not isinstance(v,str) or v not in profile["english_voices"] for v in voices):raise CalibrationError("unsupported_or_duplicate_voice")
 
 def build_request(candidate:Candidate,turn:dict[str,Any])->dict[str,Any]:
  speaker=turn.get("speaker");
  if speaker not in ("host","analyst") or not isinstance(turn.get("text"),str) or not turn["text"].strip():raise CalibrationError("turn_invalid")
- profile=VOICE_PROFILES[candidate.provider];body={"model":candidate.model,"input":turn["text"],"voice":candidate.voices[speaker],"response_format":"mp3","speed":1.0}
- if profile["instructions"]:body["instructions"]=DELIVERY
- return body
+ return {"model":candidate.model,"input":turn["text"],"voice":candidate.voices[speaker],"response_format":"mp3"}
+
+def build_gemini_bonus(candidate:Candidate,turns:list[dict[str,Any]])->dict[str,Any]:
+ if candidate.model!=TARGETS["google"]:raise CalibrationError("bonus_requires_gemini")
+ lines=[f"{'Host' if x['speaker']=='host' else 'Analyst'}: {x['text']}" for x in turns]
+ return {"model":candidate.model,"input":"\n\n".join(lines),"voice":candidate.voices["host"],"response_format":"mp3","provider":{"options":{"google-vertex":{"speech_config":{"multi_speaker_voice_config":{"speaker_voice_configs":[{"speaker":"Host","voice_config":{"prebuilt_voice_config":{"voice_name":candidate.voices['host']}}},{"speaker":"Analyst","voice_config":{"prebuilt_voice_config":{"voice_name":candidate.voices['analyst']}}}]}}}}}}
 
 def validate_audio_response(response:Any)->bytes:
  content=bytes(response.content);ctype=str(response.headers.get("content-type","")).split(";",1)[0].lower()
@@ -83,15 +102,20 @@ def assemble(turn_files:list[Path],pauses:list[int],output:Path,run:Callable[...
 def probe(path:Path,run:Callable[...,Any]=subprocess.run)->dict[str,Any]:
  r=run(["ffprobe","-v","error","-show_entries","format=duration:format_tags","-of","json",str(path)],capture_output=True,text=True,check=True);doc=json.loads(r.stdout);tags=doc.get("format",{}).get("tags") or {};return {"duration_seconds":round(float(doc["format"]["duration"]),3),"bytes":path.stat().st_size,"sha256":"sha256:"+hashlib.sha256(path.read_bytes()).hexdigest(),"metadata_tags":tags}
 
-def estimate(candidates:list[Candidate],characters:int)->dict[str,Any]:
- rows=[]
+def estimate(candidates:list[Candidate],characters:int,audio_seconds_upper:int=90,include_bonus:bool=True)->dict[str,Any]:
+ rows=[];audio_tokens=audio_seconds_upper*32;text_tokens=(characters+2)//3
  for c in candidates:
-  prompt=float(c.pricing.get("prompt",0));rows.append({"model":c.model,"input_price":c.pricing.get("prompt"),"characters":characters,"input_cost_upper_bound_usd":round(prompt*characters,6),"completion_price":c.pricing.get("completion")})
- return {"candidates":rows,"input_cost_upper_bound_usd":round(sum(x["input_cost_upper_bound_usd"] for x in rows),6)}
+  if c.pricing_unit=="characters":cost=float(c.pricing["prompt"])*characters;basis={"characters":characters,"price_per_character":c.pricing["prompt"]}
+  elif c.pricing_unit=="mixed_tokens":cost=float(c.pricing["prompt"])*text_tokens+float(c.pricing["completion"])*audio_tokens;basis={"estimated_text_tokens":text_tokens,"text_token_price":c.pricing["prompt"],"estimated_audio_tokens":audio_tokens,"audio_token_price":c.pricing["completion"],"method":"ceil(characters/3) text tokens plus 32 audio tokens/second for 90 seconds"}
+  else:raise CalibrationError("pricing_unit_unsupported")
+  rows.append({"model":c.model,"pricing_unit":c.pricing_unit,"estimated_cost_usd":round(cost,6),**basis,"per_request_minimum":None})
+ main=round(sum(x["estimated_cost_usd"] for x in rows),6);google=next((x for x in rows if x["model"]==TARGETS["google"]),None);bonus=google["estimated_cost_usd"] if include_bonus and google else 0
+ return {"candidates":rows,"main_cost_upper_bound_usd":main,"gemini_bonus_cost_upper_bound_usd":bonus,"total_upper_bound_usd":round(main+bonus,6),"audio_seconds_upper_bound":audio_seconds_upper}
 
-def paid_gate(*,authorized:bool,candidates:list[Candidate],estimated_total:float,output:Path)->None:
+def paid_gate(*,authorized:bool,candidates:list[Candidate],estimated_total:float,output:Path,bonus:bool=False,bonus_authorized:bool=False)->None:
  if not authorized:raise CalibrationError("explicit_paid_authorization_required")
  if len(candidates)!=3:raise CalibrationError("three_candidates_required")
+ if bonus and not bonus_authorized:raise CalibrationError("separate_bonus_authorization_required")
  if estimated_total>1:raise CalibrationError("estimated_cost_exceeds_limit")
  if not os.getenv("OPENROUTER_API_KEY"):raise CalibrationError("openrouter_key_missing")
  if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):raise CalibrationError("ffmpeg_missing")
@@ -104,16 +128,18 @@ def dialogue(path:Path)->dict[str,Any]:
  return d
 
 def main()->int:
- p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate"));p.add_argument("--dialogue",type=Path,default=Path("calibration/tts/blind-test-v1/dialogue.json"));p.add_argument("--output",type=Path,required=True);p.add_argument("--authorize-paid",action="store_true");a=p.parse_args();key=os.getenv("OPENROUTER_API_KEY");
+ p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate"));p.add_argument("--dialogue",type=Path,default=Path("calibration/tts/blind-test-v1/dialogue.json"));p.add_argument("--output",type=Path,required=True);p.add_argument("--authorize-paid",action="store_true");p.add_argument("--include-gemini-bonus",action="store_true");p.add_argument("--authorize-bonus-paid",action="store_true");a=p.parse_args();key=os.getenv("OPENROUTER_API_KEY")
  if not key:raise CalibrationError("openrouter_key_missing")
- doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc);d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);cost=estimate(candidates,chars);report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"output_modalities":x.output_modalities,"pricing":x.pricing,"supported_parameters":x.supported_parameters,"context_length":x.context_length,"formats":sorted(VOICE_PROFILES[x.provider]["formats"]),"speed_supported":VOICE_PROFILES[x.provider]["speed"]} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"requests":len(d["turns"])*len(candidates),"characters_per_candidate":chars,"expected_total_input_characters":chars*len(candidates),"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":len(candidates)==3}
+ d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);max_turn=max(len(x["text"]) for x in d["turns"]);doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc,max_turn);cost=estimate(candidates,chars);report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"voice_metadata_source":x.voice_metadata_source,"output_modalities":x.output_modalities,"pricing":x.pricing,"pricing_unit":x.pricing_unit,"supported_parameters":x.supported_parameters,"max_input":x.max_input,"formats":x.formats,"speed_supported":False} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"fair_test_requests":len(d["turns"])*len(candidates),"bonus_requests":1,"characters_per_candidate":chars,"fair_test_input_characters":chars*len(candidates),"bonus_input_characters":chars,"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":len(candidates)==3 and cost["total_upper_bound_usd"]<1}
  print(json.dumps(report,indent=2,sort_keys=True))
  if a.command=="preflight":return 0 if report["ready"] else 2
- paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["input_cost_upper_bound_usd"],output=a.output);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};public=[];dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
+ paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["total_upper_bound_usd"] if a.include_gemini_bonus else cost["main_cost_upper_bound_usd"],output=a.output,bonus=a.include_gemini_bonus,bonus_authorized=a.authorize_bonus_paid);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};public=[];dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
  for anonymous,candidate in mapping.items():
   private=a.output/("."+anonymous+"-turns");private.mkdir(mode=0o700);files=[];records[anonymous]=[]
   for turn in d["turns"]:
    body=build_request(candidate,turn);audio,meta=request_turn(requests.post,key,body,max_retries=1);path=private/(turn["turn_id"]+".mp3");path.write_bytes(audio);os.chmod(path,0o600);files.append(path);records[anonymous].append({**meta,"turn_id":turn["turn_id"],"model":candidate.model,"voice":body["voice"]})
-  final=a.output/(anonymous+".mp3");assemble(files,[x["pause_after_ms"] for x in d["turns"]],final);info=probe(final);public.append({"candidate_id":anonymous,"file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())});shutil.rmtree(private)
+  final=a.output/(anonymous+".mp3");assemble(files,[x["pause_after_ms"] for x in d["turns"]],final);info=probe(final);public.append({"candidate_id":anonymous,"ranking_eligible":True,"file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())});shutil.rmtree(private)
+ if a.include_gemini_bonus:
+  gemini=next(x for x in candidates if x.model==TARGETS["google"]);body=build_gemini_bonus(gemini,d["turns"]);audio,meta=request_turn(requests.post,key,body,max_retries=1);raw=a.output/".bonus-raw.mp3";raw.write_bytes(audio);final=a.output/"candidate-bonus.mp3";assemble([raw],[0],final);raw.unlink();info=probe(final);records["candidate-bonus"]=[{**meta,"turn_id":"native-dialogue","model":gemini.model,"voices":gemini.voices,"provider_options":body["provider"]}];public.append({"candidate_id":"candidate-bonus","ranking_eligible":False,"label":"Experimental cohesive-dialogue bonus — not part of the main ranking.","file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())})
  write_reveal(a.output/"tts-reveal.json",mapping,records);manifest={"schema_version":"1.0.0","dialogue_sha256":dialogue_hash,"candidates":public};(a.output/"manifest.public.json").write_text(json.dumps(manifest,sort_keys=True,indent=2)+"\n");shutil.copy2(Path("calibration/tts/blind-test-v1/evaluation.md"),a.output/"evaluation.md");print(json.dumps({"generated":len(public),"output":str(a.output),"paid_requests":sum(len(x) for x in records.values())},sort_keys=True));return 0
 if __name__=="__main__":raise SystemExit(main())
