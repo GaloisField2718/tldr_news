@@ -37,9 +37,11 @@ class TTSCalibrationTests(unittest.TestCase):
   self.assertEqual(discover_models(models(False),16000)[1],['mistral','challenger']);doc=models(False);doc['data'][-1]['architecture']['output_modalities']=[];self.assertEqual(discover_models(doc,300)[1],['challenger'])
  def test_voice_validation_and_request_are_provider_neutral(self):
   validate_voices(CAPABILITIES['x-ai/grok-voice-tts-1.0'],['eve','rex']);body=build_request(self.candidate('mistralai/voxtral-mini-tts-2603'),{'speaker':'host','text':'Report'});self.assertEqual(body,{'model':'mistralai/voxtral-mini-tts-2603','input':'Report','voice':'en_paul_neutral','response_format':'mp3'});self.assertNotIn('instructions',body);self.assertNotIn('speed',body)
-  with self.assertRaisesRegex(CalibrationError,'canary_not_proven'):build_request(self.candidate(),{'speaker':'host','text':'Report'})
+  xai=build_request(self.candidate(),{'speaker':'host','text':'Report'});self.assertEqual((xai['voice'],xai['response_format']),('eve','mp3'));analyst=build_request(self.candidate(),{'speaker':'analyst','text':'Report'});self.assertEqual(analyst['voice'],'rex');self.assertNotIn('Eve',(xai['voice'],analyst['voice']))
  def test_proven_gemini_pcm_capability(self):
   body=build_request(self.candidate('google/gemini-3.1-flash-tts-preview'),{'speaker':'host','text':'Report'});self.assertEqual(body['response_format'],'pcm');cap=CAPABILITIES['google/gemini-3.1-flash-tts-preview'];self.assertEqual((cap['accepted_mime'],cap['native_codec'],cap['sample_rate'],cap['channels']),('audio/pcm;rate=24000;channels=1','pcm_s16le',24000,1))
+ def test_proven_mistral_and_xai_mp3_capabilities(self):
+  mistral=CAPABILITIES['mistralai/voxtral-mini-tts-2603'];xai=CAPABILITIES['x-ai/grok-voice-tts-1.0'];self.assertEqual((mistral['requested_format'],mistral['accepted_mime'],mistral['sample_rate'],mistral['channels']),('mp3','audio/mpeg',22050,1));self.assertTrue(mistral['host_canary_proven']);self.assertFalse(mistral['analyst_canary_proven']);self.assertTrue(mistral['analyst_voice_metadata_validated']);self.assertEqual((xai['requested_format'],xai['accepted_mime'],xai['sample_rate'],xai['channels']),('mp3','audio/mpeg',24000,1));self.assertTrue(xai['host_canary_proven'] and xai['analyst_canary_proven'])
  def test_gemini_bonus_is_disabled_while_passthrough_contract_is_unproven(self):
   with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):build_gemini_bonus(self.candidate('google/gemini-3.1-flash-tts-preview'),dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'))['turns'])
  def test_response_content_type_json_error_generation_id_and_retry(self):
@@ -80,7 +82,9 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_paid_and_separate_bonus_authorization_gates(self):
   cs=[self.candidate('google/gemini-3.1-flash-tts-preview'),self.candidate('mistralai/voxtral-mini-tts-2603'),self.candidate()]
   with self.assertRaisesRegex(CalibrationError,'explicit_paid'):paid_gate(authorized=False,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
-  with self.assertRaisesRegex(CalibrationError,'all_three_canaries'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
+  unproven={k:{**v,'canary_proven':False if k.startswith('x-ai/') else v.get('canary_proven')} for k,v in CAPABILITIES.items()}
+  with patch.dict(CAPABILITIES,unproven,clear=True):
+   with self.assertRaisesRegex(CalibrationError,'all_three_canaries'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
   proven={k:{**v,'canary_proven':True} for k,v in CAPABILITIES.items()}
   with patch.dict(CAPABILITIES,proven,clear=True):
    with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True)
