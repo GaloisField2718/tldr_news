@@ -21,4 +21,8 @@ The non-ranked Gemini native-dialogue bonus is currently disabled. OpenRouter do
 
 Before mass generation, every selected model must also pass its canary gate. Proven contracts are Gemini Kore/Aoede as 24 kHz mono PCM, Mistral `en_paul_neutral` as 22.05 kHz mono MP3 (with `gb_jane_neutral` validated by current official voice metadata), and lowercase xAI `eve`/`rex` as 24 kHz mono MP3. A failed or missing required canary blocks the paid gate.
 
+## Locked result
+
+The private 2026-07-22 blind run was ranked A, B, C. The released mapping is A = xAI `grok-voice-tts-1.0` (`eve` / `rex`), B = Mistral `voxtral-mini-tts-2603` (`en_paul_neutral` / `gb_jane_neutral`), C = Google `gemini-3.1-flash-tts-preview` (`Kore` / `Aoede`). A is the production default and B is the disabled episode-level fallback. No private reveal, generation IDs, or diagnostics are versioned.
+
 Fair generation performs exactly one HTTP attempt per turn: 24 logical requests, zero retries, and a hard 24-attempt ceiling. Gemini turns are stored as raw `.pcm` and decoded explicitly with `-f s16le -ar 24000 -ac 1`; Mistral and xAI turns remain `.mp3`. Every response validates immediately, then normalizes to 24 kHz mono PCM WAV for pause insertion and concatenation. Final anonymous MP3s are encoded at 128 kbps and published from hidden temporary names only after all 24 turns validate. Model/voice/request details remain only in private `tts-reveal.json` mode 0600. Audio and reveal files remain outside Git. FFmpeg applies no music, EQ, dynamics compression, gain adjustment, or cross-candidate loudness normalization.
