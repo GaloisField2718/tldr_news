@@ -53,6 +53,19 @@ python -m tools.tldr_editorial calibrate-images \
 
 The output must be absolute, outside Git, non-symlinked, and empty. The checkout must be clean. CI live runs are forbidden. `--samples-per-combination` defaults to one and accepts one through three; `--max-images` covers styles × concepts × samples. `--profiles` and `--samples-per-profile` remain aliases for the original style-only experiment. Repeated samples receive independent anonymous IDs while using identical prompts and source facts. No candidate is automatically retried; after one failure, it and all unattempted candidates are recorded and paid calls stop.
 
+For a stability experiment that must not generate the Cartesian product, select exact pairs explicitly:
+
+```bash
+python -m tools.tldr_editorial calibrate-images \
+  --date 2026-07-21 \
+  --combinations print-graphic-v1:integrated-stack-v1,constructed-collage-v1:integrated-stack-v1,print-graphic-v1:challenger-enters-v1 \
+  --samples-per-combination 2 \
+  --output-dir /home/galois/tldr-image-calibration/round-1c-stability \
+  --max-images 6
+```
+
+Each comma-separated entry must contain exactly one registered style and one registered concept. Duplicate pairs, malformed or unknown IDs, and mixing `--combinations` with `--style-profiles`, `--profiles`, or `--concepts` are rejected. Legacy `--profiles` cannot be combined with `--concepts`; use `--style-profiles` for Cartesian style × concept experiments.
+
 Outputs are `manifest.json`, private `blind-map.json`, `gallery.html`, `score-template.json`, and (live only) normalized anonymous WebPs. The private map stores style, concept, and sample. The public manifest and gallery expose none. The self-contained `file://` gallery randomizes anonymous candidates, shows source facts once, uses at most three large columns (one on narrow screens), keeps identical 3:2 framing, and offers local click-to-enlarge. Keep `blind-map.json` private until scoring is complete.
 
 ## Human scoring rubric

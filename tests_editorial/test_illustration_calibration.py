@@ -4,7 +4,8 @@ from dataclasses import FrozenInstanceError
 from pathlib import Path
 from unittest.mock import patch
 from PIL import Image
-from tools.tldr_editorial.calibration import AMD_ANTI_DEFAULT_CLAUSE,CalibrationContext,assemble_experimental_prompt,calibrate_images,read_blind_mapping,run_calibration
+from tools.tldr_editorial.calibration import AMD_ANTI_DEFAULT_CLAUSE,CalibrationContext,assemble_experimental_prompt,calibrate_images,parse_combinations,read_blind_mapping,run_calibration
+from tools.tldr_editorial.cli import main as cli_main
 from tools.tldr_editorial.candidates import Candidate
 from tools.tldr_editorial.core import EditorialError
 from tools.tldr_editorial.image import assemble_prompt,decode_image,normalize_raster
@@ -92,6 +93,28 @@ class CalibrationTests(unittest.TestCase):
   self.assertTrue(all(x.get("original_visual_brief_sha256") and x.get("experimental_concept_sha256") for x in by.values()));self.assertTrue(all(value not in gallery and value not in manifest_text for value in styles+concepts));self.assertNotIn("sample_index",gallery);self.assertNotIn("sample_index",manifest_text)
   self.assertEqual(gallery.count(candidate().title),1);self.assertEqual(gallery.count(candidate().summary),1);self.assertIn("grid-template-columns:repeat(3",gallery);self.assertIn("<dialog",gallery)
   with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_images(date=context().date,profile_ids=styles,concept_ids=concepts,output_dir=self.output("too-many"),max_images=11,samples_per_combination=2,config=config(),context=context())
+ def test_three_explicit_pairs_with_two_samples_are_complete_blind_and_zero_call(self):
+  pairs=[("print-graphic-v1","integrated-stack-v1"),("constructed-collage-v1","integrated-stack-v1"),("print-graphic-v1","challenger-enters-v1")];out=self.output();client=ImageClient();result=calibrate_images(date=context().date,combinations=pairs,output_dir=out,max_images=6,samples_per_combination=2,config=config(),client=client,context=context())
+  self.assertEqual(result["candidate_count"],6);self.assertEqual((result["network_calls"],result["editorial_calls"],result["r2_calls"]),(0,0,0));self.assertEqual((client.image_calls,client.editorial_calls),(0,0))
+  manifest=json.loads((out/"manifest.json").read_text());manifest_text=(out/"manifest.json").read_text();mapping=json.loads((out/"blind-map.json").read_text())["mapping"];gallery=(out/"gallery.html").read_text();records={x["candidate_id"]:x for x in manifest["candidates"]}
+  self.assertEqual(set(records),set(mapping));self.assertTrue(all(set(value)=={"style_profile_id","concept_profile_id","sample_index"} for value in mapping.values()));self.assertEqual({(v["style_profile_id"],v["concept_profile_id"]) for v in mapping.values()},set(pairs))
+  hashes=[]
+  for pair in pairs:
+   members=[candidate_id for candidate_id,value in mapping.items() if (value["style_profile_id"],value["concept_profile_id"])==pair];self.assertEqual({mapping[x]["sample_index"] for x in members},{1,2});pair_hashes={records[x]["prompt_sha256"] for x in members};self.assertEqual(len(pair_hashes),1);hashes.extend(pair_hashes)
+  self.assertEqual(len(set(hashes)),3);self.assertTrue(all(candidate().title in gallery and candidate().summary in gallery for _ in [0]));self.assertTrue(all(token not in gallery and token not in manifest_text for pair in pairs for token in pair));self.assertNotIn("sample_index",gallery);self.assertNotIn("sample_index",manifest_text)
+ def test_explicit_pair_validation_conflicts_and_limit(self):
+  valid=[("print-graphic-v1","integrated-stack-v1")]
+  for value in ("","print-graphic-v1","print-graphic-v1:",":integrated-stack-v1","a:b:c","a:b,"):
+   with self.assertRaises(EditorialError):parse_combinations(value)
+  with self.assertRaisesRegex(EditorialError,"calibration_combinations_required"):calibrate_images(date=context().date,combinations=[],output_dir=self.output("empty-pairs"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_combination_malformed"):calibrate_images(date=context().date,combinations=[("print-graphic-v1",)],output_dir=self.output("malformed-pair"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_duplicate_combination"):calibrate_images(date=context().date,combinations=valid*2,output_dir=self.output("dup-pair"),max_images=2,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_combination_style_unknown"):calibrate_images(date=context().date,combinations=[("missing-style","integrated-stack-v1")],output_dir=self.output("style-unknown"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_combination_concept_unknown"):calibrate_images(date=context().date,combinations=[("print-graphic-v1","missing-concept")],output_dir=self.output("concept-unknown"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_combination_mode_conflict"):calibrate_images(date=context().date,profile_ids=["print-graphic-v1"],combinations=valid,output_dir=self.output("style-conflict"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_combination_mode_conflict"):calibrate_images(date=context().date,concept_ids=["integrated-stack-v1"],combinations=valid,output_dir=self.output("concept-conflict"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_images(date=context().date,combinations=valid*1+[('constructed-collage-v1','integrated-stack-v1')],output_dir=self.output("pair-limit"),max_images=3,samples_per_combination=2,config=config(),context=context())
+  with patch("sys.stderr",new=io.StringIO()):self.assertEqual(cli_main(["calibrate-images","--date",context().date,"--profiles","print-graphic-v1","--concepts","integrated-stack-v1","--output-dir",str(self.output("legacy-conflict")),"--max-images","1"]),2)
  def test_live_requires_both_flags_ci_is_forbidden_and_limit_is_enforced(self):
   ids=["baseline-v1"]
   for flags in ({"require_live":True},{"acknowledge_cost":True}):

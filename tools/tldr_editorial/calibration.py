@@ -134,15 +134,27 @@ def _write_outputs(output:Path,context:CalibrationContext,candidates:list[dict],
  _json(output/"manifest.json",manifest);_json(output/"blind-map.json",blind);_json(output/"score-template.json",score)
  _atomic_bytes(output/"gallery.html",_gallery(order,context).encode(),0o600)
 
-def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile],output:Path,cfg:Config,live:bool,client=None,concepts:Sequence[ConceptProfile]|None=None,samples_per_combination:int=1,samples_per_profile:int|None=None)->dict:
- legacy=concepts is None
+def parse_combinations(value:str)->list[tuple[str,str]]:
+ if not value.strip():raise EditorialError("calibration_combinations_required")
+ pairs=[]
+ for entry in value.split(","):
+  parts=[x.strip() for x in entry.split(":")]
+  if len(parts)!=2 or not all(parts):raise EditorialError("calibration_combination_malformed")
+  pairs.append((parts[0],parts[1]))
+ return pairs
+
+def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile],output:Path,cfg:Config,live:bool,client=None,concepts:Sequence[ConceptProfile]|None=None,combinations:Sequence[tuple[PromptProfile,ConceptProfile]]|None=None,samples_per_combination:int=1,samples_per_profile:int|None=None)->dict:
+ legacy=concepts is None and combinations is None
  if samples_per_profile is not None:
   if not legacy or samples_per_combination!=1:raise EditorialError("calibration_sample_flags_conflict")
   if not 1<=samples_per_profile<=5:raise EditorialError("calibration_samples_per_profile_invalid")
   samples_per_combination=samples_per_profile
  elif not 1<=samples_per_combination<=3:raise EditorialError("calibration_samples_per_combination_invalid")
- selected_concepts=list(concepts) if concepts is not None else [_official_concept(context)]
- assignments=[(style,concept,sample_index) for style in profiles for concept in selected_concepts for sample_index in range(1,samples_per_combination+1)];ids=[]
+ if combinations is not None:pairs=list(combinations)
+ else:
+  selected_concepts=list(concepts) if concepts is not None else [_official_concept(context)]
+  pairs=[(style,concept) for style in profiles for concept in selected_concepts]
+ assignments=[(style,concept,sample_index) for style,concept in pairs for sample_index in range(1,samples_per_combination+1)];ids=[]
  for _ in assignments:
   while True:
    value="candidate-"+secrets.token_hex(4)
@@ -168,26 +180,44 @@ def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile
  _write_outputs(output,context,records,mapping)
  return {"date":context.date,"candidate_count":len(records),"ready_count":sum(x["status"]=="ready" for x in records),"failed_count":sum(x["status"]=="failed" for x in records),"network_calls":network_calls,"editorial_calls":0,"r2_calls":0,"live":live,"success":not failed,"output_dir":str(output)}
 
-def calibrate_images(*,date:str,profile_ids:Sequence[str],output_dir:Path,max_images:int,concept_ids:Sequence[str]|None=None,samples_per_combination:int=1,samples_per_profile:int|None=None,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),editorial_output:Path=Path("generated/editorial"),config:Config|None=None,client=None,context:CalibrationContext|None=None)->dict:
+def calibrate_images(*,date:str,profile_ids:Sequence[str]|None=None,output_dir:Path,max_images:int,concept_ids:Sequence[str]|None=None,combinations:Sequence[tuple[str,str]]|None=None,samples_per_combination:int=1,samples_per_profile:int|None=None,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),editorial_output:Path=Path("generated/editorial"),config:Config|None=None,client=None,context:CalibrationContext|None=None)->dict:
  if not date:raise EditorialError("calibration_date_required")
- if not profile_ids:raise EditorialError("calibration_profiles_required")
- if len(set(profile_ids))!=len(profile_ids):raise EditorialError("calibration_duplicate_profile")
- try:profiles=[get_profile(x) for x in profile_ids]
- except KeyError as exc:raise EditorialError("calibration_profile_unknown") from exc
- concepts=None
- if concept_ids is not None:
-  if not concept_ids:raise EditorialError("calibration_concepts_required")
-  if len(set(concept_ids))!=len(concept_ids):raise EditorialError("calibration_duplicate_concept")
-  try:concepts=[get_concept(x) for x in concept_ids]
-  except KeyError as exc:raise EditorialError("calibration_concept_unknown") from exc
+ explicit=combinations is not None
+ if explicit and (profile_ids is not None or concept_ids is not None):raise EditorialError("calibration_combination_mode_conflict")
+ profiles=[];concepts=None;resolved_combinations=None
+ if explicit:
+  if not combinations:raise EditorialError("calibration_combinations_required")
+  normalized=[]
+  for pair in combinations:
+   if not isinstance(pair,(tuple,list)) or len(pair)!=2 or not all(isinstance(x,str) and x.strip() for x in pair):raise EditorialError("calibration_combination_malformed")
+   normalized.append((pair[0].strip(),pair[1].strip()))
+  if len(set(normalized))!=len(normalized):raise EditorialError("calibration_duplicate_combination")
+  resolved_combinations=[]
+  for style_id,concept_id in normalized:
+   try:style=get_profile(style_id)
+   except KeyError as exc:raise EditorialError("calibration_combination_style_unknown") from exc
+   try:concept=get_concept(concept_id)
+   except KeyError as exc:raise EditorialError("calibration_combination_concept_unknown") from exc
+   resolved_combinations.append((style,concept))
+ else:
+  if not profile_ids:raise EditorialError("calibration_profiles_required")
+  if len(set(profile_ids))!=len(profile_ids):raise EditorialError("calibration_duplicate_profile")
+  try:profiles=[get_profile(x) for x in profile_ids]
+  except KeyError as exc:raise EditorialError("calibration_profile_unknown") from exc
+  if concept_ids is not None:
+   if not concept_ids:raise EditorialError("calibration_concepts_required")
+   if len(set(concept_ids))!=len(concept_ids):raise EditorialError("calibration_duplicate_concept")
+   try:concepts=[get_concept(x) for x in concept_ids]
+   except KeyError as exc:raise EditorialError("calibration_concept_unknown") from exc
  if samples_per_profile is not None:
-  if concepts is not None or samples_per_combination!=1:raise EditorialError("calibration_sample_flags_conflict")
+  if explicit or concepts is not None or samples_per_combination!=1:raise EditorialError("calibration_sample_flags_conflict")
   if not 1<=samples_per_profile<=5:raise EditorialError("calibration_samples_per_profile_invalid")
   samples=samples_per_profile
  else:
   if not 1<=samples_per_combination<=3:raise EditorialError("calibration_samples_per_combination_invalid")
   samples=samples_per_combination
- total=len(profiles)*(len(concepts) if concepts is not None else 1)*samples
+ pair_count=len(resolved_combinations) if explicit else len(profiles)*(len(concepts) if concepts is not None else 1)
+ total=pair_count*samples
  if max_images<1 or total>max_images:raise EditorialError("calibration_image_limit")
  if require_live!=acknowledge_cost:raise EditorialError("calibration_live_flags_required")
  live=require_live and acknowledge_cost
@@ -196,4 +226,4 @@ def calibrate_images(*,date:str,profile_ids:Sequence[str],output_dir:Path,max_im
  if live:cfg.require_openrouter()
  context=context or _context(date,generated,editorial_output,cfg)
  if context.date!=date:raise EditorialError("calibration_context_date_mismatch")
- return run_calibration(context=context,profiles=profiles,concepts=concepts,output=output,cfg=cfg,live=live,client=client,samples_per_combination=samples if samples_per_profile is None else 1,samples_per_profile=samples_per_profile)
+ return run_calibration(context=context,profiles=profiles,concepts=concepts,combinations=resolved_combinations,output=output,cfg=cfg,live=live,client=client,samples_per_combination=samples if samples_per_profile is None else 1,samples_per_profile=samples_per_profile)
