@@ -78,7 +78,7 @@ def extract_script(response:Any)->dict[str,Any]:
  except (KeyError,IndexError,TypeError,json.JSONDecodeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
 def _atomic_json(path:Path,value:dict[str,Any],private:bool=False)->None:
  path.parent.mkdir(parents=True,exist_ok=True,mode=0o700 if private else 0o755);tmp=path.with_name("."+path.name+".tmp");tmp.write_text(json.dumps(value,sort_keys=True,indent=2)+"\n");os.chmod(tmp,0o600 if private else 0o644);os.replace(tmp,path)
-def initial_state(root:Path,d:str,source_digest:str,profile:PodcastProfile)->dict[str,Any]:return {"schema_version":STATE_VERSION,"publication_date":d,"source_artifact_sha256":source_digest,"production_code_head":git_head(root),"profile":{"model":profile.candidate.model,"voices":profile.candidate.voices},"script_status":"pending","script_sha256":None,"planned_turns":[],"completed_turns":{},"failed_turn":None,"request_attempts":0,"retries":0,"estimated_cost_usd":0.0,"measured_cost_usd":None,"audio_validation":None,"assembly_status":"pending","upload_status":"pending","artifact_status":"pending","frontend_status":"pending","accepted":False}
+def initial_state(root:Path,d:str,source_digest:str,profile:PodcastProfile)->dict[str,Any]:return {"schema_version":STATE_VERSION,"publication_date":d,"source_artifact_sha256":source_digest,"production_code_head":git_head(root),"profile":{"model":profile.candidate.model,"voices":profile.candidate.voices},"script_status":"pending","script_sha256":None,"planned_turns":[],"completed_turns":{},"failed_turn":None,"request_attempts":0,"editorial_attempts":0,"tts_attempts":0,"retries":0,"estimated_cost_usd":0.0,"measured_cost_usd":None,"audio_validation":None,"assembly_status":"pending","upload_status":"pending","artifact_status":"pending","frontend_status":"pending","accepted":False}
 def load_state(root:Path,d:str,source_digest:str,profile:PodcastProfile)->tuple[Path,dict[str,Any]]:
  rd=runtime_dir(d);rd.mkdir(parents=True,exist_ok=True,mode=0o700);os.chmod(rd,0o700);p=rd/"state.json"
  if not p.exists():state=initial_state(root,d,source_digest,profile);_atomic_json(p,state,True);return rd,state
@@ -108,18 +108,20 @@ def editorial_request(post:Callable[...,Any],key:str,prompt:str)->dict[str,Any]:
 def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float)->dict[str,Any]:
  projected_cost(state,.10,ceiling);prompt=editorial_prompt(source,digest,d)
  for attempt in range(2):
-  state["request_attempts"]+=1;state["estimated_cost_usd"]+=.10
+  state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
   try:s=editorial_request(post,key,prompt);validate_script(s,digest);validate_grounding(s,source);return s
   except PodcastError as exc:
    if attempt or "response_invalid" in str(exc):raise
    state["retries"]+=1;prompt+="\nRepair the previous JSON to satisfy every schema and balance rule; return JSON only."
  raise PodcastError("podcast_script_generation_failed")
 def tts_turn(post:Callable[...,Any],key:str,candidate:Candidate,turn:dict[str,Any],rd:Path,state:dict[str,Any],ceiling:float)->dict[str,Any]:
+ if state.get("tts_attempts",0)>=2*len(state.get("planned_turns") or []):raise PodcastError("podcast_tts_attempt_budget_exhausted")
  tid=turn["turn_id"];existing=state["completed_turns"].get(tid)
  if existing:return existing
  private=rd/"turns";private.mkdir(exist_ok=True,mode=0o700);body=build_request(candidate,{"speaker":"host" if turn["speaker"]=="speaker_a" else "analyst","text":turn["text"]});one=estimate_cost(candidate,len(turn["text"]))
  for retry in range(2):
-  projected_cost(state,one,ceiling);state["request_attempts"]+=1
+  if state.get("tts_attempts",0)>=2*len(state.get("planned_turns") or []):raise PodcastError("podcast_tts_attempt_budget_exhausted")
+  projected_cost(state,one,ceiling);state["request_attempts"]+=1;state["tts_attempts"]+=1
   try:audio,meta=request_turn(post,key,body,max_retries=0,turn_id=tid,diagnostic_dir=rd/"diagnostics")
   except SpeechHTTPError as exc:
    if retry or not (exc.status==429 or 500<=exc.status<600):state["failed_turn"]=tid;raise PodcastError("podcast_tts_unrecoverable") from exc
@@ -165,15 +167,24 @@ def generate(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post,cost:f
    script=generate_script(post,key,source,digest,d,state,cost);_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];save_state(rd,state)
   for turn in script["turns"]:tts_turn(post,key,profile.candidate,turn,rd,state,cost);save_state(rd,state)
   final=rd/"episode.mp3" if state["assembly_status"]=="complete" else assemble_episode(rd,script,state);save_state(rd,state);return {"private_audio":str(final),"state":state}
-def publish(root:Path,d:str,storage:Any,accept:bool)->dict[str,Any]:
+def verify_public_audio(get:Callable[...,Any],url:str,metrics:dict[str,Any])->None:
+ r=get(url,timeout=60)
+ if getattr(r,"status_code",0)!=200 or str(r.headers.get("content-type","")).split(";",1)[0].lower()!="audio/mpeg" or int(r.headers.get("content-length",0))!=metrics["bytes"]:raise PodcastError("podcast_public_verify_failed")
+ content=bytes(r.content)
+ if len(content)!=metrics["bytes"] or hashlib.sha256(content).hexdigest()!=metrics["sha256"][7:]:raise PodcastError("podcast_public_verify_failed")
+
+def publish(root:Path,d:str,storage:Any,accept:bool,public_get:Callable[...,Any]=requests.get)->dict[str,Any]:
  source,digest=load_source(root,d);profile=profile_from_args(False,1.0);rd,state=load_state(root,d,digest,profile)
  with date_lock(rd):
   if not accept:raise PodcastError("podcast_human_acceptance_required")
   state["accepted"]=True;save_state(rd,state)
   final=rd/"episode.mp3";metrics=state.get("audio_validation")
   if not final.is_file() or not metrics or measure_audio(final)["sha256"]!=metrics["sha256"]:raise PodcastError("podcast_private_audio_invalid")
-  url,_=upload_audio(storage,final,d,metrics);state["upload_status"]="verified";script=json.loads((rd/"script.json").read_text());doc=public_artifact(d,script,digest,metrics,url);out=artifact_path(root,d)
-  if out.exists() and json.loads(out.read_text())!=doc:raise PodcastError("podcast_artifact_conflict")
+  url,_=upload_audio(storage,final,d,metrics);verify_public_audio(public_get,url,metrics);state["upload_status"]="verified";state["frontend_status"]="prepared_external_sync";script=json.loads((rd/"script.json").read_text());doc=public_artifact(d,script,digest,metrics,url);out=artifact_path(root,d)
+  if out.exists():
+   old=json.loads(out.read_text());immutable=("publication_date","audio_url","audio_sha256","audio_bytes","source_artifact_sha256","script_sha256","status","speaker_profile")
+   if any(old.get(k)!=doc.get(k) for k in immutable):raise PodcastError("podcast_artifact_conflict")
+   state["artifact_status"]="published";save_state(rd,state);return old
   _atomic_json(out,doc);state["artifact_status"]="published";save_state(rd,state);return doc
 def main()->int:
  p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate","publish"));p.add_argument("--date",required=True);p.add_argument("--authorize-paid",action="store_true");p.add_argument("--authorize-publish",action="store_true");p.add_argument("--accept",action="store_true");p.add_argument("--cost-ceiling",type=float,default=1.0);a=p.parse_args();root=Path.cwd()
