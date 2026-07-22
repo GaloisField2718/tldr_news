@@ -2,7 +2,7 @@ from __future__ import annotations
 import copy,json,os,shutil,stat,subprocess,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
-from tools.tldr_tts_calibration import (CAPABILITIES,CalibrationError,Candidate,assemble,build_gemini_bonus,build_request,dialogue,discover_models,estimate,generation_id,paid_gate,probe,request_turn,secure_mapping,validate_audio_response,validate_voices,write_reveal)
+from tools.tldr_tts_calibration import (CAPABILITIES,CalibrationError,Candidate,SpeechHTTPError,assemble,build_gemini_bonus,build_request,dialogue,discover_models,estimate,generation_id,http_diagnostic,paid_gate,probe,request_turn,secure_mapping,validate_audio_response,validate_voices,write_reveal)
 
 def model(slug,pricing=None,context=4096):return {'id':slug,'architecture':{'modality':'text->speech','output_modalities':['speech']},'pricing':pricing or {'prompt':'0.00001','completion':'0'},'supported_parameters':['response_format'],'top_provider':{'context_length':context}}
 def models(include_microsoft=True,include_xai=True):
@@ -37,8 +37,8 @@ class TTSCalibrationTests(unittest.TestCase):
   self.assertEqual(discover_models(models(False),16000)[1],['mistral','challenger']);doc=models(False);doc['data'][-1]['architecture']['output_modalities']=[];self.assertEqual(discover_models(doc,300)[1],['challenger'])
  def test_voice_validation_and_request_are_provider_neutral(self):
   validate_voices(CAPABILITIES['x-ai/grok-voice-tts-1.0'],['eve','rex']);body=build_request(self.candidate(),{'speaker':'host','text':'Report'});self.assertEqual(body,{'model':'x-ai/grok-voice-tts-1.0','input':'Report','voice':'eve','response_format':'mp3'});self.assertNotIn('instructions',body);self.assertNotIn('speed',body)
- def test_gemini_bonus_uses_two_speakers_and_same_dialogue(self):
-  d=dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'));body=build_gemini_bonus(self.candidate('google/gemini-3.1-flash-tts-preview'),d['turns']);self.assertTrue(all(x['text'] in body['input'] for x in d['turns']));configs=body['provider']['options']['google-vertex']['speech_config']['multi_speaker_voice_config']['speaker_voice_configs'];self.assertEqual([(x['speaker'],x['voice_config']['prebuilt_voice_config']['voice_name']) for x in configs],[('Host','Kore'),('Analyst','Aoede')])
+ def test_gemini_bonus_is_disabled_while_passthrough_contract_is_unproven(self):
+  with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):build_gemini_bonus(self.candidate('google/gemini-3.1-flash-tts-preview'),dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'))['turns'])
  def test_response_content_type_json_error_generation_id_and_retry(self):
   self.assertEqual(len(validate_audio_response(Response())),100);self.assertEqual(generation_id(Response(headers={'X-Generation-Id':'safe'})),'safe')
   with self.assertRaises(CalibrationError):validate_audio_response(Response(200,b'{"error":1}','application/json'))
@@ -48,8 +48,17 @@ class TTSCalibrationTests(unittest.TestCase):
   with self.assertRaises(CalibrationError):request_turn(post,'x',{},2)
  def test_http_400_never_retries(self):
   calls=[]
-  with self.assertRaises(CalibrationError):request_turn(lambda *a,**k:(calls.append(1) or Response(400)),'x',{},1)
+  with self.assertRaises(SpeechHTTPError):request_turn(lambda *a,**k:(calls.append(1) or Response(400,b'{"error":{"code":"bad_voice","message":"invalid voice"}}','application/json')),'x',{'model':'m','voice':'v','response_format':'mp3','input':'safe'},1,turn_id='t01')
   self.assertEqual(len(calls),1)
+ def test_json_and_text_http_diagnostics_are_retained(self):
+  body={'model':'m','voice':'v','response_format':'mp3','input':'do not persist'};j=http_diagnostic(Response(400,b'{"error":{"code":"bad","message":"wrong voice"}}','application/json',{'x-request-id':'r'}),body,'t01',1,'secret');self.assertEqual((j['error_code'],j['error_message'],j['safe_response_headers']['x-request-id']),('bad','wrong voice','r'));self.assertNotIn('do not persist',json.dumps(j));text=http_diagnostic(Response(400,b'plain failure','text/plain'),body,'t01',1,'secret');self.assertEqual(text['response_body'],'plain failure');self.assertIsNone(text['error_code'])
+ def test_oversized_malformed_and_secret_diagnostics_are_safe(self):
+  raw=(b'api_key=secret Bearer secret '+b'x'*17000);x=http_diagnostic(Response(400,raw,'text/plain'),{'model':'m','voice':'v','response_format':'pcm','input':'x'},'t01',1,'secret');self.assertTrue(x['response_body_truncated']);self.assertNotIn('secret',json.dumps(x));self.assertLessEqual(len(x['response_body'].encode()),16384)
+ def test_diagnostic_directory_and_file_permissions(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td)/'private'
+   with self.assertRaises(SpeechHTTPError):request_turn(lambda *a,**k:Response(400,b'bad','text/plain'),'key',{'model':'m','voice':'v','response_format':'mp3','input':'x'},0,turn_id='t01',diagnostic_dir=root)
+   self.assertEqual(stat.S_IMODE(root.stat().st_mode),0o700);self.assertEqual(stat.S_IMODE(next(root.iterdir()).stat().st_mode),0o600)
  def test_dialogue_order_terms_and_deterministic_request_count(self):
   d=dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'));self.assertEqual(len(d['turns'])*3,24);self.assertEqual([x['turn_id'] for x in d['turns']],[f't{i:02}' for i in range(1,9)]);text=' '.join(x['text'] for x in d['turns']);self.assertTrue(all(x in text for x in ('Google AI Search','independent websites','traffic','conversational interface')))
  @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'FFmpeg is enforced by paid preflight')
@@ -68,9 +77,9 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_paid_and_separate_bonus_authorization_gates(self):
   cs=[self.candidate('google/gemini-3.1-flash-tts-preview'),self.candidate('mistralai/voxtral-mini-tts-2603'),self.candidate()]
   with self.assertRaisesRegex(CalibrationError,'explicit_paid'):paid_gate(authorized=False,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
-  with self.assertRaisesRegex(CalibrationError,'separate_bonus'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True)
+  with self.assertRaisesRegex(CalibrationError,'bonus_contract_unproven'):paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True)
   with patch.dict(os.environ,{'OPENROUTER_API_KEY':'private'}),patch('tools.tldr_tts_calibration.shutil.which',return_value='/bin/tool'),patch('tools.tldr_tts_calibration.subprocess.run') as run:
-   run.return_value.stdout='';paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'),bonus=True,bonus_authorized=True)
+   run.return_value.stdout='';paid_gate(authorized=True,candidates=cs,estimated_total=.2,output=Path('/tmp/out'))
  def test_discovery_and_preflight_code_has_no_paid_or_production_side_effect(self):
   source=Path('tools/tldr_tts_calibration.py').read_text().lower();self.assertNotIn('r2storage',source);self.assertNotIn('generated/editorial',source);self.assertEqual(discover_models(models(),300)[0][2].model,'x-ai/grok-voice-tts-1.0')
 

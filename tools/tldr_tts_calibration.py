@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Isolated blind TTS calibration; never imports production publication/storage code."""
 from __future__ import annotations
-import argparse,hashlib,json,os,secrets,shutil,subprocess,tempfile,time
+import argparse,hashlib,json,os,re,secrets,shutil,subprocess,tempfile,time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any,Callable
@@ -9,6 +9,8 @@ import requests
 
 MODELS_URL="https://openrouter.ai/api/v1/models?output_modalities=speech"
 SPEECH_URL="https://openrouter.ai/api/v1/audio/speech"
+GEMINI_BONUS_SUPPORTED=False
+GEMINI_BONUS_REASON="OpenRouter documents generic provider options but not the Gemini multi_speaker_voice_config speech payload"
 TARGETS={"google":"google/gemini-3.1-flash-tts-preview","mistral":"mistralai/voxtral-mini-tts-2603"}
 CHALLENGERS=("microsoft/mai-voice-2","x-ai/grok-voice-tts-1.0","deepgram/aura-2","canopylabs/orpheus-3b-0.1-ft","hexgrad/kokoro-82m")
 # Versioned from current official OpenRouter model pages on 2026-07-22. Runtime
@@ -24,6 +26,27 @@ CAPABILITIES={
 }
 
 class CalibrationError(RuntimeError):pass
+class SpeechHTTPError(CalibrationError):
+ def __init__(self,status:int,diagnostic:dict[str,Any]):super().__init__(f"speech_http_{status}: {diagnostic.get('error_message') or 'request rejected'}");self.status=status;self.diagnostic=diagnostic
+
+def _private_json(directory:Path,name:str,value:dict[str,Any])->Path:
+ directory.mkdir(parents=True,exist_ok=True,mode=0o700);os.chmod(directory,0o700);path=directory/name;path.write_text(json.dumps(value,sort_keys=True,indent=2,ensure_ascii=False)+"\n");os.chmod(path,0o600);return path
+
+def _redact(text:str,secrets_to_hide:tuple[str,...])->str:
+ out=text
+ for secret in secrets_to_hide:
+  if secret:out=out.replace(secret,"[REDACTED]")
+ out=re.sub(r"(?i)(bearer\s+)[A-Za-z0-9._~+/-]+",r"\1[REDACTED]",out);out=re.sub(r"(?i)(api[_-]?key[\"' :=]+)[^\s\"']+",r"\1[REDACTED]",out);return out
+
+def http_diagnostic(response:Any,body:dict[str,Any],turn_id:str,attempt:int,key:str)->dict[str,Any]:
+ raw=bytes(response.content);bounded=raw[:16384];text=_redact(bounded.decode("utf-8",errors="replace"),(key,));text=text.encode("utf-8")[:16384].decode("utf-8",errors="ignore");parsed=None;code=message=None
+ try:parsed=json.loads(text)
+ except (TypeError,json.JSONDecodeError):pass
+ if isinstance(parsed,dict):
+  error=parsed.get("error")
+  if isinstance(error,dict):code=error.get("code");message=error.get("message")
+ safe_headers={k.lower():v for k,v in response.headers.items() if k.lower() in {"content-type","x-generation-id","x-request-id","x-openrouter-request-id"}}
+ return {"http_status":response.status_code,"content_type":response.headers.get("content-type"),"safe_response_headers":safe_headers,"response_body":text,"response_body_truncated":len(raw)>16384,"error_code":str(code)[:256] if code is not None else None,"error_message":_redact(str(message)[:1000],(key,)) if message is not None else None,"model":body.get("model"),"voice":body.get("voice"),"response_format":body.get("response_format"),"turn_id":turn_id,"attempt_number":attempt,"input_sha256":"sha256:"+hashlib.sha256(str(body.get("input","")).encode()).hexdigest(),"input_characters":len(str(body.get("input","")))}
 @dataclass(frozen=True)
 class Candidate:
  provider:str;model:str;voices:dict[str,str];pricing:dict[str,str];pricing_unit:str;voice_metadata_source:str;formats:tuple[str,...];output_modalities:tuple[str,...];supported_parameters:tuple[str,...];max_input:int
@@ -58,29 +81,33 @@ def build_request(candidate:Candidate,turn:dict[str,Any])->dict[str,Any]:
  return {"model":candidate.model,"input":turn["text"],"voice":candidate.voices[speaker],"response_format":"mp3"}
 
 def build_gemini_bonus(candidate:Candidate,turns:list[dict[str,Any]])->dict[str,Any]:
- if candidate.model!=TARGETS["google"]:raise CalibrationError("bonus_requires_gemini")
- lines=[f"{'Host' if x['speaker']=='host' else 'Analyst'}: {x['text']}" for x in turns]
- return {"model":candidate.model,"input":"\n\n".join(lines),"voice":candidate.voices["host"],"response_format":"mp3","provider":{"options":{"google-vertex":{"speech_config":{"multi_speaker_voice_config":{"speaker_voice_configs":[{"speaker":"Host","voice_config":{"prebuilt_voice_config":{"voice_name":candidate.voices['host']}}},{"speaker":"Analyst","voice_config":{"prebuilt_voice_config":{"voice_name":candidate.voices['analyst']}}}]}}}}}}
+ raise CalibrationError("gemini_bonus_contract_unproven")
 
 def validate_audio_response(response:Any)->bytes:
  content=bytes(response.content);ctype=str(response.headers.get("content-type","")).split(";",1)[0].lower()
  if response.status_code<200 or response.status_code>=300:raise CalibrationError(f"speech_http_{response.status_code}")
- if ctype not in ("audio/mpeg","audio/mp3","application/octet-stream") or content.lstrip().startswith((b"{",b"[")):raise CalibrationError("speech_response_not_audio")
+ if ctype not in ("audio/mpeg","audio/mp3","audio/pcm","audio/wav","audio/x-wav","application/octet-stream") or content.lstrip().startswith((b"{",b"[")):raise CalibrationError("speech_response_not_audio")
  if len(content)<64:raise CalibrationError("speech_response_too_small")
  return content
 
 def generation_id(response:Any)->str|None:
  value=response.headers.get("x-generation-id") or response.headers.get("X-Generation-Id");return value[:256] if isinstance(value,str) and value else None
 
-def request_turn(post:Callable[...,Any],key:str,body:dict[str,Any],max_retries:int=1)->tuple[bytes,dict[str,Any]]:
+def request_turn(post:Callable[...,Any],key:str,body:dict[str,Any],max_retries:int=1,*,turn_id:str="unknown",diagnostic_dir:Path|None=None)->tuple[bytes,dict[str,Any]]:
  if max_retries not in (0,1):raise CalibrationError("retry_bound_invalid")
  last=None
  for retry in range(max_retries+1):
   started=time.monotonic()
-  try:r=post(SPEECH_URL,headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},json=body,timeout=180);audio=validate_audio_response(r);return audio,{"http_status":r.status_code,"content_type":r.headers.get("content-type"),"generation_id":generation_id(r),"bytes":len(audio),"duration_ms":round((time.monotonic()-started)*1000),"retry_count":retry}
+  try:
+   r=post(SPEECH_URL,headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},json=body,timeout=180)
+   if not 200<=r.status_code<300:
+    diagnostic=http_diagnostic(r,body,turn_id,retry+1,key)
+    if diagnostic_dir:_private_json(diagnostic_dir,f"http-error-{turn_id}-attempt-{retry+1}.json",diagnostic)
+    raise SpeechHTTPError(r.status_code,diagnostic)
+   audio=validate_audio_response(r);return audio,{"http_status":r.status_code,"content_type":r.headers.get("content-type"),"generation_id":generation_id(r),"bytes":len(audio),"duration_ms":round((time.monotonic()-started)*1000),"retry_count":retry}
   except (requests.RequestException,CalibrationError) as exc:
    last=exc
-   if retry>=max_retries or isinstance(exc,CalibrationError) and str(exc).startswith("speech_http_4"):raise
+   if retry>=max_retries or isinstance(exc,SpeechHTTPError) and 400<=exc.status<500:raise
  raise last or CalibrationError("speech_failed")
 
 def secure_mapping(candidates:list[Candidate])->dict[str,Candidate]:
@@ -115,6 +142,7 @@ def estimate(candidates:list[Candidate],characters:int,audio_seconds_upper:int=9
 def paid_gate(*,authorized:bool,candidates:list[Candidate],estimated_total:float,output:Path,bonus:bool=False,bonus_authorized:bool=False)->None:
  if not authorized:raise CalibrationError("explicit_paid_authorization_required")
  if len(candidates)!=3:raise CalibrationError("three_candidates_required")
+ if bonus and not GEMINI_BONUS_SUPPORTED:raise CalibrationError("gemini_bonus_contract_unproven")
  if bonus and not bonus_authorized:raise CalibrationError("separate_bonus_authorization_required")
  if estimated_total>1:raise CalibrationError("estimated_cost_exceeds_limit")
  if not os.getenv("OPENROUTER_API_KEY"):raise CalibrationError("openrouter_key_missing")
@@ -130,14 +158,14 @@ def dialogue(path:Path)->dict[str,Any]:
 def main()->int:
  p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate"));p.add_argument("--dialogue",type=Path,default=Path("calibration/tts/blind-test-v1/dialogue.json"));p.add_argument("--output",type=Path,required=True);p.add_argument("--authorize-paid",action="store_true");p.add_argument("--include-gemini-bonus",action="store_true");p.add_argument("--authorize-bonus-paid",action="store_true");a=p.parse_args();key=os.getenv("OPENROUTER_API_KEY")
  if not key:raise CalibrationError("openrouter_key_missing")
- d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);max_turn=max(len(x["text"]) for x in d["turns"]);doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc,max_turn);cost=estimate(candidates,chars);report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"voice_metadata_source":x.voice_metadata_source,"output_modalities":x.output_modalities,"pricing":x.pricing,"pricing_unit":x.pricing_unit,"supported_parameters":x.supported_parameters,"max_input":x.max_input,"formats":x.formats,"speed_supported":False} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"fair_test_requests":len(d["turns"])*len(candidates),"bonus_requests":1,"characters_per_candidate":chars,"fair_test_input_characters":chars*len(candidates),"bonus_input_characters":chars,"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":len(candidates)==3 and cost["total_upper_bound_usd"]<1}
+ d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);max_turn=max(len(x["text"]) for x in d["turns"]);doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc,max_turn);cost=estimate(candidates,chars);report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"voice_metadata_source":x.voice_metadata_source,"output_modalities":x.output_modalities,"pricing":x.pricing,"pricing_unit":x.pricing_unit,"supported_parameters":x.supported_parameters,"max_input":x.max_input,"formats":x.formats,"speed_supported":False} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"fair_test_requests":len(d["turns"])*len(candidates),"bonus_requests":0,"bonus_supported":GEMINI_BONUS_SUPPORTED,"bonus_unsupported_reason":GEMINI_BONUS_REASON,"characters_per_candidate":chars,"fair_test_input_characters":chars*len(candidates),"bonus_input_characters":chars,"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":len(candidates)==3 and cost["total_upper_bound_usd"]<1}
  print(json.dumps(report,indent=2,sort_keys=True))
  if a.command=="preflight":return 0 if report["ready"] else 2
- paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["total_upper_bound_usd"] if a.include_gemini_bonus else cost["main_cost_upper_bound_usd"],output=a.output,bonus=a.include_gemini_bonus,bonus_authorized=a.authorize_bonus_paid);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};public=[];dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
+ paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["total_upper_bound_usd"] if a.include_gemini_bonus else cost["main_cost_upper_bound_usd"],output=a.output,bonus=a.include_gemini_bonus,bonus_authorized=a.authorize_bonus_paid);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};write_reveal(a.output/"tts-reveal.json",mapping,records);public=[];dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
  for anonymous,candidate in mapping.items():
   private=a.output/("."+anonymous+"-turns");private.mkdir(mode=0o700);files=[];records[anonymous]=[]
   for turn in d["turns"]:
-   body=build_request(candidate,turn);audio,meta=request_turn(requests.post,key,body,max_retries=1);path=private/(turn["turn_id"]+".mp3");path.write_bytes(audio);os.chmod(path,0o600);files.append(path);records[anonymous].append({**meta,"turn_id":turn["turn_id"],"model":candidate.model,"voice":body["voice"]})
+   body=build_request(candidate,turn);audio,meta=request_turn(requests.post,key,body,max_retries=1,turn_id=turn["turn_id"],diagnostic_dir=a.output/"diagnostics");path=private/(turn["turn_id"]+".mp3");path.write_bytes(audio);os.chmod(path,0o600);files.append(path);records[anonymous].append({**meta,"turn_id":turn["turn_id"],"model":candidate.model,"voice":body["voice"]});write_reveal(a.output/"tts-reveal.json",mapping,records)
   final=a.output/(anonymous+".mp3");assemble(files,[x["pause_after_ms"] for x in d["turns"]],final);info=probe(final);public.append({"candidate_id":anonymous,"ranking_eligible":True,"file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())});shutil.rmtree(private)
  if a.include_gemini_bonus:
   gemini=next(x for x in candidates if x.model==TARGETS["google"]);body=build_gemini_bonus(gemini,d["turns"]);audio,meta=request_turn(requests.post,key,body,max_retries=1);raw=a.output/".bonus-raw.mp3";raw.write_bytes(audio);final=a.output/"candidate-bonus.mp3";assemble([raw],[0],final);raw.unlink();info=probe(final);records["candidate-bonus"]=[{**meta,"turn_id":"native-dialogue","model":gemini.model,"voices":gemini.voices,"provider_options":body["provider"]}];public.append({"candidate_id":"candidate-bonus","ranking_eligible":False,"label":"Experimental cohesive-dialogue bonus — not part of the main ranking.","file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())})
