@@ -9,6 +9,7 @@ from .config import Config
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_VERSION,
     ILLUSTRATION_PROMPT_VERSION,SCHEMA_VERSION,EditorialError,hash_parts,image_configuration,object_key,sha256_bytes)
 from .image import assemble_prompt,decode_image,normalize_raster
+from .illustration_prompts import get_profile
 from .openrouter import OpenRouterClient
 from .plan import fallback,resolve_plan,validate_plan
 from .r2_storage import R2Storage,build_public_url
@@ -133,7 +134,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     illustration_hash=None; final_prompt=None; ill=_illustration("disabled" if not config.enabled else "not_requested")
     if valid_ai and plan["visual_brief"]["mode"]!="none":
         by={c.candidate_id:c for c in candidates}; sources=[by[x] for x in plan["visual_brief"]["source_candidate_ids"]]
-        final_prompt=assemble_prompt(plan["visual_brief"],sources)
+        final_prompt=assemble_prompt(plan["visual_brief"],sources,get_profile("production-v2"))
         image_cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
         illustration_hash=hash_parts(plan["visual_brief"],[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,image_cfg)
         try:

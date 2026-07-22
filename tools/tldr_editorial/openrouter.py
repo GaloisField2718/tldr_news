@@ -105,7 +105,7 @@ class OpenRouterClient:
           f"Select exactly {expected} front-page stories (expected_front_page_count). Use exactly one lead, no more than four secondaries, and make all remaining stories briefs. "
           "Every candidate ID must come from the supplied dossier; lead_candidate_id must identify the entry whose role is lead. "
           "section_order may contain unique present sectors only. A lead_story visual source is exactly the lead. "
-          "An edition_theme uses exactly two or three genuinely related selected stories. none uses no sources and empty semantic fields. "
+          "An edition_theme uses exactly two or three genuinely related selected stories. For every non-none visual brief identify a factual relationship or tension, prefer relational composition over an isolated article noun, explain it through a grounded metaphor, and avoid decorative technology defaults (racks, chips, laptops, robots, clouds, shields, arrows, charts, skyscrapers, chess, handshakes, or split-screen conflict) unless facts justify them. Never specify artist imitation, rendered text, logos, or unsupported physical details. none uses no sources and empty semantic fields. "
           "Never rewrite titles or summaries, select sponsors or resources, invent facts, emit URLs, markup, prose, or reasoning. Return only the strict JSON object.")
         user={"request_metadata":{"expected_front_page_count":expected,"eligible_candidate_count":eligible},"candidates":dossier}
         body={"model":self.config.editorial_model,"stream":False,"messages":[{"role":"system","content":system},{"role":"user","content":json.dumps(user,ensure_ascii=False,separators=(",",":"))}],
