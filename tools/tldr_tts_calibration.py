@@ -51,6 +51,21 @@ def http_diagnostic(response:Any,body:dict[str,Any],turn_id:str,attempt:int,key:
 class Candidate:
  provider:str;model:str;voices:dict[str,str];pricing:dict[str,str];pricing_unit:str;voice_metadata_source:str;formats:tuple[str,...];output_modalities:tuple[str,...];supported_parameters:tuple[str,...];max_input:int
 
+@dataclass(frozen=True)
+class TurnDescriptor:
+ path:Path;codec:str;sample_rate:int;channels:int;raw:bool;candidate_id:str;turn_id:str;requested_format:str;received_mime:str
+
+@dataclass
+class AttemptBudget:
+ logical_requests_planned:int=24;max_total_attempts:int=24;http_attempts:int=0;successful_responses:int=0;validated_turns:int=0;failed_attempts:int=0
+ def claim(self)->None:
+  if self.http_attempts>=self.max_total_attempts:raise CalibrationError("attempt_budget_exhausted")
+  self.http_attempts+=1
+ def succeeded(self)->None:self.successful_responses+=1
+ def validated(self)->None:self.validated_turns+=1
+ def failed(self)->None:self.failed_attempts+=1
+ def snapshot(self)->dict[str,int]:return {"logical_requests_planned":self.logical_requests_planned,"max_total_attempts":self.max_total_attempts,"http_attempts":self.http_attempts,"successful_responses":self.successful_responses,"validated_turns":self.validated_turns,"failed_attempts":self.failed_attempts,"remaining_attempt_budget":self.max_total_attempts-self.http_attempts,"retries":0}
+
 def _candidate(model:dict[str,Any],max_turn_input:int)->Candidate|None:
  slug=model.get("id");cap=CAPABILITIES.get(slug);arch=model.get("architecture") or {};pricing=model.get("pricing") or {}
  if not cap or arch.get("modality")!="text->speech" or "speech" not in arch.get("output_modalities",[]) or not cap["speech_endpoint"] or not pricing.get("prompt") or cap["max_input"]<max_turn_input:return None
@@ -118,15 +133,37 @@ def secure_mapping(candidates:list[Candidate])->dict[str,Candidate]:
 def write_reveal(path:Path,mapping:dict[str,Candidate],records:dict[str,list[dict[str,Any]]]|None=None)->None:
  path.write_text(json.dumps({"mapping":{k:{"provider":v.provider,"model":v.model,"voices":v.voices} for k,v in mapping.items()},"generation_records":records or {}},sort_keys=True,indent=2)+"\n");os.chmod(path,0o600)
 
-def assemble(turn_files:list[Path],pauses:list[int],output:Path,run:Callable[...,Any]=subprocess.run)->None:
- if len(turn_files)!=len(pauses) or not turn_files:raise CalibrationError("assembly_order_invalid")
+def turn_descriptor(candidate:Candidate,candidate_id:str,turn_id:str,directory:Path,received_mime:str)->TurnDescriptor:
+ cap=CAPABILITIES[candidate.model];format=cap["requested_format"]
+ if format=="pcm":return TurnDescriptor(directory/f"{turn_id}.pcm","pcm_s16le",cap["sample_rate"],cap["channels"],True,candidate_id,turn_id,format,received_mime)
+ if format=="mp3":return TurnDescriptor(directory/f"{turn_id}.mp3","mp3",cap["sample_rate"],cap["channels"],False,candidate_id,turn_id,format,received_mime)
+ raise CalibrationError("turn_format_unproven")
+
+def decoder_args(turn:TurnDescriptor)->list[str]:
+ return ["-f","s16le","-ar",str(turn.sample_rate),"-ac",str(turn.channels),"-i",str(turn.path)] if turn.raw else ["-i",str(turn.path)]
+
+def validate_turn(turn:TurnDescriptor,run:Callable[...,Any]=subprocess.run)->dict[str,Any]:
+ size=turn.path.stat().st_size;expected=f"audio/pcm;rate={turn.sample_rate};channels={turn.channels}" if turn.raw else "audio/mpeg"
+ if turn.received_mime!=expected:raise CalibrationError("turn_mime_mismatch")
+ if turn.raw:
+  if size<=0 or size%2:raise CalibrationError("pcm_byte_count_invalid")
+  duration=size/(turn.sample_rate*turn.channels*2)
+  if duration<.1:raise CalibrationError("turn_audio_too_short")
+  run(["ffmpeg","-v","error",*decoder_args(turn),"-f","null","-"],check=True)
+ else:
+  r=run(["ffprobe","-v","error","-show_entries","stream=codec_name,sample_rate,channels:format=duration","-of","json",str(turn.path)],capture_output=True,text=True,check=True);doc=json.loads(r.stdout);stream=doc["streams"][0];duration=float(doc["format"]["duration"])
+  if stream["codec_name"]!="mp3" or int(stream["sample_rate"])!=turn.sample_rate or int(stream["channels"])!=turn.channels or duration<.1:raise CalibrationError("mp3_validation_failed")
+ return {"duration_seconds":round(duration,6),"bytes":size,"codec":turn.codec,"sample_rate":turn.sample_rate,"channels":turn.channels}
+
+def assemble(turns:list[TurnDescriptor],pauses:list[int],output:Path,run:Callable[...,Any]=subprocess.run)->None:
+ if len(turns)!=len(pauses) or not turns:raise CalibrationError("assembly_order_invalid")
  with tempfile.TemporaryDirectory(prefix="tldr-tts-assemble-") as td:
   parts=[]
-  for i,(source,pause) in enumerate(zip(turn_files,pauses,strict=True)):
-   normalized=Path(td)/f"turn-{i:02}.mp3";run(["ffmpeg","-v","error","-y","-i",str(source),"-ar","44100","-ac","1","-map_metadata","-1",str(normalized)],check=True);parts.append(normalized)
+  for i,(turn,pause) in enumerate(zip(turns,pauses,strict=True)):
+   normalized=Path(td)/f"turn-{i:02}.wav";run(["ffmpeg","-v","error","-y",*decoder_args(turn),"-c:a","pcm_s16le","-ar","24000","-ac","1","-map_metadata","-1",str(normalized)],check=True);parts.append(normalized)
    if pause:
-    silence=Path(td)/f"pause-{i:02}.mp3";run(["ffmpeg","-v","error","-y","-f","lavfi","-i","anullsrc=r=44100:cl=mono","-t",f"{pause/1000:.3f}","-map_metadata","-1",str(silence)],check=True);parts.append(silence)
-  listing=Path(td)/"concat.txt";listing.write_text("".join(f"file '{p}'\n" for p in parts));run(["ffmpeg","-v","error","-y","-f","concat","-safe","0","-i",str(listing),"-ar","44100","-ac","1","-map_metadata","-1",str(output)],check=True)
+    silence=Path(td)/f"pause-{i:02}.wav";run(["ffmpeg","-v","error","-y","-f","lavfi","-i","anullsrc=r=24000:cl=mono","-t",f"{pause/1000:.3f}","-c:a","pcm_s16le","-map_metadata","-1",str(silence)],check=True);parts.append(silence)
+  listing=Path(td)/"concat.txt";listing.write_text("".join(f"file '{p}'\n" for p in parts));temporary=output.with_name("."+output.name+".tmp.mp3");run(["ffmpeg","-v","error","-y","-f","concat","-safe","0","-i",str(listing),"-ar","24000","-ac","1","-c:a","libmp3lame","-b:a","128k","-map_metadata","-1",str(temporary)],check=True);os.replace(temporary,output)
 
 def probe(path:Path,run:Callable[...,Any]=subprocess.run)->dict[str,Any]:
  r=run(["ffprobe","-v","error","-show_entries","format=duration:format_tags","-of","json",str(path)],capture_output=True,text=True,check=True);doc=json.loads(r.stdout);tags=doc.get("format",{}).get("tags") or {};return {"duration_seconds":round(float(doc["format"]["duration"]),3),"bytes":path.stat().st_size,"sha256":"sha256:"+hashlib.sha256(path.read_bytes()).hexdigest(),"metadata_tags":tags}
@@ -140,6 +177,16 @@ def estimate(candidates:list[Candidate],characters:int,audio_seconds_upper:int=9
   rows.append({"model":c.model,"pricing_unit":c.pricing_unit,"estimated_cost_usd":round(cost,6),**basis,"per_request_minimum":None})
  main=round(sum(x["estimated_cost_usd"] for x in rows),6);google=next((x for x in rows if x["model"]==TARGETS["google"]),None);bonus=google["estimated_cost_usd"] if include_bonus and google else 0
  return {"candidates":rows,"main_cost_upper_bound_usd":main,"gemini_bonus_cost_upper_bound_usd":bonus,"total_upper_bound_usd":round(main+bonus,6),"audio_seconds_upper_bound":audio_seconds_upper}
+
+def fair_execution_contract(candidates:list[Candidate],turn_count:int,retries:int=0,max_attempts:int=24)->dict[str,Any]:
+ logical=len(candidates)*turn_count
+ if len(candidates)!=3 or turn_count!=8 or logical!=24 or retries!=0 or max_attempts!=24:raise CalibrationError("fair_execution_contract_invalid")
+ rows=[]
+ for c in candidates:
+  cap=CAPABILITIES[c.model];format=cap.get("requested_format");raw=format=="pcm";extension=".pcm" if raw else ".mp3"
+  if raw and (cap.get("native_codec")!="pcm_s16le" or cap.get("sample_rate")!=24000 or cap.get("channels")!=1):raise CalibrationError("gemini_decoder_metadata_missing")
+  rows.append({"model":c.model,"requested_response_format":format,"expected_mime":cap.get("accepted_mime"),"local_turn_extension":extension,"raw":raw,"decoder_arguments":["-f","s16le","-ar","24000","-ac","1"] if raw else [],"intermediate":{"container":"wav","codec":"pcm_s16le","sample_rate":24000,"channels":1},"final":{"container":"mp3","codec":"libmp3lame","sample_rate":24000,"channels":1,"bitrate":"128k"}})
+ return {"candidates":rows,"logical_requests":logical,"maximum_http_attempts":max_attempts,"retries":retries}
 
 def paid_gate(*,authorized:bool,candidates:list[Candidate],estimated_total:float,output:Path,bonus:bool=False,bonus_authorized:bool=False)->None:
  if not authorized:raise CalibrationError("explicit_paid_authorization_required")
@@ -161,16 +208,27 @@ def dialogue(path:Path)->dict[str,Any]:
 def main()->int:
  p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate"));p.add_argument("--dialogue",type=Path,default=Path("calibration/tts/blind-test-v1/dialogue.json"));p.add_argument("--output",type=Path,required=True);p.add_argument("--authorize-paid",action="store_true");p.add_argument("--include-gemini-bonus",action="store_true");p.add_argument("--authorize-bonus-paid",action="store_true");a=p.parse_args();key=os.getenv("OPENROUTER_API_KEY")
  if not key:raise CalibrationError("openrouter_key_missing")
- d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);max_turn=max(len(x["text"]) for x in d["turns"]);doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc,max_turn);cost=estimate(candidates,chars);report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"voice_metadata_source":x.voice_metadata_source,"output_modalities":x.output_modalities,"pricing":x.pricing,"pricing_unit":x.pricing_unit,"supported_parameters":x.supported_parameters,"max_input":x.max_input,"formats":x.formats,"requested_format":CAPABILITIES[x.model].get("requested_format"),"accepted_mime":CAPABILITIES[x.model].get("accepted_mime"),"sample_rate":CAPABILITIES[x.model].get("sample_rate"),"channels":CAPABILITIES[x.model].get("channels"),"canary_proven":CAPABILITIES[x.model].get("canary_proven",False),"speed_supported":CAPABILITIES[x.model].get("speed",False),"provider_passthrough":CAPABILITIES[x.model].get("provider_passthrough",False)} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"fair_test_requests":len(d["turns"])*len(candidates),"bonus_requests":0,"bonus_supported":GEMINI_BONUS_SUPPORTED,"bonus_unsupported_reason":GEMINI_BONUS_REASON,"characters_per_candidate":chars,"fair_test_input_characters":chars*len(candidates),"bonus_input_characters":chars,"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":len(candidates)==3 and all(CAPABILITIES[x.model].get("canary_proven") for x in candidates) and cost["main_cost_upper_bound_usd"]<1}
+ d=dialogue(a.dialogue);chars=sum(len(x["text"]) for x in d["turns"]);max_turn=max(len(x["text"]) for x in d["turns"]);doc=requests.get(MODELS_URL,headers={"Authorization":"Bearer "+key},timeout=30).json();candidates,missing=discover_models(doc,max_turn);cost=estimate(candidates,chars);contract=fair_execution_contract(candidates,len(d["turns"]),0,24);ready=len(candidates)==3 and all(CAPABILITIES[x.model].get("canary_proven") for x in candidates) and cost["main_cost_upper_bound_usd"]<1
+ report={"models":[{"model":x.model,"provider":x.provider,"voices":x.voices,"requested_format":CAPABILITIES[x.model]["requested_format"],"accepted_mime":CAPABILITIES[x.model]["accepted_mime"]} for x in candidates],"missing_candidates":missing,"turns":len(d["turns"]),"fair_execution_contract":contract,"bonus_requests":0,"bonus_supported":False,"characters_per_candidate":chars,"estimated_cost":cost,"output":str(a.output),"production_writes":0,"r2_calls":0,"frontend_writes":0,"paid_calls":0,"ready":ready}
  print(json.dumps(report,indent=2,sort_keys=True))
- if a.command=="preflight":return 0 if report["ready"] else 2
- paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["total_upper_bound_usd"] if a.include_gemini_bonus else cost["main_cost_upper_bound_usd"],output=a.output,bonus=a.include_gemini_bonus,bonus_authorized=a.authorize_bonus_paid);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};write_reveal(a.output/"tts-reveal.json",mapping,records);public=[];dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
+ if a.command=="preflight":return 0 if ready else 2
+ if a.include_gemini_bonus or a.authorize_bonus_paid:raise CalibrationError("gemini_bonus_contract_unproven")
+ paid_gate(authorized=a.authorize_paid,candidates=candidates,estimated_total=cost["main_cost_upper_bound_usd"],output=a.output);a.output.mkdir(parents=True,exist_ok=False,mode=0o700);mapping=secure_mapping(candidates);records={};write_reveal(a.output/"tts-reveal.json",mapping,records);budget=AttemptBudget();_private_json(a.output,"run-state.json",{"status":"incomplete",**budget.snapshot()});public=[];assembled={};dialogue_hash="sha256:"+hashlib.sha256(a.dialogue.read_bytes()).hexdigest()
  for anonymous,candidate in mapping.items():
-  private=a.output/("."+anonymous+"-turns");private.mkdir(mode=0o700);files=[];records[anonymous]=[]
+  private=a.output/("."+anonymous+"-turns");private.mkdir(mode=0o700);descriptors=[];records[anonymous]=[]
   for turn in d["turns"]:
-   body=build_request(candidate,turn);audio,meta=request_turn(requests.post,key,body,max_retries=1,turn_id=turn["turn_id"],diagnostic_dir=a.output/"diagnostics");path=private/(turn["turn_id"]+".mp3");path.write_bytes(audio);os.chmod(path,0o600);files.append(path);records[anonymous].append({**meta,"turn_id":turn["turn_id"],"model":candidate.model,"voice":body["voice"]});write_reveal(a.output/"tts-reveal.json",mapping,records)
-  final=a.output/(anonymous+".mp3");assemble(files,[x["pause_after_ms"] for x in d["turns"]],final);info=probe(final);public.append({"candidate_id":anonymous,"ranking_eligible":True,"file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())});shutil.rmtree(private)
- if a.include_gemini_bonus:
-  gemini=next(x for x in candidates if x.model==TARGETS["google"]);body=build_gemini_bonus(gemini,d["turns"]);audio,meta=request_turn(requests.post,key,body,max_retries=1);raw=a.output/".bonus-raw.mp3";raw.write_bytes(audio);final=a.output/"candidate-bonus.mp3";assemble([raw],[0],final);raw.unlink();info=probe(final);records["candidate-bonus"]=[{**meta,"turn_id":"native-dialogue","model":gemini.model,"voices":gemini.voices,"provider_options":body["provider"]}];public.append({"candidate_id":"candidate-bonus","ranking_eligible":False,"label":"Experimental cohesive-dialogue bonus — not part of the main ranking.","file":final.name,**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())})
- write_reveal(a.output/"tts-reveal.json",mapping,records);manifest={"schema_version":"1.0.0","dialogue_sha256":dialogue_hash,"candidates":public};(a.output/"manifest.public.json").write_text(json.dumps(manifest,sort_keys=True,indent=2)+"\n");shutil.copy2(Path("calibration/tts/blind-test-v1/evaluation.md"),a.output/"evaluation.md");print(json.dumps({"generated":len(public),"output":str(a.output),"paid_requests":sum(len(x) for x in records.values())},sort_keys=True));return 0
+   body=build_request(candidate,turn);budget.claim();_private_json(a.output,"run-state.json",{"status":"incomplete",**budget.snapshot()})
+   try:audio,meta=request_turn(requests.post,key,body,max_retries=0,turn_id=turn["turn_id"],diagnostic_dir=a.output/"diagnostics")
+   except Exception:
+    budget.failed();_private_json(a.output,"run-state.json",{"status":"failed",**budget.snapshot()});raise
+   budget.succeeded();descriptor=turn_descriptor(candidate,anonymous,turn["turn_id"],private,meta["content_type"]);descriptor.path.write_bytes(audio);os.chmod(descriptor.path,0o600)
+   sidecar={"path":descriptor.path.name,"codec":descriptor.codec,"sample_rate":descriptor.sample_rate,"channels":descriptor.channels,"container":"raw" if descriptor.raw else "mp3","candidate_id":anonymous,"turn_id":turn["turn_id"],"requested_response_format":descriptor.requested_format,"received_mime_type":descriptor.received_mime};_private_json(private,turn["turn_id"]+".json",sidecar)
+   try:validation=validate_turn(descriptor)
+   except Exception:
+    _private_json(a.output,"run-state.json",{"status":"failed_validation",**budget.snapshot()});raise
+   budget.validated();descriptors.append(descriptor);records[anonymous].append({**meta,**sidecar,"validation":validation,"model":candidate.model,"voice":body["voice"]});write_reveal(a.output/"tts-reveal.json",mapping,records);_private_json(a.output,"run-state.json",{"status":"incomplete",**budget.snapshot()})
+  hidden=a.output/(".assembled-"+anonymous+".mp3");assemble(descriptors,[x["pause_after_ms"] for x in d["turns"]],hidden);assembled[anonymous]=hidden;info=probe(hidden);public.append({"candidate_id":anonymous,"ranking_eligible":True,"file":anonymous+".mp3",**{k:info[k] for k in ("duration_seconds","bytes","sha256")},"dialogue_sha256":dialogue_hash,"generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())})
+ if budget.http_attempts!=24 or budget.successful_responses!=24 or budget.validated_turns!=24:raise CalibrationError("fair_run_incomplete")
+ for anonymous,hidden in assembled.items():os.replace(hidden,a.output/(anonymous+".mp3"))
+ write_reveal(a.output/"tts-reveal.json",mapping,records);manifest={"schema_version":"1.0.0","dialogue_sha256":dialogue_hash,"candidates":public};temporary=a.output/".manifest.public.json.tmp";temporary.write_text(json.dumps(manifest,sort_keys=True,indent=2)+"\n");os.replace(temporary,a.output/"manifest.public.json");shutil.copy2(Path("calibration/tts/blind-test-v1/evaluation.md"),a.output/"evaluation.md");_private_json(a.output,"run-state.json",{"status":"complete",**budget.snapshot()});print(json.dumps({"generated":3,"output":str(a.output),**budget.snapshot()},sort_keys=True));return 0
 if __name__=="__main__":raise SystemExit(main())

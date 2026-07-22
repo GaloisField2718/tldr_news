@@ -2,7 +2,7 @@ from __future__ import annotations
 import copy,json,os,shutil,stat,subprocess,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
-from tools.tldr_tts_calibration import (CAPABILITIES,CalibrationError,Candidate,SpeechHTTPError,assemble,build_gemini_bonus,build_request,dialogue,discover_models,estimate,generation_id,http_diagnostic,paid_gate,probe,request_turn,secure_mapping,validate_audio_response,validate_voices,write_reveal)
+from tools.tldr_tts_calibration import (CAPABILITIES,AttemptBudget,CalibrationError,Candidate,SpeechHTTPError,TurnDescriptor,assemble,build_gemini_bonus,build_request,decoder_args,dialogue,discover_models,estimate,fair_execution_contract,generation_id,http_diagnostic,paid_gate,probe,request_turn,secure_mapping,turn_descriptor,validate_audio_response,validate_turn,validate_voices,write_reveal)
 
 def model(slug,pricing=None,context=4096):return {'id':slug,'architecture':{'modality':'text->speech','output_modalities':['speech']},'pricing':pricing or {'prompt':'0.00001','completion':'0'},'supported_parameters':['response_format'],'top_provider':{'context_length':context}}
 def models(include_microsoft=True,include_xai=True):
@@ -67,12 +67,44 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_dialogue_order_terms_and_deterministic_request_count(self):
   d=dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'));self.assertEqual(len(d['turns'])*3,24);self.assertEqual([x['turn_id'] for x in d['turns']],[f't{i:02}' for i in range(1,9)]);text=' '.join(x['text'] for x in d['turns']);self.assertTrue(all(x in text for x in ('Google AI Search','independent websites','traffic','conversational interface')))
  @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'FFmpeg is enforced by paid preflight')
- def test_assembly_pause_decodability_and_metadata_stripping(self):
+ def test_mixed_pcm_mp3_assembly_decodability_metadata_and_atomic_output(self):
   with tempfile.TemporaryDirectory() as td:
-   root=Path(td);turns=[]
-   for i in range(2):
-    p=root/f'in{i}.mp3';subprocess.run(['ffmpeg','-v','error','-y','-f','lavfi','-i',f'sine=frequency={440+i*100}:duration=0.1','-metadata','artist=provider','-q:a','9',str(p)],check=True);turns.append(p)
-   out=root/'candidate-a.mp3';assemble(turns,[100,0],out);info=probe(out);self.assertGreater(info['duration_seconds'],.25);self.assertNotIn('artist',{k.lower() for k in info['metadata_tags']})
+   root=Path(td);pcm=root/'t01.pcm';mp3=root/'t02.mp3';subprocess.run(['ffmpeg','-v','error','-y','-f','lavfi','-i','sine=frequency=440:duration=0.12','-f','s16le','-ar','24000','-ac','1',str(pcm)],check=True);subprocess.run(['ffmpeg','-v','error','-y','-f','lavfi','-i','sine=frequency=540:duration=0.12','-ar','22050','-ac','1','-metadata','artist=provider',str(mp3)],check=True)
+   turns=[TurnDescriptor(pcm,'pcm_s16le',24000,1,True,'candidate-a','t01','pcm','audio/pcm;rate=24000;channels=1'),TurnDescriptor(mp3,'mp3',22050,1,False,'candidate-a','t02','mp3','audio/mpeg')];self.assertGreater(validate_turn(turns[0])['duration_seconds'],.1);self.assertGreater(validate_turn(turns[1])['duration_seconds'],.1);out=root/'candidate-a.mp3';assemble(turns,[100,0],out);info=probe(out);self.assertGreater(info['duration_seconds'],.3);self.assertNotIn('artist',{k.lower() for k in info['metadata_tags']});self.assertFalse((root/'.candidate-a.mp3.tmp.mp3').exists())
+ @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'FFmpeg is enforced by paid preflight')
+ def test_eight_raw_gemini_turns_assemble_to_mp3(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);pcm=root/'turn.pcm';subprocess.run(['ffmpeg','-v','error','-y','-f','lavfi','-i','sine=frequency=440:duration=0.1','-f','s16le','-ar','24000','-ac','1',str(pcm)],check=True);turns=[TurnDescriptor(pcm,'pcm_s16le',24000,1,True,'candidate-a',f't{i:02}','pcm','audio/pcm;rate=24000;channels=1') for i in range(1,9)];out=root/'final.mp3';assemble(turns,[10]*7+[0],out);self.assertGreater(probe(out)['duration_seconds'],.8)
+ def test_turn_descriptors_use_real_extensions_and_explicit_pcm_decoder(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);gemini=turn_descriptor(self.candidate('google/gemini-3.1-flash-tts-preview'),'candidate-a','t01',root,'audio/pcm;rate=24000;channels=1');mistral=turn_descriptor(self.candidate('mistralai/voxtral-mini-tts-2603'),'candidate-b','t01',root,'audio/mpeg');xai=turn_descriptor(self.candidate(),'candidate-c','t01',root,'audio/mpeg');self.assertEqual((gemini.path.suffix,gemini.raw,decoder_args(gemini)[:6]),('.pcm',True,['-f','s16le','-ar','24000','-ac','1']));self.assertEqual((mistral.path.suffix,xai.path.suffix),('.mp3','.mp3'))
+ def test_pcm_byte_validation_duration_and_odd_rejection(self):
+  with tempfile.TemporaryDirectory() as td:
+   p=Path(td)/'x.pcm';p.write_bytes(b'\0\0'*4800);d=TurnDescriptor(p,'pcm_s16le',24000,1,True,'candidate-a','t01','pcm','audio/pcm;rate=24000;channels=1')
+   with patch('tools.tldr_tts_calibration.subprocess.run') as run:self.assertEqual(validate_turn(d,run)['duration_seconds'],.2)
+   p.write_bytes(b'123')
+   with self.assertRaisesRegex(CalibrationError,'pcm_byte_count'):validate_turn(d)
+ def test_attempt_budget_has_exact_ceiling_and_attempt_25_is_impossible(self):
+  b=AttemptBudget()
+  for _ in range(24):b.claim();b.succeeded();b.validated()
+  self.assertEqual(b.snapshot()['remaining_attempt_budget'],0)
+  with self.assertRaisesRegex(CalibrationError,'budget_exhausted'):b.claim()
+ def test_fair_contract_zero_retries_and_decoder_metadata_gate(self):
+  cs=[self.candidate('google/gemini-3.1-flash-tts-preview'),self.candidate('mistralai/voxtral-mini-tts-2603'),self.candidate()];x=fair_execution_contract(cs,8);self.assertEqual((x['logical_requests'],x['maximum_http_attempts'],x['retries']),(24,24,0));self.assertEqual(x['candidates'][0]['decoder_arguments'],['-f','s16le','-ar','24000','-ac','1'])
+  with self.assertRaisesRegex(CalibrationError,'contract_invalid'):fair_execution_contract(cs,8,retries=1)
+  bad=copy.deepcopy(CAPABILITIES['google/gemini-3.1-flash-tts-preview']);bad['sample_rate']=None
+  with patch.dict(CAPABILITIES,{'google/gemini-3.1-flash-tts-preview':bad}):
+   with self.assertRaisesRegex(CalibrationError,'decoder_metadata_missing'):fair_execution_contract(cs,8)
+ def test_fair_mode_first_400_or_500_stops_without_retry(self):
+  for status in (400,500):
+   calls=[]
+   with self.assertRaises(CalibrationError):request_turn(lambda *a,**k:(calls.append(1) or Response(status,b'{"error":{"message":"stop"}}','application/json')),'x',{'model':'m','voice':'v','response_format':'mp3','input':'x'},0)
+   self.assertEqual(len(calls),1)
+ def test_failed_assembly_never_publishes_candidate_name(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);p=root/'x.mp3';p.write_bytes(b'x'*100);d=TurnDescriptor(p,'mp3',24000,1,False,'candidate-a','t01','mp3','audio/mpeg');out=root/'candidate-a.mp3'
+   with self.assertRaises(RuntimeError):assemble([d],[0],out,run=lambda *a,**k:(_ for _ in ()).throw(RuntimeError('synthetic')))
+   self.assertFalse(out.exists())
  def test_secure_mapping_and_bonus_excluded_from_reveal_ranking(self):
   cs=[self.candidate('google/gemini-3.1-flash-tts-preview'),self.candidate('mistralai/voxtral-mini-tts-2603'),self.candidate()];mapping=secure_mapping(cs);self.assertEqual(set(mapping),{'candidate-a','candidate-b','candidate-c'});self.assertNotIn('candidate-bonus',mapping)
   with tempfile.TemporaryDirectory() as td:
