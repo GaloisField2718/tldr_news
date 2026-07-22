@@ -2,7 +2,7 @@ from __future__ import annotations
 import json,tempfile,unittest
 from unittest.mock import patch
 from pathlib import Path
-from tools.tldr_podcast import DEFAULT,FALLBACK,PodcastError,date_lock,editorial_request,estimate_cost,expected_open_close,initial_state,load_state,podcast_key,preflight,profile_from_args,upload_audio,validate_script
+from tools.tldr_podcast import DEFAULT,FALLBACK,PodcastError,date_lock,editorial_request,estimate_cost,expected_open_close,extract_json_object,initial_state,load_state,normalize_script,podcast_key,preflight,profile_from_args,upload_audio,validate_script
 
 def source(root:Path,date="2026-07-21"):
  p=root/"generated/editorial/2026";p.mkdir(parents=True,exist_ok=True);f=p/f"{date}.json";f.write_text(json.dumps({"date":date,"status":"ai_complete","plan":{"lead":{"article_id":"a","issue_id":"i"},"visual_brief":{"central_subject":"distribution changes through conversational search mechanisms"}}}));return f
@@ -12,7 +12,7 @@ def script(source_hash,date="2026-07-21"):
   speaker="speaker_a" if i%2 else "speaker_b"
   text=("This explains how the reported change works, because the mechanism changes distribution. But the consequence may be limited, and what evidence would change that interpretation? "+("detail "*10)).strip()
   turns.append({"turn_id":f"t{i:03}","speaker":speaker,"text":text,"pause_after_ms":250})
- return {"schema_version":"1.0.0","publication_date":date,"episode_title":"Daily Index","summary":"Briefing","source_artifact_sha256":source_hash,"estimated_duration_seconds":0,"speakers":{"speaker_a":{"role":"cohost"},"speaker_b":{"role":"cohost"}},"turns":turns}
+ return {"schema_version":"1.0.0","publication_date":date,"locale":"en-US","episode_title":"Daily Index","summary":"Briefing","source_artifact_sha256":source_hash,"estimated_duration_seconds":0,"speakers":{"speaker_a":{"role":"cohost"},"speaker_b":{"role":"cohost"}},"turns":turns}
 class PodcastTests(unittest.TestCase):
  def test_key_and_date_rotation(self):
   digest="sha256:"+"a"*64;self.assertEqual(podcast_key("2026-07-21",digest),"podcast/daily/2026/07/21/"+"a"*64+".mp3");self.assertEqual(expected_open_close("2026-07-21"),("speaker_a","speaker_b"));self.assertEqual(expected_open_close("2026-07-22"),("speaker_b","speaker_a"))
@@ -36,7 +36,7 @@ class PodcastTests(unittest.TestCase):
   class R:
    status_code=200
    def json(self):return {'choices':[{'message':{'content':'{}'}}]}
-  self.assertEqual(editorial_request(lambda *a,**k:R(),'key','prompt'),{})
+  self.assertEqual(editorial_request(lambda *a,**k:R(),'key','prompt'),'{}')
  def test_upload_reuses_match_and_rejects_conflict(self):
   class S:
    def head_object(self,k):return {'ContentLength':7}
@@ -48,6 +48,10 @@ class PodcastTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as td:
    p=Path(td)/'a.mp3';p.write_bytes(b'1234567')
    with self.assertRaisesRegex(PodcastError,'r2_conflict'):upload_audio(Bad(),p,'2026-07-21',{'sha256':'sha256:'+'a'*64,'bytes':7})
+ def test_safe_editorial_normalization_preserves_spoken_text(self):
+  h='sha256:'+'a'*64;raw=script(h);raw['publication_date']=20260721;raw['locale']='en_US';raw['extra']='drop'
+  for t in raw['turns']:t.pop('turn_id');t['pause_after_ms']='250.0'
+  original=[t['text'] for t in raw['turns']];value=extract_json_object('```json\n'+json.dumps(raw)+'\n```');normalized,changes=normalize_script(value,'2026-07-21',h,'en');self.assertEqual([t['text'] for t in normalized['turns']],original);self.assertEqual(normalized['publication_date'],'2026-07-21');self.assertEqual(normalized['locale'],'en-US');self.assertEqual(normalized['turns'][0]['turn_id'],'t001');self.assertNotIn('extra',normalized);self.assertTrue(changes)
  def test_default_fallback_and_cost(self):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):

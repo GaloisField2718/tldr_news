@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Two-step Daily Index podcast runtime; generate is private, publish is explicit."""
 from __future__ import annotations
-import argparse,fcntl,hashlib,json,os,re,shutil,subprocess,tempfile,time
+import argparse,copy,fcntl,hashlib,json,os,re,shutil,subprocess,tempfile,time
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import date
@@ -55,10 +55,14 @@ def load_source(root:Path,d:str)->tuple[dict[str,Any],str]:
  if x.get("date")!=d or x.get("status")!="ai_complete":raise PodcastError("source_daily_artifact_invalid")
  return x,sha256(p)
 def source_facts(source:dict[str,Any])->str:
- brief=source.get("plan",{}).get("visual_brief",{});return "\n".join(str(brief.get(k,"")) for k in ("central_subject","editorial_idea","visual_relationship","composition"))[:12000]
+ brief=source.get("plan",{}).get("visual_brief",{});facts="\n".join(str(brief.get(k,"")) for k in ("central_subject","editorial_idea","visual_relationship","composition"));prompt=str(source.get("generation",{}).get("final_prompt","")).replace("\r","")
+ match=re.search(r"Exact source facts:\n(.*?)(?:\n\nEditorial idea:|\Z)",prompt,re.S)
+ if match:facts=match.group(1).strip()+"\n"+facts
+ return facts[:12000]
 def validate_script(script:dict[str,Any],source_digest:str)->dict[str,Any]:
- required={"schema_version","publication_date","episode_title","summary","source_artifact_sha256","estimated_duration_seconds","speakers","turns"}
- if set(script)!=required or script.get("schema_version")!="1.0.0" or script.get("source_artifact_sha256")!=source_digest or not isinstance(script.get("publication_date"),str) or not isinstance(script.get("estimated_duration_seconds"),int):raise PodcastError("podcast_script_schema_invalid")
+ required={"schema_version","publication_date","locale","episode_title","summary","source_artifact_sha256","estimated_duration_seconds","speakers","turns"}
+ expected_locale=LANGUAGES[os.getenv("TLDR_PODCAST_LANGUAGE","en")]["locale"]
+ if set(script)!=required or script.get("schema_version")!="1.0.0" or script.get("locale")!=expected_locale or script.get("source_artifact_sha256")!=source_digest or not isinstance(script.get("publication_date"),str) or not isinstance(script.get("estimated_duration_seconds"),int):raise PodcastError("podcast_script_schema_invalid")
  turns=script["turns"]
  if not isinstance(turns,list) or not 24<=len(turns)<=36 or set(script["speakers"])!={"speaker_a","speaker_b"}:raise PodcastError("podcast_script_schema_invalid")
  opener,closer=expected_open_close(script["publication_date"])
@@ -85,10 +89,57 @@ def validate_grounding(script:dict[str,Any],source:dict[str,Any])->None:
  if overlap<3:raise PodcastError("podcast_source_grounding_invalid")
 def editorial_prompt(source:dict[str,Any],digest:str,d:str)->str:
  opener,closer=expected_open_close(d);language=os.getenv("TLDR_PODCAST_LANGUAGE","en");instruction="Write natural editorial English for an en-US audience." if language=="en" else "Écris un dialogue éditorial en français naturel pour un public fr-FR; adapte les formulations et ne traduis pas littéralement une version anglaise."
- return f"""{instruction} Return only strict JSON matching the supplied podcast schema. Ground every factual claim only in SOURCE FACTS. Make a calm 24-36 turn Daily Index technology dialogue of 4800-6200 spoken characters, 270-390 seconds. speaker_a and speaker_b are equal cohosts: each asks a substantive question, explains a mechanism, and adds nuance; both have 40-60% characters; at most three consecutive turns. {opener} opens and {closer} closes. No URLs, markdown, stage directions, invented facts, quotations, or promotional language. SOURCE SHA: {digest}. SOURCE FACTS:\n{source_facts(source)}\nSchema fields: schema_version 1.0.0, publication_date, episode_title, summary, source_artifact_sha256, estimated_duration_seconds, speakers={{speaker_a:{{role:cohost}},speaker_b:{{role:cohost}}}}, turns=[{{turn_id:t001,speaker:speaker_a,text,pause_after_ms}}]."""
-def extract_script(response:Any)->dict[str,Any]:
- try: content=response["choices"][0]["message"]["content"];return json.loads(content)
- except (KeyError,IndexError,TypeError,json.JSONDecodeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
+ return f"""{instruction} Return only strict JSON matching the supplied podcast schema. Ground every factual claim only in SOURCE FACTS. Make a calm 24-36 turn Daily Index technology dialogue of 4800-6200 spoken characters, 270-390 seconds. speaker_a and speaker_b are equal cohosts: each asks a substantive question, explains a mechanism, and adds nuance; both have 40-60% characters; at most three consecutive turns. {opener} opens and {closer} closes. No URLs, markdown, stage directions, invented facts, quotations, or promotional language. SOURCE SHA: {digest}. SOURCE FACTS:\n{source_facts(source)}\nJSON scalar requirements: schema_version is the string \"1.0.0\"; publication_date is the string \"{d}\"; locale is the string \"{LANGUAGES[language]['locale']}\"; pause_after_ms is an integer. Do not use Markdown fences or prose outside JSON. Fields: schema_version, publication_date, locale, episode_title, summary, source_artifact_sha256, estimated_duration_seconds, speakers={{speaker_a:{{role:cohost}},speaker_b:{{role:cohost}}}}, turns=[{{turn_id:t001,speaker:speaker_a,text,pause_after_ms}}]."""
+def extract_json_object(content:str)->dict[str,Any]:
+ if not isinstance(content,str):raise PodcastError("podcast_editorial_response_invalid")
+ text=content.strip();fence=re.fullmatch(r"```(?:json)?\s*(.*?)\s*```",text,re.S|re.I)
+ if fence:text=fence.group(1).strip()
+ decoder=json.JSONDecoder()
+ for i,ch in enumerate(text):
+  if ch!="{":continue
+  try:value,_=decoder.raw_decode(text[i:])
+  except json.JSONDecodeError:continue
+  if isinstance(value,dict):return value
+ raise PodcastError("podcast_editorial_response_invalid")
+def canonical_date(value:Any,requested:str)->str:
+ raw=str(value).strip();digits=re.sub(r"\D","",raw)
+ candidate=f"{digits[:4]}-{digits[4:6]}-{digits[6:8]}" if len(digits)==8 else raw[:10]
+ if candidate!=requested:raise PodcastError("podcast_publication_date_mismatch")
+ return requested
+def normalize_script(value:dict[str,Any],requested_date:str,source_digest:str,language:str)->tuple[dict[str,Any],list[str]]:
+ x=copy.deepcopy(value);changes=[];allowed={"schema_version","publication_date","locale","episode_title","summary","source_artifact_sha256","estimated_duration_seconds","speakers","turns"}
+ unknown=sorted(set(x)-allowed)
+ if unknown:changes.append("removed_unknown_fields:"+",".join(unknown))
+ x={k:v for k,v in x.items() if k in allowed};x["schema_version"]=str(x.get("schema_version","1.0.0")).strip();x["source_artifact_sha256"]=str(x.get("source_artifact_sha256",source_digest)).strip()
+ before=x.get("publication_date");x["publication_date"]=canonical_date(before,requested_date)
+ if before!=x["publication_date"]:changes.append("canonicalized_publication_date")
+ aliases={"en":"en-US","en_us":"en-US","en-us":"en-US","fr":"fr-FR","fr_fr":"fr-FR","fr-fr":"fr-FR"};raw_locale=str(x.get("locale",language)).strip().lower();x["locale"]=aliases.get(raw_locale,LANGUAGES[language]["locale"])
+ if raw_locale!=x["locale"].lower():changes.append("normalized_locale")
+ for field in ("episode_title","summary"):
+  if field in x and isinstance(x[field],str):
+   trimmed=x[field].strip();changes.extend(["trimmed_"+field] if trimmed!=x[field] else []);x[field]=trimmed
+ turns=x.get("turns")
+ if not isinstance(turns,list):raise PodcastError("podcast_turns_invalid")
+ speaker_alias={"speaker_a":"speaker_a","a":"speaker_a","speaker a":"speaker_a","host":"speaker_a","speaker_1":"speaker_a","speaker_b":"speaker_b","b":"speaker_b","speaker b":"speaker_b","analyst":"speaker_b","speaker_2":"speaker_b"}
+ normalized=[]
+ for i,item in enumerate(turns,1):
+  if not isinstance(item,dict):raise PodcastError("podcast_turn_invalid")
+  speaker=speaker_alias.get(str(item.get("speaker","")).strip().lower())
+  if not speaker:raise PodcastError("podcast_speaker_invalid")
+  text=item.get("text")
+  if not isinstance(text,str):raise PodcastError("podcast_turn_text_invalid")
+  trimmed=text.strip()
+  if trimmed!=text:changes.append(f"trimmed_turn_text:t{i:03}")
+  expected=f"t{i:03}"
+  if item.get("turn_id")!=expected:changes.append(f"generated_turn_id:{expected}")
+  try:pause=max(0,min(2000,int(float(item.get("pause_after_ms",250)))))
+  except (TypeError,ValueError):raise PodcastError("podcast_pause_invalid")
+  if item.get("pause_after_ms")!=pause:changes.append(f"coerced_pause:{expected}")
+  normalized.append({"turn_id":expected,"speaker":speaker,"text":trimmed,"pause_after_ms":pause})
+ x["turns"]=normalized;x["speakers"]={"speaker_a":{"role":"cohost"},"speaker_b":{"role":"cohost"}};derived=estimate_seconds(normalized)
+ if x.get("estimated_duration_seconds")!=derived:changes.append("recomputed_estimated_duration")
+ x["estimated_duration_seconds"]=derived
+ return x,changes
 def _atomic_json(path:Path,value:dict[str,Any],private:bool=False)->None:
  path.parent.mkdir(parents=True,exist_ok=True,mode=0o700 if private else 0o755);tmp=path.with_name("."+path.name+".tmp");tmp.write_text(json.dumps(value,sort_keys=True,indent=2)+"\n");os.chmod(tmp,0o600 if private else 0o644);os.replace(tmp,path)
 def initial_state(root:Path,d:str,source_digest:str,profile:PodcastProfile)->dict[str,Any]:return {"schema_version":STATE_VERSION,"publication_date":d,"source_artifact_sha256":source_digest,"production_code_head":git_head(root),"profile":{"model":profile.candidate.model,"voices":profile.candidate.voices},"script_status":"pending","script_sha256":None,"planned_turns":[],"completed_turns":{},"failed_turn":None,"request_attempts":0,"editorial_attempts":0,"tts_attempts":0,"retries":0,"estimated_cost_usd":0.0,"measured_cost_usd":None,"audio_validation":None,"assembly_status":"pending","upload_status":"pending","artifact_status":"pending","frontend_status":"pending","accepted":False}
@@ -113,18 +164,27 @@ def date_lock(rd:Path):
 def projected_cost(state:dict[str,Any],next_cost:float,ceiling:float)->None:
  known=state["measured_cost_usd"] if state["measured_cost_usd"] is not None else state["estimated_cost_usd"]
  if float(known)+next_cost>ceiling:raise PodcastError("podcast_cost_ceiling_exceeded")
-def editorial_request(post:Callable[...,Any],key:str,prompt:str)->dict[str,Any]:
- body={"model":EDITORIAL_MODEL,"messages":[{"role":"user","content":prompt}],"response_format":{"type":"json_object"}}
+def script_json_schema()->dict[str,Any]:
+ turn={"type":"object","additionalProperties":False,"required":["turn_id","speaker","text","pause_after_ms"],"properties":{"turn_id":{"type":"string"},"speaker":{"type":"string","enum":["speaker_a","speaker_b"]},"text":{"type":"string"},"pause_after_ms":{"type":"integer","minimum":0,"maximum":2000}}}
+ return {"type":"object","additionalProperties":False,"required":["schema_version","publication_date","locale","episode_title","summary","source_artifact_sha256","estimated_duration_seconds","speakers","turns"],"properties":{"schema_version":{"type":"string","enum":["1.0.0"]},"publication_date":{"type":"string"},"locale":{"type":"string","enum":["en-US","fr-FR"]},"episode_title":{"type":"string"},"summary":{"type":"string"},"source_artifact_sha256":{"type":"string"},"estimated_duration_seconds":{"type":"integer"},"speakers":{"type":"object","additionalProperties":False,"required":["speaker_a","speaker_b"],"properties":{"speaker_a":{"type":"object","additionalProperties":False,"required":["role"],"properties":{"role":{"type":"string","enum":["cohost"]}}},"speaker_b":{"type":"object","additionalProperties":False,"required":["role"],"properties":{"role":{"type":"string","enum":["cohost"]}}}}},"turns":{"type":"array","minItems":24,"maxItems":36,"items":turn}}}
+def editorial_request(post:Callable[...,Any],key:str,prompt:str)->str:
+ body={"model":EDITORIAL_MODEL,"messages":[{"role":"user","content":prompt}],"response_format":{"type":"json_schema","json_schema":{"name":"daily_index_podcast_script","strict":True,"schema":script_json_schema()}}}
  r=post(CHAT_URL,headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"},json=body,timeout=120)
  if not 200<=r.status_code<300:raise PodcastError(f"podcast_editorial_http_{r.status_code}")
- return extract_script(r.json())
-def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float,persist:Callable[[],None]|None=None)->dict[str,Any]:
- prompt=editorial_prompt(source,digest,d);used=int(state.get("editorial_attempts",0))
- if used:prompt+="\nThis is the single bounded repair attempt. Correct all schema, date, duration, grounding and balance requirements; return JSON only."
- for attempt in range(used,2):
+ try:return r.json()["choices"][0]["message"]["content"]
+ except (KeyError,IndexError,TypeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
+def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float,persist:Callable[[],None]|None=None,diagnostic_dir:Path|None=None)->dict[str,Any]:
+ prompt=editorial_prompt(source,digest,d);used=int(state.get("editorial_attempts",0));language=os.getenv("TLDR_PODCAST_LANGUAGE","en");limit=3 if state.get("allow_one_normalized_fresh_call") else 2
+ if used:prompt+="\nThis is a bounded corrected attempt. Satisfy every structured schema, date, locale, duration, grounding and balance requirement."
+ for attempt in range(used,limit):
   projected_cost(state,.10,ceiling);state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
   if persist:persist()
-  try:s=editorial_request(post,key,prompt);validate_script(s,digest);validate_grounding(s,source);return s
+  try:
+   raw=editorial_request(post,key,prompt)
+   if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-response-{attempt+1}.json",{"content":raw})
+   value=extract_json_object(raw);s,changes=normalize_script(value,d,digest,language)
+   if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-normalization-{attempt+1}.json",{"changes":changes})
+   validate_script(s,digest);validate_grounding(s,source);state["normalizations"]=changes;return s
   except PodcastError as exc:
    if attempt or "response_invalid" in str(exc):raise
    state["retries"]+=1;prompt+="\nRepair the previous JSON to satisfy every schema and balance rule; return JSON only."
@@ -225,7 +285,7 @@ def generate(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post,cost:f
   script_file=rd/"script.json"
   if script_file.exists():script=json.loads(script_file.read_text());validate_script(script,digest);validate_grounding(script,source)
   else:
-   script=generate_script(post,key,source,digest,d,state,cost,lambda:save_state(rd,state));_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];save_state(rd,state)
+   script=generate_script(post,key,source,digest,d,state,cost,lambda:save_state(rd,state),rd/"diagnostics");_atomic_json(script_file,script,True);state["script_status"]="complete";state["script_sha256"]=sha256(script_file);state["planned_turns"]=[t["turn_id"] for t in script["turns"]];save_state(rd,state)
   for turn in script["turns"]:tts_turn(post,key,profile.candidate,turn,rd,state,cost);save_state(rd,state)
   final=rd/"episode.mp3" if state["assembly_status"]=="complete" else assemble_episode(rd,script,state);save_state(rd,state);return {"private_audio":str(final),"state":state}
 def verify_public_audio(get:Callable[...,Any],url:str,metrics:dict[str,Any])->None:

@@ -14,7 +14,7 @@ def script(digest,n=24):
  turns=[]
  for i in range(1,n+1):
   speaker='speaker_a' if i%2 else 'speaker_b';text=('Search changes distribution because answers stay on the service. But effects may vary, so what evidence would show a durable traffic shift? '+'context '*8).strip();turns.append({'turn_id':f't{i:03}','speaker':speaker,'text':text,'pause_after_ms':250})
- s={'schema_version':'1.0.0','publication_date':'2026-07-21','episode_title':'Daily Index','summary':'A grounded technology briefing.','source_artifact_sha256':digest,'estimated_duration_seconds':0,'speakers':{'speaker_a':{'role':'cohost'},'speaker_b':{'role':'cohost'}},'turns':turns};s['estimated_duration_seconds']=round(sum(len(x['text']) for x in turns)/15.5+6);return s
+ s={'schema_version':'1.0.0','publication_date':'2026-07-21','locale':'en-US','episode_title':'Daily Index','summary':'A grounded technology briefing.','source_artifact_sha256':digest,'estimated_duration_seconds':0,'speakers':{'speaker_a':{'role':'cohost'},'speaker_b':{'role':'cohost'}},'turns':turns};s['estimated_duration_seconds']=round(sum(len(x['text']) for x in turns)/15.5+6);return s
 class FakePost:
  def __init__(self,doc,audio,interrupt_before=None,fail=None):self.doc=doc;self.audio=audio;self.interrupt_before=interrupt_before;self.fail=fail;self.editorial=0;self.tts=0;self.completed=0;self.by_turn={}
  def __call__(self,url,**kw):
@@ -79,7 +79,7 @@ class RuntimeIntegration(unittest.TestCase):
  def test_full_mocked_bilingual_run_daily_is_atomic(self):
   td,root,digest,en=self.case()
   try:
-   fr=json.loads(json.dumps(en));fr['episode_title']='L’Index du jour';fr['summary']='Une analyse technologique en français.'
+   fr=json.loads(json.dumps(en));fr['locale']='fr-FR';fr['episode_title']='L’Index du jour';fr['summary']='Une analyse technologique en français.'
    for t in fr['turns']:t['text']=('La distribution change parce que la recherche conversationnelle garde les réponses sur le service. Mais les effets pourraient varier, alors quelles preuves montreraient un changement durable du trafic? '+'contexte '*4).strip()
    fr['estimated_duration_seconds']=round(sum(len(x['text']) for x in fr['turns'])/15.5+6)
    audio=self.bytes
