@@ -12,7 +12,8 @@ from tools.tldr_editorial.config import Config
 from tools.tldr_editorial.r2_storage import R2Storage
 from tools.tldr_tts_calibration import CAPABILITIES,Candidate,CalibrationError,SpeechHTTPError,_private_json,assemble,build_request,http_diagnostic,request_turn,turn_descriptor,validate_turn
 
-EDITORIAL_MODEL="openai/gpt-5.6-luna"; CHAT_URL="https://openrouter.ai/api/v1/chat/completions"; PROFILE="daily-index-duo-v1"; STATE_VERSION="1.0.0"
+EDITORIAL_MODEL="openai/gpt-5.6-luna"; CHAT_URL="https://openrouter.ai/api/v1/chat/completions"; PROFILE="daily-index-duo-v1"; STATE_VERSION="1.1.0"
+LANGUAGES={"en":{"locale":"en-US","name":"English"},"fr":{"locale":"fr-FR","name":"French"}}
 MIN_DURATION=270;PREFERRED_DURATION=330;MAX_DURATION=390;DEFAULT_COST_CEILING=1.0
 DEFAULT=Candidate("xai","x-ai/grok-voice-tts-1.0",{"host":"eve","analyst":"rex"},{"prompt":"0.000015","completion":"0"},"characters","calibration-20260722",("mp3",),("speech",),("response_format",),15000)
 FALLBACK=Candidate("mistral","mistralai/voxtral-mini-tts-2603",{"host":"en_paul_neutral","analyst":"gb_jane_neutral"},{"prompt":"0.000016","completion":"0"},"characters","calibration-20260722",("mp3",),("speech",),("response_format",),4096)
@@ -23,12 +24,23 @@ class PodcastProfile: candidate:Candidate;fallback:Candidate|None;cost_ceiling:f
 
 def sha256(path:Path)->str:return "sha256:"+hashlib.sha256(path.read_bytes()).hexdigest()
 def git_head(root:Path)->str:return subprocess.run(["git","rev-parse","HEAD"],cwd=root,capture_output=True,text=True,check=True).stdout.strip()
-def podcast_key(d:str,digest:str)->str:
- if not re.fullmatch(r"\d{4}-\d{2}-\d{2}",d) or not re.fullmatch(r"sha256:[0-9a-f]{64}",digest):raise PodcastError("podcast_key_invalid")
- return f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/{digest[7:]}.mp3"
+def podcast_key(d:str,digest:str,language:str|None=None)->str:
+ if not re.fullmatch(r"\d{4}-\d{2}-\d{2}",d) or not re.fullmatch(r"sha256:[0-9a-f]{64}",digest) or language is not None and language not in LANGUAGES:raise PodcastError("podcast_key_invalid")
+ suffix=f"/{language}" if language else ""
+ return f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}{suffix}/{digest[7:]}.mp3"
 def source_path(root:Path,d:str)->Path:return root/"generated"/"editorial"/d[:4]/f"{d}.json"
 def artifact_path(root:Path,d:str)->Path:return root/"generated"/"podcast"/d[:4]/f"{d}.json"
-def runtime_dir(d:str)->Path:return Path(os.getenv("TLDR_PODCAST_RUNTIME_ROOT","/home/galois/tldr-podcast-runtime"))/d
+def runtime_dir(d:str)->Path:
+ base=Path(os.getenv("TLDR_PODCAST_RUNTIME_ROOT","/home/galois/tldr-podcast-runtime"))/d;language=os.getenv("TLDR_PODCAST_LANGUAGE")
+ return base/language if language in LANGUAGES else base
+@contextmanager
+def language_scope(language:str):
+ if language not in LANGUAGES:raise PodcastError("podcast_language_invalid")
+ old=os.environ.get("TLDR_PODCAST_LANGUAGE");os.environ["TLDR_PODCAST_LANGUAGE"]=language
+ try:yield
+ finally:
+  if old is None:os.environ.pop("TLDR_PODCAST_LANGUAGE",None)
+  else:os.environ["TLDR_PODCAST_LANGUAGE"]=old
 def expected_open_close(d:str)->tuple[str,str]:return ("speaker_a","speaker_b") if date.fromisoformat(d).day%2 else ("speaker_b","speaker_a")
 def estimate_seconds(turns:list[dict[str,Any]])->int:return round(sum(len(t["text"]) for t in turns)/15.5+sum(t.get("pause_after_ms",0) for t in turns)/1000)
 def profile_from_args(use_fallback:bool,cost_ceiling:float)->PodcastProfile:
@@ -60,19 +72,20 @@ def validate_script(script:dict[str,Any],source_digest:str)->dict[str,Any]:
   if run>3:raise PodcastError("podcast_consecutive_turns_invalid")
   low=text.lower()
   if "?" in text:asks.add(t["speaker"])
-  if any(w in low for w in ("because","means","works","uses","happens when")):explains.add(t["speaker"])
-  if any(w in low for w in ("but ","however","although","may ","could ","not necessarily")):nuances.add(t["speaker"])
+  if any(w in low for w in ("because","means","works","uses","happens when","parce que","signifie","fonctionne","utilise","se produit quand")):explains.add(t["speaker"])
+  if any(w in low for w in ("but ","however","although","may ","could ","not necessarily","mais ","cependant","pourrait","peut-être","pas nécessairement")):nuances.add(t["speaker"])
  total=sum(chars.values());shares={k:v/total for k,v in chars.items()}
  duration=estimate_seconds(turns)
  if not all(.4<=v<=.6 for v in shares.values()) or asks!=set(chars) or explains!=set(chars) or nuances!=set(chars):raise PodcastError("podcast_balance_invalid")
- if not MIN_DURATION<=duration<=MAX_DURATION or abs(duration-int(script["estimated_duration_seconds"]))>15:raise PodcastError("podcast_duration_invalid")
+ if not 4800<=total<=6200 or not MIN_DURATION<=duration<=MAX_DURATION or abs(duration-int(script["estimated_duration_seconds"]))>15:raise PodcastError("podcast_duration_invalid")
  return {"duration_seconds":duration,"characters":chars,"shares":shares,"turn_count":len(turns)}
 def validate_grounding(script:dict[str,Any],source:dict[str,Any])->None:
- facts=source_facts(source).lower(); words={w for w in re.findall(r"[a-z]{5,}",facts)}; spoken=" ".join(t["text"].lower() for t in script["turns"]); overlap=sum(w in spoken for w in words)
+ facts=source_facts(source).lower();words={w for w in re.findall(r"[a-z]{5,}",facts)};spoken=" ".join(t["text"].lower() for t in script["turns"]);translations={"search":("recherche",),"conversational":("conversationnel",),"mechanisms":("mécanisme",),"changes":("change",),"traffic":("trafic",),"websites":("sites",),"answers":("réponses",)}
+ overlap=sum(w in spoken or any(v in spoken for v in translations.get(w,())) for w in words)
  if overlap<3:raise PodcastError("podcast_source_grounding_invalid")
 def editorial_prompt(source:dict[str,Any],digest:str,d:str)->str:
- opener,closer=expected_open_close(d)
- return f"""Write only strict JSON matching the supplied podcast schema. Ground every factual claim only in SOURCE FACTS. Make a calm 24-36 turn Daily Index technology dialogue of 5000-6000 characters, 270-390 seconds. speaker_a and speaker_b are equal cohosts: each asks a substantive question, explains a mechanism, and adds nuance; both have 40-60% characters; at most three consecutive turns. {opener} opens and {closer} closes. No URLs, markdown, stage directions, invented facts, or promotional language. SOURCE SHA: {digest}. SOURCE FACTS:\n{source_facts(source)}\nSchema fields: schema_version 1.0.0, publication_date, episode_title, summary, source_artifact_sha256, estimated_duration_seconds, speakers={{speaker_a:{{role:cohost}},speaker_b:{{role:cohost}}}}, turns=[{{turn_id:t001,speaker:speaker_a,text,pause_after_ms}}]."""
+ opener,closer=expected_open_close(d);language=os.getenv("TLDR_PODCAST_LANGUAGE","en");instruction="Write natural editorial English for an en-US audience." if language=="en" else "Écris un dialogue éditorial en français naturel pour un public fr-FR; adapte les formulations et ne traduis pas littéralement une version anglaise."
+ return f"""{instruction} Return only strict JSON matching the supplied podcast schema. Ground every factual claim only in SOURCE FACTS. Make a calm 24-36 turn Daily Index technology dialogue of 4800-6200 spoken characters, 270-390 seconds. speaker_a and speaker_b are equal cohosts: each asks a substantive question, explains a mechanism, and adds nuance; both have 40-60% characters; at most three consecutive turns. {opener} opens and {closer} closes. No URLs, markdown, stage directions, invented facts, quotations, or promotional language. SOURCE SHA: {digest}. SOURCE FACTS:\n{source_facts(source)}\nSchema fields: schema_version 1.0.0, publication_date, episode_title, summary, source_artifact_sha256, estimated_duration_seconds, speakers={{speaker_a:{{role:cohost}},speaker_b:{{role:cohost}}}}, turns=[{{turn_id:t001,speaker:speaker_a,text,pause_after_ms}}]."""
 def extract_script(response:Any)->dict[str,Any]:
  try: content=response["choices"][0]["message"]["content"];return json.loads(content)
  except (KeyError,IndexError,TypeError,json.JSONDecodeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
@@ -129,10 +142,12 @@ def tts_turn(post:Callable[...,Any],key:str,candidate:Candidate,turn:dict[str,An
   desc=turn_descriptor(candidate,"production",tid,private,str(meta["content_type"]));tmp=desc.path.with_suffix(desc.path.suffix+".tmp");tmp.write_bytes(audio);os.chmod(tmp,0o600);os.replace(tmp,desc.path);valid=validate_turn(desc);record={"path":desc.path.name,"sha256":sha256(desc.path),"bytes":valid["bytes"],"duration_seconds":valid["duration_seconds"],"speaker":turn["speaker"],"attempts":retry+1};state["completed_turns"][tid]=record;state["estimated_cost_usd"]+=one;return record
  raise PodcastError("podcast_tts_failed")
 def measure_audio(path:Path)->dict[str,Any]:
- r=subprocess.run(["ffprobe","-v","error","-show_entries","stream=codec_name,sample_rate,channels:format=duration","-of","json",str(path)],capture_output=True,text=True,check=True);x=json.loads(r.stdout);s=x["streams"][0]
+ r=subprocess.run(["ffprobe","-v","error","-show_entries","stream=codec_name,sample_rate,channels:format=duration,bit_rate","-of","json",str(path)],capture_output=True,text=True,check=True);x=json.loads(r.stdout);s=x["streams"][0]
  if s["codec_name"]!="mp3" or int(s["sample_rate"])!=24000 or int(s["channels"])!=1:raise PodcastError("podcast_final_format_invalid")
- loud=subprocess.run(["ffmpeg","-v","error","-i",str(path),"-filter:a","ebur128=peak=true","-f","null","-"],capture_output=True,text=True).stderr
- return {"duration_seconds":round(float(x["format"]["duration"]),3),"bytes":path.stat().st_size,"sha256":sha256(path),"codec":"mp3","sample_rate":24000,"channels":1,"loudness_report":loud[-4096:]}
+ loud=subprocess.run(["ffmpeg","-hide_banner","-nostats","-i",str(path),"-filter:a","ebur128=peak=true","-f","null","-"],capture_output=True,text=True).stderr
+ integrated=re.findall(r"I:\s*(-?[0-9.]+) LUFS",loud);peaks=re.findall(r"Peak:\s*(-?[0-9.]+) dBFS",loud)
+ if not integrated or not peaks:raise PodcastError("podcast_loudness_measurement_failed")
+ return {"duration_seconds":round(float(x["format"]["duration"]),3),"bytes":path.stat().st_size,"sha256":sha256(path),"codec":"mp3","bitrate":int(x["format"].get("bit_rate",0)),"sample_rate":24000,"channels":1,"integrated_loudness_lufs":float(integrated[-1]),"peak_dbfs":float(peaks[-1])}
 def assemble_episode(rd:Path,script:dict[str,Any],state:dict[str,Any])->Path:
  if len(state["completed_turns"])!=len(script["turns"]):raise PodcastError("podcast_turns_incomplete")
  turns=[]
@@ -143,8 +158,8 @@ def assemble_episode(rd:Path,script:dict[str,Any],state:dict[str,Any])->Path:
  final=rd/"episode.mp3";assemble(turns,[t["pause_after_ms"] for t in script["turns"]],final);m=measure_audio(final)
  if not MIN_DURATION<=m["duration_seconds"]<=MAX_DURATION:final.unlink(missing_ok=True);raise PodcastError("podcast_final_duration_invalid")
  state["audio_validation"]=m;state["assembly_status"]="complete";return final
-def upload_audio(storage:Any,path:Path,d:str,metrics:dict[str,Any])->tuple[str,bool]:
- key=podcast_key(d,metrics["sha256"]);head=storage.head_object(key)
+def upload_audio(storage:Any,path:Path,d:str,metrics:dict[str,Any],language:str|None=None)->tuple[str,bool]:
+ key=podcast_key(d,metrics["sha256"],language);head=storage.head_object(key)
  if head:
   if head.get("ContentLength")!=metrics["bytes"]:raise PodcastError("podcast_r2_conflict")
   return storage.build_public_url(key),False
@@ -154,10 +169,54 @@ def upload_audio(storage:Any,path:Path,d:str,metrics:dict[str,Any])->tuple[str,b
  if not head or head.get("ContentLength")!=metrics["bytes"] or str(head.get("ContentType","")).split(";",1)[0]!="audio/mpeg":raise PodcastError("podcast_r2_verify_failed")
  return storage.build_public_url(key),True
 def public_artifact(d:str,script:dict[str,Any],source_digest:str,metrics:dict[str,Any],url:str)->dict[str,Any]:return {"schema_version":"1.0.0","publication_date":d,"episode_title":script["episode_title"],"summary":script["summary"],"duration_seconds":metrics["duration_seconds"],"audio_url":url,"audio_sha256":metrics["sha256"],"audio_bytes":metrics["bytes"],"mime_type":"audio/mpeg","source_artifact_sha256":source_digest,"script_sha256":sha256(runtime_dir(d)/"script.json"),"status":"published","generated_at":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"speaker_profile":PROFILE}
+def edition_state(root:Path,d:str,source_digest:str)->tuple[Path,dict[str,Any]]:
+ rd=Path(os.getenv("TLDR_PODCAST_RUNTIME_ROOT","/home/galois/tldr-podcast-runtime"))/d;rd.mkdir(parents=True,exist_ok=True,mode=0o700);os.chmod(rd,0o700);p=rd/"edition-state.json"
+ if p.exists():
+  try:x=json.loads(p.read_text())
+  except Exception as exc:raise PodcastError("podcast_edition_state_malformed") from exc
+  if x.get("source_artifact_sha256")!=source_digest or x.get("production_code_head")!=git_head(root):raise PodcastError("podcast_edition_state_conflict")
+  return rd,x
+ x={"schema_version":"1.1.0","source_artifact_sha256":source_digest,"production_code_head":git_head(root),"canaries":{},"canary_estimated_cost_usd":0.0,"languages":{},"status":"pending"};_atomic_json(p,x,True);return rd,x
+def save_edition_state(rd:Path,state:dict[str,Any])->None:_atomic_json(rd/"edition-state.json",state,True)
+def french_canaries(root:Path,d:str,key:str,post:Callable[...,Any],source_digest:str)->dict[str,Any]:
+ rd,state=edition_state(root,d,source_digest)
+ if state.get("canaries",{}).get("status")=="validated":return state["canaries"]
+ sentences={"eve":"Bonjour, voici l’essentiel de l’actualité technologique aujourd’hui.","rex":"Regardons maintenant pourquoi ce changement compte pour le web ouvert."};out={}
+ canary_dir=rd/"fr-canaries";canary_dir.mkdir(exist_ok=True,mode=0o700)
+ for voice,text in sentences.items():
+  body={"model":DEFAULT.model,"input":text,"voice":voice,"response_format":"mp3"};audio,meta=request_turn(post,key,body,max_retries=0,turn_id="canary-"+voice,diagnostic_dir=rd/"diagnostics");candidate=Candidate(DEFAULT.provider,DEFAULT.model,{"host":voice,"analyst":voice},DEFAULT.pricing,DEFAULT.pricing_unit,DEFAULT.voice_metadata_source,DEFAULT.formats,DEFAULT.output_modalities,DEFAULT.supported_parameters,DEFAULT.max_input);desc=turn_descriptor(candidate,"fr",voice,canary_dir,str(meta["content_type"]));desc.path.write_bytes(audio);os.chmod(desc.path,0o600);out[voice]=validate_turn(desc);state["canary_estimated_cost_usd"]+=estimate_cost(DEFAULT,len(text))
+ state["canaries"]={"status":"validated","voices":["eve","rex"],"results":out};save_edition_state(rd,state);return state["canaries"]
+def generate_bilingual(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post)->dict[str,Any]:
+ source,digest=load_source(root,d);rd,edition=edition_state(root,d,digest)
+ with date_lock(rd):
+  results={}
+  with language_scope("en"):results["en"]=generate(root,d,key,post=post,cost=1.0)
+  french_canaries(root,d,key,post,digest)
+  with language_scope("fr"):results["fr"]=generate(root,d,key,post=post,cost=1.0)
+  edition=json.loads((rd/"edition-state.json").read_text());edition["languages"]={k:{"assembly_status":v["state"]["assembly_status"],"estimated_cost_usd":v["state"]["estimated_cost_usd"]} for k,v in results.items()};edition["status"]="generated";save_edition_state(rd,edition);return results
+def bilingual_artifact(root:Path,d:str,digest:str,variants:dict[str,dict[str,Any]])->dict[str,Any]:
+ now=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime());return {"schema_version":"1.1.0","publication_date":d,"status":"published","source_artifact_sha256":digest,"speaker_profile":PROFILE,"languages":variants,"generated_at":now,"published_at":now}
+def publish_bilingual(root:Path,d:str,storage:Any,public_get:Callable[...,Any]=requests.get)->dict[str,Any]:
+ source,digest=load_source(root,d);rd,edition=edition_state(root,d,digest);variants={}
+ with date_lock(rd):
+  for language in LANGUAGES:
+   with language_scope(language):
+    profile=profile_from_args(False,1.0);lrd,state=load_state(root,d,digest,profile);final=lrd/"episode.mp3";metrics=state.get("audio_validation")
+    if state.get("assembly_status")!="complete" or not final.is_file() or not metrics or measure_audio(final)["sha256"]!=metrics["sha256"]:raise PodcastError("podcast_bilingual_incomplete")
+    url,_=upload_audio(storage,final,d,metrics,language);verify_public_audio(public_get,url,metrics);script_file=lrd/"script.json";script=json.loads(script_file.read_text());variants[language]={"locale":LANGUAGES[language]["locale"],"title":script["episode_title"],"summary":script["summary"],"duration_seconds":metrics["duration_seconds"],"audio_url":url,"audio_sha256":metrics["sha256"],"audio_bytes":metrics["bytes"],"mime_type":"audio/mpeg","script_sha256":sha256(script_file)};state["upload_status"]="verified";save_state(lrd,state)
+  doc=bilingual_artifact(root,d,digest,variants);out=artifact_path(root,d)
+  if out.exists():
+   old=json.loads(out.read_text())
+   if old.get("languages")!=doc["languages"] or old.get("source_artifact_sha256")!=digest:raise PodcastError("podcast_artifact_conflict")
+   return old
+  _atomic_json(out,doc);edition["status"]="published";edition["artifact_status"]="published";save_edition_state(rd,edition);return doc
+def run_daily(root:Path,d:str,key:str,storage:Any,post:Callable[...,Any]=requests.post,public_get:Callable[...,Any]=requests.get)->dict[str,Any]:
+ generated=generate_bilingual(root,d,key,post);doc=publish_bilingual(root,d,storage,public_get);return {"generated":{k:v["private_audio"] for k,v in generated.items()},"artifact":doc,"frontend_sync":"required_after_commit"}
+
 def preflight(root:Path,d:str,cost:float)->dict[str,Any]:
  source,digest=load_source(root,d);p=profile_from_args(False,cost);rd=runtime_dir(d);target=5115;tts=estimate_cost(DEFAULT,target)
  if .20+tts>cost:raise PodcastError("podcast_estimated_cost_exceeds_ceiling")
- return {"ready":True,"paid_calls":0,"publication_date":d,"source_artifact_sha256":digest,"selected_model":DEFAULT.model,"voices":DEFAULT.voices,"planned_editorial_requests":1,"maximum_repairs":1,"planned_tts_turns":"24-36","maximum_tts_attempts":72,"target_duration_seconds":PREFERRED_DURATION,"conservative_editorial_cost_usd":.20,"conservative_tts_cost_usd":tts,"total_ceiling_usd":cost,"private_runtime_directory":str(rd),"private_mp3_path":str(rd/"episode.mp3"),"r2_target_pattern":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/<sha256>.mp3","podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"prepare only after verified R2 publication; no frontend call in generate","cron_active":False}
+ return {"ready":True,"paid_calls":0,"publication_date":d,"source_artifact_sha256":digest,"languages":["en-US","fr-FR"],"selected_model":DEFAULT.model,"voices":DEFAULT.voices,"planned_editorial_requests":2,"maximum_repairs":2,"planned_french_canaries":2,"planned_tts_turns_per_language":"24-36","maximum_tts_attempts_per_language":72,"target_duration_seconds":PREFERRED_DURATION,"conservative_editorial_cost_usd_per_language":.20,"conservative_tts_cost_usd_per_language":tts,"total_ceiling_usd":2.0,"private_runtime_directory":str(rd),"private_mp3_paths":{"en":str(rd/"en/episode.mp3"),"fr":str(rd/"fr/episode.mp3")},"r2_target_patterns":{"en":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/en/<sha256>.mp3","fr":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/fr/<sha256>.mp3"},"podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":False}
 def generate(root:Path,d:str,key:str,post:Callable[...,Any]=requests.post,cost:float=1.0)->dict[str,Any]:
  source,digest=load_source(root,d);profile=profile_from_args(False,cost);rd,state=load_state(root,d,digest,profile)
  with date_lock(rd):
@@ -172,6 +231,10 @@ def verify_public_audio(get:Callable[...,Any],url:str,metrics:dict[str,Any])->No
  if getattr(r,"status_code",0)!=200 or str(r.headers.get("content-type","")).split(";",1)[0].lower()!="audio/mpeg" or int(r.headers.get("content-length",0))!=metrics["bytes"]:raise PodcastError("podcast_public_verify_failed")
  content=bytes(r.content)
  if len(content)!=metrics["bytes"] or hashlib.sha256(content).hexdigest()!=metrics["sha256"][7:]:raise PodcastError("podcast_public_verify_failed")
+ with tempfile.TemporaryDirectory(prefix="tldr-podcast-public-") as td:
+  p=Path(td)/"episode.mp3";p.write_bytes(content)
+  try:subprocess.run(["ffmpeg","-v","error","-i",str(p),"-f","null","-"],check=True)
+  except subprocess.CalledProcessError as exc:raise PodcastError("podcast_public_decode_failed") from exc
 
 def publish(root:Path,d:str,storage:Any,accept:bool,public_get:Callable[...,Any]=requests.get)->dict[str,Any]:
  source,digest=load_source(root,d);profile=profile_from_args(False,1.0);rd,state=load_state(root,d,digest,profile)
@@ -187,13 +250,17 @@ def publish(root:Path,d:str,storage:Any,accept:bool,public_get:Callable[...,Any]
    state["artifact_status"]="published";save_state(rd,state);return old
   _atomic_json(out,doc);state["artifact_status"]="published";save_state(rd,state);return doc
 def main()->int:
- p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate","publish"));p.add_argument("--date",required=True);p.add_argument("--authorize-paid",action="store_true");p.add_argument("--authorize-publish",action="store_true");p.add_argument("--accept",action="store_true");p.add_argument("--cost-ceiling",type=float,default=1.0);a=p.parse_args();root=Path.cwd()
+ p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate","publish","run-daily"));p.add_argument("--date",required=True);p.add_argument("--language",choices=tuple(LANGUAGES),default="en");p.add_argument("--authorize-paid",action="store_true");p.add_argument("--authorize-publish",action="store_true");p.add_argument("--accept",action="store_true");p.add_argument("--cost-ceiling",type=float,default=1.0);p.add_argument("--publish",action="store_true");a=p.parse_args();root=Path.cwd()
  if a.command=="preflight":print(json.dumps(preflight(root,a.date,a.cost_ceiling),sort_keys=True,indent=2));return 0
+ key=os.getenv("OPENROUTER_API_KEY","")
  if a.command=="generate":
-  if not a.authorize_paid:raise PodcastError("explicit_paid_authorization_required")
-  key=os.getenv("OPENROUTER_API_KEY");
-  if not key:raise PodcastError("openrouter_key_missing")
-  print(json.dumps(generate(root,a.date,key,cost=a.cost_ceiling),sort_keys=True));return 0
- if not a.authorize_publish:raise PodcastError("explicit_publish_authorization_required")
- cfg=Config.from_env();cfg.require_r2();print(json.dumps(publish(root,a.date,R2Storage(cfg),a.accept),sort_keys=True));return 0
+  if not a.authorize_paid or not key:raise PodcastError("explicit_paid_authorization_or_key_required")
+  with language_scope(a.language):result=generate(root,a.date,key,cost=a.cost_ceiling)
+  print(json.dumps(result,sort_keys=True));return 0
+ cfg=Config.from_env();cfg.require_r2();storage=R2Storage(cfg)
+ if a.command=="publish":
+  if not a.authorize_publish or not a.accept:raise PodcastError("explicit_publish_authorization_and_acceptance_required")
+  print(json.dumps(publish_bilingual(root,a.date,storage),sort_keys=True));return 0
+ if not a.publish or not key:raise PodcastError("run_daily_requires_publish_and_key")
+ print(json.dumps(run_daily(root,a.date,key,storage),sort_keys=True));return 0
 if __name__=="__main__":main()

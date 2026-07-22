@@ -52,6 +52,6 @@ class PodcastTests(unittest.TestCase):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):
   with tempfile.TemporaryDirectory() as td:
-   root=Path(td);source(root);r=preflight(root,"2026-07-21",1);self.assertEqual((r["paid_calls"],r["selected_model"]),(0,DEFAULT.model));self.assertEqual(r["planned_editorial_requests"],1);self.assertFalse(r["cron_active"])
+   root=Path(td);source(root);r=preflight(root,"2026-07-21",1);self.assertEqual((r["paid_calls"],r["selected_model"]),(0,DEFAULT.model));self.assertEqual(r["planned_editorial_requests"],2);self.assertFalse(r["cron_active"])
    with self.assertRaisesRegex(PodcastError,"estimated_cost_exceeds"):preflight(root,"2026-07-21",.01)
 if __name__=="__main__":unittest.main()

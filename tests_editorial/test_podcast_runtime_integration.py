@@ -2,7 +2,7 @@ from __future__ import annotations
 import hashlib,json,os,stat,subprocess,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
-from tools.tldr_podcast import (DEFAULT,PodcastError,generate,load_state,measure_audio,publish,profile_from_args,tts_turn)
+from tools.tldr_podcast import (DEFAULT,PodcastError,generate,load_state,measure_audio,publish,profile_from_args,run_daily,tts_turn)
 
 class Response:
  def __init__(self,status=200,content=b'',ctype='audio/mpeg',doc=None):self.status_code=status;self.content=content;self.headers={'content-type':ctype,'content-length':str(len(content))};self._doc=doc
@@ -75,6 +75,24 @@ class RuntimeIntegration(unittest.TestCase):
    with patch.dict(os.environ,{'TLDR_PODCAST_RUNTIME_ROOT':str(root/'runtime')}),patch('tools.tldr_podcast.git_head',return_value='test-head'):
     rd,state=load_state(root,'2026-07-21',digest,profile_from_args(False,1));state['planned_turns']=[f't{i:03}' for i in range(1,37)];state['tts_attempts']=72
     with self.assertRaisesRegex(PodcastError,'attempt_budget'):tts_turn(retry,'key',DEFAULT,s['turns'][0],rd,state,1)
+  finally:td.cleanup()
+ def test_full_mocked_bilingual_run_daily_is_atomic(self):
+  td,root,digest,en=self.case()
+  try:
+   fr=json.loads(json.dumps(en));fr['episode_title']='L’Index du jour';fr['summary']='Une analyse technologique en français.'
+   for t in fr['turns']:t['text']=('La distribution change parce que la recherche conversationnelle garde les réponses sur le service. Mais les effets pourraient varier, alors quelles preuves montreraient un changement durable du trafic? '+'contexte '*4).strip()
+   fr['estimated_duration_seconds']=round(sum(len(x['text']) for x in fr['turns'])/15.5+6)
+   audio=self.bytes
+   class Multi:
+    def __init__(self):self.editorial={'en':0,'fr':0};self.tts=0
+    def __call__(self,url,**kw):
+     if 'chat/completions' in url:
+      language='fr' if 'français naturel' in kw['json']['messages'][0]['content'] else 'en';self.editorial[language]+=1;doc=fr if language=='fr' else en;return Response(doc={'choices':[{'message':{'content':json.dumps(doc)}}]})
+     self.tts+=1;return Response(200,audio)
+   post=Multi();storage=FakeStorage()
+   with patch.dict(os.environ,{'TLDR_PODCAST_RUNTIME_ROOT':str(root/'runtime')}),patch('tools.tldr_podcast.git_head',return_value='test-head'):
+    result=run_daily(root,'2026-07-21','key',storage,post,storage.get)
+   self.assertEqual((post.editorial,post.tts,storage.client.uploads),({'en':1,'fr':1},50,2));self.assertEqual(set(result['artifact']['languages']),{'en','fr'});self.assertTrue((root/'generated/podcast/2026/2026-07-21.json').exists())
   finally:td.cleanup()
  def test_upload_conflict_and_private_artifact_gate(self):
   td,root,digest,s=self.case()
