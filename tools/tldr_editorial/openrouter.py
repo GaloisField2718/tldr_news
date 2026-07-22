@@ -18,7 +18,7 @@ PLAN_SCHEMA={"type":"object","additionalProperties":False,"required":["lead_cand
  "front_page":{"type":"array","maxItems":9,"items":{"type":"object","additionalProperties":False,"required":["candidate_id","role"],"properties":{"candidate_id":{"type":"string","pattern":"^c[0-9]{3}$"},"role":{"enum":["lead","secondary","brief"]}}}},
  "section_order":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":80}},
  "visual_brief":{"type":"object","additionalProperties":False,"required":["schema_version","mode","source_candidate_ids","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text"],"properties":{
-  "schema_version":{"const":"2.0.0"},"mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
+  "schema_version":{"type":"string","enum":["2.0.0"]},"mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
   "editorial_idea":{"type":"string","maxLength":500},"central_subject":{"type":"string","maxLength":300},"visual_relationship":{"type":"string","maxLength":500},"composition":{"type":"string","maxLength":500},"literal_elements":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"abstraction_level":{"enum":["low","medium","high"]},"forbidden_elements":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":100}},"failure_modes":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"alt_text":{"type":"string","maxLength":500}}}}}
 
 @dataclass(frozen=True)
@@ -80,6 +80,21 @@ def _supports(spec:Any,value:Any)->bool:
     if spec.get("type")=="boolean":return isinstance(value,bool)
     return False
 
+class ProviderHTTPError(EditorialError):
+    def __init__(self,status:int,code:str|None,message:str,request_id:str|None,retryable:bool):
+        super().__init__(f"openrouter_http_{status}");self.status=status;self.provider_code=code;self.provider_message=message;self.request_id=request_id;self.retryable=retryable
+
+def validate_strict_json_schema(schema:dict)->None:
+    allowed={"type","properties","required","additionalProperties","items","enum","maxItems","maxLength","pattern"}
+    def walk(value,path="schema"):
+        if not isinstance(value,dict) or any(k not in allowed for k in value):raise EditorialError("editorial_schema_unsupported")
+        if value.get("type")=="object":
+            props=value.get("properties");required=value.get("required")
+            if value.get("additionalProperties") is not False or not isinstance(props,dict) or set(required or [])!=set(props):raise EditorialError("editorial_schema_not_strict")
+            for k,v in props.items():walk(v,path+"."+k)
+        elif value.get("type")=="array":walk(value.get("items"),path+"[]")
+    walk(schema)
+
 class OpenRouterClient:
     def __init__(self,config:Config,post:Callable[...,Any]|None=None,get:Callable[...,Any]|None=None):
         self.config=config;self._post=post or _default_post;self._get=get or _default_get;self._image_capability=None
@@ -95,9 +110,20 @@ class OpenRouterClient:
             if body is not None:kwargs["json"]=body
             response=method(url,**kwargs)
         except Exception as exc:raise EditorialError("openrouter_transport_failed") from exc
-        if not 200<=response.status_code<300:raise EditorialError(f"openrouter_http_{response.status_code}")
+        if not 200<=response.status_code<300:
+            code=None;message="provider request rejected"
+            try:
+                doc=_bounded_json(response,min(max_bytes,64_000),oversize_code);error=doc.get("error",{}) if isinstance(doc,dict) else {}
+                if isinstance(error,dict):
+                    raw_code=error.get("code");raw_message=error.get("message")
+                    if isinstance(raw_code,(str,int)):code=str(raw_code)[:100]
+                    if isinstance(raw_message,str):message=" ".join(raw_message.split())[:500]
+            except EditorialError:pass
+            headers=getattr(response,"headers",{}) or {};rid=next((headers.get(x) for x in ("x-request-id","x-openrouter-request-id","request-id") if isinstance(headers.get(x),str)),None)
+            raise ProviderHTTPError(response.status_code,code,message,rid[:256] if rid else None,response.status_code in (408,409,429) or response.status_code>=500)
         return _bounded_json(response,max_bytes,oversize_code)
     def editorial(self,dossier:list[dict])->Result:
+        validate_strict_json_schema(PLAN_SCHEMA)
         eligible=sum(x.get("content_class")=="editorial" and bool(x.get("title")) and bool(x.get("summary")) for x in dossier)
         expected=min(9,eligible)
         system=("Organize the supplied technology dossier into the strict front-page JSON object. "

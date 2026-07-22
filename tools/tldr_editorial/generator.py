@@ -11,7 +11,7 @@ from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_V
 from .image import assemble_prompt,decode_image,normalize_raster
 from .illustration_hash import illustration_input_hash
 from .illustration_prompts import get_profile
-from .openrouter import OpenRouterClient
+from .openrouter import OpenRouterClient,ProviderHTTPError
 from .plan import fallback,resolve_plan,validate_plan
 from .r2_storage import R2Storage,build_public_url
 
@@ -134,7 +134,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         return {"date":date,"status":copy_a["status"],"written":not dry_run,"network_calls":0,"r2_calls":0,"dossier_bytes":dossier_size(candidates),"public_url_updated":True}
     live=config.enabled and not offline and not dry_run
     plan=fallback(candidates); status="disabled" if not config.enabled else "deterministic_fallback"
-    failure=None; editorial_usage=dict(ZERO); image_usage=dict(ZERO); erid=irid=None; calls=0; r2calls=0
+    failure=None;provider_error=None;editorial_usage=dict(ZERO);image_usage=dict(ZERO);erid=irid=None;calls=0;r2calls=0;editorial_attempts=editorial_successes=image_attempts=image_successes=0
     valid_ai=False
     reuse_existing_plan=live and (retry_image or illustration_stale) and existing and existing.get("editorial_input_hash")==editorial_hash and existing.get("plan",{}).get("visual_brief",{}).get("schema_version")=="2.0.0"
     if live and not reuse_existing_plan:
@@ -143,11 +143,13 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
             failure="openrouter_key_missing"
         else:
             try:
-                client=client or OpenRouterClient(config); result=client.editorial(dos); calls+=1
+                client=client or OpenRouterClient(config);editorial_attempts+=1;calls+=1;result=client.editorial(dos);editorial_successes+=1
                 plan=validate_plan(result.value,candidates)
                 if plan["visual_brief"].get("schema_version")!="2.0.0":raise EditorialError("production_visual_brief_v2_required")
                 editorial_usage=result.usage; erid=result.request_id; valid_ai=True; status="editorial_only"
-            except EditorialError as exc: failure=str(exc)
+            except EditorialError as exc:
+                failure=str(exc)
+                if isinstance(exc,ProviderHTTPError):provider_error={"request_attempted":True,"successful_response":False,"http_status":exc.status,"provider_code":exc.provider_code,"provider_message":exc.provider_message,"provider_request_id":exc.request_id,"retryable":exc.retryable}
     elif reuse_existing_plan:
         # Existing source-resolved plan cannot safely be converted back to candidate IDs;
         # resolve references deterministically against the current dossier.
@@ -168,7 +170,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
         illustration_hash=illustration_input_hash(brief=plan["visual_brief"],sources=facts,image_model=config.image_model,prompt_version=ILLUSTRATION_PROMPT_VERSION,image_config=image_cfg,profile=get_profile("production-v2"))
         try:
-            client=client or OpenRouterClient(config); result=client.image(final_prompt); calls+=1; image_usage=result.usage; irid=result.request_id
+            client=client or OpenRouterClient(config);image_attempts+=1;calls+=1;result=client.image(final_prompt);image_successes+=1;image_usage=result.usage;irid=result.request_id
         except EditorialError as exc:
             ill=_illustration("generation_failed",str(exc)); failure=str(exc)
         else:
@@ -211,6 +213,10 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
       "usage":{"editorial":editorial_usage,"illustration":image_usage,"total_cost_usd":total},
       "generation":{"attempt_count":1 if live else 0,"editorial_request_id":erid,"illustration_request_id":irid,"final_prompt_sha256":sha256_bytes(final_prompt.encode()) if final_prompt else None,"final_prompt":final_prompt,"failure_code":failure}}
     if is_v2:artifact.update(illustration_profile_id="production-v2",visual_brief_schema_version="2.0.0")
+    counts={"network_calls":calls,"editorial_attempts":editorial_attempts,"editorial_successful_responses":editorial_successes,"image_attempts":image_attempts,"image_successful_responses":image_successes,"r2_calls":r2calls}
+    preserve_published=bool(existing and same_editorial and compatibility.get("editorial_refresh_required") and failure)
+    if preserve_published:
+        return {"date":date,"status":"migration_failed","illustration_status":existing.get("illustration",{}).get("status"),"written":False,**counts,"dossier_bytes":dossier_size(candidates),"editorial_input_hash":editorial_hash,"illustration_input_hash":existing.get("illustration_input_hash"),"dry_run":dry_run,"failure_code":failure,"provider_error":provider_error,"published_artifact_preserved":True}
     written=False
     if not dry_run: written=any(write_artifact(output,date,artifact))
-    return {"date":date,"status":status,"illustration_status":ill["status"],"written":written,"network_calls":calls,"r2_calls":r2calls,"dossier_bytes":dossier_size(candidates),"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"dry_run":dry_run}
+    return {"date":date,"status":status,"illustration_status":ill["status"],"written":written,**counts,"dossier_bytes":dossier_size(candidates),"editorial_input_hash":editorial_hash,"illustration_input_hash":illustration_hash,"dry_run":dry_run,"provider_error":provider_error}
