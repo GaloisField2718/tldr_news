@@ -264,11 +264,14 @@ def bilingual_artifact(root:Path,d:str,digest:str,variants:dict[str,dict[str,Any
 def publish_bilingual(root:Path,d:str,storage:Any,public_get:Callable[...,Any]=requests.get)->dict[str,Any]:
  source,digest=load_source(root,d);rd,edition=edition_state(root,d,digest);variants={}
  with date_lock(rd):
+  prepared={}
   for language in LANGUAGES:
    with language_scope(language):
     profile=profile_from_args(False,1.0);lrd,state=load_state(root,d,digest,profile);final=lrd/"episode.mp3";metrics=state.get("audio_validation")
     if state.get("assembly_status")!="complete" or not final.is_file() or not metrics or measure_audio(final)["sha256"]!=metrics["sha256"]:raise PodcastError("podcast_bilingual_incomplete")
-    url,_=upload_audio(storage,final,d,metrics,language);verify_public_audio(public_get,url,metrics);script_file=lrd/"script.json";script=json.loads(script_file.read_text());variants[language]={"locale":LANGUAGES[language]["locale"],"title":script["episode_title"],"summary":script["summary"],"duration_seconds":metrics["duration_seconds"],"audio_url":url,"audio_sha256":metrics["sha256"],"audio_bytes":metrics["bytes"],"mime_type":"audio/mpeg","script_sha256":sha256(script_file)};state["upload_status"]="verified";save_state(lrd,state)
+    url,_=upload_audio(storage,final,d,metrics,language);prepared[language]=(lrd,state,metrics,url)
+  for language,(lrd,state,metrics,url) in prepared.items():
+   verify_public_audio(public_get,url,metrics);script_file=lrd/"script.json";script=json.loads(script_file.read_text());variants[language]={"locale":LANGUAGES[language]["locale"],"title":script["episode_title"],"summary":script["summary"],"duration_seconds":metrics["duration_seconds"],"audio_url":url,"audio_sha256":metrics["sha256"],"audio_bytes":metrics["bytes"],"mime_type":"audio/mpeg","script_sha256":sha256(script_file)};state["upload_status"]="verified";save_state(lrd,state)
   doc=bilingual_artifact(root,d,digest,variants);out=artifact_path(root,d)
   if out.exists():
    old=json.loads(out.read_text())
