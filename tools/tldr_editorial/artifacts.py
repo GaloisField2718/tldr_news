@@ -106,7 +106,7 @@ def validate_all(output:Path,generated:Path=Path("generated"),storage=None,publi
                 keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text") if vb.get("schema_version")=="2.0.0" else ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")
                 hash_brief={"mode":vb["mode"],"source_candidate_ids":[x.candidate_id for x in source_ids],**{k:vb[k] for k in keys}}
                 image_cfg=image_configuration(max_provider_image_bytes,max_image_pixels,max_image_bytes)
-                expected_ih=hash_parts(hash_brief,[{"title":c.title,"summary":c.summary} for c in source_ids],a["models"]["illustration"],ILLUSTRATION_PROMPT_VERSION,image_cfg)
+                expected_ih=hash_parts(hash_brief,[{"title":c.title,"summary":c.summary} for c in source_ids],a["models"]["illustration"],a["prompt_versions"]["illustration"],image_cfg)
                 if ih!=expected_ih: errors.append(f"{date}: stale illustration input hash")
             except (KeyError,TypeError): errors.append(f"{date}: illustration hash inputs unavailable")
         ill=a.get("illustration",{}); status=ill.get("status")
