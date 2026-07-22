@@ -24,7 +24,7 @@ python -m tools.tldr_editorial calibrate-images \
   --date 2026-07-21 \
   --profiles baseline-v1,print-graphic-v1,object-study-v1,constructed-collage-v1,ink-gouache-v1,cinematic-editorial-v1 \
   --output-dir /home/galois/tldr-image-calibration/round-1 \
-  --max-images 6
+  --samples-per-profile 2 --max-images 12
 ```
 
 A live run is accepted only with both explicit acknowledgements:
@@ -34,10 +34,11 @@ python -m tools.tldr_editorial calibrate-images \
   --date 2026-07-21 \
   --profiles baseline-v1,print-graphic-v1,object-study-v1,constructed-collage-v1,ink-gouache-v1,cinematic-editorial-v1 \
   --output-dir /home/galois/tldr-image-calibration/round-1 \
-  --require-live --acknowledge-cost --max-images 6
+  --samples-per-profile 2 \
+  --require-live --acknowledge-cost --max-images 12
 ```
 
-The output must be absolute, outside Git, non-symlinked, and empty. The checkout must be clean. CI live runs are forbidden. No candidate is automatically retried; after one failure, it and all unattempted candidates are recorded and paid calls stop.
+The output must be absolute, outside Git, non-symlinked, and empty. The checkout must be clean. CI live runs are forbidden. `--samples-per-profile` defaults to one and accepts one through five; the explicit `--max-images` ceiling applies to profiles multiplied by samples. Repeated samples receive independent anonymous IDs while using identical prompts and source facts. No candidate is automatically retried; after one failure, it and all unattempted candidates are recorded and paid calls stop.
 
 Outputs are `manifest.json`, private `blind-map.json`, `gallery.html`, `score-template.json`, and (live only) normalized anonymous WebPs. The gallery works through `file://`, randomizes anonymous candidates, uses identical framing, repeats identical source facts, and never includes profile IDs. Keep `blind-map.json` private until scoring is complete.
 
@@ -62,13 +63,13 @@ For each image also record a one-sentence first impression, strongest quality, s
 
 ### Round 1
 
-Use the existing AMD Helios visual brief. Generate one image for each explicitly selected registered profile (six for the initial registry), rank blindly, and retain two profiles. This is six paid image calls and zero editorial calls.
+Use the existing AMD Helios visual brief. Generate two independent anonymous samples for each of the six initial profiles, rank blindly on both quality and consistency, and retain two profiles. Both samples for a profile use the exact same prompt and facts. This is twelve paid image calls and zero editorial calls.
 
 ### Round 2
 
 Select two additional validated briefs with different visual problems: one abstract software/model story and one human, organizational, or economic technology story. Generate both finalists against both briefs, then rank blindly. This is four paid image calls and zero editorial calls.
 
-The initial six-profile experiment therefore uses ten image calls total, zero editorial calls, no R2 uploads, and no official artifact mutation. Registry growth changes the total only when the operator explicitly selects added profiles and raises `--max-images`. A winner must perform well across all three story types; the AMD result alone cannot select production direction.
+The initial repeated-sampling experiment therefore uses sixteen image calls total, zero editorial calls, no R2 uploads, and no official artifact mutation. Registry growth or sampling changes the total only when the operator explicitly selects profiles, chooses a sample count, and raises `--max-images`. A winner must perform well across all three story types; the AMD result alone cannot select production direction.
 
 ## Later winner lock (not part of calibration)
 

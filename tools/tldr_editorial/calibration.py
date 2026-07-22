@@ -103,14 +103,15 @@ def _write_outputs(output:Path,context:CalibrationContext,candidates:list[dict],
  _json(output/"manifest.json",manifest);_json(output/"blind-map.json",blind);_json(output/"score-template.json",score)
  _atomic_bytes(output/"gallery.html",_gallery(order,context).encode(),0o600)
 
-def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile],output:Path,cfg:Config,live:bool,client=None)->dict:
- ids=[]
- for _ in profiles:
+def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile],output:Path,cfg:Config,live:bool,client=None,samples_per_profile:int=1)->dict:
+ if not 1<=samples_per_profile<=5:raise EditorialError("calibration_samples_per_profile_invalid")
+ assignments=[(profile,sample_index) for profile in profiles for sample_index in range(1,samples_per_profile+1)];ids=[]
+ for _ in assignments:
   while True:
    value="candidate-"+secrets.token_hex(4)
    if value not in ids:ids.append(value);break
- mapping={candidate:profile.profile_id for candidate,profile in zip(ids,profiles)};records=[];failed=False;network_calls=0;image_client=(client or OpenRouterClient(cfg)) if live else None
- for index,(candidate_id,profile) in enumerate(zip(ids,profiles)):
+ mapping={candidate:{"profile_id":profile.profile_id,"sample_index":sample_index} for candidate,(profile,sample_index) in zip(ids,assignments)};records=[];failed=False;network_calls=0;image_client=(client or OpenRouterClient(cfg)) if live else None
+ for candidate_id,(profile,sample_index) in zip(ids,assignments):
   prompt=assemble_prompt(context.brief,list(context.sources),profile);prompt_sha="sha256:"+hashlib.sha256(prompt.encode()).hexdigest()
   record={"candidate_id":candidate_id,"status":"planned" if not live else "not_attempted","image_file":None,"sha256":None,"width":None,"height":None,"bytes":None,"prompt_sha256":prompt_sha,"model":cfg.image_model,"usage":{"prompt_tokens":0,"completion_tokens":0,"total_tokens":0,"cost_usd":0.0},"source_references":[{"issue_id":c.issue_id,"article_id":c.article_id} for c in context.sources]}
   records.append(record)
@@ -133,10 +134,12 @@ def run_calibration(*,context:CalibrationContext,profiles:Sequence[PromptProfile
  _write_outputs(output,context,records,mapping)
  return {"date":context.date,"candidate_count":len(records),"ready_count":sum(x["status"]=="ready" for x in records),"failed_count":sum(x["status"]=="failed" for x in records),"network_calls":network_calls,"editorial_calls":0,"r2_calls":0,"live":live,"success":not failed,"output_dir":str(output)}
 
-def calibrate_images(*,date:str,profile_ids:Sequence[str],output_dir:Path,max_images:int,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),editorial_output:Path=Path("generated/editorial"),config:Config|None=None,client=None,context:CalibrationContext|None=None)->dict:
+def calibrate_images(*,date:str,profile_ids:Sequence[str],output_dir:Path,max_images:int,samples_per_profile:int=1,require_live:bool=False,acknowledge_cost:bool=False,generated:Path=Path("generated"),editorial_output:Path=Path("generated/editorial"),config:Config|None=None,client=None,context:CalibrationContext|None=None)->dict:
  if not date:raise EditorialError("calibration_date_required")
  if not profile_ids:raise EditorialError("calibration_profiles_required")
- if max_images<1 or len(profile_ids)>max_images:raise EditorialError("calibration_image_limit")
+ if not 1<=samples_per_profile<=5:raise EditorialError("calibration_samples_per_profile_invalid")
+ total=len(profile_ids)*samples_per_profile
+ if max_images<1 or total>max_images:raise EditorialError("calibration_image_limit")
  if len(set(profile_ids))!=len(profile_ids):raise EditorialError("calibration_duplicate_profile")
  try:profiles=[get_profile(x) for x in profile_ids]
  except KeyError as exc:raise EditorialError("calibration_profile_unknown") from exc
@@ -147,4 +150,4 @@ def calibrate_images(*,date:str,profile_ids:Sequence[str],output_dir:Path,max_im
  if live:cfg.require_openrouter()
  context=context or _context(date,generated,editorial_output,cfg)
  if context.date!=date:raise EditorialError("calibration_context_date_mismatch")
- return run_calibration(context=context,profiles=profiles,output=output,cfg=cfg,live=live,client=client)
+ return run_calibration(context=context,profiles=profiles,output=output,cfg=cfg,live=live,client=client,samples_per_profile=samples_per_profile)

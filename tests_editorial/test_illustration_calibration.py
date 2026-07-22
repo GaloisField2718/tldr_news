@@ -61,13 +61,27 @@ class CalibrationTests(unittest.TestCase):
   official=self.repo/"generated/editorial/manifest.json";official.parent.mkdir(parents=True);official.write_bytes(b"official\n");subprocess.run(["git","add","generated"],check=True);subprocess.run(["git","commit","-m","official"],check=True,capture_output=True)
   client=ImageClient();result=calibrate_images(date=context().date,profile_ids=list(PROMPT_PROFILES),output_dir=self.output(),max_images=len(PROMPT_PROFILES),config=config(),client=client,context=context())
   self.assertEqual((result["network_calls"],result["editorial_calls"],result["r2_calls"]),(0,0,0));self.assertEqual(client.image_calls,0);self.assertEqual(client.editorial_calls,0);self.assertEqual(official.read_bytes(),b"official\n")
+ def test_default_one_sample_per_profile(self):
+  out=self.output();selected=list(PROMPT_PROFILES)[:2];result=calibrate_images(date=context().date,profile_ids=selected,output_dir=out,max_images=2,config=config(),context=context())
+  mapping=json.loads((out/"blind-map.json").read_text())["mapping"];self.assertEqual(result["candidate_count"],2);self.assertEqual({x["sample_index"] for x in mapping.values()},{1});self.assertEqual({x["profile_id"] for x in mapping.values()},set(selected))
+ def test_two_samples_are_anonymous_complete_and_use_identical_profile_prompts(self):
+  out=self.output();selected=list(PROMPT_PROFILES)[:2];client=ImageClient();result=calibrate_images(date=context().date,profile_ids=selected,output_dir=out,max_images=4,samples_per_profile=2,config=config(),client=client,context=context())
+  manifest=json.loads((out/"manifest.json").read_text());mapping=json.loads((out/"blind-map.json").read_text())["mapping"];gallery=(out/"gallery.html").read_text();ids=[x["candidate_id"] for x in manifest["candidates"]]
+  self.assertEqual(result["candidate_count"],4);self.assertEqual(len(ids),len(set(ids)));self.assertEqual(set(ids),set(mapping));self.assertEqual(client.image_calls,0)
+  for profile_id in selected:
+   members={candidate_id for candidate_id,value in mapping.items() if value=={"profile_id":profile_id,"sample_index":1} or value=={"profile_id":profile_id,"sample_index":2}}
+   self.assertEqual(len(members),2);self.assertEqual(len({x["prompt_sha256"] for x in manifest["candidates"] if x["candidate_id"] in members}),1)
+  self.assertTrue(all(profile_id not in gallery and profile_id not in (out/"manifest.json").read_text() for profile_id in selected));self.assertNotIn("sample_index",gallery);self.assertNotIn("sample_index",(out/"manifest.json").read_text())
  def test_live_requires_both_flags_ci_is_forbidden_and_limit_is_enforced(self):
   ids=["baseline-v1"]
   for flags in ({"require_live":True},{"acknowledge_cost":True}):
    with self.assertRaisesRegex(EditorialError,"calibration_live_flags_required"):calibrate_images(date=context().date,profile_ids=ids,output_dir=self.output("flags"+str(len(flags))),max_images=1,config=config(api_key="x"),context=context(),**flags)
   with patch.dict(os.environ,{"CI":"true"}):
    with self.assertRaisesRegex(EditorialError,"calibration_live_forbidden_in_ci"):calibrate_images(date=context().date,profile_ids=ids,output_dir=self.output("ci"),max_images=1,require_live=True,acknowledge_cost=True,config=config(api_key="x"),context=context())
-  with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_images(date=context().date,profile_ids=ids*2,output_dir=self.output("limit"),max_images=1,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_image_limit"):calibrate_images(date=context().date,profile_ids=["baseline-v1","print-graphic-v1"],output_dir=self.output("limit"),max_images=3,samples_per_profile=2,config=config(),context=context())
+  with self.assertRaisesRegex(EditorialError,"calibration_duplicate_profile"):calibrate_images(date=context().date,profile_ids=ids*2,output_dir=self.output("duplicate"),max_images=2,config=config(),context=context())
+  for value in (0,6):
+   with self.assertRaisesRegex(EditorialError,"calibration_samples_per_profile_invalid"):calibrate_images(date=context().date,profile_ids=ids,output_dir=self.output("samples"+str(value)),max_images=10,samples_per_profile=value,config=config(),context=context())
  def test_output_inside_git_and_symlink_are_rejected(self):
   with self.assertRaisesRegex(EditorialError,"calibration_output_inside_git"):calibrate_images(date=context().date,profile_ids=["baseline-v1"],output_dir=self.repo/"inside",max_images=1,config=config(),context=context())
   target=self.output("target");target.mkdir();link=self.output("link");link.symlink_to(target,True)
@@ -90,8 +104,8 @@ class CalibrationTests(unittest.TestCase):
   self.assertTrue(all(profile not in gallery for profile in PROMPT_PROFILES));self.assertTrue(all(x in gallery for x in candidate_ids));self.assertTrue(all(candidate().title in card for card in [gallery]));self.assertEqual((out/"blind-map.json").stat().st_mode&0o777,0o600)
  def test_failure_is_recorded_once_and_stops_paid_candidates(self):
   out=self.output();client=ImageClient(fail=True);ids=list(PROMPT_PROFILES)[:3]
-  with patch.dict(os.environ,{"CI":""}):result=calibrate_images(date=context().date,profile_ids=ids,output_dir=out,max_images=3,require_live=True,acknowledge_cost=True,config=config(api_key="x"),client=client,context=context())
-  self.assertFalse(result["success"]);self.assertEqual(client.image_calls,1);records=json.loads((out/"manifest.json").read_text())["candidates"];self.assertEqual(sum(x["status"]=="failed" for x in records),1);self.assertEqual(sum(x["status"]=="not_attempted" for x in records),2);self.assertNotIn("request_id",json.dumps(records))
+  with patch.dict(os.environ,{"CI":""}):result=calibrate_images(date=context().date,profile_ids=ids,output_dir=out,max_images=6,samples_per_profile=2,require_live=True,acknowledge_cost=True,config=config(api_key="x"),client=client,context=context())
+  self.assertFalse(result["success"]);self.assertEqual(client.image_calls,1);records=json.loads((out/"manifest.json").read_text())["candidates"];self.assertEqual(sum(x["status"]=="failed" for x in records),1);self.assertEqual(sum(x["status"]=="not_attempted" for x in records),5);self.assertNotIn("request_id",json.dumps(records))
  def test_custom_registered_shape_needs_no_engine_count_change(self):
   out=self.output();out.mkdir();custom=PromptProfile("future-v1","profile-999","Future profile preamble",SHARED_FACTUAL_RESTRICTIONS,())
   result=run_calibration(context=context(),profiles=[custom],output=out,cfg=config(),live=False);self.assertEqual(result["candidate_count"],1);self.assertEqual(result["network_calls"],0)
