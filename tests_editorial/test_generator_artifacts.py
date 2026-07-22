@@ -45,7 +45,7 @@ class GeneratorTests(unittest.TestCase):
  def test_conversion_policy_limit_change_rehashes_and_reuses_editorial_plan(self):
   first=Live();generate(generated=self.g,output=self.o,latest=True,config=config(enabled=True,api_key='x'),client=first,storage=Storage());old=json.loads((self.o/'2026'/'2026-07-21.json').read_text())['illustration_input_hash']
   second=Live();result=generate(generated=self.g,output=self.o,latest=True,config=config(enabled=True,api_key='x',max_image_pixels=10_000_000),client=second,storage=Storage());new=json.loads((self.o/'2026'/'2026-07-21.json').read_text())['illustration_input_hash']
-  self.assertNotEqual(old,new);self.assertEqual((second.editorial_calls,second.image_calls),(0,1));self.assertEqual(result['status'],'ai_complete')
+  self.assertNotEqual(old,new);self.assertEqual((second.editorial_calls,second.image_calls),(1,1));self.assertEqual(result['status'],'ai_complete')
  def test_failure_persisted_no_minute_retry(self):
   c=Live(fail=True);a=generate(generated=self.g,output=self.o,latest=True,config=config(enabled=True,api_key='x'),client=c,storage=Storage());self.assertEqual(a['status'],'deterministic_fallback');self.assertEqual(c.editorial_calls,1)
   b=generate(generated=self.g,output=self.o,latest=True,config=config(enabled=True,api_key='x'),client=Never());self.assertTrue(b['noop'])

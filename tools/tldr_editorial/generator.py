@@ -68,7 +68,8 @@ def _existing_illustration_hash(existing:dict,candidates:list,config:Config)->st
     if stored is None:return None
     by_ref={(c.issue_id,c.article_id):c for c in candidates};vb=existing["plan"]["visual_brief"]
     sources=[by_ref[(x["issue_id"],x["article_id"])] for x in vb["sources"]]
-    brief={"mode":vb["mode"],"source_candidate_ids":[c.candidate_id for c in sources],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}
+    keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text") if vb.get("schema_version")=="2.0.0" else ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")
+    brief={"mode":vb["mode"],"source_candidate_ids":[c.candidate_id for c in sources],**{k:vb[k] for k in keys}}
     cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
     return hash_parts(brief,[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,cfg)
 
@@ -109,7 +110,7 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
     plan=fallback(candidates); status="disabled" if not config.enabled else "deterministic_fallback"
     failure=None; editorial_usage=dict(ZERO); image_usage=dict(ZERO); erid=irid=None; calls=0; r2calls=0
     valid_ai=False
-    reuse_existing_plan=live and (retry_image or illustration_stale) and existing and existing.get("editorial_input_hash")==editorial_hash
+    reuse_existing_plan=live and (retry_image or illustration_stale) and existing and existing.get("editorial_input_hash")==editorial_hash and existing.get("plan",{}).get("visual_brief",{}).get("schema_version")=="2.0.0"
     if live and not reuse_existing_plan:
         if not config.api_key:
             if require_live: config.require_openrouter()

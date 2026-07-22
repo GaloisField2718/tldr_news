@@ -17,10 +17,9 @@ PLAN_SCHEMA={"type":"object","additionalProperties":False,"required":["lead_cand
  "lead_candidate_id":{"type":"string","pattern":"^c[0-9]{3}$"},
  "front_page":{"type":"array","maxItems":9,"items":{"type":"object","additionalProperties":False,"required":["candidate_id","role"],"properties":{"candidate_id":{"type":"string","pattern":"^c[0-9]{3}$"},"role":{"enum":["lead","secondary","brief"]}}}},
  "section_order":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":80}},
- "visual_brief":{"type":"object","additionalProperties":False,"required":["mode","source_candidate_ids","central_subject","visual_metaphor","composition","forbidden_elements","alt_text"],"properties":{
-  "mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
-  "central_subject":{"type":"string","maxLength":300},"visual_metaphor":{"type":"string","maxLength":500},"composition":{"type":"string","maxLength":500},
-  "forbidden_elements":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":100}},"alt_text":{"type":"string","maxLength":500}}}}}
+ "visual_brief":{"type":"object","additionalProperties":False,"required":["schema_version","mode","source_candidate_ids","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text"],"properties":{
+  "schema_version":{"const":"2.0.0"},"mode":{"enum":["lead_story","edition_theme","none"]},"source_candidate_ids":{"type":"array","maxItems":3,"items":{"type":"string","pattern":"^c[0-9]{3}$"}},
+  "editorial_idea":{"type":"string","maxLength":500},"central_subject":{"type":"string","maxLength":300},"visual_relationship":{"type":"string","maxLength":500},"composition":{"type":"string","maxLength":500},"literal_elements":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"abstraction_level":{"enum":["low","medium","high"]},"forbidden_elements":{"type":"array","maxItems":20,"items":{"type":"string","maxLength":100}},"failure_modes":{"type":"array","maxItems":12,"items":{"type":"string","maxLength":100}},"alt_text":{"type":"string","maxLength":500}}}}}
 
 @dataclass(frozen=True)
 class Result:
