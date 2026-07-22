@@ -68,6 +68,20 @@ Each comma-separated entry must contain exactly one registered style and one reg
 
 Outputs are `manifest.json`, private `blind-map.json`, `gallery.html`, `score-template.json`, and (live only) normalized anonymous WebPs. The private map stores style, concept, and sample. The public manifest and gallery expose none. The self-contained `file://` gallery randomizes anonymous candidates, shows source facts once, uses at most three large columns (one on narrow screens), keeps identical 3:2 framing, and offers local click-to-enlarge. Keep `blind-map.json` private until scoring is complete.
 
+## Cross-story calibration
+
+`--story-combinations` runs immutable calibration-only story definitions from `tools/tldr_editorial/calibration_stories.py`, verified against exact normalized records. It does not load or write an official editorial artifact and never calls the editorial model.
+
+```bash
+python -m tools.tldr_editorial calibrate-images \
+  --story-combinations secure-agent-sandboxes-v1@constructed-collage-v1,secure-agent-sandboxes-v1@print-graphic-v1,workers-automation-threshold-v1@constructed-collage-v1,workers-automation-threshold-v1@print-graphic-v1 \
+  --samples-per-combination 1 \
+  --output-dir /home/galois/tldr-image-calibration/cross-story \
+  --max-images 4
+```
+
+Each entry selects one registered story and one rendering style. Entries cannot be mixed with date, profile, concept, or single-story combination options. The private map contains story/style/sample identities; public output labels separate anonymous `Story A` and `Story B` sections, each with its own exact source facts and locally enlargable anonymous candidates.
+
 ## Human scoring rubric
 
 Score every criterion from 1 (poor) to 5 (excellent):
