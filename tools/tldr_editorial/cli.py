@@ -16,7 +16,7 @@ def parser():
     for x in ("force","retry-image","dry-run","offline","require-live"): g.add_argument("--"+x,action="store_true")
     v=sub.add_parser("validate"); v.add_argument("--all",action="store_true",required=True); v.add_argument("--output",type=Path,default=Path("generated/editorial")); v.add_argument("--generated",type=Path,default=Path("generated")); v.add_argument("--verify-storage",action="store_true")
     s=sub.add_parser("storage-report"); s.add_argument("--output",type=Path,default=Path("generated/editorial")); s.add_argument("--list-r2",action="store_true")
-    c=sub.add_parser("calibrate-images");c.add_argument("--date",required=True);c.add_argument("--profiles",required=True);c.add_argument("--output-dir",type=Path,required=True);c.add_argument("--max-images",type=int,required=True);c.add_argument("--samples-per-profile",type=int,default=1);c.add_argument("--require-live",action="store_true");c.add_argument("--acknowledge-cost",action="store_true")
+    c=sub.add_parser("calibrate-images");c.add_argument("--date",required=True);styles=c.add_mutually_exclusive_group(required=True);styles.add_argument("--style-profiles");styles.add_argument("--profiles");c.add_argument("--concepts");c.add_argument("--output-dir",type=Path,required=True);c.add_argument("--max-images",type=int,required=True);samples=c.add_mutually_exclusive_group();samples.add_argument("--samples-per-combination",type=int);samples.add_argument("--samples-per-profile",type=int);c.add_argument("--require-live",action="store_true");c.add_argument("--acknowledge-cost",action="store_true")
     return p
 
 def main(argv=None):
@@ -26,8 +26,8 @@ def main(argv=None):
             result=generate(generated=a.generated,output=a.output,date=a.date,latest=a.latest or not a.date,offline=a.offline,dry_run=a.dry_run,require_live=a.require_live,force=a.force,retry_image=a.retry_image)
             print(json.dumps(result,sort_keys=True)); return 0
         if a.command=="calibrate-images":
-            ids=[x.strip() for x in a.profiles.split(",") if x.strip()]
-            result=calibrate_images(date=a.date,profile_ids=ids,output_dir=a.output_dir,max_images=a.max_images,samples_per_profile=a.samples_per_profile,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
+            style_value=a.style_profiles or a.profiles;ids=[x.strip() for x in style_value.split(",") if x.strip()];concept_ids=[x.strip() for x in a.concepts.split(",") if x.strip()] if a.concepts is not None else None
+            result=calibrate_images(date=a.date,profile_ids=ids,concept_ids=concept_ids,output_dir=a.output_dir,max_images=a.max_images,samples_per_combination=a.samples_per_combination if a.samples_per_combination is not None else 1,samples_per_profile=a.samples_per_profile,require_live=a.require_live,acknowledge_cost=a.acknowledge_cost)
             print(json.dumps(result,sort_keys=True));return 0 if result["success"] else 1
         if a.command=="validate":
             cfg=Config.from_env(); storage=R2Storage(cfg) if a.verify_storage else None
