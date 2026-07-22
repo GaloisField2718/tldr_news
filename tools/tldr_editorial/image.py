@@ -18,11 +18,13 @@ class ValidatedImage:
     def bytes(self)->int: return len(self.data)
 
 def assemble_prompt(brief:dict,source_candidates:list[Candidate],profile:PromptProfile=BASELINE_PROFILE)->str:
-    lines=[profile.preamble,"","Source stories (use only these facts):"]
-    for c in source_candidates: lines += [f"Title: {c.title}",f"Summary: {c.summary}"]
     if profile.profile_id=="production-v2" and "editorial_idea" in brief:
-        lines += ["","Editorial concept:",f"Editorial idea: {brief['editorial_idea']}",f"Central subject: {brief['central_subject']}",f"Visual relationship: {brief['visual_relationship']}",f"Composition: {brief['composition']}","Permitted literal elements: "+", ".join(brief["literal_elements"]),f"Abstraction level: {brief['abstraction_level']}","Story-specific forbidden elements: "+", ".join(brief["forbidden_elements"]),"Failure modes to avoid: "+", ".join(brief["failure_modes"]),"","Do not render any words, letters, numbers, labels, captions, annotations, signage, diagrams with text, logos, watermarks, or pseudo-writing anywhere in the image.","If the concept cannot be represented without visible text, represent the relationship through shape, scale, spacing, direction, grouping, interruption, containment, or contrast instead."]
+        lines=["Rendering style:",profile.preamble,"","Exact source facts:"]
+        for c in source_candidates:lines += [f"Title: {c.title}",f"Summary: {c.summary}"]
+        lines += ["","Editorial idea:",brief["editorial_idea"],"","Central subject:",brief["central_subject"],"","Visual relationship:",brief["visual_relationship"],"","Composition:",brief["composition"],"","Permitted literal elements:",*brief["literal_elements"],"","Abstraction level:",brief["abstraction_level"],"","Story-specific forbidden elements:",*brief["forbidden_elements"],"","Likely failure modes to avoid:",*brief["failure_modes"],"","Global factual restrictions:","Do not fabricate visible factual evidence. Do not imitate a named or living artist. Do not render interfaces or screenshots.","Do not render any words, letters, numbers, labels, captions, annotations, signage, diagrams with text, logos, watermarks, or pseudo-writing anywhere in the image.","If the concept cannot be represented without visible text, represent the relationship through shape, scale, spacing, direction, grouping, interruption, containment, or contrast instead."]
     else:
+        lines=[profile.preamble,"","Source stories (use only these facts):"]
+        for c in source_candidates: lines += [f"Title: {c.title}",f"Summary: {c.summary}"]
         lines += ["",f"Central subject: {brief['central_subject']}",f"Visual metaphor: {brief['visual_metaphor']}",f"Composition: {brief['composition']}","Forbidden elements: "+(", ".join(brief["forbidden_elements"]) or "none beyond the fixed restrictions")]
     return "\n".join(lines).strip()+"\n"
 

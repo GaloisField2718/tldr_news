@@ -9,6 +9,7 @@ from .config import Config
 from .core import (EDITORIAL_PROMPT_VERSION,EDITORIAL_SCHEMA_VERSION,GENERATOR_VERSION,
     ILLUSTRATION_PROMPT_VERSION,SCHEMA_VERSION,EditorialError,hash_parts,image_configuration,object_key,sha256_bytes)
 from .image import assemble_prompt,decode_image,normalize_raster
+from .illustration_hash import illustration_input_hash
 from .illustration_prompts import get_profile
 from .openrouter import OpenRouterClient
 from .plan import fallback,resolve_plan,validate_plan
@@ -71,7 +72,9 @@ def _existing_illustration_hash(existing:dict,candidates:list,config:Config)->st
     keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text") if vb.get("schema_version")=="2.0.0" else ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")
     brief={"mode":vb["mode"],"source_candidate_ids":[c.candidate_id for c in sources],**{k:vb[k] for k in keys}}
     cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
-    return hash_parts(brief,[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,cfg)
+    version=existing.get("prompt_versions",{}).get("illustration")
+    facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
+    return illustration_input_hash(brief=brief,sources=facts,image_model=config.image_model,prompt_version=version,image_config=cfg,profile=get_profile("production-v2") if version=="2.0.0" else None)
 
 def generate(*,generated=Path("generated"),output=Path("generated/editorial"),date=None,latest=False,offline=False,dry_run=False,require_live=False,force=False,retry_image=False,config=None,client=None,storage=None)->dict:
     config=config or Config.from_env(); date=date or latest_date(generated)
@@ -118,7 +121,9 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         else:
             try:
                 client=client or OpenRouterClient(config); result=client.editorial(dos); calls+=1
-                plan=validate_plan(result.value,candidates); editorial_usage=result.usage; erid=result.request_id; valid_ai=True; status="editorial_only"
+                plan=validate_plan(result.value,candidates)
+                if plan["visual_brief"].get("schema_version")!="2.0.0":raise EditorialError("production_visual_brief_v2_required")
+                editorial_usage=result.usage; erid=result.request_id; valid_ai=True; status="editorial_only"
             except EditorialError as exc: failure=str(exc)
     elif reuse_existing_plan:
         # Existing source-resolved plan cannot safely be converted back to candidate IDs;
@@ -127,8 +132,8 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         ep=existing.get("plan",{}); vb=ep.get("visual_brief",{})
         try:
             lead=refs[(ep["lead"]["issue_id"],ep["lead"]["article_id"])]
-            plan={"lead_candidate_id":lead,"front_page":[{"candidate_id":refs[(x["issue_id"],x["article_id"])],"role":x["role"]} for x in ep["front_page"]],"section_order":ep["section_order"],
-                  "visual_brief":{"mode":vb["mode"],"source_candidate_ids":[refs[(x["issue_id"],x["article_id"])] for x in vb["sources"]],**{k:vb[k] for k in ("central_subject","visual_metaphor","composition","forbidden_elements","alt_text")}}}
+            keys=("schema_version","editorial_idea","central_subject","visual_relationship","composition","literal_elements","abstraction_level","forbidden_elements","failure_modes","alt_text")
+            plan={"lead_candidate_id":lead,"front_page":[{"candidate_id":refs[(x["issue_id"],x["article_id"])],"role":x["role"]} for x in ep["front_page"]],"section_order":ep["section_order"],"visual_brief":{"mode":vb["mode"],"source_candidate_ids":[refs[(x["issue_id"],x["article_id"])] for x in vb["sources"]],**{k:vb[k] for k in keys}}}
             plan=validate_plan(plan,candidates); valid_ai=plan["visual_brief"]["mode"]!="none"; status="editorial_only"; editorial_usage=existing["usage"]["editorial"]
         except Exception as exc: raise EditorialError("retry_image_stale_plan") from exc
     resolved=resolve_plan(plan,candidates)
@@ -137,7 +142,8 @@ def generate(*,generated=Path("generated"),output=Path("generated/editorial"),da
         by={c.candidate_id:c for c in candidates}; sources=[by[x] for x in plan["visual_brief"]["source_candidate_ids"]]
         final_prompt=assemble_prompt(plan["visual_brief"],sources,get_profile("production-v2"))
         image_cfg=image_configuration(config.max_provider_image_bytes,config.max_image_pixels,config.max_image_bytes)
-        illustration_hash=hash_parts(plan["visual_brief"],[{"title":c.title,"summary":c.summary} for c in sources],config.image_model,ILLUSTRATION_PROMPT_VERSION,image_cfg)
+        facts=[{"issue_id":c.issue_id,"article_id":c.article_id,"title":c.title,"summary":c.summary} for c in sources]
+        illustration_hash=illustration_input_hash(brief=plan["visual_brief"],sources=facts,image_model=config.image_model,prompt_version=ILLUSTRATION_PROMPT_VERSION,image_config=image_cfg,profile=get_profile("production-v2"))
         try:
             client=client or OpenRouterClient(config); result=client.image(final_prompt); calls+=1; image_usage=result.usage; irid=result.request_id
         except EditorialError as exc:
