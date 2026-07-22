@@ -1,5 +1,5 @@
 from __future__ import annotations
-import json,os,stat,subprocess,tempfile,unittest
+import json,os,shutil,stat,subprocess,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 from tools.tldr_tts_calibration import (CalibrationError,Candidate,VOICE_PROFILES,assemble,build_request,dialogue,discover_models,estimate,generation_id,paid_gate,probe,request_turn,secure_mapping,validate_audio_response,validate_voices,write_reveal)
@@ -39,6 +39,7 @@ class TTSCalibrationTests(unittest.TestCase):
  def test_dialogue_turn_order_and_required_terms(self):
   d=dialogue(Path('calibration/tts/blind-test-v1/dialogue.json'));text=' '.join(x['text'] for x in d['turns']);self.assertEqual([x['turn_id'] for x in d['turns']],[f't{i:02}' for i in range(1,9)])
   for term in ('Google AI Search','independent websites','traffic','conversational interface','S E O'):self.assertIn(term,text)
+ @unittest.skipUnless(shutil.which('ffmpeg') and shutil.which('ffprobe'),'FFmpeg is enforced by paid preflight')
  def test_assembly_pause_decodability_and_metadata_stripping(self):
   with tempfile.TemporaryDirectory() as td:
    root=Path(td);turns=[]
