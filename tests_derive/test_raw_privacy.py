@@ -74,23 +74,36 @@ class RawPrivacyTests(unittest.TestCase):
   fake=self.FakeImap();path=Path("TLDR/article.md");self.assertTrue(persist_newsletter(fake,"42",path,"public newsletter\n"));self.assertTrue(path.exists());self.assertEqual(fake.calls,[])
   self.assertTrue(persist_newsletter(fake,"42",path,"public newsletter\n"));self.assertEqual(fake.calls,[])
   self.assertFalse(persist_newsletter(fake,"43",path,"different newsletter\n"));self.assertEqual(path.read_text(),"public newsletter\n")
- def test_acknowledgement_requires_durable_origin_and_archives_without_delete(self):
-  path=Path("TLDR/article.md");path.parent.mkdir();path.write_text("safe\n");state_path=self.root/"pending.json";state={"schema_version":"1.0.0","pending":{"key":{"uid":"42","source_path":str(path),"publication_date":"2026-07-22","source_sha256":"sha256:"+hashlib.sha256(path.read_bytes()).hexdigest()}}};state_path.write_text(json.dumps(state))
+ def test_acknowledgement_requires_durable_local_checkpoint_and_permanently_deletes(self):
+  path=Path("TLDR/article.md");path.parent.mkdir();path.write_text("safe\n")
+  normalized=self.root/"generated"/"issues"/"tldr"/"2026"/"2026-07-22.json";normalized.parent.mkdir(parents=True);normalized.write_text("{}")
+  state_path=self.root/"pending.json";state={"schema_version":"1.0.0","pending":{"key":{"mailbox":"INBOX","uid":"42","message_id":"<abc@tldrnewsletter.com>","source_path":str(path),"publication_date":"2026-07-22","source_sha256":"sha256:"+hashlib.sha256(path.read_bytes()).hexdigest(),"normalized_path":str(normalized),"normalized_sha256":"sha256:"+hashlib.sha256(normalized.read_bytes()).hexdigest()}}};state_path.write_text(json.dumps(state))
   class AckImap:
-   def __init__(self):self.calls=[]
+   def __init__(self):self.calls=[];self.present=True
    def select(self,*a):self.calls.append(("select",a))
-   def create(self,*a):self.calls.append(("create",a));return "OK",[]
-   def uid(self,*a):self.calls.append(("uid",a));return "OK",[]
+   def uid(self,*a):
+    self.calls.append(("uid",a))
+    if a[0]=="SEARCH":return ("OK",[b"42" if self.present else b""])
+    if a[0]=="STORE":self.present=False;return ("OK",[])
+    if a[0]=="EXPUNGE":return ("OK",[])
+    return ("OK",[])
+   def expunge(self):self.calls.append(("expunge",()))
    def close(self):pass
    def logout(self):pass
   fake=AckImap()
-  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._tracked_at_origin",return_value=True),patch("script._connect",return_value=fake):self.assertEqual(acknowledge(),0)
-  self.assertEqual(json.loads(state_path.read_text())["pending"],{});joined=repr(fake.calls);self.assertIn("TLDR-Processed",joined);self.assertIn("-X-GM-LABELS",joined);self.assertNotIn("Deleted",joined);self.assertNotIn("expunge",joined)
+  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._connect",return_value=fake):self.assertEqual(acknowledge(),0)
+  self.assertEqual(json.loads(state_path.read_text())["pending"],{});joined=repr(fake.calls);self.assertIn("Deleted",joined);self.assertIn("EXPUNGE",joined);self.assertNotIn("TLDR-Processed",joined);self.assertNotIn("X-GM-LABELS",joined)
   state_path.write_text(json.dumps(state));fake2=AckImap()
-  def interrupted(*args):fake2.calls.append(("uid",args));return ("OK",[b""]) if args[0]=="SEARCH" else ("NO",[])
+  def interrupted(*args):
+   fake2.calls.append(("uid",args))
+   if args[0]=="SEARCH":return ("OK",[b""])
+   return ("NO",[])
   fake2.uid=interrupted
-  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._tracked_at_origin",return_value=True),patch("script._connect",return_value=fake2):self.assertEqual(acknowledge(),0)
+  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._connect",return_value=fake2):self.assertEqual(acknowledge(),0)
   self.assertEqual(json.loads(state_path.read_text())["pending"],{})
+  incomplete_state_path=self.root/"pending2.json";incomplete={"schema_version":"1.0.0","pending":{"key":dict(state["pending"]["key"],normalized_path=None,normalized_sha256=None)}};incomplete_state_path.write_text(json.dumps(incomplete))
+  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(incomplete_state_path)}),patch("script._connect",return_value=AckImap()):self.assertEqual(acknowledge(),0)
+  self.assertIn("key",json.loads(incomplete_state_path.read_text())["pending"])
  def test_unsafe_ingestion_does_not_write_or_delete_message(self):
   fake=self.FakeImap();path=Path("TLDR/article.md");out=io.StringIO()
   with contextlib.redirect_stdout(out):written=persist_newsletter(fake,"42",path,"https://example.com/private?client_secret=DO_NOT_ECHO")
