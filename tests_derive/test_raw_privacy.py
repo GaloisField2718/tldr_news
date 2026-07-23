@@ -1,10 +1,11 @@
 from __future__ import annotations
-import contextlib,io,os,subprocess,tempfile,unittest
+import contextlib,hashlib,io,json,os,subprocess,tempfile,unittest
+from unittest.mock import patch
 from pathlib import Path
 from tools.check_generated_consistency import check_generated
 from tools.tldr_raw_privacy import RawPrivacyError,check_staged,inspect_raw_privacy,prepare_raw_source,sanitize_paths
 from tools.tldr_derive.sanitizer import normalize_public_url
-from script import persist_newsletter
+from script import acknowledge,persist_newsletter
 
 OBSERVED="https://stratechery.com/2026/public-article/?access_token=DO_NOT_ECHO&utm_source=newsletter"
 
@@ -69,6 +70,22 @@ class RawPrivacyTests(unittest.TestCase):
   def __init__(self):self.calls=[]
   def store(self,*args):self.calls.append(("store",args))
   def expunge(self):self.calls.append(("expunge",()))
+ def test_successful_ingestion_persists_without_acknowledging_message(self):
+  fake=self.FakeImap();path=Path("TLDR/article.md");self.assertTrue(persist_newsletter(fake,"42",path,"public newsletter\n"));self.assertTrue(path.exists());self.assertEqual(fake.calls,[])
+  self.assertTrue(persist_newsletter(fake,"42",path,"public newsletter\n"));self.assertEqual(fake.calls,[])
+  self.assertFalse(persist_newsletter(fake,"43",path,"different newsletter\n"));self.assertEqual(path.read_text(),"public newsletter\n")
+ def test_acknowledgement_requires_durable_origin_and_archives_without_delete(self):
+  path=Path("TLDR/article.md");path.parent.mkdir();path.write_text("safe\n");state_path=self.root/"pending.json";state={"schema_version":"1.0.0","pending":{"key":{"uid":"42","source_path":str(path),"publication_date":"2026-07-22","source_sha256":"sha256:"+hashlib.sha256(path.read_bytes()).hexdigest()}}};state_path.write_text(json.dumps(state))
+  class AckImap:
+   def __init__(self):self.calls=[]
+   def select(self,*a):self.calls.append(("select",a))
+   def create(self,*a):self.calls.append(("create",a));return "OK",[]
+   def uid(self,*a):self.calls.append(("uid",a));return "OK",[]
+   def close(self):pass
+   def logout(self):pass
+  fake=AckImap()
+  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._tracked_at_origin",return_value=True),patch("script._connect",return_value=fake):self.assertEqual(acknowledge(),0)
+  self.assertEqual(json.loads(state_path.read_text())["pending"],{});joined=repr(fake.calls);self.assertIn("TLDR-Processed",joined);self.assertIn("-X-GM-LABELS",joined);self.assertNotIn("Deleted",joined);self.assertNotIn("expunge",joined)
  def test_unsafe_ingestion_does_not_write_or_delete_message(self):
   fake=self.FakeImap();path=Path("TLDR/article.md");out=io.StringIO()
   with contextlib.redirect_stdout(out):written=persist_newsletter(fake,"42",path,"https://example.com/private?client_secret=DO_NOT_ECHO")

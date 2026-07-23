@@ -125,6 +125,10 @@ else
   log "nothing to push"
 fi
 
+git fetch --quiet "${REMOTE}" "${BRANCH}"
+"${PYTHON_BIN}" script.py --ack
+log "durably published mail acknowledged"
+
 printf '%s\n' "$(ts_utc)" > "${SUCCESS_MARKER}"
 log "success marker written: ${SUCCESS_MARKER}"
 log "done"
