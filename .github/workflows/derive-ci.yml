@@ -32,8 +32,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install locked Python dependencies
+      - name: Install locked Python and audio dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
           python3 -m pip install pipenv
           pipenv sync --system
 
