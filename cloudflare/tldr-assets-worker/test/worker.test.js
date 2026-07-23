@@ -12,6 +12,7 @@ function env(found=true) {
 async function run(method='GET',p=path,e=env(),headers={}) { return [await handleRequest(new Request(`https://assets.example${p}`,{method,headers}),e),e]; }
 
 test('GET streams valid object with safe immutable headers',async()=>{const [r,e]=await run();assert.equal(r.status,200);assert.equal(await r.text(),'webp');assert.equal(r.headers.get('content-type'),'image/webp');assert.equal(r.headers.get('cache-control'),'public, max-age=31536000, immutable');assert.equal(r.headers.get('etag'),`"${hash}"`);assert.equal(r.headers.get('x-content-type-options'),'nosniff');assert.deepEqual(e.calls,[['get',path.slice(1)]]);});
+test('podcast MP3 key is served',async()=>{const podcast=`/podcast/daily/2026/07/21/en/${hash}.mp3`;const [r,e]=await run('GET',podcast);assert.equal(r.status,200);assert.deepEqual(e.calls,[['get',podcast.slice(1)]]);});
 test('HEAD has no body and uses head',async()=>{const [r,e]=await run('HEAD');assert.equal(r.status,200);assert.equal(await r.text(),'');assert.deepEqual(e.calls,[['head',path.slice(1)]]);});
 test('missing object is 404',async()=>assert.equal((await run('GET',path,env(false)))[0].status,404));
 for (const [name,p] of [['non-WebP','/daily/x.png'],['outside','/other/a.webp'],['traversal','/daily/%2e%2e/x.webp'],['encoded slash','/daily%2f2026/x.webp'],['malformed','/daily/%E0%A4%A.webp']]) test(name+' rejected',async()=>assert.equal((await run('GET',p))[0].status,404));

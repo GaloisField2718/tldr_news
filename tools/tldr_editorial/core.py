@@ -29,7 +29,7 @@ SECTOR_ORDER = (
     "tldr-cybersecurity", "tldr-crypto", "tldr-product", "tldr-design",
     "tldr-founders", "tldr-marketing",
 )
-OBJECT_KEY_RE = re.compile(r"daily/(\d{4})/(\d{2})/(\d{2})/([0-9a-f]{64})\.webp\Z")
+OBJECT_KEY_RE = re.compile(r"(?:daily/(\d{4})/(\d{2})/(\d{2})/[0-9a-f]{64}\.webp|podcast/daily/(\d{4})/(\d{2})/(\d{2})/(?:en|fr)/[0-9a-f]{64}\.mp3)\Z")
 SHA_RE = re.compile(r"sha256:[0-9a-f]{64}\Z")
 
 class EditorialError(Exception):
@@ -96,5 +96,7 @@ def object_key(date: str, sha256: str) -> str:
 def validate_object_key(key: str, date: str | None = None) -> None:
     if "\\" in key or any(ord(c) < 32 for c in key) or not OBJECT_KEY_RE.fullmatch(key):
         raise EditorialError("invalid_object_key")
-    if date and key[6:16].replace("/", "-") != date:
-        raise EditorialError("object_key_date_mismatch")
+    if date:
+        parts=key.split("/"); offset=1 if parts[0]=="daily" else 2
+        if "-".join(parts[offset:offset+3]) != date:
+            raise EditorialError("object_key_date_mismatch")

@@ -1,16 +1,17 @@
-const KEY_RE = /^daily\/\d{4}\/\d{2}\/\d{2}\/[0-9a-f]{64}\.webp$/;
+const KEY_RE = /^(?:daily\/\d{4}\/\d{2}\/\d{2}\/[0-9a-f]{64}\.webp|podcast\/daily\/\d{4}\/\d{2}\/\d{2}\/(?:en|fr)\/[0-9a-f]{64}\.mp3)$/;
 
-function headersFor(object) {
+function headersFor(object, key) {
   const metadata = object.customMetadata || {};
   const identity = metadata.sha256 || object.httpEtag || object.etag;
   const etag = identity ? (String(identity).startsWith('"') ? String(identity) : `"${identity}"`) : null;
   const headers = new Headers({
-    'Content-Type': object.httpMetadata?.contentType || 'image/webp',
+    'Content-Type': object.httpMetadata?.contentType || (key.endsWith('.mp3') ? 'audio/mpeg' : 'image/webp'),
     'Cache-Control': 'public, max-age=31536000, immutable',
     'X-Content-Type-Options': 'nosniff',
     'Access-Control-Allow-Origin': '*',
   });
   if (etag) headers.set('ETag', etag);
+  if (Number.isInteger(object.size)) headers.set('Content-Length', String(object.size));
   return headers;
 }
 
@@ -32,7 +33,7 @@ export async function handleRequest(request, env) {
 
   const object = request.method === 'HEAD' ? await env.ASSETS.head(key) : await env.ASSETS.get(key);
   if (!object) return new Response('Not Found', { status: 404 });
-  const headers = headersFor(object);
+  const headers = headersFor(object, key);
   if (request.headers.get('If-None-Match') === headers.get('ETag')) return new Response(null, { status: 304, headers });
   return new Response(request.method === 'HEAD' ? null : object.body, { status: 200, headers });
 }
