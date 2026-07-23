@@ -322,6 +322,11 @@ def publish(root:Path,d:str,storage:Any,accept:bool,public_get:Callable[...,Any]
    if any(old.get(k)!=doc.get(k) for k in immutable):raise PodcastError("podcast_artifact_conflict")
    state["artifact_status"]="published";save_state(rd,state);return old
   _atomic_json(out,doc);state["artifact_status"]="published";save_state(rd,state);return doc
+def commit_podcast_artifact(root:Path,d:str)->bool:
+ path=artifact_path(root,d);subprocess.run(["git","add",str(path.relative_to(root))],cwd=root,check=True)
+ if subprocess.run(["git","diff","--cached","--quiet"],cwd=root).returncode==0:return False
+ subprocess.run(["git","commit","-m",f"Publish bilingual Daily podcast for {d}"],cwd=root,check=True);subprocess.run(["git","push"],cwd=root,check=True);return True
+
 def main()->int:
  p=argparse.ArgumentParser();p.add_argument("command",choices=("preflight","generate","publish","run-daily"));p.add_argument("--date",required=True);p.add_argument("--language",choices=tuple(LANGUAGES),default="en");p.add_argument("--authorize-paid",action="store_true");p.add_argument("--authorize-publish",action="store_true");p.add_argument("--accept",action="store_true");p.add_argument("--cost-ceiling",type=float,default=1.0);p.add_argument("--publish",action="store_true");a=p.parse_args();root=Path.cwd()
  if a.command=="preflight":print(json.dumps(preflight(root,a.date,a.cost_ceiling),sort_keys=True,indent=2));return 0
@@ -335,5 +340,5 @@ def main()->int:
   if not a.authorize_publish or not a.accept:raise PodcastError("explicit_publish_authorization_and_acceptance_required")
   print(json.dumps(publish_bilingual(root,a.date,storage),sort_keys=True));return 0
  if not a.publish or not key:raise PodcastError("run_daily_requires_publish_and_key")
- print(json.dumps(run_daily(root,a.date,key,storage),sort_keys=True));return 0
+ result=run_daily(root,a.date,key,storage);result["artifact_committed"]=commit_podcast_artifact(root,a.date);print(json.dumps(result,sort_keys=True));return 0
 if __name__=="__main__":main()
