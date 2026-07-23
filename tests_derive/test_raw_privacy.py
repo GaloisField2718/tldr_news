@@ -86,6 +86,11 @@ class RawPrivacyTests(unittest.TestCase):
   fake=AckImap()
   with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._tracked_at_origin",return_value=True),patch("script._connect",return_value=fake):self.assertEqual(acknowledge(),0)
   self.assertEqual(json.loads(state_path.read_text())["pending"],{});joined=repr(fake.calls);self.assertIn("TLDR-Processed",joined);self.assertIn("-X-GM-LABELS",joined);self.assertNotIn("Deleted",joined);self.assertNotIn("expunge",joined)
+  state_path.write_text(json.dumps(state));fake2=AckImap()
+  def interrupted(*args):fake2.calls.append(("uid",args));return ("OK",[b""]) if args[0]=="SEARCH" else ("NO",[])
+  fake2.uid=interrupted
+  with patch.dict(os.environ,{"TLDR_MAIL_STATE_PATH":str(state_path)}),patch("script._tracked_at_origin",return_value=True),patch("script._connect",return_value=fake2):self.assertEqual(acknowledge(),0)
+  self.assertEqual(json.loads(state_path.read_text())["pending"],{})
  def test_unsafe_ingestion_does_not_write_or_delete_message(self):
   fake=self.FakeImap();path=Path("TLDR/article.md");out=io.StringIO()
   with contextlib.redirect_stdout(out):written=persist_newsletter(fake,"42",path,"https://example.com/private?client_secret=DO_NOT_ECHO")

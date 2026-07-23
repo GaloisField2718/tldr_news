@@ -68,7 +68,10 @@ def acknowledge()->int:
  try:
   for key,item in eligible:
    a,_=imap.uid("STORE",item["uid"],"+X-GM-LABELS",f'("{PROCESSED_LABEL}")');b,_=imap.uid("STORE",item["uid"],"-X-GM-LABELS",'(\\Inbox)')
-   if a=="OK" and b=="OK":del pending[key];_save_state(state);print(f"mail_acknowledged source_path={item['source_path']}")
+   acknowledged=a=="OK" and b=="OK"
+   if not acknowledged:
+    status,data=imap.uid("SEARCH",None,f"UID {item['uid']}");acknowledged=status=="OK" and not (data and data[0].strip())
+   if acknowledged:del pending[key];_save_state(state);print(f"mail_acknowledged source_path={item['source_path']}")
    else:failed=True
  finally:imap.close();imap.logout()
  return 1 if failed else 0
