@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-ai:2026-07-23",
+  "sector": "TLDR AI",
+  "sector_slug": "tldr-ai",
+  "date": "2026-07-23",
+  "source_path": "TLDR AI/article_23-07-2026.md",
+  "source_content_hash": "sha256:b0e95ee447f192048b9e44a189c213884b60fea7b1c09721d2bfaf512d2ba78f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR AI 2026-07-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a04",
+          "order": 1,
+          "title": "THREADS)",
+          "summary": "A 40-step agent thread re-sends its whole history on every call: 2.17M input tokens for an 85K-token transcript. Prompt caching turns those re-sends into 0.1x reads, but only if the prefix stays byte-stable, so it shapes the entire architecture. Viktor's thread engine: tools as SDK functions instead of schemas in the prompt, append-only threads, compaction that runs inside the thread's own cache. Same thread on Opus 4.8: $11.35 without caching, $2.07 with. Production code included.",
+          "url": "https://ref.viktor.com/vik-ti-primary2-post",
+          "reading_time_minutes": null,
+          "source_domain": "ref.viktor.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a04",
+          "order": 2,
+          "title": "READ THE DEEP DIVE→",
+          "summary": "",
+          "url": "https://ref.viktor.com/vik-ti-primary2-post",
+          "reading_time_minutes": null,
+          "source_domain": "ref.viktor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a05",
+          "order": 3,
+          "title": "START FREE. $100 IN CREDITS →",
+          "summary": "",
+          "url": "https://ref.viktor.com/vik-ti-primary2",
+          "reading_time_minutes": null,
+          "source_domain": "ref.viktor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "headlines-launches",
+      "heading": "HEADLINES & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a06",
+          "order": 1,
+          "title": "OPENAI PRESENCE",
+          "summary": "OpenAI Presence is an enterprise product for deploying controlled AI agents across customer support and internal operations. It combines model reasoning with permissions, policies, evaluations, escalation rules, and tools for improving agents after deployment.",
+          "url": "https://links.tldrnewsletter.com/oHeKAh",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a07",
+          "order": 2,
+          "title": "AMD AND ANTHROPIC SIGN MAJOR CHIPS-AND-INVESTMENT DEAL",
+          "summary": "AMD and Anthropic have signed a deal for tens of billions of dollars' worth of AI servers. Anthropic will purchase up to 2 gigawatts of AMD's Instinct MI450 chips starting in the first half of next year. AMD will invest up to $5 billion in Anthropic as certain deployment milestones are met. The companies are working together to identify data centers for the chips.",
+          "url": "https://links.tldrnewsletter.com/xKSh8q",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives-analysis",
+      "heading": "DEEP DIVES & ANALYSIS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a08",
+          "order": 1,
+          "title": "ARE AI LABS PELICANMAXXING?",
+          "summary": "Simon Willison's 'generate an SVG of a pelican riding a bicycle' benchmark has become one of the most famous informal benchmarks in AI. It is famous enough that there is a lot of discussion about its usefulness and whether AI labs might be making their models specifically better at the task. Testing has found that there is little evidence that AI labs are doing this. At least, not in a plainly obvious manner.",
+          "url": "https://dylancastillo.co/posts/pelicanmaxxing.html?utm_source=tldrai",
+          "reading_time_minutes": 14,
+          "source_domain": "dylancastillo.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a09",
+          "order": 2,
+          "title": "OPENAI'S ACCIDENTAL CYBERATTACK AGAINST HUGGING FACE IS SCIENCE FICTION THAT HAPPENED",
+          "summary": "OpenAI was running a cybersecurity test against an unreleased model with the model's guardrail features turned off. The model broke out of OpenAI's sandbox and found exploits to break into Hugging Face so it could cheat on the test by stealing the answers. This scenario makes the strongest case yet for how the imbalance of model availability is hurting our ability to secure our software. The frontier models we have access to are increasingly being constrained in how much they can help us protect our software, and this is heavily influenced by the US government's ongoing threat of export controls.",
+          "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/?utm_source=tldrai",
+          "reading_time_minutes": 13,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a10",
+          "order": 3,
+          "title": "NOBODY KNOWS WHAT A USED GPU CLUSTER IS WORTH",
+          "summary": "GPU collateral has three values, and the market is currently pricing only one of them. Face value is the purpose price minus straight-line depreciation. Liquidation value is what a buyer pays in distress. Going-certain value is what the cluster is worth as a working asset to the next tenant. The spread between face value and going-certain value is the entire risk that nobody has hedged.",
+          "url": "https://ciphertalk.substack.com/p/nobody-knows-what-a-used-gpu-cluster?utm_source=tldrai",
+          "reading_time_minutes": 12,
+          "source_domain": "ciphertalk.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "engineering-research",
+      "heading": "ENGINEERING & RESEARCH",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a11",
+          "order": 1,
+          "title": "THE NEXT AI CHALLENGE IS ROI",
+          "summary": "Building AI is easy. Proving its business value is harder. Join the FINOPS EXCELLENCE SUMMIT, a free virtual event hosted by Harness, to hear how CURSOR, GOOGLE CLOUD, BMO, and more measure AI ROI.",
+          "url": "https://www.harness.io/event/finops-excellence-summit-2026?campaign_id=701Uw00000laBYJIA2&utm_source=tldr&utm_medium=email-paid&utm_term=ai",
+          "reading_time_minutes": null,
+          "source_domain": "harness.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a11",
+          "order": 2,
+          "title": "REGISTER NOW",
+          "summary": "",
+          "url": "https://www.harness.io/event/finops-excellence-summit-2026?campaign_id=701Uw00000laBYJIA2&utm_source=tldr&utm_medium=email-paid&utm_term=ai",
+          "reading_time_minutes": null,
+          "source_domain": "harness.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a12",
+          "order": 3,
+          "title": "CURSOR ROUTER",
+          "summary": "Cursor Router is an intelligent model router that selects the right model for the task at hand. It delivers frontier-quality results at 60% lower cost. Early access customers observed no drop-off in quality and a lower cost per commit compared with routing all requests to Opus 4.8. Cursor Router is available now across all surfaces on Teams and Enterprise plans. Admins can enable Router per team, allow or block certain models, set defaults, and disable select optimization modes for users.",
+          "url": "https://links.tldrnewsletter.com/cSqmas",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a13",
+          "order": 4,
+          "title": "GENESIS",
+          "summary": "The US Department of Energy, in collaboration with Arcee AI, announced Genesis-Science-1 (GS1), an open-weight AI model aimed at enhancing scientific computing workflows while maintaining reproducible records. Arcee AI will lead model development, while DOE scientists will provide domain expertise, data, and research tasks. The initiative seeks contributions from various institutions to aid in pretraining, post-training, and evaluation for the model, with the first contribution window ending on August 6.",
+          "url": "https://www.arcee.ai/science-1?utm_source=tldrai",
+          "reading_time_minutes": 6,
+          "source_domain": "arcee.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a14",
+          "order": 1,
+          "title": "TSMC IS ACCELERATING ARIZONA FACTORY BUILD-OUT TO CAPITALIZE ON AI ‘MEGATREND,' CFO SAYS",
+          "summary": "TSMC is scaling up its mega investment in Arizona as it sees a multi-year demand megatrend from its customers. It is committing an additional $100 billion to aggressively expand its US chipmaking footprint. The fresh commitment raises TSMC's total investment pipeline in Arizona to $265 billion.",
+          "url": "https://www.cnbc.com/2026/07/20/tsmc-arizona-fab-capacity-ai-chip-demand.html?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a15",
+          "order": 2,
+          "title": "TREASURY THREATENS SANCTIONS AFTER WHITE HOUSE CLAIMS MOONSHOT DISTILLED ANTHROPIC'S FABLE",
+          "summary": "US Treasury Secretary Scott Bessent has doubled down on his warning to Chinese AI companies, saying that sanctions remain on the table after Moonshot was accused of improperly distilling Anthropic's Fable model. Model distillation is a common AI training technique where a smaller model learns from the outputs of a larger one. It is widely used as a legitimate optimization method, but it can infringe on intellectual property rights. Some experts dispute the idea that Kimi K3 was developed primarily through distillation from Fable, which has only been publicly available since July 1.",
+          "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a16",
+          "order": 3,
+          "title": "OPENAI RAISED ITS INFRASTRUCTURE PLANS TO $750 BILLION",
+          "summary": "OpenAI reportedly increased its planned infrastructure spending through 2030 to $750 billion. Its first major project was a $20 billion, 3.2-gigawatt data center campus in Georgia.",
+          "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/?utm_source=tldrai",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-ai:2026-07-23:a17",
+          "order": 1,
+          "title": "GETTING AI TO WORK IN PROD IS HARD. THESE 3 CASE STUDIES SHOW HOW TO SOLVE IT",
+          "summary": "When Cargo, Grepsr, and Dust built AI for prod, they ran into roadblocks - and got over them. This Temporal eBook describes the",
+          "url": "https://temporal.io/pages/how-developers-actually-build-reliable-ai-systems-amidst-the-AI-boom?utm_source=tldr&utm_medium=sponsorship&utm_campaign=tldr-ai-quicklink-2026-07&utm_content=ebook-ai-use-cases",
+          "reading_time_minutes": null,
+          "source_domain": "temporal.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a17",
+          "order": 2,
+          "title": "architecture and tradeoffs for each. Get your copy",
+          "summary": "",
+          "url": "https://temporal.io/pages/how-developers-actually-build-reliable-ai-systems-amidst-the-AI-boom?utm_source=tldr&utm_medium=sponsorship&utm_campaign=tldr-ai-quicklink-2026-07&utm_content=ebook-ai-use-cases",
+          "reading_time_minutes": null,
+          "source_domain": "temporal.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a18",
+          "order": 3,
+          "title": "CLAUDE ADDED DIRECT ACCESS TO AI USAGE DATA",
+          "summary": "Anthropic launched a Claude connector for exploring its Economic Index through natural-language questions about occupations, regions, tasks, and automation trends.",
+          "url": "https://www.anthropic.com/news/anthropic-economic-index-connector?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a19",
+          "order": 4,
+          "title": "AMAZON CUTS JOBS IN ARTIFICIAL GENERAL INTELLIGENCE UNIT",
+          "summary": "Amazon says it remains committed to investing in AI despite the cuts.",
+          "url": "https://links.tldrnewsletter.com/gXEe5J",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a20",
+          "order": 5,
+          "title": "THE ANTHROPIC-PHYSICAL INTELLIGENCE RUMOR ROILING AI TWITTER",
+          "summary": "A rumor that Anthropic is acquiring robotic startup Physical Intelligence spread exceedingly fast over the weekend, even after a denial from Physical Intelligence's CEO.",
+          "url": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/?utm_source=tldrai",
+          "reading_time_minutes": 5,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a21",
+          "order": 6,
+          "title": "ANTHROPIC DEVELOPS CLAUDE-DRIVEN MANAGED PROJECTS",
+          "summary": "Anthropic is developing Claude-driven \"managed projects\" offering persistent, organized task management with some autonomy.",
+          "url": "https://www.testingcatalog.com/anthropic-develops-claude-driven-managed-projects/?utm_source=tldrai",
+          "reading_time_minutes": 2,
+          "source_domain": "testingcatalog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-ai:2026-07-23:a22",
+          "order": 7,
+          "title": "TOWARDS AUTOMATING EVAL ENGINEERING",
+          "summary": "LangChain released an Eval Engineering Skill that maps agent repositories and production traces into executable Harbor evaluations.",
+          "url": "https://links.tldrnewsletter.com/jnUJHo[23][24",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
