@@ -164,6 +164,17 @@ class PodcastTests(unittest.TestCase):
   for t in s['turns']:
    if t['speaker']=='speaker_a':t['text']="What changed here? The mechanism is that restrictions push companies toward domestic alternatives, since imports become harder to secure. However, adoption may vary by region."
   result=validate_script(s,h,PROFILE);self.assertIn('speaker_a',result['characters'])
+ def test_french_explain_detection_recognizes_puisque_and_conjugated_attribuer(self):
+  # Regression test for a real French production script: "puisque" (a common French
+  # "since"/"because") and the present-tense "attribue" (vs. the past-participle
+  # "attribué à" that was in the original list) both failed to match.
+  h='sha256:'+'a'*64
+  with language_scope('fr'):
+   s=script(h);s['locale']='fr-FR'
+   for t in s['turns']:
+    if t['speaker']=='speaker_a':t['text']="Pourquoi ce changement ? Le vice-président attribue ces progrès aux restrictions, puisque l'accès aux équipements est limité. Cependant, cela peut varier selon les régions."
+   result=validate_script(s,h,PROFILE)
+  self.assertIn('speaker_a',result['characters'])
  def test_default_fallback_and_cost(self):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):
