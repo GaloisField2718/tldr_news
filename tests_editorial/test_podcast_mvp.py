@@ -131,7 +131,7 @@ class PodcastTests(unittest.TestCase):
   def post(*a,**k):calls.append(k['json']['messages'][0]['content']);return R(docs[len(calls)-1])
   state={'editorial_attempts':0,'request_attempts':0,'estimated_cost_usd':0.0,'measured_cost_usd':None,'retries':0};source_doc={'plan':{'visual_brief':{'central_subject':'reported change works because mechanism changes distribution'}}}
   with language_scope('en'):out=generate_script(post,'key',source_doc,h,'2026-07-21',state,1,PROFILE)
-  self.assertEqual((len(calls),state['editorial_attempts']), (3,3));self.assertIn('Concise rewrite only',calls[2]);self.assertIn('1200-1900',calls[2]);self.assertEqual([t['text'] for t in out['turns']],[t['text'] for t in valid['turns']])
+  self.assertEqual((len(calls),state['editorial_attempts']), (3,3));self.assertIn('Rewrite it to be SHORTER',calls[2]);self.assertIn('Target 1200-1550',calls[2]);self.assertEqual([t['text'] for t in out['turns']],[t['text'] for t in valid['turns']])
  def test_third_call_reachable_after_two_non_duration_failures(self):
   # Regression test for a real production failure: a bounded repair on attempt 2 that fails
   # for a non-duration reason (here, a missing "?" breaks the balance check) must still get
@@ -156,6 +156,14 @@ class PodcastTests(unittest.TestCase):
   for t in s['turns']:
    if t['speaker']=='speaker_b':t['text']="Why might adoption stall? Because the cost structure differs by region, and that is a real limitation for smaller teams."
   result=validate_script(s,h,PROFILE);self.assertAlmostEqual(result['shares']['speaker_b'],600/1400,places=3)
+ def test_explain_detection_recognizes_mechanism_language_beyond_the_original_keyword_list(self):
+  # Regression test for a real production script where a speaker genuinely explained a
+  # mechanism ("The mechanism appears to be both...") using none of the original narrow
+  # keywords ("because"/"means"/"works"/"uses"/"happens when").
+  h='sha256:'+'a'*64;s=script(h)
+  for t in s['turns']:
+   if t['speaker']=='speaker_a':t['text']="What changed here? The mechanism is that restrictions push companies toward domestic alternatives, since imports become harder to secure. However, adoption may vary by region."
+  result=validate_script(s,h,PROFILE);self.assertIn('speaker_a',result['characters'])
  def test_default_fallback_and_cost(self):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):
