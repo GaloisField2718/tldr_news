@@ -32,7 +32,7 @@ class PodcastTests(unittest.TestCase):
   self.assertEqual(DEFAULT_EPISODE_PROFILE_ID,"headline-brief-v1");self.assertIn("headline-brief-v1",EPISODE_PROFILES);self.assertIs(get_episode_profile(None),PROFILE);self.assertIs(get_episode_profile("headline-brief-v1"),PROFILE)
   with self.assertRaisesRegex(PodcastError,"profile_unknown"):get_episode_profile("daily-briefing-v1")
  def test_profile_thresholds_match_specification(self):
-  self.assertEqual((PROFILE.min_duration,PROFILE.preferred_duration,PROFILE.max_duration),(55,90,130));self.assertEqual((PROFILE.min_turns,PROFILE.max_turns,PROFILE.preferred_turns),(8,16,(8,14)));self.assertEqual((PROFILE.min_chars,PROFILE.max_chars,PROFILE.preferred_chars),(1000,2100,(1200,1900)));self.assertEqual((PROFILE.speaker_share_min,PROFILE.speaker_share_max),(.4,.6));self.assertEqual(PROFILE.max_editorial_calls,3)
+  self.assertEqual((PROFILE.min_duration,PROFILE.preferred_duration,PROFILE.max_duration),(55,90,130));self.assertEqual((PROFILE.min_turns,PROFILE.max_turns,PROFILE.preferred_turns),(8,16,(8,14)));self.assertEqual((PROFILE.min_chars,PROFILE.max_chars,PROFILE.preferred_chars),(1000,2100,(1200,1900)));self.assertEqual((PROFILE.speaker_share_min,PROFILE.speaker_share_max),(.4,.6));self.assertEqual(PROFILE.max_editorial_calls,5)
  def test_script_schema_balance_and_duration(self):
   with tempfile.TemporaryDirectory() as td:
    f=source(Path(td));s=script("sha256:"+__import__("hashlib").sha256(f.read_bytes()).hexdigest());result=validate_script(s,s["source_artifact_sha256"],PROFILE);self.assertEqual(result["turn_count"],10);self.assertAlmostEqual(result["shares"]["speaker_a"],.5)
@@ -98,7 +98,7 @@ class PodcastTests(unittest.TestCase):
    with date_lock(rd):
     with self.assertRaisesRegex(PodcastError,'locked'):
      with date_lock(rd):pass
-   state['production_code_head']='wrong';(rd/'state.json').write_text(json.dumps(state))
+   state['production_runtime_version']='wrong';(rd/'state.json').write_text(json.dumps(state))
    with self.assertRaisesRegex(PodcastError,'state_conflict'):load_state(root,'2026-07-21',digest,profile,DEFAULT_EPISODE_PROFILE_ID)
  def test_editorial_request_is_json_only_and_no_network_in_test(self):
   class R:
@@ -132,6 +132,13 @@ class PodcastTests(unittest.TestCase):
   state={'editorial_attempts':0,'request_attempts':0,'estimated_cost_usd':0.0,'measured_cost_usd':None,'retries':0};source_doc={'plan':{'visual_brief':{'central_subject':'reported change works because mechanism changes distribution'}}}
   with language_scope('en'):out=generate_script(post,'key',source_doc,h,'2026-07-21',state,1,PROFILE)
   self.assertEqual((len(calls),state['editorial_attempts']), (3,3));self.assertIn('Rewrite it to be SHORTER',calls[2]);self.assertIn('Target 1200-1550',calls[2]);self.assertEqual([t['text'] for t in out['turns']],[t['text'] for t in valid['turns']])
+ def test_paid_editorial_checkpoint_is_revalidated_before_another_call(self):
+  h='sha256:'+'a'*64;valid=script(h);state={'editorial_attempts':3,'request_attempts':3,'estimated_cost_usd':.3,'measured_cost_usd':None,'retries':2}
+  source_doc={'plan':{'visual_brief':{'central_subject':'reported change works because mechanism changes distribution'}}}
+  with tempfile.TemporaryDirectory() as td:
+   diagnostics=Path(td);(diagnostics/'editorial-response-3.json').write_text(json.dumps({'content':json.dumps(valid)}))
+   with language_scope('en'):out=generate_script(lambda *a,**k:self.fail('checkpoint should avoid a paid call'),'key',source_doc,h,'2026-07-21',state,1,PROFILE,diagnostic_dir=diagnostics)
+  self.assertEqual(out['turns'],valid['turns']);self.assertEqual(state['editorial_attempts'],3)
  def test_third_call_reachable_after_two_non_duration_failures(self):
   # Regression test for a real production failure: a bounded repair on attempt 2 that fails
   # for a non-duration reason (here, a missing "?" breaks the balance check) must still get
@@ -164,6 +171,14 @@ class PodcastTests(unittest.TestCase):
   for t in s['turns']:
    if t['speaker']=='speaker_a':t['text']="What changed here? The mechanism is that restrictions push companies toward domestic alternatives, since imports become harder to secure. However, adoption may vary by region."
   result=validate_script(s,h,PROFILE);self.assertIn('speaker_a',result['characters'])
+ def test_french_explanation_recognizes_elided_parce_que(self):
+  h='sha256:'+'a'*64
+  with language_scope('fr'):
+   s=script(h);s['locale']='fr-FR'
+   for t in s['turns']:
+    if t['speaker']=='speaker_a':t['text']="Pourquoi ce changement ? Parce qu’un modèle ouvert peut être repris, le mécanisme accélère la diffusion. Cependant, son adoption reste incertaine."
+   result=validate_script(s,h,PROFILE)
+  self.assertIn('speaker_a',result['characters'])
  def test_french_explain_detection_recognizes_puisque_and_conjugated_attribuer(self):
   # Regression test for a real French production script: "puisque" (a common French
   # "since"/"because") and the present-tense "attribue" (vs. the past-participle
@@ -179,10 +194,10 @@ class PodcastTests(unittest.TestCase):
   self.assertEqual((DEFAULT.model,FALLBACK.model),("x-ai/grok-voice-tts-1.0","mistralai/voxtral-mini-tts-2603"));self.assertEqual(estimate_cost(DEFAULT,1000),.015)
  def test_zero_call_preflight_and_cost_gate(self):
   with tempfile.TemporaryDirectory() as td:
-   root=Path(td);source(root);r=preflight(root,"2026-07-21",1);self.assertEqual((r["paid_calls"],r["selected_model"]),(0,DEFAULT.model));self.assertEqual(r["planned_editorial_requests"],2);self.assertFalse(r["cron_active"])
+   root=Path(td);source(root);r=preflight(root,"2026-07-21",1);self.assertEqual((r["paid_calls"],r["selected_model"]),(0,DEFAULT.model));self.assertEqual(r["planned_editorial_requests"],2);self.assertTrue(r["cron_active"]);self.assertEqual(r["cron_schedule_utc"],["01:30","03:30","06:30"])
    with self.assertRaisesRegex(PodcastError,"estimated_cost_exceeds"):preflight(root,"2026-07-21",.01)
  def test_preflight_reports_selected_profile_and_limits(self):
   with tempfile.TemporaryDirectory() as td:
    root=Path(td);source(root);r=preflight(root,"2026-07-21",1)
-   self.assertEqual(r["episode_profile_id"],"headline-brief-v1");self.assertEqual(r["target_duration_seconds"],90);self.assertEqual(r["valid_duration_range_seconds"],[55,130]);self.assertEqual(r["turn_range"],[8,16]);self.assertEqual(r["preferred_turn_range"],[8,14]);self.assertEqual(r["spoken_character_range"],[1000,2100]);self.assertEqual(r["preferred_spoken_character_range"],[1200,1900]);self.assertEqual(r["maximum_editorial_calls"],3);self.assertEqual(r["maximum_tts_attempts_per_language"],32);self.assertEqual(r["planned_tts_turns_per_language"],"8-16");self.assertEqual(r["cost_ceiling_usd_per_language"],1)
+   self.assertEqual(r["episode_profile_id"],"headline-brief-v1");self.assertEqual(r["target_duration_seconds"],90);self.assertEqual(r["valid_duration_range_seconds"],[55,130]);self.assertEqual(r["turn_range"],[8,16]);self.assertEqual(r["preferred_turn_range"],[8,14]);self.assertEqual(r["spoken_character_range"],[1000,2100]);self.assertEqual(r["preferred_spoken_character_range"],[1200,1900]);self.assertEqual(r["maximum_editorial_calls"],5);self.assertEqual(r["maximum_tts_attempts_per_language"],32);self.assertEqual(r["planned_tts_turns_per_language"],"8-16");self.assertEqual(r["cost_ceiling_usd_per_language"],1)
 if __name__=="__main__":unittest.main()

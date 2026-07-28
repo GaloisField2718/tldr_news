@@ -13,7 +13,7 @@ from tools.tldr_editorial.config import Config
 from tools.tldr_editorial.r2_storage import R2Storage
 from tools.tldr_tts_calibration import CAPABILITIES,Candidate,CalibrationError,SpeechHTTPError,_private_json,assemble,build_request,http_diagnostic,request_turn,turn_descriptor,validate_turn
 
-EDITORIAL_MODEL="openai/gpt-5.6-luna"; CHAT_URL="https://openrouter.ai/api/v1/chat/completions"; STATE_VERSION="1.2.0"
+EDITORIAL_MODEL="openai/gpt-5.6-luna"; CHAT_URL="https://openrouter.ai/api/v1/chat/completions"; STATE_VERSION="1.3.0";EDITION_STATE_VERSION="1.2.0";RUNTIME_VERSION="podcast-runtime-2026-07-28"
 LANGUAGES={"en":{"locale":"en-US","name":"English"},"fr":{"locale":"fr-FR","name":"French"}}
 DEFAULT_COST_CEILING=1.0
 DEFAULT=Candidate("xai","x-ai/grok-voice-tts-1.0",{"host":"eve","analyst":"rex"},{"prompt":"0.000015","completion":"0"},"characters","calibration-20260722",("mp3",),("speech",),("response_format",),15000)
@@ -36,7 +36,7 @@ class EpisodeProfile:
  min_chars:int;max_chars:int;preferred_chars:tuple[int,int]
  min_duration:int;preferred_duration:int;max_duration:int
  speaker_share_min:float=0.4;speaker_share_max:float=0.6
- max_editorial_calls:int=3
+ max_editorial_calls:int=5
  structure:tuple[str,...]=("opening","main_fact","mechanism_or_context","implication","limitation_or_nuance","closing")
 _REGISTERED_EPISODE_PROFILES=(
  EpisodeProfile("headline-brief-v1",8,16,(8,14),1000,2100,(1200,1900),55,90,130),
@@ -102,11 +102,18 @@ def validate_script(script:dict[str,Any],source_digest:str,profile:EpisodeProfil
   if run>3:raise PodcastError("podcast_consecutive_turns_invalid")
   low=text.lower()
   if "?" in text:asks.add(t["speaker"])
-  if any(w in low for w in ("because","means","works","uses","happens when","since ","due to","driven by","credits","attributed to","the mechanism","results in","leads to","stems from","depends on","that's why","which is why","explains why","the reason","helps explain","parce que","puisque","signifie","fonctionne","utilise","se produit quand","car ","en raison de","attribu","le mécanisme","entraîne","découle de","dépend de","explique pourquoi","la raison")):explains.add(t["speaker"])
+  # French elides the final vowel before another vowel ("parce qu’un/il/elle").
+  # Treat both straight and typographic apostrophes as the same causal marker.
+  causal_elision=bool(re.search(r"\bparce\s+qu(?:e\b|['’])",low))
+  if causal_elision or any(w in low for w in ("because","means","works","uses","happens when","since ","due to","driven by","credits","attributed to","the mechanism","results in","leads to","stems from","depends on","that's why","which is why","explains why","the reason","helps explain","puisque","signifie","fonctionne","utilise","se produit quand","car ","en raison de","attribu","le mécanisme","entraîne","découle de","dépend de","explique pourquoi","la raison")):explains.add(t["speaker"])
   if any(w in low for w in ("but ","however","although","yet ","still ","may ","could ","not necessarily","limitation","uncertain","caveat","trade-off","tradeoff","no guarantee","doesn't guarantee","does not guarantee","mais ","cependant","pourrait","peut-être","pas nécessairement","limite","incertain","compromis","aucune garantie")):nuances.add(t["speaker"])
  total=sum(chars.values());shares={k:v/total for k,v in chars.items()}
- duration=estimate_seconds(turns)
- if not all(profile.speaker_share_min<=v<=profile.speaker_share_max for v in shares.values()) or asks!=set(chars) or explains!=set(chars) or nuances!=set(chars):raise PodcastError("podcast_balance_invalid")
+ duration=estimate_seconds(turns);balance_errors=[]
+ if not all(profile.speaker_share_min<=v<=profile.speaker_share_max for v in shares.values()):balance_errors.append("speaker_share")
+ for role,seen in (("question",asks),("explanation",explains),("nuance",nuances)):
+  missing=sorted(set(chars)-seen)
+  if missing:balance_errors.append("missing_"+role+":"+"+".join(missing))
+ if balance_errors:raise PodcastError("podcast_balance_invalid:"+",".join(balance_errors))
  if not profile.min_chars<=total<=profile.max_chars or not profile.min_duration<=duration<=profile.max_duration or abs(duration-int(script["estimated_duration_seconds"]))>15:raise PodcastError("podcast_duration_invalid")
  return {"duration_seconds":duration,"characters":chars,"shares":shares,"turn_count":len(turns)}
 def validate_grounding(script:dict[str,Any],source:dict[str,Any])->None:
@@ -117,7 +124,8 @@ def editorial_prompt(source:dict[str,Any],digest:str,d:str,profile:EpisodeProfil
  opener,closer=expected_open_close(d);language=os.getenv("TLDR_PODCAST_LANGUAGE","en");instruction="Write natural editorial English for an en-US audience." if language=="en" else "Écris un dialogue éditorial en français naturel et idiomatique pour un public fr-FR; adapte les formulations et ne traduis pas littéralement une version anglaise. Le français utilise généralement plus de caractères que l'anglais pour un contenu équivalent : vise activement le bas de la fourchette de caractères ci-dessous, pas le haut."
  pt_lo,pt_hi=profile.preferred_turns;pc_lo,pc_hi=profile.preferred_chars;share_lo=round(profile.speaker_share_min*100);share_hi=round(profile.speaker_share_max*100)
  structure="1) one-sentence opening; 2) the main fact; 3) mechanism or context; 4) implication; 5) one limitation, uncertainty, or nuance; 6) concise closing."
- balance=f'Both speaker_a and speaker_b must EACH personally: ask at least one question ending in "?"; explain a mechanism or cause using a word like "because", "since", or "the reason"; and state one limitation, caveat, or uncertainty using a word like "however", "although", "limitation", or "not necessarily". Do not let one speaker ask all the questions, do all the explaining, or state all the caveats -- each of these three roles must appear in at least one turn from BOTH speakers separately. Both speakers keep {share_lo}-{share_hi}% of total characters; at most three consecutive turns by one speaker.'
+ examples='"because", "since", or "the reason" / "however", "although", or "limitation"' if language=="en" else '"parce que" or "puisque" / "cependant", "mais", or "limite"'
+ balance=f'Both speaker_a and speaker_b must EACH personally: ask at least one question ending in "?"; explain a mechanism or cause; and state one limitation, caveat, or uncertainty. Use an explicit connector for each role, for example {examples}. Do not let one speaker ask all the questions, do all the explaining, or state all the caveats -- each of these three roles must appear in at least one turn from BOTH speakers separately. Both speakers keep {share_lo}-{share_hi}% of total characters; at most three consecutive turns by one speaker.'
  return f"""{instruction} Return only strict JSON matching the supplied podcast schema. Ground every factual claim only in SOURCE FACTS. Make a concise, complete {profile.min_turns}-{profile.max_turns} turn (prefer {pt_lo}-{pt_hi}) Daily Index technology dialogue of {profile.min_chars}-{profile.max_chars} spoken characters (prefer {pc_lo}-{pc_hi}), {profile.min_duration}-{profile.max_duration} seconds (target {profile.preferred_duration}). Treat {pc_lo}-{pc_hi} characters as the real target, not the {profile.max_chars} ceiling: approaching the maximum reliably pushes past {profile.max_duration} seconds once pauses are added, so keep pause_after_ms modest (150-350ms). Follow this structure: {structure} {balance} {opener} opens and {closer} closes. Do not repeat the introduction or restate the summary. Do not add filler only to reach duration. No URLs, markdown, stage directions, invented facts, quotations, or promotional language. SOURCE SHA: {digest}. SOURCE FACTS:\n{source_facts(source)}\nJSON scalar requirements: schema_version is the string \"1.0.0\"; publication_date is the string \"{d}\"; locale is the string \"{LANGUAGES[language]['locale']}\"; pause_after_ms is an integer. Do not use Markdown fences or prose outside JSON. Fields: schema_version, publication_date, locale, episode_title, summary, source_artifact_sha256, estimated_duration_seconds, speakers={{speaker_a:{{role:cohost}},speaker_b:{{role:cohost}}}}, turns=[{{turn_id:t001,speaker:speaker_a,text,pause_after_ms}}]."""
 def extract_json_object(content:str)->dict[str,Any]:
  if not isinstance(content,str):raise PodcastError("podcast_editorial_response_invalid")
@@ -171,14 +179,19 @@ def normalize_script(value:dict[str,Any],requested_date:str,source_digest:str,la
  return x,changes
 def _atomic_json(path:Path,value:dict[str,Any],private:bool=False)->None:
  path.parent.mkdir(parents=True,exist_ok=True,mode=0o700 if private else 0o755);tmp=path.with_name("."+path.name+".tmp");tmp.write_text(json.dumps(value,sort_keys=True,indent=2)+"\n");os.chmod(tmp,0o600 if private else 0o644);os.replace(tmp,path)
-def initial_state(root:Path,d:str,source_digest:str,profile:PodcastProfile,episode_profile_id:str)->dict[str,Any]:return {"schema_version":STATE_VERSION,"publication_date":d,"source_artifact_sha256":source_digest,"production_code_head":git_head(root),"profile":{"model":profile.candidate.model,"voices":profile.candidate.voices},"episode_profile_id":episode_profile_id,"script_status":"pending","script_sha256":None,"planned_turns":[],"completed_turns":{},"failed_turn":None,"request_attempts":0,"editorial_attempts":0,"tts_attempts":0,"retries":0,"estimated_cost_usd":0.0,"measured_cost_usd":None,"audio_validation":None,"assembly_status":"pending","upload_status":"pending","artifact_status":"pending","frontend_status":"pending","accepted":False}
+def initial_state(root:Path,d:str,source_digest:str,profile:PodcastProfile,episode_profile_id:str)->dict[str,Any]:return {"schema_version":STATE_VERSION,"publication_date":d,"source_artifact_sha256":source_digest,"production_runtime_version":RUNTIME_VERSION,"profile":{"model":profile.candidate.model,"voices":profile.candidate.voices},"episode_profile_id":episode_profile_id,"script_status":"pending","script_sha256":None,"planned_turns":[],"completed_turns":{},"failed_turn":None,"request_attempts":0,"editorial_attempts":0,"tts_attempts":0,"retries":0,"estimated_cost_usd":0.0,"measured_cost_usd":None,"audio_validation":None,"assembly_status":"pending","upload_status":"pending","artifact_status":"pending","frontend_status":"pending","accepted":False}
 def load_state(root:Path,d:str,source_digest:str,profile:PodcastProfile,episode_profile_id:str)->tuple[Path,dict[str,Any]]:
  rd=runtime_dir(d);rd.mkdir(parents=True,exist_ok=True,mode=0o700);os.chmod(rd,0o700);p=rd/"state.json"
  if not p.exists():state=initial_state(root,d,source_digest,profile,episode_profile_id);_atomic_json(p,state,True);return rd,state
  try:state=json.loads(p.read_text())
  except Exception as exc:raise PodcastError("podcast_runtime_state_malformed") from exc
+ # One-time compatible migration: old states were tied to the entire Git HEAD, so an
+ # unrelated repository commit made resumable audio unusable. Runtime compatibility is
+ # now explicit and changes only when podcast state semantics actually change.
+ if state.get("schema_version")=="1.2.0" and "production_code_head" in state:
+  state.pop("production_code_head",None);state["schema_version"]=STATE_VERSION;state["production_runtime_version"]=RUNTIME_VERSION;_atomic_json(p,state,True)
  expected=initial_state(root,d,source_digest,profile,episode_profile_id)
- for k in ("schema_version","publication_date","source_artifact_sha256","production_code_head","profile","episode_profile_id"):
+ for k in ("schema_version","publication_date","source_artifact_sha256","production_runtime_version","profile","episode_profile_id"):
   if state.get(k)!=expected[k]:raise PodcastError("podcast_runtime_state_conflict")
  return rd,state
 def save_state(rd:Path,state:dict[str,Any])->None:_atomic_json(rd/"state.json",state,True)
@@ -204,6 +217,15 @@ def editorial_request(post:Callable[...,Any],key:str,prompt:str,profile:EpisodeP
  except (KeyError,IndexError,TypeError) as exc:raise PodcastError("podcast_editorial_response_invalid") from exc
 def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:str,d:str,state:dict[str,Any],ceiling:float,profile:EpisodeProfile,persist:Callable[[],None]|None=None,diagnostic_dir:Path|None=None)->dict[str,Any]:
  prompt=editorial_prompt(source,digest,d,profile);used=int(state.get("editorial_attempts",0));language=os.getenv("TLDR_PODCAST_LANGUAGE","en");limit=profile.max_editorial_calls
+ # A process can stop after receiving a paid response but before installing script.json.
+ # Revalidate that private checkpoint first; code fixes can also recover a false negative
+ # without buying another editorial response.
+ if used and diagnostic_dir:
+  checkpoint=diagnostic_dir/f"editorial-response-{used}.json"
+  if checkpoint.is_file():
+   try:
+    raw=json.loads(checkpoint.read_text())["content"];s,changes=normalize_script(extract_json_object(raw),d,digest,language);validate_script(s,digest,profile);validate_grounding(s,source);state["normalizations"]=changes;state.pop("last_editorial_error",None);return s
+   except (PodcastError,KeyError,TypeError,json.JSONDecodeError):pass
  if used:prompt+="\nThis is a bounded corrected attempt. Satisfy every structured schema, date, locale, duration, grounding and balance requirement."
  for attempt in range(used,limit):
   projected_cost(state,.10,ceiling);state["request_attempts"]+=1;state["editorial_attempts"]+=1;state["estimated_cost_usd"]+=.10
@@ -213,8 +235,11 @@ def generate_script(post:Callable[...,Any],key:str,source:dict[str,Any],digest:s
    if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-response-{attempt+1}.json",{"content":raw})
    value=extract_json_object(raw);s,changes=normalize_script(value,d,digest,language)
    if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-normalization-{attempt+1}.json",{"changes":changes})
-   validate_script(s,digest,profile);validate_grounding(s,source);state["normalizations"]=changes;return s
+   validate_script(s,digest,profile);validate_grounding(s,source);state["normalizations"]=changes;state.pop("last_editorial_error",None);return s
   except PodcastError as exc:
+   state["last_editorial_error"]=str(exc)
+   if diagnostic_dir:_private_json(diagnostic_dir,f"editorial-validation-{attempt+1}.json",{"error":str(exc)})
+   if persist:persist()
    if attempt>=limit-1 or "response_invalid" in str(exc):raise
    state["retries"]+=1
    if "duration_invalid" in str(exc):
@@ -269,9 +294,11 @@ def edition_state(root:Path,d:str,source_digest:str)->tuple[Path,dict[str,Any]]:
  if p.exists():
   try:x=json.loads(p.read_text())
   except Exception as exc:raise PodcastError("podcast_edition_state_malformed") from exc
-  if x.get("source_artifact_sha256")!=source_digest or x.get("production_code_head")!=git_head(root):raise PodcastError("podcast_edition_state_conflict")
+  if x.get("schema_version")=="1.1.0" and "production_code_head" in x:
+   x.pop("production_code_head",None);x["schema_version"]=EDITION_STATE_VERSION;x["production_runtime_version"]=RUNTIME_VERSION;_atomic_json(p,x,True)
+  if x.get("source_artifact_sha256")!=source_digest or x.get("production_runtime_version")!=RUNTIME_VERSION:raise PodcastError("podcast_edition_state_conflict")
   return rd,x
- x={"schema_version":"1.1.0","source_artifact_sha256":source_digest,"production_code_head":git_head(root),"canaries":{},"canary_estimated_cost_usd":0.0,"languages":{},"status":"pending"};_atomic_json(p,x,True);return rd,x
+ x={"schema_version":EDITION_STATE_VERSION,"source_artifact_sha256":source_digest,"production_runtime_version":RUNTIME_VERSION,"canaries":{},"canary_estimated_cost_usd":0.0,"languages":{},"status":"pending"};_atomic_json(p,x,True);return rd,x
 def save_edition_state(rd:Path,state:dict[str,Any])->None:_atomic_json(rd/"edition-state.json",state,True)
 def french_canaries(root:Path,d:str,key:str,post:Callable[...,Any],source_digest:str)->dict[str,Any]:
  rd,state=edition_state(root,d,source_digest)
@@ -330,7 +357,7 @@ def preflight(root:Path,d:str,cost:float,profile_id:str=DEFAULT_EPISODE_PROFILE_
  "cost_ceiling_usd_per_language":cost,"total_ceiling_usd":2.0,
  "private_runtime_directory":str(rd),"private_mp3_paths":{"en":str(rd/"en/episode.mp3"),"fr":str(rd/"fr/episode.mp3")},
  "r2_target_patterns":{"en":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/en/<sha256>.mp3","fr":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/fr/<sha256>.mp3"},
- "podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":False}
+ "podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":True,"cron_schedule_utc":["01:30","03:30","06:30"]}
 def install_local_script(root:Path,d:str,language:str,script:dict[str,Any],origin:str="local_editorial_authoring",profile_id:str=DEFAULT_EPISODE_PROFILE_ID)->dict[str,Any]:
  profile=get_episode_profile(profile_id);source,digest=load_source(root,d);tts_profile=profile_from_args(False,1.0)
  with language_scope(language):

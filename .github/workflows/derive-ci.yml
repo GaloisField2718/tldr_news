@@ -43,6 +43,7 @@ jobs:
         run: |
           bash -n automation.sh
           bash -n push_script.sh
+          bash -n scripts/run_podcast_daily.sh
 
       - name: Run derive unit tests
         run: python3 -m unittest tests_derive.test_derive
