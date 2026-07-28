@@ -181,6 +181,7 @@ def parse_links_block(
 
     i = 0
     article_seq = 0
+    used_ids: dict[str, int] = {}
     while i < len(lines):
         stripped = lines[i].strip()
         if not stripped:
@@ -242,6 +243,18 @@ def parse_links_block(
             if ref_num is not None
             else f"{issue_id}:o{article_seq:03d}"
         )
+        # A reference number can legitimately repeat inside one issue, and the id was
+        # derived from it alone, so the entries collided -- 3,999 of them across 2,549
+        # issues. Colliding ids produce colliding article_keys downstream, which makes
+        # two distinct entries indistinguishable to every consumer.
+        #
+        # The first occurrence keeps its historical id, so no existing route churns;
+        # later occurrences take a deterministic suffix in source order. Nothing here
+        # depends on summary text, which Gate 1A changes.
+        if article_id in used_ids:
+            used_ids[article_id] += 1
+            article_id = f"{article_id}-{used_ids[article_id]:02d}"
+        used_ids.setdefault(article_id, 1)
 
         url = None
         domain = None
