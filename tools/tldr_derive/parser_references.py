@@ -7,6 +7,8 @@ from typing import Any, Optional
 
 from .models import Article, Section, WarningRecord
 from .parser_common import (
+    consume_summary,
+    joined_block,
     classify_content,
     extract_reading_time,
     is_emoji_only_line,
@@ -24,6 +26,33 @@ _TITLE_HINT_RE = re.compile(
     r"(MINUTE\s+READ|\(SPONSOR\)|\(GITHUB|\(COURSE\)|\(TOOL\)|\(APP\)|\(WEBSITE\))",
     re.IGNORECASE,
 )
+
+
+def _begins_next_article(lines: list[str], index: int) -> bool:
+    """Definite start of the next article, for deciding across a blank line.
+
+    Only signals the numbered-links format actually guarantees: a trailing reference
+    marker, a reading-time or content marker, a link definition, or a structural
+    heading. Deliberately excludes the all-uppercase fallback in
+    `_looks_like_title_start`, which a continuation paragraph in caps would trip.
+    """
+    line = lines[index].strip()
+    if not line:
+        return False
+    if is_section_heading(line) or is_emoji_only_line(line):
+        return True
+    if line.startswith("#"):
+        return True
+    if _LINK_DEF_RE.match(line):
+        return True
+    if _REF_AT_END_RE.search(line) or _TITLE_HINT_RE.search(line):
+        return True
+    # Titles wrap: "SOME HEADLINE (5" / "MINUTE READ) [12]" puts both the marker and the
+    # reference on the continuation line, so neither is visible on the first one. Miss
+    # this and the title is swallowed by the previous summary, after which the outer
+    # loop restarts mid-title and keeps only its tail.
+    block = joined_block(lines, index)
+    return bool(_REF_AT_END_RE.search(block) or _TITLE_HINT_RE.search(block))
 
 
 def parse_link_definitions(links_text: str) -> dict[int, str]:
@@ -196,22 +225,17 @@ def parse_links_block(
         content_type, is_sponsor = classify_content(title_joined)
         title = strip_markers_from_title(title_joined)
 
-        summary_parts: list[str] = []
         k = j
         if k < len(lines) and not lines[k].strip():
             k += 1
-        while k < len(lines):
-            nxt = lines[k].strip()
-            if not nxt:
-                break
-            if is_section_heading(nxt) or is_emoji_only_line(nxt):
-                break
-            if _looks_like_title_start(nxt):
-                break
-            summary_parts.append(nxt)
-            k += 1
-
-        summary = " ".join(summary_parts).strip()
+        summary, k = consume_summary(
+            lines,
+            k,
+            ends_paragraph=lambda line: (
+                is_section_heading(line) or is_emoji_only_line(line) or _looks_like_title_start(line)
+            ),
+            begins_next_article=_begins_next_article,
+        )
         article_seq += 1
         article_id = (
             f"{issue_id}:a{ref_num:02d}"

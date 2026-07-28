@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import Optional
+from typing import Callable, Optional
 
 from .sanitizer import decode_entities, strip_zero_width
 
@@ -181,6 +181,79 @@ def extract_issue_title(sector: str, date_iso: str, text: str) -> str:
         if m:
             return f"Articles {m.group(1)} {m.group(2)}"
     return f"{sector} {date_iso}"
+
+
+def joined_block(lines: list[str], index: int, max_lines: int = 6) -> str:
+    """Consecutive non-empty lines from `index`, joined.
+
+    Titles wrap freely across several lines, putting the reading-time marker or the
+    reference number on a later one. Boundary tests must therefore look at the whole
+    block, not a single line: miss the marker and the title is swallowed by the previous
+    summary, after which the parser restarts mid-title and keeps only its tail.
+    """
+    parts: list[str] = []
+    cursor = index
+    while cursor < len(lines) and len(parts) < max_lines:
+        stripped = lines[cursor].strip()
+        if not stripped:
+            break
+        parts.append(stripped)
+        cursor += 1
+    return " ".join(parts)
+
+
+def consume_summary(
+    lines: list[str],
+    start: int,
+    ends_paragraph: Callable[[str], bool],
+    begins_next_article: Callable[[list[str], int], bool],
+) -> tuple[str, int]:
+    """Collect an article summary, spanning blank lines when editorial prose follows.
+
+    Newsletters separate an article's paragraphs with blank lines, and both parsers
+    used to stop at the first one, silently dropping every paragraph after it. A blank
+    line is not a boundary on its own: what matters is the next non-empty line.
+
+    Two different tests are used on purpose. Inside a paragraph the caller's existing
+    rules apply unchanged, so summaries that were already complete come out
+    byte-identical. Across a blank line only `begins_next_article` may end the summary,
+    and that predicate must be a definite structural signal -- a reference marker, a
+    reading-time or content marker, a link definition, a section heading. The weaker
+    "line is all uppercase" heuristic must not be used there, or an uppercase
+    continuation paragraph would be mistaken for the next article's title.
+
+    Recovered paragraphs are joined with a blank line so the structure survives; no
+    identifier anywhere is derived from summary whitespace.
+    """
+    paragraphs: list[str] = []
+    current: list[str] = []
+    index = start
+    while index < len(lines):
+        stripped = lines[index].strip()
+        if not stripped:
+            lookahead = index
+            while lookahead < len(lines) and not lines[lookahead].strip():
+                lookahead += 1
+            if lookahead >= len(lines):
+                break
+            if begins_next_article(lines, lookahead):
+                break
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+            # Take the first line of the new paragraph directly. Re-testing it with
+            # `ends_paragraph` would re-apply the weak all-uppercase heuristic that the
+            # lookahead just deliberately declined to use.
+            current.append(lines[lookahead].strip())
+            index = lookahead + 1
+            continue
+        if ends_paragraph(stripped):
+            break
+        current.append(stripped)
+        index += 1
+    if current:
+        paragraphs.append(" ".join(current))
+    return "\n\n".join(paragraphs).strip(), index
 
 
 def skip_preamble(lines: list[str]) -> int:

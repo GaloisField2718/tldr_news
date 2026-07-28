@@ -7,6 +7,8 @@ from typing import Any, Optional
 
 from .models import Article, Section, WarningRecord
 from .parser_common import (
+    consume_summary,
+    joined_block,
     classify_content,
     extract_reading_time,
     is_emoji_only_line,
@@ -52,6 +54,36 @@ def _looks_like_title_start(line: str) -> bool:
     if letters and letters.upper() == letters and len(stripped) >= 12:
         return True
     return False
+
+
+def _begins_next_article(lines: list[str], index: int) -> bool:
+    """Definite start of the next article, for deciding across a blank line.
+
+    Only signals the inline format actually guarantees. Titles here frequently carry no
+    reading-time marker at all -- the format's real guarantee is that a title is
+    followed by its inline URL -- so a bare line whose next non-empty neighbour is a
+    `[http...]` block is a title, not prose. Deliberately excludes the all-uppercase
+    fallback in `_looks_like_title_start`, which a continuation paragraph in caps would
+    trip.
+    """
+    line = lines[index].strip()
+    if not line:
+        return False
+    if is_section_heading(line) or is_emoji_only_line(line):
+        return True
+    if line.startswith("#") or line.startswith("[http"):
+        return True
+    if _TITLE_HINT_RE.search(line) or _TRAILING_BRACKET_URL_START_RE.search(line):
+        return True
+    following = index + 1
+    while following < len(lines) and not lines[following].strip():
+        following += 1
+    if following < len(lines) and lines[following].strip().startswith("[http"):
+        return True
+    block = joined_block(lines, index)
+    return bool(
+        _TITLE_HINT_RE.search(block) or _TRAILING_BRACKET_URL_START_RE.search(block)
+    )
 
 
 def _consume_inline_url(lines: list[str], start: int) -> tuple[Optional[str], int]:
@@ -355,26 +387,24 @@ def parse_inline_url(
         if k < len(lines) and not lines[k].strip():
             k += 1
 
-        summary_parts: list[str] = []
-        while k < len(lines):
-            nxt = lines[k].strip()
-            if not nxt:
-                break
-            if is_section_heading(nxt) or is_emoji_only_line(nxt):
-                break
-            if nxt.startswith("[http"):
-                break
-            if _looks_like_title_start(nxt):
-                break
-            summary_parts.append(nxt)
-            k += 1
+        summary, k = consume_summary(
+            lines,
+            k,
+            ends_paragraph=lambda line: (
+                is_section_heading(line)
+                or is_emoji_only_line(line)
+                or line.startswith("[http")
+                or _looks_like_title_start(line)
+            ),
+            begins_next_article=_begins_next_article,
+        )
 
         article_seq += 1
         pending.append(
             {
                 "id": f"{issue_id}:o{article_seq:03d}",
                 "title": title,
-                "summary": " ".join(summary_parts).strip(),
+                "summary": summary,
                 "url": url,
                 "reading_time_minutes": reading_time,
                 "source_domain": source_domain_from_url(url),
