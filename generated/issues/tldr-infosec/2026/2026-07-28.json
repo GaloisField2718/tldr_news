@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-07-28",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-07-28",
+  "source_path": "TLDR InfoSec/article_28-07-2026.md",
+  "source_content_hash": "sha256:cfd06868055d172f14d4d921eb9314e1f204adb8d5d70ec4eab1216904a02d8b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-07-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a04",
+          "order": 1,
+          "title": "DO YOU REALLY KNOW WHO'S ON YOUR WEBSITE?",
+          "summary": "",
+          "url": "https://www.humansecurity.com/forrester-wave/?utm_source=tldr_infosec&utm_medium=newsletter&utm_campaign=brand_agentic_trust&utm_content=forrester_wave_2026",
+          "reading_time_minutes": null,
+          "source_domain": "humansecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a05",
+          "order": 1,
+          "title": "CHATGPT AGENTFORGER FLAW COULD DEPLOY ROGUE WORKSPACE AGENTS VIA A PHISHING LINK",
+          "summary": "Zenity Labs discovered that the ChatGPT Workspace Agent Builder would accept initialization states via URL parameters like template_name and initial_assistant_prompt. It would then automatically submit the prompt when the page loads. This meant that a single link sent to a logged-in user with pre-authorized connectors could silently create an agent, connect existing Outlook, Gmail, Slack, Drive, SharePoint, and Teams integrations, and change write-action permissions from 'Always ask' to 'Never ask' without prompting a new OAuth consent screen. The deployed agent would run every five minutes, checking the attacker's inbox for messages starting with TASK, and sending back results. This setup effectively allowed an insider to perform organizational mapping, exfiltrate documents, harvest credentials, and stage Business Email Compromise (BEC) attacks. Zenity reported this vulnerability via Bugcrowd on June 4, and OpenAI patched it on June 8 by removing the parameter handler, though no evidence of active exploitation was found. Current recommendations include auditing active Workspace Agents for unknown creations, reverting approval settings to 'Always ask,' and treating deep links in emails that build agents as potential phishing attempts.",
+          "url": "https://cybersecuritynews.com/chatgpt-agentforger-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a06",
+          "order": 2,
+          "title": "A-LIST DIRECTORS, ACTORS, AND CELEBRITIES EXPOSED IN MAJOR FILM FESTIVAL BREACH",
+          "summary": "Security researcher Jeremiah Fowler found an unencrypted, unsecured database linked to the Tribeca Film Festival. This database contained a backup with over 163,000 users, 15,000 film contacts, and 13,500 other contacts. It also included data on numerous celebrities from the entertainment industry, such as email addresses, names, Facebook locations, addresses, IP addresses, newsletter information, and bcrypt password hashes.",
+          "url": "https://www.expressvpn.com/blog/tribeca-film-festival-data-exposed/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "expressvpn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a07",
+          "order": 3,
+          "title": "HACKERS HIJACK HOTEL WI-FI DNS TO STEAL MICROSOFT 365 ACCOUNTS",
+          "summary": "ReliaQuest is reporting on a new phishing campaign where attackers are changing the DNS settings on hotel Wi-Fi systems to redirect Microsoft 365 logins to fake, attacker-controlled pages. The campaign uses a device code flow where users are prompted to approve the login request to bypass MFA requirements.",
+          "url": "https://links.tldrnewsletter.com/9NXQwz",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a08",
+          "order": 1,
+          "title": "BLUENOROFF FAKE MEETING KIT CAPTURES WEBCAMS, DISABLES DEFENDER AND STEALS CRYPTOCURRENCY CREDENTIALS",
+          "summary": "A victim receives a meeting link from a hijacked Telegram contact and lands on a cloned Zoom or Teams page that silently opens the webcam and fingerprints browser wallets via EIP-6963, legacy window.ethereum, and Solana enumeration. They watch a deepfake video and chat until a fake SDK update prompt exploits clipboard hijacking to run a PowerShell loader, dropping a VBScript. JUMPSEC later recovered the source, revealing a Windows Trojan named Trojan.NukeSped that persists, blocks Defender, runs WMI scans, enumerates extensions for MetaMask, and extracts Telegram session data from IndexedDB to feed future lures. The macOS version uses Mach-O droppers with LLVM obfuscation to extract credentials via the security CLI and exfiltrate through Telegram bots. Defensive actions include alerting on Defender exclusions, monitoring clipboard PowerShell, hunting processes accessing IndexedDB, flagging unknown contacts before SDK updates, and blocking 11 C2 domains.",
+          "url": "https://gbhackers.com/bluenoroff-fake-meeting-kit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a09",
+          "order": 2,
+          "title": "THE PRIVILEGED ROLES NOBODY TALKS ABOUT",
+          "summary": "MDM administrator roles are as important as Domain Admin, if not more so, as they can deploy arbitrary scripts, push configuration profiles, issue remote wipes, manage applications, manage certificates and authentication configurations, and modify compliance policies. Unfortunately, many organizations do not have sufficient controls in place for these roles, with lax policies such as not having dedicated accounts or workstations, no just-in-time privilege elevation or multi-admin approvals, and overly permissive Graph API access. This article includes suggestions to remediate these issues, such as fixing the above issues, locking down script and policy deployment, hardening device enrollment, and implementing additional alerting on high-risk activities.",
+          "url": "https://trustedsec.com/blog/the-privileged-roles-nobody-talks-about?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "trustedsec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a10",
+          "order": 3,
+          "title": "EXPLOITING VOLVO/EICHER'S FLEET MANAGEMENT PLATFORM TO GAIN CONTROL OVER ALL USERS AND VEHICLES",
+          "summary": "VE Commercial Vehicles' My Eicher telematics platform for Indian truck and bus fleets exposed unauthenticated internal APIs that listed hundreds of thousands of customers, users, vehicles, and OTP codes. By walking the API path, Eaton found open endpoints that returned user records, encrypted passwords, and a full OTP history since 2021, enabling account takeover by matching mobile numbers to OTPs or resetting passwords via API. This access allowed remote control and tracking of entire fleets and exposure of around 76,000 sensitive identity documents before the core vulnerability was fixed in November 2025 after repeated disclosure attempts.",
+          "url": "https://eaton-works.com/2026/07/27/my-eicher-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "eaton-works.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a11",
+          "order": 1,
+          "title": "THE OPEN-SOURCE CODE SECURITY AUDITOR THAT PROVES EXPLOITABILITY.",
+          "summary": "The open-source security auditor that proves exploitability. Point it at any repo — every finding ships a verdict, a source-to-sink trace, and the CWE, while adversarial agents disprove the false alarms. The noise never reaches you. Works with any open model. See where it lands on the DVGA benchmark.",
+          "url": "https://agentfield.ai/github/sec-af/?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-260728&utm_id=tldr-260728-sec-af&utm_content=sec-af",
+          "reading_time_minutes": null,
+          "source_domain": "agentfield.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a11-02",
+          "order": 2,
+          "title": "Star & Deploy",
+          "summary": "",
+          "url": "https://agentfield.ai/github/sec-af/?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-260728&utm_id=tldr-260728-sec-af&utm_content=sec-af",
+          "reading_time_minutes": null,
+          "source_domain": "agentfield.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a12",
+          "order": 3,
+          "title": "ZEEDUMPER",
+          "summary": "zeedumper connects to Kubernetes clusters using your kubeconfig files and dumps component z-pages by retrieving them through the API server proxy.",
+          "url": "https://github.com/raesene/zeedumper?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a13",
+          "order": 4,
+          "title": "GROKPATROL",
+          "summary": "grokpatrol is a tool to detect whether the Grok Build CLI was installed on your machine and whether it collected and queued your git repositories for upload to xAI. If so, it will notify you of any secrets that were uploaded with them.",
+          "url": "https://github.com/optimuslabs-io/grokpatrol?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a14",
+          "order": 5,
+          "title": "ABSTRACT (PRODUCT LAUNCH)",
+          "summary": "Abstract provides a streaming-first security operations platform that separates security data sources from storage targets, runs in-stream detections, routes data into multiple formats like OCSF and ECS, and aims to reduce SIEM storage costs.",
+          "url": "https://www.abstract.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "abstract.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a15",
+          "order": 1,
+          "title": "WHAT HAPPENED AFTER WE PUSHED OUR .ENV TO A PUBLIC REPO",
+          "summary": "Tachyon's committed canary .env files containing AWS, Anthropic, and Postgres credentials were made public on GitHub. GitHub flagged secrets within seconds without email alerts. AWS attached AWSCompromisedKeyQuarantineV3 shortly after a push, and within about five minutes, credentials connected externally. The quarantine policy didn't revoke keys or block secret commands, allowing an attacker using TruffleHog and Boto3 to access Secrets Manager and retrieve credentials seven minutes after pushing. Other traffic came from OVH, Tor exit, and Gigahost addresses, logging into Postgres and reading decoy tables. The intrusion stopped there, as the harvested secrets remained unused during the observation. Logs don't reveal if an LLM helped triage, leaving uncertainty about whether it was an attacker or defensive scan.",
+          "url": "https://tachyon.so/blog/what-happened-after-we-pushed-env-to-public-repo?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "tachyon.so",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a16",
+          "order": 2,
+          "title": "UK AISI/CAISI PRELIMINARY ASSESSMENT OF KIMI K3'S CYBER CAPABILITIES",
+          "summary": "UK AISI and CAISI jointly evaluated Moonshot AI's Kimi K3, released July 16 and slated for open-weight release by July 27, and placed it well behind frontier US models while ahead of GLM-5.2, scoring 32% on Carnegie Mellon's ExploitBench against 76.2% for top US models and 24.4% for GLM-5.2, and reaching step 17 of the 32-step \"The Last Ones\" cyber range against 28.5 steps for the leading US models. The gap narrows unevenly because Kimi K3 matched the frontier on coverage and came close on bug reproduction but achieved arbitrary code execution on zero of 41 samples where top models managed 20, and yet it completed the full cyber range once in ten attempts, which the evaluators read as autonomous capability against small, weakly defended enterprise networks given initial access. Two framing points deserve weight, the first being that Kimi K3's safeguards did not stop it from attempting exploit development or offensive operations at all, and the second being that US closed-weight comparators ran with system-level safeguards disabled to measure maximum capability, so the published gap measures raw model ability rather than what a user encounters, a distinction that matters as open-weight releases from PRC labs keep closing the trendline.",
+          "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "nist.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a17",
+          "order": 3,
+          "title": "SHAREDROOT; ESCAPING THE CLAUDE COWORK SANDBOX",
+          "summary": "A Claude Cowork session on macOS can chain a user-namespace feature, a Linux traffic-control module, and a recent kernel bug to escalate from an unprivileged VM user to guest root and then write directly to the host filesystem via a shared / mount. The write primitive comes from CVE-2026-46331 in act_pedit, and the path persists as similar bugs appear. To harden the environment, disable unprivileged user namespaces, tighten seccomp, block unneeded autoloaded modules and helper binaries, and scope or remove the host filesystem share so guest-root cannot touch SSH keys or other sensitive data.",
+          "url": "https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "accomplish.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-28:a18",
+          "order": 1,
+          "title": "GITHUB ISSUES $100,000 BOUNTY FOR CRITICAL RCE VULNERABILITY DISCLOSED BY @SAGITZ_",
+          "summary": "GitHub paid researcher @sagitz_ a $100,000 bounty, reportedly among the largest in its Vulnerability Reward Program, for CVE-2026-3854, an unauthenticated remote code execution flaw in the handling of crafted repository URLs.",
+          "url": "https://runtimewire.com/article/github-issues-100-000-bounty-for-critical-rce-vulnerability-disclosed-by-sagitz?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "runtimewire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-28:a19",
+          "order": 2,
+          "title": "GITHUB, PYPI ADD TIME-BASED DEFENSES AGAINST SUPPLY CHAIN ATTACKS",
+          "summary": "Dependabot now holds version update pull requests for 72 hours by default so a malicious package flagged minutes after publication has time to be pulled before it lands in a repo.",
+          "url": "https://links.tldrnewsletter.com/IN8OtM[20][21",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
