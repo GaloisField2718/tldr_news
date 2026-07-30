@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-07-29",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-07-29",
+  "source_path": "TLDR InfoSec/article_29-07-2026.md",
+  "source_content_hash": "sha256:5fbbe54ff3c757ad0f5d68ce12dbdb54944aa68077a91d95f416166a57a49aa5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-07-29",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a04",
+          "order": 1,
+          "title": "ACCESS",
+          "summary": "What happens after access is granted? Too many companies can't give a clear answer. 1Password Privileged Access [5] was built to solve that.\n\nGovern every identity that touches your infrastructure: human engineers, AI agents, and machine workloads.\n\n* Access exists only as long as the work requires it. * Every access event and session is logged automatically. * Security teams get a complete picture of who accessed what, when, and why.",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_072926_header_standing_access_doesnt",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a06",
+          "order": 2,
+          "title": "See how 1Password Privileged Access eliminates standing access.",
+          "summary": "",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_072926_cta_how_1password_privileged",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a07",
+          "order": 1,
+          "title": "CUSTOMER DATA FROM INDIA'S BANK OF BARODA LEAKED ONLINE",
+          "summary": "India's state-run Bank of Baroda disclosed that customer data was stolen via a breach of an employee's email. The bank has stated that no core banking systems were accessed. The breached data includes customer details, ID numbers, loan papers, and internal audit data.",
+          "url": "https://links.tldrnewsletter.com/I9yQsk",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a08",
+          "order": 2,
+          "title": "AUSTRALIA'S ORIGIN ENERGY FLAGS POSSIBLE DATA EXPOSURE OF ABOUT 900K CUSTOMERS",
+          "summary": "Australia's top electricity and gas supplier, Origin Energy, disclosed that data linked to about 900k current and former customers had been accessed in a cybersecurity incident. Origin didn't disclose the precise data accessed but stated that it could include financial data such as the last few digits of customers' credit card numbers or bank account numbers.",
+          "url": "https://links.tldrnewsletter.com/oysHHF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a09",
+          "order": 3,
+          "title": "DISTRIBUTED NPM PACKAGE CLUSTER DELIVERS CROSS-PLATFORM RAT TARGETING ALIBABA DEVELOPERS",
+          "summary": "Socket uncovered a three-month stealth campaign involving 18 npm packages that split loader functions across dependencies, making malicious intent hard to detect. They used unscoped lures impersonating Alibaba's @ali scope, pulling in smart-config-manager, which depends on cloud-config-fetcher and local-config-parser to retrieve attacker rules from GitHub and escape the Node.js vm sandbox via items.constructor.constructor. The staged aone-cli payload, a cross-platform RAT, supports command execution, file transfer, screenshots, an encrypted reverse TCP proxy, and DingTalk lateral movement. It persists through a ~/.zshrc entry, a 10-minute macOS Launch Agent, a trojanized Windows app.asar, and a Linux binary in /tmp, with C2 traffic masked by spoofed headers. Affected hosts should be treated as compromised. Reset secrets from clean systems and hunt for Python files with the identifier above.",
+          "url": "https://socket.dev/blog/npm-rat-targets-alibaba?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a10",
+          "order": 1,
+          "title": "INSIDE FAKEAGENT: HOW A CLAUDE DESKTOP MALVERTISING CAMPAIGN HIT 29 ORGANIZATIONS WITH SECTOPRAT",
+          "summary": "A Bing search for \"claude desktop app\" returned a sponsored link pointing at a genuine claude[.]ai artifact URL, and that user-generated page redirected through claude.ai.download-app[.]us and downloading-api.it[.]com to a ClaudeDesktop.exe that was really JetBrains jcef_helper.exe sideloading a tampered libcef.dll, packed with VMProtect and pulling its next stage from an Ethereum BSC contract using the EtherHiding technique, while a second persistence path dropped a signed IBM SPSS binary as sslconf.exe alongside a malicious tempdir.dll that gated execution on DXGI adapter IDs, sub-1GB VRAM, and compute shader timing to defeat sandboxes, then decrypted its payload with a DirectX shader running a modified AES-256-CTR rather than any hookable crypto API. Huntress traced the resulting SectopRAT build to C2 at 2.24.131[.]246, tied the registrant of download-app[.]us to ten domains going back to December 2025, and matched the tradecraft to a fake Docker Desktop campaign in April that used the same libcef.dll sideloading pattern against 29 organizations between July 21 and 22. Hunt for ClaudeDesktop.exe and DockerDesktop.exe writes, scheduled tasks pointing into %APPDATA%\\Roaming\\Microsoft\\EdgeUpdate\\Install, and Defender exclusions added around software installs, block the listed C2 range and the two BSC contracts as pivot indicators, and treat vendor domains as untrusted download sources when the landing page is a user-generated artifact, since the Anthropic disclaimer that artifact content is unverified was the only signal separating this page from a real one before takedown at 7,100 views.",
+          "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a11",
+          "order": 2,
+          "title": "HOW WE HACKED THOUSANDS OF DATA CENTERS IN MINUTES USING A 20-YEAR-OLD VULNERABILITY",
+          "summary": "Lava researchers scanned UDP port 623 and found 36,872 internet-exposed IPMI hosts, of which 24,650 returned a password-derived HMAC-SHA1 hash during the RAKP authentication exchange before login completed due to CVE-2013-4786, letting an unauthenticated party crack passwords offline. More than half of responding devices were Supermicro systems whose post-2019 unique ten-character factory passwords (a 26^10 keyspace) could still be exhausted in about an hour on an eight-GPU rig, while HPE iLO's eight-character factory format cracked in roughly 32 seconds per captured response. The team also found a live iLO 4 interface defaced with a ransom note demanding 0.3 BTC, evidence that this exposure is already being exploited rather than theoretical, and disclosed the Supermicro password-recovery timeline to the vendor in June, who confirmed it as plausible and is reviewing longer default password formats. Operators should block UDP port 623 at the network edge, rotate factory-issued BMC credentials during provisioning, disable IPMI 1.5, cipher suite 0, and NONE authentication, and isolate BMC access behind a dedicated management VLAN, bastion host, or VPN rather than exposing IPMI or Redfish directly to the internet.",
+          "url": "https://lavahq.io/research/bmc-exposure-alert?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "lavahq.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a12",
+          "order": 1,
+          "title": "6,000+ \"GUARDRAIL-FREE\" AI MODELS. ONE DOWNLOAD AWAY.",
+          "summary": "AI-powered cybercrime is no longer just a future risk. ThreatDown's [13]new research found it's already here, hiding in plain sight on",
+          "url": "https://www.threatdown.com/dl-cybercrime-in-age-of-ai-2026/?utm_medium=referral&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a13",
+          "order": 2,
+          "title": "infrastructure organizations already trust. ThreatDown",
+          "summary": "researchers assess that AI capable of exploiting vulnerabilities at scale could reach criminal marketplaces within roughly six months. Read the _Cybercrime in the age of AI_ [12] report.",
+          "url": "https://www.threatdown.com/",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a14",
+          "order": 3,
+          "title": "FENGARDE",
+          "summary": "FENGARDE is an open source (Apache-2.0) SIEM aimed at European industrial Mittelstand operators, normalizing 16 parsers spanning Cisco ASA, Windows Event Log, Sysmon, Kubernetes audit, CloudTrail, Modbus/TCP, OPC UA, n8n, and MCP tool-call audit logs into OCSF, running 27 correlation rules over a sliding window into OpenSearch, and rendering alerts as draft NIS2 Article 23 and §32 BSIG incident notifications with every entity-specific fact left as an explicit analyst placeholder rather than fabricated. Triage runs against a local Ollama instance with a documented passthrough stub, so alert data never reaches a third-party LLM API, and the whole detection path is demonstrable without Docker through a zero-infra acceptance test.",
+          "url": "https://github.com/supermhel/fengarde?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a15",
+          "order": 4,
+          "title": "PROJECT INCANTATION",
+          "summary": "Project Incantation is a defensive security toolkit for generating adversarial honeydocuments.",
+          "url": "https://github.com/secdev02/Incantation?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a16",
+          "order": 5,
+          "title": "PRIVACY-FOCUSED SEARCH ENGINE NEOSEARCH OPEN-SOURCES CODE TO PROMOTE DECENTRALIZED WEB SEARCH",
+          "summary": "NeoSearch has open-sourced its codebase under the Apache License 2.0, letting anyone inspect, modify, or self-host the ad-free, no-tracking search engine, which uses AI to downrank SEO-driven and affiliate content in favor of independent and authoritative sources while grouping and rewriting result snippets through its Lenses interface.",
+          "url": "https://cyberinsider.com/privacy-focused-search-engine-neosearch-open-sources-code-to-promote-decentralized-web-search/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberinsider.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a17",
+          "order": 1,
+          "title": "OPENAI'S AGENT DIDN'T GO ROGUE. ITS GOVERNANCE DID",
+          "summary": "The recent incident where an unreleased and unguardrailed OpenAI model autonomously hacked Hugging Face is commonly portrayed as an incident of a model going rogue. This is the wrong framing. The agent stayed aligned with its objective of finding a solution to the ExploitGym benchmark but wasn't given the guardrails or governance to understand that trying to steal the solution wasn't an acceptable attack path. The situation is also complicated by the fact that frontier labs are not incentivized to reduce their models' capabilities in tests and the fact that this incident was almost an advertisement for OpenAI.",
+          "url": "https://bindinghook.com/the-openais-agent-didnt-go-rogue-its-governance-did/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "bindinghook.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a18",
+          "order": 2,
+          "title": "SOME PEOPLE'S CHATS WITH CLAUDE AI FOUND TO BE PUBLICLY AVAILABLE ONLINE",
+          "summary": "Users of claude.ai recently discovered that shared chats were indexed by search engines and could be viewed in search results. Anthropic has responded that these chats were shared publicly by users via the option to make them available to anyone with the link. Despite this, some users were surprised to find that they were indexed by search engines.",
+          "url": "https://www.bbc.com/news/articles/cly5qgjk5ywo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a19",
+          "order": 3,
+          "title": "THE CIPHER BEHIND QSYRUPWD: RECONSTRUCTING IBM I PASSWORD HASHES",
+          "summary": "Silent Signal reverse-engineered IBM i's QSYRUPWD API by tracing SCV 10 CIPHER calls through disassembly and live memory patching, mapping how the system chains SHA-1, MD5, AES-128, and Rijndael-256 operations to protect password verifiers once QPWDLVL moves past the legacy DES/SHA-1 modes. The team reconstructed the full decryption chain and confirmed it recovers crackable DES, SHA-1, and NT hash material even at QPWDLVL 4, despite the API requiring *ALLOBJ and *SECADM authority to call.",
+          "url": "https://blog.silentsignal.eu/2026/07/28/the-cipher-behind-qsyrupwd-reconstructing-ibm-i-password-hashes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "blog.silentsignal.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-07-29:a20",
+          "order": 1,
+          "title": "CLAUDE AI JUST CRACKED A POST-QUANTUM TEST SCHEME AND FOUND A FASTER 7-ROUND AES ATTACK",
+          "summary": "Anthropic said its Claude Mythos Preview model found a new lattice symmetry to fully recover HAWK-256 signature keys and cut the cost of a seven-round AES-128 meet-in-the-middle attack by 200 to 800 times, though both results stay far from threatening production HAWK-512/1024 or full ten-round AES-128.",
+          "url": "https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-07-29:a21",
+          "order": 2,
+          "title": "DEF CON BANS META-STYLE 'PERVERT GLASSES'",
+          "summary": "DEF CON has banned Meta-style camera-equipped smart glasses ahead of its 2026 Las Vegas event, joining Monopoly Events and Scottish ferry operator CalMac in restricting discreet recording devices due to increasing privacy and consent concerns.",
+          "url": "https://www.theregister.com/security/2026/07/28/def-con-bans-meta-style-pervert-glasses/5279763?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
