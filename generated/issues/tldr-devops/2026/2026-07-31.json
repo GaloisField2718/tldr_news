@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-07-31",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-07-31",
+  "source_path": "TLDR DevOps/article_31-07-2026.md",
+  "source_content_hash": "sha256:c818511301964654e0c22f43731b2d1598b1266cb549165087d15915aabefb5e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-07-31",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a04",
+          "order": 1,
+          "title": "AUTOMATED ACCESS DOESN'T AUTOMATE PERMISSIONS.",
+          "summary": "Cleaning up forgotten permissions shouldn't be a full-time job. 1Password Privileged Access [5] replaces standing access with just-in-time, just-enough privileges for humans, agents, and machines.\n\n* Access exists only as long as the work requires it * Every access event and session is logged automatically * Permissions are created directly in the system's native policy language * Integrates directly with AWS, Azure, GCP, Kubernetes, Snowflake, and Databricks",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_devops_073126_header_access_doesnt_automate",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a06",
+          "order": 2,
+          "title": "Explore 1Password Privileged Access",
+          "summary": "",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_devops_073126_cta_1password_privileged_access",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a07",
+          "order": 1,
+          "title": "POST-QUANTUM AUTHENTICATION TO ORIGINS IS NOW SUPPORTED",
+          "summary": "Cloudflare's Authenticated Origin Pulls and Custom Origin Trust Store products now support post-quantum authentication via ML-DSA signatures, securing connections between Cloudflare's servers and customer origin servers. The company recommends ML-DSA-44 for most applications, describing it as the most performant option.",
+          "url": "https://blog.cloudflare.com/post-quantum-authentication-to-origins/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a08",
+          "order": 2,
+          "title": "MCP IS GOING STATELESS: WHAT THE NEW SPEC MEANS FOR AI AGENTS",
+          "summary": "The Model Context Protocol releases a spec update that drops stateful sessions in favor of stateless HTTP, meaning remote MCP servers no longer require sticky sessions, shared session stores, or instance coordination to function behind a load balancer. Each request now carries its own context in a metadata object, so any server instance can handle any request. The update also replaces MCP's proprietary logging channel with OpenTelemetry and formally standardizes request tracking using W3C Trace Context, letting teams correlate agent tool calls with the rest of their application stack in a single observability backend.",
+          "url": "https://newrelic.com/blog/ai/mcp-is-going-stateless?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "newrelic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a09",
+          "order": 1,
+          "title": "AUTOMATE CI/CD TROUBLESHOOTING WITH AWS DEVOPS AGENT AND GITHUB",
+          "summary": "AWS demonstrates an autonomous CI/CD troubleshooting workflow that integrates AWS DevOps Agent with GitHub and MCP Server to investigate failures, identify root causes, and create remediation pull requests, reducing manual debugging effort and accelerating incident resolution.",
+          "url": "https://aws.amazon.com/blogs/mt/automate-ci-cd-troubleshooting-with-aws-devops-agent-and-github/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a10",
+          "order": 2,
+          "title": "DOGFOODING AT SCALE: MIGRATING CDNJS TO CLOUDFLARE'S DEVELOPER PLATFORM",
+          "summary": "Cloudflare has migrated cdnjs, a free JavaScript and CSS CDN used on roughly 12% of all websites, to run entirely on its Developer Platform as of June 23. The service handles an average of 108,000 requests per second across more than 330 data centers, with a 98.6% cache hit rate. The new architecture replaces a hybrid setup spanning GCP Functions and a VM, with R2 now serving as the single source of truth for file content and Cloudflare Workflows running the publishing pipeline.",
+          "url": "https://blog.cloudflare.com/cdnjs-dev-platform-migration/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a11",
+          "order": 3,
+          "title": "POSTGRESQL'S MVCC IS BAD: SO IS EVERYONE ELSE'S",
+          "summary": "PostgreSQL's MVCC creates write amplification, table bloat, vacuum pressure, and transaction-ID maintenance by storing old row versions in the table, but competing designs merely move those costs elsewhere. Oracle and InnoDB charge writers and historical readers through undo logs, SQL Server pressures its version store, MongoDB consumes cache and history storage, and LSM databases defer cleanup to compaction, making MVCC a choice about who pays rather than a problem any engine has eliminated.",
+          "url": "https://boringsql.com/posts/mvcc-bad-bad/?utm_source=tldrdevops",
+          "reading_time_minutes": 24,
+          "source_domain": "boringsql.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a12",
+          "order": 1,
+          "title": "BUILD OPEN SOURCE AI AGENT SKILLS. WIN UP TO $5K!",
+          "summary": "Your skill could ship in OpenSearch. For real!\n\nBuild production-grade agentic IDE skills for OpenSearch observability, search, or migration. Ship real code upstream, claim your share of $5,000 IN PRIZES.\n\nEnds Aug 17.",
+          "url": "https://hubs.la/Q04rgDWY0?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a13",
+          "order": 2,
+          "title": "READY TO BUILD YOUR AGENT SKILL? Join the Agent Skills Hackathon",
+          "summary": "",
+          "url": "https://hubs.la/Q04rgDWY0",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a14",
+          "order": 3,
+          "title": "DELIGHTFUL INTEGRATION TESTS IN RUST",
+          "summary": "Rust integration tests can leverage RAII and the testcontainers-rs crate to automatically provision and tear down Docker containers like RabbitMQ, Postgres, and Redis, enabling isolated, parallelizable tests without manual setup or global state.",
+          "url": "https://github.com/alexpusch/rust-magic-patterns/tree/master/delightful-integration-tests?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a15",
+          "order": 4,
+          "title": "TUICR",
+          "summary": "Tuicr is a terminal-based code review tool with vim keybindings that lets developers write inline comments and submit them directly to GitHub or GitLab. Users navigate with j/k, add comments with the c key, then push reviews with a :submit command that supports approvals, change requests, and draft reviews. Reviews can also be copied as structured markdown and pasted into coding agents like Claude, Codex, or Cursor.",
+          "url": "https://github.com/agavra/tuicr?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a16",
+          "order": 1,
+          "title": "FROM PILOT TO PRODUCTION: THE PLATFORM TEAM'S PLAYBOOK FOR SCALING AI CODING AGENTS IN REGULATED INDUSTRIES",
+          "summary": "Regulated organizations can move AI coding agents from experimentation to production by building governance foundations around visibility, controlled environments, audit trails, and policy enforcement to enable secure, scalable adoption.",
+          "url": "https://platformengineering.org/blog/platform-teams-playbook-for-scaling-ai-coding-agents-in-regulated-industries?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "platformengineering.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a17",
+          "order": 2,
+          "title": "YOUR AZURE DEVOPS PIPELINES HAVE A 2027 DEADLINE, AND THE CLOCK HAS JUST STARTED",
+          "summary": "Azure DevOps is deprecating its workload identity federation issuer by July 2027, requiring bulk migration of older Service Connections to the Microsoft Entra issuer via a PowerShell script that pre-creates federated credentials before calling the undocumented MigrateToEntraIssuer REST operation, while excluding multitenant apps from conversion.",
+          "url": "https://sysadmin-central.com/2026/07/01/migrate-azure-devops-service-connections-entra-issuer/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "sysadmin-central.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a18",
+          "order": 3,
+          "title": "CODE REVIEW RESPONSES: ADD CONTEXT WHEN IT COUNTS",
+          "summary": "Code review replies should include a brief explanation when the resulting code does not make the resolution obvious, multiple valid approaches existed, or important decisions happened outside the review thread. Explaining what changed and why helps reviewers verify fixes faster while preserving a useful record of technical decisions for future contributors.",
+          "url": "https://testing.googleblog.com/2026/05/code-review-responses-add-context-when.html?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "testing.googleblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-07-31:a19",
+          "order": 1,
+          "title": "AMAZON EKS NOW SUPPORTS EFA AND PLACEMENT GROUPS ON AMAZON EKS AUTO MODE AND KARPENTER",
+          "summary": "Amazon EKS adds support for EC2 placement groups and Elastic Fabric Adapter configuration in EKS Auto Mode and Karpenter node pools, enabling teams to optimize Kubernetes workloads for distributed computing performance, network efficiency, availability, and fault isolation.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-efa-placement-groups/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-07-31:a20",
+          "order": 2,
+          "title": "STACKED PULL REQUESTS ARE NOW IN PUBLIC PREVIEW",
+          "summary": "GitHub's stacked pull requests split large changes into ordered, narrowly scoped PRs that can be reviewed in parallel while preserving existing checks and branch protections.",
+          "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/?utm_source=tldrdevops%5B21%5D%5B22",
+          "reading_time_minutes": 3,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
