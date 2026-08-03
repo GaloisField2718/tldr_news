@@ -21,6 +21,7 @@ SECTION_ALLOWLIST = {
     "HEADLINES & TRENDS",
     "TOOLS & RESOURCES",
     "DEEP DIVES & ANALYSIS",
+    "DEEP DIVES",
     "ENGINEERING & RESEARCH",
     "LAUNCHES & TOOLS",
     "STRATEGIES & TACTICS",
@@ -266,6 +267,15 @@ def skip_preamble(lines: list[str]) -> int:
             continue
         upper = line.strip().upper()
         if "MINUTE READ" in upper or "(SPONSOR)" in upper or "(GITHUB" in upper:
+            return i
+        # A title can wrap before its marker, e.g. "HEADLINE (13" followed by
+        # "MINUTE READ) [4]". Starting on the marker-only continuation permanently
+        # discards the actual headline. Inspect the complete non-empty block and return
+        # the first title line instead; this also remains safe when a new section label
+        # has not yet been added to SECTION_ALLOWLIST because the blank after it stops
+        # joined_block before the title.
+        block = joined_block(lines, i)
+        if READING_TIME_RE.search(block) or CONTENT_MARKER_RE.search(block):
             return i
     # Fall back: after Sign Up / TLDR brand block
     for i, line in enumerate(lines):

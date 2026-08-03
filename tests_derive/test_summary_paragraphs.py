@@ -114,6 +114,23 @@ class InlineFormatParagraphs(unittest.TestCase):
 
 
 class LinksBlockFormatParagraphs(unittest.TestCase):
+    def test_preamble_keeps_first_line_of_wrapped_lead_title(self) -> None:
+        # Production regression from TLDR Data 2026-08-03. The old preamble scan
+        # started at the marker-only second line and published the title "MINUTE READ)".
+        body = (
+            "DEEP DIVES\n\n"
+            "HOW DOORDASH BUILT A CENTRALIZED GATEWAY FOR AI AGENT-TOOL ACCESS (13\n"
+            "MINUTE READ) [4]\n\n"
+            "DoorDash built a centralized Agent Gateway for governed tool access.\n"
+        )
+        found = articles(links_issue(body, "[4] https://example.com/doordash\n"))
+        self.assertEqual(len(found), 1)
+        self.assertEqual(
+            found[0].title,
+            "HOW DOORDASH BUILT A CENTRALIZED GATEWAY FOR AI AGENT-TOOL ACCESS",
+        )
+        self.assertEqual(found[0].reading_time_minutes, 13)
+
     def test_single_paragraph_summary_is_unchanged(self) -> None:
         body = "BIG TECH & STARTUPS\n\nA FIRST STORY (2 MINUTE READ) [1]\n\nOnly one paragraph.\n"
         found = articles(links_issue(body))
