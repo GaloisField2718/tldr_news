@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-03",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-03",
+  "source_path": "TLDR Data/article_03-08-2026.md",
+  "source_content_hash": "sha256:c5b2375ec4bea78b2fa919fa06847aae1d9deb3529e494e4a08534d50e8678ca",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-03:a04",
+          "order": 1,
+          "title": "MINUTE READ)",
+          "summary": "DoorDash built a centralized Agent Gateway that gives AI agents governed access to MCP tools, handling identity, authorization, credentials, filtering, observability, and rate limits. It now supports 200+ MCP servers and millions of weekly calls while improving security, reliability, and control.",
+          "url": "https://careersatdoordash.com/blog/how-doordash-built-a-centralized-gateway-for-ai-agent-tool-access/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "careersatdoordash.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a05",
+          "order": 2,
+          "title": "PARTING THE CLOUDS: THE RISE OF DISAGGREGATED SYSTEMS (47 MINUTE VIDEO)",
+          "summary": "Cloud databases are increasingly separating stateless compute from shared storage to improve elasticity, failover, and pay-per-use economics. The tradeoff is remote I/O latency and bandwidth, so systems such as Aurora, AlloyDB, DSQL, PolarDB, and TaurusDB lean on buffering, prefetching, pushdown, RDMA/CXL, and careful log/storage design.",
+          "url": "https://www.infoq.com/presentations/disaggregation-industrial-systems/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a06",
+          "order": 3,
+          "title": "LEVERAGING DATA ASSETS FEATURES IN AIRFLOW 3.0 TO OPTIMISE RESOURCE UTILIZATION BY MORE THAN 30%",
+          "summary": "Halodoc migrated Airflow workloads from polling sensors and synchronous Redshift loads to Airflow 3.x Assets and deferrable operators. Across 160 DAGs, the team reduced worker CPU from 26.1% to 7.71% and worker memory from 49.2% to 30.8%, while also lowering scheduler load and reducing Redshift table-locking errors by about 38%.",
+          "url": "https://blogs.halodoc.io/leveraging-data-assets-features-in-airflow-3-0-to-optimise-resource-utilization-by-more-than-30/?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "blogs.halodoc.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-03:a07",
+          "order": 1,
+          "title": "OPENAI JUST MADE ANALYTICS 10X CHEAPER",
+          "summary": "OpenAI's cheaper GPT 5.6 Luna shifts agentic analytics toward small, fast models paired with low-latency analytical databases, delivering highly accurate SQL answers for under half a cent while making frequent evals far more affordable. The advantage now comes less from using the smartest model and more from strong business context, rigorous model-agnostic evals, and a responsive data platform.",
+          "url": "https://motherduck.com/blog/openai-just-made-analytics-10x-cheaper/?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "motherduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a08",
+          "order": 2,
+          "title": "BEYOND HAPPY PATH ENGINEERING: DATABASES",
+          "summary": "Production databases fail at the edges: stale replica reads, ambiguous commits, deadlocks, and live migrations can break flows that pass the happy-path tests. The practical takeaway is to enforce invariants at the database boundary with guarded writes, constraints, short transactions, idempotent retries, and explicit recovery procedures.",
+          "url": "https://blog.gaborkoos.com/posts/2026-08-01-Beyond-Happy-Path-Engineering-Databases/?utm_source=tldrdata",
+          "reading_time_minutes": 18,
+          "source_domain": "blog.gaborkoos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a09",
+          "order": 3,
+          "title": "KAFKA'S BROKEN PROMISE: THERE IS NO GOLDILOCKS LOG",
+          "summary": "Kafka's partitioned stream model is a poor fit for router-style workloads with millions of independently keyed ordered logs. OpenData Log is built in Rust on object storage and SlateDB. It uses segmented LSM storage, key-based scans, metadata-only splits, and read replicas to support high-cardinality log routing more cheaply.",
+          "url": "https://www.opendata.dev/blog/announcing-opendata-log?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "opendata.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-03:a10",
+          "order": 1,
+          "title": "ASYNCHRONOUS I/O IN DUCKDB: WORK, THREAD, WORK",
+          "summary": "DuckDB is adding asynchronous I/O so worker threads stop blocking on S3-backed Parquet and CSV reads. The design separates async and worker pools, adds read-ahead and memory governance, and shows some large performance wins: TPC-H Q6 on 22 GB Parquet fell from 8.23s to 2.84s, while a large CSV scan time improved by nearly 20x.",
+          "url": "https://duckdb.org/2026/07/31/asynchronous-io.html?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a11",
+          "order": 2,
+          "title": "VIDEO NEEDS A KNOWLEDGE BASE",
+          "summary": "Video is difficult to use because it can be stored and watched but not queried, forcing manual review or repeated AI processing. CreativAI's platform structures footage once into a searchable knowledge base for fast queries across robotics, logistics, safety, compliance, and physical AI use cases.",
+          "url": "https://creativ-ai.com/blogs/video-needs-a-knowledge-base?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "creativ-ai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a12",
+          "order": 3,
+          "title": "XBERG",
+          "summary": "Xberg is an open-source engine that extracts text, tables, metadata, and structured data from 101 formats, including PDFs, images, audio, video, URLs, archives, and code. Its Rust core supports 15 languages plus OCR, transcription, embeddings, structured extraction, and deployment through libraries, CLI, REST, MCP, Docker, or Helm.",
+          "url": "https://github.com/xberg-io/xberg?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-03:a13",
+          "order": 1,
+          "title": "PGSIMCITY",
+          "summary": "PGSimCity is an interactive educational simulator that represents a PostgreSQL database as a 3D city. You can adjust workload settings or trigger scenarios such as checkpoint storms, cache thrashing, autovacuum blockages, lock pile-ups, and replication lag to see how PostgreSQL's internal systems affect performance.",
+          "url": "https://nikolays.github.io/PGSimCity/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "nikolays.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a14",
+          "order": 2,
+          "title": "DATA LESSONS FROM INSIDE META (SHRIDHAR IYER)",
+          "summary": "Meta's data platform evolved into a strongly typed, unified stack with centralized catalog, taxonomy, lineage, and policy layers. Its scale lessons: one truncated debug column saved millions of dollars, core tables serving 40–50% of the warehouse required versioning rather than deletion, and AI-readiness starts with reusable workflow primitives.",
+          "url": "https://roundup.getdbt.com/p/data-lessons-from-inside-meta-shridhar?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "roundup.getdbt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a15",
+          "order": 3,
+          "title": "CROWDSOURCED TAXONOMY VERIFICATION: A FEEDBACK-DRIVEN FRAMEWORK FOR REFINING KNOWLEDGE GRAPH RELATIONSHIPS VIA ONLINE SEARCH INTERACTIONS",
+          "summary": "Grab treats knowledge-graph relationships as hypotheses that can be validated with live search behavior. Candidate parent, child, and sibling relationships are injected into suggestions, then clicks, dwell time, scrolls, and conversions are aggregated into confidence scores that promote or prune taxonomy edges.",
+          "url": "https://engineering.grab.com/crowdsourced-taxonomy-verification?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "engineering.grab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-03:a16",
+          "order": 1,
+          "title": "POSTGRES INDEX TYPES EXPLAINED: B-TREE, GIN, BRIN, AND OPERATORS",
+          "summary": "A practical refresher on matching Postgres index types to equality, range, array, JSONB, text-search, and append-only time-series access patterns.",
+          "url": "https://levelup.gitconnected.com/postgres-index-types-explained-b-tree-gin-brin-and-operators-6d89177af2e2?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "levelup.gitconnected.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-03:a17",
+          "order": 2,
+          "title": "MICROSOFT ALMOST GAVE AWAY THE KEYS TO EVERYONE'S AZURE COSMOS DBS",
+          "summary": "A sharp reminder that managed NoSQL platforms can still expose master keys, so cloud secret posture and key rotation assumptions need regular review.",
+          "url": "https://www.infoworld.com/article/4203930/microsoft-almost-gave-away-the-keys-to-everyones-azure-cosmos-dbs-2.html?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
