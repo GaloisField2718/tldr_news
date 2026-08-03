@@ -9,7 +9,10 @@
 # Every minute during hour 10: IMAP ingestion + generate --changed
 * 10 * * * cd /home/galois/bots/tldr_news && ./automation.sh
 
-# Every minute during hour 17: validate + commit + rebase/push
+# Every minute during hour 16: late-afternoon catch-up ingestion before publication
+* 16 * * * cd /home/galois/bots/tldr_news && ./automation.sh
+
+# Every minute during hour 17: same-day validate + commit + rebase/push
 * 17 * * * cd /home/galois/bots/tldr_news && ./push_script.sh
 
 # Every minute during hour 23: second ingestion window

@@ -8,10 +8,16 @@ The live crontab runs jobs **every minute during specific hours**:
 
 | Hour | Script | Purpose |
 |------|--------|---------|
-| 10 | `automation.sh` | IMAP ingestion → `generate --changed` |
-| 17 | `push_script.sh` | sync / validate / commit / rebase / push |
-| 23 | `automation.sh` | second ingestion window |
-| 00 | `push_script.sh` | second push window |
+| 10 | `automation.sh` | first IMAP ingestion → `generate --changed` |
+| 16 | `automation.sh` | late-afternoon catch-up ingestion |
+| 17 | `push_script.sh` | same-day sync / validate / commit / rebase / push |
+| 23 | `automation.sh` | overnight safety ingestion window |
+| 00 | `push_script.sh` | overnight safety push window |
+
+The 16:00/17:00 UTC pair publishes the complete edition around 19:00 in France
+while summer time is active (18:00 in winter). The 23:00/00:00 pair remains as a
+non-destructive catch-up for unusually late newsletters and preserves the current day's
+pending overnight generation.
 
 Because `* 10 * * *` means every minute of hour 10, scripts are idempotent and
 share a non-blocking exclusive lock (`/tmp/tldr_news_pipeline.lock`) via
