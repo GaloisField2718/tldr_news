@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-08-03",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-08-03",
+  "source_path": "TLDR DevOps/article_03-08-2026.md",
+  "source_content_hash": "sha256:25216e11bfcad225a29f632e312d4915250019c1ec33824d2b25baadc2f37c9b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-08-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a04",
+          "order": 1,
+          "title": "RUNNING KIMI K3 LOCALLY? UNLESS YOU HAVE 1.6 TB OF RAM, YOU'LL NEED TO QUANTIZE IT",
+          "summary": "Want to run open-weight models on your own hardware? Unless you've got extra TBs of RAM lying around, that's gonna cost you.\n\nQuantization makes LLMs 4x smaller and 2x faster [5] while only losing 5-10% in accuracy. This ngrok blog breaks down:\n\n* How floating point precision works and how models sacrifice it * How to compress floats [6] using quantization * How to measure model quality loss after quantization\n\nLearn how to route between local models and the bleeding edge.",
+          "url": "https://ngrok.com/blog/quantization?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-03_Primary_ngrok&utm_content=header_running_kimi_k3",
+          "reading_time_minutes": null,
+          "source_domain": "ngrok.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a07",
+          "order": 2,
+          "title": "Read the blog",
+          "summary": "",
+          "url": "https://ngrok.com/blog/quantization?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-03_Primary_ngrok&utm_content=cta_blog",
+          "reading_time_minutes": null,
+          "source_domain": "ngrok.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a08",
+          "order": 1,
+          "title": "TERRAFORM AZURERM PROVIDER 5.0 NOW GENERALLY AVAILABLE",
+          "summary": "Terraform AzureRM Provider 5.0 is generally available with improved Azure subscription control, opt-in preflight validation, updated validation defaults, and removal of deprecated resources and properties. The major release simplifies provider behavior, improves infrastructure feedback, and requires users to review configurations before upgrading.",
+          "url": "https://www.hashicorp.com/en/blog/terraform-azurerm-provider-50-now-generally-available?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "hashicorp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a09",
+          "order": 2,
+          "title": "KUBERNETES V1.37 SNEAK PEEK",
+          "summary": "Kubernetes v1.37, planned for release on August 26, will deprecate ipvs mode in kube-proxy, with clusters running that mode now logging a deprecation warning on startup. Static pods will no longer be allowed to reference Secrets or ConfigMaps via API fields, closing a long-standing bug, and the --filename flag for kubectl run is also being deprecated. The metrics.k8s.io API will graduate to stable after nearly nine years in beta, and kubelet in User Namespace (Rootless Mode) moves to beta, allowing node components to run without host-level root privileges. Cgroup v1 support continues its phaseout, with removal planned for a future release.",
+          "url": "https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a10",
+          "order": 1,
+          "title": "DEPLOY ENTERPRISE POWERSHELL MODULES USING AZURE ARTIFACTS",
+          "summary": "Enterprise PowerShell modules can be distributed via a private Azure Artifacts feed using PSResourceGet, with Azure DevOps pipelines handling GitVersion-based semantic versioning, Key Vault code signing, and JEA restricting privileged runtime access.",
+          "url": "https://adamtheautomator.com/deploy-enterprise-powershell-modules-using-azure/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "adamtheautomator.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a11",
+          "order": 2,
+          "title": "SCALING KUBERNETES PODS WITH KEDA BASED ON AMAZON SQS QUEUE DEPTH",
+          "summary": "This article walks through how to use KEDA to scale Kubernetes worker pods based on Amazon SQS queue depth rather than CPU or memory usage. The core idea is that in queue-driven systems, the number of messages waiting is a more accurate signal of demand than infrastructure utilization. KEDA calculates desired replica counts using the formula: outstanding messages divided by a configured per-pod target. It can scale deployments all the way down to zero when queues are empty.",
+          "url": "https://www.cncf.io/blog/2026/07/31/scaling-kubernetes-pods-with-keda-based-on-amazon-sqs-queue-depth/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a12",
+          "order": 3,
+          "title": "SPEED IS BECOMING MORE IMPORTANT THAN INTELLIGENCE FOR AI MODELS",
+          "summary": "Once models are capable enough for everyday coding, research, and analysis, inference speed can matter more than marginal gains in intelligence, with roughly 100–200 output tokens per second feeling fast enough for interactive work. Further model acceleration eventually produces diminishing returns because tool calls, databases, local hardware, and human review become the dominant bottlenecks, shifting competition toward serving speed and price.",
+          "url": "https://martinalderson.com/posts/speed-vs-intelligence/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "martinalderson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a13",
+          "order": 1,
+          "title": "DWARFSTAR",
+          "summary": "DwarfStar is a native inference engine built specifically for running DeepSeek V4 Flash and DeepSeek V4 PRO locally, with additional support for GLM 5.2. It is not a general GGUF runner. The project includes model loading, prompt rendering, tool calls, KV state, an HTTP server, and a coding agent built and tested together. It supports Metal on macOS, CUDA, and ROCm backends, and can split large models across multiple machines using pipeline or tensor parallelism over Thunderbolt or TCP.",
+          "url": "https://github.com/antirez/ds4?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a14",
+          "order": 2,
+          "title": "KANEO",
+          "summary": "Kaneo is an open source project management tool built around a minimal feature set, on the premise that most competing platforms include too many features rather than too few. It supports Docker Compose and Kubernetes deployments, and a CLI tool called drim handles HTTPS, database setup, and service configuration automatically.",
+          "url": "https://github.com/usekaneo/kaneo?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a15",
+          "order": 1,
+          "title": "HOW CLOUDFORMATION EXPRESS MODE ACCELERATES YOUR DEVELOPMENT CYCLE",
+          "summary": "AWS CloudFormation Express mode reports stack completion as soon as resource configuration is applied rather than waiting for full stabilization, speeding development iteration and AI agent workflows while preserving dependency ordering and rollback options.",
+          "url": "https://aws.amazon.com/blogs/devops/how-cloudformation-express-mode-accelerates-your-development-cycle/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a16",
+          "order": 2,
+          "title": "FASTER FLOATING-POINT MATH WITH RUST'S NEW API",
+          "summary": "Rust 1.98 adds algebraic floating-point operations that let developers explicitly permit reassociation and fused instructions without enabling every risky optimization associated with fast-math. Allowing the compiler to reorder independent calculations can unlock SIMD vectorization and significantly accelerate numerical workloads, with the tradeoff that results may vary slightly because floating-point addition is not associative.",
+          "url": "https://pythonspeed.com/articles/faster-float-math-rust/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "pythonspeed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-03:a17",
+          "order": 1,
+          "title": "INCIDENT INVESTIGATION SHOULDN'T CONSUME HOURS OF YOUR TIME",
+          "summary": "This AWS + New Relic webinar shows you to autonomously triage incidents, pinpoint root cause, and remediate without custom tooling.",
+          "url": "https://newrelic.com/events/2026-07-22/autonomous-ai-ops-with-aws-devops-agent-and-new-relic?utm_campaign=FY27-Q2--AMER--aws-webinar-july-on-demand-promo&utm_source=tldr&utm_medium=endemic&utm_content=news",
+          "reading_time_minutes": null,
+          "source_domain": "newrelic.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a17-02",
+          "order": 2,
+          "title": "See how orgs are cutting MTTR by 75%. Watch now",
+          "summary": "",
+          "url": "https://newrelic.com/events/2026-07-22/autonomous-ai-ops-with-aws-devops-agent-and-new-relic?utm_campaign=FY27-Q2--AMER--aws-webinar-july-on-demand-promo&utm_source=tldr&utm_medium=endemic&utm_content=news",
+          "reading_time_minutes": null,
+          "source_domain": "newrelic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a18",
+          "order": 3,
+          "title": "MAKE OCI COMPUTE LOGS PART OF YOUR SECURITY POSTURE",
+          "summary": "Oracle Log Analytics enables security teams to collect OCI Compute instance logs via the Add Data workflow and analyze access activity, failed logins, and privilege escalation attempts through curated Compute dashboards for deeper investigation.",
+          "url": "https://blogs.oracle.com/observability/compute-logs-security-posture-la?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "blogs.oracle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a19",
+          "order": 4,
+          "title": "RETIREMENT OF AZURE DEVOPS ISSUER IN WORKLOAD IDENTITY FEDERATION SERVICE CONNECTIONS",
+          "summary": "Microsoft is deprecating the Azure DevOps issuer for workload identity federation service connections, retiring it by July 1, 2027, and standardizing on the Microsoft Entra issuer, excluding multitenant apps and non-public cloud scenarios.",
+          "url": "https://devblogs.microsoft.com/devops/retirement-of-azure-devops-issuer-in-workload-identity-federation-service-connections/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-03:a20",
+          "order": 5,
+          "title": "DOCKER OIDC CONNECTIONS FOR GITHUB ACTIONS AVAILABLE FOR DOCKER ORGS",
+          "summary": "Docker now supports OpenID Connect (OIDC) for GitHub Actions, letting workflows authenticate with short-lived, per-run tokens instead of stored personal access tokens or organization access tokens.",
+          "url": "https://www.docker.com/blog/docker-oidc-connections-for-github-actions-available-for-docker-orgs/?utm_source=tldrdevops%5B21%5D%5B22",
+          "reading_time_minutes": 3,
+          "source_domain": "docker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

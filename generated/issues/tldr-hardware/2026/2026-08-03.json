@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-hardware:2026-08-03",
+  "sector": "TLDR Hardware",
+  "sector_slug": "tldr-hardware",
+  "date": "2026-08-03",
+  "source_path": "TLDR Hardware/article_03-08-2026.md",
+  "source_content_hash": "sha256:39c920cb1c01f0c0f8ac994ec2e10611126fb43299db5761d8531215d732ad51",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR HARDWARE 2026-08-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-08-03:a04",
+          "order": 1,
+          "title": "US BANS FOREIGN-MADE ROBOTS, CHINA THREATENS RETALIATION",
+          "summary": "The FCC issued a ban this week on new, foreign-made humanoid robots, quadrupeds, robovacs, and sidewalk delivery robots, citing privacy risks from devices that map homes and public spaces plus supply-chain security concerns. China threatened retaliation, calling it a threat to \"economic and trade stability.\" While the ban doesn't name China outright, the country controls roughly 85% of the global humanoid robot market. The rule doesn't target specific companies or actually curb data collection, and many US robotics firms that rely on Chinese components are worried it could gut their own supply chains instead.",
+          "url": "https://www.morningbrew.com/stories/us-bans-foreign-made-robots-china-retaliate?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "morningbrew.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a05",
+          "order": 2,
+          "title": "HYPERSCALERS BUILD AI DATACENTERS LIKE LEGO SETS TO OUTRUN GRID AND LABOR BOTTLENECKS",
+          "summary": "Hyperscalers like AWS and Meta are snapping together factory-prefabricated modular datacenters, building mechanical and electrical fit-outs off-site like standardized Lego blocks to bypass construction labor shortages, compressing building schedules by 36% and cutting on-site licensed electrician labor by 85%. It's part of a broader trend of routing around old bottlenecks entirely: developers are increasingly wiring GPU clusters directly to co-located natural gas generation, small modular reactors, or existing nuclear plants, cutting time-to-power from 60 months down to under 18.",
+          "url": "https://newsletter.semianalysis.com/p/the-wild-wild-west-of-lego-datacenters?utm_source=tldrhardware",
+          "reading_time_minutes": 7,
+          "source_domain": "newsletter.semianalysis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a06",
+          "order": 3,
+          "title": "RUNNING A 28.9M PARAMETER LLM ON AN $8 MICROCONTROLLER",
+          "summary": "A developer got a 28.9M parameter language model running entirely on an ESP32-S3, a microcontroller with just 512KB of SRAM. The trick, borrowed from Google's Gemma models, is called Per-Layer Embeddings: instead of loading the full network into fast memory, about 25 million parameters live in flash as a lookup table, and only the bytes needed for the current token get read out during inference, while the smaller layers stay in SRAM. After quantization, the whole model shrinks to 14.9MB, fitting comfortably on the board's flash, and it generates about 9.5 tokens per second on an $8 chip.",
+          "url": "https://www.hackster.io/news/running-a-28-9m-parameter-llm-on-an-8-microcontroller-173f1f370708?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "hackster.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a07",
+          "order": 4,
+          "title": "QUALCOMM CLOSES ALL-STOCK ACQUISITION OF COMPILER STARTUP MODULAR",
+          "summary": "Qualcomm finished buying Modular, the AI infrastructure company behind the Mojo programming language and the MAX inference framework. Modular's whole appeal is that its software lets the same model code run across CPUs, GPUs, NPUs, and custom silicon without rewriting kernels for each one. Qualcomm just raised its 2029 target to $40 billion in non-handset revenue, with data center alone expected to contribute over $15 billion, and it's betting that owning the compiler and serving layer outright, not just the silicon, is what gets new Qualcomm AI chips performing well from day one.",
+          "url": "https://www.unite.ai/qualcomm-closes-all-stock-acquisition-of-compiler-startup-modular/?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "unite.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a08",
+          "order": 5,
+          "title": "SERIOUS HARDWARE ENGINEERING NEEDS ITS OWN PLATFORM",
+          "summary": "General-purpose AI and data tools aren't built for physical systems. The result? Frequent breakage under pressure, at speed, and on high-consequence projects. Nominal [8] connects the major product components engineers now stitch together to help hardware engineers validate, operate, and improve machines. See how Anduril engineers",
+          "url": "https://nominal.io/products/core/?utm_source=tldrhardware&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "nominal.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a09",
+          "order": 6,
+          "title": "with Nominal",
+          "summary": "",
+          "url": "https://nominal.io/blog/anduril-case-study/?utm_source=tldrhardware&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "nominal.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a10",
+          "order": 7,
+          "title": "ROBOTS STRUGGLE TO COMBINE FAMILIAR INSTRUCTIONS IN NEW WAYS, HERE'S WHY",
+          "summary": "Robots trained on step-by-step instructions often fail on new combinations of familiar steps they weren't directly shown, and collecting demonstrations for every possible combination is impractically expensive. This paper breaks that failure down into three distinct causes - shifts in individual instructions, shifts in how instructions combine, and shifts in the surrounding context - to figure out exactly what a training set needs to cover rather than how much of it. Full coverage of every instruction combination isn't necessary: a carefully chosen quarter of the task space can match it, as long as that subset preserves the real dependencies between actions rather than just varying surface details.",
+          "url": "https://arxiv.org/abs/2607.29687?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a11",
+          "order": 8,
+          "title": "TAU ROBOTICS STARTS A $30/HOUR HUMANOID HOME-CLEANING PILOT",
+          "summary": "Tau Robotics has opened an invite-only San Francisco pilot using humanoid robots for vacuuming, surface cleaning, trash removal, and deep cleaning around appliances. The robots combine AI with live human supervision, with each unit assigned to one appointment at a time during the initial roll-out. The service is priced at $30 per hour and is currently limited to selected households.",
+          "url": "https://www.tau-robotics.com?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "tau-robotics.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-08-03:a12",
+          "order": 1,
+          "title": "CHINESE MILITARY RESEARCHERS TAP US AI MODELS TO TRAIN DEFENSE SYSTEMS",
+          "summary": "A review of over 80 Chinese academic papers and patents found military and security-linked researchers using \"model distillation\" to train smaller domestic AI systems on outputs from OpenAI and Anthropic models, letting them extract frontier-level capability without needing the massive GPU clusters normally required to train from scratch. It's a workaround that directly undercuts the logic of US chip export controls, since restricting access to advanced silicon matters less if capability can be distilled down onto whatever hardware is already available domestically.",
+          "url": "https://links.tldrnewsletter.com/ZssrBo",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a13",
+          "order": 2,
+          "title": "WHY COMPUTE MIGHT GET 10X MORE EXPENSIVE IN COMING YEARS",
+          "summary": "GPU spot rental rates could surge 10x–15x as frontier models gain human-level software engineering capabilities. Physical GPU supply only scales ~3x annually due to fab and packaging bottlenecks, so the immense economic value of automated labor will drive inference willingness-to-pay far higher than current market spot prices.",
+          "url": "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive?utm_source=tldrhardware",
+          "reading_time_minutes": 6,
+          "source_domain": "dwarkesh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-08-03:a14",
+          "order": 1,
+          "title": "GRITT EXITS STEALTH WITH $34M TO BUILD AI-CONTROLLED ROBOTS FOR SOLAR INSTALLATION",
+          "summary": "Gritt raised a $26 million Series A, bringing total funding to $34 million, to build AI-controlled robots using off-the-shelf hardware that install solar panels roughly 4x faster than a human crew.",
+          "url": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a15",
+          "order": 2,
+          "title": "SPACEX STARSHIP HEAT SHIELD CAN'T SUPPORT RAPID FLIGHTS, EXPERTS WARN",
+          "summary": "Former NASA thermal engineers warn that SpaceX's current ceramic tile thermal protection system remains the main blocker for rapid Starship reuse.",
+          "url": "https://links.tldrnewsletter.com/Fe70Kg",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a16",
+          "order": 3,
+          "title": "US AIR FORCE EXPANDS BLUE ORIGIN ROCKET CARGO CONTRACT",
+          "summary": "The Air Force Research Laboratory awarded Blue Origin an $11.7 million contract modification to study rocket-based military cargo delivery, bringing the total contract value to about $13 million under the REGAL program.",
+          "url": "https://spacenews.com/u-s-air-force-expands-blue-origin-rocket-cargo-contract/?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "spacenews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a17",
+          "order": 4,
+          "title": "IONQ COMPLETES ACQUISITION OF SKYWATER TECHNOLOGY",
+          "summary": "IonQ closed its purchase of SkyWater Technology, the largest exclusively US-based semiconductor foundry, giving it a domestic in-house fab to manufacture its own quantum chips rather than relying on outside foundries.",
+          "url": "https://www.ionq.com/news/ionq-completes-acquisition-of-skywater-technology?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "ionq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a18",
+          "order": 5,
+          "title": "AI DATA CENTERS CREATE SUPPLY-CHAIN SHOCK",
+          "summary": "Apple shares fell nearly 10% after its forecast revealed difficulty securing components as data centers absorb global chip and memory capacity.",
+          "url": "https://links.tldrnewsletter.com/ct4HfT",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-08-03:a19",
+          "order": 6,
+          "title": "META REPORTS $27.9 BILLION IN FUTURE DATA CENTER LEASES FOR AI",
+          "summary": "Meta disclosed $27.9 billion in long-term data center lease commitments in its Q2 financial filings.",
+          "url": "https://links.tldrnewsletter.com/i6pM51",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
