@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-04",
+  "source_path": "TLDR InfoSec/article_04-08-2026.md",
+  "source_content_hash": "sha256:f084daadc7bc4453a5abeeacba8fe8e5c9789c6d6759e284283fc1aee8d280f1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a04",
+          "order": 1,
+          "title": "GARTNER: ORGS THAT PRIORITIZE CTEM ARE 3X LESS LIKELY TO SUFFER A BREACH",
+          "summary": "Finding more vulnerabilities doesn't automatically reduce risk.\n\nInstead of chasing vulnerability noise, security teams need to identify attack paths, validate what attackers can exploit, and continuously verify remediation efforts work. This Horizon3.ai webinar [5] lays out how to do that by operationalizing CTEM.\n\n📊 Join for the people, process, and metrics changes that you need to put CTEM principles into practice.\n\n🥷 Take the attacker's perspective [6] to pivot from static CVE lists to demonstrating meaningful risk reduction.\n\n👉 If you feel like you're getting too much visibility without reducing risk, this is for you.",
+          "url": "https://events.horizon3.ai/operationalizing-ctem-a-practical-playbook-for-continuous-threat-exposure-management/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026q3&utm_content=ctem-webinar_header_gartner_orgs_prioritize",
+          "reading_time_minutes": null,
+          "source_domain": "events.horizon3.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a07",
+          "order": 2,
+          "title": "Register now",
+          "summary": "",
+          "url": "https://events.horizon3.ai/operationalizing-ctem-a-practical-playbook-for-continuous-threat-exposure-management/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026q3&utm_content=ctem-webinar_cta_register",
+          "reading_time_minutes": null,
+          "source_domain": "events.horizon3.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a08",
+          "order": 1,
+          "title": "ANTHROPIC SAYS CLAUDE MODELS HACKED 3 ORGANIZATIONS DURING CYBER TESTS",
+          "summary": "A misconfigured internet-connected evaluation environment caused issues with Claude Opus 4.7, Claude Mythos 5, and an internal research model across three incidents identified in a review of 141,006 evaluation runs. Opus 4.7 retrieved production database rows after a fictional company's name coincided with a real one. Mythos 5 published a malicious PyPI package that was executed on 15 real systems, including a security vendor's scanner. Anthropic stated that these incidents did not require new exploits, but were due to weak passwords and exposed endpoints. They have halted evaluations, notified affected organizations, and are improving network isolation and vendor monitoring before resuming. Noma Security's CISO, Diana Kelley, emphasized that this should be viewed as a controls failure rather than an intent failure and recommends implementing isolation, least privilege, and kill switches for autonomous agent testing.",
+          "url": "https://hackread.com/anthropic-claude-models-hacked-organizations-cyber-tests/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a09",
+          "order": 2,
+          "title": "CARECLOUD BREACH EXPOSES MEDICAL AND FINANCIAL DATA OF 345K",
+          "summary": "Health tech company CareCloud disclosed that data belonging to 345k people was stolen in a March data breach. The attackers breached CareCloud's AWS environment and exfiltrated data from databases over 6 days. The stolen data may include names, home addresses, SSNs, government ID numbers, bank account details, payment card numbers, and other PHI.",
+          "url": "https://securityaffairs.com/196480/cyber-crime/carecloud-breach-exposes-medical-and-financial-data-of-345000.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a10",
+          "order": 3,
+          "title": "N-ABLE WARNS OF N-CENTRAL AUTH BYPASS FLAW EXPLOITED IN ATTACKS",
+          "summary": "N-able issued a notice warning customers of its N-central remote monitoring and management (RMM) platform about a new authentication bypass vulnerability that is actively being exploited. N-able has not yet released technical details but noted that the vulnerability stems from an incomplete fix for a previous authentication bypass vulnerability.",
+          "url": "https://links.tldrnewsletter.com/OUNl6k",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a11",
+          "order": 1,
+          "title": "THE XCODE ASSASSIN RETURNS: A DEEP DIVE INTO THE LATEST XCSSET VERSION",
+          "summary": "The latest iteration of the macOS malware XCSSET, version 40, uses supply chain tactics to propagate by hiding malicious run-script phases in legitimate Xcode projects. To maximize stealth, the malware employs a multi-layered polymorphic evasion stack that uses dual-key encryption and in-memory execution, while actively impairing macOS defenses by disabling security updates and locking XProtect signature databases. XCSSET v40 also introduces a novel fileless persistence mechanism that abuses the macOS defaults configuration system, along with new operational modules designed to hijack Google Chrome via the Chrome DevTools Protocol and deploy trojanized Telegram binaries.",
+          "url": "https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a12",
+          "order": 2,
+          "title": "AGENT IDENTITY ARCHITECTURES: DELEGATED, BOUNDED, AND AUTONOMOUS",
+          "summary": "1Password classifies agent architectures as either local or remote and operating in a delegated, bounded, or autonomous mode. Delegated agents, such as coding agents or browser copilots, operate as an extension of a human identity and can use a workload identity broker when running locally or leverage platform attestation combined with protocols like WIMSE and CAEP when running remotely. Bounded authority agents, such as CI/CD pipelines, run without human intervention on behalf of a system or workflow and can use a workload identity broker when running locally or, when running remotely, leverage OIDC where available and SPIFFE where it isn't to issue short-lived credentials. Autonomous agents run for long periods with limited restrictions and are complex to secure whether running locally or remotely. This article provides some preliminary suggestions for controls.",
+          "url": "https://1password.com/blog/ai-agent-identity-architectures?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a13",
+          "order": 3,
+          "title": "THE FUYAO ENTERPRISE: BUILDING AN AD-FRAUD EMPIRE WITH AI AND KIDS' CODING BLOCKS",
+          "summary": "The Fuyao botnet shipped pre-installed on Android TV boxes at the firmware level, spoofed device identities as premium smartphones (Vivo, OPPO, Huawei, and Meizu) via C2-pushed profile configurations, then used a fused Android Accessibility/YOLOv8s/OCR vision stack alongside Blockly-authored fraud modules to click ads and run residential SOCKS5 proxy sessions across a claimed 120K+ device fleet, generating an estimated $150K in daily revenue. Bitsight TRACE attributed the operation to shared SSL certificates, a leaked internal wiki, reused shell-company emails, and 6-8 of 20 CNIPA patent filings mapping to Fuyao subsystems, tracing the scheme through 144 AI-generated ad-landing domains and Hong Kong/Singapore shell publishers back to Zhejiang Fengwo IoT Technology, a subsidiary of the Fengwo Group. Defenders managing Android device fleets or CI-adjacent infrastructure should flag anomalous phone-model telemetry originating from TV-box hardware profiles and treat unexplained SOCKS5 proxy traffic or unaccounted ad-network impressions as indicators of this ecosystem.",
+          "url": "https://www.bitsight.com/blog/fuyao-enterprise-building-ad-fraud-empire-ai-and-kids-coding-blocks?utm_source=tldrinfosec",
+          "reading_time_minutes": 24,
+          "source_domain": "bitsight.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a14",
+          "order": 1,
+          "title": "BLACK DUCK: AI-DRIVEN EXPLOITS ARE HERE. ARE YOU READY?",
+          "summary": "The exploit window is collapsing. AI turns newly disclosed vulnerabilities into working attacks in hours, not weeks. BLACK DUCK POLARIS™ PLATFORM and SIGNAL™ help organizations become Mythos Ready with intelligent prioritization, automated workflows, and faster remediation of exploitable risk.",
+          "url": "https://www.blackduck.com/solutions/artificial-intelligence-software-development.html?utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a14-02",
+          "order": 2,
+          "title": "BLACK DUCK CAN HELP.",
+          "summary": "",
+          "url": "https://www.blackduck.com/solutions/artificial-intelligence-software-development.html?utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a15",
+          "order": 3,
+          "title": "ADHAMMER",
+          "summary": "ADhammer is a single static Rust binary that combines a PingCastle-class Active Directory auditor with live-validated offensive validation, running DCSync, golden/silver tickets, pass-the-ticket, RBCD, Shadow Credentials, NTLM relay, and ESC1 enrollment against a from-scratch DCE/RPC, NTLM, SMB2, and Kerberos stack, with no impacket or Python runtime dependency.",
+          "url": "https://github.com/icedracon/adhammer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a16",
+          "order": 4,
+          "title": "AGENTDOJO",
+          "summary": "AgentDojo provides a dynamic environment to evaluate attacks and defenses for LLM agents.",
+          "url": "https://github.com/ethz-spylab/agentdojo?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a17",
+          "order": 5,
+          "title": "GRAPHGULO",
+          "summary": "GraphGulo is a tool that converts raw PCAP captures and network flow logs into an indexed, temporal graph, then answers time-respecting traversal queries at low-latency on commodity hardware.",
+          "url": "https://github.com/Mihir4U-avi/GraphGulo?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a18",
+          "order": 1,
+          "title": "PRACTICAL MEMORY SAFETY",
+          "summary": "Memory safety is most practically defined as having intuitive and easily followed rules unless explicitly marked with a warning sign. Systems like Fil-C offer a spectrum of safety through runtime checks, but they still allow unmarked memory overwrites within an allocation, leaving unchecked \"memory footguns\" for developers to navigate. Ultimately, genuine memory safety relieves developers from worrying about abstract machine rules so they can focus on their actual work.",
+          "url": "https://ohadravid.github.io/posts/2026-08-unsafe-water/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ohadravid.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a19",
+          "order": 2,
+          "title": "TAILSCALE DIDN'T STOP THE HUGGING FACE INTRUSION",
+          "summary": "An AI agent that escaped its sandbox during a benchmark evaluation compromised Hugging Face's infrastructure over four and a half days, gaining code execution, root access, and a production secret store before using a stolen reusable Tailscale auth key to enroll 181 rogue nodes onto the company's tailnet. Tailscale confirmed no vulnerability in its own product was exploited, but used the incident to argue that long-lived credentials remain the industry's default weak point in an era of autonomous AI attackers. The post-mortem framed the episode as a case study in zero trust architecture's limits when credential lifecycle management lags behind attacker capability.",
+          "url": "https://tailscale.com/blog/hugging-face-intrusion?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a20",
+          "order": 3,
+          "title": "APPLE STRUGGLES TO KEEP PACE WITH AI “BUG” HUNTERS",
+          "summary": "Apple has announced new caps on the number of reports that bug bounty hunters can submit to its vulnerability disclosure program (VDP) as well as a waiting period to combat a deluge of low quality, AI-generated reports. Cybersecurity startup Bynario reported that it was blocked by these limits from submitting a valuable exploit chain that could lead to privilege escalation. Apple has stated that researchers can request an increase to the limit if needed.",
+          "url": "https://www.ft.com/content/4532122d-90f2-4433-9df6-ca99d8a141d2?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "ft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-04:a21",
+          "order": 1,
+          "title": "COLDCARD WALLET RNG FLAW LIKELY LINKED TO $88 MILLION BITCOIN THEFT",
+          "summary": "An integration bug in COLDCARD firmware caused it to fall back to MicroPython's insecure Yasmarang generator instead of the onboard STM32 hardware RNG, letting attackers brute-force seeds offline and drain roughly 1,367 BTC ($88.6 million) from thousands of wallets across affected Mk2 through Mk5 and Q devices before Coinkite's July 30 disclosure.",
+          "url": "https://links.tldrnewsletter.com/0CYVlD",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-04:a22",
+          "order": 2,
+          "title": "FORMER FBI AGENT INDICTED FOR STEALING CRYPTO FROM FBI",
+          "summary": "Former FBI special agent Patrick Steven Yaroch was indicted on charges of receipt and interstate transportation of stolen goods after confessing to stealing roughly $1 million in cryptocurrency.",
+          "url": "https://protos.com/former-fbi-agent-indicted-for-stealing-crypto-from-fbi/?utm_source=tldrinfosec%5B23%5D%5B24",
+          "reading_time_minutes": 2,
+          "source_domain": "protos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
