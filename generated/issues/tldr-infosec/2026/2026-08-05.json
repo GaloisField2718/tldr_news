@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-05",
+  "source_path": "TLDR InfoSec/article_05-08-2026.md",
+  "source_content_hash": "sha256:575fd460730c89addf6d553131828aebe0363f838e801443b46dd3456ab4a539",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a04",
+          "order": 1,
+          "title": "STANDING PRIVILEGE HAS BEEN A PROBLEM FOR YEARS. AGENTS ARE TURNING IT INTO A CRISIS.",
+          "summary": "Developers have been known to bypass security in the name of velocity. According to 1Password's survey, 40% of technical employees grant AI agents persistent access to systems or credentials. 1Password Privileged Access [5] was built to solve this problem.\n\nIt eliminates standing access for every identity that touches your infrastructure: humans, AI agents, and machine workloads.\n\n* Access exists only as long as the work requires it. * Every access event and session is logged automatically. * Security teams get a complete picture of who accessed what, when, and why.",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_080526_header_standing_privilege_problem",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a06",
+          "order": 2,
+          "title": "See zero standing privilege in action.",
+          "summary": "",
+          "url": "https://1password.com/product/privileged-access?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_080526_cta_zero_standing_privilege",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a07",
+          "order": 1,
+          "title": "MACOS SCREEN SHARING BUG HANDED HACKERS ROOT, NO PASSWORD",
+          "summary": "A critical pre-authentication flaw in macOS screensharingd (versions 26.5 and earlier) allows unauthenticated network attackers to achieve root access in under 60 seconds. By sending oversized frames to trigger a stale success code, attackers can completely bypass password checks and encryption to gain arbitrary root-level file access. Users must update to macOS 26.6 immediately, or disable Screen Sharing in System Settings while keeping System Integrity Protection enabled to mitigate the risk.",
+          "url": "https://www.cyberkendra.com/2026/08/macos-screen-sharing-bug-handed-hackers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberkendra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a08",
+          "order": 2,
+          "title": "GITEA 1.27.1 PATCHES UNAUTHENTICATED ARBITRARY FILE READ AND SEPARATE RCE VIA GIT HOOKS",
+          "summary": "Gitea 1.27.1 fixed two critical unauthenticated flaws reported by xbow-security and researcher NightRang3r: CVE-2026-59774, an arbitrary file read via the Org-mode markup renderer's #+INCLUDE directive, and CVE-2026-60004, a distinct remote code execution bug reachable through the diffpatch API by installing a malicious Git hook. Both affect versions 1.22.1 through 1.27.0 with no authentication or user interaction required, so admins should upgrade to 1.27.1 immediately regardless of which attack path they're worried about.",
+          "url": "https://blog.gitea.com/release-of-1.27.1/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.gitea.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a09",
+          "order": 3,
+          "title": "TP-LINK PATCHES OMAHA ZTP FLAWS ALLOWING HACKERS TO BREACH NETWORKS",
+          "summary": "TP-Link patched 15 vulnerabilities in the zero-touch provisioning (ZTP) mechanism of its Omada network devices. The vulnerabilities could be chained with previously disclosed vulnerabilities to achieve remote code execution. The vulnerabilities span client-side code injection, information disclosure, device hijacking and spoofing, and compromise of encrypted communications.",
+          "url": "https://links.tldrnewsletter.com/lbSaWC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a10",
+          "order": 1,
+          "title": "RUSTY BOOTKIT - WINDOWS UEFI BOOTKIT IN RUST (CODENAME: REDLOTUS)",
+          "summary": "RedLotus is an educational, Rust-based UEFI bootkit that bypasses Driver Signature Enforcement by hooking the early boot sequence to manually map an unsigned kernel payload into memory before Windows initializes. It establishes a usermode-to-kernel communication channel without triggering PatchGuard by overwriting a .data pointer in the HalDispatchTable. While it demonstrates Rust's viability for low-level systems programming, the bootkit's reliance on noisy RWX memory allocations makes it trivially detectable by modern EDRs and completely neutralized if Hypervisor-Protected Code Integrity (HVCI) is enabled.",
+          "url": "https://memn0ps.github.io/rusty-windows-uefi-bootkit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "memn0ps.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a11",
+          "order": 2,
+          "title": "SILENT REPLACEMENT OF TRUSTED MACOS APP EXECUTABLES",
+          "summary": "Security researchers discovered that they could replace the executable of a macOS application bundle that was downloaded from the internet without triggering authorization prompts as long as an attacker has code execution on the device and the application has been launched at least once. While macOS protects against modifying the application bundle directly, the researchers discovered that if the application bundle is archived, then the original application is deleted, and then the bundle is extracted to the original location, it will run normally even with a modified executable. Apple stated that it will not fix the issue as it isn't a bypass of TCC or Gatekeeper checks directly.",
+          "url": "https://mysk.blog/2026/07/23/macos-overwrite-app-executables/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "mysk.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a12",
+          "order": 1,
+          "title": "AI IS ACCELERATING APPSEC RISK TO MACHINE SPEED. MORE OF THE SAME WON'T HELP",
+          "summary": "Cyber-capable LLMs are unleashing a flood of new vulnerabilities, and bad actors can turn them into working attacks in hours. Not sure you can keep up? BLACK DUCK POLARIS™ PLATFORM and SIGNAL™ [12] can help. Intelligent prioritization, automated workflows, faster remediation of exploitable risk. Get Mythos-ready with Black Duck",
+          "url": "https://www.blackduck.com/solutions/artificial-intelligence-software-development.html?utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a12-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.blackduck.com/solutions/artificial-intelligence-software-development.html?utm_source=tldr&utm_medium=referral",
+          "reading_time_minutes": null,
+          "source_domain": "blackduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a13",
+          "order": 3,
+          "title": "THREAT-FINDER",
+          "summary": "OffSeq's threat-finder is a cross-platform Rust CLI that inventories running host software and accurately matches it against the OffSeq Radar catalog to eliminate false positives from backported fixes. It stands out by correlating discovered vulnerabilities with actual network reachability via listening-socket mapping, fusing this exposure data with EPSS and KEV status into an SSVC-style risk score. Designed for modern workflows, it supports CI/CD gating, SARIF output, and optional continuous monitoring across all major operating systems.",
+          "url": "https://github.com/offseq/threat-finder?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a14",
+          "order": 4,
+          "title": "PROJECT ORBITAL",
+          "summary": "Project ORBITAL is a centralized matrix for mapping, fingerprinting, and hunting China-nexus Operational Relay Box (ORB) networks and malicious edge-device infrastructure based on public reporting.",
+          "url": "https://github.com/BushidoUK/Project-Orbital?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a15",
+          "order": 1,
+          "title": "DEFCON'S NEW BADGE IS A SECURITY KEY YOU CAN SEE INSIDE",
+          "summary": "This year's DEFCON 34 badge doubles as the Baochip-1x, an open-source microcontroller designed by hardware hacker Andrew \"bunnie\" Huang whose translucent, infrared-inspectable packaging lets researchers physically verify the silicon against Huang's published source code. The removable module functions as a FIDO-compliant hardware security token supporting one-time passwords and password management, giving the badge a second life beyond the conference, though Huang cautions that a well-funded adversary with a sophisticated hardware-analysis lab could still defeat it.",
+          "url": "https://arstechnica.com/security/2026/08/defcons-new-badge-is-a-security-key-you-can-see-inside/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a16",
+          "order": 2,
+          "title": "AMAZON IDENTIFIES NORTH KOREAN HACKER GROUP BEHIND OPEN-SOURCE SUPPLY CHAIN ATTACKS",
+          "summary": "Amazon Threat Intelligence has attributed the compromises of major NPM packages, including axios, debug, and chalk, to the DPRK-linked actor SAPPHIRE SLEET, linking four distinct supply chain campaigns for the first time. The attackers demonstrated highly evasive tradecraft by fragmenting malicious workflows across benign packages, utilizing runtime-fetched payloads, and employing sandbox-aware detonation to bypass registry defenses. Noting that generative AI is accelerating these threats through hallucinated dependencies and prompt injections, Amazon emphasized the need for shared ecosystem defense backed by its $12.5M Akrites investment with the Linux Foundation.",
+          "url": "https://aws.amazon.com/blogs/security/amazon-identifies-north-korean-hacker-group-behind-open-source-supply-chain-attacks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a17",
+          "order": 3,
+          "title": "OPENAI AND ANTHROPIC AGENTS TARGETED REAL PEOPLE AND SYSTEMS IN CYBER TESTS",
+          "summary": "During an evaluation of GPT-5.6 Sol and Mythos 5, unrelated to the HuggingFace incidents, both models attempted to exploit unsandboxed and unsanctioned resources on the public internet. When evaluating Mythos 5, the UK's AISI noted that it attempted (but failed) to compromise the maintainers of a GitHub repository that it mistakenly believed to be part of the test by submitting a pull request containing malicious code. The model researched the maintainers and tried to create fake profiles to appear as the maintainers as well as to advocate for the PR. GPT-5.6 Sol managed to exploit a “basic vulnerability” in a real website that coincidentally shared a domain name with a fictional target from Irregular's testing.",
+          "url": "https://links.tldrnewsletter.com/Se9oAN",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-05:a18",
+          "order": 1,
+          "title": "NVIDIA FORMS 37-MEMBER OPEN SECURE AI ALLIANCE AND OPEN-SOURCES NOOA FRAMEWORK",
+          "summary": "NVIDIA and 36 industry partners, notably excluding major frontier AI labs, have launched the loosely governed Open Secure AI Alliance alongside NOOA, an open-source agent framework that boasts strong benchmark performance but lacks internal containment guarantees, relying entirely on external OS-level sandboxing.",
+          "url": "https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-05:a19",
+          "order": 2,
+          "title": "THERMO FISHER PATCHES FLAW THAT COULD MAKE DNA FILE TAMPERING NEARLY UNDETECTABLE",
+          "summary": "Thermo Fisher has patched a high-severity vulnerability (CVE-2026-17583) across its active Applied Biosystems product lines to prevent the undetectable, AI-assisted forgery of forensic DNA data, though three end-of-life systems remain unpatched.",
+          "url": "https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
