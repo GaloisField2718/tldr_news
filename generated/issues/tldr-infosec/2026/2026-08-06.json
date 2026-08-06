@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-06",
+  "source_path": "TLDR InfoSec/article_06-08-2026.md",
+  "source_content_hash": "sha256:c5eb7c6fe829eaab9fd3fefcb0df91fac1c115c389416af7f15d7588eaf7821e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a04",
+          "order": 1,
+          "title": "READ THIS BEFORE YOU INVEST IN AI TOOLS",
+          "summary": "AI is everywhere right now. But for many teams, the reality hasn't matched the promise.\n\nSo what's _actually_ working?\n\nTines recently released a guide [5] that takes a more practical look at AI adoption for security and IT teams. Inside, you'll find:\n\n* A framework for EVALUATING TOOLS BEYOND THE DEMO * A step-by-step approach to selecting tools that HOLD UP IN PRODUCTION * QUESTIONS TO ASK before committing to a vendor * Best practices for KEEPING HUMANS IN THE LOOP\n\nIf you're thinking about AI beyond experimentation, this is a useful place to start.",
+          "url": "https://www.tines.com/access/guide/the-it-and-security-field-guide-to-ai-adoption/?utm_source=TLDR&utm_medium=paid_media&utm_campaign=2026-08-06_Primary_Tines&utm_content=newsletter-primary-0608_header_before_you_invest",
+          "reading_time_minutes": null,
+          "source_domain": "tines.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a06",
+          "order": 1,
+          "title": "SHAI-HULUD NPM WORM RETURNS, POISONING OVER 1,280 NPM PACKAGES",
+          "summary": "A new Shai-Hulud worm variant has compromised over 1,280 npm packages, including the well-known Keyv library, by injecting malicious commits via hijacked GitHub Actions pipelines. The worm employs a preinstall hook to download Bun and run an obfuscated payload that aggressively extracts developer and cloud credentials such as AWS, Kubernetes, and Vault, which it then uses to spread further. Organizations that have installed affected versions should assume an immediate breach, requiring them to rotate all secrets immediately and perform manual log reviews, rather than waiting for scheduled vulnerability scans.",
+          "url": "https://hackread.com/shai-hulud-npm-worm-poisoning-1280-packages/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a07",
+          "order": 2,
+          "title": "77 OPEN VSX EXTENSIONS FOUND HARVESTING DEVELOPER INFO",
+          "summary": "Manifold Security uncovered an \"evil twin\" campaign on the Open VSX registry involving 77 malicious extensions that impersonated legitimate packages to harvest developer environment data. While claiming to only collect anonymous metrics, the most aggressive variants actively exfiltrated OS usernames, workspace paths, Git commit hashes, and CI/CD infrastructure details to mangorbit[.]com, utilizing DNS TXT lookups for C2 resilience. Although Open VSX removed the packages on August 3, security teams should block the C2 domain and manually audit developer environments for the malicious extension IDs.",
+          "url": "https://links.tldrnewsletter.com/zfyf2M",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a08",
+          "order": 3,
+          "title": "ENGLISH NATIONAL BALLET SUFFERS SUPPLY CHAIN ATTACK",
+          "summary": "English National Ballet (ENB) disclosed that customer information was stolen via a breach of its customer relationship management (CRM) system. ENB stated that no password or financial information was stolen and advised customers to be vigilant of phishing emails.",
+          "url": "https://www.bbc.com/news/articles/cr7km34z112o?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a09",
+          "order": 1,
+          "title": "HARDWARE HACKING: FROM ZERO TO A PRE-AUTH STACK BUFFER OVERFLOW ON AMAZON'S BEST-SELLING ROUTER",
+          "summary": "Researcher Rotce rooted the Mercusys MB115-4G, Amazon Spain's best-selling router, via UART and traced a pre-auth path in /usr/bin/httpd where http_gdpr_decrypt copied up to 2048 bytes of AES-decrypted, attacker-controlled data into a 512-byte caller buffer with no bounds check, tracked as CVE-2026-12495. The bug was surfaced through disciplined static analysis rather than a working exploit, following the routing table into the login handler in Ghidra and confirming with Ghidriff that the flaw persisted unpatched from v1.7.0 through v1.9.0. Mercusys' own validation reproduced the crash and shipped a fix in v1.11.0 that added the missing bounds check, moved the login decrypt path from RSA to ECC, and introduced HMAC verification.",
+          "url": "https://rotcee.github.io/posts/analyzing-the-mersusys-mb115-4g-router/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "rotcee.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a10",
+          "order": 2,
+          "title": "PHISHING SERVICE SPOOFS RINGCENTRAL TO STEAL MICROSOFT 365 ACCOUNTS",
+          "summary": "The Greatness phishing platform recently bypassed email filters by spoofing RingCentral voicemail alerts to target organizations that had blanket-whitelisted the domain, despite the lures failing standard SPF, DKIM, and DMARC checks. Once clicked, the attack routed victims through an adversary-in-the-middle (AiTM) flow to steal MFA-approved tokens, allowing attackers to replay them from remote VPNs and stealthily siphon Microsoft 365 data for weeks. To mitigate this threat, defenders must immediately replace broad safe-sender exclusions with strict authentication requirements, hunt for anomalous MFA sign-ins originating from hosting providers, and comprehensively revoke access tokens if a compromise is suspected.",
+          "url": "https://links.tldrnewsletter.com/HDJZE2",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a11",
+          "order": 3,
+          "title": "AGENTIC INCIDENT RESPONSE NOTEBOOKS",
+          "summary": "The DNB Cyber Defense Center's incident response team used marimo to build out incident response workflows as modular notebooks. The team developed a custom SDK for cross-platform query translation across Splunk, Defender, and SQL interfaces while utilizing marimo's native cell dependencies and caching capabilities. The marimo-pair agentic interface also allows agents to create and execute the same notebooks as human responders.",
+          "url": "https://blog.cauchy.org/blog/incident-response-notebooks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.cauchy.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a12",
+          "order": 1,
+          "title": "6,000+ \"GUARDRAIL-FREE\" AI MODELS. ONE DOWNLOAD AWAY.",
+          "summary": "AI-powered cybercrime is no longer just a future risk. ThreatDown's [13]new research found it's already here, hiding in plain sight on",
+          "url": "https://www.threatdown.com/dl-cybercrime-in-age-of-ai-2026/?utm_medium=referral&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a13",
+          "order": 2,
+          "title": "infrastructure organizations already trust. ThreatDown",
+          "summary": "researchers assess that AI capable of exploiting vulnerabilities at scale could reach criminal marketplaces within roughly six months. Read the _Cybercrime in the age of AI_ [12] report.",
+          "url": "https://www.threatdown.com/",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a14",
+          "order": 3,
+          "title": "AIRLOCK DIGITAL UNVEILS AGENTIC AI CONTROL & GOVERNANCE TO EXTEND PREVENTATIVE ENDPOINT SECURITY",
+          "summary": "Airlock Digital extended its application control platform with Agentic AI Control & Governance, adding command- and session-level visibility into trusted AI agent behavior plus real-time policy enforcement that communicates decisions back to supported agents rather than simply blocking them, targeting Q3 2026 general availability.",
+          "url": "https://hackread.com/airlock-digital-unveils-agentic-ai-control-governance-to-extend-preventative-endpoint-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackread.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a15",
+          "order": 4,
+          "title": "AGENTHOUND",
+          "summary": "AgentHound is an open-source offensive security framework for AI agent infrastructure that can perform recon, fingerprinting, credential looting, system prompt inventorying, model inversion, tool and instruction poisoning, and config-implant persistence and exports results to a Neo4j graph.",
+          "url": "https://github.com/adithyan-ak/agenthound?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a16",
+          "order": 5,
+          "title": "BEIGNET",
+          "summary": "Beignet is a tool to convert .dylib files into macOS PIC shellcode.",
+          "url": "https://github.com/sliverarmory/beignet?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a17",
+          "order": 1,
+          "title": "HEVD: FROM STACK OVERFLOWS TO MODERN POOL GROOMING",
+          "summary": "This four-part series traced the arc of Windows kernel exploitation on a deliberately vulnerable driver, moving from classic stack corruption and SMEP-bypassing ROP chains through arbitrary-write primitives into pure Data-Only attacks. The later stages reflected how modern Windows 11 mitigations, which strip kernel pointer leaks and harden execution hijacking, have pushed offensive research toward kernel pool grooming and named-pipe-based heap manipulation instead. The progression illustrated a broader industry shift: privilege escalation research increasingly abandons control-flow hijacking in favor of data-only techniques that sidestep control-flow integrity protections entirely.",
+          "url": "https://sibouzitoun.tech/labs/from-stack-overflows-to-modern-pool-grooming/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "sibouzitoun.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a18",
+          "order": 2,
+          "title": "NEW PASS-TA-KEY ATTACKS LET MALWARE HIJACK GOOGLE-SYNCED PASSKEYS",
+          "summary": "Palo Alto Networks' Unit 42 has released details of three new attack techniques, which it calls Pass-ta-key, that an attacker with access to a TPM-equipped Windows device can use to abuse Google Password Manager's synced passkeys to steal passkeys. The first technique allows the attacker to impersonate a trusted device and request a valid authentication response for one of the victim's passkeys. If a site checks the User Verified flag of the response, the authentication can fail. The other two attack techniques go further by allowing the attacker to register their own user-verification key or even obtain the master key, which is used to encrypt all passkeys synced through the victim's Google Password Manager.",
+          "url": "https://links.tldrnewsletter.com/o8FRQj",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a19",
+          "order": 3,
+          "title": "CANADIAN MAN PLEADS GUILTY TO HACKING US CLOUD STORAGE PROVIDER AND EXTORTING ITS CUSTOMERS FOR MILLIONS",
+          "summary": "Connor Riley Moucka pleaded guilty to multiple federal charges after using stolen credentials to breach over 165 SaaS customers between February and October 2024. The campaign compromised billions of records across more than 100 million individuals and caused roughly $9.5 million in corporate damages. Moucka successfully extorted over $2.5 million from his victims and now faces up to 30 years in federal prison at his upcoming October sentencing.",
+          "url": "https://databreaches.net/2026/08/05/canadian-man-pleads-guilty-to-hacking-u-s-cloud-storage-provider-and-extorting-its-customers-for-millions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "databreaches.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-06:a20",
+          "order": 1,
+          "title": "NATIONAL CYBER DIRECTOR LAYS OUT WHITE HOUSE PLANS TO SECURE AI WITHOUT WRITING NEW RULES",
+          "summary": "National Cyber Director Sean Cairncross announced at Black Hat 2026 that the administration will bypass new AI regulations in favor of voluntary industry-government information-sharing, a deregulatory stance facing renewed scrutiny after OpenAI models reportedly escaped a test environment to hack Hugging Face last month.",
+          "url": "https://cyberscoop.com/trump-ai-executive-order-open-source-strategy-sean-cairncross/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a21",
+          "order": 2,
+          "title": "TAILS 7.10.1 EMERGENCY RELEASE FIXES CRITICAL KERNEL AND EXPAT FLAWS",
+          "summary": "Tails issued an emergency 7.10.1 update to patch a critical Linux kernel vulnerability (CVE-2026-64560) that could allow a malicious website to escalate privileges and completely deanonymize Tor Browser users, alongside secondary security fixes for the Expat XML library.",
+          "url": "https://linuxiac.com/tails-7-10-1-emergency-release-fixes-critical-kernel-and-expat-flaws/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "linuxiac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-06:a22",
+          "order": 3,
+          "title": "OPENAI DISRUPTS POIPET SCAM NETWORK USING CHATGPT ACROSS MULTIPLE FRAUD SCHEMES",
+          "summary": "OpenAI and WhatsApp dismantled a Cambodian cybercrime syndicate that leveraged ChatGPT to generate synthetic personas, forge legal documents, and translate communications for complex financial fraud and romance scams linked to forced labor operations.",
+          "url": "https://thehackernews.com/2026/08/openai-disrupts-poipet-scam-network.html?utm_source=tldrinfosec%5B23%5D%5B24",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
