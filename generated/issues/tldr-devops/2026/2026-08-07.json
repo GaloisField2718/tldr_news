@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-08-07",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-08-07",
+  "source_path": "TLDR DevOps/article_07-08-2026.md",
+  "source_content_hash": "sha256:373c4972de21d1e89bbb173743078eb1fed7fd4d2423e4e406b5ee7eec070ed1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-08-07",
+  "sections": [
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-07:a04",
+          "order": 1,
+          "title": "AMAZON DYNAMODB NOW SUPPORTS REAL-TIME VECTOR SEARCH AT ANY SCALE",
+          "summary": "Amazon DynamoDB now supports native vector search, letting developers store vector embeddings alongside operational data and run similarity searches without copying data to a separate vector store. The feature supports up to 4,096 dimensions, Euclidean, Cosine, and Dot product distance functions, and returns up to 100 results per query with single-digit millisecond latency at 99% or higher recall. It is generally available in all commercial AWS regions, including the AWS GovCloud (US) regions.",
+          "url": "https://aws.amazon.com/blogs/aws/amazon-dynamodb-now-supports-real-time-vector-search-at-any-scale/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a05",
+          "order": 2,
+          "title": "CLOUDFLARE OS: AN OPEN PLATFORM FOR AGENTS, APPS, AND WORK",
+          "summary": "Cloudflare has open-sourced Cloudflare OS, an AI agent platform the company has run internally since May. Thousands of Cloudflare employees across engineering and non-engineering functions have used it daily to create documents, automate tasks, and build small apps. Any organization can now deploy it by connecting it to internal systems through a public GitHub repository.",
+          "url": "https://blog.cloudflare.com/cloudflare-os/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-07:a06",
+          "order": 1,
+          "title": "HOW THE CONTROLLER-RUNTIME CACHE ACTUALLY WORKS, AND WHY YOUR CONTROLLER DOES NOT CRASH THE API SERVER",
+          "summary": "Controller-runtime reads Kubernetes objects from a shared in-memory cache populated through list and watch rather than directly from the API server, making reads fast while introducing eventual consistency, memory tradeoffs, and indexing considerations that developers must understand to build efficient, reliable controllers.",
+          "url": "https://kubernetes.io/blog/2026/07/29/controller-runtime-cache-explained/?utm_source=tldrdevops",
+          "reading_time_minutes": 11,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a07",
+          "order": 2,
+          "title": "AUTOMATE YOUR AGENT DEVELOPMENT LIFECYCLE USING ANY CODING AGENT",
+          "summary": "Google's Agents CLI lets developers use coding agents to build, deploy, secure, evaluate, and publish production-ready AI agents through natural language prompts, streamlining the entire lifecycle with managed services, governance, automated testing, and Gemini Enterprise integration.",
+          "url": "https://cloud.google.com/blog/topics/developers-practitioners/automate-agent-development-lifecycles-with-gemini-enterprise/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a08",
+          "order": 3,
+          "title": "ON BUILDING SCALABLE CONTROL PLANES",
+          "summary": "Scalable control planes should keep coordination off the critical data path, partition ownership cleanly, and rely on asynchronous reconciliation instead of synchronous global agreement for every change. Designs that minimize shared mutable state and let independent partitions make progress can absorb failures and growth without turning the control layer into the system's bottleneck.",
+          "url": "https://www.allthingsdistributed.com/2026/08/on-building-scalable-control-planes.html?utm_source=tldrdevops",
+          "reading_time_minutes": 13,
+          "source_domain": "allthingsdistributed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-07:a09",
+          "order": 1,
+          "title": "RUN AI AGENTS IN THE INFRASTRUCTURE YOU ALREADY TRUST",
+          "summary": "Agents that tackle your backlog are invaluable, but running them on vendor servers is a headache. Coder Agents is a chat interface and API for delegating research and development to agents in your Coder deployment. Connect models and oversee agents in a single control",
+          "url": "https://fandf.co/4oXxG1t?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a10",
+          "order": 2,
+          "title": "plane. Explore it here.",
+          "summary": "",
+          "url": "https://fandf.co/4oXxG1t",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a11",
+          "order": 3,
+          "title": "LOOPX",
+          "summary": "LoopX is a local control plane for managing long-running AI agent work across tools like Codex, Claude Code, and Cursor. It keeps goals, task ownership, evidence, and handoffs stable across multiple turns and agents rather than replacing the agent runtime itself.",
+          "url": "https://github.com/huangruiteng/loopx?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a12",
+          "order": 4,
+          "title": "CELLD",
+          "summary": "celld is an open-source daemon that runs Cloudflare Workers and Durable Objects on your own machines. Each object is its own SQLite database, addressed by name and replicated to an S3-compatible bucket you own. Nodes coordinate through that bucket alone, with no control plane or consensus.",
+          "url": "https://github.com/denoland/celld?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-07:a13",
+          "order": 1,
+          "title": "TEACHING CODING AGENTS TO CHECK THEIR VCL WITH FASTLY FIDDLE",
+          "summary": "Fastly Fiddle is a free web-based sandbox that compiles and runs VCL on real Fastly edge infrastructure, enabling humans and coding agents to test, debug, validate, and share production-accurate behavior that local linting cannot replicate.",
+          "url": "https://www.fastly.com/blog/teaching-coding-agents-to-check-their-vcl-with-fastly-fiddle?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "fastly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a14",
+          "order": 2,
+          "title": "SALESFORCE OBSERVABILITY WITH NEW RELIC",
+          "summary": "New Relic's open source Salesforce Exporter streams and batches Salesforce telemetry into New Relic, providing dashboards, alerts, and insights for performance, security, user activity, API usage, and org limits with an installer that simplifies deployment.",
+          "url": "https://newrelic.com/blog/observability/salesforce-observability-with-new-relic?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "newrelic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a15",
+          "order": 3,
+          "title": "JUST ONE FUNCTION, 10X FASTER? READING A RUST PERFORMANCE PR",
+          "summary": "GreptimeDB sped up Prometheus remote-read conversion by 4–16x by borrowing strings directly from Apache Arrow arrays instead of materializing every label value and by moving allocations from every row to every unique time series. The optimization eliminated repeated string copies, unnecessary heap allocations, and costly dictionary expansion in a CPU-heavy conversion path that previously processed only about 2 million rows per second.",
+          "url": "https://greptime.com/blogs/2026-07-31-prom-read-conversion-optimization?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "greptime.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-07:a16",
+          "order": 1,
+          "title": "KUBEFLOW UNVEILS NEW CLOUD NATIVE INNOVATIONS TO SUPERCHARGE AI",
+          "summary": "Kubeflow announced major ecosystem advancements at Kubecon + CloudNativeCon Japan 2026, including Kale 2.0, SDK improvements, Kubeflow Trainer enhancements, and Community Distribution 26.03 updates.",
+          "url": "https://www.cncf.io/blog/2026/07/28/kubeflow-unveils-new-cloud-native-innovations-to-supercharge-ai/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-07:a17",
+          "order": 2,
+          "title": "WHY AI-GENERATED VULNERABILITY PATCHES STILL REQUIRE HUMAN REVIEW",
+          "summary": "Across 6,080 AI-generated patches for six recent vulnerabilities, only 26% fully fixed the issue without materially changing application behavior, while 53.9% failed to fix the vulnerability, introduced a new one, or both.",
+          "url": "https://1password.com/blog/why-ai-generated-patches-still-require-human-review?utm_source=tldrdevops%5B18%5D%5B19",
+          "reading_time_minutes": 8,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

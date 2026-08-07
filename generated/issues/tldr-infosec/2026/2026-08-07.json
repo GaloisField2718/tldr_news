@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-07",
+  "source_path": "TLDR InfoSec/article_07-08-2026.md",
+  "source_content_hash": "sha256:886461d0233a6164b6b4703532ddd632871cb45ac56575620871c21a905fb02b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a04",
+          "order": 1,
+          "title": "A SASE LEADER. AGAIN AND AGAIN AND AGAIN",
+          "summary": "As AI becomes embedded across the enterprise, organizations must secure their use of AI while defending against AI-powered threats.\n\nThat pressure is making the limits of fragmented architectures impossible to ignore.\n\nCato Networks was named a Leader in the 2026 Gartner® Magic Quadrant™ for SASE Platforms [5] for the THIRD YEAR RUNNING.\n\nSee how Gartner evaluated the market and why, in Cato's view, unified SASE platforms are becoming essential for the AI era.",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2026/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-07_Primary_Cato+Networks&utm_content=header_sase_leader_again",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a06",
+          "order": 2,
+          "title": "Get the 2026 Gartner® Magic Quadrant™ for SASE Platforms →",
+          "summary": "",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2026/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-07_Primary_Cato+Networks&utm_content=cta_2026_gartner_magic",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a07",
+          "order": 1,
+          "title": "OVER 4,400 ROCKWELL PLCS EXPOSED ONLINE, 22 FOUND IN WATER ATTACK CITIES",
+          "summary": "Forescout identified over 4,400 internet-facing Rockwell PLCs worldwide, including 22 in recently attacked US water utility cities that were compromised via open Ethernet/IP port 44818 rather than complex exploits, prompting urgent calls for defenders to isolate controllers behind VPNs and utilize Rockwell advisory SD1790 to recover attacker-locked systems.",
+          "url": "https://thehackernews.com/2026/08/over-4400-rockwell-plcs-exposed-online.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a08",
+          "order": 2,
+          "title": "RESEARCHERS FIND PERSISTENT BACKDOOR IN ZBTLINK ROUTERS",
+          "summary": "VulnCheck researchers discovered an intentional and unpatchable backdoor dubbed EndlessDoors in over 100,000 active Zbtlink and Wiflyer routers that initiates outbound command-and-control connections to bypass NAT, requiring defenders to monitor port 7000 for malicious beacons and physically replace the compromised hardware.",
+          "url": "https://decipher.sc/2026/08/05/researchers-find-persistent-backdoor-in-zbtlink-routers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "decipher.sc",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a09",
+          "order": 3,
+          "title": "SWISS GOVERNMENT SHAREPOINT BREACH COMPROMISED 200 ACCOUNTS",
+          "summary": "The Swiss Federal Office of Information Technology and Telecommunications (BIT) reported that hackers exploited vulnerabilities to breach its Microsoft SharePoint instances. Other than login credentials, BIT does not believe any data was stolen. BIT responded by blocking external Internet access to SharePoint, patching the vulnerabilities that were exploited, and resetting the passwords of affected accounts.",
+          "url": "https://links.tldrnewsletter.com/9UEitx",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a10",
+          "order": 1,
+          "title": "POINT WILD EXCLUSIVE: DISSECTING VANTA STEALER, A PYTHON-BASED CROSS-PLATFORM INFORMATION THEFT MALWARE",
+          "summary": "Vanta Stealer is a highly obfuscated Python information stealer that uses PyInstaller and PyArmor to evade detection while dynamically downloading modules to harvest browser credentials, VPN configurations, and gaming platform data. The malware actively enriches stolen Discord tokens via API to identify high-value accounts before packaging the compromised data into a ZIP archive and exfiltrating it via HTTP POST. Defenders must block outbound connections to vanta[.]st and hunt for suspicious PyInstaller binaries executing unsolicited network requests to mitigate this threat.",
+          "url": "https://www.pointwild.com/threat-intelligence/point-wild-exclusive-dissecting-vanta-stealer-a-python-based-cross-platform-information-theft-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "pointwild.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a11",
+          "order": 2,
+          "title": "ILL BLOOM: INVESTIGATING A WALLET GENERATION VULNERABILITY DURING ACTIVE EXPLOITATION",
+          "summary": "Ill Bloom is an active cryptocurrency wallet-draining campaign exploiting a legacy CryptoJS weak-randomness vulnerability in unmaintained downstream dependencies. Defenders should immediately consult the illbloom.org technical disclosure for specific IOCs and affected wallet lists to expedite fund migration.",
+          "url": "https://www.coinspect.com/blog/ill-bloom-investigation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "coinspect.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a12",
+          "order": 3,
+          "title": "DETECTING AND PREVENTING THE HUGGING FACE/OPENAI INCIDENT",
+          "summary": "James Berthoty breaks down the different tools and techniques that could have helped at different stages of OpenAI's incidental breach of Hugging Face. During the initial phases of the model's escape from OpenAI, external network blocking and agentic EDRs could have been helpful. IMDS blocking and more fine-grained secrets injection could have helped Hugging Face guard against being breached by the agent. Traditional Kubernetes and CNAPP tooling could be used to detect the lateral movement from within Hugging Face.",
+          "url": "https://pulse.latio.tech/p/detecting-and-preventing-the-hugging?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "pulse.latio.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a13",
+          "order": 1,
+          "title": "NUMBAT",
+          "summary": "numbat is an “AI-EDR” built by Perplexity. It provides visibility into AI agent activity with local detection, optional pre-action blocking, and forensic reconstruction.",
+          "url": "https://github.com/perplexityai/numbat?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a14",
+          "order": 2,
+          "title": "AGENT-EGRESS-BENCH",
+          "summary": "agent-egress-bench is a standardized test corpus for evaluating AI agent egress tools, covering secret exfiltration, prompt injection, SSRF, hostname exfiltration, MCP tool poisoning, chain detection, MCP drift, A2A protocol scanning, WebSocket DLP, encoding evasion, shell obfuscation, and cryptocurrency/financial data protection.",
+          "url": "https://github.com/luckyPipewrench/agent-egress-bench?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a15",
+          "order": 3,
+          "title": "GREENLIGHT",
+          "summary": "greenlight is a skill that was created for mapping out where Claude Code's guardrails trigger exploitation-related refusals, and where they can't be relied upon. greenlight was only tested on Opus 4.7, but the methodology is generalizable.",
+          "url": "https://github.com/gadievron/greenlight?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a16",
+          "order": 1,
+          "title": "CLOUD THREAT HIGHLIGHTS: H1 2026",
+          "summary": "Wiz's H1 2026 threat report highlights a 60% increase in major cloud incidents, primarily driven by cascading supply chain compromises and targeted attacks against immature AI infrastructure. Threat actors are increasingly monetizing non-human identities and reselling credential access across groups, evidenced by the sprawling TeamPCP npm campaigns and North Korean package trojanizations. This evolution signals a structural shift toward self-perpetuating attack surfaces, requiring defenders to secure unauthenticated machine-to-machine integrations and exposed backend credentials to disrupt automated access brokering.",
+          "url": "https://www.wiz.io/blog/cloud-threat-highlights-h1-2026?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a17",
+          "order": 2,
+          "title": "NEW TONTOU CPU ATTACK BYPASSES SPECTRE V2 FIXES TO LEAK LINUX PASSWORD HASHES",
+          "summary": "Researchers at MIT CSAIL discovered a new branch predictor exploit that bypasses neutralization-based mitigations for Spectre v2 attacks. These mitigations assume that an attacker cannot exploit the time between when the branch predictor is isolated and when it is used by the victim branch. However, the researchers introduced a new primitive that can re-poison the CPU's state in this gap. The researchers demonstrated that this vulnerability can be exploited by users with unprivileged code execution on commodity hardware to extract /etc/shadow at a rate of 5.46 bytes/second.",
+          "url": "https://links.tldrnewsletter.com/wQomNw",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a18",
+          "order": 3,
+          "title": "CHINA-LINKED LIGHTSPY SPYWARE CAUGHT TARGETING VICTIMS IN 13 COUNTRIES, INCLUDING THE US",
+          "summary": "LightSpy, originally a Chinese state-linked spyware, has evolved into a commercial platform actively targeting governments, enterprises, and NATO-affiliated routers across 13 countries. The modular toolkit now provides total network visibility from a pool of at least 117 command servers. Notably, researchers successfully traced the latest campaign to a Chinese contractor after an operator inadvertently revealed his real name and office address by placing a food delivery order directly through the spyware's admin panel.",
+          "url": "https://techcrunch.com/2026/08/06/china-linked-lightspy-spyware-caught-targeting-victims-in-13-countries-including-the-us/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-07:a19",
+          "order": 1,
+          "title": "BELARUSIAN CYBERCRIMINAL BEHIND RANSOM CARTEL GETS 16-YEAR PRISON SENTENCE",
+          "summary": "Maksim Silnikau received a 16-year prison sentence for orchestrating the Ransom Cartel ransomware operation between 2021 and 2023, concluding a prolific cybercriminal career that included developing the notorious Angler exploit kit and co-creating the foundational Reveton RaaS model.",
+          "url": "https://therecord.media/belarus-hacker-ransomware-sentenced?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-07:a20",
+          "order": 2,
+          "title": "APPLE'S PRIVATE RELAY LEAKS YOUR REAL IP ADDRESS IN SAFARI",
+          "summary": "Mysk researchers found three unpatched leaks- DNS prefetching, WebAuthn's Related Origin Requests, and WebTransport- that let any website bypass Apple's Private Relay and reveal a user's real IP across all WebKit-based iOS browsers, and published the findings without prior disclosure to Apple, citing a pattern of yearlong fix delays.",
+          "url": "https://www.privacyguides.org/news/2026/08/05/apples-private-relay-leaks-your-real-ip-address-in-safari/?utm_source=tldrinfosec%5B21%5D%5B22",
+          "reading_time_minutes": 2,
+          "source_domain": "privacyguides.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
