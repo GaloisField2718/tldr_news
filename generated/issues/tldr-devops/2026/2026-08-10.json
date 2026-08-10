@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-08-10",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-08-10",
+  "source_path": "TLDR DevOps/article_10-08-2026.md",
+  "source_content_hash": "sha256:c2948e46e9886b7cf89fc9e8dfb008fae750da1bf94580738685d29e46f83f96",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-08-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a04",
+          "order": 1,
+          "title": "RECOVER FROM INFRA FAILURES LIKE OOM WITH FLYTE 2 IN OPEN SOURCE",
+          "summary": "Infra failures like OOM, node interruptions, and container preemption are AI workload killers. Flyte 2 (7.2K GitHub stars) [5] brings durable execution to open source, using infrastructure-as-context to recover from both infra and code failures at runtime and scale workloads to production.\n\n3 ways Flyte keeps workloads running [6]:\n\n* SELF-HEALING WORKFLOWS: At runtime, diagnose failure, recover with adjusted resources, and resume. * AGENT-NATIVE EXECUTION: Build durable workflows in pure Python that dynamically branch, loop, call tools, and adapt at runtime. * REAL-TIME AND BATCH INFERENCE: Perform inference using the same runtime without stitching together a separate serving stack.",
+          "url": "https://flyte.org/?utm_source=Partnerships&utm_medium=Influencer&utm_campaign=Flyte+2+GTM+%7C+TLDR+DevOps&utm_content=header_recover_infra_failures",
+          "reading_time_minutes": null,
+          "source_domain": "flyte.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a07",
+          "order": 2,
+          "title": "TRY FLYTE 2 TODAY - FREE AND OPEN SOURCE",
+          "summary": "",
+          "url": "https://flyte.org/?utm_source=Partnerships&utm_medium=Influencer&utm_campaign=Flyte+2+GTM+%7C+TLDR+DevOps&utm_content=cta_flyte_2_open",
+          "reading_time_minutes": null,
+          "source_domain": "flyte.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a08",
+          "order": 1,
+          "title": "UNIFYING WORKERS AI AND AI GATEWAY INTO A SINGLE AI CONTROL PLANE",
+          "summary": "Cloudflare is unifying AI Gateway and Workers AI through shared APIs, bindings, observability, security, and billing, giving Workers AI users automatic logging, token tracking, and cost attribution. Upcoming model-first and smart routing will enable provider-independent failover and intelligent model selection based on request requirements.",
+          "url": "https://blog.cloudflare.com/workers-ai-gateway-unification/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a09",
+          "order": 2,
+          "title": "GIVE ANY WEBSITE A WEBMCP INTERFACE",
+          "summary": "Cloudflare has launched a developer preview of WebMCP, a feature that lets AI agents interact with websites through a set of browser-based tools, without any code changes at the origin. It works by injecting a small bridge script into HTML responses at the edge, which registers tools that visiting agents can call directly in the browser. The preview ships with two tool packs, Content Credentials and Site MCP Server, both enabled by default. WebMCP is an emerging browser standard currently shipping experimentally in Chrome 146, where it appears as document.modelContext.",
+          "url": "https://blog.cloudflare.com/webmcp/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a10",
+          "order": 1,
+          "title": "DASHBOARDS AREN'T (QUITE) DEAD",
+          "summary": "Dashboards remain valuable in the LLM era as curated, authoritative views that ensure consistent business metrics, while also serving as trusted context for AI-driven analysis that enables flexible, deeper investigation without replacing established decision-making frameworks.",
+          "url": "https://incident.io/blog/dashboards-arent-quite-dead?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "incident.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a11",
+          "order": 2,
+          "title": "SHRINKING AZURE PIPELINE TASK EXTENSIONS USING ESBUILD",
+          "summary": "Bundling an Azure Pipelines Node task into a single esbuild-generated script.js file, instead of shipping thousands of node_modules files, cut per-task download and extraction time roughly 17x with minimal build tooling changes.",
+          "url": "https://devblogs.microsoft.com/devops/shrinking-azure-pipeline-task-extensions-using-esbuild/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a12",
+          "order": 1,
+          "title": "SRELENS",
+          "summary": "srelens is an open-source, local-first Kubernetes operations workspace for browsing resources, streaming logs, editing manifests, managing Helm releases, debugging pods, and taking operational actions across multiple clusters. It connects directly through local kubeconfig credentials and adds safeguards such as dry-run diffs and confirmation gates for destructive actions.",
+          "url": "https://github.com/srelens/srelens?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a13",
+          "order": 2,
+          "title": "PRIME AGENT",
+          "summary": "Prime Agent is an open-source coding and research agent built for long-running and autonomous tasks. It runs on macOS and Linux and works directly in the user's current directory, executing model-generated Python and project commands with the user's own permissions.",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a14",
+          "order": 1,
+          "title": "AUTOMATE DATA MONITORING AND ROOT-CAUSE ANALYSIS WITH LOOKER AGENTIC WORKFLOWS",
+          "summary": "Looker Agentic Workflows automates metric monitoring and root cause analysis by using AI agents to detect threshold changes, identify key drivers, and deliver actionable insights through Slack, email, and Conversational Analytics with centralized workflow management and governance.",
+          "url": "https://cloud.google.com/blog/products/business-intelligence/looker-adds-agentic-workflows-for-data-monitoring-and-insights/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a15",
+          "order": 2,
+          "title": "HOW COMPANY 3 STREAMLINES STUDIO IMAGE MANAGEMENT WITH EC2 IMAGE BUILDER AND AWS CDK",
+          "summary": "Company 3 used AWS EC2 Image Builder and CDK to streamline image pipelines but faced complex version propagation across immutable components and recipes. AWS introduced auto versioning and CDK L2 constructs, eliminating custom workarounds while improving automation, security defaults, and developer onboarding.",
+          "url": "https://aws.amazon.com/blogs/devops/how-company-3-streamlines-studio-image-management-with-ec2-image-builder-and-aws-cdk/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a16",
+          "order": 3,
+          "title": "COMMIT MESSAGE TEST PLANS",
+          "summary": "Executable scrut test blocks can live directly inside Git commit messages, turning a written validation plan into something that can be rerun automatically. Combined with git test, the approach can revalidate entire patch stacks after rebases, bisect the first broken commit, and preserve ad-hoc or differential test procedures alongside the change itself.",
+          "url": "https://blog.waleedkhan.name/commit-message-test-plans/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.waleedkhan.name",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-10:a17",
+          "order": 1,
+          "title": "RUNTIME INSTANCES: PERSISTENT COMPUTE FOR PRODUCTION AI AGENTS ON AMAZON BEDROCK AGENTCORE",
+          "summary": "Amazon has added runtime instances to Bedrock AgentCore Runtime, a compute option that gives AI agents persistent, managed EC2 infrastructure for complex workloads.",
+          "url": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a18",
+          "order": 2,
+          "title": "DOES KUBERNETES DRA REPLACE HAMI?",
+          "summary": "HAMi, a Kubernetes project for sharing GPUs across pods, was accepted as a CNCF incubating project on July 15.",
+          "url": "https://www.cncf.io/blog/2026/08/07/does-kubernetes-dra-replace-hami/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-10:a19",
+          "order": 3,
+          "title": "RELYING ON GO",
+          "summary": "Solod is a systems language implemented as a strict subset of Go.",
+          "url": "https://antonz.org/relying-on-go/?utm_source=tldrdevops%5B20%5D%5B21",
+          "reading_time_minutes": 3,
+          "source_domain": "antonz.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

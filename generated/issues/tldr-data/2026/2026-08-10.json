@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-10",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-10",
+  "source_path": "TLDR Data/article_10-08-2026.md",
+  "source_content_hash": "sha256:6aedf2ed2a9f904f1b2662e6fac330522afb3e31a32537e3bca4ab3207522d1f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-10",
+  "sections": [
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-10:a04",
+          "order": 1,
+          "title": "HOW PHYSICAL INTELLIGENCE UNIFIED ITS ROBOTICS DATA STACK WITH POSTGRES MANAGED BY CLICKHOUSE",
+          "summary": "Physical Intelligence split its robotics data stack between Postgres for transactional workloads and ClickHouse for high-cardinality analytics after a single RDS database could no longer scale. The new setup handles tens of billions of metadata rows and powers fast search and agent-driven exploration that replaced queries which previously took days or weeks.",
+          "url": "https://clickhouse.com/blog/physical-intelligence-rds-to-clickhouse-managed-postgres?utm_source=tldrdata",
+          "reading_time_minutes": 20,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a05",
+          "order": 2,
+          "title": "THE TRAINING INFRASTRUCTURE BEHIND AI-POWERED JOB SEARCH: 8X FASTER MULTI-TEACHER DISTILLATION",
+          "summary": "LinkedIn's job search ranking trains a 0.6B student model on signals from three teachers covering relevance, engagement, and embeddings. Caching teacher outputs at the shard level cut training time from 45 hours to under 5 hours without accuracy loss, enabling same-day iteration cycles.",
+          "url": "https://www.linkedin.com/blog/engineering/infrastructure/the-training-infrastructure-behind-ai-powered-job-search-eight-x-faster-multi-teacher-distillation?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a06",
+          "order": 3,
+          "title": "HOW AND WHY NETFLIX BUILT A REAL-TIME DISTRIBUTED GRAPH: PART 3 — QUERYING THE GRAPH WITH GRPC EXECUTION API",
+          "summary": "Netflix's RDG query layer handles 8 billion nodes and 150 billion edges using level-by-level parallel traversal, 16 to 24 async threads per instance, and cache TTLs matched to data volatility that achieve 70 to 80% hit rates on stable entities. The result is that even three-hop traversals complete under 150 ms at P99.",
+          "url": "https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?utm_source=tldrdata",
+          "reading_time_minutes": 20,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-10:a07",
+          "order": 1,
+          "title": "YOUR NEXT \"ACCESS DATABASE PROBLEM\" IS AN AI AGENT",
+          "summary": "AI is making software and agents so cheap and fast to create that companies risk accumulating thousands of undocumented tools with unclear ownership, permissions, dependencies, and behaviour. The answer is not to restrict creation, but to build governance into the platform so identity, permissions, logging, ownership, expiry, and stronger controls happen automatically as risk increases.",
+          "url": "https://sjg.io/writing/your-next-access-database-problem-is-an-ai-agent/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "sjg.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a08",
+          "order": 2,
+          "title": "NEVER MIND CLEAN DATA. ANNOTATE AS YOU COLLECT IT.",
+          "summary": "AI teams should preserve provenance, schema, and source context at ingestion because hallucinations often stem from stale or non-canonical data. Gartner expects 60% of AI projects to fail without metadata and observability, while nearly 75% of frontier-model training CPU goes to cleansing and validation. Capture lineage and authority in-stream and use data contracts and DBOMs to ground agents.",
+          "url": "https://www.cio.com/article/4204899/never-mind-clean-data-annotate-as-you-collect-it.html?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "cio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a09",
+          "order": 3,
+          "title": "DATA OWNERSHIP IN PRACTICE: DEFINING DECISION RIGHTS IN ENTERPRISE DATA GOVERNANCE",
+          "summary": "Data ownership fails when responsibility comes without decision rights, leaving owners unable to approve quality thresholds, accept risk, or authorize usage. Effective governance needs authority and escalation paths, with data owners deciding while stewards execute. Decisions need accountable owners and traceable risk acceptance.",
+          "url": "https://links.tldrnewsletter.com/zVKJmX",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-10:a10",
+          "order": 1,
+          "title": "SEMANTIC LAYERS IN APACHE SUPERSET: SIP-182 AND APACHE OSSIE",
+          "summary": "Apache Superset is adding first-class semantic layer support, replacing pseudo-databases for metrics and dimensions. A new SemanticLayer/Explorable interface converts chart requests into SemanticQuery objects and returns Arrow tables, targeted for Superset 7.0. Apache Ossie is also being built as a vendor-neutral JSON/YAML interchange layer.",
+          "url": "https://preset.io/blog/semantic-layers-in-superset/?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "preset.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a11",
+          "order": 2,
+          "title": "VALIDATING DATA WITH POINTBLANK IN PYTHON",
+          "summary": "Pointblank validates pandas, Polars, DuckDB, and PostgreSQL data using declarative rules, thresholds, and automated failure handling. Compared with Pandera and Great Expectations, it focuses more on quality gates, row-level quarantine, and stakeholder-friendly reporting.",
+          "url": "https://realpython.com/python-pointblank/?utm_source=tldrdata",
+          "reading_time_minutes": 30,
+          "source_domain": "realpython.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a12",
+          "order": 3,
+          "title": "KESTRA 2.0 RELEASE CANDIDATES LAND WITH A NEW EXECUTION ENGINE AND UI OVERHAUL",
+          "summary": "Kestra 2.0 release candidates introduce a new execution engine, UI overhaul, and breaking changes ahead of general availability. The release is positioned as the orchestrator's largest upgrade, with early adopters invited to test workflows and migration paths before the final cut.",
+          "url": "https://kestra.io/blogs/kestra-2-0-almost-here/?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "kestra.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-10:a13",
+          "order": 1,
+          "title": "TYTAN: INTERACTIVE NEUROSYMBOLIC CONSTRUCTION OF ANALYTIC SEMANTIC SCHEMAS FROM RELATIONAL DATA",
+          "summary": "TYTAN automatically builds analytic semantic schemas from relational or tabular data by combining LLM-based semantic inference with deterministic checks of keys, joins, types, and values, asking users only when ambiguity remains. Across eight databases, it achieved full reference coverage, 100% execution of 3,758 retrieval tests, and 92–100% semantic-role agreement.",
+          "url": "https://arxiv.org/abs/2608.06331?utm_source=tldrdata",
+          "reading_time_minutes": 37,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a14",
+          "order": 2,
+          "title": "THE DATABASE AT 550 KILOMETERS: WHAT ORBITAL COMPUTING MEANS FOR DISTRIBUTED DATABASES",
+          "summary": "Space-based AI infrastructure shifts the bottleneck from compute to state. Orbit may suit high-value GPU compute, but not storage, because launch costs make satellite persistence pricier than terrestrial storage. Distributed SQL can work in orbit, but needs orbital-aware lease placement, decommissioning, and jurisdiction-aware replication.",
+          "url": "https://cockroachlabs.com/blog/orbital-computing-distributed-databases?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "cockroachlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-10:a15",
+          "order": 1,
+          "title": "DATABASE ANIMATIONS: WHY BIG COLUMNS MAY NOT AFFECT LOGICAL READS",
+          "summary": "SQL Server wide rows mainly hurt scans and multi-row reads, while point lookups can still fit on one 8KB page.",
+          "url": "https://www.brentozar.com/archive/2026/08/database-animations-why-big-columns-may-not-affect-logical-reads/?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "brentozar.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a16",
+          "order": 2,
+          "title": "WEATHERNEXT: AI MODEL ACHIEVES BREAKTHROUGH IN FORECASTING CYCLONES",
+          "summary": "WeatherNext Cyclones predicts cyclone tracks, intensity, and winds with more than a day of extra warning over leading models.",
+          "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "deepmind.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-10:a17",
+          "order": 3,
+          "title": "BEFORE JSONB, THERE WAS HSTORE. BEFORE HSTORE, THERE WAS AN UGLY SPARSE TABLE",
+          "summary": "PostgreSQL's hstore started as a simple way to replace sparse tables full of NULLs with key-value attributes.",
+          "url": "https://www.linkedin.com/pulse/before-jsonb-hstore-ugly-sparse-table-oleg-bartunov-34saf/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
