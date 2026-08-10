@@ -357,7 +357,7 @@ def preflight(root:Path,d:str,cost:float,profile_id:str=DEFAULT_EPISODE_PROFILE_
  "cost_ceiling_usd_per_language":cost,"total_ceiling_usd":2.0,
  "private_runtime_directory":str(rd),"private_mp3_paths":{"en":str(rd/"en/episode.mp3"),"fr":str(rd/"fr/episode.mp3")},
  "r2_target_patterns":{"en":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/en/<sha256>.mp3","fr":f"podcast/daily/{d[:4]}/{d[5:7]}/{d[8:]}/fr/<sha256>.mp3"},
- "podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":True,"cron_schedule_utc":["01:30","03:30","06:30"]}
+ "podcast_artifact_path":str(artifact_path(root,d)),"frontend_plan":"synchronize committed bilingual artifact after publication","cron_active":True,"cron_schedule_utc":["19:30","21:30","23:30"]}
 def install_local_script(root:Path,d:str,language:str,script:dict[str,Any],origin:str="local_editorial_authoring",profile_id:str=DEFAULT_EPISODE_PROFILE_ID)->dict[str,Any]:
  profile=get_episode_profile(profile_id);source,digest=load_source(root,d);tts_profile=profile_from_args(False,1.0)
  with language_scope(language):

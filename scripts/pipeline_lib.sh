@@ -77,6 +77,13 @@ stage_generated() {
   if [[ -d generated/issues ]]; then
     git add -A -- generated/issues
   fi
+  # Podcast publication writes one immutable JSON contract per date. Keep these
+  # contracts in the normal validated push path; audio binaries remain external.
+  if [[ -d generated/podcast ]]; then
+    while IFS= read -r -d '' artifact; do
+      git add -- "${artifact}"
+    done < <(find generated/podcast -mindepth 2 -maxdepth 2 -type f -name '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].json' -print0)
+  fi
 }
 
 stage_editorial() {

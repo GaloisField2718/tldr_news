@@ -21,6 +21,6 @@
 # Every minute during hour 00: second push window
 * 0 * * * cd /home/galois/bots/tldr_news && ./push_script.sh
 
-# Podcast: primary run after editorial publication, plus two resumable retries.
-# The wrapper exits successfully when yesterday has no Daily source or is already published.
-30 1,3,6 * * * /home/galois/bots/tldr_news/scripts/run_podcast_daily.sh
+# Podcast: primary run after the 19:00-France edition, plus two same-day retries.
+# The wrapper exits successfully when today has no Daily source or is already published.
+30 19,21,23 * * * /home/galois/bots/tldr_news/scripts/run_podcast_daily.sh

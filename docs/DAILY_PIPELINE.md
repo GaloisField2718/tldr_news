@@ -15,9 +15,9 @@ The live crontab runs jobs **every minute during specific hours**:
 | 00 | `push_script.sh` | overnight safety push window |
 
 The 16:00/17:00 UTC pair publishes the complete edition around 19:00 in France
-while summer time is active (18:00 in winter). The 23:00/00:00 pair remains as a
-non-destructive catch-up for unusually late newsletters and preserves the current day's
-pending overnight generation.
+while summer time is active (18:00 in winter). The podcast window starts at 19:30 UTC,
+after the new 19:00-France edition, with two same-day retries. The 23:00/00:00 pair
+remains as a non-destructive catch-up for unusually late newsletters.
 
 Because `* 10 * * *` means every minute of hour 10, scripts are idempotent and
 share a non-blocking exclusive lock (`/tmp/tldr_news_pipeline.lock`) via
@@ -66,6 +66,12 @@ push_script.sh
   -> if local main ahead of origin/main: git push
      else: log "nothing to push"
   -> logs/last_push_success   # even on a full no-op success
+
+run_podcast_daily.sh (19:30/21:30/23:30 UTC)
+  -> same shared flock as ingestion/push
+  -> use today's UTC date (explicit TARGET_DATE remains supported)
+  -> if artifact exists: commit/push JSON only, with no paid retry
+  -> otherwise run the resumable bilingual generate+publish flow
 ```
 
 Empty staging does **not** skip pull/rebase/push retry. A previous local commit

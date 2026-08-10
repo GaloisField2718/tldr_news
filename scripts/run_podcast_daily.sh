@@ -6,11 +6,11 @@ set -Eeuo pipefail
 
 REPO_ROOT="${REPO_ROOT:-/home/galois/bots/tldr_news}"
 PIPENV_BIN="${PIPENV_BIN:-/home/galois/.local/bin/pipenv}"
-LOCK_FILE="${LOCK_FILE:-/run/user/$(id -u)/tldr-podcast-scheduler.lock}"
+LOCK_FILE="${LOCK_FILE:-/tmp/tldr_news_pipeline.lock}"
 LOG_DIR="${LOG_DIR:-/home/galois/logs}"
 LOG_FILE="${LOG_FILE:-${LOG_DIR}/tldr-podcast.log}"
 SUCCESS_MARKER="${SUCCESS_MARKER:-${LOG_DIR}/last_podcast_success}"
-TARGET_DATE="${TARGET_DATE:-$(date -u -d yesterday +%F)}"
+TARGET_DATE="${TARGET_DATE:-$(date -u +%F)}"
 SCRIPT_NAME="$(basename "$0")"
 
 mkdir -p "${LOG_DIR}"
@@ -39,7 +39,17 @@ artifact_path="generated/podcast/${TARGET_DATE:0:4}/${TARGET_DATE}.json"
 
 log "start target_date=${TARGET_DATE}"
 if [[ -f "${artifact_path}" ]]; then
-  log "already published artifact=${artifact_path}; done"
+  # Publication may have succeeded immediately before the process was interrupted
+  # while committing/pushing the JSON artifact. Recover that durable hand-off
+  # without re-entering the paid generation path.
+  log "published artifact exists; syncing artifact only=${artifact_path}"
+  git add -- "${artifact_path}"
+  if ! git diff --cached --quiet -- "${artifact_path}"; then
+    git commit --only -- "${artifact_path}" -m "Publish bilingual Daily podcast for ${TARGET_DATE}"
+    log "committed existing podcast artifact"
+  fi
+  git push
+  log "existing podcast artifact synchronized"
   exit 0
 fi
 if [[ ! -f "${source_path}" ]]; then
