@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-11",
+  "source_path": "TLDR InfoSec/article_11-08-2026.md",
+  "source_content_hash": "sha256:016ebb18b1b2847b60309d9a746f1f021de6c493a7d14d8447d943aabf19bdf3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-11",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-11:a04",
+          "order": 1,
+          "title": "SPY CAMERAS ON NAVY DRONES SECRETLY SENT DATA TO CHINA",
+          "summary": "The UK's Royal Navy spy drones were revealed to be covertly transmitting data to China. The Ministry of Defense stated that their investigation revealed that no sensitive data had been transmitted to China and that the drones were only sending heartbeat communications. The UK's Tory party is calling on the government to audit equipment for Chinese footprints.",
+          "url": "https://www.telegraph.co.uk/news/2026/08/09/spy-cameras-on-navy-drones-secretly-sent-data-to-china/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "telegraph.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a05",
+          "order": 2,
+          "title": "THIS BIZARRE EMAIL FLAW IS LEAKING CORPORATE SECRETS TO ANYONE WHO BUYS THE RIGHT DOMAIN",
+          "summary": "Security researchers discovered that seemingly harmless addresses such as noreply and deleteduser could leak sensitive corporate information via unintended emails. The researchers realized that domains such as noreply[.]net and noreply[.]us were receiving huge volumes of emails. WIRED reported that noreply[.]net received more than 400k messages over a year and a half, including more than 28k attachments.",
+          "url": "https://www.digitaltrends.com/cool-tech/email-security-flaw-corporate-secrets-domains/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "digitaltrends.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a06",
+          "order": 3,
+          "title": "CLAUDE-POWERED OPENCLAW AI AGENT EXPLOITS GYM API TO STEAL WORKOUT SLOTS",
+          "summary": "An Australian OpenClaw user accidentally exploited their gym's API when booking a gym reservation. The user's Claude-powered OpenClaw first discovered a vulnerability that allowed it to book reservations beyond the allowed period, but then when the user asked OpenClaw to try and move their reservation from fourth on the list to the top, it discovered that the API allowed for canceling arbitrary users' appointments and, unprompted, canceled the first appointment. The user contacted the gym via OpenClaw to disclose the vulnerability.",
+          "url": "https://cybersecuritynews.com/gym-api-exploited-by-ai-agent/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-11:a07",
+          "order": 1,
+          "title": "GITHUB ACTIONS AND VAULT BY HASHICORP",
+          "summary": "This article provides a tutorial on how to use OIDC to authenticate GitHub Actions with HashiCorp Vault to retrieve secrets. Vault can be configured to require a set of custom claims in the identity tokens that GitHub uses, allowing for fine-grained policy controls. This can allow GitHub Actions workflows to retrieve secrets without needing to store a long-lived secret or other API key.",
+          "url": "https://links.tldrnewsletter.com/s2UqJi",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a08",
+          "order": 2,
+          "title": "I FOUND A VM ESCAPE BUG IN KVM AND SOMEONE ELSE GOT THERE FIRST",
+          "summary": "A malicious VM could trigger a repeatable heap out-of-bounds read/write escape in KVM's SEV-SNP Page State Change handler due to a bounds check that validated against a protocol constant rather than the actual, guest-controlled scratch buffer size. This flaw yielded five powerful primitives, including a failure oracle, a GFN leak, and guest-controlled slab selection. Tracked as CVE-2026-53360, the vulnerability affects kernels since v6.10 and was ultimately mitigated in versions v7.0.12, v6.18.35, and v6.12.93 by rejecting external scratch allocations entirely and adding READ_ONCE() to close a TOCTOU window, underscoring the need to validate against actual allocation sizes rather than protocol maximums.",
+          "url": "https://blog.himanshuanand.com/2026/08/i-found-a-vm-escape-bug-in-kvm-and-someone-else-got-there-first/?utm_source=tldrinfosec",
+          "reading_time_minutes": 23,
+          "source_domain": "blog.himanshuanand.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a09",
+          "order": 3,
+          "title": "8 OUT OF 10 BANKS IN BELGIUM HATE THIS ONE WEIRD EID RCE",
+          "summary": "Researchers discovered critical vulnerabilities in Connective's eID signing extension, used by most Belgian banks and government agencies, that allowed malicious sites to silently extract smart card data and recover eID PINs due to missing origin binding. Furthermore, the extension's GET_READERS command permitted arbitrary relative DLL loading, enabling drive-by remote code execution if a victim simply downloaded a disguised PDF/DLL polyglot. Nitro fully mitigated these flaws by July 22. Defenders should verify all deployed Connective clients are updated past this date to enforce origin checks and block vulnerable library commands.",
+          "url": "https://amibeingpwned.com/blog/8-in-10-banks-in-belgium?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "amibeingpwned.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-11:a10",
+          "order": 1,
+          "title": "PROMPT INJECTION ATTACKS HAVE IMPACTED 47% OF DEVELOPERS",
+          "summary": "In a 1Password survey, 47% of developers reported seeing one of their agents take an unintended action after following instructions embedded in untrusted content.\n\nLearn how 1Password Privileged Access [10] helps you secure agentic access.",
+          "url": "https://1password.com/product/privileged-access?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_081126",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a10-02",
+          "order": 2,
+          "title": "See just-in-time access in action",
+          "summary": "",
+          "url": "https://1password.com/product/privileged-access?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_infosec_081126",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a11",
+          "order": 3,
+          "title": "OPENAI LAUNCHES GPT-5.6-CYBER WITH FEWER REFUSALS FOR EXPLOIT RESEARCH",
+          "summary": "OpenAI launched Daybreak Red and Blue to provide access to GPT-5.6 Sol with fewer guardrails for offensive and defensive security practitioners respectively. Daybreak Blue is meant for most security practitioners and has guardrails calibrated for vulnerability discovery, secure code review, malware analysis, incident response, and patch validation. Daybreak Red goes further by providing access to GPT-5.6-Cyber, which was trained to reduce refusals for authorized vulnerability research, exploit-chain development, and other high-risk security tasks.",
+          "url": "https://runtimewire.com/article/openai-gpt-5-6-cyber-daybreak-red?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "runtimewire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a12",
+          "order": 4,
+          "title": "FROM FINDING TO FIXING: REDUCING MAINTAINER BURDEN WITH AUTOMATED PATCHES",
+          "summary": "Google now pairs OSS-Fuzz with CodeMender, DeepMind's AI code security agent, so the pipeline moves beyond reporting crashes to performing root-cause analysis and generating validated patches for C/C++ memory safety bugs. Each patch is tested in isolation to confirm it compiles, fixes the crash, and avoids regressions, with Google engineers manually reviewing submissions during this beta phase, and projects that restrict AI-generated code are automatically excluded. Enrolled OSS-Fuzz projects receive these patches by default and can opt out through their existing configuration.",
+          "url": "https://blog.google/security/from-finding-to-fixing-reducing-maintainer-burden-with-automated-patches/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a13",
+          "order": 5,
+          "title": "BEYOND PROMPT INJECTION: HACKING APPLE'S PRIVATE CLOUD COMPUTE",
+          "summary": "Researcher Drinor Selmanaj discovered a path traversal vulnerability (CVE-2026-20685) in darwin-init that allowed attackers to write persistent files to the writable data volume on Apple's Private Cloud Compute nodes. By hijacking the splunkloggingd process, the exploit successfully redirected node telemetry to an attacker-controlled server, exposing sensitive job metadata and inference token counts. Apple's attestation chain only measures installed software and ignores writable-volume states, so this persistent tampering went entirely undetected, ultimately earning the researcher a $150,000 bounty and prompting a patch in PCC release 5E290.3.",
+          "url": "https://blog.sentry.security/beyond-prompt-injection-hacking-apples-private-cloud-compute/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.sentry.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-11:a14",
+          "order": 1,
+          "title": "TURKEY'S CYBER LAW SHIFTS SWEEPING POWERS TO THE PRESIDENCY",
+          "summary": "Turkey has enacted new legislation that centralizes digital oversight under the Cybersecurity Directorate. The government argues that this is necessary for national security reasons. However, critics worry about this new legislation being abused by the government for censorship.",
+          "url": "https://tradersunion.com/news/financial-news/show/2943387-turkey-cyber-law-digital-oversight/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "tradersunion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a15",
+          "order": 2,
+          "title": "SERVING THE MOST CRITICAL MISSIONS: CLOUDFLARE FOR GOVERNMENT ACHIEVES FEDRAMP CLASS D (HIGH) CERTIFIED STATUS",
+          "summary": "Cloudflare for Government achieved FedRAMP Class D (High) certification, sponsored by NIST, clearing the standard for the nation's most sensitive unclassified data covering law enforcement, emergency services, financial systems, and national security. The company built its High offering on the same global network and software stack running its commercial platform rather than an isolated environment, using its Data Localization Suite to confine FedRAMP High traffic processing to US data centers. Cloudflare is now pursuing DoD Impact Level 4 authorization on the same underlying systems.",
+          "url": "https://blog.cloudflare.com/fedramp-class-d-certification/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a16",
+          "order": 3,
+          "title": "THIS IRANIAN MALWARE HAS NO C2 SERVER TO BLOCK. THE COMMAND CHANNEL IS A MEETING INVITE IN YOUR OWN CALENDAR",
+          "summary": "HollowGraph is an Iranian-nexus malware tied to the Cavern backdoor framework that runs no command-and-control infrastructure at all and instead reads orders from and writes stolen data into a victim's own Microsoft 365 calendar over the legitimate Graph API. The implant encrypted its traffic with a hybrid RSA plus AES-256-GCM scheme using separate key pairs per direction and exfiltrated Entra ID credentials via DNS tunneling. Group-IB counted twelve infected Israeli systems active between June 3 and July 9. It linked the malware to the Lyceum espionage cluster, and Check Point separately documented the same Cavern framework this month under the name Cavern Manticore.",
+          "url": "https://www.dugganusa.com/post/this-iranian-malware-has-no-c2-server-to-block-the-command-channel-is-a-meeting-invite-in-your-own?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "dugganusa.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-11:a17",
+          "order": 1,
+          "title": "ONE-CLICK FLAW IN ATLASSIAN ROVO EXPOSED ENTERPRISE DATA VIA PROMPT INJECTION ATTACK",
+          "summary": "Atlassian has patched \"RovoBlast,\" a single-click prompt injection vulnerability in Rovo's rovoChatPrompt parameter discovered by Varonis that allowed attackers to hijack the AI's autonomous agents and silently exfiltrate enterprise data across more than 50 connected platforms without requiring credential compromise.",
+          "url": "https://www.csoonline.com/article/4207306/one-click-flaw-in-atlassian-rovo-exposed-enterprise-data-via-prompt-injection-attack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a18",
+          "order": 2,
+          "title": "US, SOUTH KOREAN GOVERNMENT AGENCIES CAUTION TO BE ON LOOKOUT FOR GUNRA RANSOMWARE GANG",
+          "summary": "CISA, the FBI, NSA, Secret Service, and South Korea's National Police Agency warned that the Gunra ransomware-as-a-service gang has hit government and critical infrastructure targets across five continents.",
+          "url": "https://cyberscoop.com/us-south-korea-gunra-ransomware-warning/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-11:a19",
+          "order": 3,
+          "title": "UK MAN TIED TO THE COM SENTENCED FOR ABUSING 117 VICTIMS",
+          "summary": "A 20-year-old UK man was sentenced to two years and ordered to register as a sex offender after admitting to child sexual abuse and blackmail offenses tied to The Com, a sprawling online network of minors and young adults.",
+          "url": "https://cyberscoop.com/uk-justin-swaddle-the-com-sentenced/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
