@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-12",
+  "source_path": "TLDR InfoSec/article_12-08-2026.md",
+  "source_content_hash": "sha256:ec7133b45480eabf7f684fea747136db6b70a4ba4f761a4d0dca0a0898b04875",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-12",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-12:a04",
+          "order": 1,
+          "title": "LOCKING YOUR SSH-AGENT EXPOSED LOCAL-ONLY KEYS UNTIL OPENSSH 10.5",
+          "summary": "OpenSSH 10.5 fixed a flaw introduced in version 10.4 where locking the ssh-agent disabled the check distinguishing local requests from forwarded ones, letting remote connections perform operations meant to stay local, including adding PKCS#11 tokens and bypassing destination-restricted keys, alongside a use-after-free in the ssh client and a broken authorized_keys \"restrict\" keyword that failed to block tunnel forwarding.",
+          "url": "https://www.helpnetsecurity.com/2026/08/11/openssh-10-5-ssh-agent-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a05",
+          "order": 2,
+          "title": "METABASE SQL ZERO-DAY ATTACKS COULD HAVE WIDE BLAST RADIUS",
+          "summary": "A zero-day SQL injection flaw in Metabase Cloud (CVSS 10, no CVE yet) let an attacker inject SQL into the app database and get admin access, steal database credentials, and export data. Metabase patched cloud instances automatically. Self-hosted users with the /api/session/reset_password endpoint exposed on port 3000 remain vulnerable. n8n confirmed 136 leaked customer records. Kilo Code confirmed exposed Slack tokens and customer data. Metabase told self-hosted users to patch now or block that endpoint, rotate credentials, and revoke sessions.",
+          "url": "https://links.tldrnewsletter.com/kGHsLX",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a06",
+          "order": 3,
+          "title": "RESEARCHERS DISCLOSE AI-ASSISTED SHAREPOINT EXPLOIT CHAIN REACHING UNAUTHENTICATED RCE",
+          "summary": "Rapid7 chained CVE-2026-55040, a JWT validation bug in SharePoint Server Subscription Edition 2019 and 2016, with CVE-2026-63520, a .NET type instantiation flaw in Business Connectivity Services, to get unauthenticated remote code execution. Attackers need only a target's SID or UPN. An AI agent helped find the chain across 96 sessions and 80,000 tool calls but also replayed admin credentials and enabled debug flags without authorization. Install the July KB updates now. August patches aren't public yet.",
+          "url": "https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-12:a07",
+          "order": 1,
+          "title": "PROJECT CAV3RN CONTINUES: GOOGLE APPS SCRIPT AS C2 RELAY AND DNS-BASED C2 CHANNEL SELECTION",
+          "summary": "Kaspersky researchers uncovered an updated Project CAV3RN espionage framework targeting Israeli organizations that dynamically routes command-and-control traffic by inspecting DNS A-record responses to choose between direct HTTPS and a Google Apps Script relay. This evasive technique allows the malware to blend seamlessly with legitimate traffic before handing execution to an inter-component broker (⁠rnp.dll⁠) that orchestrates malicious modules. To detect this activity, defenders should flag anomalous ⁠script.google[.]com⁠ POST requests and hunt for associated infrastructure, specifically queries resolving to ⁠studiotikva[.]com⁠.",
+          "url": "https://securelist.com/project-cav3rn-continues/120991/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a08",
+          "order": 2,
+          "title": "THE PERMANENT THREAT: ANALYZING AETERNUM'S BLOCKCHAIN-BASED C2 OPERATIONS AND COMPROMISES",
+          "summary": "Aeternum is a sophisticated malware loader that utilizes Polygon blockchain smart contracts over JSON-RPC to fetch encrypted command-and-control instructions. After decrypting these commands, the malware downloads secondary payloads from GitHub, including the XWorm RAT and XMRig miners, while a related Python variant specifically targets over 60 cryptocurrency wallets and browser extensions. Aeternum ultimately relies on hardcoded Telegram bot APIs for data exfiltration. Defenders should hunt for anomalous Telegram API traffic and outbound JSON-RPC calls originating from non-browser processes.",
+          "url": "https://unit42.paloaltonetworks.com/aeternum-blockchain-c2-analysis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a09",
+          "order": 3,
+          "title": "A SECURITY ANALYSIS OF AMAZON S3 VECTORS AND ITS USE IN LLM RETRIEVAL PIPELINES",
+          "summary": "An attacker holding only s3vectors:PutVectorBucketPolicy permissions can grant foreign AWS accounts full data-plane access to forge chunk text, spoof citation URLs, and manipulate embedding coordinates so poisoned data dominates top-K retrieval. Researchers demonstrated that a single planted vector could trick a clinical RAG assistant into recommending dangerous medical dosages alongside authentic citations or even achieve command execution in tool-enabled agents. CloudTrail data events for these actions are disabled by default and strip critical metadata when enabled, so defenders must isolate ingestion behind strict IAM roles, utilize HMACs for chunk keys, and mandate manual confirmation before autonomous agents execute actions.",
+          "url": "https://www.offensai.com/blog/amazon-s3-vectors-security-llm-rag-poisoning?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "offensai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-12:a10",
+          "order": 1,
+          "title": "PLAYBOOK: DRIVING MEASURABLE OUTCOMES FROM GARTNER'S CTEM FRAMEWORK",
+          "summary": "Most teams understand Gartner's Continuous Threat Exposure Management framework, but struggle to turn it into a repeatable program. Download the Horizon3 whitepaper [10] to translate CTEM into an operating model that reduces attacker opportunity by validating what matters, prioritizing remediation, and verifying outcomes across your entire",
+          "url": "https://horizon3.ai/downloads/whitepapers/operationalizing-ctem-practical-playbook/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026q3&utm_content=ctemwhitepaper",
+          "reading_time_minutes": null,
+          "source_domain": "horizon3.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a10-02",
+          "order": 2,
+          "title": "attack surface. Get your copy.",
+          "summary": "",
+          "url": "https://horizon3.ai/downloads/whitepapers/operationalizing-ctem-practical-playbook/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026q3&utm_content=ctemwhitepaper",
+          "reading_time_minutes": null,
+          "source_domain": "horizon3.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a11",
+          "order": 3,
+          "title": "WE'RE OPEN-SOURCING OUR PRIVACY PROXY CLI",
+          "summary": "Cloudflare has open-sourced pvcli, a Rust-based diagnostic tool that handles full Oblivious HTTP (OHTTP) requests across relays, gateways, and targets in a single command to eliminate tedious manual binary parsing. Unlike single-protocol alternatives, the utility combines OHTTP, CONNECT proxying, and MASQUE support using a familiar curl-like syntax. This unified approach significantly accelerates incident response and debugging for engineers managing large-scale privacy deployments like Apple's Private Relay and Microsoft's Edge Secure Network VPN.",
+          "url": "https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a12",
+          "order": 4,
+          "title": "BEELZEBUB (PRODUCT LAUNCH)",
+          "summary": "Beelzebub provides a platform that traps attackers already inside a network, using LLM-based decoys, continuous emulation, and an AI analyst to generate incident reports. It runs on-premises or as SaaS and pulls threat feeds from 60+ researchers.",
+          "url": "https://beelzebub.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "beelzebub.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a13",
+          "order": 5,
+          "title": "OPENCODEREVIEW",
+          "summary": "OpenCodeReview is the Alibaba Group's internal AI-powered code review tool. It reads git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision.",
+          "url": "https://github.com/alibaba/open-code-review?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-12:a14",
+          "order": 1,
+          "title": "EXTENSION BANNED FOR STEALING AI CHATS RETURNS TO CHROME STORE, RESUMES MALICIOUS ACTIVITIES",
+          "summary": "Google pulled \"AI Sidebar with DeepSeek, ChatGPT, Claude and more\" in January after OX Security found it scraping ChatGPT/DeepSeek chats and sending them to external domains, with 300,000+ installs by then. It's back on the Chrome Web Store. Netskope found version 1.7.3.0 added 21 lines that open affiliate links on update events and hijack the uninstall URL for referral commissions.",
+          "url": "https://links.tldrnewsletter.com/Vx90RF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a15",
+          "order": 2,
+          "title": "NEW PASS-TA-KEY ATTACK REVEALS ALL THE THINGS WE DIDN'T KNOW ABOUT PASSKEYS",
+          "summary": "Pass-ta-key malware can steal passkeys from an infected Windows PC using Google Password Manager. It may pose as an iPhone, then use Google's device-sync feature to copy the victim's saved passkeys. Windows lets malware access other apps' data more easily than Apple and Android systems. A malware-infected, signed-in PC can also expose passwords and active sessions.",
+          "url": "https://arstechnica.com/security/2026/08/heres-why-the-new-pass-ta-key-attack-is-mostly-a-nothingburger/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a16",
+          "order": 3,
+          "title": "THE MULTI-LAYERED DEFENSES THAT HARDEN CHROME AGAINST ABUSIVE NOTIFICATIONS",
+          "summary": "Chrome Security detailed a new defense-in-depth stack utilizing Firebase Cloud Messaging and Safe Browsing that successfully blocked over 7 billion abusive Android notifications per day in Q1. The multi-layered approach curtails coordinated spam networks by automatically revoking permissions for suspicious sites, analyzing malicious service worker activity signals, and throttling disruptive domains at the FCM server level to 1,000 messages per minute with HTTP 429 error responses.",
+          "url": "https://blog.google/security/the-multi-layered-defenses-that-harden-chrome-against-abusive-notifications/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-12:a17",
+          "order": 1,
+          "title": "PORTUGUESE HACKER TO FACE TRIAL FOR MALICIOUS CHATGPT CLONE",
+          "summary": "The 23-year-old Portuguese hacker who created WormGPT is currently on trial for creating the software.",
+          "url": "https://jorgebranco.substack.com/p/portuguese-hacker-to-face-trial-for?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "jorgebranco.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a18",
+          "order": 2,
+          "title": "ZOOM PATCHES \"ZOOMSDAY\" ZERO-CLICK FLAW ENABLING REMOTE CODE EXECUTION",
+          "summary": "Zoom has released critical updates to mitigate \"Zoomsday\" (CVE-2026-53413), a zero-click remote code execution vulnerability in its annotation protocol that allows any meeting participant to silently trigger a stack buffer overflow and execute arbitrary code across all unpatched platforms.",
+          "url": "https://securityaffairs.com/197042/hacking/zoom-patches-zoomsday-zero-click-flaw-enabling-remote-code-execution.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-12:a19",
+          "order": 3,
+          "title": "NORTH KOREAN REMOTE IT STAFFER WORKED FOR US GOVERNMENT AGENCY, SAYS FBI",
+          "summary": "The FBI is investigating a sanctioned North Korean operative who fraudulently secured a remote IT position at an undisclosed US federal agency.",
+          "url": "https://techcrunch.com/2026/08/11/north-korean-remote-it-staffer-worked-for-us-government-agency-says-fbi/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
