@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-13",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-13",
+  "source_path": "TLDR Data/article_13-08-2026.md",
+  "source_content_hash": "sha256:b6931bb090647b3601e62fe10c701b24b5072c0cb1f2927f6037e7e290efd5b6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-13",
+  "sections": [
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-13:a04",
+          "order": 1,
+          "title": "HOW WE MIGRATED THE DATABASE BEHIND EVERY VERCEL BUILD",
+          "summary": "Vercel migrated the state behind its build warm pool from Redis to DynamoDB because critical billing and container mappings needed durable storage, using dual writes, shadow reads, feature flags, and production comparisons to cut over safely. The migration exposed a hidden dependency on Redis's ultra-low latency, forcing Vercel to redesign an N+1-style supply loop around concurrency rather than serialized reads.",
+          "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a05",
+          "order": 2,
+          "title": "STRIPE USES GRAPH SEARCH AND STATE MACHINES TO AUTOMATE DATABASE REMEDIATION",
+          "summary": "Stripe automated MongoDB incident recovery by modeling its fleet as a graph and generating remediation plans at runtime. The system adapts to different shard layouts, cuts pager alerts by about 30%, and avoids an estimated 12 days of unhealthy shard states annually. Dijkstra-based planning replaced brittle workflows and allows partial recovery when no full path exists.",
+          "url": "https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "stripe.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a06",
+          "order": 3,
+          "title": "FILTERED VECTOR SEARCH: WHAT ACORN FIXES, AND WHAT FIXES ACORN",
+          "summary": "Metadata filters can break vector search by splitting the HNSW graph into disconnected islands. Qdrant compares filterable HNSW, ACORN expansion, full scans, and planner choices on one million vectors, showing when extra index-time edges beat query-time repair and when ACORN helps.",
+          "url": "https://qdrant.tech/articles/filtered-vector-search-acorn/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "qdrant.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-13:a07",
+          "order": 1,
+          "title": "AGENTS ARE COMING FOR DATA (JUST SLOWLY)",
+          "summary": "AI agents are well suited to the boring, mechanical parts of data work, such as testing assumptions, diagnosing schema changes, maintaining context, and fixing pipelines, while proactive automated insights remain much harder because relevance and false positives are difficult to control. Data teams should prepare with strong evals, explicit business context, and low-latency infrastructure that can handle bursty, parallel agent workloads.",
+          "url": "https://www.infoworld.com/article/4203157/agents-are-coming-for-data-just-slowly.html?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a08",
+          "order": 2,
+          "title": "THE \"X IS DEAD\" FALLACY",
+          "summary": "Data warehousing, SQL, modeling, semantic layers, and BI are not dying. Implementations change while core functions remain. “AI will kill X” claims often mistake automation for replacement: LLMs can generate code but not replace business semantics, governance, or architectural judgment. The real shift is which responsibilities become automated, commoditized, or move between layers.",
+          "url": "https://joereis.substack.com/p/the-x-is-dead-fallacy?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "joereis.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a09",
+          "order": 3,
+          "title": "WHY KNOWLEDGE GRAPH PROJECTS FAIL — AND HOW TO MAKE THEM SUCCEED",
+          "summary": "Knowledge graphs often fail when treated like relational databases: direct SQL-to-RDF translation, row-oriented design, weak deduplication, and oversized scopes create sparse, slow systems. Better practice starts with specific use cases, staged or federated graphs, controlled APIs, SHACL structure, and explicit provenance. Query graphs on demand and keep the logical model independent of backend.",
+          "url": "https://ontologist.substack.com/p/why-knowledge-graph-projects-fail?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "ontologist.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-13:a10",
+          "order": 1,
+          "title": "ELECTRIC JOINS DATABRICKS TO BRING WASM POSTGRES TO AI AGENT SANDBOXES",
+          "summary": "Databricks is acquiring Electric to bring PGlite, a lightweight WASM version of Postgres, into AI agent sandboxes, giving agents fast local databases while syncing shared state back to Lakebase. The goal is to let distributed agents work independently with low latency while maintaining a centralized, governed source of truth in Lakebase.",
+          "url": "https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a11",
+          "order": 2,
+          "title": "MAESTRO: NETFLIX'S OPEN-SOURCE WORKFLOW ORCHESTRATOR KEEPS MOVING",
+          "summary": "Netflix's Maestro is an Apache-2.0 workflow orchestrator for large-scale data, ML, and batch pipelines, with project topics spanning data-pipelines, workflow-orchestration, MLOps, scheduling, and agentic-workflow. For teams reviewing Airflow alternatives or companion orchestration patterns, it is worth tracking as a production-derived open-source control plane.",
+          "url": "https://github.com/Netflix/maestro?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a12",
+          "order": 3,
+          "title": "INTRODUCING SQLFMT: AN SQL GOFMT-STYLE FORMATTER",
+          "summary": "sqlfmt is a new opinionated SQL formatter inspired by gofmt that enforces Dimitri Fontaine's “river alignment” style with lowercase keywords, consistent indentation, commas, and comments. It uses tokenization rather than an AST for robustness, runs as a CLI or in-browser via WASM, and verifies formatting does not change query semantics.",
+          "url": "https://tapoueh.org/blog/2026/08/introducing-sqlfmt-an-sql-gofmt-style-formatter/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "tapoueh.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a13",
+          "order": 4,
+          "title": "ATOMIC BATCH PUBLISHING IN NATS 2.12: ALL-OR-NOTHING MESSAGE GUARANTEES",
+          "summary": "NATS 2.12 adds atomic batch publishing for JetStream streams, letting producers commit related messages as an all-or-nothing unit. Event-sourced systems, multi-subject fan-out, and state replacement workflows can avoid partial writes without building custom recovery logic, while consistency checks such as expected sequence headers preserve concurrency safety.",
+          "url": "https://www.synadia.com/blog/atomic-batch-publishing-nats-2-12/?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "synadia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-13:a14",
+          "order": 1,
+          "title": "HOW STANDARDIZING PRODUCT TELEMETRY REDUCED TIME TO INSIGHT BY 97%",
+          "summary": "Salesforce standardized product telemetry through a Product Data Platform, replacing fragmented, team-specific pipelines with a common schema that automatically generates trusted product adoption metrics. The platform processes 45 billion rows per day across 19,000 events and 2,000+ product features, cutting time to insight and reducing manual instrumentation work to a few hours.",
+          "url": "https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "engineering.salesforce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a15",
+          "order": 2,
+          "title": "AI MODEL DRIFT: HOW TO KEEP MODELS RELIABLE",
+          "summary": "AI model drift is declining quality as production data, user behavior, prompts, retrieval corpora, or business rules diverge from training assumptions. Teams should monitor data drift, concept drift, pipeline failures, and prompt, embedding, or output drift in LLM and RAG systems. Detection combines baselines, distribution checks, telemetry, task completion, and user feedback.",
+          "url": "https://www.honeycomb.io/blog/ai-model-drift?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "honeycomb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-13:a16",
+          "order": 1,
+          "title": "DOES ANYONE RUN POSTGRES WITHOUT PGBOUNCER?",
+          "summary": "Connection pooling is now effectively essential infrastructure for Postgres, raising the question of why it is not built into Postgres itself.",
+          "url": "https://brandur.org/fragments/postgres-without-pgbouncer?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "brandur.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-13:a17",
+          "order": 2,
+          "title": "META RELEASES MUSE GLIMMER FOR LOCAL AI AGENTS",
+          "summary": "Meta's 30B open-weight model can run local agent workflows on consumer GPUs when quantized to under 20 GB.",
+          "url": "https://www.testingcatalog.com/meta-releases-muse-glimmer-for-local-ai-agents/?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "testingcatalog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

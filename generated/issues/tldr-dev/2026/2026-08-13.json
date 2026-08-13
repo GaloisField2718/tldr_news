@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-08-13",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-08-13",
+  "source_path": "TLDR Dev/article_13-08-2026.md",
+  "source_content_hash": "sha256:abfd6e9df5ec9b889ddafb3e2f2160db91d3a777b7d89987abe197b6d8df37b4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-08-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a04",
+          "order": 1,
+          "title": "😇 HOW ETSY'S ENGINEERS KEEP THEIR APP CRASH-FREE DURING TRAFFIC SPIKES",
+          "summary": "Etsy gets more than its fair share of traffic during holiday shopping, and any downtime is a revenue problem - which is why they've built robust systems to prevent it.\n\nJoin Etsy's Jay Henry and Sergiy Dybskiy from Sentry [5] to see how Etsy's engineering team prepares for peak traffic, debugs in real time, and measures the business impact of crashes when it matters most.\n\nExpect real stories and practical takeaways from Etsy's own high-traffic events!",
+          "url": "https://sentry.io/resources/etsy-workshop/?utm_source=tldr&utm_medium=paid-community&utm_campaign=ecommerce-fy27q3-etsyworkshop&utm_content=newsletter-dev-primary-register_header_how_etsys_engineers",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a06",
+          "order": 2,
+          "title": "Join live (and bring your questions) on August 19",
+          "summary": "",
+          "url": "https://sentry.io/resources/etsy-workshop/?utm_source=tldr&utm_medium=paid-community&utm_campaign=ecommerce-fy27q3-etsyworkshop&utm_content=newsletter-dev-primary-register_cta_live_bring_questions",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a07",
+          "order": 1,
+          "title": "HOW TAILSCALE HELPED FIND THE SQLITE WAL-RESET BUG",
+          "summary": "Tailscale faced a lot of challenges due to a recurring database corruption issue within its SQLite implementation, which persisted for six months and affected its service reliability. After extensive investigation and collaboration with SQLite developers, its team identified and resolved a 16-year-old bug in SQLite, improving their backup and recovery processes to prevent future incidents.",
+          "url": "https://tailscale.com/blog/sqlite-wal-reset-bug?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a08",
+          "order": 2,
+          "title": "HOW WE BUILT A SOFTWARE FACTORY TO DRIVE ASTRO'S GITHUB ISSUE COUNT TO ZERO",
+          "summary": "The Astro team automated GitHub issue triage with isolated AI subagents running in GitHub Actions that reproduce bugs, diagnose root causes, and ship preview releases for reporters to verify. They drove open issues from 200+ down to about 30, with zero expected within a month. The pipeline works as a state machine driven by issue labels, and agent failures are treated as signals of underlying problems in the codebase like opaque abstractions or missing tests.",
+          "url": "https://blog.cloudflare.com/astro-issue-triage/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a09",
+          "order": 3,
+          "title": "HTML OVER WEBSOCKETS: REAL-TIME SPAS WITH BARELY ANY JAVASCRIPT",
+          "summary": "Building a Single-page Application usually requires JavaScript for rendering views, connecting to an API for JSON data, and managing two independent codebases. However, HTML over WebSockets is an alternative where the server sends pre-built HTML directly to the client. This method simplifies architecture by consolidating rendering logic on the server, reducing complexity, and improving real-time capabilities with a persistent bidirectional communication channel.",
+          "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "en.andros.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a10",
+          "order": 1,
+          "title": "AI IS REMOVING THE MIDDLE CLASS OF SOFTWARE ENGINEERING",
+          "summary": "AI is accelerating the rate of software development, leading to an environment where poor engineering practices proliferate unchecked, resulting in complex codebases that no one fully understands. This shift creates a stark divide in the industry, where great engineers gain increased value and job security, while those lacking the necessary skills struggle to remain employable.",
+          "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.florianherrengt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a11",
+          "order": 2,
+          "title": "BUILD WIDE, SHIP NARROW",
+          "summary": "The traditional engineering workflow of tightly planning features before coding has evolved, allowing for broader initial builds and iterative improvements through AI-assisted development. By focusing on demoing work before code reviews and breaking down tasks into smaller, independently reviewable pull requests after building, engineers can improve productivity and address feedback more efficiently.",
+          "url": "https://adapt.com/blog/build-wide-ship-narrow?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "adapt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a12",
+          "order": 1,
+          "title": "HOW DO YOU CONTROL AGENT ACCESS?",
+          "summary": "According to a 1Password survey, 62% of employees report security gaps in how their company manages AI agents. That means over-privileged and long-lived access without any oversight.\n\nLearn how 1Password Privileged Access [12] fills the gaps in your agent security.",
+          "url": "https://1password.com/product/privileged-access?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_dev_081326",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a12-02",
+          "order": 2,
+          "title": "Get started securing agent access",
+          "summary": "",
+          "url": "https://1password.com/product/privileged-access?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_blackhat_lp_privileged-access_sa&utm_content=newsletter_dev_081326",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a13",
+          "order": 3,
+          "title": "GROK BOT: A NEW KIND OF COLLEAGUE",
+          "summary": "Grok Bot is an AI tool designed to act as a virtual teammate that can handle various tasks by interfacing with user applications, learn workflows over time, and collaborate with other bots. It operates 24/7, allowing users to assign multiple projects and manage task completion efficiently without the need for constant oversight.",
+          "url": "https://links.tldrnewsletter.com/RWIRHZ",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a14",
+          "order": 4,
+          "title": "INTRODUCING GROK 4.6",
+          "summary": "Grok 4.6 improves capabilities for long-running agents and ambitious interactive projects, showing improved performance across various coding and knowledge work benchmarks. With a focus on safety and usability, Grok 4.6 is designed to transform product ideas into functional applications while incorporating self-checking and verification features.",
+          "url": "https://links.tldrnewsletter.com/7fgo6P",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a15",
+          "order": 5,
+          "title": "INTRODUCING DELTA",
+          "summary": "Delta is a new multiplayer coding environment that allows developers and agents to collaborate in real-time, keeping their code and conversations interconnected. With features like DeltaDB, comments on code are synchronized and remain relevant as the code evolves.",
+          "url": "https://zed.dev/blog/introducing-delta?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "zed.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a16",
+          "order": 1,
+          "title": "PROGRAMMING LANGUAGE ADOPTION PATTERNS AT META",
+          "summary": "Meta's programming language usage shows that Rust and TypeScript have experienced exceptional year-over-year growth rates, with TypeScript showing an increase of +1,200% in recent months. Meanwhile, languages like Haskell and Java have been steadily losing market share.",
+          "url": "https://links.tldrnewsletter.com/klu13q",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a17",
+          "order": 2,
+          "title": "CRACKS IN THE AI THESIS",
+          "summary": "Business adoption of AI shows mixed results, with Anthropic leading in market share but slower uptake of its latest model, Fable 5, compared to OpenAI's offerings. Despite growing competition from open source models, American companies continue to increase their overall AI spending, although there is a limit to how much they are willing to pay for performance improvements.",
+          "url": "https://econlab.substack.com/p/ai-index-august-2026?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "econlab.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-13:a18",
+          "order": 1,
+          "title": "INSIDE AN APPLIED AI COMPANY",
+          "summary": "An Applied AI company focuses on providing complete solutions for complex workflows, improving accuracy and efficiency through tight integration, continuous evaluation, and a unique operational structure that bridges engineering and customer engagement.",
+          "url": "https://links.tldrnewsletter.com/yU2bOU",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a19",
+          "order": 2,
+          "title": "AGENTIC ENGINEERING IS JUST EVERYTHING WE HAVEN'T BEEN DOING",
+          "summary": "Effective implementation of AI tooling requires addressing existing issues within teams rather than relying solely on automation.",
+          "url": "https://blog.matthewbrunelle.com/agentic-engineering-is-just-everything-we-havent-been-doing/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.matthewbrunelle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a20",
+          "order": 3,
+          "title": "WHY TINY JPEGS LOOK DIFFERENT IN CHROME",
+          "summary": "Tiny JPEGs can appear differently in Chrome due to a rendering optimization that uses partial IDCT scaling, which allows the browser to decode only low-frequency data when the image is displayed at a small size.",
+          "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "guillaumetech.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-13:a21",
+          "order": 4,
+          "title": "MIGRATING A LARGE FLOW MONOREPO TO TYPESCRIPT",
+          "summary": "Yelp successfully migrated its large codebase from Flow to TypeScript over three years by gradually converting one package at a time, making sure of type integrity throughout the process.",
+          "url": "https://engineeringblog.yelp.com/2026/08/migrating-a-large-flow-monorepo-to-typescript.html?utm_source=tldrdev%5B22%5D%5B23",
+          "reading_time_minutes": 14,
+          "source_domain": "engineeringblog.yelp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

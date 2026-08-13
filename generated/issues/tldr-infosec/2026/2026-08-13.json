@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-13",
+  "source_path": "TLDR InfoSec/article_13-08-2026.md",
+  "source_content_hash": "sha256:2ed0b79ee3afdd41d5ac5cb2085a9c2a967a40ab89f1d163b3afc3b58e36a64d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-13",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-13:a04",
+          "order": 1,
+          "title": "DOCKER COPYESCAPE VULNERABILITY ENABLES HOST FILE OVERWRITE AND ROOT CODE EXECUTION",
+          "summary": "CopyEscape (CVE-2026-17106) is a critical race condition in the ⁠docker cp⁠ command that allows a malicious container to escape its boundaries and overwrite arbitrary files on the host system. By swapping a directory for a symlink during the archive-copy workflow, attackers can force extraction to outside paths, achieving root code execution by overwriting critical host binaries like ⁠/usr/bin/runc⁠. Docker has patched the vulnerability in Engine 29.7.2 and Desktop 4.86.0, requiring defenders to upgrade immediately, halt automated root-level copy operations, and ensure untrusted containers are stopped before retrieving files.",
+          "url": "https://gbhackers.com/docker-copyescape-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a05",
+          "order": 2,
+          "title": "CYBERATTACK ON LOGISTICS GIANT CEVA HITS RETAILERS AND STEAM CUSTOMERS ACROSS EUROPE",
+          "summary": "A cyberattack disrupted eight Ceva Logistics warehouses, delaying or canceling orders for many customers. Bol said attackers accessed two order-processing systems. Names, addresses, contact details, tracking data, purchases, and gift-card messages may be exposed. Valve is notifying affected European hardware buyers.",
+          "url": "https://therecord.media/ceva-logistics-cyberattack-bol-steam-debijenkorf-ace-tate?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a06",
+          "order": 3,
+          "title": "OVER 2,500 ORGANIZATIONS IMPACTED BY LITELLM SUPPLY CHAIN ATTACK",
+          "summary": "TeamPCP compromised LiteLLM after its CI pipeline automatically installed a trojanized Trivy release. LiteLLM versions 1.82.7 and 1.82.8 ran malicious code on every Python invocation. The packages were live for 40 minutes, exposing 434,000 CI/CD pipelines across 2,500 organizations. Treat LiteLLM-accessible credentials as exposed. Validate and rotate secrets, accounts, and sessions, then review logs.",
+          "url": "https://links.tldrnewsletter.com/r57t3o",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-13:a07",
+          "order": 1,
+          "title": "KIMWOLF V7: AN EVOLUTION OF THE KIMWOLF BOTNET",
+          "summary": "Kimwolf v7 is an evolving IoT botnet that compromises Android TV boxes via unauthenticated ADB interfaces to launch HTTP/2 flood attacks using spoofed browser fingerprints. The malware utilizes a resilient, three-tier command-and-control architecture featuring Ethereum Name Service lookups, a hardcoded Tor hidden service fallback, and a localized proxy routing system. Defenders should restrict network ADB access, hunt for the masqueraded ⁠netd_service⁠ process, and monitor for anomalous outbound Ethereum RPC queries directed at the operator-controlled endpoint ⁠eth[.]rpcuniverse[.]com⁠.",
+          "url": "https://unit42.paloaltonetworks.com/kimwolf-v7-botnet-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a08",
+          "order": 2,
+          "title": "737 CHROME VPN EXTENSIONS LINKED TO BRAND IMPERSONATION AND BROWSER TRAFFIC REDIRECTION",
+          "summary": "Socket researchers identified a massive campaign of 737 malicious Chrome VPN extensions, operated by a single threat actor branded as Muxa VPN, targeting Russian-speaking users seeking to bypass regional blocks. Once installed, these extensions abuse the ⁠chrome.proxy.settings⁠ API to silently force all browser traffic through a SOCKS5 relay on port 1082, with many utilizing DNS-over-HTTPS to evade plaintext DNS logging. While Google has removed some extensions, over 500 remain active, prompting defenders to block egress traffic on SOCKS5:1082 and VLESS-REALITY:443 and heavily scrutinize any extension requesting the ⁠proxy⁠ permission.",
+          "url": "https://socket.dev/blog/chrome-vpn-extension-impersonation?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "socket.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a09",
+          "order": 3,
+          "title": "WHY AI-GENERATED VULNERABILITY PATCHES STILL REQUIRE EXPERT HUMAN REVIEW",
+          "summary": "1Password's Off-by-1 Labs tested ChatGPT-5.5 and Opus 4.8's abilities to generate patches for six recent, high-profile CVEs when running as part of the respective organizations' cyber reduced guardrails programs. The test setup involved generating 540 patches per vulnerability in batches of 20 and testing whether they fixed the vulnerability, changed application behavior, and/or introduced new vulnerabilities. 1Password found that only 26% of patches fixed the vulnerability without changing application behavior or introducing new vulnerabilities.",
+          "url": "https://1password.com/blog/why-ai-generated-patches-still-require-human-review?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-13:a10",
+          "order": 1,
+          "title": "EXPANDING DAYBREAK AS THE CYBER DEFENSE WINDOW NARROWS",
+          "summary": "OpenAI has expanded its Daybreak cybersecurity program with two new access tiers, Daybreak Blue and Daybreak Red, alongside the introduction of a specialized model named GPT-5.6-Cyber. By explicitly reducing refusals on high-risk tasks, this purpose-built model achieved a 95% completion rate on advanced exploit-chain benchmarks and recently uncovered critical zero-day vulnerabilities like a Chrome V8 heap sandbox escape (CVE-2026-15903). To mitigate the inherent risks of bypassing standard safety guardrails, OpenAI is restricting access to approved defenders and mandating hardware security keys for all accounts starting September 1.",
+          "url": "https://links.tldrnewsletter.com/J4UzCZ",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a11",
+          "order": 2,
+          "title": "CORMA (PRODUCT LAUNCH)",
+          "summary": "Corma provides an AI foundation model for cybersecurity defense. It analyzes system events, audit logs, and network traffic to spot multi-stage intrusions, then deploys automated agents that work alongside security teams.",
+          "url": "https://corma.ai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "corma.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a12",
+          "order": 3,
+          "title": "ETWSUITE",
+          "summary": "Windows native ETW inspection suite for browsing providers, reading metadata, consuming live events, recording ETL traces, filtering results, and inspecting ETL/JSON/CSV recordings from one desktop tool.",
+          "url": "https://github.com/Idov31/EtwSuite?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a13",
+          "order": 4,
+          "title": "ADR",
+          "summary": "ADR is Uber's production agentic AI detection and response tool. It helps organizations secure employee and customer-facing agents.",
+          "url": "https://github.com/uber/ADR?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-13:a14",
+          "order": 1,
+          "title": "EXTENSION BANNED FOR STEALING AI CHATS RETURNS TO CHROME STORE, RESUMES MALICIOUS ACTIVITIES",
+          "summary": "A malicious Chrome extension named \"AI Sidebar with DeepSeek ChatGPT Claude and more\" has bypassed a previous Web Store ban and returned with a new fraudulent monetization scheme. Netskope Threat Labs discovered that version 1.7.3.0 contains a script that farms affiliate commissions through an AI video platform during every update and overwrites the uninstall URL to ensure even removing the extension generates a referral payout. Defenders should immediately block and remove this extension, classified as Trojan.GenericFCA.Script.37952, which falsely masquerades as an official DeepSeek AI product to deceive users.",
+          "url": "https://links.tldrnewsletter.com/Vx90RF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a15",
+          "order": 2,
+          "title": "CLOUDFLARE DDOS THREAT REPORT H1 2026: 1 TBPS ATTACKS SOAR AS DNS FLOODS AND GEOPOLITICAL TENSIONS DRIVE A NEW WAVE",
+          "summary": "Cloudflare's H1 2026 DDoS Threat Report highlights a massive escalation in attack volume, recording 935 incidents exceeding 1 Tbps driven by a shift toward DNS-based floods and a 580 percent quarterly surge in CLDAP reflection. Real-world geopolitical events heavily dictated targeting patterns, with Operation Epic Fury triggering a massive spike in attacks against government infrastructure and the Ankara NATO Summit pushing Turkey into the top three most-attacked countries. Furthermore, Brazil has officially overtaken the United States as the primary source of global attack traffic, while the media sector remains the most targeted industry globally.",
+          "url": "https://blog.cloudflare.com/ddos-threat-report-2026-h1/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a16",
+          "order": 3,
+          "title": "NEW STORMENCRYPTOR RANSOMWARE USED BY FORMER MEDUSA AFFILIATE",
+          "summary": "Microsoft Threat Intelligence is tracking a financially motivated threat actor that was previously affiliated with the Medusa ransomware operation and is currently deploying a new ransomware strain called StormEncryptor. The threat actor has been exploiting vulnerabilities in the N-Central RMM software to breach systems, followed by using AnyDesk or SimpleHelp for remote management, Advanced IP Scanner for network discovery, and Mimikatz for credential dumping. The StormEncryptor ransomware is a C++ malware that appends encrypted files with the “.encrypted” extension and drops a ransom note, which gives victims three days to negotiate with the attackers before data is leaked, in each scanned directory.",
+          "url": "https://links.tldrnewsletter.com/9132bx",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-13:a17",
+          "order": 1,
+          "title": "CISCO PATCHES FIREWALL ZERO-DAY EXPLOITED FOR DOS ATTACKS",
+          "summary": "Cisco released emergency hotfixes for an actively exploited zero-day (CVE-2026-20349) that allows unauthenticated attackers to crash Secure Firewall ASA and FTD appliances via crafted HTTP requests to the Remote Access SSL VPN service, prompting a CISA mandate to patch by August 14.",
+          "url": "https://links.tldrnewsletter.com/BkXVhE",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a18",
+          "order": 2,
+          "title": "ZOOM ANNOTATION FLAWS COULD LET A MEETING PARTICIPANT HIJACK ANOTHER ATTENDEE'S CLIENT",
+          "summary": "Zoom patched three annotation bugs that let meeting participants send malformed drawing data to another client.",
+          "url": "https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-13:a19",
+          "order": 3,
+          "title": "FBI SAYS CYBERCRIMINALS ARE HACKING INTO VICTIMS' ONLINE ACCOUNTS TO STEAL THEIR INTIMATE PICTURES",
+          "summary": "The FBI warns that attackers are taking over adults' and children's social accounts to steal explicit images and videos.",
+          "url": "https://techcrunch.com/2026/08/11/fbi-says-cybercriminals-are-hacking-into-victims-online-accounts-to-steal-their-intimate-pictures/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
