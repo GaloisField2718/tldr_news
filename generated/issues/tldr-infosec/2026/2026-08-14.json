@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-14",
+  "source_path": "TLDR InfoSec/article_14-08-2026.md",
+  "source_content_hash": "sha256:b77541986b17628c0e61b9e5e38af461deb356acf19e3aa485e2fd927bc6a2a0",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a04",
+          "order": 1,
+          "title": "6,000+ \"GUARDRAIL-FREE\" AI MODELS. ONE DOWNLOAD AWAY.",
+          "summary": "AI-powered cybercrime is no longer just a future risk. ThreatDown's [5]new research found it's already here, hiding in plain sight on infrastructure organizations already trust. ThreatDown [6] researchers assess that AI capable of exploiting vulnerabilities at scale could reach criminal marketplaces within roughly six months. Read the _Cybercrime in the age of AI_ [7] report to see what they found.\n\nWant to learn more? Join ThreatDown researchers for a look at how AI is reshaping the threat landscape, including:\n\n* The techniques criminals use to exploit shadow AI. * What the rise in offline, \"guardrail-free\" AI models means for cybersecurity. * Why you have six months to prepare for criminals with Mythos-class AI.",
+          "url": "https://www.threatdown.com/dl-cybercrime-in-age-of-ai-2026/?utm_source=tldr&utm_medium=referral&utm_campaign=2026-08-14_Primary_Threatdown&utm_content=header_6_000_plus_guardrail",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a08",
+          "order": 2,
+          "title": "Save your seat",
+          "summary": "",
+          "url": "https://www.threatdown.com/lp-ai-cybercrime-report-webinar/?mkt_tok=ODA1LVVTRy0zMDAAAAGjU4RxCUNv0Dvb0k37O4kkPsZAr4sxJdaK4DZLq9TTn8-uPzgFxbUzQtEnZc9e1_CIqMDERIUNO1lwDRM4rEk&utm_source=marketo&utm_medium=email&utm_campaign=20260521_wb_threatDown_itdr_prospect_webinar&utm_content=v1_cta_save_seat",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a09",
+          "order": 1,
+          "title": "STEALTHY ‘CITY-FORUM' ATTACKS TARGET SALESFORCE AND SERVICENOW WITH CUSTOM TOOLSET",
+          "summary": "Reco tracked City-Forum using one Go binary against Salesforce Aura, Salesforce LWR, and ServiceNow. The campaign queried unauthenticated guest-user access, gathering exposed Salesforce records and ServiceNow search results. One target logged more than 560,000 guest Aura enumeration events from a single IP address.",
+          "url": "https://links.tldrnewsletter.com/sWEmq3",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a10",
+          "order": 2,
+          "title": "CRITICAL VMWARE VCENTER RCE FLAW EXPLOITED FOR REVERSE SSH ACCESS",
+          "summary": "Digital forensics firm QUIRSO reports that a recently patched, critical vulnerability in VMware vCenter Syslog Server is actively being exploited by threat actors. The vulnerability is a directory traversal vulnerability that could be exploited by unauthenticated attackers to gain remote code execution. QUIRSO stated that the threat actor is deploying the reverse_ssh C2 to establish persistence on compromised servers.",
+          "url": "https://links.tldrnewsletter.com/rDsnK3",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a11",
+          "order": 3,
+          "title": "TREZOR DISCLOSES DATA BREACH AFFECTING NEARLY 14K CUSTOMERS",
+          "summary": "Hardware wallet manufacturer Trezor disclosed a data breach affecting nearly 14k customers via a breach of its logistics provider ShipMonk. Nearly 12k customers had their names, email, shipping addresses, and phone numbers exposed, while nearly 2k only had their name, city, and email exposed. ShipMonk stated in their breach disclosures that the data breach came as part of the recent Metabase hacks.",
+          "url": "https://links.tldrnewsletter.com/t4yfnE",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a12",
+          "order": 1,
+          "title": "CAN AI DO NOVEL SECURITY RESEARCH? MEET THE HTTP TERMINATOR",
+          "summary": "PortSwigger built HTTP Terminator to generate and test HTTP desync hypotheses on 30,000 authorized targets. RFC fragments produced 30,000 payloads, and testing identified about 700 vulnerable targets. Confirmed findings included multipart/byteranges desyncs, Apache Traffic Server CVE-2026-63078, response-queue poisoning paths, and a Citrix NetScaler configuration that exposed a bank API key. Deterministic validation gates removed false positives during exploitation, and the system also identified leads for response forking, status-line injection, range cache poisoning, and shared-parser confusion.",
+          "url": "https://portswigger.net/research/can-ai-do-novel-security-research?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "portswigger.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a13",
+          "order": 2,
+          "title": "LEAST PRIVILEGE FOR AI AGENTS: IDENTITY, ACCESS, AND TOOL BINDING",
+          "summary": "To properly scope agent identities, teams should seek to establish dedicated agent identities with least-privilege, task-based roles that are scoped to the access and tools the agent needs, and end-to-end auditability. Teams should leverage just-in-time access mechanisms to dynamically create short-lived permissions that will automatically expire and rotate. Agents should also have a human that is explicitly designated as responsible for any human-gated approvals and incident response.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/07/16/least-privilege-for-ai-agents-identity-access-and-tool-binding/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a14",
+          "order": 3,
+          "title": "ENGINEERING THE IMPOSSIBLE: ADDING SAFETY TO AUTONOMOUS AGENTS",
+          "summary": "AI models from OpenAI, Anthropic, and Meta successfully broke out of bounded evaluation environments this year by prioritizing infrastructure access over prompt-level instructions restricting internet connectivity. In notable incidents, an OpenAI model exploited a zero-day in Hugging Face's production systems, while Anthropic models escaped misconfigured capture-the-flag setups to compromise three real organizations. To prevent similar breakouts, this post details its defense-in-depth architecture, which utilizes strict DNS-layer egress blocking and an independent Guardian Model to vet every action before execution.",
+          "url": "https://xbow.com/blog/autonomous-agent-safety-guardrails?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "xbow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a15",
+          "order": 1,
+          "title": "HOW WE'RE BUILDING SCAM ALERT ON WHATSAPP WITH END-TO-END ENCRYPTION AND VERIFIABILITY GUARANTEES",
+          "summary": "WhatsApp's beta Scam Alert scans non-contact messages locally for scam patterns. Warnings let users block, report, or trust a chat while message content stays on-device. Telemetry contains aggregated warning and action counts, processed in trusted execution environments with differential privacy. Model hashes and versions appear in a public ledger, and clients verify signatures, hashes, and privacy settings before sending metrics.",
+          "url": "https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a16",
+          "order": 2,
+          "title": "MINDGARD (PRODUCT LAUNCH)",
+          "summary": "Mindgard provides automated security testing and runtime protection for models, agents, and applications. It maps attack surfaces, finds exploitable flaws, assesses risk, and blocks attacks.",
+          "url": "https://mindgard.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "mindgard.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a17",
+          "order": 3,
+          "title": "CLOUDFLARE COMPUTER",
+          "summary": "Cloudflare Computer is a virtual filesystem that lives inside a Durable Object. The Durable Object holds authoritative state in SQLite and exposes a pluggable execution surface.",
+          "url": "https://github.com/cloudflare/computer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a18",
+          "order": 1,
+          "title": "AFTER MICROSOFT THREATENED LEGAL ACTION, A SECURITY RESEARCHER PUBLISHES A NEW WINDOWS ZERO-DAY BUG",
+          "summary": "ShieldBreak is a Windows Defender privilege-escalation exploit. A victim must run the supplied app. It affects Windows 10, Windows 11 25H2, and Windows Server 2025. Will Dormann verified it with Defender enabled and the exploit bypassed Microsoft's RoguePlanet fix. Microsoft is investigating and has not released a patch.",
+          "url": "https://techcrunch.com/2026/08/12/after-microsoft-threatened-legal-action-a-security-researcher-publishes-a-new-windows-zero-day-bug/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a19",
+          "order": 2,
+          "title": "THE STATE OF RANSOMWARE Q2 2026",
+          "summary": "Check Point Research's Q2 2026 ransomware report highlights a rapidly fragmenting threat landscape, noting that the number of active groups has climbed to 93 while the top ten syndicates' market share dropped significantly. Qilin remained the most prolific operator, though an emerging group known as The Gentlemen surged to second place after reportedly utilizing AI coding assistants to build its ransomware management panel in just three days. Although victim payment rates have hit a multi-year low of 23 percent, law enforcement agencies have adapted their disruption strategies to target shared criminal infrastructure, such as laundering platforms and malware signing services, rather than individual groups.",
+          "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a20",
+          "order": 3,
+          "title": "BITCOIN FIRMS ASK AI LABS FOR THE SAME TOOLS ATTACKERS ALREADY HAVE",
+          "summary": "A coalition of over three dozen bitcoin and crypto companies signed a letter calling on the “largest AI labs” to give open-source security researchers early access to their most capable models. The central complaint is that the Bitcoin Core developers group cannot access the labs' programs for trusted security partners, leading to them falling behind attackers. The letter comes in the wake of recent major, AI-enabled attacks on crypto firms.",
+          "url": "https://www.coindesk.com/tech/2026/08/13/bitcoin-firms-ask-ai-labs-for-same-tools-attackers-already-have?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-14:a21",
+          "order": 1,
+          "title": "UBER FREIGHT INVESTIGATING DATA SECURITY INCIDENT AFTER HELIX CLAIMS BREACH",
+          "summary": "Helix claims it stole nearly one million Uber Freight files.",
+          "url": "https://www.scworld.com/brief/uber-freight-investigating-data-security-incident-after-helix-claims-breach?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-14:a22",
+          "order": 2,
+          "title": "PRIVATE SECURITY FIRMS WILL SOON BE ALLOWED TO HACK OVERSEAS CYBERCRIMINALS",
+          "summary": "The Trump administration will authorize vetted private security firms to conduct offensive cyber operations against overseas criminal networks operating ransomware, sextortion, and financial fraud schemes, subject to a $1 million compliance escrow.",
+          "url": "https://arstechnica.com/security/2026/08/white-house-recruits-security-firms-to-hack-overseas-cybercriminals/?utm_source=tldrinfosec%5B23%5D%5B24",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
