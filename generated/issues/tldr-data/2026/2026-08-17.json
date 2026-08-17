@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-17",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-17",
+  "source_path": "TLDR Data/article_17-08-2026.md",
+  "source_content_hash": "sha256:3ef31aa65ed6dc873610d24e0c09861c2d6be447e13029fd5ea2700f33fe13ee",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-17",
+  "sections": [
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-17:a04",
+          "order": 1,
+          "title": "SCRATCH A SIMPLE DATA MODEL, FIND A COMPLEX ONE",
+          "summary": "A seemingly simple Bible data model quickly breaks down once real-world cases like verse ranges, missing verses, alternate numbering, repeated chapters, and out-of-order text appear. The practical lesson is to model only the complexity the product actually needs, rather than chasing perfect fidelity by default.",
+          "url": "https://codeblog.jonskeet.uk/2026/08/14/scratch-a-simple-data-model-find-a-complex-one/?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "codeblog.jonskeet.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a05",
+          "order": 2,
+          "title": "POINT LOOKUPS ON THE LAKEHOUSE: HOW HUDI INDEXES ACCELERATE READ-HEAVY WORKLOADS",
+          "summary": "Apache Hudi's metadata-table indexes make selective lakehouse reads behave more like database lookups than full scans. Record-level, secondary, expression, and bloom-filter indexes can prune equality predicates to a few files.",
+          "url": "https://hudi.apache.org/blog/2026/08/14/hudi-for-read-heavy-workloads-point-lookups-with-indexes?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "hudi.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a06",
+          "order": 3,
+          "title": "WHY AI IS A STORAGE WORKLOAD",
+          "summary": "AI inference is becoming stateful infrastructure: long-context sessions, agents, RAG, and multimodal workflows create durable KV caches, prefixes, memories, and embeddings that are cheaper to store than recompute after enough reuse. The storage hierarchy is moving into the hot path, with HBM, DRAM, SSDs, object storage, CXL, and flash tiers shaping latency and cost.",
+          "url": "https://www.datagravity.dev/p/why-ai-is-a-storage-workload?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "datagravity.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a07",
+          "order": 4,
+          "title": "CHANGE-DATA-CAPTURE DOESN'T SOLVE DUAL-WRITES",
+          "summary": "CDC makes downstream writes retryable, ordered, and observable, but it does not make destination systems safe to write twice. The destination still needs durable idempotency or a way to reject duplicates after recovery. This is a useful design-review lens for teams treating CDC as an automatic consistency fix.",
+          "url": "https://aandreakis.com/posts/change-data-capture-doesnt-solve-dual-writes?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "aandreakis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-17:a08",
+          "order": 1,
+          "title": "HOW KENN IS DOING AGENTIC ENGINEERING",
+          "summary": "Kenn uses coding agents at high volume while keeping humans in control of design, review, and final decisions. Detailed specs, adversarial reviews, and continuous verification let three engineers ship hundreds of PRs weekly without relying on autonomous loops.",
+          "url": "https://wesmckinney.com/blog/agentic-engineering-aug-2026/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "wesmckinney.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a09",
+          "order": 2,
+          "title": "ON BENCHMARKING",
+          "summary": "A throughput number is not an architecture decision. Good benchmarks explain the workload, cache state, client behavior, failure modes, and scaling limit behind the result. Without that context, teams risk optimizing for a synthetic score instead of the bottlenecks their production data systems will actually hit.",
+          "url": "https://www.dataengineeringweekly.com/p/on-benchmarking?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "dataengineeringweekly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a10",
+          "order": 3,
+          "title": "HOW WE TRACKED DOWN A 16-YEAR-OLD SQLITE BUG",
+          "summary": "Tailscale spent six months tracing repeated SQLite corruption to a rare 16-year-old race condition between WAL checkpointing and write transactions, triggered more often by its aggressive manual checkpointing. The investigation led to a SQLite fix, stronger recovery tooling, and a broader lesson that even “boring” technology becomes risky when operated outside its common paths.",
+          "url": "https://tailscale.com/blog/sqlite-wal-reset-bug?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-17:a11",
+          "order": 1,
+          "title": "INTRODUCING DATABENCH",
+          "summary": "Hex's DataBench tests AI agents on realistic, messy analytics tasks and finds they are strong at gathering evidence but weaker at open-ended decisions where judgment matters. Models often fail by manufacturing certainty, missing subtle data traps or overthinking correct answers, showing why human review is still essential for complex analytical work.",
+          "url": "https://hex.tech/blog/databench-agentic-analytics-benchmark/?utm_source=tldrdata",
+          "reading_time_minutes": 22,
+          "source_domain": "hex.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a12",
+          "order": 2,
+          "title": "APACHE DATAFUSION COMET 1.0.0 RELEASE",
+          "summary": "Comet, the Spark accelerator built on Apache DataFusion, reached 1.0 with semantic versioning, Spark 4 support, broader operator coverage, and extensive correctness testing against Spark's own suite. It is aimed at teams that want faster Spark execution without rewriting jobs or replacing the surrounding Spark ecosystem.",
+          "url": "https://datafusion.apache.org/blog/2026/08/07/datafusion-comet-1.0.0?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "datafusion.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a13",
+          "order": 3,
+          "title": "WHAT'S NEW IN OPENSEARCH 3.8",
+          "summary": "OpenSearch 3.8 improves vector ingestion, radial query throughput, and median query latency while expanding AI-agent support. MCP now works across all agent types, tool discovery is richer, and gRPC streaming inference lowers token latency. Analytics teams also get new PPL/SQL tooling, Grok debugging, one-click Prometheus alerts, and search-relevance workflow improvements.",
+          "url": "https://opensearch.org/blog/whats-new-in-opensearch-3-8/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "opensearch.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-17:a14",
+          "order": 1,
+          "title": "FAIRLY RANKING THE MOST BRILLIANT BIRDS",
+          "summary": "A transparent ranking of the world's most brilliant birds combines chroma, colour variety, sample confidence and diversity, placing the orange-breasted bunting first. The bigger idea is that ranking systems are fairest when every factor is understandable, defensible and tied to a reasonable human judgement.",
+          "url": "https://moultano.wordpress.com/2026/08/14/fairly-ranking-the-most-brilliant-birds/?utm_source=tldrdata",
+          "reading_time_minutes": 19,
+          "source_domain": "moultano.wordpress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a15",
+          "order": 2,
+          "title": "SNOWFLAKE SAYS THIS 149 GB QUERY SCANNED -1.5 GB",
+          "summary": "Unloading Snowflake QUERY_HISTORY data to Parquet can corrupt values when large numbers are written as INT32. Casting the nine affected columns before export prevents overflow, bad joins, and incorrect analysis.",
+          "url": "https://espresso.ai/post/snowflake-bytes-scanned-considered-harmful?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "espresso.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-17:a16",
+          "order": 1,
+          "title": "SPARK OBSERVABILITY SKILLS",
+          "summary": "Embrasure has released agent skills for debugging and optimizing Spark using runtime data from the Spark History Server.",
+          "url": "https://github.com/EmbrasureAI/spark-observability-skills?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-17:a17",
+          "order": 2,
+          "title": "QUERYING 1 THOUSAND JSON FILES FROM S3",
+          "summary": "DuckDB on ECS Fargate processed 1,000 JSON files about 3.4× faster than Spark on EMR Serverless and at lower cost.",
+          "url": "https://performancede.substack.com/p/querying-1-thousand-json-files-from?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "performancede.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

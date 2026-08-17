@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-17",
+  "source_path": "TLDR InfoSec/article_17-08-2026.md",
+  "source_content_hash": "sha256:7455c358953b308ad4e60382078e3d258aed508d1f6cd1979cbbb6f9e44c9031",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a04",
+          "order": 1,
+          "title": "FEEL LIKE YOUR TABS HAVE TABS?",
+          "summary": "Developer tool sprawl is real. You've got one tab for logs, another for metrics, half a dozen for cloud services, and somewhere in there is the code you're actually trying to ship.",
+          "url": "https://azure.microsoft.com/en-us/explore/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-17_Primary_Microsoft&utm_content=header_feel_like_tabs",
+          "reading_time_minutes": null,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a05",
+          "order": 2,
+          "title": "🫣 Stop playing hide-and-seek with your tools. Microsoft Azure",
+          "summary": "brings together everything you need to build and run software in a single workspace.\n\nGoodbye, hunting for the right dashboard. Hello, one unified view—and a faster path to innovation.",
+          "url": "https://azure.microsoft.com/en-us/explore/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-15_Primary_Microsoft&utm_content=Body_microsoft_azure",
+          "reading_time_minutes": null,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a06",
+          "order": 3,
+          "title": "Simplify your stack with Azure → [6]",
+          "summary": "",
+          "url": "https://azure.microsoft.com/en-us/explore/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-15_Primary_Microsoft&utm_content=cta_simplify_stack_azure",
+          "reading_time_minutes": null,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a07",
+          "order": 1,
+          "title": "RINGCENTRAL DATA BREACH EXPOSED INFO OF 1.6M ACCOUNTS",
+          "summary": "Cloud-based collaboration and communication firm RingCentral disclosed a data breach in which a threat actor compromised its systems through a “sophisticated social engineering campaign.” According to Have I Been Pwned, the data contained names, email, physical addresses, and phone numbers belonging to 1.6M individuals.",
+          "url": "https://links.tldrnewsletter.com/Eajxq1",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a08",
+          "order": 2,
+          "title": "NEW AMNESIASTEALER MACOS MALWARE HIJACKS BROWSER SESSIONS VIA REMOTE CONTROL",
+          "summary": "Jamf researchers are warning of a new macOS infostealer that spreads via ClickFix attacks. The malware first captures the user's macOS password and uses it to collect keychain data. It also features a streaming profile that allows attackers to remotely control browser sessions and duplicate browser profiles on Chromium-based browsers.",
+          "url": "https://links.tldrnewsletter.com/G0yqjr",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a09",
+          "order": 3,
+          "title": "FROM A SCHEMA NAME TO RCE IN N8N",
+          "summary": "A critical prototype pollution vulnerability (CVE-2026-33696) in n8n allows authenticated attackers to achieve remote code execution across all deployment types by manipulating the GSuiteAdmin node's \"Custom Fields\" schema. By polluting ⁠Object.prototype⁠, attackers can chain the exploit through a subsequent Git node to inject a malicious ⁠GIT_SSH_COMMAND⁠ or crash the instance entirely by breaking the underlying database query builder. Administrators must immediately upgrade their self-hosted, worker, and Cloud instances to the latest patched versions to secure their environments against malicious schema-name inputs.",
+          "url": "https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "simonkoeck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a10",
+          "order": 1,
+          "title": "HOW CLOUDFLARE ENFORCES ENGINEERING STANDARDS USING AI",
+          "summary": "Cloudflare designed the Cloudflare Codex to serve as an RFC-style shared source for engineering guidance for humans and agents. To guide models to relevant RFCs, Cloudflare uses a dedicated agent to compact SHOULD and MUST statements into a dedicated JSON structure and enrich it with metadata that supports lazy discovery. Thus far, Cloudflare has developed a code reviewer agent, spec reviewer, and incident reviewer agent that all use the Codex.",
+          "url": "https://blog.cloudflare.com/engineering-standards-enforcement/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a11",
+          "order": 2,
+          "title": "HOW AWS IAM ROLE MANAGER RETHINKS THE STARTING POINT FOR IAM ROLES",
+          "summary": "The newly released AWS IAM Role Manager is designed to enable users who are new to AWS to quickly deploy services without needing to manually create IAM roles for services. With role manager enabled, when users create new workloads, an IAM role with the requisite permissions is automatically created and attached. Roles may be over-provisioned, so users are encouraged to limit capabilities afterward.",
+          "url": "https://aws.amazon.com/blogs/security/how-aws-iam-role-manager-rethinks-the-starting-point-for-iam-roles/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a12",
+          "order": 3,
+          "title": "HOW WELL CAN OPEN-WEIGHT MODELS EVADE SIEM DETECTION?",
+          "summary": "Vulnetic claims its autonomous \"Sable\" agent successfully compromised an Active Directory domain while evading high-severity alerts in Wazuh by utilizing LLM-driven living-off-the-land tradecraft. The agent mapped the network using remote BloodHound enumeration, executed a DCSync attack via DRSUAPI, and deployed a memory-resident HTTPS beacon inside a wsmprovhost process via WinRM to bypass standard detections. By pacing its actions and recognizing a custom prompt-injection canary, the agent generated only six low-severity alerts during the four-hour intrusion, though defenders should note these results stem entirely from the vendor's internal lab testing.",
+          "url": "https://blog.vulnetic.ai/how-well-can-open-weight-models-evade-siem-detection-d1a512fed614?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.vulnetic.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a13",
+          "order": 1,
+          "title": "PANGOLIN",
+          "summary": "Pangolin is an identity-based remote access tool that combines reverse-proxy and VPN capabilities to enable secure connectivity from anywhere.",
+          "url": "https://github.com/fosrl/pangolin?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a14",
+          "order": 2,
+          "title": "AGENT SAFEHOUSE",
+          "summary": "Agent Safehouse is a macOS agent sandbox to limit local LLMs' access to only the files and integrations that they need.",
+          "url": "https://github.com/eugene1g/agent-safehouse?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a15",
+          "order": 3,
+          "title": "HOW CLOUDFLARE DETECTS MCP TRAFFIC AND HELPS SECURE IT",
+          "summary": "Cloudflare has introduced protocol-level detection for Model Context Protocol (MCP) traffic in Gateway by analyzing the MCP-Protocol-Version header on TLS-inspected requests. Security teams can now combine the experimental.is_mcp boolean selector with the mcp_portal traffic source tag to mandate that all agent traffic routes through approved portals, effectively blocking direct shadow MCP connections. Furthermore, the update delivers a dedicated traffic dashboard, pre-registered OAuth client support, and Agents SDK v0.20.0 to bridge compatibility between legacy handshakes and the new stateless MCP 2026-07-28 specification.",
+          "url": "https://blog.cloudflare.com/mcp-security-updates/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a16",
+          "order": 1,
+          "title": "MASSIVE AZURE EXFILTRATION CAMPAIGN EXPOSES MILLIONS OF ENTERPRISE RECORDS",
+          "summary": "A threat actor known as \"TheHatman\" is allegedly selling approximately 3.6 million internal Azure and Entra employee directories belonging to major corporations, including McDonald's, Vodafone, and Kyndryl. The exposed data includes sensitive service accounts and Global Administrator listings that match standard Azure export formats, which Hudson Rock researchers suspect stems from credential theft via infostealers. The exact intrusion vectors remain unconfirmed, and the report originates from a vendor selling credential-monitoring services, so defenders should await independent verification while actively auditing their Azure identities for compromised access.",
+          "url": "https://www.infostealers.com/article/massive-azure-exfiltration-campaign-exposes-millions-of-enterprise-records-via-compromised-credentials-mcdonalds-vodafone-kyndryl-others/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "infostealers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a17",
+          "order": 2,
+          "title": "RESEARCHERS OBSERVE FIRST 'NEAR-AUTONOMOUS' AI ATTACK ON GOVERNMENT TARGET IN TAIWAN",
+          "summary": "Researchers at Dream have identified the first publicly known \"near-autonomous\" AI cyberattack, utilizing the open-source Hermes and OpenClaw frameworks to extract over 2,500 Taiwanese government personnel records. Suspected Chinese threat actors deployed the malware to run self-directed \"Learning Cycles\" that autonomously adapted to prior failures and expanded the attack into IT supply chains, nuclear safety agencies, and energy companies. Despite these autonomous features, researchers noted the campaign still required substantial human engineering to operate successfully.",
+          "url": "https://cyberscoop.com/near-autonomous-ai-attack-government-target-taiwan/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a18",
+          "order": 3,
+          "title": "THE GPU SERIAL NUMBER: HOW BRAVE IS FIGHTING THE NEXT GENERATION OF WEB TRACKING",
+          "summary": "Brave version 1.93 introduces default \"farbling\" protections to combat cross-site tracking by obscuring highly identifying WebGL and WebGPU hardware signals. To disrupt the stability of GPU fingerprinting, the browser now replaces vendor and renderer strings with generic values, empties WebGPU adapter descriptors, and randomizes the WebGL extension list based on the session and site context. This shifts the browser toward capability-based feature detection, effectively preventing trackers from generating highly accurate device fingerprints without breaking legitimate web graphics rendering.",
+          "url": "https://thecybersecguru.com/analysis/brave-1-93-gpu-fingerprinting/?utm_source=tldrinfosec",
+          "reading_time_minutes": 33,
+          "source_domain": "thecybersecguru.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-17:a19",
+          "order": 1,
+          "title": "APPLE SPYWARE THREAT ALERTS: WHAT USERS NEED TO KNOW",
+          "summary": "Apple sent mercenary spyware threat notifications to users in 110 countries, urging targeted individuals to enable Lockdown Mode, verify alerts only on account.apple.com, and seek help through resources such as Access Now's Digital Security Helpline.",
+          "url": "https://www.analyticsinsight.net/news/apple-spyware-threat-alerts-what-users-need-to-know?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "analyticsinsight.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-17:a20",
+          "order": 2,
+          "title": "CHATGPT COMPUTER HISTORY LOGS EVERY CLICK AND KEYSTROKE ON YOUR MAC",
+          "summary": "OpenAI's new Computer History feature for ChatGPT on macOS logs clicks, keystrokes, and app switches via the accessibility API into unencrypted plain-text Markdown files accessible by any app under the same user account.",
+          "url": "https://hwbusters.com/news/chatgpt-computer-history-logs-every-click-and-keystroke-on-your-mac/?utm_source=tldrinfosec%5B21%5D%5B22",
+          "reading_time_minutes": 3,
+          "source_domain": "hwbusters.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

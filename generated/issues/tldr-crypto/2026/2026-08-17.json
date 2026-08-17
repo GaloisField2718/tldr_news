@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-crypto:2026-08-17",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-08-17",
+  "source_path": "TLDR Crypto/article_17-08-2026.md",
+  "source_content_hash": "sha256:1abf00047ee761cb2bc48ba88737365835c80c0712c03d3e6c4269d340b0d52f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-08-17",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-08-17:a04",
+          "order": 1,
+          "title": "LOWERING ODDS OF CLARITY PASSAGE TO 10%",
+          "summary": "Galaxy Digital's Alex Thorn cut the CLARITY Act's 2026 passage odds to 10% after the bill missed the August recess window, citing three blockers: unresolved ethics controls for government officials' crypto involvement, community banking lobbying that eroded Republican support, and illicit finance hawks' concerns over BRCA developer protections. The Senate reconvenes September 14 and adjourns around October 2 for midterm activity, leaving a 2-3 week window that would require the bill to dominate the entire session to advance. The SEC's \"Reg Crypto\" exemption (a primary issuance pathway for cryptoassets) and \"Innovation Exemption\" (secondary trading of tokenized securities in DeFi) were both delayed again after pushback from the traditional securities industry, with Commissioner Peirce's planned November departure compressing the timeframe for the Commission to act before losing a crypto-friendly vote. Galaxy placed high confidence on total Coldcard exploit losses exceeding $112M, with no verified victim attacks after August 6 but continued exposure for holders with vulnerable seeds.",
+          "url": "https://links.tldrnewsletter.com/pF3GfB",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a05",
+          "order": 2,
+          "title": "THE BITCOIN FORK THAT LASTED TWO BLOCKS",
+          "summary": "BIP-110, a soft fork co-authored by Luke Dashjr targeting Ordinals, BRC-20, Runes, and oversized OP_RETURN at the consensus layer, lasted two blocks after receiving only 2.53% miner signaling (51 of 2,016 blocks), all from Ocean pool, well short of its 55% activation threshold. A Stratum configuration error at Ocean had routed operators onto the minority chain for approximately 18 hours without their consent, triggering a 96% hashrate exodus, roughly 0.3 BTC in direct rebates, and internal calls for leadership changes. BIP editors removed Dashjr from his editorial role within one day, citing conflict of interest, while BIP-110 proponents pivoted to proposing a PoW algorithm change to override miner opposition. The failed fork confirmed that Bitcoin soft forks require broad miner buy-in to survive, leaving inscription opponents without a viable consensus-layer remedy.",
+          "url": "https://links.tldrnewsletter.com/tEhy9e",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-08-17:a06",
+          "order": 1,
+          "title": "GOODBYE POSEIDON: ETHEREUM PIVOTS TO SHA/BLAKE FOR POST-QUANTUM",
+          "summary": "The Ethereum Foundation is abandoning Poseidon after an 8-year, 8-figure investment, pivoting L1 SNARK proving to SHA2 and BLAKE2s, enabled by binary field-based SNARK designs that allow traditional hash functions to match Poseidon's efficiency without prime-field arithmetic overhead. Binary fields natively handle bit operations, cutting SNARK overhead for standard hashes to 100x vs. native CPU boolean compute, with benchmarks showing 1M hash proofs per second on a laptop. EF's post-quantum team targets a production-grade leanVM in 2027 and CL/DL/EL deployments in 2028, a transition that signals a directional shift for the zkrollup and zkVM ecosystems that currently secure billions using Poseidon. Recent attacks on lattice-based HAWK and isogeny-based SQIsign further cement SHA2 as the minimal-assumptions post-quantum primitive, removing the multi-year cryptanalysis waiting period Poseidon required before it could be trusted at scale.",
+          "url": "https://threadreaderapp.com/thread/2087905684180418733.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a07",
+          "order": 2,
+          "title": "AVICI'S NEW EUR-TO-EURC ON-RAMP",
+          "summary": "Avici added SEPA deposits converting EUR to EURC (previously USDC-only) for a €1 fee, though card spending still settles in USD via Visa conversion rather than native EUR, with no added FX markup from Avici itself. Third-party EUR transfers to the user's Avici IBAN aren't yet supported despite being mentioned in documentation.",
+          "url": "https://threadreaderapp.com/thread/2088692705316454597.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-08-17:a08",
+          "order": 1,
+          "title": "THE ANATOMY OF A STABLECOIN CARD SWIPE",
+          "summary": "Traditional card settlement forces issuers to hold idle capital in country-specific pools across bank-day windows. A program processing $1M daily must prefund $4M over a long weekend, while cross-border programs require SWIFT correspondent accounts in each settlement currency. Visa's 2021 decision to accept USDC for settlement enabled 365-day clearance, replacing multi-day ACH and Fedwire cycles with a single daily stablecoin transfer from issuers directly to the network. Rain pioneered the first Visa settlement over a weekend and on Christmas Day, holds principal memberships with both Visa and Mastercard, and now serves Western Union, Whop, and Latin American neobanks launching cross-border programs without correspondent banking relationships in each market. The next modernization target is ISO 8583, the 1987 card messaging protocol, as AI agent-to-agent commerce uses stablecoins to bridge on-chain liquidity with real-economy card rails.",
+          "url": "https://links.tldrnewsletter.com/KiYDs0",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a09",
+          "order": 2,
+          "title": "CRYPTO'S EARLY-STAGE BUYBACK PROBLEM",
+          "summary": "It's unusual for three-year-old startups with thin moats to be returning capital to investors the way mature companies like Apple do. Hyperliquid sends 97%+ of fees to buybacks (~$2B), Pump burns 50% of revenue, while Amazon reinvested for 20 years and Google is raising debt to fund growth despite massive cash flow. Early buybacks mean either teams see no reinvestment opportunities (bad for growth assets) or fee pools are so contestable that tokens must bribe holders with their own revenue to retain them.",
+          "url": "https://threadreaderapp.com/thread/2088368017939870142.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-08-17:a10",
+          "order": 1,
+          "title": "DESIGNS FOR EVM GAS ACCOUNTING IN EIP-7999",
+          "summary": "There are four candidate architectures for EIP-7999 multidimensional gas accounting, which frames the central problem: the EVM exposes one scalar budget, but pricing execution, state bytes, and data bytes as distinct resources requires separate meters. The designs range from Aggregate EVM Gas, which preserves the scalar meter while tracking resource consumption post-hoc at the cost of conservative over-funding, to an Updated EVM that carries resource vectors through every execution frame at the cost of toolchain-wide migration. The two middle approaches, Multidimensional Subfee Market and Universal Overflow, address the over-funding problem with different tradeoffs: volatile opcode costs versus weakened CALL guarantees on nested calls.",
+          "url": "https://ethresear.ch/t/designs-for-evm-gas-accounting-in-eip-7999/25696?utm_source=tldrcrypto",
+          "reading_time_minutes": 4,
+          "source_domain": "ethresear.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a11",
+          "order": 2,
+          "title": "28.83% OF SOLANA STAKE WENT DELINQUENT, NEARING FINALITY HALT",
+          "summary": "On August 12, Solana came within 4.5 percentage points of a finality halt after 28.83% of staked SOL went delinquent, with Marinade Finance reporting 90 validators affected and 333 SOL in forfeited rewards. The root cause was a malformed BGP default route at Teraswitch's Miami site that propagated through a route reflector to European and APAC nodes, taking 94% of AS20326 offline, an ASN that alone carried 118.89 million SOL, over 25% of total stake. Engineers identified and resolved the corrupted route in under 10 minutes, restoring service at 4:16 UTC. The incident makes concrete a systemic concentration risk on Solana: a single-provider routing fault can push the network to within striking distance of the 33.34% delinquency threshold that triggers a full finality halt.",
+          "url": "https://thedefiant.io/news/blockchains/marinade-says-28-83-of-solana-stake-went-delinquent-nearing-finality-halt?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "thedefiant.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-08-17:a12",
+          "order": 1,
+          "title": "TEMPO LAUNCHES EARN PRODUCT FOR STABLECOIN PLATFORMS",
+          "summary": "Tempo Earn lets platforms put idle stablecoin balances to work as end-user yield.",
+          "url": "https://threadreaderapp.com/thread/2087921587056230483.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a13",
+          "order": 2,
+          "title": "PRIVY SHIPS X402 PAYMENTS FOR GAS-SPONSORED WALLETS",
+          "summary": "Privy's weekly ship update adds x402 payment support for gas-sponsored wallets, letting agents pay for APIs and content without holding native gas tokens while Privy handles the required signatures.",
+          "url": "https://threadreaderapp.com/thread/2088305414010188049.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a14",
+          "order": 3,
+          "title": "TOKEN TERMINAL ON TOKENIZED T-BILL INFLOWS",
+          "summary": "Tokenized US T-bills from Superstate (+$184.2M) and Securitize (+$182.8M) led market cap growth over the past 30 days, followed by Franklin Templeton (+$86.2M).",
+          "url": "https://threadreaderapp.com/thread/2088735730742984748.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-08-17:a15",
+          "order": 4,
+          "title": "JPMORGAN CUT POLYMARKET'S BANKING TIES; STILL WANTS ROLE IN POTENTIAL IPO",
+          "summary": "JPMorgan told Polymarket in October 2025 to find a new banking partner, citing regulatory concerns.",
+          "url": "https://links.tldrnewsletter.com/TzQOzT[16][17",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
