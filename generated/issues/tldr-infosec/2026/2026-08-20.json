@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-20",
+  "source_path": "TLDR InfoSec/article_20-08-2026.md",
+  "source_content_hash": "sha256:2dd65fd5eee3dc4c68b68381a6409b23f76a6ae00300d1153b68307b6b98e6f5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-20",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-20:a04",
+          "order": 1,
+          "title": "CARECLOUD DATA BREACH IMPACT GROWS TO 3.7 MILLION INDIVIDUALS",
+          "summary": "CareCloud detected a network intrusion after an electronic health-record disruption in March. Attackers accessed an AWS environment from March 10 to 16 and claimed database theft. Exposed data includes identity details, insurance and medical records, and payment-card data for a limited group. HHS now lists 3,756,469 affected people, up from roughly 350,000 in state filings.",
+          "url": "https://links.tldrnewsletter.com/PFF8Rv",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a05",
+          "order": 2,
+          "title": "SAKURA INTERNET HACK EXPOSES DATA OF UP TO 1.36M ACCOUNTS",
+          "summary": "Japanese cloud and data center provider Sakura Internet disclosed that hackers accessed its sales management system, exposing data of 1.36M users. Sakura detected the hack while investigating another incident involving unauthorized access to 538 accounts. Sakura is currently notifying customers and relevant authorities.",
+          "url": "https://links.tldrnewsletter.com/A4O2A7",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a06",
+          "order": 3,
+          "title": "HACKERS COMPROMISE 14,500 DAHUA WEB CAMERAS IN 35-DAY CAMPAIGN",
+          "summary": "Researchers at Hunt.io uncovered a hacking campaign that targeted Dahua IP cameras, mostly in Ukraine and Russia. Hunt.io discovered the campaign by finding a working directory on an HTTP server that the operators left unprotected. The threat actors compromised 12,234 cameras by brute-force scanning on TCP port 37777, 1,923 cameras by exploiting known vulnerabilities using a tool called p2pwn, and 283 cameras that were behind NAT using only serial numbers and SDK credentials embedded in Dahua applications.",
+          "url": "https://links.tldrnewsletter.com/rKqK4Q",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-20:a07",
+          "order": 1,
+          "title": "HACKING YOUR LIFE WITH AI CAN GET YOU HACKED",
+          "summary": "Endor Labs found 14 critical and high-severity flaws across NocoBase, Flowise, Langflow, Dify, Activepieces, Kestra, and Airflow. Several described paths allowed unauthenticated remote code execution, prompt-driven code execution, sandbox escapes, command injection, or data theft. Flowise, Kestra, and Langflow exposed exploitable paths without sign-in under some configurations.",
+          "url": "https://www.endorlabs.com/learn/hacking-your-life-with-ai-can-get-you-hacked?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "endorlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a08",
+          "order": 2,
+          "title": "BREAKING SECURE BOOT WITHOUT BREAKING THE CRYPTO",
+          "summary": "A signature check alone doesn't prove a device is safe. This post breaks secure boot into four failure buckets: did the check run, did it cover the right bytes, was the signer authorized, and do those bytes still run at execution time? It walks through Qualcomm's PBL/XBL-SC/TME chain, Android Verified Boot, DICE key derivation, and RATS attestation roles. Real CVEs illustrate each bucket: CVE-2019-2278 let a rejected keystore still verify a boot image, CVE-2023-48425 chains an AVB failure into a full bypass on a retail Chromecast, and CVE-2021-1931 lets one signed image authorize a different one.",
+          "url": "https://0x434b.dev/breaking-secure-boot-without-breaking-the-crypto/?utm_source=tldrinfosec",
+          "reading_time_minutes": 57,
+          "source_domain": "0x434b.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a09",
+          "order": 3,
+          "title": "YOUR BENIGN SET SHOULD LOOK MALICIOUS",
+          "summary": "When testing detections to establish a false positive rate, it is common to build a set of benign data that should not be flagged. However, often the benign set is too benign and leads to artificially deflated false positive rates because the traffic doesn't resemble data that could be malicious. Instead, organizations should draw upon their internal docs, examples, etc to find negatives that matter to the organization and build a benign set that includes those.",
+          "url": "https://pipelab.org/blog/benign-set-should-look-malicious/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "pipelab.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-20:a10",
+          "order": 1,
+          "title": "6,000+ \"GUARDRAIL-FREE\" AI MODELS. ONE DOWNLOAD AWAY.",
+          "summary": "AI-powered cybercrime is no longer just a future risk. ThreatDown's [11]new research found it's already here, hiding in plain sight on",
+          "url": "https://www.threatdown.com/dl-cybercrime-in-age-of-ai-2026/?utm_medium=referral&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a11",
+          "order": 2,
+          "title": "infrastructure organizations already trust. ThreatDown",
+          "summary": "researchers assess that AI capable of exploiting vulnerabilities at scale could reach criminal marketplaces within roughly six months. Read the _Cybercrime in the age of AI_ [10] report.",
+          "url": "https://www.threatdown.com/",
+          "reading_time_minutes": null,
+          "source_domain": "threatdown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a12",
+          "order": 3,
+          "title": "SECFILES",
+          "summary": "Useful files for penetration tests, security assessments, bug bounty, and other security-related stuff.",
+          "url": "https://github.com/edoardottt/secfiles?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a13",
+          "order": 4,
+          "title": "SHAZZER TEAMS: COLLABORATIVE FUZZING",
+          "summary": "Shazzer Teams lets security researchers pool browser resources on a private distributed fuzzing network separate from the public pool while sharing a common vector library. Owners manage membership through expiring, usage-limited invite links and role-based permissions, and any member's browser automatically joins the team's fuzzing pool when the Network page is open.",
+          "url": "https://shazzer.co.uk/blog/shazzer-teams-collaborative-fuzzing?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "shazzer.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a14",
+          "order": 5,
+          "title": "CIPHERRUN",
+          "summary": "CipherRun is a comprehensive, TLS/SSL scanner written in Rust. It combines protocol and cipher analysis, vulnerability testing, compliance checks, and certificate transparency monitoring in a single high-performance CLI and API-ready engine.",
+          "url": "https://github.com/seifreed/CipherRun?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-20:a15",
+          "order": 1,
+          "title": "RANSOM BUSTERS CLAIMS IT HACKED RANSOMWARE SERVERS, ASKS VICTIMS FOR UP TO $60,000",
+          "summary": "Ransom Busters emailed ransomware victims, seeking $20,000 to $60,000. It claimed access to ransomware servers and offered file recovery and deletion of stolen data. GuidePoint linked two incidents through shared tooling, a “Numlock!123” backdoor account, and hostname DESKTOP-BBETH6K. The activity may be a ransomware affiliate posing as a recovery service, but payments cannot verify data deletion.",
+          "url": "https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a16",
+          "order": 2,
+          "title": "CHINA DIRECTS STATE AGENCIES TO UNINSTALL CUSTOM WINDOWS 10 EDITION OVER SECURITY CONCERNS",
+          "summary": "China's Ministry of State Security has ordered state-linked organizations to immediately uninstall the custom Windows 10 CMIT edition due to data security concerns regarding foreign software reliance. This sweeping directive abruptly accelerates the retirement of the operating system originally developed through a 2016 joint venture with Microsoft. The government had previously scheduled the highly modified software to remain in active use until February 2027.",
+          "url": "https://wccftech.com/china-state-agencies-uninstall-windows-10-cmit-government-edition?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "wccftech.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-20:a17",
+          "order": 1,
+          "title": "MLFLOW BUG ACTIVELY EXPLOITED TO STEAL CREDENTIALS",
+          "summary": "Organizations running MLflow versions prior to 3.15.0 must urgently patch to mitigate an actively exploited Server-Side Request Forgery vulnerability (CVE-2026-64849) that allows unauthenticated attackers to steal cloud credentials via DNS rebinding and malicious webhook redirects.",
+          "url": "https://decipher.sc/2026/08/18/mlflow-bug-actively-exploited-to-steal-credentials?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "decipher.sc",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-20:a18",
+          "order": 2,
+          "title": "I'M WORRIED ABOUT A PROMPT INJECTION WORM",
+          "summary": "A prompt-injection worm could exploit AI agents parsing external inputs, such as emails, to exfiltrate data and propagate through victims' communication channels, so organizations should map AI integrations, model access levels, and build AI-specific incident response plans.",
+          "url": "https://danielmiessler.com/blog/prompt-injection-worm?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 2,
+          "source_domain": "danielmiessler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
