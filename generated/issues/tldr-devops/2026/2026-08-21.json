@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-08-21",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-08-21",
+  "source_path": "TLDR DevOps/article_21-08-2026.md",
+  "source_content_hash": "sha256:0da82a98faffa1786719ff989feb0c8c36285fc6ae70ba74cc1862084d093d72",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-08-21",
+  "sections": [
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-21:a04",
+          "order": 1,
+          "title": "CNCF ANNOUNCES KUBEFLOW GRADUATION",
+          "summary": "CNCF announced that Kubeflow, an open community-built ecosystem for standardizing data and AI workloads on Kubernetes, has graduated, confirming its technical maturity. The project now serves as an operational backbone for enterprises running AI training, fine-tuning, and inference in production, with nearly 260 million PyPI downloads.",
+          "url": "http://www.devopsdigest.com/cncf-announces-kubeflow-graduation?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "devopsdigest.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a05",
+          "order": 2,
+          "title": "FROM ALL-OR-NOTHING TO TASK-BASED OAUTH CONSENT",
+          "summary": "Cloudflare has added OAuth scope customization, letting users deselect optional permissions on the consent screen rather than facing an all-or-nothing choice. Client owners can now mark specific scopes as optional when configuring an OAuth app, and any access token generated after consent will only contain the scopes the user approved. Cloudflare says it plans to expand its account and zone-level role surface over the next few weeks to cover nearly every Cloudflare product, adding more API token roles, account membership options, and OAuth scopes.",
+          "url": "https://blog.cloudflare.com/task-based-oauth-consent/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a06",
+          "order": 3,
+          "title": "BUN 1.4",
+          "summary": "Bun 1.4 improves Node.js compatibility with more than 1,500 additional passing Node test cases while cutting idle CPU usage by up to 5×, reducing memory use by as much as 48% in some server workloads, and roughly doubling startup speed on Linux. The release also adds new built-ins including image processing, WebView, Markdown parsing, cron jobs, parallel test and script execution, package auditing, and deduplication, while continuing Bun's broader migration from Zig to Rust.",
+          "url": "https://bun.com/blog/bun-v1.4?utm_source=tldrdevops",
+          "reading_time_minutes": 18,
+          "source_domain": "bun.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-21:a07",
+          "order": 1,
+          "title": "CODE FIXERS HAVE FIRED UP THE AI WARP DRIVE. STRANGE NEW WORLDS AWAIT",
+          "summary": "AI is driving a surge in software vulnerabilities and security fixes as models uncover legacy bugs while generating new flawed code, creating competing pressures that may keep patch volumes elevated. The future could range from highly stable, rarely patched software to continuously changing applications where daily builds effectively replace traditional patching.",
+          "url": "https://www.theregister.com/columnists/2026/08/17/code-fixers-have-fired-up-the-ai-warp-drive-strange-new-worlds-await/5287681?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a08",
+          "order": 2,
+          "title": "20× THE CI TRAFFIC WITHOUT GETTING SLOWER: HOW WE REBUILT GIT SERVING AT DATADOG",
+          "summary": "Datadog built an internal Git mirror service called gitretriever to handle the scale of CI code fetches across its engineering infrastructure. The system now handles more than 100 million requests per week across roughly 5,500 repositories, and served over a billion Git requests and hundreds of terabytes of data in its first four months. Traffic grew about 20 times during that period while median serve latency held at around 40 milliseconds. Moving CI fetch traffic to gitretriever cut fetch-serving CPU on the previous backend by three to four times.",
+          "url": "https://www.datadoghq.com/blog/engineering/gitretriever/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-21:a09",
+          "order": 1,
+          "title": "AI-INFRA-GUARD",
+          "summary": "Tencent Zhuque Lab has open-sourced AI-Infra-Guard (A.I.G), a red teaming platform for scanning AI infrastructure, MCP servers, agent skills, and testing large language models for jailbreak vulnerabilities.",
+          "url": "https://github.com/Tencent/AI-Infra-Guard?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a10",
+          "order": 2,
+          "title": "SUBSTRATE",
+          "summary": "Agent Substrate delivers a performant, high-density runtime environment for large-scale agent deployments. The agent substrate control plane provides full lifecycle management for agent sandboxes, delivering sub-second agent resume/suspend operations, and allows heavy multiplexing of agents onto the same computer infrastructure.",
+          "url": "https://github.com/agent-substrate/substrate?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-21:a11",
+          "order": 1,
+          "title": "MIGRATING TO HIGH AVAILABILITY - AN FSI SUCCESS STORY",
+          "summary": "A multinational financial services organization migrated from an outdated, stressed single Octopus Server to a five-node High Availability cluster through careful planning, staged testing, backups, and rollback checkpoints. The migration established a stable foundation and led to a regular six-month upgrade cadence with minimal support needs.",
+          "url": "https://octopus.com/blog/migrating-to-high-availability-fsi-success-story?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "octopus.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a12",
+          "order": 2,
+          "title": "A REVISIT OF REMOTE SPECTRE ATTACKS ON CLOUDFLARE WORKERS",
+          "summary": "Cloudflare researchers demonstrated a remote Spectre attack against its Workers production environment that reliably leaked up to 12 bits per second at 99% accuracy. The attack exploited a gap in Cloudflare's existing Dynamic Process Isolation defense, which only isolates suspicious scripts after an invocation ends, a delay attackers bypassed by keeping a single Durable Object invocation alive for hours via WebSocket messages. Cloudflare says no active exploitation was detected over the past three years. In response, the company has improved its isolation detection, integrated the V8 Sandbox, and deployed Memory Protection Keys to limit cross-isolate memory access within shared processes.",
+          "url": "https://blog.cloudflare.com/revisiting-spectre-attacks-on-workers/?utm_source=tldrdevops",
+          "reading_time_minutes": 13,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a13",
+          "order": 3,
+          "title": "ANNOUNCING RUST 1.98.0",
+          "summary": "Rust 1.98 adds algebraic floating-point operations that let the compiler reorder calculations and enable broader vectorization, trading strict floating-point determinism for more optimization opportunities without introducing undefined behavior. The release also adds faster buffered integer formatting through format_into, which performs similarly to the popular itoa crate, and stabilizes a range of string, atomic, and numeric APIs.",
+          "url": "https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.rust-lang.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-21:a14",
+          "order": 1,
+          "title": "BUILD V. BUY IN THE AGE OF VIBE CODING: OBSERVABILITY EDITION",
+          "summary": "Build v. Buy looks different now. Does that mean it's time to build your own observability solution? New Relic's Senior Director of",
+          "url": "https://www.linkedin.com/pulse/build-vs-buy-age-vibe-coding-diy-observability-worth-risk-wetqc/?trackingId=Ny65G0X%2BSPCGbrngx4GSVQ%3D%3D&utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "linkedin.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a15",
+          "order": 2,
+          "title": "Product Language weighs in. Read the blog",
+          "summary": "",
+          "url": "https://www.linkedin.com/pulse/build-vs-buy-age-vibe-coding-diy-observability-worth-risk-wetqc/?trackingId=Ny65G0X%2BSPCGbrngx4GSVQ%3D%3D",
+          "reading_time_minutes": null,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a16",
+          "order": 3,
+          "title": "MAKE ZERO CVES YOUR NEW DEFAULT",
+          "summary": "Docker is expanding its software supply chain security platform with hardened images and packages, extended lifecycle support, customizable builds, Helm charts, MCP servers, and Scout policies.",
+          "url": "https://www.docker.com/blog/make-zero-cves-your-new-default/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "docker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a17",
+          "order": 4,
+          "title": "TWO WAYS TO MEASURE THE CUMULATIVE IMPACT OF EXPERIMENTS",
+          "summary": "Summing individual experiment wins overstates their true combined effect on a business metric.",
+          "url": "https://www.datadoghq.com/blog/two-ways-to-measure-cumulative-impact/?utm_source=tldrdevops",
+          "reading_time_minutes": 1,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-21:a18",
+          "order": 5,
+          "title": "DETECT VULNERABILITIES IN LLM APPLICATIONS WITH DATADOG'S AI-NATIVE SAST",
+          "summary": "Datadog has added AI-native static application security testing (SAST) to its Code Security product, with coverage for the OWASP Top 10 for LLM Applications.",
+          "url": "https://www.datadoghq.com/blog/ai-native-sast-detect-llm-vulnerabilities/?utm_source=tldrdevops%5B19%5D%5B20",
+          "reading_time_minutes": 5,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

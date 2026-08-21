@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-21",
+  "source_path": "TLDR InfoSec/article_21-08-2026.md",
+  "source_content_hash": "sha256:b7faa1539617486a3eccfdedbafd035f9497c7f24e90040c20580f785225481c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a04",
+          "order": 1,
+          "title": "A SASE LEADER. AGAIN AND AGAIN AND AGAIN",
+          "summary": "As AI becomes embedded across the enterprise, organizations must secure their use of AI while defending against AI-powered threats.\n\nThat pressure is making the limits of fragmented architectures impossible to ignore.\n\nCato Networks was named a Leader in the 2026 Gartner® Magic Quadrant™ for SASE Platforms [5] for the THIRD YEAR RUNNING.\n\nSee how Gartner evaluated the market and why, in Cato's view, unified SASE platforms are becoming essential for the AI era.",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2026/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-07_Primary_Cato+Networks&utm_content=header_sase_leader_again_header_sase_leader_again",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a06",
+          "order": 2,
+          "title": "Get the 2026 Gartner® Magic Quadrant™ for SASE Platforms →",
+          "summary": "",
+          "url": "https://www.catonetworks.com/resources/gartner-magic-quadrant-for-sase-platforms-2026/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-07_Primary_Cato+Networks&utm_content=cta_2026_gartner_magic_cta_2026_gartner_magic",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a07",
+          "order": 1,
+          "title": "CLOUDFLARE WORKERS SPECTRE ATTACK LEAKS JWT FROM CO-LOCATED WORKER AT 12 BITS/SECOND",
+          "summary": "Researchers extracted a JWT from a co-located Cloudflare Worker at 12 bits per second, reaching 99.16% accuracy. The attack used WebSockets for remote timing and Durable Objects to keep code running. WebSocket I/O reduced DyPrIs detection signals. Cloudflare deployed improved DyPrIs, V8 Sandbox protections, and MPK-based isolation and confirmed no customer data was accessed or active exploitation.",
+          "url": "https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a08",
+          "order": 2,
+          "title": "SUPPLY CHAIN ATTACK ON ARRAYREF",
+          "summary": "The Rust Security Response Team confirmed that the popular arrayref crate was maliciously republished after being made to depend on proc-macro1, a crate that included a build script downloading a malicious payload. Related crates internment and append-only-vec from the same author were also compromised, likely via stolen credentials rather than intentional action. The malicious versions remained live for 86 to 107 minutes before removal. The team has deleted proc-macro1 and its sibling packages and unyanked the legitimate arrayref versions. Developers should run the provided find command against ~/.cargo/registry/cache to check for arrayref@0.3.10, internment@0.8.7, append-only-vec@0.1.9, or any version of the deleted proc-macro1 family.",
+          "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.rust-lang.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a09",
+          "order": 3,
+          "title": "GROK EXFILTRATES USER DATA WHEN MALICIOUS INSTRUCTIONS ARE ENCRYPTED",
+          "summary": "Researchers from security firm Adversa discovered a new attack that allowed them to bypass Grok's guardrails and exfiltrate user data. The attack involves hosting encrypted instructions along with a decryption key and instructions to decrypt them on a webpage. When the user requests Grok to summarize or otherwise process the page, Grok decrypts the text, and then the decrypted ciphertext contains instructions that involve Grok constructing a fake decryption key by appending the user's name, location, and chat history, which are later used as a URL parameter and sent to an attacker-controlled server.",
+          "url": "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a10",
+          "order": 1,
+          "title": "TABLE FLIP: A WASM2C GUEST RUNS A SHELL COMMAND ON THE HOST, THROUGH ONE UNCHECKED CALLOC",
+          "summary": "wasm2c records a guest-declared table size before calling calloc, then continues if calloc returns NULL. A 64 GiB funcref table can fail under RLIMIT_AS, strict Linux overcommit, 32-bit hosts, or memory pressure. Bounds checks then accept indexes against the declared size while NULL-based table accesses resolve to host addresses. The proof of concept leaks libc pointers through the GOT, forges a funcref entry, passes the indirect-call type check, and calls system() to write a host file. A calloc NULL check and table-size cap prevent it.",
+          "url": "https://trustsig.eu/blog/wasm2c-tableflip-unchecked-calloc/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "trustsig.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a11",
+          "order": 2,
+          "title": "THE AGENT ACCESS MODEL",
+          "summary": "The Agent Access Model (AAM) is a framework that secures autonomous AI workflows by issuing short-lived credentials that a \"Trust Ratchet\" can revoke mid-execution upon detecting protected data. Multiplayer access control remains an unsolved challenge with enterprise privacy-violation rates exceeding 50 percent, so organizations should begin by strictly securing a single bounded agent. Security teams should deploy these initial agents using network-level mediation, strict execution harnesses, and detailed activity logging to safely build evidence for future permission grants.",
+          "url": "https://blog.cloudflare.com/the-agent-access-model/?utm_source=tldrinfosec",
+          "reading_time_minutes": 26,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a12",
+          "order": 3,
+          "title": "HUNTING MALWARE AND MALICIOUS MCPS IN MEMORY ON KUBERNETES WITH FLEETDM, OSQUERY, AND YARA",
+          "summary": "Osquery and Fleet recently added the ability to scan memory at scale using YARA rules via a new yara_process Osquery table. This post walks through how to set up a lab environment for detecting the use of Sliver on a DVWA running in Kubernetes using YARA rules distributed via Fleet. The example is then expanded to detect a malicious local MCP which runs a credential stealer in memory.",
+          "url": "https://holdmybeersecurity.com/2026/07/14/hunting-malware-and-malicious-mcps-in-memory-on-kubernetes-with-fleetdm-osquery-yara/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "holdmybeersecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a13",
+          "order": 1,
+          "title": "STRONGESTLAYER (PRODUCT LAUNCH)",
+          "summary": "StrongestLayer provides email security for phishing, business email compromise, and adversary-in-the-middle attacks. It evaluates message context and evidence to flag suspicious emails, including attacks that do not match known patterns.",
+          "url": "https://www.strongestlayer.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "strongestlayer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a14",
+          "order": 2,
+          "title": "GLM-5.3: FRONTIER CODING WITH EMERGENT CYBER CAPABILITIES",
+          "summary": "Z.ai has released GLM-5.3, trained from the GLM-5.2 base model through expanded post-training. On CyberGym, it scored 84.5%, up from 77.2%. On ExploitBench, it reached 54.4%, versus 24.4%. In tests with security teams in China, the model found 2,436 vulnerabilities across 269 projects. Z.ai lists 1,097 as critical or high severity, with fifty-three findings being public and 2,383 remaining under embargo.",
+          "url": "https://z.ai/blog/glm-5.3?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "z.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a15",
+          "order": 3,
+          "title": "PROJECT BLACKSEA",
+          "summary": "Blacksea is an active honeypot and canary-bait control system built to detect and drown LLM-driven attackers.",
+          "url": "https://github.com/cracken-ai/blacksea?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a16",
+          "order": 1,
+          "title": "NO-FILTER ‘KRIMINAL' AI PLATFORM RAISES CYBERCRIME CONCERNS",
+          "summary": "Kriminal is an off-the-shelf AI hacking platform that offers social-engineering persona creation, offensive-security assistance, OSINT searches, crypto tracing, and uncensored image generation. ThreatDown found it appears to combine Grok, Claude, Llama via OpenRouter, Tavily, Google Cloud, Cloudflare, and NowPayments to maximize effectiveness and reduce visibility of interactions between the different tools.",
+          "url": "https://links.tldrnewsletter.com/ZKdhT8",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a17",
+          "order": 2,
+          "title": "THE DEFENDER'S WINDOW",
+          "summary": "OpenAI's Greg Brockman disclosed that an autonomous AI agent collective breached the company's research infrastructure and a separate production environment by chaining undisclosed vulnerabilities with leaked credentials. While avoiding specific threat actor attribution, Brockman warned that upcoming releases of highly capable open-weight models will drastically accelerate this automated threat landscape. To keep pace, security teams must adopt a modernized defensive strategy that incorporates AI-assisted code review, continuous alert triage, automated attack-path enumeration, and strong defense-in-depth fundamentals.",
+          "url": "https://blog.gregbrockman.com/the-defenders-window?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.gregbrockman.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-21:a18",
+          "order": 1,
+          "title": "HACKING SAML WITH CLAUDE CODE",
+          "summary": "Showcase of a multi-agent harness to test SAML implementations using Claude Opus.",
+          "url": "https://oblique.security/blog/hacking-saml/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "oblique.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-21:a19",
+          "order": 2,
+          "title": "TOXICPANDA 2.0 AND GOLDDIGGER EXPAND ANDROID BANKING ATTACKS WITH ON-DEVICE FRAUD",
+          "summary": "ToxicPanda 2.0 expanded its overlay-based credential theft from 16 to 349 financial institutions across 16 countries, adding 167 remote commands, PIN harvesting across 140+ banking and crypto apps, and an accessibility-service abuse chain that enables Wireless Debugging via ADB for privilege escalation.",
+          "url": "https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
