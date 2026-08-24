@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-24",
+  "source_path": "TLDR InfoSec/article_24-08-2026.md",
+  "source_content_hash": "sha256:5c2358ab07b71ed028ca8a69dd98d3aeb754a88ed4240662168abddfef8b7797",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-24",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-24:a04",
+          "order": 1,
+          "title": "HACKERS INFECT ANDROID CAR HEAD UNITS WITH PROXY BOTNET MALWARE",
+          "summary": "The MoYu threat group has compromised DoFun-branded Android automotive head units by utilizing a rogue APK to deploy the \"JarService\" botnet malware. Delivered through the legitimate TWCore system app, the malware pulls instructions from an MQTT broker to convert infected vehicles into remote SOCKS5 proxy nodes and click-fraud clients. While researchers found no evidence of interference with physical vehicle controls, affected owners should actively monitor their network traffic for unauthorized communication with the cardoor[.]cn command domain.",
+          "url": "https://links.tldrnewsletter.com/UAt9DH",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a05",
+          "order": 2,
+          "title": "SICKKIDS DATA BREACH EXPOSES EMPLOYEE AND JOB APPLICANT INFO",
+          "summary": "The Hospital for Sick Children (SickKids) disclosed that it suffered a data breach that impacted employees and job applicants. The hospital stated that the breach was caused by a vulnerability in a third-party software that SickKids and other organizations use.",
+          "url": "https://links.tldrnewsletter.com/Z3OJZs",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a06",
+          "order": 3,
+          "title": "NEW SYNKLOADER MALWARE PUSHED IN MICROSOFT TEAMS PHISHING CAMPAIGNS",
+          "summary": "Security researchers from Expel have discovered a previously unknown malware family which it dubbed SynkLoader and is being distributed via Microsoft Teams phishing campaigns. The attack directs victims to install a fake PowerShell Cleaner executable that is hosted in Azure to provide authenticity. The malware allows the attackers to select between modules to deploy: system profiler, persistence module, PhishLocker, which displays a fake Windows login screen to capture Windows account passwords, TrafficRedirector, which allows attackers to reach internal services, a RAT, a VNC, and a module status script.",
+          "url": "https://links.tldrnewsletter.com/RL68xl",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-24:a07",
+          "order": 1,
+          "title": "YOUR OPEN SOURCE MODEL COULD HAVE A HIDDEN TIME-RELEASE BACKDOOR",
+          "summary": "Researchers have trained LoRA to embed a dormant backdoor into Qwen 3.5 2B that will activate on a later date, executing a shell command instead of responding. This exploits OpenCode's system prompt, which automatically inserts the current date into the context at every turn. The approach builds on Anthropic's 2024 sleeper agent research and successfully triggered on 7 of 8 in-distribution and 9 of 10 held-out prompts on the target date, with no failures elsewhere. Notably, OpenAI's Codex also employs a similar date-leaking mechanism by default. Since OpenCode runs commands via --auto without confirmation, any system that auto-injects timestamps into context should restrict shell command execution to human approval, especially for open-weight models that are unverified.",
+          "url": "https://morgin.ai/articles/your-open-source-model-could-have-a-hidden-time-release-backdoor.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "morgin.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a08",
+          "order": 2,
+          "title": "SPEEDRUNNING SHA PINNING FOR GITHUB ACTIONS ORG-WIDE",
+          "summary": "Spurred by the 2025 tj-actions/changed-files supply chain compromise, a Semgrep engineer successfully enforced full-length SHA pinning for GitHub Actions across 350 repositories. The deployment utilized native GitHub enforcement settings alongside tools like pinact and Renovate to automatically convert tags and eliminate unpinned reference classes at scale. Security teams adopting this playbook should auto-enroll new repositories via webhooks, monitor for pipeline failures, and update developer guidance files before strictly enforcing the restriction across their organization.",
+          "url": "https://semgrep.dev/blog/2026/sha-pinning-for-github-actions-org-wide/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a09",
+          "order": 3,
+          "title": "13 MILLION TOOL CALLS: AUDITING EVERY AI CODING AGENT ACTION WITH ELASTIC AGENT",
+          "summary": "Elastic's Security Labs rolled out zero-dependency bash and PowerShell-based hooks for agentic IDEs like Cursor and Claude Code to monitor the commands run by AI agents in their environments. Elastic focused heavily on restricting who has access to agent logs and only collecting metadata to ensure user privacy. The article includes some sample ESQL queries for threat hunting and information extraction utilizing these logs.",
+          "url": "https://www.elastic.co/security-labs/ai-coding-agent-audit-cursor-hooks?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-24:a10",
+          "order": 1,
+          "title": "BRINGING THE CYBERSECURITY CAPABILITIES OF CLAUDE MYTHOS 5 TO MORE DEFENDERS",
+          "summary": "Anthropic has upgraded its Enterprise Claude Security scanning tools to utilize the frontier-level Claude Mythos 5 model. To maintain platform security, defenders do not receive raw model outputs. Instead, they are provided with actionable vulnerability findings tagged with specific CWE categories, confidence scores, and severity ratings. Beyond the direct scanning upgrades, Anthropic also announced a $35 million Defender Advantage Fund to support open-source patching and expanded its Cyber Verification Program to grant vetted security researchers less-restricted access to Mythos-class capabilities.",
+          "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "claude.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a11",
+          "order": 2,
+          "title": "DETECTION SKILLS",
+          "summary": "Detection Skills is an open standard for the Agentic SOC that transforms static detections into agentic workflows.",
+          "url": "https://github.com/CDESpace/Detection-Skills?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a12",
+          "order": 3,
+          "title": "PENTESTKIT",
+          "summary": "pentestkit is a multi-agent, context-accumulating penetration testing framework built on the Claude Agent SDK.",
+          "url": "https://github.com/lordx64/pentestkit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-24:a13",
+          "order": 1,
+          "title": "SECURITY BAKED INTO THE JVM: SIXTEEN SUBJECTS ON THE WIRE",
+          "summary": "The fourth installment of a JGDMS security series details how the DirtyChai JVM fork securely propagates user identity across remote calls. To mitigate denial-of-service attacks, the implementation strictly caps requests at 16 Subjects and 64 principals per Subject. Rather than blindly instantiating caller-asserted principal classes, the receiving side enforces a strict four-type allowlist and relies on inert placeholders for unrecognized inputs. Additionally, a SubjectAwareExecutor wrapper preserves calling identities across virtual-thread boundaries, while distributed transactions now require all participants to individually hold commit permissions before a manager will finalize them.",
+          "url": "https://blog.frankel.ch/security-baked-into-jvm/4/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.frankel.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a14",
+          "order": 2,
+          "title": "HUNDREDS OF LEAKED AWS KEYS GIVE FULL CONTROL OVER CORPORATE ACCOUNTS",
+          "summary": "Truffle Security has been tracking AWS access key exposure for four years and reports that 9,300 of the access keys that they've discovered and tracked remain active. Of these 9,300 keys, 817 of the keys were linked to companies, with 526 of those being root keys. Truffle Security's testing was limited to read-only metadata, and it has notified affected customers.",
+          "url": "https://links.tldrnewsletter.com/pDWK0B",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a15",
+          "order": 3,
+          "title": "WE URGENTLY NEED A COHERENT NATIONAL AI CYBERSECURITY POLICY",
+          "summary": "Current national AI cybersecurity policy focuses on measuring dual-use capabilities of models and biases towards AI's benefit to attackers. This framing ignores defensive security use cases such as AI code fixing and phishing defenses. The solution to this issue is to assemble an AI cybersecurity observatory that will perform evaluations combined with real-world use to make policy recommendations.",
+          "url": "https://joshuasaxe181906.substack.com/p/we-urgently-need-a-coherent-national?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "joshuasaxe181906.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-24:a16",
+          "order": 1,
+          "title": "MICROSOFT FIXES 'PERFECT 10' EXPLOIT THAT COULD HAVE LET HACKERS RUN CODE REMOTELY",
+          "summary": "Microsoft has fixed CVE-2026-69836, a critical deserialization vulnerability in Entra ID that enabled unauthenticated remote code execution without interaction, and confirmed there was no active exploitation before publicly disclosing the CVE for transparency.",
+          "url": "https://decrypt.co/376287/microsoft-perfect-10-exploit-hackers-run-code?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "decrypt.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-24:a17",
+          "order": 2,
+          "title": "US SECURES $400M TIKTOK SETTLEMENT OVER ALLEGED CHILDREN'S PRIVACY VIOLATIONS",
+          "summary": "TikTok and ByteDance will pay $400 million to settle DOJ allegations that the platform allowed children under 13 to hold accounts and collected their data without parental consent.",
+          "url": "https://www.justice.gov/opa/pr/justice-department-secures-400m-settlement-tiktok-and-bytedance-resolve-childrens-privacy?utm_source=tldrinfosec%5B18%5D%5B19",
+          "reading_time_minutes": 1,
+          "source_domain": "justice.gov",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
