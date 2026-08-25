@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-25",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-25",
+  "source_path": "TLDR InfoSec/article_25-08-2026.md",
+  "source_content_hash": "sha256:9725e3868ff91d9c07c769772a0ff575c87ef0e2b85f5ad80f650bda9a23180f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-25",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-25:a04",
+          "order": 1,
+          "title": "ALATION CONFIRMS CYBERATTACK AFTER REPORTING SYSTEM INCIDENT",
+          "summary": "Enterprise data software provider Alation confirmed unauthorized activity in one system after users experienced degraded availability earlier this week. The service disruption was resolved within an hour. The company has not identified the attack method, root cause, affected customer count, data exposure, notification status, or recommended defensive actions.",
+          "url": "https://www.scworld.com/brief/alation-confirms-cyberattack-after-reporting-system-incident?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a05",
+          "order": 2,
+          "title": "AUSTRALIAN HOTEL CHAIN LEAKS GUESTS' PII AFTER BREACH AT THIRD-PARTY DATABASE OPERATOR",
+          "summary": "Quest identified unauthorized database access on August 17 through a third-party provider. Records from before June 2025 exposed guest names and contact details. Some included dates of birth. The company says it notified affected guests, contained the incident, remediated systems, and began forensic work.",
+          "url": "https://www.theregister.com/cyber-crime/2026/08/19/australian-hotel-chain-leaks-guests-pii-after-breach-at-third-party-database-operator/5289341?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a06",
+          "order": 3,
+          "title": "HACKERS TARGET WORDPRESS SITES IN MINIORANGE AUTH BYPASS ATTACKS",
+          "summary": "Attackers are actively chaining two critical vulnerabilities (CVE-2026-61979 and CVE-2026-15981) in the miniOrange SAML 2.0 SSO plugin to bypass authentication and gain administrator access to WordPress sites. Malicious actors can successfully forge legitimate SAML responses by manipulating cryptographic algorithms and bypassing OpenSSL signature checks. Administrators must manually verify their plugin version and immediately upgrade to the latest patched release, as the native WordPress dashboard will not surface update warnings for premium editions.",
+          "url": "https://links.tldrnewsletter.com/C49Zyg",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-25:a07",
+          "order": 1,
+          "title": "GHSA-864F-RCV7-6RH4: CRITICAL TYPE CONFUSION VULNERABILITY IN ISOLATED-VM",
+          "summary": "Endor Labs found a type confusion bug in isolated-vm's ExternalCopy transferList handling. A getter returns different values across two validation walks, letting attacker code pass a bad pointer through an unchecked cast. From one shared ivm.Reference, researchers reached the ExternalCopy constructor, crashed the host with SIGSEGV, then built a working exploit that recovers ASLR base, forges a vtable, and redirects an indirect call to invoke a chosen libc function. The vulnerability affects isolated-vm versions below 7.0.1 and 6.2.0, used by n8n, Activepieces, Mastra, Budibase, Directus, and Rocket.Chat. Upgrade immediately and audit which capabilities you pass into any sandboxed Reference.",
+          "url": "https://www.endorlabs.com/learn/ghsa-864f-rcv7-6rh4-critical-type-confusion-vulnerability-in-isolated-vm?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "endorlabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a08",
+          "order": 2,
+          "title": "DETECTING (EVIL) DYLIBS",
+          "summary": "This post details how attackers utilize macOS dynamic library (dylib) injection to inherit a host process's trust, entitlements, and TCC grants while blinding native security tools. By employing techniques such as DYLD_INSERT_LIBRARIES injection, @rpath hijacking, or trojanizing libraries, threat actors can bypass System Integrity Protection (SIP) and achieve deep persistence. To close this process-level blind spot, the post recommends that security tools statically parse Mach-O LC_LOAD_DYLIB commands for collisions, dynamically enumerate loaded libraries, and subscribe to Endpoint Security's ES_EVENT_TYPE_AUTH_MMAP to intercept malicious dylibs before they map into memory.",
+          "url": "https://objective-see.org/blog/blog_0x89.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "objective-see.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a09",
+          "order": 3,
+          "title": "PUTTING MODELS TO THE SECURE CODING TEST: PLAN VS DEFAULT MODE",
+          "summary": "A researcher performed a test where they instructed Sonnet 5, Composer 2.5, and GPT 5.5 to construct a webapp using the same prompt in both normal and plan modes to observe if plan mode had any noticeable impact on secure coding practices. All six implementations produced an identical IDOR vulnerability in addition to other vulnerabilities that varied across implementations. While Sonnet 5 produced a much more mature implementation in plan mode and Composer 2.5 produced the most glaring security vulnerability while using plan mode, the experiment proved inconclusive on whether plan mode produced more secure code.",
+          "url": "https://securitylabs.datadoghq.com/articles/putting-models-to-the-secure-coding-test-plan-vs-default-mode/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-25:a10",
+          "order": 1,
+          "title": "INTRODUCING TRUFFLEHOG AWS ANALYZE: KNOW WHAT A LEAKED AWS KEY CAN REACH",
+          "summary": "TruffleHog AWS Analyze added an AWS-specific view to TruffleHog Enterprise that resolves the IAM principal behind a leaked access key and maps its policies, group memberships, and assumable-role paths up to two trust-policy hops away.",
+          "url": "https://trufflesecurity.com/blog/trufflehog-aws-analyze?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a11",
+          "order": 2,
+          "title": "OPENRISK",
+          "summary": "OpenRisk is a modern, enterprise-grade Risk Management Platform that transforms how organizations identify, assess, mitigate, and monitor risks",
+          "url": "https://github.com/opendefender/OpenRisk?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a12",
+          "order": 3,
+          "title": "DEPUTY",
+          "summary": "Deputy aims to enable dependency management at scale by providing core dependency management primitives along with a unified toolchain",
+          "url": "https://github.com/temporalio/deputy?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-25:a13",
+          "order": 1,
+          "title": "RISKY BULLETIN: SLOVAKIA FINDS RUSSIAN BACKDOOR IN TRAFFIC SPEED CAMERAS",
+          "summary": "Slovakia's national security service (NBU) discovered that recently installed traffic cameras contain a backdoor granting shell and network access via SMS commands from hardcoded Russian phone numbers. The compromised NERO R-ONE cameras, allegedly purchased through a Cyprus shell company, were identified as rebadged units manufactured by a St. Petersburg-based firm. In addition to the SMS backdoor, the NBU technical report revealed that the devices shipped with SecureBoot disabled and exposed live video streams without authentication.",
+          "url": "https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "risky.biz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a14",
+          "order": 2,
+          "title": "OWASP FLAGS TOP AI SKILL RISKS IN NEW SECURITY BLUEPRINT",
+          "summary": "OWASP released its Agentic Skills Top 10 and Universal Agentic Skill Format v1.0. Malicious skills and supply-chain compromise rank first and second. A Paperclip impersonation campaign used Trojanized packages and skills. The skills exceeded 300,000 installs, and it shows that the skill format should record provenance, permissions, dependencies, hashes, and changes. Security teams should inventory agent skills and quickly disable flagged ones.",
+          "url": "https://links.tldrnewsletter.com/utub4N",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a15",
+          "order": 3,
+          "title": "WHY AI LEARNED TO ATTACK BEFORE IT LEARNED TO DEFEND",
+          "summary": "Offensive AI is outpacing defensive AI due to a structural asymmetry: offensive exploits provide a clear verification \"oracle\" (the exploit either lands or fails), allowing reinforcement learning loops to train attackers much faster than defenders. The industry is actively experiencing this imbalance: Anthropic's Project Glasswing recently surfaced over 10,000 high- or critical-severity flaws, far outpacing the two-week average patch time, while OpenAI's Daybreak Red achieved a roughly 95% success rate on advanced offensive security tasks. This rapid offensive acceleration, illustrated by the Hugging Face breach in July and the rise of highly capable open-weight models, highlights a growing threat landscape where AI substitutes human effort on offense but only assists on defense.",
+          "url": "https://futurumgroup.com/insights/why-ai-learned-to-attack-before-it-learned-to-defend/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "futurumgroup.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-25:a16",
+          "order": 1,
+          "title": "PRIVATE EQUITY FIRM APOLLO CONFIRMS DATA BREACH AMID HACKING WAVE TARGETING FINANCIAL GIANTS",
+          "summary": "Apollo disclosed that attackers accessed its cloud environment from July 6 to 10 through social engineering.",
+          "url": "https://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-25:a17",
+          "order": 2,
+          "title": "TATA'S B2B PLATFORM RETURNED OTPS IN API RESPONSES",
+          "summary": "Tata nexarc's login API returned the OTP directly in its response body, letting researcher Eaton take over any account, including Tata Steel's own, just by knowing the target's phone number, until CERT-IN confirmed a fix on July 31.",
+          "url": "https://eaton-works.com/2026/08/24/tata-nexarc-hack?utm_source=tldrinfosec%5B18%5D%5B19",
+          "reading_time_minutes": 2,
+          "source_domain": "eaton-works.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
