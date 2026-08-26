@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-08-26",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-08-26",
+  "source_path": "TLDR DevOps/article_26-08-2026.md",
+  "source_content_hash": "sha256:121ea5cf3acf0367db385f7413f618b03652b0ae52f0e83d59518fa392445604",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-08-26",
+  "sections": [
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-26:a04",
+          "order": 1,
+          "title": "HAPPY 20TH BIRTHDAY, AMAZON EC2",
+          "summary": "Amazon EC2 turns 20 years old today. Jeff Barr's original blog post in 2006 introduced a single instance type, m1.small, in one region, billed by the hour. The service has since grown from that one instance type to over 1,200, spanning 39 regions globally.",
+          "url": "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a05",
+          "order": 2,
+          "title": "THE AUGUST 17 OUTAGE, AND THE WORK AHEAD",
+          "summary": "GitHub's 7-hour-and-47-minute outage on August 17 began when record traffic overwhelmed a critical Central US infrastructure component that failed to scale, triggering authentication failures and cascading service disruption. Recovery was complicated by a client-side retry loop in Copilot. GitHub is responding with stricter retry budgets and timeouts, more capacity, fewer shared dependencies, and continued migration to Azure, which now serves about 58% of platform load.",
+          "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-26:a06",
+          "order": 1,
+          "title": "PATCHING AT FLEET SCALE, TWICE: HOW DIGITALOCEAN CLOSED JANUSCAPE AND THE AMD SAFE RET ISSUE WITHOUT CUSTOMER IMPACT",
+          "summary": "DigitalOcean patched its entire hypervisor fleet against two separate guest-to-host vulnerabilities within a single month, reporting zero confirmed customer-facing impact in both cases. The first, a KVM nested virtualization flaw called Januscape (CVE-2026-53359), was publicly disclosed July 6 and fully remediated across all hypervisors by July 14, eight days later. The second affected roughly 1,600 AMD hypervisors across twelve regions and required a kernel update and reboot on every machine, a harder constraint than the first, yet the entire fleet was patched by August 5, one day before AMD published its public bulletin.",
+          "url": "https://www.digitalocean.com/blog/patching-januscape-amd-safe-ret?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "digitalocean.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a07",
+          "order": 2,
+          "title": "SOLVING THE 1+N QUERY PROBLEM",
+          "summary": "Acadia eliminates the N+1 query problem by design: its query language has no general-purpose loops or recursion, so developers cannot accidentally turn a relationship lookup into one query followed by N additional database calls. Inspired by Datalog, Acadia instead expresses relationships through operations like intersect that compile into set-based SQL, while also guaranteeing that queries terminate in polynomial time relative to the size of the data.",
+          "url": "https://acadia.engineering/blog/solving-the-1-plus-N-query-problem?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "acadia.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a08",
+          "order": 3,
+          "title": "ON-CALL IS NOW THEATRE",
+          "summary": "AI agents have transformed software development but production operations still rely on human-centered on-call systems that constrain velocity. The proposed model uses agents to continuously detect, investigate, fix, and prevent incidents, escalating only genuinely novel problems while shifting engineers from first responders to decision makers.",
+          "url": "https://boristane.com/blog/on-call-is-now-theatre/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "boristane.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-26:a09",
+          "order": 1,
+          "title": "HISTER",
+          "summary": "Hister is a private search engine that indexes the full contents of pages you visit and files you store locally. It works through a web interface, terminal, or an AI assistant connected via MCP. By default, it has no telemetry and no cloud sync, and the browser extension sends indexed content only to the server you configure. Optional semantic search requires you to choose your own embeddings endpoint.",
+          "url": "https://github.com/asciimoo/hister?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a10",
+          "order": 2,
+          "title": "APACHE MAKA",
+          "summary": "Apache Maka is a local-first AI agent workspace that runs models and tools through a sandboxed runtime while keeping sessions, tool calls, results, and recovery data on the user's machine by default. It provides desktop, CLI/TUI, and evaluation interfaces, supports built-in file and shell tools, records durable execution histories for crash recovery and context trimming, and can connect to cloud APIs, local models, or compatible gateways.",
+          "url": "https://github.com/apache/maka?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-26:a11",
+          "order": 1,
+          "title": "BUILDING AN AI-POWERED INCIDENT BOT WITH OCTOPUS DEPLOY",
+          "summary": "A proof-of-concept bot named Octopus Healer sends Kubernetes alert context to an AI model, which selects a predefined remediation type and fills runbook parameters rather than generating executable commands. Octopus Deploy then executes the runbook only after an operator reviews and approves it in Slack, preserving audit trails and existing permissions.",
+          "url": "https://octopus.com/blog/ai-powered-incident-bot?utm_source=tldrdevops",
+          "reading_time_minutes": 11,
+          "source_domain": "octopus.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a12",
+          "order": 2,
+          "title": "AUTOMATING ROOT CAUSE ANALYSIS AT SCALE: MULTI-SIGNAL CORRELATION FOR CLOUD NATIVE INCIDENT RESPONSE",
+          "summary": "Atlassian has built an automated root cause analysis system designed to cut the time engineers spend diagnosing production incidents across its hundreds of microservices. The system pulls anomaly signals from metrics, distributed traces, and logs, aligns them on a shared timeline, and traverses a service dependency graph built from OpenTelemetry span data to generate ranked hypotheses about fault origin.",
+          "url": "https://www.cncf.io/blog/2026/08/24/automating-root-cause-analysis-at-scale-multi-signal-correlation-for-cloud-native-incident-response/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a13",
+          "order": 3,
+          "title": "AI CODING WILL PREVENT EXPERTISE",
+          "summary": "AI coding tools can create an “expert novice” problem: developers are expected to use agents effectively before they have built the judgment needed to evaluate their output, while heavy reliance on generated code can bypass the struggle that develops that judgment in the first place. A better learning model is to use AI as a tutor or Socratic partner rather than a code generator, preserving the planning, debugging, and trial-and-error that turns experience into expertise.",
+          "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise?utm_source=tldrdevops",
+          "reading_time_minutes": 14,
+          "source_domain": "larsfaye.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-08-26:a14",
+          "order": 1,
+          "title": "DEVELOPERS FEEL LIKE THEY HAVE TO CHOOSE BETWEEN SHIPPING AND SECURITY; HERE'S HOW TO BREAK THE CYCLE.",
+          "summary": "Build a secrets management program [14] that makes life simpler for developers and administrators. Use 1Password [14] to discover, secure, govern, and audit credentials.",
+          "url": "https://1password.com/blog/developer-secrets-management-that-keeps-delivery-moving?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_epm_bl_developer-secrets-management-that-keeps-delivery-moving_sa&utm_content=newsletter_devops_082626",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a15",
+          "order": 2,
+          "title": "JENKINS CONTRIBUTOR SUMMIT VIRTUAL EVENT (SEPTEMBER 11, 2026)",
+          "summary": "Jenkins will hold a virtual Contributor Summit hackathon on September 11, running 08:30 to 19:30 CEST across an APAC/EMEA morning block and an EMEA/Americas afternoon block.",
+          "url": "https://www.jenkins.io/blog/2026/08/24/contributor-summit-virtual/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "jenkins.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-08-26:a16",
+          "order": 3,
+          "title": "RUN, DEBUG, AND SCALE DATABRICKS WORKLOADS FROM YOUR LOCAL IDE",
+          "summary": "Databricks has updated its IDE tools to let developers connect VS Code, Cursor, or a terminal directly to Databricks compute via a new SSH tunnel.",
+          "url": "https://www.databricks.com/blog/run-debug-and-scale-databricks-workloads-your-local-ide?utm_source=tldrdevops%5B17%5D%5B18",
+          "reading_time_minutes": 2,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
