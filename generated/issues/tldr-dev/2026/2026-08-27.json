@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-08-27",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-08-27",
+  "source_path": "TLDR Dev/article_27-08-2026.md",
+  "source_content_hash": "sha256:6d7c23a87c262260a51b450853b3f195eacce1ad7818160e98cae948c8aba1df",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-08-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a04",
+          "order": 1,
+          "title": "TEST YOUR ENTERPRISE AUTH FLOW LOCALLY",
+          "summary": "Every auth test reaches an environment you do not control. Someone points staging at production credentials, someone else shares a test user, and nobody can force a 503 to test the unhappy paths.\n\n@workos/emulate [5] is an open-source WorkOS API server you run yourself. Seed the users, orgs, RBAC, and SSO connections you need, then force any endpoint to fail. Payloads are generated from the WorkOS API spec, so tests match production.",
+          "url": "https://workos.com/docs/cli/emulate?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=q32026&utm_content=header_enterprise_auth_flow",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a06",
+          "order": 2,
+          "title": "Try WorkOS Emulate →",
+          "summary": "",
+          "url": "https://workos.com/docs/cli/emulate?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=q32026&utm_content=cta_workos_emulate",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a07",
+          "order": 1,
+          "title": "DUCKDB AND THE CHANGING PHYSICS OF ANALYTICS",
+          "summary": "The rise of analytics engines like DuckDB shows a shift in data processing, driven by advancements in hardware that allow for efficient single-host operations rather than relying solely on distributed systems. As data processing demands have evolved, DuckDB enables developers to perform complex analytics directly within their applications, blurring the lines between data processing and application development. This is part of the reason AWS acquired DuckLabs.",
+          "url": "https://www.allthingsdistributed.com/2026/08/duckdb-and-the-changing-physics-of-analytics.html?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "allthingsdistributed.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a08",
+          "order": 2,
+          "title": "VMS WON'T CONTAIN CYBER-CAPABLE AGENTS",
+          "summary": "Recent testing revealed that advanced AI agents can quickly escape VMs by exploiting known and unknown vulnerabilities in host systems, leading to concerns about the adequacy of traditional virtualization for containment. To improve cybersecurity, it's necessary to adopt virtualization technologies designed with minimal attack surfaces and prioritize rapid software updates.",
+          "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a09",
+          "order": 3,
+          "title": "THE PROCESS OF MIGRATING FROM SASS TO NATIVE CSS",
+          "summary": "The migration from Sass to native CSS is becoming increasingly viable as native CSS has incorporated many features previously exclusive to Sass, such as variables and functions. Replacing Sass may streamline projects by reducing complexity, improving build times, and eliminating unnecessary dependencies, and migration is now easier with AI.",
+          "url": "https://chrissmith.xyz/blog/2026/the-process-of-migrating-from-sass-to-native-css/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "chrissmith.xyz",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a10",
+          "order": 1,
+          "title": "THE CHOICES WE MAKE ABOUT AI NOW ARE CRITICAL",
+          "summary": "The advent of AI presents both huge opportunities and monumental risks, potentially revolutionizing industries while simultaneously threatening job stability and economic equity. To make sure the benefits of this technology are shared broadly, a coordinated global response involving policymakers, industry leaders, and communities is necessary to address the challenges it poses.",
+          "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make?utm_source=tldrdev",
+          "reading_time_minutes": 30,
+          "source_domain": "gatesnotes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a11",
+          "order": 2,
+          "title": "WEBSOCKETS VS. SSE SHOULD BE ABOUT ORDERING AND CORRECTNESS",
+          "summary": "The real WebSockets-vs-SSE question isn't about latency or payload but ordering and correctness. Data split across two streams can race (a tag add and remove arriving out of order leaves the UI permanently stale). WebSockets are bidirectional, so reads and writes share one connection and the server can recompute and send the correct result regardless of order.",
+          "url": "https://dashbit.co/blog/websockets-vs-sse?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "dashbit.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a12",
+          "order": 3,
+          "title": "THE HARNESS IS THE THING",
+          "summary": "Progress in software development has accelerated due to advancements that allow single developers to achieve productivity levels comparable to larger teams by effectively using AI models within a structured \"harness.\" This approach creates smoother workflows, better project management, and creative exploration.",
+          "url": "https://scott-fryxell.github.io/blog/the-harness-is-the-thing/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "scott-fryxell.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a13",
+          "order": 1,
+          "title": "ONE MCP SERVER FOR EVERY B2B QUESTION",
+          "summary": "Stop writing Elasticsearch queries and sharing your API keys with every agent.\n\nCoresignal's MCP server [13] connects Claude, Cursor, Copilot, and any MCP client to 4.5 billion multi-source company, employee, and jobs data records. Use OAuth 2.1 login, plain-English queries, and see credit costs before every call.",
+          "url": "https://coresignal.com/mcp-server/?utm_source=tldr&utm_medium=email&utm_campaign=dev+mcp+with+oauth&utm_content=connect+mcp+to+llm",
+          "reading_time_minutes": null,
+          "source_domain": "coresignal.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a13-02",
+          "order": 2,
+          "title": "→ Connect MCP to LLM",
+          "summary": "",
+          "url": "https://coresignal.com/mcp-server/?utm_source=tldr&utm_medium=email&utm_campaign=dev+mcp+with+oauth&utm_content=connect+mcp+to+llm",
+          "reading_time_minutes": null,
+          "source_domain": "coresignal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a14",
+          "order": 3,
+          "title": "SERVE MARKDOWN TO AI AGENTS WITH ACCEPT HEADERS",
+          "summary": "Serving a Markdown variant of web content allows AI agents to directly access clean text without extraneous elements.",
+          "url": "https://acceptmarkdown.com/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "acceptmarkdown.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a15",
+          "order": 4,
+          "title": "SVELTE BITS",
+          "summary": "Svelte Bits is an open-source library of 130+ customizable, animated Svelte components and backgrounds for developers who want their projects to stand out. Everything ships as typed Svelte 5 + Tailwind + TypeScript and is \"AI-ready\" (Cursor, Copilot, v0).",
+          "url": "https://links.tldrnewsletter.com/BCWMye",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a16",
+          "order": 5,
+          "title": "MICROLIGHTER",
+          "summary": "MicroLighter is a lightweight, client-side syntax highlighter that uses the CSS Custom Highlights API and offers features such as zero dependencies, on-demand language loading, and a simplified theme management system. It allows users to highlight code with minimal configuration and easily integrate various programming languages.",
+          "url": "https://daverupert.com/2026/08/microlighter/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "daverupert.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a17",
+          "order": 1,
+          "title": "DUCKLABS TO JOIN AWS, PROJECTS TO REMAIN OPEN SOURCE",
+          "summary": "DuckLabs is set to join AWS in early September, allowing the team to continue developing its open-source projects, including DuckDB, DuckLake, and Quack, while maintaining their free and open-source status under the MIT license. This partnership will hopefully improve scalability and reach of DuckDB, enabling the project to serve a larger community and tackle more complex problems.",
+          "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "ducklabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a18",
+          "order": 2,
+          "title": "CLERKY IS JOINING STRIPE",
+          "summary": "Clerky, an online legal service popular among startups, is joining Stripe to improve its offerings and continue simplifying legal paperwork for high-growth startups and their attorneys. The partnership will use Stripe's extensive resources while maintaining Clerky's focus on providing reliable service and support within the startup ecosystem.",
+          "url": "https://www.clerky.com/blog/clerky-is-joining-stripe?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "clerky.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a19",
+          "order": 3,
+          "title": "DATA FILTERING FOR GENERATIVE VIDEO PRE-TRAINING",
+          "summary": "The focus on improving the data filtering process for developing generative video models targets prompt adherence, training acceleration, and adherence to realistic physics. As advancements in generative models depend heavily on data quality, effective techniques for data filtering, including the use of fine-tuned neural networks and reinforcement learning methods, are necessary to make sure models learn optimally from high-quality data.",
+          "url": "https://www.linum.ai/field-notes/data-filtering-gen-video?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "linum.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-08-27:a20",
+          "order": 1,
+          "title": "OPENAI IS BUILDING AN INTERFACE PLATFORM INSIDE CHATGPT",
+          "summary": "OpenAI is developing an interactive interface platform within ChatGPT that will allow users to engage with various subjects directly in conversations rather than relying on external tools.",
+          "url": "https://runtimewire.com/article/openai-is-building-an-interface-platform-inside-chatgpt?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "runtimewire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a21",
+          "order": 2,
+          "title": "INTELLIGENT TRANSCRIPTION WITH GEMINI 3.5 TRANSCRIBE",
+          "summary": "Gemini 3.5 Transcribe is an advanced speech-to-text model that offers highly accurate, real-time transcription, effectively handles complex speech nuances, supports multiple languages, and integrates into various developer workflows and applications.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a22",
+          "order": 3,
+          "title": "OPENEXECUTIVE",
+          "summary": "Open Executive is an AI system designed to function as a virtual executive team, providing guidance across various business disciplines through a unified executive voice supported by eight specialist AI agents.",
+          "url": "https://github.com/SenteLabsAI/OpenExecutive?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-08-27:a23",
+          "order": 4,
+          "title": "WHERE DID THE OLD WEB GO? WE FOLLOWED 657,607 LINKS TO FIND OUT",
+          "summary": "An analysis of over 657,000 links from a restored 0.mk database reveals that approximately 76.7% of the pre-2015 links are no longer accessible.",
+          "url": "https://0.mk/blog/link-rot?utm_source=tldrdev%5B24%5D%5B25",
+          "reading_time_minutes": 6,
+          "source_domain": "0.mk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

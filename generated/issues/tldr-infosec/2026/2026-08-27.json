@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-27",
+  "source_path": "TLDR InfoSec/article_27-08-2026.md",
+  "source_content_hash": "sha256:5d94626f1ec0691503c452ae4a14e6260004381a569537b7d1a5d958b25211a3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-27",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-27:a04",
+          "order": 1,
+          "title": "CISA ORDERS FEDERAL AGENCIES TO PATCH THE ACTIVELY EXPLOITED ORACLE FLAW BY AUGUST 27",
+          "summary": "CISA added CVE-2026-21962 (CVSS 10.0) to the KEV catalog following active exploitation of the Oracle HTTP Server and Oracle WebLogic Server Proxy Plug-in. Federal agencies must apply the January 2026 patch by August 27.",
+          "url": "https://itnerd.blog/2026/08/25/the-cisa-orders-federal-agencies-to-patch-actively-exploited-oracle-flaw-by-august-27?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "itnerd.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a05",
+          "order": 2,
+          "title": "EMPLOYEE BENEFITS PLATFORM PAYLOGIX SAYS HACKERS STOLE FINANCIAL AND HEALTH DATA",
+          "summary": "Employee benefits provider Paylogix disclosed that they experienced a data breach last November that exposed data belonging to at least 65,000 individuals. The compromised data includes SSNs, electronic signatures, financial account information, medical data, passport numbers, and taxpayer IDs. The Akira ransomware group added Paylogix to its leak site back in January.",
+          "url": "https://therecord.media/paylogix-cyberattack-akira-ransomware?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a06",
+          "order": 3,
+          "title": "UBIQUITI PATCHES THREE MAX SEVERITY SECURITY VULNERABILITIES",
+          "summary": "Ubiquiti patched three critical (CVSS 10) vulnerabilities across their UniFi Protect Application, UniFi Talk Application, and UniFi OS Server products. Two of the vulnerabilities allow attackers to exploit improper input validation in the UniFi Protect Application video surveillance platform and UniFi Talk Application to achieve command injection. The third allows attackers to bypass authentication on UniFi OS devices by exploiting a CRLF injection flaw.",
+          "url": "https://links.tldrnewsletter.com/NMGiIN",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-27:a07",
+          "order": 1,
+          "title": "THE PATCH WINDOW IS COLLAPSING: WHY SECURITY NEEDS A NEW CONTROL PLANE",
+          "summary": "AI-accelerated exploit development has compressed the vulnerability exploitation window to mere hours, fundamentally outpacing traditional enterprise patch validation cycles. To bridge this critical exposure gap, shift toward network-enforced control planes that actively contain threats while permanent patches are tested. By deploying immediate compensating measures like dynamic segmentation and adaptive rate limiting, security teams can secure vulnerable assets without disrupting operations. Network-level stream throttling successfully mitigates the active threat without forcing organizations to completely disable the vulnerable protocol.",
+          "url": "https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a08",
+          "order": 2,
+          "title": "DRIVE-BY AGENT HIJACKING: ONE WEBSITE VISIT, PERSISTENT MODEL POISONING",
+          "summary": "Cyera disclosed CVE-2026-65105 in NVIDIA NemoClaw. NemoClaw's setup binds Ollama to 0.0.0.0:11434, disabling Ollama's Host-header validation, allowing for an attacker-controlled site to use DNS rebinding to reach the victim's local Ollama API without authentication. The attacker can list models, extract templates and prompts, delete or overwrite models, consume GPU resources, and sign users out. By modifying a model's chat template, the attacker can append hidden instructions to every future system prompt.",
+          "url": "https://www.cyera.com/research/nemoclaw-one-website-visit-to-hijack-your-ai-agent?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "cyera.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a09",
+          "order": 3,
+          "title": "PWNING CALL OF DUTY 1: A 20-YEAR-OLD RCE, FOUND IN AN EVENING WITH AI",
+          "summary": "Researchers tested Call of Duty 1's Linux dedicated server in Docker, where they found a stack overflow in the rcon map command. A 72-byte buffer accepted an unchecked map name. Sending 76 bytes overwrote the saved return address, and input filtering blocked high-byte addresses and int 0x80. The exploit used a low-memory jmp esp gadget and alphanumeric-safe shellcode with sysentera and it achieved a shell in the game-server process. The flaw requires the rcon password, making it post-authentication RCE.",
+          "url": "https://zolder.io/en/blog/pwning-call-of-duty-1/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "zolder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-27:a10",
+          "order": 1,
+          "title": "ADDRESS API AND AGENTIC AI RISKS",
+          "summary": "Discover how excessive data exposure, tool poisoning, privilege escalation, and shifting trust boundaries affect modern architectures. Hear practical guidance for embedding security early, improving token hygiene, and preparing for regulatory scrutiny. Watch the webinar on",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el&utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a11",
+          "order": 2,
+          "title": "demand.",
+          "summary": "",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a12",
+          "order": 3,
+          "title": "INTRODUCING RUN SDK: SECURE EVAL FOR YOUR AGENTS",
+          "summary": "Vercel introduced the Run SDK to securely execute untrusted JavaScript and type-stripped TypeScript for agent workflows within the Vercel AI SDK. The package utilizes a hardened QuickJS sandbox to isolate code execution from application secrets, the Node.js environment, and the network. Developers can expose narrowly scoped host functions to the sandbox, enforce resource limits, and pause execution for authentication or human approval.",
+          "url": "https://vercel.com/blog/introducing-run?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "vercel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a13",
+          "order": 4,
+          "title": "ALICE (PRODUCT LAUNCH)",
+          "summary": "Alice tests models before release, simulates malicious prompts, and monitors deployed systems. Teams set business rules, run breach simulations, and track traffic.",
+          "url": "https://alice.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "alice.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a14",
+          "order": 5,
+          "title": "THREAT MODEL GENERATOR",
+          "summary": "A set of agent skills for producing threat models for open-source projects, including an orchestrator and independently invocable specialists.",
+          "url": "https://github.com/alpha-omega-security/threat-model?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-27:a15",
+          "order": 1,
+          "title": "BEHAVIORALLY FINGERPRINTING OX ALPHA'S PROVENANCE AND CENSORSHIP",
+          "summary": "CTGT researchers have used behavioral fingerprinting to link the anonymous \"Ox Alpha\" model on OpenRouter to Zhipu's GLM-5.x family. Despite system prompts instructing the model to conceal its identity, researchers identified matching Z.AI error codes, a 1.0 temperature ceiling, and an exact tokenizer match. The analysis also revealed a highly targeted censorship blacklist designed to evade standard foreign-interest audits. While Ox Alpha answers queries about Xinjiang and Taiwan identically to American models, it strictly blocks seven domestic legitimacy topics including the 2018 term limits removal and Xi Jinping. The model operators have not officially disclosed this information, so the attribution relies entirely on CTGT's LineageEval testing instrument.",
+          "url": "https://www.ctgt.ai/research/behaviorally-fingerprinting-ox-alphas-provenance?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "ctgt.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a16",
+          "order": 2,
+          "title": "A CAUTIONARY TALE ABOUT DATA BREACH CLAIMS, VERIFICATION AND CARHARTT",
+          "summary": "Troy Hunt investigated ShinyHunters' claim of a 24.8 million-record data breach at Carhartt and discovered the dataset was heavily contaminated with synthetic information. Through AI-assisted and manual verification, Hunt identified TPC-DS benchmark data, Microsoft 365 routing duplicates, and highly uniform birth distributions. This forensic analysis reduced the actual number of compromised records to roughly 12.9 million. Hunt concluded that while Carhartt suffered a genuine breach, the threat actors likely exfiltrated a Databricks instance where production customer records were stored alongside unlabeled test data rather than fabricating the dump outright.",
+          "url": "https://www.troyhunt.com/a-cautionary-tale-about-data-breach-claims-verification-and-carhartt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "troyhunt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a17",
+          "order": 3,
+          "title": "INTERPOL OPERATION JACKAL IV ARRESTS 58, IDENTIFIES 263 IN GLOBAL CYBER FRAUD CRACKDOWN",
+          "summary": "INTERPOL's eight-month Operation Jackal IV involved 22 countries and targeted West African crime groups. Police arrested 58 people and identified 263 suspects. Investigators linked 196 people to a crime-as-a-service network supplying domains and laundering support with an estimated €143 million stolen through fake investment offers.",
+          "url": "https://thehackernews.com/2026/08/interpol-operation-jackal-iv-arrests-58.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-27:a18",
+          "order": 1,
+          "title": "AUSTRALIA WARNS OF ACTIVE EXPLOITATION OF CRITICAL TEAMCITY SERVER FLAW",
+          "summary": "The Australian Cyber Security Centre reports active exploitation of CVE-2026-63077, a critical authentication bypass in JetBrains TeamCity On-Premises, targeting local organizations.",
+          "url": "https://www.infosecurity-magazine.com/news/australia-exploitation-teamcity?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a19",
+          "order": 2,
+          "title": "APPLE RESCUES HIDE MY EMAIL FEATURE FROM THE PRIVACY SCRAP HEAP",
+          "summary": "Apple will keep Hide My Email aliases on @icloud.com after planning a move to @private.icloud.com.",
+          "url": "https://techcrunch.com/2026/08/25/apple-rescues-hide-my-email-feature-from-the-privacy-scrap-heap/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-27:a20",
+          "order": 3,
+          "title": "SENSITIVE INFORMATION EXPOSED IN NUTEX HEALTH DATA BREACH",
+          "summary": "Nutex Health disclosed unauthorized network access and file exfiltration in an SEC filing.",
+          "url": "https://links.tldrnewsletter.com/GUclWA[21][22",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

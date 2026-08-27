@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-27",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-27",
+  "source_path": "TLDR Data/article_27-08-2026.md",
+  "source_content_hash": "sha256:371f0bb1fccd75a139f2651604d09d73951eb0369725821f79d35483c4f79b48",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a04",
+          "order": 1,
+          "title": "WHAT DO CERN, WALMART, AND APPLE HAVE IN COMMON?",
+          "summary": "They're all showing up to OpenSearchCon North America [4] to share how they run AI search, observability, and data infrastructure at (massive) scale.\n\nCome for real production patterns and two hands-on workshops:\n\n* Build an OpenTelemetry observability stack * Build an agentic AI search app\n\nAdditional speakers [4] come from Airbnb, Intel, IBM and more. Join in San Jose from September 22 to 24, to build the future of open source search. Come for the talks, leave with something you can actually use on Monday.",
+          "url": "https://events.linuxfoundation.org/opensearchcon-north-america/?utm_campaign=50584845-Q3+OpenSearchCon+NA+2026&utm_source=tldrdatapri&utm_medium=banner&utm_content=0827226",
+          "reading_time_minutes": null,
+          "source_domain": "events.linuxfoundation.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-08-27:a04-02",
+          "order": 2,
+          "title": "CHECK OUT THE SCHEDULE →",
+          "summary": "",
+          "url": "https://events.linuxfoundation.org/opensearchcon-north-america/?utm_campaign=50584845-Q3+OpenSearchCon+NA+2026&utm_source=tldrdatapri&utm_medium=banner&utm_content=0827226",
+          "reading_time_minutes": null,
+          "source_domain": "events.linuxfoundation.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a05",
+          "order": 1,
+          "title": "INSIDE LINKEDIN'S COGNITIVE MEMORY AGENT FOR AGENTIC PERSONALIZATION (32 MINUTE PODCAST)",
+          "summary": "LinkedIn built a cognitive memory agent that personalizes its hiring assistant using four layers: conversational, episodic, semantic, and procedural memory. It replaced GraphRAG with a hierarchical tree that supports cheaper incremental updates, while dedicated ingestion, consolidation, and retrieval services keep preferences fresh, traceable, access-controlled, and available within tight latency limits.",
+          "url": "https://stackoverflow.blog/2026/08/25/inside-linkedin-s-cognitive-memory-agent/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a06",
+          "order": 2,
+          "title": "SAFECHAT: BUILDING AI-POWERED SAFETY SYSTEMS AT SCALE IN A REAL-TIME MARKETPLACE (42 MINUTE VIDEO)",
+          "summary": "DoorDash's SafeChat handles millions of chats, calls, and images per day with a hybrid moderation pipeline. Fast internal classifiers clear obvious safe cases, LLMs score the hardest cases across severity axes, and no-code workflows plus backtesting let teams tune actions before production. The system cut verbal-abuse incidents roughly in half.",
+          "url": "https://www.infoq.com/presentations/doordash-llm-ai-moderation-platform/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a07",
+          "order": 3,
+          "title": "THE LOGDRIVE: FLEXIBLE COMPOSITION THROUGH ABSTRACTION IN SHARED LOGS",
+          "summary": "In Kafka-style streaming systems, the shared log is the ordered event backbone that brokers and consumers build on. LogDrive separates that log into an AtomicLog sequencing layer and a durability layer built from flat single-value registers plus weakTail, making striping and quorum replication reusable across S3, DynamoDB, S3 Express, or other backends.",
+          "url": "https://jack-vanlightly.com/blog/2026/8/25/the-logdrive-flexible-composition-through-abstraction-in-shared-logs?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "jack-vanlightly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a08",
+          "order": 4,
+          "title": "BENCHMARKING ROCKSDB'S THREE AMPLIFICATION FACTORS",
+          "summary": "RocksDB amplification depends heavily on workload shape, compaction capacity, and key order. Random inserts produced 4.56x write amplification while sequential keys stayed the same, and delete-heavy workloads temporarily pushed space amplification to 1.58x. Bloom filters kept L0 read latency nearly flat as file counts grew.",
+          "url": "https://hackernoon.com/benchmarking-rocksdbs-three-amplification-factors?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "hackernoon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a09",
+          "order": 1,
+          "title": "HOW TO EVALUATE LLMS BEFORE PRODUCTION",
+          "summary": "GitHub's secret-scanning work shows why LLM evaluation should optimize the production decision, not generic benchmark scores. Prompts, models, input construction, and eval configs were versioned like code, then tested against production-like ambiguity. That discipline cut false positives by 95% offline while preserving recall within the safety guardrail.",
+          "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a10",
+          "order": 2,
+          "title": "GRAPH ENGINEERING IN THE ERA OF LLM AGENTS: FROM INDIVIDUAL INTELLIGENCE TO SYSTEM INTELLIGENCE",
+          "summary": "Complex tasks can exceed a single AI agent's organizational capacity, regardless of better context or tools. Graph Engineering addresses this by mapping tasks, specialized agents, and system states to coordinate parallel work, verification, and persistent execution.",
+          "url": "https://arxiv.org/abs/2608.21156v2?utm_source=tldrdata",
+          "reading_time_minutes": 28,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a11",
+          "order": 3,
+          "title": "AI'S CHOKEHOLD | HOW TO BUILD A DATA TEAM WITHOUT AI BURNOUT",
+          "summary": "AI creates more pipelines and dependencies without matching growth in data teams, making engineers the operational bottleneck. Companies should prevent burnout with scalable infrastructure, governance, and automated operations matched to their actual needs and capacity.",
+          "url": "https://links.tldrnewsletter.com/p1DRIx",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a12",
+          "order": 1,
+          "title": "THE SELLER'S SIDE OF THE NEO-CLOUD ECOSYSTEM",
+          "summary": "Missed RFS dates, Phantom Clusters, and layers of vendors compound challenges that start with a volatile supply chain. Michael Francisco, Vice President of WhiteFiber Cloud US, breaks down what's driving these dynamics from the seller's side, and how to simplify your sourcing process.",
+          "url": "https://www.whitefiber.com/blog/gpu-infrastructure-procurement-guide?utm_source=tldr&utm_medium=newsletter&utm_campaign=mofu_GPU-Buyers-Guide&utm_content=cta-1",
+          "reading_time_minutes": null,
+          "source_domain": "whitefiber.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-08-27:a13",
+          "order": 2,
+          "title": "READ THE BREAKDOWN",
+          "summary": "",
+          "url": "https://www.whitefiber.com/blog/gpu-infrastructure-procurement-guide?utm_source=tldr&utm_medium=newsletter&utm_campaign=mofu_GPU-Buyers-Guide&utm_content=cta-2",
+          "reading_time_minutes": null,
+          "source_domain": "whitefiber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a14",
+          "order": 3,
+          "title": "Talk to WhiteFiber's engineers",
+          "summary": "",
+          "url": "https://www.whitefiber.com/contact-us?utm_source=tldr&utm_medium=newsletter&utm_campaign=mofu_GPU-Buyers-Guide&utm_content=cta-3",
+          "reading_time_minutes": null,
+          "source_domain": "whitefiber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a15",
+          "order": 4,
+          "title": "DUCKLABS TO JOIN AWS, PROJECTS TO REMAIN OPEN SOURCE",
+          "summary": "DuckLabs is joining AWS to gain the infrastructure, resources, and reach needed to scale DuckDB and the wider Duck Stack. DuckDB, DuckLake, and Quack will remain MIT-licensed open-source projects stewarded by the independent DuckDB Foundation, while AWS supports faster development and broader adoption.",
+          "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "ducklabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a16",
+          "order": 5,
+          "title": "KHAOS: KAFKA LOAD TESTING & CHAOS ENGINEERING",
+          "summary": "Khaos is an open-source Kafka load-testing and chaos-simulation tool that was recently rewritten in Go. It generates realistic producers and consumers, exercises broker failures, hot partitions, consumer lag, rebalances, and backpressure, and gives platform teams a repeatable way to test Kafka behavior before they encounter production incidents.",
+          "url": "https://github.com/aleksandarskrbic/khaos?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a17",
+          "order": 6,
+          "title": "NEW THINGS FOR REGULAR EXPRESSIONS IN POSTGRESQL: PG_TRE AND PG_RE2",
+          "summary": "PostgreSQL regex search can vary wildly by index and extension. In a 1.6M-row, 33 GB plan table, pg_trgm cut a simple LIKE scan from about 40 seconds to 1.6 seconds, pg_tre added fuzzy matching but had painful index build time, and pg_re2 delivered faster regex execution with fewer language features.",
+          "url": "https://www.depesz.com/2026/08/25/new-things-for-regular-expressions-in-postgresql-pg_tre-and-pg_re2?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "depesz.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a18",
+          "order": 1,
+          "title": "PAGEDATTENTION: VIRTUAL MEMORY FOR THE KV CACHE",
+          "summary": "PagedAttention brings virtual-memory-style paging to LLM KV caches by replacing contiguous per-request allocation with fixed-size blocks and a block table. That design eliminates most cache fragmentation, raises utilization to roughly 96%, supports copy-on-write for shared prompts, and can serve 2–4x more users per GPU without changing attention outputs.",
+          "url": "https://thegustafson.com/blog/paged-attention?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "thegustafson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a19",
+          "order": 2,
+          "title": "THE AGGREGATE NUMBER IS LYING TO YOU",
+          "summary": "Enterprise application software is still growing, but aggregate market numbers hide where AI is actually changing buyer behavior. Workflow-heavy and automation-friendly categories are pulling ahead while customer service and HCM lag. For buyers, AI packaging and pricing now reveal more about value capture than broad market-growth headlines.",
+          "url": "https://www.idc.com/resource-center/blog/the-aggregate-number-is-lying-to-you/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "idc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-27:a20",
+          "order": 1,
+          "title": "ANALYST GYM",
+          "summary": "Analyst Gym uses daily two-minute workplace drills to sharpen analytical judgment rather than coding skills.",
+          "url": "https://analystgym.com/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "analystgym.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-27:a21",
+          "order": 2,
+          "title": "NEOCARTA",
+          "summary": "Neocarta builds a Neo4j semantic layer that unifies database schemas, business definitions, metrics, and query history, then exposes this context to AI agents through MCP.",
+          "url": "https://github.com/neo4j-labs/neocarta?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
