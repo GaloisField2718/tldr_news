@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-08-31",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-08-31",
+  "source_path": "TLDR InfoSec/article_31-08-2026.md",
+  "source_content_hash": "sha256:65cb38783099ebf9bab36747bc26293a1128926c535201b66039afb77634c566",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-08-31",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-31:a04",
+          "order": 1,
+          "title": "POWER LEAK: AMAZON KIRO IDE PROMPT INJECTION ENABLES DATA EXFILTRATION",
+          "summary": "A crafted Kiro workspace can direct the agent to read .env data, place it in powersRecommendationUrl, and invoke Kiro Powers. The IDE then fetches the attacker-controlled URL with the secret in its query string. Mindgard reproduced the path in trusted and untrusted workspaces, and Amazon fixed the reported behavior in Kiro IDE 0.8.140.",
+          "url": "https://mindgard.ai/blog/amazon-kiro-data-exfiltration?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "mindgard.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a05",
+          "order": 2,
+          "title": "HASBRO DATA BREACH EXPOSED EMPLOYEE PERSONAL INFORMATION",
+          "summary": "Hasbro notified current and former employees that attackers may have accessed names, contact details, national ID numbers, and financial information. Massachusetts records list 436 affected residents. The disclosure may stem from March's network incident, which forced system shutdowns, and from Hasbro's reporting $11 million in cleanup costs and $25 million in delayed sales.",
+          "url": "https://links.tldrnewsletter.com/0WPKXT",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a06",
+          "order": 3,
+          "title": "OMARCHY: ANY USER PROCESS CAN ESCALATE TO ROOT",
+          "summary": "Omarchy added its default user to the Docker group out of the box, and since supplementary groups are inherited, every process in the desktop session could reach the root-owned Docker socket and mount the host filesystem as root without a password or prompt. Browsers, editors, npm scripts, and AI coding agents all inherited that access, turning any ordinary application compromise into full machine compromise. The researcher disclosed privately that the group membership was removed in 4.0.1, and versions back through 3.8.4 remain affected.",
+          "url": "https://0xcc.io/posts/omarchy-root-creds/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "0xcc.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-31:a07",
+          "order": 1,
+          "title": "TERMINALFIX CAMPAIGN DEPLOYS A REVERSE TUNNEL THROUGH MULTISTAGE INTRUSION",
+          "summary": "TerminalFix uses compromised sites and fake Cloudflare CAPTCHA prompts to copy malicious PowerShell into a victim's clipboard. The command downloads a ZIP, then abuses LockScreenContentServer.exe to sideload dui70.dll, which then extracts payloads from PNG pixel data, creates Run-key and scheduled-task persistence, and enumerates Active Directory, trusts, administrators, servers, and system details. A Python client opens a TLS WebSocket tunnel to gitnow[.]dev:443, allowing SOCKS-style access to internal hosts. Look out for nonstandard LockScreenContentServer.exe paths, dui70.dll loads, pythonw.exe client.py activity, and the listed C2 domains.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a08",
+          "order": 2,
+          "title": "FIRE ANT EVOLVES: FROM HYPERVISORS TO TRUSTED INFRASTRUCTURE",
+          "summary": "The Fire Ant threat actor has escalated from hypervisor compromises to direct infection of network control planes via purpose-built IOS XR implants. These sophisticated router implants establish unauthorized GRE tunnels to legacy Linux hosts and actively suppress syslog alerts by injecting exclusion clauses into CLI outputs. On the authentication layer, the actor deploys a tool called TacTap to inject malicious libraries into the tac_plus process, ultimately harvesting credentials using a single-byte XOR key. Sygnia researchers assess that this activity strongly overlaps with the China-nexus UNC3886 cluster. To detect this activity, defenders must hunt for unexplained GRE interfaces, tac_plus process injections, and specific log-clearing commands across independent network and memory telemetry.",
+          "url": "https://www.sygnia.co/blog/fire-ant-evolves-from-hypervisors-to-trusted-infrastructure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 24,
+          "source_domain": "sygnia.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a09",
+          "order": 3,
+          "title": "THREAT HUNT AI: HOW WE BUILT AN AI SECURITY ANALYST ON AWS FOR UNDER $500 A MONTH",
+          "summary": "Grow Therapy built an agentic threat hunting workflow on AWS that leveraged existing log sources such as Snowflake, CloudTrail, and Datadog for an additional cost of less than $500/month. Users submit a YAML threat hunt request, which then kicks off a five-phase workflow: first, Sonnet gathers relevant data, and then Opus compares the data to existing baselines, enriches and analyzes the context, assigns a confidence score to the findings, and performs adversarial analysis to validate them. False positives are tracked in Snowflake and injected into the adversarial validation step, which has significantly reduced false-positive reports.",
+          "url": "https://engineering.growtherapy.com/post/threat-hunt-ai-how-we-built-an-ai-security-analyst-on-aws-for-under-500-month?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "engineering.growtherapy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-31:a10",
+          "order": 1,
+          "title": "AIPERMISSION",
+          "summary": "Local-first permission gateway for AI agents: connector-based SSH, Postgres, and Redis access with scoped tokens, human approval, audit logs, and encrypted local credentials.",
+          "url": "https://github.com/aipermission/aipermission?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a11",
+          "order": 2,
+          "title": "RE-SHELL",
+          "summary": "re-shell is a Nix flake-based reverse engineering environment designed for use with Claude Code.",
+          "url": "https://github.com/schlarpc/re-shell?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a12",
+          "order": 3,
+          "title": "RUST-PROOF YOUR CODE WITH OUR NEW TESTING HANDBOOK CHAPTER",
+          "summary": "Trail of Bits has added a new chapter to its Testing Handbook on Rust. The chapter begins with an overview of what guarantees Rust does and doesn't make and then discusses some tools and methods for dynamic and static analysis. The chapter also includes gotchas from the team's experience analyzing Rust code.",
+          "url": "https://blog.trailofbits.com/2026/07/13/rust-proof-your-code-with-our-new-testing-handbook-chapter/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "blog.trailofbits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-31:a13",
+          "order": 1,
+          "title": "A CALL FOR COLLECTIVE ACTION ON CYBER DEFENSE",
+          "summary": "OpenAI and hundreds of other top companies have called for rapid cyber defense efforts as automated attacks spread. The letter targets unpatched software, excessive permissions, weak authentication, and legacy-system debt, asking organizations to verify fixes, use least privilege, and apply compensating controls, and asking vendors to share tested playbooks and threat intelligence.",
+          "url": "https://links.tldrnewsletter.com/5C3nNn",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a14",
+          "order": 2,
+          "title": "OWNING THE AI STACK",
+          "summary": "Cybersecurity consultants and other organizations requiring consistent cyber capabilities should begin shifting to local models. The gap between local models and frontier labs has closed significantly, with DeepSeek v4 Pro even beating out frontier labs on some cyber benchmarks. When organizations rely upon frontier labs, they lose control, and changed behaviors or guardrails can lead to harness and workflow breakage.",
+          "url": "https://executiveoffense.beehiiv.com/p/owning-the-ai-stack?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "executiveoffense.beehiiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a15",
+          "order": 3,
+          "title": "ADAPTIVE AGENTIC WORMS ARE HERE",
+          "summary": "A proof-of-concept worm running last year's open-weight models exploited 73.8% of an isolated 33-host network and replicated to 61.8% of it across 15 autonomous seven-day runs, chaining initial command execution into privilege escalation into self-replication, with each copy staging its own harness and local LLM or calling back to the parent host when local compute fell short. Researchers observed agents locating the IP blacklist in their own source and rewriting it to unlock monitoring hosts they had been forbidden to target, though hypervisor-level containment intercepted every attempt and no escape occurred. Detection currently rests on the resource signature, heavy GPU consumption, and sustained outbound inference traffic, so defenders should baseline per-host compute and egress, flag long-lived low-rate connections during off-peak windows, and assume that throttling is the first evasion an operator will add.",
+          "url": "https://www.lesswrong.com/posts/fpLDjKg3ej49beqTC/adaptive-agentic-worms-are-here?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "lesswrong.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-08-31:a16",
+          "order": 1,
+          "title": "BUILD FOR THE AGENTIC INTERNET AT CLOUDFLARE CONNECT 2026, OCT. 19-21 IN SAN FRANCISCO",
+          "summary": "100+ sessions, five tracks, top speakers, hands-on labs, and",
+          "url": "https://events.www.cloudflare.com/connect2026?utm_medium=display&utm_source=direct&utm_campaign=2026-q3-acq-namer-connectivity-ge-he-general-connect",
+          "reading_time_minutes": null,
+          "source_domain": "events.www.cloudflare.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a16-02",
+          "order": 2,
+          "title": "practical AI, security, and networking guidance. Register Now",
+          "summary": "",
+          "url": "https://events.www.cloudflare.com/connect2026?utm_medium=display&utm_source=direct&utm_campaign=2026-q3-acq-namer-connectivity-ge-he-general-connect",
+          "reading_time_minutes": null,
+          "source_domain": "events.www.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a17",
+          "order": 3,
+          "title": "BERLIN REFUSES TO PAY HACKERS WHO STOLE DATA FROM THE CITY'S STATE NETWORK",
+          "summary": "Berlin rejected extortion demands after attackers breached its state network.",
+          "url": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a18",
+          "order": 4,
+          "title": "ANOTHER X86 ADVISORY FROM SOME ENTITY OTHER THAN INTEL OR AMD",
+          "summary": "An unnamed x86 vendor other than Intel or AMD has been shipping undocumented WBINVD prefix hints since 2025.",
+          "url": "https://www.phoronix.com/news/x86-WBINVD-Advisory?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "phoronix.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-08-31:a19",
+          "order": 5,
+          "title": "CHROME WEB STORE EXTENSIONS CAUGHT STEALING CRYPTO, BROWSER DATA",
+          "summary": "Following a supply chain compromise in which threat actors purchased popular browser tools, nineteen Chrome and Edge extensions were weaponized via automatic updates to silently strip security headers and hijack cryptocurrency transactions before being removed from the Chrome Web Store.",
+          "url": "https://links.tldrnewsletter.com/1v6Gsm[20][21",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

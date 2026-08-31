@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-08-31",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-08-31",
+  "source_path": "TLDR Data/article_31-08-2026.md",
+  "source_content_hash": "sha256:ebc9e3730637efc75d0decb5b4222856fa640964c0dcf4682c8f4c40591cee95",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-08-31",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a04",
+          "order": 1,
+          "title": "FREE AIRFLOW AI CRASH COURSE WITH MARC LAMBERTI",
+          "summary": "Last year's Astronomer virtual conference drew 8,000+ data engineers. This year, _Orchestrate Everything_ [5]_ _will kick off with Marc Lamberti's free crash course on orchestrating AI with Airflow. You'll get a free certification exam code ($150 value) for joining.",
+          "url": "https://www.astronomer.io/events/orchestrate-everything/?utm_source=tldr-data&utm_medium=paidmedia&utm_campaign=20260916-virtual-conference-orchestrate-everything&utm_content=header_airflow_ai_crash",
+          "reading_time_minutes": null,
+          "source_domain": "astronomer.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-08-31:a06",
+          "order": 2,
+          "title": "",
+          "summary": "Free to attend. Built for data engineers at every level.",
+          "url": "https://www.astronomer.io/events/orchestrate-everything/?utm_source=tldr-data&utm_medium=paidmedia&utm_campaign=20260916-virtual-conference-orchestrate-everything&utm_content=body_outro_register",
+          "reading_time_minutes": null,
+          "source_domain": "astronomer.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a06-02",
+          "order": 3,
+          "title": "Register free.",
+          "summary": "",
+          "url": "https://www.astronomer.io/events/orchestrate-everything/?utm_source=tldr-data&utm_medium=paidmedia&utm_campaign=20260916-virtual-conference-orchestrate-everything&utm_content=body_outro_register",
+          "reading_time_minutes": null,
+          "source_domain": "astronomer.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a07",
+          "order": 1,
+          "title": "BEYOND OFFSET LAG: COMPUTING TIME IN QUEUE FOR APACHE HUDI DATA LAKE PIPELINES AT PETABYTE SCALE",
+          "summary": "Twilio's Hudi pipelines store checkpoints in S3, so ordinary Kafka consumer lag misses when lake data is actually stale. This design reads the latest valid Hudi checkpoint, seeks Kafka partitions, and computes freshness from the oldest uncommitted record, turning petabyte-scale SLA drift into a breach ratio operators can alert on.",
+          "url": "https://www.infoq.com/articles/beyond-offset-lag-kafka-apache-hudi/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a08",
+          "order": 2,
+          "title": "SCALING CONDITIONAL LEARNED RETRIEVAL FOR PINTEREST HOME FEED",
+          "summary": "Pinterest scaled candidate generation by conditioning retrieval embeddings on explicit contexts such as interests, boards, and pins. The system combines conditioned sequence modeling, semantic IDs, unified models, slot routing, request deduplication, and GPU serving so one home feed can represent multiple user intents without exploding serving cost.",
+          "url": "https://links.tldrnewsletter.com/DNEENk",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a09",
+          "order": 3,
+          "title": "LOG-FIRST OR TABLE-FIRST? APACHE KAFKA, FLUSS, AND STREAMING TABLES",
+          "summary": "Kafka remains a strong log abstraction, but many streaming workloads ultimately reconstruct tables in object storage anyway. This walkthrough contrasts log-first pipelines with table-first streaming designs such as Fluss, showing where update semantics, compaction, snapshots, and catalog integration may belong closer to hot storage instead of a downstream lakehouse job.",
+          "url": "https://softwaremill.com/log-first-or-table-first-apache-kafka-fluss-and-streaming-tables/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "softwaremill.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a10",
+          "order": 1,
+          "title": "THE FEATURE THAT WAS 100% CORRELATED WITH THE ANSWER — BECAUSE IT WAS THE ANSWER",
+          "summary": "Target encoding, rolling averages, and shifted features can silently leak the answer when computed before a proper split or across mixed entities. The safe workflow is to split first, calculate training-set encodings out of fold, fit other statistics only on training data, use group-aware transforms, and give unseen categories honest fallbacks.",
+          "url": "https://levelup.gitconnected.com/the-feature-that-was-100-correlated-with-the-answer-because-it-was-the-answer-7c86eeb7adb8?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "levelup.gitconnected.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a11",
+          "order": 2,
+          "title": "MOVING AWAY FROM FIVETRAN DUE TO COST: MASSIVE SALESFORCE INGESTION TO SNOWFLAKE AT SCALE — WHAT ARE OUR REAL ALTERNATIVES? (REDDIT THREAD)",
+          "summary": "A company moving four large Salesforce instances into Snowflake wants to replace Fivetran after cheaper tools failed at scale. The strongest alternatives suggested were Salesforce Data Cloud's native zero-copy Snowflake integration or a custom dlt pipeline using Salesforce's Bulk API.",
+          "url": "https://links.tldrnewsletter.com/gQwEpI",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a12",
+          "order": 3,
+          "title": "DATA MESH AT GRAB: OPERATIONALIZING DATA RELIABILITY WITH AUTOMATED DPIS",
+          "summary": "Grab operationalizes data reliability by treating contract breaches as \"Data Production Issues\" (DPIs) with a standardized incident lifecycle. The key design move is a stable \"Data Health API\" that decouples incident orchestration from platform-specific internals, categorizing failures (upstream, job, or data) to automate root-cause assignment. This transforms data quality from passive alerting into an operational governance model where incidents only close upon verified recovery.",
+          "url": "https://engineering.grab.com/data-mesh-at-grab-part-three?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.grab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a13",
+          "order": 4,
+          "title": "OMNIPRESENT AVAILABILITY RISKS IN CLOUD SOFTWARE",
+          "summary": "Major cloud incidents repeatedly stem from unavoidable risks such as resource saturation, networking failures, security controls, and uncommon changes like migrations. Reliability measures add their own complexity, so outages cannot be eliminated and teams must invest in strong incident response.",
+          "url": "https://surfingcomplexity.blog/2026/08/29/omnipresent-availability-risks-in-cloud-software/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "surfingcomplexity.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a14",
+          "order": 1,
+          "title": "GIVE EVERY ENGINEER DBT-NATIVE AI, NO MIGRATION REQUIRED",
+          "summary": "Most AI tools don't understand your dbt project. They break lineage and miss dependent tests, creating more work. dbt Wizard CLI reads contracts and dependencies before editing, and coordinates changes across models and YAML configurations. It validates its own work. Engineers get dbt-native accuracy without a platform migration. Learn",
+          "url": "https://fandf.co/4cc5KSq?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-08-31:a15",
+          "order": 2,
+          "title": "more →",
+          "summary": "",
+          "url": "https://fandf.co/4cc5KSq",
+          "reading_time_minutes": null,
+          "source_domain": "fandf.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a16",
+          "order": 3,
+          "title": "SPARK RELEASE 4.1.0",
+          "summary": "Spark 4.1.0 adds declarative pipelines, real-time structured streaming mode, Arrow-native UDF and UDTF support, SQL scripting and VARIANT as GA features, and Spark ML on Connect for Python. The release targets lower-latency streaming and a cleaner PySpark and SQL experience while improving caching, memory management, and large-workload stability.",
+          "url": "https://spark.apache.org/releases/spark-release-4.1.0.html?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "spark.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a17",
+          "order": 4,
+          "title": "APACHE DATAFUSION 55.0.0 RELEASED",
+          "summary": "DataFusion 55.0.0 ships ten weeks of work from 175 contributors, with MERGE INTO support, range partitioning, runtime row-group pruning, and broad performance gains. Highlights include TopK pruning, faster IN-list evaluation, fewer object-store requests for CSV, nested-column Parquet read reduction, and lower memory use for fixed-size binary GROUP BY operations.",
+          "url": "https://datafusion.apache.org/blog/2026/08/25/datafusion-55.0.0?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "datafusion.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a18",
+          "order": 1,
+          "title": "DO TABULAR FOUNDATION MODELS REPAIR THEMSELVES?",
+          "summary": "Ablation results in tabular foundation models can be misleading when redundancy looks like causal importance. Measurements of direct and total effects across four models found little evidence of downstream self-repair, suggesting data teams should treat stable outputs after ablation as a reason to examine causality more carefully, not as proof that a layer is irrelevant.",
+          "url": "https://www.lesswrong.com/posts/NpBufh2z2w4mgHKvm/do-tabular-foundation-models-repair-themselves?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "lesswrong.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a19",
+          "order": 2,
+          "title": "SELECT * FROM INTERNET.BLOGPOSTS",
+          "summary": "X's legal action against Nitter shows how closed platforms can revoke access at any time, limiting competition and innovation. AT Protocol offers an alternative by giving users portable identities and letting apps freely replicate, query, and build on shared live data.",
+          "url": "https://pfrazee.leaflet.pub/3mu3p2smmis22?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "pfrazee.leaflet.pub",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-08-31:a20",
+          "order": 1,
+          "title": "SPEEDING UP SOME POSTGRES QUERIES BY UP TO 1000X WITH A SINGLE TYPECAST",
+          "summary": "Lorikeet sped up some Postgres queries by up to 1,000x with a simple typecast that fixed an index-breaking mismatch between timestamp and timestamptz under Row Level Security.",
+          "url": "https://www.linkedin.com/posts/karla-burnett-02997762_people-like-to-talk-about-how-ai-is-making-share-7498991302563278848-ToTF?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a21",
+          "order": 2,
+          "title": "BOOK REVIEW: DATA CENTRIC MACHINE LEARNING WITH PYTHON",
+          "summary": "Better data, expert input, and iterative labeling often improve ML systems more than model tuning.",
+          "url": "https://sujitpal.blogspot.com/2026/08/book-review-data-centric-machine.html?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "sujitpal.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-08-31:a22",
+          "order": 3,
+          "title": "PLANETARY PREDICTION ENGINE: AUTONOMOUS GEOSPATIAL PREDICTION VIA INTELLIGENT DATA SELECTION AND FOUNDATION MODEL EMBEDDINGS",
+          "summary": "This geospatial modeling framework automatically selects and combines satellite, tabular, and foundation-model data for high-resolution predictions.",
+          "url": "http://arxiv.org/abs/2608.26088?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
