@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-01",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-01",
+  "source_path": "TLDR InfoSec/article_01-09-2026.md",
+  "source_content_hash": "sha256:785cf05ed737413a3c5449cf3f2ae4e42177f669f1c2ade610903a704aadc0b5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-01",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-01:a04",
+          "order": 1,
+          "title": "ANTHROPIC WARNS CLAUDE USERS OF INFOSTEALER MALWARE INFECTIONS",
+          "summary": "Anthropic warned affected Claude users that infostealers hijacked browser sessions and drained usage limits. The malware included Vidar, Lumma, StealC, RedLine, Acreed, and AMOS. Anthropic logged out compromised sessions, removed stored payment methods, and refunded identified unauthorized charges. Users should remove malware before re-adding payment details.",
+          "url": "https://links.tldrnewsletter.com/O3T2sJ",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a05",
+          "order": 2,
+          "title": "SHINYHUNTERS CLAIMS IT STOLE 284 MILLION PATIENT RECORDS FROM MCKESSON",
+          "summary": "McKesson detected an intrusion on August 25 tied to third-party apps in its Oncology & Multispecialty and Medical-Surgical units. ShinyHunters vished McKesson employees, hijacked Okta SSO accounts, then pulled roughly a terabyte from Salesforce and Snowflake over four days. The group demanded $55,236,150 with a 72-hour deadline, which McKesson didn't pay. Breached data includes 284 million records containing SSNs, birth dates, Medicaid info, medical record numbers, medication/allergy data, and employee records.",
+          "url": "https://www.helpnetsecurity.com/2026/08/31/healthcare-company-mckesson-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a06",
+          "order": 3,
+          "title": "CRITICAL MICROSOFT UFO MCP FLAW LETS ATTACKERS REMOTELY CONTROL ANDROID DEVICES WITHOUT AUTHENTICATION",
+          "summary": "Unauthenticated attackers can drive ADB commands on Android devices connected to Microsoft's open-source UFO Desktop AgentOS through CVE-2026-73296, which affects versions up to v3.0.7 and has no official patch. Attackers can exploit this vulnerability to capture screenshots, extract UI hierarchy data, and tap, swipe, and text-entry actions on TCP 8020 and 8021 whenever operators follow the documented remote-deployment guidance and bind to 0.0.0.0. Users should restrict those ports to trusted hosts and front the services with TLS and an authenticated reverse proxy until the proposed UFO_MCP_API_KEY bearer-token fix merges.",
+          "url": "https://gbhackers.com/critical-microsoft-ufo-mcp-flaw/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-01:a07",
+          "order": 1,
+          "title": "PHILIPPINE NUCLEAR AGENCY AND NAVAL CONTRACTOR TARGETED BY SUSPECTED CHINESE-SPEAKING OPERATOR USING KNOWN VULNERABILITIES",
+          "summary": "Researchers found an exposed Amsterdam server staging tools and stolen Philippine data. Custom scripts abused ownCloud CVE-2023-49105, impersonating known users through unsigned WebDAV URLs. The recovered data included reactor records, radiation-safety files, employee PII, travel documents, BitLocker keys, KeePass data, and AxCrypt files. Logs referenced roughly 9 GB taken from the nuclear agency. A naval contractor's WordPress site was breached through LiteSpeed Cache CVE-2024-28000 and XML-RPC password guessing. The server also hosted Sliver, Metasploit, Mettle, and a loader that fetched a second-stage payload.",
+          "url": "https://hunt.io/blog/chinese-speaking-operator-philippine-nuclear-naval-contractor?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "hunt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a08",
+          "order": 2,
+          "title": "WHEN IT SNOWS IT POURS – ANATOMY OF A SERVICENOW RED TEAM",
+          "summary": "MDSec red-team engagements turned phished ServiceNow users, exposed MID config.xml files, and over-permissioned roles into tenant admin access. Roles including catalog_admin, import_admin, and sn_cmdb_editor enabled Glide-script execution or role chaining. Operators created hidden admin accounts, altered timestamps, removed login and role histories, and used scheduled jobs as SnowFall C2 callbacks. From the tenant, they enumerated incidents and attachments, extracted credentials, bypassed adaptive authentication, and executed commands on MID servers through JAR plugins or the ECC queue.",
+          "url": "https://www.mdsec.co.uk/2026/08/when-it-snows-it-pours-anatomy-of-a-servicenow-red-team/?utm_source=tldrinfosec",
+          "reading_time_minutes": 19,
+          "source_domain": "mdsec.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a09",
+          "order": 3,
+          "title": "WHEN THE SOURCE ATTACKS BACK: PROMPT INJECTION IS COMING FOR OSINT",
+          "summary": "Security researcher Dekens has demonstrated how adversaries can manipulate AI-assisted OSINT investigations by planting hidden prompt injections within digital documents. Through a dedicated training lab, Dekens highlights techniques like pushing CSS div elements off-screen, embedding white-on-white text in PDFs, and hiding instructions in unformatted spreadsheet cells. While not yet observed in active campaigns, these invisible artifacts successfully steer language models toward false narratives without altering the visually rendered file. To defend against poisoned sources, investigators should hash original documents and independently extract text using tools like Apache Tika or Tesseract to compare against the visual output. Furthermore, analysts must strictly isolate AI models in read-only environments to prevent untrusted inputs from executing unauthorized actions.",
+          "url": "https://www.dutchosintguy.com/post/when-the-source-attacks-back-prompt-injection-is-coming-for-osint?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "dutchosintguy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-01:a10",
+          "order": 1,
+          "title": "EMBA",
+          "summary": "EMBA is designed as the central firmware analysis and SBOM tool for penetration testers, product security teams, developers, and responsible product managers. It supports the complete security analysis process, starting with firmware extraction, doing static analysis and dynamic analysis via emulation, building the SBOM, and finally generating a web-based vulnerability report.",
+          "url": "https://github.com/e-m-b-a/emba?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a11",
+          "order": 2,
+          "title": "INTRODUCING ADAPTIVE INTELLIGENCE: UNDERMINING THE ECONOMICS OF EVERY BOT ATTACK",
+          "summary": "Cloudflare has launched Adaptive Intelligence, a bot detection engine designed to make evasion economically unviable for attackers by continuously retraining its models on live traffic. Rather than relying on deterministic rules, the engine utilizes non-deterministic signal weighting and delayed reactions to prevent threat actors from isolating and defeating specific defenses. This cross-temporal evaluation allows the system to detect slow credential-stuffing attacks distributed across residential proxies that would otherwise bypass standard rate limits. Enterprise customers can activate the continuous retraining component immediately by enabling \"Auto Update Machine Learning\" in their Bot Management dashboard, while advanced features such as disposable rule generation are still in development.",
+          "url": "https://blog.cloudflare.com/introducing-adaptive-intelligence/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a12",
+          "order": 3,
+          "title": "CLOUDFLARE OS",
+          "summary": "Cloudflare OS is an “operating system” for AI productivity that consists of an agent chat UI, a sandboxed application development environment for small personal apps, and security guardrails.",
+          "url": "https://github.com/cloudflare/cloudflare-os?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-01:a13",
+          "order": 1,
+          "title": "OEMPOCALYPSE NOW",
+          "summary": "Calif researcher Lukas Maar has developed a universal exploitation strategy that elevates an unprivileged Android app to root across modern Samsung, Xiaomi, and Oppo devices. Rather than hunting for generic kernel or chipset vulnerabilities, Maar targeted the proprietary OEM software overlays, such as One UI and HyperOS, that span each vendor's entire device lineup. The exploit leverages a page use-after-free vulnerability mapped to a freed physical page. This reliable technique successfully bypasses KASLR, control-flow hijacking, and slab protections without modification across kernels 5.4 through 6.12. While this initial publication outlines the overarching methodology on locked bootloaders, Maar plans to release the specific exploit chains affecting July 2026 flagship devices like the Galaxy S26 Ultra in future installments.",
+          "url": "https://blog.calif.io/p/oempocalypse-now?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.calif.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a14",
+          "order": 2,
+          "title": "OPEN-SOURCE POST-QUANTUM CRYPTOGRAPHY SERVERLESS CA",
+          "summary": "Paul Schwarzenberger updated his open-source serverless CA with support for ML-DSA post-quantum cryptography. CA private keys are generated and used within AWS KMS FIPS 140-3 HSMS. ML-DSA is still not universally supported by applications, so users should check compatibility before adopting.",
+          "url": "https://links.tldrnewsletter.com/HnQEDm",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a15",
+          "order": 3,
+          "title": "HOW AI BUILDERS WILL GET HACKED",
+          "summary": "Developers who are frequently building tools with AI should ensure that they have a continuously running system that maintains a list of publicly exposed systems and continuously probes for basic security properties. AI builders can consider using full harnesses to comprehensively test critical systems. With the velocity of AI development, losing track of dangling, public resources will become a key attack vector.",
+          "url": "https://danielmiessler.com/blog/how-ai-builders-get-hacked?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "danielmiessler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-01:a16",
+          "order": 1,
+          "title": "DATA SECURITY INCIDENT - 27.08.26",
+          "summary": "Manchester Airports Group says an unauthorized party obtained booking and Wi‑Fi signup data from Manchester, Stansted, and East Midlands airports.",
+          "url": "https://www.manchesterairport.co.uk/help/data-security-incident/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "manchesterairport.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-01:a17",
+          "order": 2,
+          "title": "UPDATE ON RECENT CYBERSECURITY INCIDENT",
+          "summary": "Boston Scientific detected a cyber incident on August 25 that disrupted on-premises operating systems and business applications.",
+          "url": "https://news.bostonscientific.com/update-on-recent-cybersecurity-incident?utm_source=tldrinfosec%5B18%5D%5B19",
+          "reading_time_minutes": 4,
+          "source_domain": "news.bostonscientific.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
