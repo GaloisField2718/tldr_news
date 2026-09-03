@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-03",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-03",
+  "source_path": "TLDR InfoSec/article_03-09-2026.md",
+  "source_content_hash": "sha256:1be309d8fbde2a37a3c7cffe7ce41f1a5da872ce7f478d7653292edf3176532c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a04",
+          "order": 1,
+          "title": "IS YOUR SECURITY DATA ARCHITECTURE ACTUALLY READY FOR AI AGENTS?",
+          "summary": "Deploying AI agents without fixing your underlying telemetry data leads to lackluster results. Google Cloud commissioned an Omdia study of 300 security professionals, and broke down why data readiness is the #1 hurdle to agentic AI in the SOC:\n\n* THE DATA GAP: Only 48% of enterprise telemetry data is considered \"AI-ready.\" * REARCHITECTURE NEEDED: 82% of respondents report that moderate or complete data redesign is required to support multi-agent workflows. * PRACTITIONER DIVIDE: Security engineers and architects are 2x more likely than SOC managers to call for a full telemetry overhaul.",
+          "url": "https://cloud.google.com/resources/content/agentic-soc-exploring-practitioner-mindset?utm_source=tldr&utm_medium=newsletter&utm_campaign=FY26-Q1-GLOBAL-STO109-website-dl-dgcsm-aisoc-dev-164333&utm_content=paid-ads_header_security_data_architecture&utm_term=-",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.google.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a05",
+          "order": 2,
+          "title": "REPORT →",
+          "summary": "",
+          "url": "https://cloud.google.com/resources/content/agentic-soc-exploring-practitioner-mindset?utm_source=tldr&utm_medium=newsletter&utm_campaign=FY26-Q1-GLOBAL-STO109-website-dl-dgcsm-aisoc-dev-164333&utm_content=paid-ads_cta_download_full_report&utm_term=-",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a06",
+          "order": 1,
+          "title": "BGP HIJACK INFECTING NETWORKS CAUSED BY A COMEDY OF ERRORS THAT'S NOT FUNNY AT ALL",
+          "summary": "Attackers hijacked Softaculous' 162.55.80.0/24 prefix and redirected Virtualizor update traffic to malicious servers. Hetzner's RPKI settings accepted /24 routes, while a forged AS path matched its ROA, so the attackers also obtained TLS certificates during the diversion. Virtualizor did not cryptographically verify update packages, and Softaculous cannot identify every affected server and urges customers to investigate.",
+          "url": "https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a07",
+          "order": 2,
+          "title": "MALICIOUS APACHE MODULES HIJACK BRAZILIAN GOVERNMENT SITE TRAFFIC TO PUSH BETTING PAGES",
+          "summary": "Gambling Goblin installed malicious Apache modules on Brazilian government and education servers. The modules reverse-proxy visitors to fake Google Play, Microsoft Store, and Amazon pages promoting betting sites. Operators deployed DownPro, AlphaAgent, oRAT, 3snake, SSH brute-forcing, and reconnaissance tools. Administrators lack published module hashes, filenames, or paths for direct Apache checks.",
+          "url": "https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a08",
+          "order": 3,
+          "title": "UNITREE G1 HUMANOID ROBOT FLAWS ALLOW UNAUTHENTICATED ROOT RCE OVER BLUETOOTH",
+          "summary": "A security researcher discovered two independent flaws in Unitree G1 humanoid robots that could enable RCE on the devices. The first vulnerability allows an attacker within BLE range to obtain an AES-128 key without requiring the device to pair. The researcher found that the Unitree cloud API would decrypt the key without verifying ownership or serial numbers, allowing the researcher to access protected BLE operations, eventually allowing the attacker to exploit a buffer overflow to achieve RCE. The second path involves a path-traversal vulnerability in the robot's AI service, which enables an attacker to upload a file to the bashrunner's whitelist directory, enabling RCE.",
+          "url": "https://gbhackers.com/unitree-g1-humanoid-robot-flaws/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a09",
+          "order": 1,
+          "title": "SHAI-HULUD: WHOEVER CONTROLS YOUR PACKAGE REGISTRY CONTROLS YOUR PIPELINE",
+          "summary": "The npm worm lineage has evolved to a point where standard supply chain provenance mechanisms can no longer guarantee safety. During the August 2026 ChainDrop campaign, threat actors compromised over 400 packages in under four hours by hijacking a maintainer's legitimate signed release pipeline. The attackers utilized authorized infrastructure, so every poisoned package version successfully carried a perfectly valid SLSA attestation. To further evade traditional domain blocklists, the campaign hosted its command and control operations within an Ethereum smart contract. This attack builds upon the previous Shai-Hulud worms, which have recently pivoted to targeting authentication tokens for AI development tools like Claude, Codex, Cursor, and Gemini. Security researchers warn that these identical mechanics could easily compromise infrastructure-as-code pipelines, proving that current attestation models verify origin rather than actual code legitimacy. To defend against these pipeline hijackings, organizations must enforce strict version pinning, utilize curated registries, implement OIDC-scoped credentials, and apply aggressive network egress restrictions.",
+          "url": "https://thenewstack.io/shai-hulud-pipeline-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a10",
+          "order": 2,
+          "title": "FINANCIALLY MOTIVATED THREAT ACTOR BREEZE COMET TARGETS BRAZIL",
+          "summary": "Since 2024, BREEZE COMET has targeted Brazilian banks, payment firms, retailers, exchanges, and fintech providers to make fraudulent Pix, STR, and Boleto transfers. Initial access included password spraying, fake IT-support calls, booby-trapped tax files, exposed JBoss servers, and rogue devices on retail networks. The group steals mTLS credentials, API keys, CI/CD secrets, and cloud tokens, then moves through SMB and RDP. Its toolkit includes REALBREEZE, COBALTSPIN, LIGHTPAINT, MILDFROST, KICKPLATE, and BOATBEAM. Mandiant recorded two transaction waves within 24-48 hours after access to core financial applications.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a11",
+          "order": 1,
+          "title": "CLAUDE-BUGHUNTER",
+          "summary": "Claude-BugHunter packages 83 auto-loading Claude Code skills distilled from 681 disclosed HackerOne reports, so the agent loads per-class detection patterns, payload tables, and chain templates by topic rather than by name.",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a12",
+          "order": 2,
+          "title": "DEVELOPING ENTERPRISE FRONTIER SAFEGUARDS WITH OUR CUSTOMERS",
+          "summary": "Anthropic will roll out Enterprise Frontier Safeguards in phases this fall. Customer activity logs can remain in customer-controlled AWS, Azure, or Google Cloud storage, using customer-managed keys and access policies. Automated systems inspect rolling traffic windows for offensive cyber capability, biological misuse, and stolen credentials. Flags go to customer teams. Anthropic staff does not review them.",
+          "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a13",
+          "order": 3,
+          "title": "PATH TO ASTRA: CRITICAL CAPABILITIES AND FRONTIER SAFEGUARDS",
+          "summary": "OpenAI classifies Astra as Critical for cybersecurity capability. Tests found zero-days, browser sandbox escapes, and root privilege-escalation chains. OpenAI delayed release work after the Hugging Face incident. Astra refused 91.5% of cyber-jailbreak requests, versus 59% for GPT-5.6 Sol. Advanced cyber access starts with selected testers, then Daybreak Blue.",
+          "url": "https://links.tldrnewsletter.com/iQZVUk",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a14",
+          "order": 1,
+          "title": "CROWDSTRIKE 2026 THREAT HUNTING REPORT: EXPLOITATION WINDOW CLOSES AS AI USE ACCELERATES",
+          "summary": "CrowdStrike reports that 88% of observed vulnerabilities were actively exploited within 48 hours of a public proof-of-concept release between January and June. Advanced threat groups like VAULT PANDA and GENESIS PANDA weaponized flaws in under 24 hours, while UMBRAL BISON targeted Linux privilege escalation vulnerability CVE-2026-31431 roughly 20 hours after disclosure. The report also highlights a rapid shift in alternative attack vectors, noting a fifteenfold increase in device code phishing alongside a massive concentration of software registry threats targeting npm.",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "crowdstrike.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a15",
+          "order": 2,
+          "title": "FBI PROBES SERVICE SELLING 153M+ DRIVERS LICENSES",
+          "summary": "A dark web service named Nexus recently advertised over 153 million scanned US and Canadian driver's licenses alongside millions of other identification documents on a Russian cybercrime forum. By correlating GMT timestamps embedded in the leaked image filenames with real-world travel records, researchers traced the infrared and ultraviolet scans back to a potential breach at the identity verification vendor idscan.net. Following the discovery of this continuous exfiltration campaign affecting major corporate clients, the FBI opened an official inquiry, and the Nexus site immediately went offline.",
+          "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-03:a16",
+          "order": 1,
+          "title": "CRITICAL LANGFLOW VULNERABILITY EXPLOITED AS ATTACKS ON AI PLATFORM RISE",
+          "summary": "CVE-2026-0768, a 9.8-severity remote-code-execution flaw in Langflow, is under active exploitation.",
+          "url": "https://links.tldrnewsletter.com/2faw9A",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-03:a17",
+          "order": 2,
+          "title": "23-YEAR-OLD SALITY P2P BOTNET DISRUPTED",
+          "summary": "An international operation disrupted the Sality P2P botnet after 23 years.",
+          "url": "https://links.tldrnewsletter.com/R8QODJ[18][19",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

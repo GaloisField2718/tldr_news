@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-03",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-03",
+  "source_path": "TLDR Data/article_03-09-2026.md",
+  "source_content_hash": "sha256:122ea5bd9ad268d2d1be575724bdd05675c467cce69092ef222412760b2952cb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-03",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a04",
+          "order": 1,
+          "title": "WHAT DO UBER, CERN, AND APPLE HAVE IN COMMON?",
+          "summary": "They're all showing up to OPENSEARCHCON NORTH AMERICA [5] to share how they run search, observability, and data infrastructure at massive scale.\n\nWILL YOU BE THERE TOO? Get your ticket now [6] for three days of practical learning and direct connections with other technical leaders. Here's what to expect:\n\n* REAL-WORLD IMPLEMENTATION STRATEGIES: vector search, agentic AI workflows, observability pipelines * TECHNICAL SESSIONS: search relevance tuning, plugin development, and vector database optimization * HANDS-ON WORKSHOPS: build a full observability stack with OpenTelemetry, or a working agentic AI search application. * $250 CERTIFICATION VOUCHER toward the Linux Foundation's OpenSearch Certified Associate exam.",
+          "url": "https://events.linuxfoundation.org/opensearchcon-north-america/?utm_source=tldrdatapri&utm_medium=banner&utm_campaign=50584845-Q3+OpenSearchCon+NA+2026&utm_content=090326_header_what_uber_cern",
+          "reading_time_minutes": null,
+          "source_domain": "events.linuxfoundation.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-03:a07",
+          "order": 2,
+          "title": "SEPTEMBER 22 TO 24, SAN JOSE. Save your seat",
+          "summary": "",
+          "url": "https://events.linuxfoundation.org/opensearchcon-north-america/?utm_source=tldrdatapri&utm_medium=banner&utm_campaign=50584845-Q3+OpenSearchCon+NA+2026&utm_content=090326_cta_save_seat",
+          "reading_time_minutes": null,
+          "source_domain": "events.linuxfoundation.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a08",
+          "order": 1,
+          "title": "RUNNING APACHE SPARK EXPERIMENTS IN MY SLEEP (AND ON A PLANE)",
+          "summary": "Netflix's member-sessionizer pipeline turns tens of billions of hourly client events into viewing sessions, but scale bottlenecks made ordinary tuning painfully slow. Instead of optimizing one Spark run at a time, the team built a parallel experiment loop that launched, monitored, and compared multiple production-scale tests to expose memory and shuffle bottlenecks faster.",
+          "url": "https://netflixtechblog.medium.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "netflixtechblog.medium.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a09",
+          "order": 2,
+          "title": "REROUTING THE STREAM: HOW LYFT MOVED TO THE APACHE FLINK OPERATOR",
+          "summary": "Lyft retired its internally built Flink Kubernetes operator and migrated its streaming fleet to the open-source Apache Flink Kubernetes Operator. The useful lesson is the migration pattern: run both operators in parallel, preserve the user-facing deployment contract, patch gaps such as default restart behavior, and then use the move to simplify ownership and upgrades.",
+          "url": "https://eng.lyft.com/rerouting-the-stream-how-lyft-moved-to-the-apache-flink-operator-36f20246d250?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "eng.lyft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a10",
+          "order": 3,
+          "title": "HOW WE ELIMINATED $1 MILLION A YEAR OF WASTED AI AGENT SPEND IN ONE HOUR",
+          "summary": "Databricks traced silent MCP tool failures that caused agents to repeatedly retry, revealing seven small bugs responsible for an estimated $499,000 in wasted tokens and $1.2 million in annual lost productivity. Fixing them took about an hour, highlighting the value of tracing tool calls and designing tools to accept the reasonable input variations generated by LLMs.",
+          "url": "https://www.databricks.com/blog/how-we-eliminated-1-million-year-wasted-ai-agent-spend-one-hour?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a11",
+          "order": 4,
+          "title": "READ YOUR OWN WRITES, OFF THE PRIMARY",
+          "summary": "Modern apps can write successfully, invalidate cached state, and immediately read from a replica that has not replayed the change yet. PostgreSQL 19's WAIT FOR LSN lets applications route reads to replicas while waiting for a specific WAL position, turning read-your-writes consistency into a measured timeout budget instead of primary pinning or sleep hacks.",
+          "url": "https://boringsql.com/posts/read-your-own-writes/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "boringsql.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a12",
+          "order": 1,
+          "title": "WHY AWS BOUGHT DUCKLABS",
+          "summary": "AWS bought DuckLabs to gain its core team and influence DuckDB's roadmap, positioning DuckDB, DuckLake and Quack as foundations for S3-based analytics and AI agent workloads. DuckDB remains independently governed and open source, while MotherDuck will likely differentiate through higher-level tools for pipelines, agents, and data applications.",
+          "url": "https://www.linkedin.com/pulse/why-aws-bought-ducklabs-michael-driscoll-1gm7c/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a13",
+          "order": 2,
+          "title": "THE MODERN CUDA TOOLBOX IN PRACTICE: A STEP-BY-STEP OPTIMIZATION WALKTHROUGH",
+          "summary": "NVIDIA demonstrates how modern CUDA tools can make GPU code safer and dramatically faster by combining better debugging, optimized CUB algorithms, pooled memory, pinned transfers, and asynchronous streams. These incremental changes reduced an image-processing pipeline from 6.8 seconds to 23 milliseconds, a roughly 300x speedup.",
+          "url": "https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "developer.nvidia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a14",
+          "order": 3,
+          "title": "BUILDING AND USING NAMED QUERIES",
+          "summary": "Named queries turn SPARQL from an expert-only endpoint into a governed API surface. By registering queries as RDF resources with parameters, output contracts, metadata, and ACLs, teams can expose graph data to applications and agents without giving every caller raw query access or forcing them to understand the whole ontology.",
+          "url": "https://ontologist.substack.com/p/building-and-using-named-queries?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "ontologist.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a15",
+          "order": 1,
+          "title": "INTRODUCING FRONTIERHARNESS EVAL",
+          "summary": "FrontierHarness found that coding-agent harnesses achieved relatively similar pass rates but varied by up to 17x in cost, showing that tooling, caching, and model compatibility strongly affect efficiency. Codex had the highest pass rate at 66.7% with moderate cost, while Exo was cheapest and DSH Minimal was fastest.",
+          "url": "https://runta.com/blog/introducing-frontierharness-eval/?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "runta.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a16",
+          "order": 2,
+          "title": "MLCOMMONS RELEASES NEW MLPERF STORAGE V3.0 BENCHMARK RESULTS",
+          "summary": "MLPerf Storage v3.0 adds benchmark tests for KV cache and vector database workloads, plus an S3 object-storage access layer alongside POSIX. That makes the suite more relevant to modern AI systems, where inference caches, vector indexes, checkpointing, and object storage can be the real bottlenecks behind model throughput and cost.",
+          "url": "https://mlcommons.org/2026/09/mlperf-storage-v3-0-results/?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "mlcommons.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a17",
+          "order": 3,
+          "title": "DBT DOCTOR",
+          "summary": "dbt doctor is an open-source static analysis tool that scans dbt projects for missing documentation and tests, schema drift, stale models, DAG complexity, and governance gaps. It can run locally, through coding agents, or in CI to score project health and block changes that introduce quality issues.",
+          "url": "https://github.com/northgraindata/dbt-doctor?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a18",
+          "order": 1,
+          "title": "BEYOND LINE CHARTS: WHY SOME DIVERSITY IN TELEMETRY VISUALIZATION IS LONG OVERDUE (42 MINUTE VIDEO)",
+          "summary": "Large-scale operators often default to line charts even when they need to answer different questions about capacity, latency, fleet sizing, and distributions. A broader telemetry visualization toolbox is needed that matches the operational question instead of forcing every signal into time-series lines.",
+          "url": "https://www.infoq.com/presentations/telemetry-data/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a19",
+          "order": 2,
+          "title": "HOW WE COULD SAVE PETABYTES OF CACHE STORAGE WITH ZSTANDARD AND PINGORA",
+          "summary": "Cloudflare's Cache Transcoding prototype compresses eligible text assets with Zstandard before storing and transferring them, reducing their size to roughly one-third on average. This could unlock petabytes of additional cache capacity and reduce bandwidth usage for only a small increase in CPU consumption.",
+          "url": "https://blog.cloudflare.com/cache-transcoding/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-03:a20",
+          "order": 1,
+          "title": "TIMESFM-3: A ZERO-SHOT FOUNDATION MODEL FOR MULTIVARIATE FORECASTING",
+          "summary": "Google's TimesFM-3 extends time-series foundation models from univariate forecasts to multiple interacting series with past and future covariates, aiming to make retail, observability, finance, and operations forecasting work without task-specific fine-tuning.",
+          "url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "research.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-03:a21",
+          "order": 2,
+          "title": "KEENABLE SELECT SHOWCASE",
+          "summary": "Keenable SELECT lets agents research the live web using read-only DuckDB queries that combine search, filtering, and AI-powered extraction.",
+          "url": "https://keenableai.github.io/select-showcase/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "keenableai.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
