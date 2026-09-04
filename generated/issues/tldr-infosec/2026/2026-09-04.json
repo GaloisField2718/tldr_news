@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-04",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-04",
+  "source_path": "TLDR InfoSec/article_04-09-2026.md",
+  "source_content_hash": "sha256:f2ea5a62cbd0758404f8c64a617f7195c560a1faa1b1f57e773fb4ca7f471a87",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-04",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-04:a04",
+          "order": 1,
+          "title": "ATTACKERS EXPOSE ONGOING AI TOOL USE TARGETING ORGANIZATIONS IN LATIN AMERICA",
+          "summary": "Two intrusion clusters targeting Latin American critical infrastructure accidentally exposed their operations by leaving a self-hosted NextChat instance open to the public on TCP 3000. The exposed prompt history and staging scripts revealed a heavy reliance on AI tools to rapidly iterate through failed SAM and NTDS.dit credential dumps using volume shadow copy workarounds. To detect this infrastructure, defenders should actively hunt for the m-doxa on duckdns[.]org subdomains and monitor for multi-SAN Let's Encrypt certificates rotated between February and June.",
+          "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a05",
+          "order": 2,
+          "title": "MALICIOUS .GIT CONFIGS CAN MAKE CLAUDE, CODEX, CURSOR, AND OTHER AI AGENTS RUN ATTACKER CODE",
+          "summary": "Manifold Security found eight flaws in seven coding agents. A received repository can use .git/config to trigger commands through core.fsmonitor, and the commands run with the developer's account permissions, outside sandbox controls and without approval. Fixes exist for goose, Codex, and one Claude Code path. Hermes Agent, Qwen Code, Grok Build, and another Claude Code path remained exposed.",
+          "url": "https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a06",
+          "order": 3,
+          "title": "CODER'S REGISTRY INFRASTRUCTURE COMPROMISED TO PUSH MALICIOUS MODULES",
+          "summary": "An attacker added unauthorized IPs to Coder's Cloudflare pool for registry.coder.com and served credential-stealing Terraform modules between 07:35 and 21:45 UTC on August 31, exfiltrating cloud, CI/CD, OIDC, and SSH secrets to coder-infra[.]com. Patched releases are 2.37.0, 2.36.4, 2.35.7, and 2.34.9.",
+          "url": "https://links.tldrnewsletter.com/lK5o0D",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-04:a07",
+          "order": 1,
+          "title": "ROGUE SCREENCONNECT INSTALLATIONS ACROSS UNRELATED HOSTS SUGGEST WORM-LIKE ACTIVITY",
+          "summary": "Modified ScreenConnect clients recovered by Huntress watch the EndPointStatusMessage.Connections collection for newly observed Host sessions, then register 1.vbs through 4.vbs with ScreenConnect's virtual file-transfer system and queue them with the action set to Run, so merely connecting to an infected client can hand the Host the same four-stage VBScript chain. The loader profiles first: 1.vbs writes a three-bit state to %TEMP%\\value.txt covering existing ScreenConnect installs, whether Defender is the only endpoint protection present, and whether RAM exceeds 5GB, and that value selects a user-level backdoor, an access package with a ComputerDefaults.exe UAC bypass and AMSI tampering, or a combo branch carrying wstunnel disguised as Themes.exe and XMRig renamed SearchIndex.exe. Defenders should treat RunFiles or RanFiles entries in ScreenConnect server audit logs showing those scripts executed from Process: Guest as indicators of compromise, check for the WindowsServiceHost Run key pointing at WindowsServiceHost.vbs in AppData, and note that Huntress recommends reimaging affected hosts rather than cleaning them.",
+          "url": "https://www.huntress.com/blog/rogue-screenconnect-installations?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a08",
+          "order": 2,
+          "title": "FROM PATCH TO EXPLOIT; USING CLAUDE CODE TO REVERSE ENGINEER A ZERO-DAY IN PAPERCUT NG",
+          "summary": "Kev Breen used Claude Code against a patched PaperCut NG zero-day, spotting SQL injection IoCs in error logs and finding the patch blocked CALL/EXEC/SYSCS_ calls in the SQL lookup template. Claude decompiled the JARs, found an auth-bypass filter flaw using a matrix parameter, then a second bypass in pageValidate letting an unauth service parameter reach admin pages. Chaining both gave unauthenticated RCE via arbitrary file write as the papercut user, confirmed with a working Python PoC. A guardrail swapped the model mid-session when it probed exploitation logs. Breen later found a third bypass defeating the emergency patch and reported it to security@papercut.com, who said they were already aware.",
+          "url": "https://www.techanarchy.net/from-patch-to-exploit-using-claude-code-to-reverse-engineer-a-zero-day-in-papercut-ng/?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "techanarchy.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a09",
+          "order": 3,
+          "title": "THE OUTSIDER PHISHING KIT: A RESILIENT THREAT IN THE FACE OF LAW ENFORCEMENT ACTION",
+          "summary": "Despite recent takedown efforts by Google and the FBI, the ChenLun Outsider Phishing-as-a-Service platform has proven highly resilient, with over 700 new phishing pages deployed in a single month. The platform operates a sophisticated kill chain that utilizes WebSockets to stream victim keystrokes in real time while allowing affiliates to manually push contextual 2FA prompts on demand. Defenders can hunt for this infrastructure across all known templates by looking for the unique GetSyncSetting configuration file and an alphabetical page prefix convention that maps directly to the victim exploitation stage.",
+          "url": "https://www.group-ib.com/blog/chenlun-outsider-phaas-kit/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "group-ib.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-04:a10",
+          "order": 1,
+          "title": "AIR SECURITY (PRODUCT LAUNCH)",
+          "summary": "AIR Security launched a firewall that inventories and evaluates skills, plugins, MCP servers, and add-ons. It detects malicious instructions, hidden behavior, excessive permissions, typo-squatted packages, and risky updates, then revokes access across dependent workflows.",
+          "url": "https://www.air.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "air.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a11",
+          "order": 2,
+          "title": "LEASH",
+          "summary": "The open-source safety and control layer for personal AI agents: Engine, Desktop, Mobile, proxy, and shared contracts. Leash sits between your AI agents and the actions they take. Safe work keeps moving. Sensitive work becomes a clear decision you can understand and control.",
+          "url": "https://github.com/open-leash/leash?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a12",
+          "order": 3,
+          "title": "AWSHOUND: AN OPENSOURCE AWS OPENGRAPH COLLECTOR",
+          "summary": "AWSHound is a self-hosted open-source collector that maps AWS environments into BloodHound OpenGraph datasets to visualize attack paths. Unlike existing mapping tools, AWSHound performs strict offline IAM evaluations by intersecting identity policies with permissions boundaries and SCPs to ensure relationships are only drawn where effective permissions resolve to an explicit allow. Operating securely through standard AWS SDK credential chains, the tool demonstrated massive scalability during internal testing by mapping a 500-account organization into 10.5 million edges in approximately 15 minutes.",
+          "url": "https://specterops.io/blog/2026/08/19/awshound-opensource-aws-opengraph-collector/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "specterops.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-04:a13",
+          "order": 1,
+          "title": "UK MOVES TO BLOCK HIGH-RISK TECH SUPPLIERS FROM CRITICAL INFRASTRUCTURE",
+          "summary": "UK ministers tabled amendments to the Cyber Security and Resilience Bill on August 24. The changes let them block high-risk technology suppliers from critical sectors. The move followed an Iran-linked attack that shut a UK energy facility for four days. The bill already mandates tight incident reporting and penalties, and SMEs supplying critical operators may face exclusion without adequate controls.",
+          "url": "https://links.tldrnewsletter.com/vfM7Sg",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a14",
+          "order": 2,
+          "title": "OPENAI'S NEW REASONING TECHNIQUE ALARMS AI SAFETY EXPERTS",
+          "summary": "OpenAI's Astra model uses \"recurrent depth,\" letting it loop through the same query multiple times instead of reasoning step by step, which makes chain-of-thought logs harder to read. Scaling the technique could push reasoning fully into latent space, killing visibility into model behavior. OpenAI's Jakub Pachocki said Astra's chain of thought stays legible and that monitoring remains a research priority.",
+          "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a15",
+          "order": 3,
+          "title": "AI AGENTS HELP COMPRESS RANSOMWARE INTRUSION TO UNDER 10 HOURS, RAISING STAKES FOR CISOS",
+          "summary": "A ransomware operator crossed an enterprise network in under 10 hours using AI agents, work Unit 42 estimated would have taken human hands roughly two weeks. The 50-plus ATT&CK techniques observed were unremarkable on their own, and analysts quoted here read the intrusion as human-directed, with AI handling delegated tactical work rather than anything approaching autonomy. The more durable observation is about transitive authority, where a repository account with no cloud admin rights can still alter a workflow that assumes a privileged cloud role, which is the gap that made speed matter.",
+          "url": "https://www.csoonline.com/article/4217976/ai-agents-help-compress-ransomware-intrusion-to-under-10-hours-raising-stakes-for-cisos.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-04:a16",
+          "order": 1,
+          "title": "VALLEYRAT BACKDOOR DISGUISES ITSELF AS ADWARE",
+          "summary": "Kaspersky found ValleyRAT hiding inside a modified build of the Chinese adware QN Wallpaper, sideloading a malicious libcef.dll through the signed QnWallpaper.exe to gain a trusted parent process that users routinely whitelist.",
+          "url": "https://hackmag.com/news/valleyrat?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "hackmag.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-04:a17",
+          "order": 2,
+          "title": "RUSTBOT, THE MACOS MALWARE USED IN THE LATEST RUST SUPPLY CHAIN ATTACK",
+          "summary": "Poisoned crates.io releases of arrayref, internment, and append-only-vec pulled in a malicious build-time dependency that fetched an arm64 Mach-O implant during cargo build, harvesting ~/.aws, ~/.ssh, and ~/.kube credentials before its RSA tasking channel was neutered by the private key shipping inside the binary.",
+          "url": "https://www.iru.com/blog/rustbot-macos-malware?utm_source=tldrinfosec%5B18%5D%5B19",
+          "reading_time_minutes": 7,
+          "source_domain": "iru.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

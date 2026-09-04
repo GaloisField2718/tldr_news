@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-09-04",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-09-04",
+  "source_path": "TLDR Dev/article_04-09-2026.md",
+  "source_content_hash": "sha256:0a01360b2936df52be8a704831b2b75c42967769b318c26448d0dc91db1028ec",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-09-04",
+  "sections": [
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-04:a04",
+          "order": 1,
+          "title": "HOW TURBOPACK CHUNKS YOUR JAVASCRIPT",
+          "summary": "Turbopack's chunker balances fewer requests against over-shipping code by merging small chunks only within route chunk groups and weighting single-page versus multi-page sessions. On nextjs.org, its defaults reduced 96 requests to 38 while slightly cutting downloaded JavaScript from 561.6 KiB to 554.8 KiB. Next.js 16.3 adds experimental cache-aware component chunks, analytics-informed route priorities and clusters, CommonJS tree shaking, a shared runtime, and a lighter default runtime.",
+          "url": "https://nextjs.org/blog/turbopack-chunking?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "nextjs.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a05",
+          "order": 2,
+          "title": "THE BROWSER'S MAIN THREAD IS EXPENSIVE",
+          "summary": "The browser's main thread runs JavaScript, handles input, and performs most of the rendering pipeline, leaving roughly 10ms of usable time per frame on a 60Hz display. Any task over 50ms risks visible jank. This guide shows how to split work around frame budgets, batch noisy events with debounce or throttle, prioritize and defer tasks, move animation to the compositor, use workers for atomic heavy work, and eliminate unnecessary computation.",
+          "url": "https://kciter.so/posts/the-expensive-main-thread/en/?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "kciter.so",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a06",
+          "order": 3,
+          "title": "RUNNING LLMS IN THE BROWSER WITH THREE.JS",
+          "summary": "Three-LLM runs GPT-2, SmolLM2, Qwen, and Phi models locally in the browser by translating their inference graphs into Three.js TSL compute shaders on WebGPU, loading ordinary Hugging Face configs, tokenizers, and SafeTensors without a server-side inference runtime. This post walks through token generation, KV caches, architecture differences, and the optimizations that mattered: one command submission raised TinyStories decoding from about 120 to 566 tokens per second.",
+          "url": "https://ben3d.ca/blog/running-llms-in-the-browser-with-threejs?utm_source=tldrdev",
+          "reading_time_minutes": 17,
+          "source_domain": "ben3d.ca",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-04:a07",
+          "order": 1,
+          "title": "THE ASTEROID CURRENTLY HITTING FRONTEND WEB DEVELOPMENT",
+          "summary": "Coding agents are making years of specialized frontend knowledge far less scarce. When Claude can correctly diagnose high style-recalculation costs from a trace, the incentive to master or teach every browser-performance detail changes. Judgment, taste, and expert verification are expected to remain valuable for now, but treating AI as an asteroid-sized disruption is more realistic than ignoring how quickly frontend education and careers are being reshaped.",
+          "url": "https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "nolanlawson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a08",
+          "order": 2,
+          "title": "VC ISN'T VC ANYMORE — UNDERSTANDING THE RISE OF CANCER CAPITAL",
+          "summary": "A small group of giant, post-VC investment firms have become what the author calls \"Cancer Capital\": multi-strategy funds that collect enormous management fees, face less exposure to startup outcomes, and use capital to concentrate political and economic power. He says this shift has flipped the founder-investor relationship, distorted startup incentives, enabled early cash-outs before public-market accountability, and pushed risk onto pension funds and ordinary investors.",
+          "url": "https://www.anildash.com/2026/09/02/cancer-capital/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "anildash.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-04:a09",
+          "order": 1,
+          "title": "KNOW REACT? YOU'RE READY TO SHIP A MOBILE APP",
+          "summary": "You really can create an amazing app that runs everywhere, from one Javascript project. Just let Expo [9] - mobile AI infrastructure - handle the rest: cloud builds, app store submission, over-the-air updates. No Xcode required. Brex, Pizza Hut, and Bluesky ship with",
+          "url": "https://docs.expo.dev/?utm_campaign=observe-ga&utm_source=tldrdev&utm_medium=newsletter&utm_term=cta1&utm_content=Secondary09042026",
+          "reading_time_minutes": null,
+          "source_domain": "docs.expo.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a09-02",
+          "order": 2,
+          "title": "Expo. Quick-start your first mobile app",
+          "summary": "",
+          "url": "https://docs.expo.dev/?utm_campaign=observe-ga&utm_source=tldrdev&utm_medium=newsletter&utm_term=cta1&utm_content=Secondary09042026",
+          "reading_time_minutes": null,
+          "source_domain": "docs.expo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a10",
+          "order": 3,
+          "title": "GPT-6 ASTRA",
+          "summary": "OpenAI's GPT-6 Astra targets computer use, coding, science, cybersecurity, and professional work, scoring 72.6% on OSWorld 2.0, 57.9% on Terminal-Bench 4.0, and 97.6% on FrontierMath Tier 4. In Codex, it can keep searchable notes across context windows, while OpenAI says the model stays within the authorized scope more reliably. API pricing is $10 per million input tokens and $50 per million output tokens, with broader ChatGPT and API availability rolling out after a limited launch.",
+          "url": "https://links.tldrnewsletter.com/yESUyA",
+          "reading_time_minutes": 20,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a11",
+          "order": 4,
+          "title": "WEBLLM",
+          "summary": "WebLLM runs open-source language models entirely inside the browser using WebGPU, with no server required and an OpenAI-compatible API for streaming, JSON mode, and other chat-completion features. It supports model families including Llama, Phi, Gemma, Mistral, and Qwen, plus npm or CDN installation, multiple browser cache backends, and Web Worker or Service Worker engines that keep inference from blocking the UI.",
+          "url": "https://github.com/mlc-ai/web-llm?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-04:a12",
+          "order": 1,
+          "title": "HOW CONCERNED SHOULD WE BE ABOUT ASTRA'S RECURRENT ARCHITECTURE?",
+          "summary": "Astra is reportedly a looped transformer, reusing layers along the depth axis rather than carrying an unbounded hidden state across tokens like a classic RNN. The author finds the current design less alarming because its serial depth is reportedly within 2× of GPT-4, but worries that loop count could become an easy performance dial and accelerate a shift toward opaque reasoning that weakens chain-of-thought monitoring.",
+          "url": "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "lesswrong.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a13",
+          "order": 2,
+          "title": "14 REASONS ROBOTICS IS HARD",
+          "summary": "Polished robot demos can hide cherry-picked successes, carefully staged environments, slow operation, and poor reliability. The checklist spans dexterous hands, tactile sensing, visual understanding, planning and replanning, balance, strength, endurance, power, maintenance, safety, data collection, simulation gaps, manufacturing, and the economics of deploying machines in messy real-world environments.",
+          "url": "https://secondthoughts.ai/p/14-reasons-robotics-is-hard?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "secondthoughts.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a14",
+          "order": 3,
+          "title": "WHICH TOOLS DO CLAUDE CODE, CODEX, AND CURSOR CHOOSE?",
+          "summary": "Armature ran 16,893 coding-agent sessions across 75 repositories, 1,163 prompt variants, four developer personas, and Claude Code, Codex, and Cursor to see which third-party tools agents actually implemented. Among 5,292 published valid sessions, the agents agreed only 42% of the time: Codex searched the web in 94% of sessions, Claude Code built in-house nearly twice as often, and repository language strongly changed winners such as Resend on TypeScript, SendGrid on Python, Postmark on Go, and Azure ACS on Java.",
+          "url": "https://armature.tech/blog/which-tools-coding-agents-install?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "armature.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-04:a15",
+          "order": 1,
+          "title": "OPENROUTER. THE AI MODEL EXCHANGE",
+          "summary": "Access 500+ MODELS from 80+ PROVIDERS through one API. Automatically optimize requests for price, speed, and uptime — with intelligent routing and multi-provider failover built in.",
+          "url": "https://openrouter.ai?utm_source=sponsorship&utm_medium=newsletter&utm_campaign=tldr_september3",
+          "reading_time_minutes": null,
+          "source_domain": "openrouter.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a15-02",
+          "order": 2,
+          "title": "START BUILDING",
+          "summary": "",
+          "url": "https://openrouter.ai?utm_source=sponsorship&utm_medium=newsletter&utm_campaign=tldr_september3",
+          "reading_time_minutes": null,
+          "source_domain": "openrouter.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a16",
+          "order": 3,
+          "title": "BENCHMARKING GPT-6 ASTRA",
+          "summary": "Artificial Analysis finds Astra scores 67 on its Coding Agent Index with roughly one-third of GPT-5.6 Sol's tokens, but its 2.5× higher prices make max-effort Intelligence Index tasks 75% more expensive despite about 10% fewer output tokens.",
+          "url": "https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "artificialanalysis.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a17",
+          "order": 4,
+          "title": "MODELS DON'T GO ROGUE",
+          "summary": "This essay reframes the Hugging Face incident as an off-leash evaluation failure involving impossible tasks, disabled safeguards, an exploitable Artifactory bridge, and many similar instances of one model—not independent AI civilizations spontaneously going rogue.",
+          "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "mail.cyberneticforests.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a18",
+          "order": 5,
+          "title": "A QUERY ON A 3-BILLION-ROW TABLE TOOK 100 MINUTES: ONE ADDED LINE MADE IT 40MS",
+          "summary": "A real MySQL query fell from 1h43m to 40ms when a chain-scoping predicate was pushed into a derived table, avoiding materialization for 6.57 million stores and a walk over 491 million index entries without changing the schema.",
+          "url": "https://explainanalyze.com/p/a-query-on-a-3-billion-row-table-took-100-minutes-one-added-line-made-it-40ms/?utm_source=tldrdev",
+          "reading_time_minutes": 19,
+          "source_domain": "explainanalyze.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-04:a19",
+          "order": 6,
+          "title": "PROJECT XANADU: EVEN MORE HINDSIGHT",
+          "summary": "Xanadu's visionary hypertext ideas stalled because the project rarely iterated on real use cases or usability, leaving an elaborate side-by-side transclusion interface that was visually cluttered and largely a solution in search of a problem.",
+          "url": "https://gwern.net/xanadu?utm_source=tldrdev%5B20%5D%5B21",
+          "reading_time_minutes": 18,
+          "source_domain": "gwern.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

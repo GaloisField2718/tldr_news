@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-04",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-04",
+  "source_path": "TLDR DevOps/article_04-09-2026.md",
+  "source_content_hash": "sha256:de88346bc7e7c448f82511ecc508d6e7f288aed9e930b69abbd9090d0805337f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a04",
+          "order": 1,
+          "title": "WHAT DO CURSOR, OPENAI, ANTHROPIC, NOTION, AIRBNB, NVIDIA, UBER, META, PIERRE AND BUN HAVE IN COMMON?",
+          "summary": "Buildkite, the pro-tool that hands you building blocks for CI orchestration and then gets out of the way.\n\nEnough with constant downtime. No more band-aids or burden.\n\nWe provide programmable primitives you co-ordinate, running only what changes, across any cloud, any chip, your secrets, your infra.\n\nControl without compromise. Build faster, more securely, more reliably, with the CI engineered for frontier scale, used by the teams setting the pace.",
+          "url": "https://buildkite.com/home/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-09-04_Primary_Buildkite&utm_content=header_what_cursor_openai",
+          "reading_time_minutes": null,
+          "source_domain": "buildkite.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a05",
+          "order": 2,
+          "title": "YOU DESERVE BETTER CI. START WITH OUR 30-DAY TRIAL. KICK THE TIRES →",
+          "summary": "",
+          "url": "https://buildkite.com/pricing/?bk_pid=20260522-TLD-PRI-primary-trial&utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-2026-05-22&utm_content=primary-trial_cta_building_cta_kick_tires_cta_kick_tires&utm_id=20260522-TLD-PRI-primary-trial",
+          "reading_time_minutes": null,
+          "source_domain": "buildkite.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a06",
+          "order": 1,
+          "title": "KUBERNETES V1.37: SCALE WORKLOADS TO ZERO WITH HORIZONTALPODAUTOSCALER",
+          "summary": "Kubernetes v1.37 makes horizontal pod autoscaling to zero replicas a Beta feature, enabled by default. A HorizontalPodAutoscaler can now scale a workload all the way down to zero pods and bring it back up based on object or external metrics, without requiring an add-on or Alpha feature gate as previous versions did. The feature works for queue consumers and batch processors but requires at least one object or external metric, since CPU and memory metrics disappear once no pods are running. The first Alpha version shipped in Kubernetes v1.16, and SIG Autoscaling plans to collect operational feedback before considering a GA graduation.",
+          "url": "https://kubernetes.io/blog/2026/09/02/kubernetes-v1-37-hpa-scale-to-zero-beta/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a07",
+          "order": 2,
+          "title": "SECURITY INCIDENT - BGP HIJACKING",
+          "summary": "An unauthorized BGP announcement diverted traffic for a Softaculous-owned /24 for roughly 33 hours, allowing the attacker to intercept requests and obtain valid Let's Encrypt certificates because ACME validation traffic was hijacked too. A small number of Virtualizor systems later downloaded a malicious update package, showing how routing attacks can cascade into software supply-chain compromise.",
+          "url": "https://www.virtualizor.com/blog/security-incident-bgp-hijacking/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "virtualizor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a08",
+          "order": 1,
+          "title": "MANAGED POSTGRESQL VS. SELF-HOSTED POSTGRESQL: KEY BENEFITS AND TRADE-OFFS",
+          "summary": "Managed PostgreSQL services reduce the operational tax of self-hosting by transferring infrastructure, patching, backups, high availability, and platform security responsibilities to the provider. Self-managed PostgreSQL remains preferable when organizations need deep control, specialized configurations, unsupported extensions, or have mature platform engineering and operational capabilities.",
+          "url": "https://azure.microsoft.com/en-us/blog/managed-postgresql-vs-self-hosted-postgresql-key-benefits-and-trade-offs/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a09",
+          "order": 2,
+          "title": "METAL3 MEETS KUBEVIRTBMC: PROVISIONING KUBEVIRT VMS LIKE BARE METAL",
+          "summary": "KubeVirtBMC can be paired with Metal3, a CNCF incubating project, to provision KubeVirt virtual machines as if they were physical bare-metal servers. Metal3 uses OpenStack Ironic under the hood to handle hardware inspection, boot device control, and OS image writing via standard IPMI or Redfish interfaces. KubeVirtBMC creates virtual BMC endpoints for KubeVirt VMs, so Metal3 has no way to distinguish them from real hardware. This post walks through a full end-to-end setup that configures Redfish virtual media boot without PXE or DHCP and provisions a VM with a live ISO image.",
+          "url": "https://www.cncf.io/blog/2026/09/02/metal3-meets-kubevirtbmc-provisioning-kubevirt-vms-like-bare-metal/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a10",
+          "order": 3,
+          "title": "MIGRATING A CRITICAL KUBERNETES DEPLOYMENT FROM THE DEFAULT NAMESPACE WITHOUT ANY DOWNTIME",
+          "summary": "A Kubernetes engineer describes how to move a service out of the default namespace without downtime, using an ExternalName service as a DNS-level forwarding address. The approach lets dozens of dependent services keep calling the old cluster-internal DNS name while traffic silently routes to the new deployment, with no code changes required from other teams. A temporary policy exception handled the ingress side, allowing both the old and new ingress rules to coexist briefly while traffic was confirmed on the new deployment before the old one was removed.",
+          "url": "https://www.cncf.io/blog/2026/09/03/migrating-a-critical-kubernetes-deployment-from-the-default-namespace-without-any-downtime/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a11",
+          "order": 1,
+          "title": "MAGNITUDE",
+          "summary": "Magnitude is an open source inference server that runs AI models locally on your own hardware, with no internet connection required after setup. It profiles your machine, recommends models that fit your available memory, then downloads and runs them. The tool works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline, and also supports custom GGUF models from Hugging Face.",
+          "url": "https://github.com/magnitudedev/magnitude?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a12",
+          "order": 2,
+          "title": "SEMANTICA",
+          "summary": "Semantica is an open-source context and knowledge-graph layer for AI systems that turns enterprise data, agent decisions, and provenance into a structured, queryable graph. It supports deterministic reasoning with Datalog, SPARQL, Rete, and forward chaining, plus W3C PROV-O audit trails, SHACL/OWL ontology governance, conflict detection, and integrations with graph stores, vector databases, Databricks, Snowflake, LangChain, CrewAI, MCP, and other agent frameworks.",
+          "url": "https://github.com/semantica-agi/semantica?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a13",
+          "order": 1,
+          "title": "THE ECONOMICS OF AGENT OPTIMIZATION: FOUR WAYS TO LOWER THE COST",
+          "summary": "Agent optimization reduces AI costs by optimizing model selection, deployment, caching, prompts, agent configurations, and observability at runtime. Microsoft Foundry combines these capabilities into a continuous optimization loop that measures cost per successful outcome while maintaining quality, latency, and reliability.",
+          "url": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a14",
+          "order": 2,
+          "title": "HOW WE COULD SAVE PETABYTES OF CACHE STORAGE WITH ZSTANDARD AND PINGORA",
+          "summary": "Cloudflare has prototyped a system called Cache Transcoding that compresses eligible cached assets using the Zstandard algorithm before writing them to disk, shrinking those assets to roughly one-third of their original size on average. The system targets compressible text content like HTML, JSON, CSS, and JavaScript, which made up 67.3% of requests in Cloudflare's traffic sample but arrived uncompressed about 71% of the time. Encoding happens once when an asset enters the cache, while the CPU cost of decoding is paid on every serve at approximately 1.56 nanoseconds per byte. In testing across 10 cache servers with more than a million requests, the architecture stayed within its CPU budget at zstd level 3 with a 4 kibibyte minimum object size.",
+          "url": "https://blog.cloudflare.com/cache-transcoding/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a15",
+          "order": 3,
+          "title": "HOW SWISS TABLES WORK IN GO'S BUILT-IN MAP",
+          "summary": "Go's newer map implementation uses a Swiss Table design that groups entries in small blocks with compact control bytes, allowing many candidate slots to be checked before doing full key comparisons. SIMD can compare multiple control bytes at once on supported CPUs, while the layout and growth strategy improve cache locality and lookup performance.",
+          "url": "https://victoriametrics.com/blog/go-swiss-table-map/?utm_source=tldrdevops",
+          "reading_time_minutes": 28,
+          "source_domain": "victoriametrics.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-04:a16",
+          "order": 1,
+          "title": "FROM CONTROLS TO CONTINUOUS ASSURANCE: RETHINKING GRC FOR CLOUD-NATIVE ENVIRONMENTS",
+          "summary": "Cloud-native environments make periodic GRC checks obsolete because infrastructure and configurations change continuously.",
+          "url": "https://cloudnativenow.com/contributed-content/from-controls-to-continuous-assurance-rethinking-grc-for-cloud-native-environments/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-04:a17",
+          "order": 2,
+          "title": "STREAM HCP VAULT DEDICATED AUDIT LOGS TO MICROSOFT SENTINEL",
+          "summary": "HCP Vault Dedicated audit logs can reach Microsoft Sentinel through a Terraform-provisioned Azure pipeline using a generic HTTP sink, Azure Functions or Logic Apps, and Azure Monitor Logs Ingestion.",
+          "url": "https://www.hashicorp.com/en/blog/hcp-vault-dedicated-audit-logs-microsoft-sentinel?utm_source=tldrdevops%5B18%5D%5B19",
+          "reading_time_minutes": 7,
+          "source_domain": "hashicorp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
