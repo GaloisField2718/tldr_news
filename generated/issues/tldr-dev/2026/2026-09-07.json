@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-09-07",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-09-07",
+  "source_path": "TLDR Dev/article_07-09-2026.md",
+  "source_content_hash": "sha256:7d8d8f7644caa5658ddb0bc46c0d343220af37fa3813abd0bbe14f8b398ce0d5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-09-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a04",
+          "order": 1,
+          "title": "AGENTIC CODING REMOVED THE RATE LIMIT ON WRITING CODE",
+          "summary": "Everything downstream still has one. Forrester quantified the difference: onboarding 80% faster, an eight-month migration done in two, and 40% of QA and security time back. Learn more at GitLab Transcend, live on October 6 [4].\n\n→ KEEP THE CODING AGENT YOUR TEAM ALREADY PICKED. Connect Claude Code, Codex, or your own agent to GitLab over open Model Context Protocol.\n\n→ RUN THE SOFTWARE DEVELOPMENT FLOW IN VS CODE, VISUAL STUDIO, OR JETBRAINS. Hand an agent the whole task instead of the next line.\n\n→ PROVE WHICH AGENT DID WHAT, AND WHO SET IT GOING. The audit trail names both, and the agent never gets more access than the person who triggered it.\n\n→ WATCH WHAT HAPPENS AFTER THE COMMIT: review, pipelines, artifacts, security checks, and deploys.",
+          "url": "https://about.gitlab.com/events/transcend/virtual/?utm_medium=sponsorship&utm_source=tldr+&utm_campaign=eg_global_cmp_webcast_ai_en_transcend_virtual&utm_content=dev-primary-placement_20260907_x",
+          "reading_time_minutes": null,
+          "source_domain": "about.gitlab.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a04-02",
+          "order": 2,
+          "title": "💺 Save your virtual seat",
+          "summary": "",
+          "url": "https://about.gitlab.com/events/transcend/virtual/?utm_medium=sponsorship&utm_source=tldr+&utm_campaign=eg_global_cmp_webcast_ai_en_transcend_virtual&utm_content=dev-primary-placement_20260907_x",
+          "reading_time_minutes": null,
+          "source_domain": "about.gitlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a05",
+          "order": 1,
+          "title": "REDUCING ZOD'S MEMORY FOOTPRINT BY AN ORDER OF MAGNITUDE WITH METHOD MEMOIZATION",
+          "summary": "Zod 4.5 cuts schema memory use by creating bound methods only when they are first accessed instead of attaching dozens of closures to every instance. A bare z.string() now retains 784 bytes instead of 7.5 KB, with 2× to nearly 10× reductions across the benchmarked schema types.",
+          "url": "https://zod.dev/blog/reducing-memory-footprint?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "zod.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a06",
+          "order": 2,
+          "title": "HOW WE RAISED MOBILE END-TO-END TEST STABILITY TO 98%",
+          "summary": "Shopify rebuilt its flaky mobile E2E framework around a strict builder API that requires an assertion after every action and labels escape hatches as UNSAFE_. PaddleOCR and OpenCV now locate visible text and icons the way users see them, helping raise test stability from 50% to 98% while annotated videos make failures easier to diagnose.",
+          "url": "https://shopify.engineering/mobile-e2e-testing?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "shopify.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a07",
+          "order": 3,
+          "title": "PORTAL BY SPOTIFY CUT MY CLAUDE CODE TOKEN USAGE BY 90%",
+          "summary": "Spotify routed large file reads and predictable code generation from Claude Code to cheaper Gemini 2.5 Flash workers through Portal modes and a Claude Code plugin. Hooks enforce delegation for files above a size threshold, producing about 90% mean token savings in four Java monorepo scenarios while keeping debugging, architecture, and editing with the frontier model.",
+          "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "engineering.atspotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a08",
+          "order": 1,
+          "title": "THE POINT OF A SYSTEM IS FEWER DECISIONS",
+          "summary": "AI makes execution cheaper, so a design system's value increasingly comes from preserving decisions instead of merely supplying components. Clear semantic names, fewer overlapping choices, and encoded institutional knowledge prevent people and agents from multiplying ambiguity across a product.",
+          "url": "https://www.antonsten.com/articles/the-building-was-never-the-hard-part/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "antonsten.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a09",
+          "order": 2,
+          "title": "TOWARDS SELF-DRIVING CODEBASES",
+          "summary": "Throwing more agents at a codebase has produced plenty of code without consistently producing better software. Self-driving codebases need environments agents can inspect, memory that carries corrections across tools, and systems that prevent rot, leaving engineers to focus on high-leverage ideas and architecture.",
+          "url": "https://blog.detail.dev/posts/towards-self-driving-codebases?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.detail.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a10",
+          "order": 3,
+          "title": "AI HANDLES INCIDENTS, ENGINEERS LOSE TOUCH WITH THEIR SYSTEMS",
+          "summary": "AI incident responders can lower MTTR on routine failures while depriving engineers of the practice that builds intuition for rare, ambiguous outages. Regular incident simulations, hands-on drills, and explanations of an agent's evidence can reduce the resulting comprehension debt, though observation cannot replace practice.",
+          "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "sylvainkalache.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a11",
+          "order": 1,
+          "title": "CN",
+          "summary": "cn is a drop-in replacement for clsx and tailwind-merge that keeps familiar APIs while handling Tailwind class merging and conflict resolution. It has zero dependencies, works across frameworks and runtimes, and benchmarks its most common component call at 30× faster.",
+          "url": "https://github.com/shadcn-ui/cn?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a12",
+          "order": 2,
+          "title": "VIDACT",
+          "summary": "Vidact compiles a documented subset of React 19 into direct DOM operations, so component bodies run once and state updates touch only the nodes and attributes that depend on them. Its beta compiler rejects unsupported APIs at build time instead of silently falling back to the React runtime, while Vidact Start adds routing, loaders, SSR, hydration, and client navigation.",
+          "url": "https://www.vidact.dev/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "vidact.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a13",
+          "order": 1,
+          "title": "RESEARCH ACCELERATION: THE VIEW INSIDE OPENAI",
+          "summary": "OpenAI reports that by mid-August, its research organization was using 3.1 agent-workdays for every human workday, while experiments per active researcher reached an all-time high. Agents are taking on longer and more complex tasks, but more than half of successful four-to-eight-hour tasks still require human intervention.",
+          "url": "https://links.tldrnewsletter.com/eqroqD",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a14",
+          "order": 2,
+          "title": "IT TOOK A YEAR TO SHIP WEBASSEMBLY IN ANUBIS",
+          "summary": "After a year of compatibility and tooling work, Anubis is adding WebAssembly proof-of-work challenges built around the memory-hard Argon2id algorithm. The implementation runs the same binary on clients and servers, ships SIMD and non-SIMD builds, and falls back to JavaScript generated with wasm2js when WebAssembly is disabled.",
+          "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/?utm_source=tldrdev",
+          "reading_time_minutes": 26,
+          "source_domain": "anubis.techaro.lol",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-07:a15",
+          "order": 1,
+          "title": "HOW'S YOUR APP LAUNCHING ON OLD ANDROIDS…IN COLORADO…WITH POOR SIGNAL?",
+          "summary": "Apps act differently in prod. Expo Observe ties launch time and time to interactive to the exact build or update responsible. Free for up",
+          "url": "https://expo.dev/solutions/expo-observe?utm_campaign=observe-ga&utm_source=tldrdev&utm_medium=newsletter&utm_term=cta1&utm_content=QuickLink09072026",
+          "reading_time_minutes": null,
+          "source_domain": "expo.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a15-02",
+          "order": 2,
+          "title": "to 100K events a month. Get started",
+          "summary": "",
+          "url": "https://expo.dev/solutions/expo-observe?utm_campaign=observe-ga&utm_source=tldrdev&utm_medium=newsletter&utm_term=cta1&utm_content=QuickLink09072026",
+          "reading_time_minutes": null,
+          "source_domain": "expo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a16",
+          "order": 3,
+          "title": "GPT-6 ASTRA ON ROBOTIC MANIPULATION",
+          "summary": "On identical robot-arm tests, GPT-6 Astra placed a block in a bowl in 19 of 20 trials versus 8 of 20 for Fable 5.1, but both completed the harder puzzle insertion only twice.",
+          "url": "https://openai.robocurve.org/gpt-6-astra/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "openai.robocurve.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a17",
+          "order": 4,
+          "title": "AN ALIEN MIND",
+          "summary": "Rapidly improving, hard-to-understand AI could sustain recursive self-improvement, making alignment, monitoring, defensive systems, shared safety thresholds, and coordinated slowdowns increasingly urgent.",
+          "url": "https://links.tldrnewsletter.com/icW2Gt",
+          "reading_time_minutes": 14,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a18",
+          "order": 5,
+          "title": "MAKING A PYTHON INTERPRETER IN 1024 BYTES",
+          "summary": "A Python-like interpreter written in exactly 1,024 bytes of C supports integer arithmetic, comparisons, indentation-based control flow, functions, recursion, and enough syntax to run FizzBuzz by reparsing source instead of generating an intermediate representation.",
+          "url": "https://austinhenley.com/blog/python1024.html?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "austinhenley.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-07:a19",
+          "order": 6,
+          "title": "GPT-6 ASTRA IN CODE REVIEW: GAINS, PRIVACY, AND COST",
+          "summary": "In CodeRabbit's evaluation, GPT-6 Astra achieved 61.3% actionable bug coverage overall and 57.1% on harder cross-file reviews, beating GPT-5.6 Sol by roughly 4% and 20%, respectively.",
+          "url": "https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation?utm_source=tldrdev%5B20%5D%5B21",
+          "reading_time_minutes": 8,
+          "source_domain": "coderabbit.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

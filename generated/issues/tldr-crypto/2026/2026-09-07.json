@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-crypto:2026-09-07",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-09-07",
+  "source_path": "TLDR Crypto/article_07-09-2026.md",
+  "source_content_hash": "sha256:675b90784da721b485d032ef5ac985b9bab485f328ab5bf1377fbe16eb9b43b1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-09-07",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-09-07:a04",
+          "order": 1,
+          "title": "COINBASE FILES SEC AND CFTC REGISTRATIONS FOR SINGLE STOCK PERPS",
+          "summary": "Coinbase filed SEC-notice registrations for a derivatives exchange and broker, positioning the firm to offer single stock perpetual futures to US traders under formal regulatory oversight. The dual-regulator coordination with both the SEC and CFTC marks a deliberate effort to pull a crypto-native derivative structure into the US onshore market, expanding the range of instruments available through a regulated US venue.",
+          "url": "https://threadreaderapp.com/thread/2095598512557772927.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a05",
+          "order": 2,
+          "title": "LIQUID NETWORK PAUSED AFTER $320M \"WHITE-HAT\" WITHDRAWAL",
+          "summary": "~4,000 BTC was withdrawn from the Bitcoin sidechain's federation wallet by purported white-hat hackers via the SideSwap Peg-out Authorization Key, which Liquid says was not itself compromised. An on-chain message read, \"We are whitehats, contact us on chain.\" Blockstream paused the network, exchanges suspended LBTC deposits/withdrawals, and other Liquid-issued assets were unaffected. No confirmation yet on whether funds will be returned or a restart timeline.",
+          "url": "https://links.tldrnewsletter.com/OMlcAF",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-09-07:a06",
+          "order": 1,
+          "title": "PAYMENT CHANNELS: 1 MILLION PAYMENTS PER SECOND",
+          "summary": "A new Solana primitive called payment channels addresses the per-call signature bottleneck in agentic micropayment workflows by letting agents authorize a spending ceiling once, meter usage off-chain via signed messages at zero transaction cost, and settle the full session in a single on-chain transaction across the x402 and MPP protocols. Funds remain non-custodial throughout, held in program-controlled escrow rather than operator balances, unlike prepaid credit systems where balances are tracked off-chain by the service provider. Benchmarks showed 100,000 unique wallets processing over 1 million payments per second, equivalent to more than 80 billion payments in 24 hours at a processing cost of $0.0078 per million payments. The spec is public, and the program is open source. Alibaba Cloud launched live inference endpoints with payment channels on day one.",
+          "url": "https://links.tldrnewsletter.com/CdCz2Z",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a07",
+          "order": 2,
+          "title": "LONGBOW LAUNCHES COIN CREATION ON ROBINHOOD CHAIN",
+          "summary": "Longbow is a new coin creation platform on Robinhood Chain that lets users launch tokens paired to any stock or crypto asset of their choice. The tool extends Robinhood Chain's utility by enabling user-generated linked instruments that bridge retail equity and on-chain token markets.",
+          "url": "https://links.tldrnewsletter.com/HzUYWb",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-09-07:a08",
+          "order": 1,
+          "title": "WHAT 700+ X402-ENABLED API ENDPOINTS ARE TEACHING US ABOUT AGENT COMMERCE",
+          "summary": "Orthogonal has scaled its x402-based API marketplace to 700+ endpoints across 50+ providers, with commercial workflows in contact enrichment, investor signal monitoring, and lead generation already processing real agent transactions. Building production-grade agent commerce on x402 rails required three layers the protocol does not itself provide: refund management, request-time dynamic pricing, and natural-language discoverability through the Bazaar catalog. An early investor-signals deployment grounded 87% of surfaced company updates within two weeks, up from near zero prior to the agent-driven approach. Orthogonal's near-term roadmap targets governance and spend controls, self-service API onboarding, and an enterprise control plane for managing agent capabilities across providers.",
+          "url": "https://links.tldrnewsletter.com/kUdXNn",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a09",
+          "order": 2,
+          "title": "WHEN THROUGHPUT IS NOT ENOUGH: WHAT FINANCIAL MARKETS NEED FROM BLOCKCHAINS",
+          "summary": "Aggregate blockchain throughput has grown over 100x in five years, with some production systems now clearing tens of thousands of TPS, removing raw capacity as the primary barrier to onchain finance. The conversation has shifted to market microstructure: millisecond inclusion uncertainty forces market makers to widen spreads against stale prices, and discretionary block-building gives MEV extraction the same structural character as privileged order-flow access in traditional markets. a16z researchers propose \"Strong Chain Quality\" to prevent single-actor control over block inclusion by reserving portions of each block for transactions surfaced through alternate network paths, while protocol designers are evaluating timelock and threshold encryption to hide transaction contents until settlement. Predictable execution, unambiguous priority rules, resilient access, and pre-execution confidentiality with post-execution transparency together define what a settlement layer must deliver before onchain finance works at institutional scale.",
+          "url": "https://links.tldrnewsletter.com/wFNccn",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-09-07:a10",
+          "order": 1,
+          "title": "BITGO TO BUY NYDIG TRADING ARM FOR $42.5M IN CASH AND STOCK",
+          "summary": "BitGo has agreed to acquire NYDIG IF Holdings, the institutional trading arm of Stone Ridge's bitcoin-focused subsidiary NYDIG, for $42.5 million in cash and stock plus a $15 million earnout. The deal is structured as $7 million in cash and approximately $35.5 million in BitGo equity, meaning the target receives roughly 83% of the base consideration in stock, with total consideration reaching $57.5 million if earnout targets are met. The acquisition adds institutional trading infrastructure to BitGo's existing custody and settlement stack, positioning the firm to serve a broader slice of the institutional client workflow under one roof.",
+          "url": "https://www.coindesk.com/business/2026/08/28/bitgo-to-buy-nydig-trading-arm-for-usd42-5m-in-cash-and-stock-plus-usd15m-earnout?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a11",
+          "order": 2,
+          "title": "BLOCK'S PATH TO BECOMING A PAYMENT NETWORK",
+          "summary": "Block is assembling the pieces to become a full payment network rivaling Visa/Mastercard. It already has millions of Square merchants and 60M+ daily Cash App users, and its new \"Neighborhoods\" feature can route payments directly between Block-owned accounts via Cash App Pay, bypassing card networks and charging just 1% while still profiting. Future phases could extend Cash App Pay to non-Square merchants (leveraging fraud data from Cash App's user base) and eventually make it an official debit network accepting all cards, positioning Block as a genuine fifth payment network.",
+          "url": "https://threadreaderapp.com/thread/2096624653083218001.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-09-07:a12",
+          "order": 1,
+          "title": "COINBASE VS. BITGET WALLET CRYPTO CARDS",
+          "summary": "Coinbase's Visa debit card is custodial, linked directly to a Coinbase account, while Bitget Wallet's card is self-custodial, charges 0% on USD spend but 1.7% on non-USD transactions, and offers up to 3% \"Assetback\" in a choice of assets.",
+          "url": "https://threadreaderapp.com/thread/2096547444712501386.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a13",
+          "order": 2,
+          "title": "HYPERLIQUID ETF INSTITUTIONAL HOLDERS",
+          "summary": "13F filings show 30 institutions held a combined $74.9M in Hyperliquid ETF exposure (~1.15M HYPE) as of June 30.",
+          "url": "https://threadreaderapp.com/thread/2096376498571886609.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a14",
+          "order": 3,
+          "title": "HARMONY SUNSETS ITS BLOCKCHAIN FOR AN AI VIDEO VENTURE",
+          "summary": "Harmony announced it will fully shut down its Layer 1 network, citing security threats from \"state actors and AI agents,\" and plans to migrate its ONE token to Ethereum via a snapshot-based airdrop.",
+          "url": "https://links.tldrnewsletter.com/rbnQoC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-09-07:a15",
+          "order": 4,
+          "title": "BITCOIN ETFS PULL IN $987M WEEKLY",
+          "summary": "US spot bitcoin ETFs saw $986.9M in net inflows last week, the third straight positive week, with BlackRock's IBIT leading at $691.5M.",
+          "url": "https://links.tldrnewsletter.com/7vjoXv[16][17",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

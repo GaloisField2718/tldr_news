@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-07",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-07",
+  "source_path": "TLDR Data/article_07-09-2026.md",
+  "source_content_hash": "sha256:4c5d439f1295d8ecb2a739a074089dd521103d2308aa9fbe447235b789732ce8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-07",
+  "sections": [
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-07:a04",
+          "order": 1,
+          "title": "PORTAL BY SPOTIFY CUT MY CLAUDE CODE TOKEN USAGE BY 90%",
+          "summary": "Most of what a coding agent does is I/O rather than reasoning, such as reading five files to answer a question about one method. Spotify routed that work to two declarative Portal modes, bulk-reader and code-writer, both running Gemini 2.5 Flash on an ephemeral runtime, and reserved the frontier model for problems that need it. A quarter of engineering leaders already spend $200 to $500 per developer per month on tokens, and some are past $2,000.",
+          "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "engineering.atspotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a05",
+          "order": 2,
+          "title": "ZGATEWAY: LEARNINGS FROM PUTTING A PROXY IN FRONT OF ZIPPYDB",
+          "summary": "This post explains why Meta put a managed proxy tier in front of ZippyDB, its massive key-value store. The real lesson is that proxies can turn client-fleet sprawl into a controllable infrastructure boundary: connection fan-in drops roughly 97–98%, batching and coalescing happen across clients, excess traffic from noisy tenants can be selectively rejected, and failover and load-balancing policy can change centrally without waiting for a million clients to update.",
+          "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a06",
+          "order": 3,
+          "title": "FROM S3 TO GPU IN ONE COPY: RETHINKING DATA LOADING FOR ML TRAINING (50 MINUTE VIDEO)",
+          "summary": "Vortex is an open-source columnar format designed to stream training data from S3 to GPUs with minimal copying. Cascading lightweight encodings, layout-aware pruning, and zero-copy memory paths target CPU and NVMe bottlenecks, giving ML platforms a way to keep expensive accelerators fed without converting everything upfront.",
+          "url": "https://www.infoq.com/presentations/vortex-columnar-file-format-gpu-streaming/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a07",
+          "order": 4,
+          "title": "CONTEXT, SEMANTICS, AND ONTOLOGY: A PRIMER FOR THE AGENTIC ERA",
+          "summary": "Semantic layers define business metrics, context layers provide supporting knowledge, and ontologies describe entities and their relationships. Together, they help AI agents interpret data, but people still need to keep that knowledge accurate and current.",
+          "url": "https://motherduck.com/blog/context-layer-vs-semantic-layer-ontology/?utm_source=tldrdata",
+          "reading_time_minutes": 19,
+          "source_domain": "motherduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-07:a08",
+          "order": 1,
+          "title": "TAKING ANALYTICS BY STORM WITH AGENTS (49 MINUTE VIDEO)",
+          "summary": "Nao's founders argue that AI is shifting data teams toward maintaining business context and enabling self-service analytics. They recommend starting with one focused use case, measuring results, and improving data models before investing in a full semantic layer.",
+          "url": "https://links.tldrnewsletter.com/siXIjE",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a09",
+          "order": 2,
+          "title": "CONFIGURING AGENTIC AI ANALYTICS: FROM FREE-TEXT-TO-SQL TO MODEL CONTEXT PROTOCOL",
+          "summary": "AI analytics can fail when agents generate free-form SQL against inconsistent warehouse metadata. Governed systems should route repeated questions through verified semantic-layer tools, parameterized calls, and explicit refusal paths, reserving open-ended SQL for cases humans can inspect. Maintaining definitions is the hard part regardless of model upgrades.",
+          "url": "https://www.eckerson.com/articles/configuring-agentic-ai-analytics-from-free-text-to-sql-to-model-context-protocol?utm_source=tldrdata",
+          "reading_time_minutes": 21,
+          "source_domain": "eckerson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a10",
+          "order": 3,
+          "title": "ONE ROUND TRIP BEATS A THOUSAND, AND YOUR BATCH API PROBABLY IS NOT BATCHING",
+          "summary": "A 100,000-row Postgres load took 41 minutes because each row became its own statement and transaction; COPY cut the same work to 11 seconds. Real batching removes network round trips, parse overhead, and WAL flush barriers, while driver flags and transaction chunking prevent bulk APIs from silently behaving row by row.",
+          "url": "https://ankit-rana.com/logs/47-batching-one-round-trip-beats-a-thousand/?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "ankit-rana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-07:a11",
+          "order": 1,
+          "title": "PRE-RELEASE OF POLARS 2.0",
+          "summary": "Polars 2.0 makes the streaming engine the default for lazy queries, aiming for much lower memory use and faster execution while accepting that row order is not guaranteed unless requested. It also tightens type coercion and concatenation behavior, and removes deprecated APIs so data mismatches fail earlier instead of hiding in production pipelines.",
+          "url": "https://pola.rs/posts/announcing-polars-2/?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "pola.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a12",
+          "order": 2,
+          "title": "APACHE KAFKA VS APACHE IGGY: SAME LOG, DIFFERENT ENGINE",
+          "summary": "Apache Iggy is a Rust streaming engine with Kafka-like logs and consumer groups, optimized around thread-per-core execution and modern Linux I/O. It looks promising for low-latency single-node or simpler deployments, but Kafka still has the deeper production story for replication, exactly-once semantics, compaction, and multi-region operations.",
+          "url": "https://softwaremill.com/apache-kafka-vs-apache-iggy-same-log-different-engine/?utm_source=tldrdata",
+          "reading_time_minutes": 15,
+          "source_domain": "softwaremill.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a13",
+          "order": 3,
+          "title": "SAIL 0.7: STATELESS COMPUTE, DURABLE JOB STATE",
+          "summary": "Sail 0.7 pushes Spark-style intermediate state toward object storage with blocking shuffle and checkpoint support. It persists shuffle outputs as compressed Arrow streams so downstream task regions retry without cascading upstream failures, while checkpointing keeps iterative jobs from rebuilding long query plans. The design targets stateless workers, smaller clusters, and better resilience under preemption.",
+          "url": "https://lakesail.com/blog/sail-0-7-blocking-shuffle-checkpoint/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "lakesail.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-07:a14",
+          "order": 1,
+          "title": "FROM DATA QUERYING TO DATA INVESTIGATIONS: RETHINKING NATURAL LANGUAGE INTERFACES FOR DATABASES",
+          "summary": "Text-to-SQL assumes users ask questions that a single query can answer, when in practice they bring problems that need a sequence of queries with reasoning over the intermediate results. The paper proposes data investigations as the replacement paradigm and presents D2, a prototype that autonomously searches, reasons over, and collects data to reach evidence-backed conclusions, benchmarked on a Murder Mystery dataset.",
+          "url": "https://arxiv.org/abs/2609.03898?utm_source=tldrdata",
+          "reading_time_minutes": 25,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a15",
+          "order": 2,
+          "title": "WHEN THE SOURCE OF TRUTH IS A GOOGLE SHEET",
+          "summary": "Warner Music Group turned a hand-edited anti-counterfeit tracking spreadsheet into governed Databricks tables without taking the spreadsheet away from operators. The pipeline handles shifting tabs, renamed headers, late edits, row fingerprints, and full-overwrite loads so executive reporting can trust a messy business interface that people actually use.",
+          "url": "https://tech.wmg.com/handling-the-messy-reality-of-google-sheets-building-a-resilient-counterfeit-takedown-pipeline-d4c3502664bd?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "tech.wmg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-07:a16",
+          "order": 1,
+          "title": "GETTING READY FOR POSTGRESQL 19",
+          "summary": "PostgreSQL 19 Beta 3 adds temporal SQL, idempotent upsert-and-fetch, IGNORE NULLS window behavior, concurrent repacking, DDL extraction helpers, SQL/PGQ graph querying, and stricter NULL handling.",
+          "url": "https://tapoueh.org/blog/2026/09/getting-ready-for-postgresql-19/?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "tapoueh.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-07:a17",
+          "order": 2,
+          "title": "DUCKFLIGHT",
+          "summary": "DuckFlight lets PostgreSQL tools and Arrow Flight SQL clients read and write the same live DuckDB database without a separate service or copying data.",
+          "url": "https://github.com/sidequery/duckflight-extension?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

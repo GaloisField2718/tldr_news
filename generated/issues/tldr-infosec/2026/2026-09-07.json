@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-07",
+  "source_path": "TLDR InfoSec/article_07-09-2026.md",
+  "source_content_hash": "sha256:500cb439e642fba896de47b510d15ec7ef1219a10b07a79e8f8daa56cda553e1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-07",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-07:a04",
+          "order": 1,
+          "title": "ATTACKERS BREACHED JETBRAINS CADENCE VIA UNPATCHED TEAMCITY, EXTRACTING AWS CREDENTIALS",
+          "summary": "JetBrains is urging users of Cadence, its hosted cloud computing service, to revoke and rotate all credentials after unidentified attackers exploited CVE-2026-63077 (CVSS 9.8) to breach its own environment. The vulnerability stems from deserializing untrusted data and allows an unauthenticated attacker with access to a TeamCity server to bypass authentication checks and execute arbitrary operating system commands with the privileges of the TeamCity server process. Attackers reached a 2024 Cadence backup holding AWS IAM credentials, S3 files, PyCharm-synced source code, and personal data, so defenders should treat all executions as untrusted and audit connected AWS accounts, registries, and repositories for activity since August 8.",
+          "url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a05",
+          "order": 2,
+          "title": "ATTACKERS EXPLOIT PAPERCUT FLAWS TO STEAL CREDENTIALS FROM SCHOOLS AND UNIVERSITIES",
+          "summary": "Threat actors are chaining CVE-2026-81578 and CVE-2026-82078, an authentication bypass and remote code execution pair in PaperCut, to steal credentials from K-12 schools and major universities across the US and Europe. Users are advised to restrict PaperCut servers from being exposed to the internet and to monitor for the execution of cmd.exe, powershell.exe, or other scripting and command interpreters, as well as commands containing whoami, tasklist, ver, or uname -a, with pc-app.exe as the parent process.",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a06",
+          "order": 3,
+          "title": "THOMSON REUTERS DETECTS CYBERSECURITY INCIDENT, SAYS UNAUTHORIZED PARTY ACCESSED FILES",
+          "summary": "Thomson Reuters found unauthorized access to C-Track files in March. The June 30 incident affected court systems in 11 US states, the US Virgin Islands, and Ontario. Exposed records may contain names and personal information. The company contained the activity, notified customers and law enforcement, and said C-Track remained operational.",
+          "url": "https://links.tldrnewsletter.com/60h4xg",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-07:a07",
+          "order": 1,
+          "title": "ASCII SMUGGLING CROSSES OVER FROM AI PROMPT INJECTION TO PHISHING EVASION",
+          "summary": "Microsoft researchers observed a high-volume phishing campaign using invisible Unicode tag characters, a technique popularized in AI prompt injection research as ASCII smuggling. Rather than hiding instructions from people while exposing them to AI models, the attacker used the characters to split financial lure words so email filters could not parse them, turning \"funding\" into fun, an invisible tag character, then ding. The code points come from the deprecated Unicode Tags block, U+E0000 to U+E007F, which renders as nothing at all, and Microsoft surfaced the campaign while hunting for prompt injection in Defender for Office 365, where the first version of the signature kept firing on the England, Scotland, and Wales flag emoji because each is built from a base flag code point plus an invisible tag sequence. Defenders should strip invisible Unicode before content signatures run, treat unexplained tag characters as a high-confidence anomaly, and apply the same normalization upstream of any AI assistant that ingests email.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a08",
+          "order": 2,
+          "title": "IMPROVING OUR ALIGNMENT AND SECURITY EFFORTS",
+          "summary": "Anthropic paused cyber evaluations after three July incidents exposed real systems through third-party environments. It added real-time classifiers, stronger sandbox isolation, and outbound network blocks, while partners testing reduced-safeguard models must verify isolation, define scope, validate tasks, and stop violations. The company also froze RL environment changes, flagged over 10% for defects, and rebuilt review controls.",
+          "url": "https://www.anthropic.com/news/improving-alignment-security-efforts?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a09",
+          "order": 3,
+          "title": "TURNING CHROME REMOTE DESKTOP INTO PURE RED TEAM OPS",
+          "summary": "A researcher at ZeroTrace Lab went down a rabbit hole to try and understand how they can disable the Chrome Remote Desktop connection banner after it was bothering them on a computer they remote into. This led to a reverse engineering journey that ended with them creating a script to patch the modal's x and y size variables to 0, resulting in the banner not being visible. After realizing the spyware/red team potential this opened, the researcher continued reversing and found that they could create a malicious msi installer that would install a tampered hosts.json and patched modal to allow for remoting by an attacker with no visible notification to the victim.",
+          "url": "https://zerotracelab.com/blog/chrome-remote-desktop-red-ops?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "zerotracelab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-07:a10",
+          "order": 1,
+          "title": "HETTY",
+          "summary": "Hetty is an HTTP toolkit for security research. It aims to be an open-source alternative to commercial software like Burp Suite Pro, with powerful features tailored to the needs of the infosec and bug-bounty community.",
+          "url": "https://github.com/dstotijn/hetty?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a11",
+          "order": 2,
+          "title": "PIGEON",
+          "summary": "Pigeon allows creating delegated authority for AI agents. A Pigeon Pass says what an agent may do by issuing a narrowed, signed credential for what it may do, not a copy of everything you can do.",
+          "url": "https://github.com/pigeonlabsHQ/pigeon?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a12",
+          "order": 3,
+          "title": "IRFLOW TIMELINE",
+          "summary": "IRFlow Timeline is a native macOS forensic timeline analysis tool. The 1.0.10 release adds support for ChatGPT Computer History logs as a forensic artifact.",
+          "url": "https://github.com/r3nzsec/irflow-timeline/releases/tag/v1.0.10?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-07:a13",
+          "order": 1,
+          "title": "ABABIL OF MINAB: AN IRAN-LINKED DESTRUCTION AND EXFILTRATION CAMPAIGN TARGETING THE US AND THE MIDDLE EAST",
+          "summary": "Gambit Security tied Ababil of Minab, the pro-Iranian persona that claimed responsibility for the attack on LA Metro in March, to Black Shadow, an Iran-linked group that the Israel National Cyber Directorate attributed to Iran's Ministry of Intelligence and Security, undercutting the crew's claim to be a new standalone hacktivist outfit. The campaign combined exfiltration with destruction across four confirmed victims in the United States, Israel, Saudi Arabia, and Turkey, mixing scripted automation with hands-on-keyboard work through vCenter, Disk Management, SQL Server Management Studio, and Veeam consoles, including one run that dropped 58 SQL Server databases at Vyncs. Analysts also found additional Israeli and Turkish victims on the operator's staging infrastructure, custom exfiltration tooling in the form of a Flask receiver and a C++ uploader named FileFiend, and a briefly exposed browser session showing the operator using ChatGPT to refine the destruction script.",
+          "url": "https://gambit.security/ababil-of-minab?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "gambit.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a14",
+          "order": 2,
+          "title": "ANOTHER SWARM OF OPENAI AGENTS REACHED THE OPEN INTERNET WITHOUT THE FRONTIER LAB'S KNOWLEDGE",
+          "summary": "Researchers found OpenAI-linked agents editing a little-used German wiki from May through June. 3,700 agents posted 18,000 messages and shared answers for timed web-search tests while trying to hide posts with “ZZZ.”. A moderator deleted roughly 100 pages daily while agents created about 400 pages a day. Activity dropped after OpenAI noticed the incident and intervened.",
+          "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a15",
+          "order": 3,
+          "title": "GPT-6 ASTRA SCORES 100% ON EXPLOITBENCH AS OPENAI BLOCKS POC EXPLOIT REQUESTS",
+          "summary": "OpenAI released GPT-6 Astra after it scored 100% on ExploitBench, up from GPT-5.6 Sol's 78.5%. Testing found higher rates of arbitrary code execution and two undisclosed zero-days. The public release allows secure code review and patching while it refuses proof-of-concept exploit requests. OpenAI plans to restrict Daybreak access for defenders, including MS-ISAC participants.",
+          "url": "https://thehackernews.com/2026/09/gpt-6-astra-scores-100-on-exploitbench.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-07:a16",
+          "order": 1,
+          "title": "G7 URGES ORGANIZATIONS TO PREPARE FOR QUANTUM CYBER THREATS",
+          "summary": "The G7 Cyber Security Working Group and CISA issued a joint advisory urging organizations to begin migrating to post-quantum cryptography now.",
+          "url": "https://therecord.media/g7-urges-organizations-to-prepare-for-quantum-threats?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a17",
+          "order": 2,
+          "title": "EVALUATING MUSE SPARK 1.3 ON HACK THE BOX CHALLENGES",
+          "summary": "Muse Spark 1.3 scored 72.9% on the HTB-Challenger benchmark, up from 50.41% for version 1.2 just one month earlier.",
+          "url": "https://theaq.blog/2026/09/06/evaluating-meta-muse-spark-1.3-on-hack-the-box-challenges.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theaq.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-07:a18",
+          "order": 3,
+          "title": "BOOZ ALLEN CYBER WEAPON INDEX MEASURES DEMONSTRATED AI CYBER CAPABILITIES",
+          "summary": "Booz Allen tested 18 US and Chinese models on attacker machines against a production-grade enterprise network.",
+          "url": "https://www.boozallen.com/insights/cyber/cyber-weapon-index.html?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 3,
+          "source_domain": "boozallen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

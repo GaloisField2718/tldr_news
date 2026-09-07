@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-07",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-07",
+  "source_path": "TLDR DevOps/article_07-09-2026.md",
+  "source_content_hash": "sha256:58ae2fab93d0d260a46a0f01651c2b1ca41ee5a488cc2f14b4fe7cd44c7a6fd9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-07",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a04",
+          "order": 1,
+          "title": "YOUR STORAGE COSTS SHOULDN'T SPIKE WHEN DATA MOVES",
+          "summary": "Storing data is one thing. Moving it, retrieving it, or accessing it at scale is where costs can get harder to predict.\n\nMegaport Standard Object Storage gives DevOps and infrastructure teams S3-compatible storage with a simpler model:\n\n* No egress, API, or retrieval fees * No minimum storage duration or capacity * Free 100Gbps in-country VXC from a Megaport access product * Object lock for immutable backup workflows\n\nUse it for backup, recovery, archive, or large-scale data movement, without adding surprise access fees when you need the data back.",
+          "url": "https://www.megaport.com/lp/tldr-devops-storage/?utm_source=tldr&utm_medium=sponsored&utm_campaign=ME2608-1787292290-tldr_devops_storage&utm_content=header_storage_costs_shouldnt&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "megaport.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a05",
+          "order": 2,
+          "title": "* Talk through my storage use case",
+          "summary": "",
+          "url": "https://www.megaport.com/lp/tldr-devops-storage/?utm_source=tldr&utm_medium=sponsored&utm_campaign=ME2608-1787292290-tldr_devops_storage&utm_content=cta_talk_through_my&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "megaport.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a06",
+          "order": 3,
+          "title": "* Talk to us about moving your data",
+          "summary": "",
+          "url": "https://www.megaport.com/lp/tldr-devops-storage/?utm_source=tldr&utm_medium=sponsored&utm_campaign=ME2608-1787292290-tldr_devops_storage&utm_content=cta_talk_us_about&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "megaport.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a07",
+          "order": 1,
+          "title": "A VISION FOR BUILT-IN LINTING",
+          "summary": "OpenTofu is developing built-in linting that unifies pre-plan static checks and post-plan policy enforcement, allowing rules to be evaluated repeatedly as more information becomes available during validation, planning, and application. OpenTofu v1.13 introduces experimental built-in rules, with future plans for custom plugins, reusable rulesets, and broader policy support.",
+          "url": "https://opentofu.org/blog/plans-for-linting/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "opentofu.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a08",
+          "order": 2,
+          "title": "INTRODUCING CONTEXT-AWARE VULNERABILITY DISCOVERY AND REMEDIATION WITH CLOUDFLARE MANAGED DEFENSE AND OPENAI DAYBREAK MODELS",
+          "summary": "Cloudflare is launching early access to a service called Vulnerability Discovery and Remediation, which scans customer codebases for security flaws and proposes patches and firewall rules to fix them. The service uses OpenAI's GPT-5.6 Cyber model for reconnaissance, hunting, and validation, with model prompts routed through Cloudflare AI Gateway to OpenAI's servers. Cloudflare combines those findings with production traffic data and Web Application Firewall activity to help teams prioritize which vulnerabilities are actually exposed and under active attack. Access is invitation-only through Cloudflare's Managed Defense team, and customers must approve any proposed changes before they are deployed.",
+          "url": "https://blog.cloudflare.com/vulnerability-discovery-remediation/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a09",
+          "order": 3,
+          "title": "PIPELINED SQL IN CLICKHOUSE 26.8",
+          "summary": "ClickHouse 26.8 adds pipelined SQL with a new |> operator that lets queries be written as an explicit sequence of transformations instead of relying on nested subqueries or CTEs. Each stage passes its result to the next, making multi-step filtering, aggregation, sorting, and limiting easier to read and compose.",
+          "url": "https://clickhouse.com/blog/pipelined-sql-26.8?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a10",
+          "order": 1,
+          "title": "HOW TO CARRY USER IDENTITY ACROSS FEDERATED KUBERNETES AND AI PLATFORMS",
+          "summary": "Centralized identity gateways solve the limitations of SSO in federated AI and data platforms by making one service responsible for session creation, validation, refresh, and logout while regional gateways enforce local access policies. The pattern reduces duplicated authentication flows and upstream IdP load while enabling consistent identity propagation and delegated user authorization across Kubernetes clusters, data tools, and AI assistants.",
+          "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "developer.nvidia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a11",
+          "order": 2,
+          "title": "ZGATEWAY: LEARNINGS FROM PUTTING A PROXY IN FRONT OF ZIPPYDB",
+          "summary": "ZGateway is a proxy tier that sits between clients and ZippyDB, Meta's most widely used key-value store. The system handles more than 1 billion operations per second and carries about 40% of ZippyDB traffic, adding roughly 6% computational overhead. The core problem it solves is connection sprawl: under direct access, a million-plus client hosts each maintained tens of thousands of TLS connections to database hosts, creating a many-to-many mesh that caused file-descriptor exhaustion and reboot loops during reconnection storms. By routing all traffic through a controlled proxy fleet, Meta reduced total persistent connections by roughly 19x and made fan-in independent of client population size.",
+          "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a12",
+          "order": 3,
+          "title": "IMPROVING INFRASTRUCTURE EFFICIENCY FOR GROWING DEMAND IN THE AGE OF AI",
+          "summary": "Dropbox treats compute, storage, networking, power, cooling, rack density, and capacity planning as one interconnected optimization problem rather than independent infrastructure layers. The approach focuses on extracting more usable capacity from existing data centers through workload placement, fleet optimization, denser hardware, and lifecycle planning before expanding the physical footprint.",
+          "url": "https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "dropbox.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a13",
+          "order": 1,
+          "title": "DIAGRAM DESIGN",
+          "summary": "Diagram Design is a Claude Code skill that generates editorial-quality diagrams as self-contained HTML and SVG files. The skill works with Claude Code, Codex, Factory Droid, Pi, and Agent Skills-compatible hosts, and can also redraw existing draw.io or Mermaid diagrams in the same design system. Each diagram ships in three static variants (minimal light, minimal dark, and full-editorial) with no build step, no JavaScript dependencies, and no external images.",
+          "url": "https://github.com/cathrynlavery/diagram-design?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a14",
+          "order": 2,
+          "title": "ALIEN",
+          "summary": "Alien is an open-source platform for deploying and operating software inside customer-owned AWS, GCP, and Azure environments while retaining centralized control over releases, monitoring, and lifecycle management. It supports push- and pull-based deployment models, automatic updates and rollbacks, remote commands without inbound networking, cross-cloud resource abstractions, and least-privilege IAM derived from an application's declared infrastructure.",
+          "url": "https://github.com/alienplatform/alien?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a15",
+          "order": 1,
+          "title": "AUTOMATING THE EXPERIMENTATION LIFECYCLE WITH KIRO, AWS DEVOPS AGENT, AND LAUNCHDARKLY",
+          "summary": "AWS DevOps Agent, Kiro CLI, and LaunchDarkly form an autonomous experimentation loop that turns business goals into feature-flagged code changes, measured A/B tests, guarded rollouts, and iterative improvements. The system reduces planning and measurement overhead while using automated release reviews, runtime rollback, and recorded outcomes to safely optimize toward defined metrics.",
+          "url": "https://aws.amazon.com/blogs/devops/automating-the-experimentation-lifecycle-with-kiro-aws-devops-agent-and-launchdarkly/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a16",
+          "order": 2,
+          "title": "INTRODUCING YUGABYTEDB RESOURCE GOVERNANCE",
+          "summary": "YugabyteDB Resource Governance adds CPU controls for multi-tenant database clusters so a runaway query or traffic spike in one database does not starve other workloads sharing the same infrastructure. The system combines per-database CPU limits with fair sharing of unused capacity, allowing denser consolidation while maintaining workload isolation and predictable performance.",
+          "url": "https://www.yugabyte.com/introducing-yugabytedb-resource-governance/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "yugabyte.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-07:a17",
+          "order": 1,
+          "title": "YOLO MODE: AGENT AUTONOMY WITHOUT THE GUARDRAILS",
+          "summary": "YOLO mode lets AI coding agents execute actions without approval prompts, improving productivity but increasing security risks when agents run directly on a host with access to files, credentials, and networks.",
+          "url": "https://www.docker.com/blog/what-is-yolo-mode/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "docker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-07:a18",
+          "order": 2,
+          "title": "BUILDING FOR THE MODEL HARDWARE STANDARD",
+          "summary": "Anthropic's Model Hardware Standard (MHS) extends MCP-style agent interoperability from software into physical devices, creating new safety challenges where unreliable or repeated commands can cause real-world damage.",
+          "url": "https://www.fastly.com/blog/building-for-the-model-hardware-standard?utm_source=tldrdevops%5B19%5D%5B20",
+          "reading_time_minutes": 3,
+          "source_domain": "fastly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
