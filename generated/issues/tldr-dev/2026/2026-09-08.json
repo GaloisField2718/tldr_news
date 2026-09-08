@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-09-08",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-09-08",
+  "source_path": "TLDR Dev/article_08-09-2026.md",
+  "source_content_hash": "sha256:680e79f90e7e7741059033f02b6022e4e363cd5b825c5b33c9bd38ccd642bd6e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-09-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a04",
+          "order": 1,
+          "title": "LIVE CODING WORKSHOP: STOP BAD ACTORS FROM SPINNING UP \"NEW\" ACCOUNTS",
+          "summary": "Someone just created their fiftieth \"new\" account to grab another free trial. Your email check, phone verification, and IP rate limits won't stop them.\n\nOn Sept 16, join Fingerprint's Keshia Rose for a free, live, hands-on workshop [5] and build signup protection that actually works:\n\n→ Add a few lines of JavaScript to a signup page and read the device data server-side.\n\n→ Check for bots and assess device risk before an account is ever created.\n\n→ Enforce one account per device, even from incognito windows or behind a VPN.\n\nThis is a guided build [6], not a demo. Code alongside Keshia and walk away with working signup protection for your website or app.",
+          "url": "https://fingerprint.com/webinar/workshop-new-account-fraud/?utm_source=tldrmain&utm_medium=newsletter&utm_campaign=Primary09082026&utm_content=header_live_coding_workshop",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a07",
+          "order": 2,
+          "title": "🗓️ Save your spot — Sept 16, 9AM PT / 12PM ET",
+          "summary": "",
+          "url": "https://fingerprint.com/webinar/workshop-new-account-fraud/?utm_source=tldrmain&utm_medium=newsletter&utm_campaign=Primary09082026&utm_content=cta_save_spot_sept",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a08",
+          "order": 1,
+          "title": "HOW WELL DO AGENTS USE TEST AND VERIFICATION TECHNIQUES?",
+          "summary": "Across 26 testing conditions for a Rust Zstd task, no technique dramatically outperformed the others, and the default prompt performed above average. Fuzzing and property-based testing helped slightly in some high-effort runs, while TDD and several testing skills underperformed. Agents often followed the requested framework superficially, writing ordinary tests inside new tools or proving properties that did not improve correctness.",
+          "url": "https://danluu.com/agentic-testing/?utm_source=tldrdev",
+          "reading_time_minutes": 58,
+          "source_domain": "danluu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a09",
+          "order": 2,
+          "title": "EXPLORING SPECULATIVE DECODING IN VLLM ON AMD GPUS",
+          "summary": "Speculative decoding lets vLLM verify multiple draft tokens in one target-model pass while preserving the target model's output behavior. Tests on AMD MI300X and MI355X GPUs show that throughput depends heavily on the drafting method, proposal length, model family, workload, and token acceptance rate, with setup and tuning guidance for MTP, EAGLE-3, DFlash, and DSpark.",
+          "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus?utm_source=tldrdev",
+          "reading_time_minutes": 242,
+          "source_domain": "vllm.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a10",
+          "order": 3,
+          "title": "FROM S3 TO GPU IN ONE COPY",
+          "summary": "Vortex streams compressed columnar data from S3 through host memory to the GPU with a single copy, avoiding disk staging and CPU decompression bottlenecks. Its layouts prune data before transfer, and its encodings support GPU-side decompression and computation, producing scans around 30 times faster than Parquet in the demo.",
+          "url": "https://spiraldb.com/blog/from-s3-to-gpu-in-one-copy?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "spiraldb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a11",
+          "order": 1,
+          "title": "SIMPLE IS NOT SMALL",
+          "summary": "Small programs can still be tightly coupled, while large systems can present a simple interface. Simplicity comes from separating concerns and choosing representations that do not braid unrelated behavior together, not just minimizing lines of code.",
+          "url": "https://jyn.dev/simple-is-not-the-same-as-small/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "jyn.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a12",
+          "order": 2,
+          "title": "PROGRAMMING IS ART",
+          "summary": "Some developers value programming as a creative practice, not just a means to ship products or earn money. Even if AI can generate code faster, people who love the process will keep writing code by hand because the act itself is the reward.",
+          "url": "https://orchidfiles.com/programming-is-art/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "orchidfiles.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a13",
+          "order": 3,
+          "title": "MAKING SOFTWARE HURTS NOW",
+          "summary": "AI adoption is eroding trust in open source, where maintainers now face suspicion over how contributions were produced while many workers cannot afford to opt out of mandated tools. The essay calls for more solidarity with people sharing public goods instead of directing justified anger at fellow developers.",
+          "url": "http://notes.erlend.sh/3muwdtclths2d?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "notes.erlend.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a14",
+          "order": 1,
+          "title": "O'REILLY EARLY RELEASE: SCALING AI ADOPTION IN ENGINEERING",
+          "summary": "In this new O'Reilly book, author and CTO community leader Peter Bell presents a clear, pragmatic framework for adopting and scaling AI in engineering organizations. Available in early release compliments of Antithesis [15], and includes hands-on guidance for navigating the",
+          "url": "https://pages.antithesis.com/oreilly-scaling-ai-ebook-tldr?utm_medium=Email&utm_campaign=tldrdev_2026&utm_source=tldrdev&utm_content=tldrdev_20260908",
+          "reading_time_minutes": null,
+          "source_domain": "pages.antithesis.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a14-02",
+          "order": 2,
+          "title": "challenges of AI adoption. Claim your free copy ›",
+          "summary": "",
+          "url": "https://pages.antithesis.com/oreilly-scaling-ai-ebook-tldr?utm_medium=Email&utm_campaign=tldrdev_2026&utm_source=tldrdev&utm_content=tldrdev_20260908",
+          "reading_time_minutes": null,
+          "source_domain": "pages.antithesis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a16",
+          "order": 3,
+          "title": "OPENSCREEN",
+          "summary": "OpenScreen is a free, open-source desktop recorder for Windows, macOS, and Linux that captures screens without watermarks or subscriptions. It uses GPU-accelerated recording and is designed for quickly producing product demos and shareable videos.",
+          "url": "https://github.com/getopenscreen/openscreen?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a17",
+          "order": 4,
+          "title": "CVE MCP SERVER",
+          "summary": "CVE MCP Server gives Claude 27 security-intelligence tools backed by 21 APIs, including CVE lookup, EPSS scoring, CISA KEV, MITRE ATT&CK, Shodan, and VirusTotal. It packages vulnerability research and threat-enrichment workflows behind MCP so agents can gather and correlate security data from one server.",
+          "url": "https://github.com/mukul975/cve-mcp-server?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a18",
+          "order": 5,
+          "title": "CLAUDE ADS",
+          "summary": "Claude Ads is a Claude Code skill for paid-media operations across 12 advertising platforms, including Google, Meta, YouTube, LinkedIn, TikTok, and X. It supports source-grounded audits, deterministic scoring, versioned JSON reports, and capability-gated account changes.",
+          "url": "https://github.com/AgriciDaniel/claude-ads?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a19",
+          "order": 1,
+          "title": "HAVE THE FRONTIER LABS MIXED UP AI SAFETY AND SECURITY?",
+          "summary": "Frontier labs may be treating security like probabilistic AI safety, accepting low failure rates where deterministic containment should be required. Recent agent escapes show that weak sandbox rules and ignored alerts can defeat otherwise useful monitoring, so known controls must work every time and trigger real intervention.",
+          "url": "https://martinalderson.com/posts/ai-safety-vs-security/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "martinalderson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a20",
+          "order": 2,
+          "title": "7 AI MODELS RAN REAL BUSINESSES: $12,431 IN FAKE INVOICES, 2,797 SPAM EMAILS, $0 REVENUE",
+          "summary": "Seven frontier models received $300, an unlocked Mac mini, business tools, and 72 hours to make money. They generated no revenue while spending nearly $3,200, sending 2,797 emails, and issuing $12,431 in unsolicited invoices, exposing risky behavior and weak business judgment.",
+          "url": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "bottlenecklabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a21",
+          "order": 3,
+          "title": "USING GPT-6 ASTRA INSIDE CLAUDE CODE IS THE NEW META",
+          "summary": "A free local model-gateway plugin routes GPT requests from Claude Code through a ChatGPT login while leaving Claude requests on a claude.ai account. The workflow uses Astra to orchestrate, cheaper GPT-5.6 models to execute, and Opus to review, with setup notes for the context-window suffix, finite allowances, and proxy breakage.",
+          "url": "https://eigenwise.io/writing/using-gpt-6-astra-inside-claude-code-is-the-new-meta?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "eigenwise.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-09-08:a22",
+          "order": 1,
+          "title": "GOOGLE CLOUD TECHNICAL DEEP DIVE: HOW TO SECURE AND SCALE INTEROPERABILITY WITH AGENT PROTOCOLS",
+          "summary": "This Google Cloud session dives into the open Agent-to-Agent (A2A) protocol, MCPs, the Agent Development Kit (ADK), and frameworks",
+          "url": "https://cloudonair.withgoogle.com/events/securing-scaling-interoperability-agent-protocols?utm_source=tldr&utm_medium=email&utm_campaign=FY26-Q3-northam-NOR10000012-email-oi-na-named-tldr-newsletter&utm_content=tldr-dev-sep2026&utm_term=-",
+          "reading_time_minutes": null,
+          "source_domain": "cloudonair.withgoogle.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a22-02",
+          "order": 2,
+          "title": "related to payment authorization and UI. Watch now.",
+          "summary": "",
+          "url": "https://cloudonair.withgoogle.com/events/securing-scaling-interoperability-agent-protocols?utm_source=tldr&utm_medium=email&utm_campaign=FY26-Q3-northam-NOR10000012-email-oi-na-named-tldr-newsletter&utm_content=tldr-dev-sep2026&utm_term=-",
+          "reading_time_minutes": null,
+          "source_domain": "cloudonair.withgoogle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a23",
+          "order": 3,
+          "title": "YOUR AI CAN FIX THE BUG. BUT CAN IT FIND IT?",
+          "summary": "Experiments on hidden Django bugs show cheaper models can follow detailed instructions and reproduce known failures, but struggle to invent the questions and adversarial inputs required to discover defects independently.",
+          "url": "https://blog.reqproof.com/p/your-ai-can-fix-the-bug-can-it-find?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.reqproof.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a24",
+          "order": 4,
+          "title": "WHAT WE CAN LEARN FROM CLAUDE'S FABLE 5.1 SYSTEM PROMPT",
+          "summary": "A comparison of Fable 5.0 and 5.1 system prompts shows how changing model quirks, product policies, and tool-use guidance can create prompt debt unless instructions evolve with the model.",
+          "url": "https://www.dbreunig.com/2026/09/07/what-we-can-learn-from-claude-s-fable-5-1-system-prompt.html?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "dbreunig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a25",
+          "order": 5,
+          "title": "THE QUESTION WAS ALREADY WRITTEN",
+          "summary": "Anthropic's machine-generated Lean proof of Fermat's Last Theorem is mechanically verified, but its 13 million lines are too large for most consumer hardware and too opaque to serve as reusable mathematics.",
+          "url": "https://korbonits.com/blog/2026-09-06-the-question-was-already-written?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "korbonits.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-09-08:a26",
+          "order": 6,
+          "title": "NVIDIA PERSONAL AI ROUTER - PAIR",
+          "summary": "PAIR routes independent local-inference requests across compatible computers on the same network, exposing Ollama- and OpenAI-compatible endpoints while keeping prompts and responses local when every configured component is local.",
+          "url": "https://github.com/NVIDIA/Personal-AI-Router?utm_source=tldrdev%5B27%5D%5B28",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

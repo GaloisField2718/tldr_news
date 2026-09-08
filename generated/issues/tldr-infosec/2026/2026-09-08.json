@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-08",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-08",
+  "source_path": "TLDR InfoSec/article_08-09-2026.md",
+  "source_content_hash": "sha256:e7e3c7b1f0a95a361bf4041ff42438229738059616f965cab0b789e68aa6861a",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-08",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a04",
+          "order": 1,
+          "title": "THREAT HUNTING IS A SEARCH FOR PROOF, NOT JUST SIGNALS",
+          "summary": "Most security programs still frame threat hunting as a search for known indicators of compromise. Leaders approach it by trying to prove a hypothesis [5]like,\n\n“Could an attacker be moving laterally between internal systems?”\n\nor,\n\n“Is a service account being used outside of expected patterns?”\n\nTo answer those questions, you need context, sequence, and evidence. Logs and endpoint data are fragmented. You need network visibility that can expose hidden and unauthorized activity [6].\n\nNETSCOUT closes the intelligence gap by generating continuous, packet-level network evidence analyzed at the point of collection.",
+          "url": "https://www.netscout.com/cybersecurity?utm_source=tldr&utm_medium=display&utm_campaign=brand-campaign&utm_content=campaign_page_header_threat_hunting_search&utm_keyword=tldr-nl-0908",
+          "reading_time_minutes": null,
+          "source_domain": "netscout.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a07",
+          "order": 2,
+          "title": "response and limit business impacts. See how →",
+          "summary": "",
+          "url": "https://www.netscout.com/cybersecurity?utm_source=tldr&utm_medium=display&utm_campaign=brand-campaign&utm_content=campaign_page_cta_how&utm_keyword=tldr-nl-0908",
+          "reading_time_minutes": null,
+          "source_domain": "netscout.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a08",
+          "order": 1,
+          "title": "N-ABLE PATCHES MAX-SEVERITY N-CENTRAL FLAW AMID ONGOING ATTACKS",
+          "summary": "Unauthenticated attackers can execute code on internet-exposed N-central RMM servers through a low-complexity attack exploiting CVE-2026-86218. Huntress has flagged it as a potential zero-day after finding a compromised customer instance whose logs had already rotated. Shadowserver counts nearly 1,500 exposed N-central servers, most in the United States and Europe. On-premises operators need N-central 2026.3 Hotfix 4 immediately, since HF3 systems remain vulnerable to this flaw despite last week's fixes for the authentication-bypass pair CVE-2026-86206 and CVE-2026-86207.",
+          "url": "https://links.tldrnewsletter.com/os5Tdh",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a09",
+          "order": 2,
+          "title": "POSTGRESHELL: THE DATABASE POWERING MUCH OF THE INTERNET HAD AN OPEN DOOR FOR 12 YEARS",
+          "summary": "CVE-2026-6471 affects PostgreSQL 9.4 through 18. A low-privilege REPLICATION account could supply an unchecked output-plugin path, load attacker code, gain PostgreSQL superuser access, and establish persistence, while Windows targets could fetch a DLL over SMB. It is recommended to patch PostgreSQL, remove unused replication privileges, restrict pg_hba.conf, block outbound SMB and NFS, and monitor suspicious replication slots.",
+          "url": "https://www.cyera.com/pt-br/research/postgreshell-the-database-powering-much-of-the-internet-had-an-open-door-for-12-years?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "cyera.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a10",
+          "order": 3,
+          "title": "MATHSPACE DISCLOSES DATA BREACH AFFECTING OVER 1M PEOPLE",
+          "summary": "Online math learning software Mathspace disclosed a data breach affecting over 1M students, guardians, school staff, and Mathspace staff from Australia and New Zealand. The attackers exploited a vulnerability in a self-hosted Metabase instance used for internal reporting. Mathspace did not disclose exactly what data was breached but stated that academic records, authentication credentials, or any data linking records to a school (other than potentially email domains) were not leaked.",
+          "url": "https://links.tldrnewsletter.com/kguNLQ",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a11",
+          "order": 1,
+          "title": "FILELESS ELF EXECUTION VIA O_TMPFILE",
+          "summary": "A red-team loader chains O_TMPFILE with execveat(AT_EMPTY_PATH) to run an ELF that never gets a directory entry, allocating a real inode on /tmp with no dentry so ls, find, inotify, and fanotify never see it, then reopening the fd read-only through /proc/self/fd/ to clear ETXTBSY and executing it directly with no path string ever constructed. The technique sidesteps fileless detection built for memfd_create because it produces none of the expected artifacts: no memfd: prefix, no 00:01 device, no syscall 319, and the only residual signal is the (deleted) suffix that countless legitimate open-unlink-exec programs also generate. Defenders should stop keying fileless detection on memfd_create specifics and instead watch execveat with AT_EMPTY_PATH against anonymous /tmp/# (deleted) executables, correlating prctl(PR_SET_NAME) renames and loaders that unlink /proc/self/exe, since this combination is absent from Elastic's FENIX 15-technique matrix.",
+          "url": "https://matheuzsecurity.github.io/hacking/fileless-loader-bypassing-elastic-memfd/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "matheuzsecurity.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a12",
+          "order": 2,
+          "title": "TAMPER-EVIDENT AUDIT LOGS: HASH CHAINS, MERKLE TREES, AND EXTERNAL ANCHORING",
+          "summary": "This article explains how access control addresses the key questions an auditor has about logs by introducing specific mechanisms: hash chains for integrity, Merkle trees with signed checkpoints for an append-only history, and trusted time anchors like RFC 3161 or OpenTimestamps. It provides an implementation perspective on creating a cryptographically verifiable audit trail, including data structures, proof algorithms, and working Rust code. The guidance is based on established standards.",
+          "url": "https://zatona.dev/blog/tamper-evident-audit-logs?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "zatona.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a13",
+          "order": 3,
+          "title": "WIZ RED AGENT FINDS ITS WAY INTO SNOWFLAKE'S INTERNAL JIRA THROUGH A FLAW IN A GITHUB COPILOT-ASSISTED PR",
+          "summary": "Wiz Research's Red Agent autonomous security research tool discovered a vulnerability in a GitHub Actions workflow in the snowflakedb/snowflake-connector-net repository that allowed attackers to gain access to Snowflake's internal Jira. The vulnerability stemmed from a regression introduced in a PR that was reviewed and approved by GitHub Copilot, enabling code execution via template injection. Users of AI-assisted code generation tools should rigorously review code for introduced vulnerabilities. In this case, Copilot introduced a vulnerability by replacing a safe env + jq parsing pattern with direct string interpolation.",
+          "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a14",
+          "order": 1,
+          "title": "AI AGENTS ARE ALREADY MAKING DECISIONS INSIDE YOUR ENTERPRISE",
+          "summary": "THE REAL QUESTION: CAN YOU TRUST WHAT THEY DO? AvePoint's live AI Virtual Summit [15]shows how to govern agentic AI using the trusted governance methods you already know, turning AI potential into",
+          "url": "https://www.avepoint.com/events/ai-virtual-summit?utm_source=tldr&utm_medium=newsletter&utm_campaign=global_ai-confidence_cmp-15082-v0q5n-headline&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "avepoint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a15",
+          "order": 2,
+          "title": "measurable, controlled outcomes. Register for Thursday's event.",
+          "summary": "",
+          "url": "https://www.avepoint.com/events/ai-virtual-summit?utm_source=tldr&utm_medium=newsletter&utm_campaign=global_ai-confidence_cmp-15082-v0q5n-body&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "avepoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a16",
+          "order": 3,
+          "title": "RAPTOR",
+          "summary": "RAPTOR is an autonomous security research framework built on Claude Code that integrates static analysis, binary analysis, LLM-driven vulnerability validation, exploit generation, and patch writing into a single workflow. It ships over 200 custom Semgrep, Coccinelle, and CodeQL rules, a six-stage exploitability validation pipeline that filters scanner noise before a finding is called real, and optional Z3 pre-screening that drops provably unreachable dataflow paths. Subprocesses that handle untrusted repositories are sandboxed using Linux namespaces, Landlock, and seccomp, and the analysis layer accepts Anthropic, OpenAI, Gemini, Mistral, or local Ollama models with a per-run cost cap.",
+          "url": "https://github.com/gadievron/raptor?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a17",
+          "order": 4,
+          "title": "DAYBREAK FOR FRONTLINE DEFENDERS: $1B TO PROTECT ESSENTIAL SERVICES",
+          "summary": "OpenAI has committed $1 billion in subsidized Daybreak access, training, and technical support for resource-constrained defenders, with consumption targeted over the next six months and prioritizing water and wastewater utilities, electric grid operators, state and local governments, community banks, nonprofits, and open-source maintainers. Daybreak Blue covers routine defensive work on mainline models. Daybreak Red provides approved organizations with specialized cyber models. Roughly 2,000 organizations have already onboarded, and more than 35 partner products are shipping through the Daybreak Defense Network.",
+          "url": "https://links.tldrnewsletter.com/v9q7QQ",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a18",
+          "order": 1,
+          "title": "BEYOND LAZARUS: HOW NORTH KOREA ORGANIZES ITS CYBER OPERATIONS",
+          "summary": "North Korea has been shown to run offensive cyber as a self-funding arm of the state, with theft revenue estimated at over a billion dollars annually feeding sanctioned weapons programs. Sekoia and Kudelski Security mapped the hierarchy behind that model, covering the GRIB (ex-RGB), the NIA (ex-MSS), renamed in June, and the decomposition of the Lazarus umbrella into APT38, Andariel, Famous Chollima, and the Sleet sub-clusters. The paper also traces the enabling layer of IT worker units, Chinese and Russian academic pipelines, and front companies such as Ryonbong and Chinyong, while cautioning that constant institutional reshuffling limits how long any DPRK org chart stays accurate.",
+          "url": "https://www.sekoia.com/blog/beyond-lazarus-organization-of-dprk-cyber-capabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "sekoia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a19",
+          "order": 2,
+          "title": "JSCEAL MALWARE CAN BYPASS GOOGLE AUTHENTICATION USING STOLEN SESSION COOKIES",
+          "summary": "JSCeal is distributed via fake TradingView installers advertised on Facebook and Google. It harvests browser passwords, cookies, OAuth tokens, and profile information from Chromium browsers. Stolen Google cookies can restore authenticated sessions and bypass login screens. The malware also logs keystrokes, takes screenshots, and sets up a local proxy that manipulates traffic for Binance, Bybit, Ledger, and various other services.",
+          "url": "https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a20",
+          "order": 3,
+          "title": "HACKERS DRAIN $320M IN BITCOIN FROM LIQUID NETWORK, CLAIM THEY'RE THE GOOD GUYS",
+          "summary": "Attackers withdrew about 4,000 BTC, roughly 95% of Liquid's federation wallet. Liquid disabled bridge nodes and asked exchanges to halt L-BTC deposits and withdrawals. The attackers used SideSwap's peg-out process, though Liquid says no Peg-out Authorization Key was compromised. They claim they will return most funds after every node receives a fix.",
+          "url": "https://www.theregister.com/security/2026/09/07/hackers-drain-320m-in-bitcoin-from-liquid-network-claim-theyre-the-good-guys/5294770?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-08:a21",
+          "order": 1,
+          "title": "BUILD FOR THE AGENTIC INTERNET AT CLOUDFLARE CONNECT 2026, OCT. 19-21 IN SAN FRANCISCO",
+          "summary": "100+ sessions, five tracks, top speakers, hands-on labs, and",
+          "url": "https://events.www.cloudflare.com/connect2026?utm_medium=display&utm_source=direct&utm_campaign=2026-q3-acq-namer-connectivity-ge-he-general-connect",
+          "reading_time_minutes": null,
+          "source_domain": "events.www.cloudflare.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a21-02",
+          "order": 2,
+          "title": "practical AI, security, and networking guidance. Register Now",
+          "summary": "",
+          "url": "https://events.www.cloudflare.com/connect2026?utm_medium=display&utm_source=direct&utm_campaign=2026-q3-acq-namer-connectivity-ge-he-general-connect",
+          "reading_time_minutes": null,
+          "source_domain": "events.www.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a22",
+          "order": 3,
+          "title": "CONNECTWISE WARNS OF NEW SCREENCONNECT FLAW WITHOUT PATCH",
+          "summary": "ConnectWise disclosed an unpatched file transfer flaw affecting both cloud and on-premises ScreenConnect deployments.",
+          "url": "https://links.tldrnewsletter.com/s5joRW",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a23",
+          "order": 4,
+          "title": "MANCHESTER AIRPORTS GROUP DATA ON 8.8 MILLION PEOPLE LEAKED AFTER RANSOM REFUSAL",
+          "summary": "FulcrumSec leaked about 550GB allegedly stolen from Manchester Airports Group after MAG declined a ransom.",
+          "url": "https://links.tldrnewsletter.com/whfUA2",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-08:a24",
+          "order": 5,
+          "title": "STATEMENT: NOTICE OF PERSONAL DATA BREACH AFFECTING FORMER AND CURRENT EMPLOYEES",
+          "summary": "Natural Resources Wales disclosed a spreadsheet containing diversity-monitoring data for people employed between April 2013 and March 2018.",
+          "url": "https://naturalresources.wales/about-us/news-and-blogs/news/statement-notice-of-personal-data-breach-affecting-former-and-current-employees/?lang=en&utm_source=tldrinfosec%5B25%5D%5B26",
+          "reading_time_minutes": 1,
+          "source_domain": "naturalresources.wales",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
