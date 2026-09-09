@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-09",
+  "source_path": "TLDR InfoSec/article_09-09-2026.md",
+  "source_content_hash": "sha256:1fba93d288f5fd6212ea4fbe902d32a380daa14b50def66045c6f88dc13550f0",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a04",
+          "order": 1,
+          "title": "THINK LIKE AN ATTACKER. PREPARE LIKE A DEFENDER.",
+          "summary": "What do cybercriminals look for before they strike? Former FBI Special Agent Jeff Lanza and Flexential VP of Cybersecurity Services Will Bass share lessons from real-world cases in OUTSMARTING CYBERCRIME: LESSONS FROM AN FBI INSIDER [5]. [5] Learn how attackers identify vulnerabilities, exploit human behavior, and gain a foothold, plus get practical insights for reducing risk, strengthening cyber resilience, and preparing your organization to respond and recover when prevention isn't enough.",
+          "url": "https://www.flexential.com/resources/ebook/outsmarting-cybercrime-lessons-fbi-insider?utm_source=tldr&utm_medium=email&utm_campaign=data-protection&utm_content=q3-26_outsmarting-cybercrime-lessons-fbi-insider_primary_header_think_like_attacker",
+          "reading_time_minutes": null,
+          "source_domain": "flexential.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a06",
+          "order": 1,
+          "title": "WEWORM",
+          "summary": "Calif has demonstrated a zero-click worm that takes over a WeChat account via an unanswered VoIP call, then uses that account to call the victim's contacts. This exploit relies on a memory corruption bug in WeChat's VoIP stack and requires the attacker to be on the victim's friend list, which is a weak barrier since one compromised friend can lead to further exploitation. Tencent has mitigated this issue in server-side updates and in client versions Android 8.0.77 and iOS 8.0.76, so users should enforce these updates and reconsider trusted-contact privileges in messaging apps.",
+          "url": "https://calif.io/research/weworm?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "calif.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a07",
+          "order": 2,
+          "title": "220M TRAVELER RECORDS EXPOSED IN VIETNAM-LINKED APIS LEAK",
+          "summary": "Security researchers gained access to an Elasticsearch cluster containing an Advanced Passenger Information System (APIS) database with records belonging to 220M passengers and flight crew members. The researchers received a 401 when trying to access the cluster via the public internet but could reach the database, which accepted default credentials via a cloud-based access path. The data includes passengers' and crew members' names, dates of birth, sex, nationalities, passport or travel document numbers, document expiration dates, and issuing countries.",
+          "url": "https://links.tldrnewsletter.com/NEF1Xc",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a08",
+          "order": 3,
+          "title": "HACKERS BREACH F5 BIG-IP APM DEVICES TO DEPLOY LINUX ROOTKIT",
+          "summary": "There is a malware campaign targeting F5 BIG-IP APM devices that exploits a critical RCE vulnerability and injects a fileless web shell. A distinct installer deploys the payload by infecting the Apache executable and modifying SELinux configurations. ESET researchers identified the malware as PoisonedRefresh.",
+          "url": "https://links.tldrnewsletter.com/IvoITh",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a09",
+          "order": 1,
+          "title": "HACKING AI CUSTOMER SERVICE AGENTS",
+          "summary": "Researchers demonstrated attacks against customer-support agents through email spoofing, duplicate From headers, out-of-office replies, and email-address parser mismatches. These flaws can trigger profile changes, refunds, phishing emails, or account data disclosure. Alternatively, other paths reset OTP rate limits, abuse IVR checks, and steal third-party reset codes from monitored support inboxes. Hidden instructions in alternate MIME parts, CSS-hidden text, and attacker-controlled images can mislead automated processing. Untrusted forum comments and namespace-controlled sitemap pages can also poison support knowledge bases.",
+          "url": "https://www.intigriti.com/researchers/blog/hacking-tools/hacking-ai-customer-service-agents?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "intigriti.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a10",
+          "order": 2,
+          "title": "RFD 301: HAS ANYBODY SEEN MY KEYS?: A KEY-HIERARCHY STRATEGY FOR RACK-LEVEL SECURITY",
+          "summary": "Oxide published its internal design for protecting rack data at rest, rooting everything in a Shamir-shared rack secret that no attacker can recover without stealing at least K sleds or M.2 drives. Per-drive ZFS wrapper keys are derived with HKDF using SHA3-256 and an info string built from the PCI vendor ID, drive model, and serial number, so compromising one disk key leaves the others intact. The harder problem is rotation across a distributed two-phase commit: the dealer encrypts the epoch N-1 rack secret under a key derived from the epoch N secret using chacha20poly1305, keeping the old secret unrecoverable until the new configuration commits.",
+          "url": "https://rfd.shared.oxide.computer/rfd/0301?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "rfd.shared.oxide.computer",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a11",
+          "order": 3,
+          "title": "THE SHARED CLIPBOARD INSIDE THE SANDBOX: CROSS-ACCOUNT DATA LEAKAGE IN CHATGPT",
+          "summary": "Check Point Research discovered that ChatGPT code-execution containers from different accounts were using package metadata as a covert cross-account channel because these containers could read and write item properties on the same internal JFrog Artifactory instance. This allowed attackers to deliver a planted instruction through a shared conversation, a custom GPT, or a pasted prompt. The model would then run a hidden second task stream in the same turn, pulling data from the victim's connected Gmail while the visible answer stayed clean. Although OpenAI has decommissioned that Artifactory instance, defenders should enable per-session isolation for any mutable state in shared internal services and review default low-risk reads configuration.",
+          "url": "https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "research.checkpoint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a12",
+          "order": 1,
+          "title": "PRISM-PLATFORM",
+          "summary": "All-in-one OSINT platform — 22+ modules, AI analysis, real-time dashboard, and OPSEC scoring. Scan domains, IPs, emails, phones, and usernames.",
+          "url": "https://github.com/NovaCode37/Prism-platform?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a13",
+          "order": 2,
+          "title": "SAGE",
+          "summary": "Sage is a security tool from Gen Digital that intercepts tool calls made by AI coding assistants and blocks dangerous ones before they execute. It features URL reputation checks against a cloud service, 300+ local YAML heuristics for risky commands and credential exposure, and two-tier prompt injection detection combining heuristics with a fine-tuned ML model. Sage is supported in many harnesses like Claude Code, Cursor, VS Code, OpenClaw, and OpenCode, with npm or marketplace installs per platform.",
+          "url": "https://github.com/gendigitalinc/sage?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a14",
+          "order": 3,
+          "title": "DECBENCH",
+          "summary": "DecBench is a living benchmark from Noelo Lab at the University of Georgia that scores decompilers and LLMs on exact source recovery. It measures perfect-match percentage across datasets covering control flow structure, type recovery, and recompilability, with new tools added to the leaderboard as they ship.",
+          "url": "https://decbench.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "decbench.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a15",
+          "order": 1,
+          "title": "FAKE IT CALLS TARGET EXECUTIVES IN MICROSOFT 365 DATA THEFT AND EXTORTION ATTACKS",
+          "summary": "PREY-0058 targets executives through fake IT help-desk calls and authentication-themed domains. Its AitM pages capture Microsoft 365 credentials, MFA approvals, and session tokens. Operators replay tokens through residential proxies, then enumerate SharePoint and Entra ID. They bulk-exfiltrate SharePoint, OneDrive, Exchange, and Box data before issuing extortion demands. Defenders are advised to watch for proxy token replay, mailbox harvesting, and new MFA-themed domains.",
+          "url": "https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a16",
+          "order": 2,
+          "title": "UK FOOD SUPPLY CHAIN AT RISK FROM HOSTILE ATTACKS",
+          "summary": "The National Audit Office named cyberattacks as a threat to the UK food supply chain. Marks & Spencer estimates its April 2025 attack cost £136 million after warehouse systems were disconnected, and the Co-op confirmed theft of 6.5 million member records. Several food supply chain organizations cited the substantial investments businesses are making to manage the threat and incidence of cyber-attacks.",
+          "url": "https://www.theregister.com/security/2026/09/07/uk-food-supply-chain-at-risk-from-hostile-attacks/5294719?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a17",
+          "order": 3,
+          "title": "PASSKEYS AND WEBAUTHN EXPLAINED",
+          "summary": "This walkthrough covers passkey registration and login end-to-end, from server-issued challenges and stored public keys to SimpleWebAuthn verification in Node. Phishing resistance comes from RP ID scoping, which browsers enforce, but servers must still verify alongside exact origin, challenge freshness, and user verification. Teams tend to underestimate single-use challenges, concurrent login tabs, credential management screens, and recovery paths that end up weaker than the login they back up.",
+          "url": "https://flaviocopes.com/passkeys-webauthn/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "flaviocopes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-09:a18",
+          "order": 1,
+          "title": "THINK LIKE AN ATTACKER. PREPARE LIKE A DEFENDER.",
+          "summary": "Learn how cybercriminals identify vulnerabilities, exploit human behavior, and gain a foothold in OUTSMARTING CYBERCRIME: LESSONS FROM AN FBI INSIDER [18], with practical insights for strengthening cyber",
+          "url": "https://www.flexential.com/resources/ebook/outsmarting-cybercrime-lessons-fbi-insider?utm_medium=email&utm_source=tldr&utm_campaign=data-protection&utm_content=q3-26_outsmarting-cybercrime-lessons-fbi-insider_quick-link",
+          "reading_time_minutes": null,
+          "source_domain": "flexential.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a18-02",
+          "order": 2,
+          "title": "resilience. Get the Ebook",
+          "summary": "",
+          "url": "https://www.flexential.com/resources/ebook/outsmarting-cybercrime-lessons-fbi-insider?utm_medium=email&utm_source=tldr&utm_campaign=data-protection&utm_content=q3-26_outsmarting-cybercrime-lessons-fbi-insider_quick-link",
+          "reading_time_minutes": null,
+          "source_domain": "flexential.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a19",
+          "order": 3,
+          "title": "GRINDR PAYS £26M TO SETTLE UK LAWSUIT OVER ALLEGEDLY SHARING USERS' HIV STATUS",
+          "summary": "Grindr agreed to pay £26m to settle a UK privacy claim involving 12,000 users as the suit alleged pre-2020 sharing of sensitive data, including HIV status, with advertising firms.",
+          "url": "https://www.theguardian.com/business/2026/sep/07/grindr-settle-uk-lawsuit-dating-app-ad?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a20",
+          "order": 4,
+          "title": "NEW ANDROID RAT USES WORM TO TARGET EXPOSED ADB SERVICES",
+          "summary": "Dark Atlas has documented THost9, an Android RAT whose worm component scans for internet-exposed ADB services and authenticates with prepared keys to install itself, giving operators shell access, file transfer, and tunneling on affected phones and Redroid containers.",
+          "url": "https://www.scworld.com/brief/new-android-rat-uses-worm-to-target-exposed-adb-services?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-09:a21",
+          "order": 5,
+          "title": "MICROSOFT PLUGS NEARLY 1,000 SECURITY HOLES",
+          "summary": "Microsoft has released 974 patches, its largest batch ever, including two actively exploited privilege-escalation zero-days and 113 critical vulnerabilities.",
+          "url": "https://krebsonsecurity.com/2026/09/microsoft-plugs-nearly-1000-security-holes/?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 2,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

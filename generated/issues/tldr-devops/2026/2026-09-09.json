@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-09",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-09",
+  "source_path": "TLDR DevOps/article_09-09-2026.md",
+  "source_content_hash": "sha256:5afb6148d27797dd8744710cf16823436404fd481d424ee7793cab35dc99d1bd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a04",
+          "order": 1,
+          "title": "RUNNING KIMI K3 LOCALLY? UNLESS YOU HAVE 1.6 TB OF RAM, YOU'LL NEED TO QUANTIZE IT",
+          "summary": "Want to run open-weight models on your own hardware? Unless you've got extra TBs of RAM lying around, that's gonna cost you.\n\nQuantization makes LLMs 4x smaller and 2x faster [5] while only losing 5-10% in accuracy. This ngrok blog breaks down:\n\n* How floating point precision works and how models sacrifice it * How to compress floats [6] using quantization * How to measure model quality loss after quantization\n\nLearn how to route between local models and the bleeding edge.",
+          "url": "https://ngrok.com/blog/quantization?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-03_Primary_ngrok&utm_content=header_running_kimi_k3",
+          "reading_time_minutes": null,
+          "source_domain": "ngrok.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a07",
+          "order": 2,
+          "title": "Read the blog",
+          "summary": "",
+          "url": "https://ngrok.com/blog/quantization?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-08-03_Primary_ngrok&utm_content=cta_blog",
+          "reading_time_minutes": null,
+          "source_domain": "ngrok.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a08",
+          "order": 1,
+          "title": "KUBERNETES PROMOTES KYAML AS A SAFER, MORE CONSISTENT WAY TO WORK WITH MANIFESTS",
+          "summary": "KYAML is a stricter YAML dialect for Kubernetes that reduces syntactic and type ambiguity while remaining valid YAML and compatible with existing tooling. By standardizing configuration into a more explicit format, KYAML can improve consistency, validation, diffs, and machine-generated manifests, making it particularly relevant as Helm, GitOps systems, infrastructure tooling, and AI agents increasingly generate Kubernetes configuration.",
+          "url": "https://www.infoq.com/news/2026/09/kubernetes-kyaml-manifests/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a09",
+          "order": 2,
+          "title": "CLOUD NATIVE COMPUTING FOUNDATION ANNOUNCES KARMADA GRADUATION",
+          "summary": "The Cloud Native Computing Foundation (CNCF) announced the graduation of Karmada, an open source project for running applications across multiple Kubernetes clusters and clouds. The project has attracted more than 1,214 contributors and is used in production by companies including Bloomberg, Wellhub, and Alibaba Cloud. Karmada reached production maturity with its v1.19 release, which improves scheduling for distributed AI training jobs. To graduate, the project completed a third-party security audit and established a formal steering committee.",
+          "url": "https://www.cncf.io/announcements/2026/09/07/cloud-native-computing-foundation-announces-karmada-graduation/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a10",
+          "order": 1,
+          "title": "HOW YAHOO OPTIMIZES RESOURCES WITH FLEXIBLE VMS IN MANAGED SERVICE FOR APACHE SPARK",
+          "summary": "Flexible VMs in Google Cloud's Managed Service for Apache Spark allow Yahoo to maintain reliable analytics pipeline provisioning by ranking acceptable VM shapes and automatically searching across regional zones when preferred capacity is unavailable. This approach reduced Yahoo's cluster provisioning failures caused by regional capacity stockouts by 85% while improving infrastructure resilience and reducing manual intervention.",
+          "url": "https://cloud.google.com/blog/products/data-analytics/how-yahoo-optimizes-apache-spark-with-flexible-vms/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a11",
+          "order": 2,
+          "title": "FROM CHAOS TO CONTROL: ADDRESSING SHARD DISTRIBUTION CHALLENGES IN M3DB WITH SUBCLUSTERS",
+          "summary": "Uber redesigned M3DB's shard placement for large clusters by partitioning nodes into self-contained subclusters that own non-overlapping portions of the shard space. The approach reduces failure and maintenance blast radius, allows operations on separate subclusters to run in parallel, and uses a greedy migration algorithm to keep shard distribution balanced during scaling.",
+          "url": "https://www.uber.com/us/en/blog/from-chaos-to-control/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "uber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a12",
+          "order": 3,
+          "title": "HOW TUBULAR LABS RECLAIMED 50% OF ENGINEERING CAPACITY BY REBUILDING THEIR 70TB PIPELINE ON APACHE ICEBERG AND AMAZON S3 TABLES",
+          "summary": "Tubular Labs rebuilt a 70TB analytics pipeline handling roughly 2 billion row updates per day around Apache Spark, Iceberg, and Amazon S3 Tables. Infrastructure-related recovery time fell from 12–16 hours to about 40 minutes, while multi-billion-row pipelines that previously required 6–8 hours now finish end-to-end in under two hours.",
+          "url": "https://aws.amazon.com/blogs/storage/how-tubular-labs-reclaimed-50-of-engineering-capacity-by-rebuilding-their-70tb-pipeline-on-apache-iceberg-and-amazon-s3-tables/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a13",
+          "order": 1,
+          "title": "THE FUTURE OF OPEN SOURCE SEARCH AND OBSERVABILITY STARTS AT OPENSEARCHCON",
+          "summary": "Leaders from Apple, CERN, IBM, Intel, and Walmart will gather for three days of keynotes, technical sessions, and hands-on workshops on",
+          "url": "https://hubs.la/Q04t6pvm0?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a14",
+          "order": 2,
+          "title": "vector search and agentic AI at OpenSearchCon North America,",
+          "summary": "September 22-24 in San Jose. Come for the talks, leave with real production patterns you can use.",
+          "url": "https://hubs.la/Q04t6pvm0",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a14-02",
+          "order": 3,
+          "title": "VIEW THE AGENDA",
+          "summary": "",
+          "url": "https://hubs.la/Q04t6pvm0",
+          "reading_time_minutes": null,
+          "source_domain": "hubs.la",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a15",
+          "order": 4,
+          "title": "LIGHTPANDA BROWSER",
+          "summary": "Lightpanda is a new headless browser written in the Zig programming language and designed for AI agents. It is not a Chromium fork, allowing it to use significantly less memory and CPU than existing browsers while executing JavaScript. Users can run the browser with Puppeteer or Playwright scripts.",
+          "url": "https://github.com/lightpanda-io/browser?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a16",
+          "order": 5,
+          "title": "CONTEXT MODE",
+          "summary": "Context Mode is an MCP server that reduces tool output size by 98% and preserves session memory when AI coding agents compact conversations. It tracks file edits, git operations, and user decisions in SQLite, allowing agents to resume work without repeating context. The tool supports 17 clients including Claude Code, VS Code Copilot, Cursor, and Gemini CLI.",
+          "url": "https://github.com/mksglu/context-mode?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a17",
+          "order": 1,
+          "title": "PROJECT HYDRAFUSION: FRONTIER QUALITY VIA MULTI-MODEL ORCHESTRATION",
+          "summary": "HydraFusion is GitHub's runtime orchestration system that dynamically combines models from multiple providers using single-model, cascade, or critique workflows to balance coding quality, cost, and latency. In offline benchmarks, it matched or exceeded Claude Opus 5 quality while reducing estimated costs by 36% to 67%, demonstrating the potential of adaptive multi-model routing for agentic software development.",
+          "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a18",
+          "order": 2,
+          "title": "CLICKHOUSE AS A STREAMING HTTP API",
+          "summary": "ClickHouse 26.8 can expose controlled database queries directly as streaming HTTP endpoints using named handlers, typed URL parameters, result transformations, and framing formats. Simple data APIs can therefore stream query results and progress without a separate pass-through application service, while SQL security controls can restrict access to underlying data.",
+          "url": "https://clickhouse.com/blog/clickhouse-streaming-http-api?utm_source=tldrdevops",
+          "reading_time_minutes": 24,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-09:a19",
+          "order": 1,
+          "title": "IS YOUR INFRASTRUCTURE READY FOR CHANGE?",
+          "summary": "Stop building for peak demand. The capacity readiness playbook for hybrid IT explores how to stay ready for growth, testing, and recovery while reducing overprovisioning, idle capacity, and unnecessary cost.",
+          "url": "https://www.flexential.com/resources/ebook/stop-building-peak?utm_medium=email&utm_source=tldr&utm_campaign=cloud&utm_content=q3-26_stop-building-peak_quick-link",
+          "reading_time_minutes": null,
+          "source_domain": "flexential.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a19-02",
+          "order": 2,
+          "title": "Get the Playbook.",
+          "summary": "",
+          "url": "https://www.flexential.com/resources/ebook/stop-building-peak?utm_medium=email&utm_source=tldr&utm_campaign=cloud&utm_content=q3-26_stop-building-peak_quick-link",
+          "reading_time_minutes": null,
+          "source_domain": "flexential.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a20",
+          "order": 3,
+          "title": "INVESTIGATE DMS MIGRATION ISSUES WITH AWS DEVOPS AGENT",
+          "summary": "AWS DevOps Agent can be extended with a read-only MCP server specialized for AWS DMS, giving it migration-specific tools and runbooks to autonomously investigate validation failures, CDC latency, connectivity, replication health, and post-cutover database issues.",
+          "url": "https://aws.amazon.com/blogs/devops/investigate-dms-migration-issues-with-aws-devops-agent/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a21",
+          "order": 4,
+          "title": "AWS CONFIG NOW SUPPORTS 60 NEW RESOURCE TYPES",
+          "summary": "AWS Config now supports 60 additional AWS resource types across services, expanding coverage for discovery, compliance assessment, auditing, and remediation.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-config-new-resource-types/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-09:a22",
+          "order": 5,
+          "title": "INTRODUCING CHDB POSTGRES EXTENSION: HIGH-PERFORMANCE IMPORTS FROM CLOUD STORAGE",
+          "summary": "The new chdb PostgreSQL extension uses an in-process ClickHouse engine to import and export data between Postgres and S3, Google Cloud Storage, Azure Blob Storage, HDFS, HTTP endpoints, and local files across formats including Parquet, Arrow, JSON, Avro, and ORC.",
+          "url": "https://clickhouse.com/blog/introducing-chdb-postgres?utm_source=tldrdevops%5B23%5D%5B24",
+          "reading_time_minutes": 11,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
