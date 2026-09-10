@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-10",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-10",
+  "source_path": "TLDR Data/article_10-09-2026.md",
+  "source_content_hash": "sha256:410f605f5db33ef0d669ad8444c41d13d53b611d35636ac101a58dd372172723",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-10",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a04",
+          "order": 1,
+          "title": "COSTBENCH: 100 BILLION ROWS. UP TO 83% LOWER READ COSTS.",
+          "summary": "Fast queries are only part of your analytics bill. Ingesting and preparing fresh data costs money too.\n\nCostBench [5] measures ingest, preparation, and reads. We streamed 1 MILLION STOCK-MARKET QUOTES PER SECOND, reaching 100 BILLION ROWS, with dashboard and drill-down queries running throughout.\n\nAgainst traditional cloud data warehouses we tested, ClickHouse delivered:\n\n* Up to 82% LOWER INGEST COSTS * Up to 65% LOWER PREPARATION COSTS * Up to 83% LOWER READ COSTS",
+          "url": "https://clickhouse.com/benchmarks/costbench?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=2026-09-10_Primary_Clickhouse&utm_content=header_costbench_100_billion&utm_id=tldr1",
+          "reading_time_minutes": null,
+          "source_domain": "clickhouse.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-10:a06",
+          "order": 2,
+          "title": "numbers and reproduce the benchmark.",
+          "summary": "Try ClickHouse Cloud on your own data. Start with $300 IN FREE TRIAL CREDITS.",
+          "url": "https://clickhouse.com/benchmarks/costbench?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=2026-09-10_Primary_Clickhouse&utm_content=Body_inspect_numbers_reproduce_benchmark&utm_id=tldr1",
+          "reading_time_minutes": null,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a08",
+          "order": 1,
+          "title": "TOM LANE ON THE ARCHITECTURAL DECISIONS THAT SHAPED 30 YEARS OF POSTGRES",
+          "summary": "Tom Lane, a committer for 25 of Postgres' 30 years, walks through the architectural bets that held: process-per-connection for code simplicity, write-ahead logging in 8.0 that turned it from a plaything into a serious database, and MVCC pushing maintenance work into background vacuum. He credits Berkeley's liberal license for the project surviving where its contemporaries did not, names version 13 the buggiest release, and says he would delete partitioning given the chance.",
+          "url": "https://www.snowflake.com/en/blog/engineering/30-years-of-postgres-architecture-tom-lane/?utm_source=tldrdata",
+          "reading_time_minutes": 41,
+          "source_domain": "snowflake.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a09",
+          "order": 2,
+          "title": "BUILT FOR RELIABILITY: HOW AMERICAN EXPRESS PROCESSES PAYMENTS AT SCALE",
+          "summary": "American Express uses cells as complete payment-processing failure domains: microservices, databases, DNS, and reference data are local, while dynamic transactions are routed to the cell that owns their state. The design trades global coordination for controlled failure scope and deliberately rejects transactions when consistency cannot be established.",
+          "url": "https://blog.bytebytego.com/p/built-for-reliability-how-american?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.bytebytego.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a10",
+          "order": 3,
+          "title": "CLOUDFLOE'S QUERY ENGINE IN A CELLD CELL",
+          "summary": "Cloudfloe is a web interface for querying Iceberg data on S3 with DuckDB. This experiment tested whether a stateful, serverless-style cell could replace a per-query container: DuckDB WebAssembly read a 37,537-row Iceberg table in 148 ms, but cold or woken cells took 250–320 ms and retained most of their memory. Keeping the connection warm cut repeat queries to about 3 ms, making lifecycle policy, not raw startup, the core design tradeoff.",
+          "url": "https://gordonmurray.ie/data/2026/09/05/cloudfloes-query-engine-in-a-celld-cell.html?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "gordonmurray.ie",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a11",
+          "order": 1,
+          "title": "THE AI DATA SPRAWL",
+          "summary": "Non-technical staff now write billions of lines of analytics code. The problem is where it lives: random context, porous permissions, and output scattered across one-off chats, Slack pastes, and someone's laptop. With no record of which table an agent grabbed or which filter it dropped, the only feedback loop left is people disagreeing.",
+          "url": "https://www.linkedin.com/pulse/ai-data-sprawl-barry-mccardel-mpfpc/?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a12",
+          "order": 2,
+          "title": "5 CDC TOOLS AND THE TRADEOFFS YOU SHOULD KNOW",
+          "summary": "CDC evaluation should start with failure behavior, not connector counts. Compare capture method, initial snapshots and backfills, schema evolution, delivery semantics, observability, deployment model, and who owns recovery. A production proof needs representative data and a broken-destination test, especially for type fidelity and duplicate handling.",
+          "url": "https://www.theseattledataguy.com/5-cdc-tools-and-the-tradeoffs-you-should-know/?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "theseattledataguy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a13",
+          "order": 3,
+          "title": "JITTER IS THE CHEAPEST RELIABILITY FIX YOU ARE NOT USING",
+          "summary": "Distributed systems synchronise themselves without being told to: shared events such as deploys, cache flushes, or connection loss turn independent workloads into recurring load spikes. Add jitter to initial retries, TTL refreshes, heartbeats, token renewals, and scheduled work. This preserves average load while preventing retry storms from repeatedly hitting a recovering dependency in lockstep.",
+          "url": "https://ankit-rana.com/logs/49-jitter-synchronised-clients/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "ankit-rana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a14",
+          "order": 1,
+          "title": "KESTRA 2.0: A NEW ENGINE, WORKERS ANYWHERE, AND FLOWS AS AGENT TOOLS",
+          "summary": "Kestra is an open-source orchestration platform for scheduling and operating data, infrastructure, and business workflows. Its 2.0 LTS release separates control and data planes so workers can run across regions, clouds, or private networks over outbound-only connections. It also exposes flows as MCP tools for agents, decouples queue and storage choices, and includes migration tooling for 1.x users.",
+          "url": "https://kestra.io/blogs/release-2-0/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "kestra.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a15",
+          "order": 2,
+          "title": "FILAMENT",
+          "summary": "Filament replicates data from sources to sinks with full, incremental, or CDC modes, verifying every bounded batch on both sides of the write and advancing checkpoints only after success. Sources, sinks, state storage, and event transport are all swappable.",
+          "url": "https://github.com/galaxy-io/filament?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a16",
+          "order": 3,
+          "title": "JUPYTERGIS 0.16: COLLABORATIVE STORY MAPS AND REMOTE GEOSPATIAL WORKFLOWS",
+          "summary": "JupyterGIS 0.16 adds real-time collaborative story maps, lazy tile rendering for remote openEO workflows, and native GeoZarr and GeoPackage support. Declarative symbology and Xarray tiling keep visualizations reproducible while allowing large geospatial datasets to stay remote instead of being materialized locally.",
+          "url": "https://blog.jupyter.org/jupytergis-0-16-new-visualization-capabilities-collaborative-story-maps-and-more-03e6b78bacc0?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.jupyter.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a17",
+          "order": 1,
+          "title": "WHY SPOTIFY IS NOT USING BAYESIAN A/B TESTING",
+          "summary": "Bayesian experimentation is not one method but a choice of prior, likelihood, and stopping rule. Spotify shows that common flat-prior posterior thresholds can reproduce frequentist peeking, while Bayes factors can control false positives under optional stopping. Choose guarantees for the experiment program first, then the inference configuration.",
+          "url": "https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.atspotify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a18",
+          "order": 2,
+          "title": "PRETRAINING PROGRESS IS MOSTLY COMING FROM DATA",
+          "summary": "A controlled comparison of 2019-2025 open-model recipes and data corpora attributes 12.0x compute-efficiency gains to data improvements versus 3.7x to model recipes at a 1e19-FLOP budget. The result frames dataset extraction, curation, and filtering as a major systems lever, while cautioning that larger-scale and synthetic-data effects remain untested.",
+          "url": "https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "dwarkesh.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-10:a19",
+          "order": 1,
+          "title": "XLDUCKDB",
+          "summary": "xlDuckDb adds a DuckDbQuery() function to Excel that runs DuckDB SQL and spills results into cells, querying worksheet ranges, tables, and local or remote JSON, CSV, and Parquet in one statement.",
+          "url": "https://github.com/RusselWebber/xlDuckDb?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-10:a20",
+          "order": 2,
+          "title": "TPC-H QUERY 15 - SCALAR CONSTANTS AND MATERIALISATION",
+          "summary": "Referencing the same CTE twice tests whether the optimiser materialises the result.",
+          "url": "https://database-doctor.com/posts/tpch-q15?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "database-doctor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
