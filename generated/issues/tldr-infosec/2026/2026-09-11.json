@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-11",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-11",
+  "source_path": "TLDR InfoSec/article_11-09-2026.md",
+  "source_content_hash": "sha256:af521c5bd0c69dfc278716c64105d18ceca6797b1597fa91787b441c31304fad",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-11",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-11:a04",
+          "order": 1,
+          "title": "APPLE DEBUTS IPHONE DUO, ITS FIRST FOLDABLE, AT $1,999",
+          "summary": "New CEO John Ternus led his first keynote, headlined by the iPhone Duo, Apple's first foldable, a passport-style device with a 5.4-inch outer display and a 7.6-inch inner display that automatically reflows apps based on how the phone is folded, starting at $1,999. Apple also unveiled the iPhone 18 Pro and Pro Max ($1,199/$1,299, up $100 from last year) with new A20 Pro processors, a variable mechanical aperture camera, and 24-30 hour battery life, alongside the Apple Watch Series 12 and Ultra 4, which add a 5-second heart rate sensor Apple claims is more accurate than a chest strap.",
+          "url": "https://finance.yahoo.com/markets/stocks/live/apple-event-live-updates-first-foldable-iphone-iphone-18-pro-and-watches-expected-122840434.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "finance.yahoo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a05",
+          "order": 2,
+          "title": "OPENAI MAY DOUBLE-SOURCE NEXT-GEN AI CHIPS AT SAMSUNG, ALONGSIDE TSMC",
+          "summary": "OpenAI Korea GM Harrison Kim revealed the company has made real progress with Samsung Electronics on joint production and research for its next-generation chips, expanding a relationship that so far has been mostly about memory supply and enterprise software. OpenAI's current inference ASIC, Jalapeño, was designed with Broadcom and built at TSMC in under 18 months and is already in mass production there, so any Samsung involvement more plausibly targets its successor, which is reportedly approaching tapeout.",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-its-next-generation-processors-could-be-made-at-samsung-double-sourcing-with-tsmc-hints-at-massive-volume-requirements?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-11:a06",
+          "order": 1,
+          "title": "TSMC'S AUGUST REVENUE JUMPS 53% TO A RECORD HIGH, PLANS HIGH-NA EUV ADOPTION FOR 2030",
+          "summary": "TSMC posted NT$514.8 billion ($16.1 billion) in August revenue, up 53.3% year-over-year and 10.1% from July, hitting a fresh monthly record as AI-driven chip demand keeps outpacing supply. It came alongside a separate announcement with Dutch equipment maker ASML: TSMC plans to bring ASML's High-NA EUV lithography into large-scale manufacturing starting in 2030 for its most advanced nodes, as AI accelerators push toward increasingly complex transistor architectures.",
+          "url": "https://www.cnbc.com/2026/09/10/tsmc-august-revenue-chip-ai.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a07",
+          "order": 2,
+          "title": "INTRODUCING CUDA RUST FOR HIGH-PERFORMANCE GPU KERNEL DEVELOPMENT",
+          "summary": "NVIDIA has announced CUDA Rust and introduced two specialized compilation tracks that allow developers to author and optimize GPU compute kernels directly in Rust. This release brings Rust's strong compile-time memory safety guarantees and modern tooling ecosystem to GPU-accelerated workloads. Developers implementing embedded vision, intensive sensor fusion, and real-time state estimation on mobile platforms can now exploit GPU compute power while minimizing memory-related crashes and runtime concurrency bugs.",
+          "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "developer.nvidia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-11:a08",
+          "order": 1,
+          "title": "VLLM TRIPLES MINIMAX M3 INFERENCE THROUGHPUT ON AMD'S MI355X THROUGH SYSTEMATIC BOTTLENECK CHASING",
+          "summary": "AMD and Embedded LLM teams took MiniMax M3's day-0 vLLM implementation from 109.1 to 342.4 output tokens/s/GPU on AMD's Instinct MI355X, a 3.14x gain, by repeatedly asking five questions as the bottleneck kept shifting: what local shape reached each rank after tensor-parallel sharding, what work repeats every layer, which bytes actually move, whether a claimed fast path actually executed, and which queue grows once kernels stop being the limiter. Big wins came from fusing the model's shared expert into the same grouped GEMMs as routed experts (up to 30% faster at low concurrency), and reusing sparse-attention block selections across adjacent layers instead of recomputing per layer.",
+          "url": "https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "vllm.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a09",
+          "order": 2,
+          "title": "BESXAR FLIES FIRST SUBORBITAL SEMICONDUCTOR MANUFACTURING DEMO, BANKING ON FREE VACUUM IN SPACE",
+          "summary": "Besxar, a $9.35 million seed-funded startup, flew its first mission on July 5 aboard a SpaceX Falcon 9 alongside a Starlink batch, carrying its own semiconductor wafers plus test wafers from the University of Virginia and UT Austin. The company's pitch is simple: Earth-based fabs spend billions on pumps to create the vacuum semiconductors need, but in space vacuum is free, so Besxar wants to manufacture higher-quality, lower-cost wafers in orbit and return them to Earth to sell.",
+          "url": "https://payloadspace.com/besxar-flies-suborbital-semiconductor-demo?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "payloadspace.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-11:a10",
+          "order": 1,
+          "title": "GOOGLE COMMITS $15B TO FINLAND DATA CENTERS, EXPLORES NUCLEAR POWER FOR THE BUILDOUT",
+          "summary": "Google plans to invest at least $15 billion in Finnish AI infrastructure through 2028, its largest single investment in Europe, building on over 15 years of presence there. Alongside the buildout, Google signed a 22-year power agreement with Finnish utility Fortum and said it will explore business models that could support new nuclear reactors at Fortum's Loviisa site, tying the compute expansion directly to a long-term power source.",
+          "url": "https://www.cnbc.com/2026/09/09/google-finland-ai-infrastructure-investment.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a11",
+          "order": 2,
+          "title": "LG DENIES CLAIMS ITS SMART TVS CONSTANTLY RECORD AND UPLOAD AUDIO",
+          "summary": "Gamers Nexus published a two-hour investigation, done with security researchers MrBruh and uturn using packet capture and firmware analysis, alleging LG's smart TVs constantly log and upload user data even offline or in standby, scan local Wi-Fi networks for other devices, and record and store ambient audio through the TV's microphone for later retrieval, even when the TV appears off. LG called the claims untrue, saying its TVs only process voice data when the remote's voice button is pressed or its \"Hi LG\" wake word is detected after a user manually enables far-field voice recognition, with wake-word audio processed entirely on-device and deleted immediately if no match is found.",
+          "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-11:a12",
+          "order": 1,
+          "title": "XPENG'S IRON HUMANOID WALKS OFF ITS NEW AUTOMOTIVE-GRADE PRODUCTION LINE",
+          "summary": "XPENG commissioned its humanoid robot production lines, and its IRON robot autonomously walked off them after completing assembly, a step the company frames as moving from R&D prototypes to real line manufacturing.",
+          "url": "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "xpeng.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a13",
+          "order": 2,
+          "title": "HUAWEI AND CAMBRICON HIKE AI CHIP PRICES 20-50% AS HBM SHORTAGE FORCES GREY-MARKET BUYING",
+          "summary": "Chinese AI chipmakers, including Huawei and Cambricon, have sharply raised prices for current and next-gen processors.",
+          "url": "https://links.tldrnewsletter.com/CGUQ7d",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a14",
+          "order": 3,
+          "title": "COVENANT UNVEILS ANTHEM, A HEAVY-PAYLOAD STRIKE MISSILE BUILT TO BE MASS-PRODUCED ACROSS THREE COUNTRIES",
+          "summary": "Anthem is a long-range precision strike weapon aimed at a gap Covenant argues current Western arsenals lack.",
+          "url": "https://www.a16z.news/p/introducing-covenant?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "a16z.news",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a15",
+          "order": 4,
+          "title": "ANALOG DEVICES PAYS $1.35B FOR EDGE AI CHIPMAKER ALIF SEMICONDUCTOR",
+          "summary": "Analog Devices agreed to buy Alif Semiconductor for $1.35 billion cash plus up to $200 million contingent on performance, adding microcontrollers built to run neural networks directly on-device rather than sending data to a data center.",
+          "url": "https://thenextweb.com/news/analog-devices-alif-semiconductor-edge-ai-acquisition?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thenextweb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a16",
+          "order": 5,
+          "title": "JD.COM PLANS 3 MILLION ROBOTS AND A 100,000-ACCELERATOR PHYSICAL AI CLUSTER",
+          "summary": "JD Logistics plans to procure 3 million robots, 1 million autonomous vehicles, and 100,000 delivery drones over five years to automate picking, sorting, transport, and last-mile delivery.",
+          "url": "https://www.scmp.com/tech/big-tech/article/3366884/jdcom-deploy-3-million-robots-fully-automate-logistics?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "scmp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-11:a17",
+          "order": 6,
+          "title": "VENTION OPENS A PHYSICAL AI LAB TIED DIRECTLY TO THOUSANDS OF FACTORIES",
+          "summary": "Vention opened a Montreal lab focused on robotic manipulation, industrial data collection, and post-training robotics foundation models using learning-from-demonstration, reinforcement learning, vision models, and motion planning.",
+          "url": "https://www.prnewswire.com/news-releases/vention-opens-physical-ai-lab-to-bridge-ai-research-and-scalable-industrial-deployment-302872841.html?utm_source=tldrinfosec%5B18%5D%5B19",
+          "reading_time_minutes": 5,
+          "source_domain": "prnewswire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
