@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-hardware:2026-09-14",
+  "sector": "TLDR Hardware",
+  "sector_slug": "tldr-hardware",
+  "date": "2026-09-14",
+  "source_path": "TLDR Hardware/article_14-09-2026.md",
+  "source_content_hash": "sha256:42d3fe25dc9013d503dd745f737e6b7364626f97013b01d60f304a3bbd22c937",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR HARDWARE 2026-09-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-14:a04",
+          "order": 1,
+          "title": "TESLA SETS OCTOBER 1 UNVEILING FOR THE LONG-DELAYED SECOND-GEN ROADSTER",
+          "summary": "Tesla posted \"Go for launch\" with a \"10.01\" graphic, pointing to an October 1 reveal of the second-generation Roadster, first announced back in November 2017 and delayed repeatedly since. The Information recently reported the original 2017 design has been scrapped entirely for a new, unrevealed one, and the teaser graphic hints at the promised SpaceX-developed cold gas thrusters meant to let the car briefly fly. Even after next month's unveiling, Musk has previously said the Roadster won't reach actual production for another 12 to 18 months.",
+          "url": "https://techcrunch.com/2026/09/12/tesla-says-it-will-finally-unveil-the-second-generation-roadster-on-october-1?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a05",
+          "order": 2,
+          "title": "ROBERT FRIEDLAND WARNS COPPER SUPPLY CAN'T KEEP UP WITH AI, EVS, AND REINDUSTRIALIZATION",
+          "summary": "Ivanhoe Mines founder Robert Friedland, on Bloomberg's Odd Lots podcast, argued the world isn't close to having enough copper for what's coming, with copper up 15% this year as demand from data centers, electric vehicles, and global reindustrialization compounds on top of the metal's already-tight supply. He framed US tariffs as a potential fix rather than just a cost, arguing that if a 30% tariff pushed copper from $6 to $7.80 a pound, domestic mining could again afford unionized US labor, pointing out that 10% of all copper ever mined came from Arizona before manufacturing and refining capacity was largely outsourced to China.",
+          "url": "https://links.tldrnewsletter.com/DJhDoD",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a06",
+          "order": 3,
+          "title": "GEORGIA TECH RESEARCHER REVERSE-ENGINEERS APPLE'S NEURAL ENGINE FROM SILICON TO FIRMWARE",
+          "summary": "Every Apple chip since the A11 and M1 ships a Neural Engine that runs on-device AI across over 2.5 billion active devices, yet Apple has never published an instruction set, driver interface, or way to even confirm a computation ran on it. This guide bypasses Core ML entirely, reaching the ANE directly through the compiler, runtime, kernel driver, and firmware via a mix of live silicon measurement and static/dynamic reverse engineering, cross-checking both methods against each other.",
+          "url": "https://ane-guide.readthedocs.io/en/latest?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "ane-guide.readthedocs.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a07",
+          "order": 4,
+          "title": "AMAZON BETS ON HOLLOW CORE FIBER TO KEEP A MILLION CHIPS IN SYNC",
+          "summary": "AWS is wiring AI data centers with hollow core fiber, an air-filled strand that moves light about 50% faster than glass and cuts latency roughly 30%. Amazon has already deployed it across more than 10 sites so million-chip clusters can stay synchronized as facilities spread out for power and land.",
+          "url": "https://en.sedaily.com/international/2026/09/12/amazon-bets-on-hollow-core-fiber-to-keep-a-million-chips-in?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "en.sedaily.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a08",
+          "order": 5,
+          "title": "IONQ DEBUTS SIXTH-GEN SUPERION QPU, MOVING QUBIT CONTROL ONTO THE CHIP ITSELF",
+          "summary": "IonQ unveiled its sixth-generation quantum computing platform, Superion 256, built around Electronic Qubit Control (EQC), integrating the control electronics directly onto CMOS silicon using standard high-volume semiconductor fabrication rather than the racks of external control electronics trapped-ion systems normally depend on. That integration is what shrinks the whole system down to fit in a standard server rack running on typical data center power and cooling, while significantly cutting cost-per-qubit.",
+          "url": "https://www.ionq.com/news/ionq-launches-superion-product-line-industry-leading-upgradeable-platform-designed-to-scale-manufacturable-fault-tolerant-quantum-computing?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "ionq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a09",
+          "order": 6,
+          "title": "RPI AND IBM PROPOSE REACH, A MEMORY CONTROLLER THAT CUTS HBM ERROR-CORRECTION OVERHEAD FOR LLM INFERENCE",
+          "summary": "Stronger HBM error correction usually means long-span codes that protect more efficiently, but coupling every small memory access to span-wide state and decoding at full HBM bandwidth is normally too costly to implement directly. REACH sidesteps that by exploiting a property specific to LLM decode workloads: reads are sequential, so they can be aggregated across a span cheaply, while writes are sparse, keeping parity-update traffic low. The controller uses standard inner codes to fix common errors and flag whichever chunks it can't resolve, then falls back to a long outer code reserved specifically for repairing those flagged erasures, avoiding the cost of running heavy decoding on every access.",
+          "url": "https://semiengineering.com/reducing-hbm-ecc-controller-overhead-for-ai-inference-rpi-ibm?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "semiengineering.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-14:a10",
+          "order": 1,
+          "title": "SPACEXAI QUIETLY BUILDS WHAT MAY BE THE NATION'S LARGEST GRID BATTERY AT ITS MEMPHIS SITE",
+          "summary": "Satellite imagery from July shows 720 Tesla Megapacks installed at SpaceXAI's Colossus 2 data center in Memphis, equating to roughly 2.8 gigawatt-hours and 720-1,400 megawatts depending on the exact model, with company and utility executives separately describing the completed system as 3.3 GWh or 2,000 MW of instant discharge, either of which would top the current largest US grid battery at California's Edwards & Sanborn plant.",
+          "url": "https://www.canarymedia.com/articles/batteries/xai-massive-battery-memphis-data-center?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "canarymedia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a11",
+          "order": 2,
+          "title": "ZIPLINE'S DRONES NOW DIVE FOR SPEED AND CLIMB TO BRAKE, NO NEW HARDWARE REQUIRED",
+          "summary": "Zipline shipped a software update, \"Dynamic Flight Trajectories,\" that replaces its drones' flat climb-cruise-descend flight profile with a wave shape: climb while already moving, dip to build speed, deliver from altitude, then climb again to shed speed before landing, letting gravity do work the motors used to handle. The company reports the median mission got 48 seconds shorter, left 40.6 watt-hours more in the battery on landing, and brought the hottest hover motor home 8.9°C cooler, all from a firmware download to the existing fleet.",
+          "url": "https://dronexl.co/2026/09/11/zipline-drones-dive-for-speed-quieter?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "dronexl.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-14:a12",
+          "order": 1,
+          "title": "APPLE'S A20 PRO SHATTERS GEEKBENCH 7 SINGLE-CORE RECORD",
+          "summary": "Apple's A20 Pro set a Geekbench 7 single-thread record, beating desktop Intel Core i9 and AMD Ryzen 9 chips by up to 32%.",
+          "url": "https://www.tomshardware.com/pc-components/cpus/apples-a20-pro-shatters-geekbench-7-single-core-record-2nm-chip-beats-desktop-intel-core-i9-and-amd-ryzen-9-by-up-to-32-percent?utm_source=tldrhardware",
+          "reading_time_minutes": 6,
+          "source_domain": "tomshardware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a13",
+          "order": 2,
+          "title": "MICROSOFT PLANS TO TRIPLE DATA CENTER CAPACITY TO 38 GIGAWATTS BY 2032",
+          "summary": "Microsoft is planning to grow its global data center footprint from roughly 12 gigawatts today to more than 38 gigawatts by 2032.",
+          "url": "https://links.tldrnewsletter.com/i3oTQ4",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a14",
+          "order": 3,
+          "title": "MACOS 27 GOLDEN GATE DROPS INTEL MACS AND ROSETTA",
+          "summary": "macOS 27 ships Monday as Apple silicon only, so Intel Macs are locked out of the free update for the first time.",
+          "url": "https://www.macobserver.com/news/macos-27-golden-gate-drops-intel-macs-rosetta/?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "macobserver.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a15",
+          "order": 4,
+          "title": "SOL-H3: SPEED-OF-LIGHT MINIMAX-H3 ON SINGLE NVIDIA DGX SPARK",
+          "summary": "NVIDIA Research's Sol-H3 pipeline turns a prompt into a 5-second 768p video with audio on one DGX Spark Blackwell in about 56 seconds end-to-end, roughly 6.7x faster than a quantized 4-step baseline.",
+          "url": "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3-Spark?utm_source=tldrhardware",
+          "reading_time_minutes": 14,
+          "source_domain": "nvlabs.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-14:a16",
+          "order": 5,
+          "title": "FUJITSU TO EXPORT AI CHIPS BUILT ON SUPERCOMPUTER TECH TO US, ASIA",
+          "summary": "Fujitsu will export Monaka, its 2nm CPU built on Fugaku supercomputer technology and manufactured by TSMC, to the US and Asia starting in 2027.",
+          "url": "https://asia.nikkei.com/business/tech/semiconductors/fujitsu-to-export-ai-chips-built-on-supercomputer-tech-to-us-asia?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "asia.nikkei.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

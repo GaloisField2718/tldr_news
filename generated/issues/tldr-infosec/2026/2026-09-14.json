@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-14",
+  "source_path": "TLDR InfoSec/article_14-09-2026.md",
+  "source_content_hash": "sha256:4e74ed67cec3eefb886b40706e6b8d5d584a0a84fda843d5438b882e09302957",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a04",
+          "order": 1,
+          "title": "STOLEN SESSION COOKIES DON'T CARE ABOUT YOUR MFA",
+          "summary": "Attackers no longer need passwords. By stealing an active session, they bypass MFA, password rules, and login alerts entirely.\n\nFingerprint catches what authentication can't see:\n\n→ A persistent device identifier ties every session to the device behind it, so a stolen token replayed from unfamiliar hardware stands out instantly.\n\n→ A single risk score rolls 20+ Smart Signals (Residential Proxy Detection, Browser Tampering, Virtual Machine Detection, and more) into one easy-to-use risk number.\n\n→ Hijacked sessions get caught without adding friction for legitimate users.",
+          "url": "https://fingerprint.com/products/fingerprint-pro/?utm_source=tldrinfo&utm_medium=newsletter&utm_campaign=Primary09142026&utm_content=header_stolen_session_cookies",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a05",
+          "order": 2,
+          "title": "free",
+          "summary": "",
+          "url": "https://fingerprint.com/products/fingerprint-pro/?utm_source=tldrinfo&utm_medium=newsletter&utm_campaign=Primary09142026&utm_content=cta_install_fingerprint_few",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a06",
+          "order": 1,
+          "title": "TREZOR SAYS 347,000 USERS RECEIVED PHISHING EMAILS AFTER BREVO HACK",
+          "summary": "Attackers abused a Brevo SAML SSO scoping flaw to access 138 accounts. They sent a fake Trezor security alert to 347,000 addresses linked to a site seeking wallet backups. About 2,500 recipients clicked before takedown, 20 minutes after detection. Brevo reported contact exfiltration from 43 accounts, and BitBox and CoinTracking were also affected.",
+          "url": "https://links.tldrnewsletter.com/PL60w7",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a07",
+          "order": 2,
+          "title": "GITLAB CVSS 10 FILE-READ FLAW DRAWS IN-THE-WILD PROBES AFTER DISCLOSURE",
+          "summary": "GitLab has patched CVE-2026-85706, a CVSS 10 path traversal bug in the repository commits API that let unauthenticated attackers read arbitrary files. watchTowr saw probes starting at 06:00 UTC on September 11, needing only one public project to exploit. Attackers can grab log files, config files, credentials, and CI/CD secrets. GitLab also fixed CVE-2026-87719 (CVSS 9.9), a deserialization bug exposing Advanced Search configs via Duo Chat GraphQL subscriptions. CISA added CVE-2026-85706 to its KEV catalog, giving federal agencies until September 14 to patch.",
+          "url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a08",
+          "order": 3,
+          "title": "REVOLUT CONFIRMS CUSTOMER DATA BREACH THROUGH FAKE GOVERNMENT REQUESTS",
+          "summary": "Revolut disclosed customer data after fraudulent requests arrived from a legitimate government email domain. Exposed records included identity and contact details, passports or driving licenses, and possibly verification selfies, statements, and transaction histories. Revolut says a limited number of customers were affected, blocked the sender, notified victims, and alerted the agency, police, and regulators.",
+          "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a09",
+          "order": 1,
+          "title": "THE SELF-EXPANDING STOLEN INFERENCE SUPPLY CHAIN: AN AI AGENT HARVESTING AND RE-SERVING LLM ACCESS",
+          "summary": "An attacker's coding agent picked a SANS ISC honeypot as a free LLM backend and leaked 43 KB of its own control plane, including its offensive playbook, harvested API keys, and the operator's unproxied egress IP. The playbook hunts exposed LLM resale gateways, farms accounts via open registration, default credentials, and group_id authorization flaws, then aggregates the working keys into a self-hosted New-API gateway that re-serves them as five model names. Gateway operators should audit for those same weaknesses, and anyone routing an agent through a cheap LLM proxy should assume that endpoint is reading their project instructions and source context.",
+          "url": "https://isc.sans.edu/diary/The+SelfExpanding+Stolen+Inference+Supply+Chain+An+AI+Agent+Harvesting+and+ReServing+LLM+Access/33332?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "isc.sans.edu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a10",
+          "order": 2,
+          "title": "BEHIND THE CAPTCHA: CLICKFIX, WALLSTEALER AND A HIDDEN MINER",
+          "summary": "A fake Cloudflare \"verify you're human\" page copies a hidden PowerShell command to the clipboard and tells the user to paste it into the Run box, which downloads malware into %TEMP%. The files on that server included two copies of WallStealer, which steals browser passwords, cookies, payment cards, and Telegram, Discord, Steam, and wallet data, and finds its C2 server by reading the display name off hardcoded Steam profiles instead of a fixed domain. A third file dropped an XMRig crypto miner into C:\\ProgramData\\NVDisplay, so watch for pasted commands running from Run, new executables in %TEMP%, and machines requesting Steam profile pages.",
+          "url": "https://ctrlaltintel.com/bulletins/clickfix-stealers-and-mining/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "ctrlaltintel.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a11",
+          "order": 3,
+          "title": "WHERE DO DETECTIONS COME FROM?",
+          "summary": "Detect.fyi detection engineers identify four information sources that can inform building detections: visibility, existing internal or external detections, environment, and threat intel. Detection engineers can choose any of these sources to start developing from and then use the other three as filters into what detections they should write. The authors also caution against focusing too much on trying to create detections for every piece of threat intel that comes out.",
+          "url": "https://detect.fyi/where-do-detection-ideas-come-from-21dc281aebb9?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "detect.fyi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a12",
+          "order": 1,
+          "title": "WHEN AI AGENTS USE HUMAN IDENTITIES, THEY LEAVE PROBLEMS NO ONE IS ACCOUNTABLE FOR",
+          "summary": "Your audit log won't help if it points to a service account and a long-gone container. ORY AGENT SECURITY gives every agent an identity, scoped and revocable. It works inside the harness, applying fine-grained authorization for every shell command, write, and API call. Join the launch webinar [12] or get free coverage for a limited time [12].",
+          "url": "https://www.ory.com/ory-agent-security?utm_campaign=494758105-ADV-2026-Q3-TLDR+PLACEMENT-2026-09-14&utm_source=tldr&utm_medium=infosec-newsltter",
+          "reading_time_minutes": null,
+          "source_domain": "ory.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a13",
+          "order": 2,
+          "title": "BUSYWORK",
+          "summary": "BusyWork is a Rust library that replaces sleep() with real, varied work to evade EDR, anti-cheat, and dynamic analysis systems.",
+          "url": "https://github.com/PatchRequest/BusyWork?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a14",
+          "order": 3,
+          "title": "HUNK",
+          "summary": "Hunk is a review-first terminal diff viewer for agent-authored changesets.",
+          "url": "https://github.com/modem-dev/hunk?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a15",
+          "order": 4,
+          "title": "TAILCAT",
+          "summary": "Tailcat is a remix of Tailscale open source pieces to act like netcat, but over Tailscale's data plane, without Tailscale's control plane.",
+          "url": "https://github.com/tailscale/tailcat?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a16",
+          "order": 1,
+          "title": "HUNDREDS OF AI AGENTS HELPED PAPERCUT ATTACKER HIT 395+ ORGS, AND SOME WENT OFF SCRIPT",
+          "summary": "An attacker exploited PaperCut CVE-2026-81578 and CVE-2026-82078, compromising 440 instances at 395 organizations in 48 countries. Education accounted for 204 victims. The US had 98 and the UK 59. One school reached domain-admin compromise within seven minutes. Updated PaperCut maintenance releases are available, so upgrade ASAP.",
+          "url": "https://www.theregister.com/security/2026/09/10/hundreds-of-ai-agents-helped-papercut-attacker-hit-395-orgs-and-some-went-off-script/5295650?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a17",
+          "order": 2,
+          "title": "‘WE MUST SLOW THE PACE': CEO OF ANTHROPIC CALLS FOR AN AI SLOWDOWN",
+          "summary": "Anthropic CEO Dario Amodei proposed independent evaluators with employee-level access to test safeguards, report incidents, and assess systems during training. OpenAI's Sam Altman said it would match that access. Amodei cited an incident where OpenAI agent swarms carried out unrequested attacks against Hugging Face targets, warning that stronger misaligned systems could cause far greater damage.",
+          "url": "https://www.theguardian.com/technology/2026/sep/12/we-must-slow-the-pace-ceo-of-anthropic-calls-for-an-ai-slowdown?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a18",
+          "order": 3,
+          "title": "GRAND THEFT AUTO VI HYPE LEADS TO MALWARE",
+          "summary": "Fake \"leaked GTA6\" ISOs spread through SEO poisoning, gaming forums, and torrent sites deliver a Russian-language installer that pre-warns of a \"License not found\" error, giving victims a reason for the missing game while payloads drop into %TEMP%. Huntress found one sample bundling NJRAT, DCRAT, the Mercurial Grabber infostealer, and Chaos ransomware, which runs as a wiper that deletes shadow copies and destroys files. Everything in it is years old and detected by current Defender, so hunt for GTA6-branded executables in %TEMP% and hosts file entries sinkholing AV domains, then reimage affected hosts.",
+          "url": "https://www.huntress.com/blog/fake-gta6-download-malware-analysis?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-14:a19",
+          "order": 1,
+          "title": "THREAT ACTOR GENERATES 1M PERSONALIZED FRAUD EMAILS IN 3 DAYS",
+          "summary": "An unidentified actor sent more than one million invoice-fraud emails from August 3 to 5 impersonating ServiceNow, sought payments near $50,000, and targeted accounts-payable staff.",
+          "url": "https://links.tldrnewsletter.com/Tu5RHO",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a20",
+          "order": 2,
+          "title": "THOROUGH REORGANIZATION AT NSA WILL CREATE FIVE 'MISSION CENTERS,' INCLUDING CYBER AND AI",
+          "summary": "NSA is being recast into five mission centers covering China, cybersecurity, AI, combat support, and global intelligence under a 30-day clock set by Gen.",
+          "url": "https://therecord.media/nsa-reorganization-five-mission-centers?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-14:a21",
+          "order": 3,
+          "title": "OVER 36,000 EXPOSED PLEX SERVERS VULNERABLE TO RECENT FLAWS",
+          "summary": "Shadowserver reports over 36,000 internet-exposed Plex Media Servers running v1.43.2 or earlier, with 16,000 in the US.",
+          "url": "https://links.tldrnewsletter.com/pAO0vf[22][23",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
