@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-17",
+  "source_path": "TLDR InfoSec/article_17-09-2026.md",
+  "source_content_hash": "sha256:320181c2999c5607fc5f165a241011d62c7ec27babff9a81976ed0d5aec76efe",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-17",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-17:a04",
+          "order": 1,
+          "title": "HUMAN ATTACKER HITS MACHINE-SPEED EXPLOITATION OF MARIMO RCE",
+          "summary": "A human attacker exploited CVE-2026-39987 to achieve pre-authentication remote code execution and harvest cloud credentials from Marimo notebooks. The Sysdig Threat Research Team observed the operator pivot from the vulnerable terminal WebSocket endpoint to an SSH bastion host in eight seconds to access an AWS Secrets Manager SSH key without using large language models. Defenders must focus detection efforts on the shape of the attack chain rather than specific operator fingerprints, because prompt injection traps designed for AI agents failed to identify the human actor.",
+          "url": "https://www.infosecurity-magazine.com/news/human-attacker-machine-speed?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a05",
+          "order": 2,
+          "title": "CHINESE HACKERS EXPLOIT CRITICAL TENCENT SOFTWARE FLAW FOR ONE-CLICK CODE EXECUTION",
+          "summary": "China-linked UNC3569 used a single crafted link to gain system-level code execution through Sogou Input Method, Tencent's Chinese-language keyboard app used by hundreds of millions of Windows users, and deployed its GrayRabbit backdoor. Gen Threat Labs found that CVE-2026-51990 chained argument injection in the sgbiz protocol handler with a bundled Chromium 80 browser that was six years out of date, ran without a sandbox, and dropped same-origin protections. Tencent patched the injection bug in version 16.3.0.3498, but the outdated Chromium engine behind the chain remained unchanged as of September 10.",
+          "url": "https://links.tldrnewsletter.com/Riyc6B",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a06",
+          "order": 3,
+          "title": "TEXAS UTILITY CENTERPOINT ENERGY CONFIRMS DATA BREACH AFTER HACKER CLAIMS 7.49M RECORDS STOLEN",
+          "summary": "CenterPoint Energy confirmed an attacker pulled customer data through an external-facing API on September 12. A hacker using the alias \"4d722e4d656f77\" claims 7.49 million records, including names, phone numbers, billing addresses, account numbers, payment status, and partial Social Security numbers. The attacker says the API lacked WAF protection, rate limiting, and JWT/auth tokens, and stopped only after a CAPTCHA was added.",
+          "url": "https://securityaffairs.com/199170/data-breach/texas-utility-centerpoint-energy-confirms-data-breach-after-hacker-claims-7-49m-records-stolen.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securityaffairs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-17:a07",
+          "order": 1,
+          "title": "THREAT HUNTING WITH JA4/JA4S (+ PRACTICAL KQL QUERIES)",
+          "summary": "JA4 is a TLS fingerprint that shows how a client connects, not just where it connects to. Unlike JA3, part of it is readable, so hunters can see the TLS version, SNI, cipher count, and ALPN at a glance. The post includes KQL queries to pull these values from Entra ID sign-ins and Defender network logs, so teams can learn what normal looks like and spot clients that don't match.",
+          "url": "https://detect.fyi/threat-hunting-with-ja4-ja4s-practical-kql-queries-ef673fc5fcc0?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "detect.fyi",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a08",
+          "order": 2,
+          "title": "THE £3 WIFI EXTENDER WITH A BACKDOOR IN EVERY UNIT",
+          "summary": "A £3 Z05L WiFi extender uses an MT7620 chip and a four-megabyte Winbond flash. Its firmware starts Telnet on every boot with root password 198277tt@, and the web API accepts requests without session checks, so a mac parameter can reach system() without validation, allowing root command injection. Firmware updates verify CRC32 values only, allowing forged images, and the firewall leaves inbound services exposed on bridged networks as the config partition stores WiFi credentials in plaintext.",
+          "url": "https://affixsec.substack.com/p/the-3-wifi-extender-with-a-backdoor?utm_source=tldrinfosec",
+          "reading_time_minutes": 13,
+          "source_domain": "affixsec.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a09",
+          "order": 3,
+          "title": "PARASHELLS: PARALLELS DESKTOP TURNS APPLIANCE INSTALL INTO A ROOT SHELL",
+          "summary": "CVE-2026-90894 lets a non-admin macOS user gain root through Parallels Desktop's appliance installer. JFrog tested Desktop 26.4.0 build 57513 on Apple Silicon. The root daemon exposes a world-writable Unix socket where an unsigned local process can authenticate through PrlSrv_LoginLocal. A quote in sVmParentPath injects tar's --use-compress-program option, and tar then launches an attacker script as root. Parallels released version 27.0.0 on September 1 to fix this issue.",
+          "url": "https://jfrog.com/blog/parallels-desktop-turns-appliance-install-into-root-shell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "jfrog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-17:a10",
+          "order": 1,
+          "title": "REACH SECURITY PROFESSIONALS READING TLDR",
+          "summary": "If you're reading this ad, you know they work. TLDR subscribers make a deliberate choice to open their inbox every weekday. You reach security engineers, CISOs, and infosec leaders at the precise moment they're most receptive to new information shaping their work. Become a TLDR sponsor. [10]",
+          "url": "https://advertise.tldr.tech/audiences/cybersecurity-teams/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=secondary09172026&sp=0DsCYnNBcX-R0m2KHa2Fj_lE",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a11",
+          "order": 2,
+          "title": "ENTRUST TURNS CRYPTOGRAPHIC INVENTORY DATA INTO SECURITY ACTION",
+          "summary": "Entrust added Cryptographic Bill of Materials (CBOM) import and export to its Cryptographic Security Platform, so teams can map which systems depend on weak or noncompliant keys and certificates and fix the riskiest first. The update also brings Ansible-based certificate automation, composite algorithms for phased post-quantum migration, and SPIRE support for AI agent and workload identities. The platform now runs as a service or on-premises, which matters as DORA, NIS2, and the recent US Executive Order push for CBOM-based inventories.",
+          "url": "https://www.helpnetsecurity.com/2026/09/14/entrust-cbom-capabilities/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a12",
+          "order": 3,
+          "title": "HACKUITY (PRODUCT LAUNCH)",
+          "summary": "Hackuity consolidates vulnerability and asset data from 130+ security products and ranks flaws by severity, exploitability, asset criticality, threat activity, and business impact. Teams can assign and coordinate remediation across security, IT, cloud, and engineering.",
+          "url": "https://www.hackuity.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "hackuity.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a13",
+          "order": 4,
+          "title": "VOL-RS",
+          "summary": "vol-rs is a port of the Volatility 3 memory forensics framework from Python to Rust.",
+          "url": "https://github.com/daffainfo/vol-rs?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-17:a14",
+          "order": 1,
+          "title": "ACTIVE EXPLOITATION ATTEMPTS TARGET WSO2 API MANAGER JWT BYPASS WITH FORGED ADMIN TOKENS",
+          "summary": "WSO2 API Manager CVE-2026-5430 is under active attack. Forged JWTs using unsupported signing algorithms can bypass authentication and grant administrator access in affected deployments, including API Manager 4.1.0–4.6.0, API Control Plane, Traffic Manager, and Universal Gateway. Captured tokens carried admin privileges, and attackers may access backend endpoints, credentials, consumer keys, application secrets, and internal services.",
+          "url": "https://thehackernews.com/2026/09/active-exploitation-attempts-target.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a15",
+          "order": 2,
+          "title": "REVERSE-ENGINEERING FIND MY PEOPLE TO STALK MY EX A FRIEND, CAUSE I CAN",
+          "summary": "An in-depth guide to how the author decided to reverse-engineer Apple's Find My system to register a Linux device and (consensually) track a friend. The author first started by attempting to use the iCloud web API but quickly discovered that it didn't support Find My. After reversing and fuzzing the flow, the author was able to reproduce the process by: authenticating to Apple's private service, registering the Linux machine as an IDS client, receiving the existing Find My share key, and using it to fetch and decrypt the friend's latest location.",
+          "url": "https://zerotistic.blog/posts/find-my-people-linux/?utm_source=tldrinfosec",
+          "reading_time_minutes": 21,
+          "source_domain": "zerotistic.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a16",
+          "order": 3,
+          "title": "GOTTHEIMER PUSHES BACK ON THIRD-PARTY AUDITS OF ADVANCED AI",
+          "summary": "A new AI regulatory framework, the FRONTIER Act, includes a provision that would require third parties to audit the safety of new frontier models. Rep. Josh Gottheimer pushed back and stated that frontier models should instead need to be submitted to the federal government for a short-clocked review cycle before release.",
+          "url": "https://www.politico.com/live-updates/2026/09/15/congress/gottheimer-house-ai-commission-01077569?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "politico.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-17:a17",
+          "order": 1,
+          "title": "ORACLE PATCHES 800+ VULNERABILITIES IN SEPTEMBER 2026 SECURITY UPDATE",
+          "summary": "Oracle's September 2026 patch update fixed over 800 vulnerabilities across 17 product families, including more than 100 critical flaws and over 240 exploitable remotely without authentication.",
+          "url": "https://links.tldrnewsletter.com/WbZBgD",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-17:a18",
+          "order": 2,
+          "title": "CISCO EMAIL SECURITY BOXES CAN BE ROOTED BY... AN EMAIL",
+          "summary": "Attackers are exploiting CVE-2026-76461, a 9.8 flaw in Cisco Secure Email Gateway appliances.",
+          "url": "https://www.theregister.com/security/2026/09/15/cisco-email-security-boxes-can-be-rooted-by-an-email/5296604?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
