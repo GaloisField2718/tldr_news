@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-18",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-18",
+  "source_path": "TLDR DevOps/article_18-09-2026.md",
+  "source_content_hash": "sha256:98ab709c793fe16815d3a08be498aba293cda82114719b401a46ebb0500e0f43",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a04",
+          "order": 1,
+          "title": "WHAT DO CURSOR, OPENAI, ANTHROPIC, NOTION, AIRBNB, NVIDIA, UBER, META, PIERRE AND BUN HAVE IN COMMON?",
+          "summary": "Buildkite, the pro-tool that hands you building blocks for CI orchestration and then gets out of the way.\n\nEnough with constant downtime. No more band-aids or burden.\n\nWe provide programmable primitives you co-ordinate, running only what changes, across any cloud, any chip, your secrets, your infra.\n\nControl without compromise. Build faster, more securely, more reliably, with the CI engineered for frontier scale, used by the teams setting the pace.",
+          "url": "https://buildkite.com/home/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-09-04_Primary_Buildkite&utm_content=header_what_cursor_openai",
+          "reading_time_minutes": null,
+          "source_domain": "buildkite.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a05",
+          "order": 2,
+          "title": "YOU DESERVE BETTER CI. START WITH OUR 30-DAY TRIAL. KICK THE TIRES →",
+          "summary": "",
+          "url": "https://buildkite.com/pricing/?bk_pid=20260522-TLD-PRI-primary-trial&utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-2026-05-22&utm_content=primary-trial_cta_building_cta_kick_tires_cta_kick_tires&utm_id=20260522-TLD-PRI-primary-trial",
+          "reading_time_minutes": null,
+          "source_domain": "buildkite.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a06",
+          "order": 1,
+          "title": "SALESFORCE STAGGERS BACK TO FEET AFTER GLOBAL OUTAGE",
+          "summary": "Salesforce experienced an hours-long global outage affecting hundreds of instances, causing severe delays, intermittent errors, and inaccessible services, due to requests stalling on an internal login service and exhausting server resources. A validated fix was deployed fleetwide, but some instances required manual restarts and continued experiencing scheduled-job failures.",
+          "url": "https://www.theregister.com/saas/2026/09/16/salesforce-staggers-back-to-feet-after-global-outage/5296800?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a07",
+          "order": 2,
+          "title": "KUBERNETES V1.37: POD-LEVEL RESOURCE MANAGERS GRADUATED TO BETA",
+          "summary": "The Pod-Level Resource Managers feature has graduated to Beta status in Kubernetes v1.37. This enhancement allows the Kubelet to use pod-level resource declarations when making hardware placement decisions. It solves a previous limitation where operators had to choose between dedicating physical cores to sidecars or forfeiting NUMA alignment.",
+          "url": "https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a08",
+          "order": 1,
+          "title": "HOW TO AUTOMATE DOCKER REGISTRY CREATION WITH HARNESS PIPELINES AND TERRAFORM",
+          "summary": "Harness demonstrates a three-stage CI/CD pipeline that uses Terraform to dynamically provision a unique Docker virtual registry and Docker Hub upstream proxy, builds and pushes an image, then deploys it to Kubernetes with rolling updates and automatic rollback. Output variables and Harness expressions connect resources across stages without hardcoding.",
+          "url": "https://www.harness.io/blog/how-to-automate-docker-registry-creation-with-harness-pipelines-and-terraform?utm_source=tldrdevops",
+          "reading_time_minutes": 14,
+          "source_domain": "harness.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a09",
+          "order": 2,
+          "title": "RUNNING OPENBAO ON KUBERNETES WITH A CLOUDNATIVEPG POSTGRESQL BACKEND",
+          "summary": "OpenBao and CloudNativePG can manage infrastructure secrets on Kubernetes without vendor lock-in by using certificate authentication and synchronous replication. OpenBao uses the CloudNativePG PostgreSQL cluster as an encrypted key-value store, and a schema-init job revokes default public permissions to lock down the database. CloudNativePG automatically renews client certificates every 90 days, but OpenBao requires a rolling restart to load the new files. The setup runs three OpenBao replicas and three Postgres instances across separate nodes.",
+          "url": "https://www.cncf.io/blog/2026/09/16/running-openbao-on-kubernetes-with-a-cloudnativepg-postgresql-backend/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a10",
+          "order": 3,
+          "title": "I DON'T LIKE LLMS",
+          "summary": "LLMs can be highly useful while still being unpleasant to interact with because they present fabricated and correct information with the same confident, human-like tone. AI agents also reflect the values and culture of the companies that build them, making trust, behavior, and interaction design important alongside raw model capability.",
+          "url": "https://martinfowler.com/articles/2026-dont-like-llms.html?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a11",
+          "order": 1,
+          "title": "OBSERVABILITY TOOLING PROMISED MORE VISIBILITY AND DELIVERED…ENDLESS CONFIGS. NO LONGER",
+          "summary": "It's time to stop asking engineers to babysit telemetry pipelines. In Apica Ascent 3.0, the AI agent, Venn, turns plain-language requests into pipeline rules [12], dashboards, and agent management. Bring your own AI and reserve human approval for every change. Say goodbye to",
+          "url": "https://www.apica.io/blog/ascent-3-0-observability-toil/?sp=n05uaBM_E468NClet9Jnj_6Q&utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "apica.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a13",
+          "order": 2,
+          "title": "tickets and queues. See it live Oct. 20th",
+          "summary": "",
+          "url": "https://www.apica.io/events/stop-babysitting-telemetry-pipelines/?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=ascent-3-0&sp=n05uaBM_E468NClet9Jnj_6Q",
+          "reading_time_minutes": null,
+          "source_domain": "apica.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a14",
+          "order": 3,
+          "title": "BROWSERSKILL",
+          "summary": "BrowserSkill connects AI agents such as Cursor, Claude Code, and Codex to a user's logged-in browser. The tool requires agents to explicitly borrow open tabs and return them after finishing a task. It includes a command-line interface, a daemon, and a browser extension.",
+          "url": "https://github.com/Tencent/BrowserSkill?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a15",
+          "order": 4,
+          "title": "CLINE",
+          "summary": "Cline is an open-source coding agent that runs in IDEs, terminals, and as a native desktop app for macOS and Windows. It reads project structures, edits files, and executes terminal commands with human-in-the-loop approval. Users can switch between Plan and Act modes or use the SDK to build custom tools and coordinate multi-agent teams. The tool runs on any model and supports integrations through plugins or MCP servers.",
+          "url": "https://github.com/cline/cline?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a16",
+          "order": 1,
+          "title": "HARNESSTAX: HOW MUCH DOES THE HARNESS MATTER FOR CODING AGENTS?",
+          "summary": "Coding-agent harnesses such as Claude Code, Codex CLI, and Pi can produce similar task success rates while using dramatically different amounts of tokens and money. Across 21 model–harness combinations on SWE-bench Lite and Terminal-Bench 2.0, harness choice changed cost by as much as 5×, and the model provider's own harness was not consistently the most efficient option.",
+          "url": "https://harnesstax.github.io/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "harnesstax.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a17",
+          "order": 2,
+          "title": "GETTING STARTED WITH RUNTIME SECURITY AND FALCO",
+          "summary": "Runtime security protects cloud workloads while they are executing, filling gaps that posture management cannot catch, such as zero-days, privilege escalation, and compromised credentials. Falco provides cloud-native runtime detection across hosts, containers, Kubernetes, and cloud services by analyzing system calls and plugin events, adding contextual alerts, and deploying easily with Helm.",
+          "url": "https://webflow.sysdig.com/blog/intro-runtime-security-falco?utm_source=tldrdevops",
+          "reading_time_minutes": 11,
+          "source_domain": "webflow.sysdig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a18",
+          "order": 3,
+          "title": "KOMODOR EXTENDS AI SRE REACH FOR KUBERNETES TO AI AGENTS",
+          "summary": "Komodor launched an Agentic Operations Platform that lets SREs deploy, customize, govern, and audit AI agents through familiar DevOps workflows, with 50+ built-in agents, integrations, guardrails, approvals, and spending controls. The platform aims to help teams manage growing fleets of production AI agents while preserving existing change management and governance practices.",
+          "url": "https://cloudnativenow.com/features/komodor-extends-ai-sre-reach-for-kubernetes-to-ai-agents/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-18:a19",
+          "order": 1,
+          "title": "REDIS WAS BUILT FOR SINGLE-CORE MACHINES. YOURS HAS 64",
+          "summary": "",
+          "url": "https://www.dragonflydb.io/?utm_source=tldr&utm_medium=newsletter&utm_campaign=TLDRDevOpsQuickLinks09182026&sp=yZxj5f76VHx1mE54GdN8Zz3N",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a19-02",
+          "order": 2,
+          "title": "it for free",
+          "summary": "",
+          "url": "https://www.dragonflydb.io/?utm_source=tldr&utm_medium=newsletter&utm_campaign=TLDRDevOpsQuickLinks09182026&sp=yZxj5f76VHx1mE54GdN8Zz3N",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a20",
+          "order": 3,
+          "title": "COORDINATE PRODUCT LAUNCHES WITH DATADOG",
+          "summary": "This guide walks through how to turn a product brief and feature flag into a connected launch workflow.",
+          "url": "https://www.datadoghq.com/blog/coordinate-product-launches-with-datadog/?utm_source=tldrdevops",
+          "reading_time_minutes": 1,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-18:a21",
+          "order": 4,
+          "title": "GIVE EVERY TEAMMATE AND AGENT THE RIGHT LEVEL OF ACCESS TO YOUR WORKERS",
+          "summary": "Cloudflare now allows administrators to assign access controls to specific Workers, restricting users and agents to individual applications.",
+          "url": "https://blog.cloudflare.com/workers-granular-authorization/?utm_source=tldrdevops%5B22%5D%5B23",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-hardware:2026-09-18",
+  "sector": "TLDR Hardware",
+  "sector_slug": "tldr-hardware",
+  "date": "2026-09-18",
+  "source_path": "TLDR Hardware/article_18-09-2026.md",
+  "source_content_hash": "sha256:f33dfecfd9e2b79c80c73cd19ba513de927086edc42d4f3b22aa6950abc5d2bc",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR HARDWARE 2026-09-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-18:a04",
+          "order": 1,
+          "title": "SK HYNIX IS IN TALKS WITH INTEL TO MAKE ITS FIRST US MEMORY CHIPS",
+          "summary": "SK Hynix is in exploratory talks with Intel over a deal that would have it manufacture memory chips in the US for the first time, with one scenario having it lease part of Intel's long-delayed Ohio campus and another forming a joint venture with Intel and major cloud providers to lock in steady memory supply. Intel's Ohio site, announced back in 2022 at up to $100 billion, has slipped to a 2030-2031 start, so landing SK Hynix as a tenant would give Intel's foundry business exactly the marquee customer it's been chasing, while giving SK Hynix a way to actually produce chips domestically rather than just package them, as it's already doing at its $4 billion Indiana facility under construction.",
+          "url": "https://links.tldrnewsletter.com/9mlABf",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a05",
+          "order": 2,
+          "title": "FIGURE'S HELIX 2.5 WALKS INTO 30 UNSEEN HOMES AND GETS TO WORK WITH ZERO FINE-TUNING",
+          "summary": "Figure pretrained Helix 2.5 entirely on Index, its crowdsourced human video dataset, then fine-tuned three whole-body behaviors - tidying rooms, folding towels, making beds - before deploying a single fixed checkpoint into 30 Bay Area homes it had never seen, with no data collection or adaptation on-site and objects it had never encountered. The key isolation test: training two otherwise identical policies on the same task-specific data, one from random initialization and one from Index-pretrained weights, showed Index pretraining alone lifted zero-shot success from 9% to 56%, over 6x higher, with success requiring full task completion and no partial credit.",
+          "url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "figure.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a06",
+          "order": 3,
+          "title": "ONSEMI REPLACES TINY WIRES INSIDE POWER CHIPS TO CUT ENERGY LOSSES",
+          "summary": "Onsemi's new Embedded Power Platform (EPP) builds power components directly into the silicon itself, wiring them together with precisely etched layers instead of the usual wire bonds, which cuts electrical losses and lets the parts switch faster. The idea is to design the electrical, thermal, and mechanical sides of a power system together from day one instead of separately, since treating them as separate problems has been forcing expensive redesigns late in development as devices demand more power in less space.",
+          "url": "https://www.servethehome.com/onsemi-embedded-power-platform-announced?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "servethehome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a07",
+          "order": 4,
+          "title": "NVIDIA GRAPHICS CHIPS CONTAIN UP TO 40 TINY PROCESSORS FOR HOUSEKEEPING",
+          "summary": "The shader cores that do actual graphics work aren't where the RISC-V lives - it's in a collective of small management processors handling clocking, memory, security, and other housekeeping, with Nvidia VP Frans Sijstermans confirming each GPU packs 10 to 40 of them depending on the model. Users can't program these cores directly, and they're cryptographically locked down so tightly the GPU firmware won't even boot if they've been tampered with.",
+          "url": "https://www.xda-developers.com/your-nvidia-gpu-dozens-risc-v-cores-one-took-over-graphics-driver?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "xda-developers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a08",
+          "order": 5,
+          "title": "HUGE AI MODELS CAN RUN ON A CONSUMER GRAPHICS CARD BY USING SSD STORAGE",
+          "summary": "Mixture-of-Experts models keep growing capacity by adding more experts, but even after quantization, the full expert pool still dwarfs consumer RAM and VRAM, so local inference has to lean on SSD storage instead - a much harder problem than just having enough disk space. SSD-LLaMA builds an SSD I/O pipeline tuned specifically for fetching experts, layered with a three-tier SSD-RAM-VRAM hierarchy that dynamically decides which experts to hold where, and CPU-GPU hybrid execution balanced against the SSD's limited bandwidth, all while running every selected expert in full rather than pruning or substituting cheaper approximations.",
+          "url": "https://arxiv.org/abs/2609.18110?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a09",
+          "order": 6,
+          "title": "INVISIBLE CHANGES TO A ROBOT'S TRAINING WORLD CAN MAKE IT FAIL IN REAL LIFE",
+          "summary": "Every 3D asset in a robot simulator carries two geometries - a visual mesh for rendering and a coarser collision mesh for physics - a legitimate gap since matching them exactly is too expensive. This paper shows that gap is exploitable: an attacker can alter only the collision mesh, so a policy trained on the poisoned asset looks and behaves normally in simulation, then fails or creates real safety risks once deployed. It slips past existing checks entirely, since asset review covers malware, copyright, and format, but nothing verifies visual-collision consistency, and the researchers found the defenses they tested weren't enough to catch it.",
+          "url": "https://arxiv.org/abs/2609.18122?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-18:a10",
+          "order": 1,
+          "title": "INTEL VETERANS RAISE $100 MILLION TO HELP DIFFERENT AI CHIPS WORK TOGETHER",
+          "summary": "Delos Data, founded by Intel veterans, raised $100 million led by Matrix Partners and Playground to build networking chips and software that move data faster between processors inside increasingly heterogeneous AI data centers. Early AI data centers were mostly Nvidia GPUs wired together with Nvidia's own proprietary networking, but as the focus has shifted from training toward running persistent, failure-tolerant agentic inference workloads, data centers now mix GPUs, XPUs, accelerators, CPUs, memory, and storage from Nvidia, AMD, Cerebras, and others, none of which were designed to talk to each other efficiently at that scale.",
+          "url": "https://links.tldrnewsletter.com/xVEfsp",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a11",
+          "order": 2,
+          "title": "LEAKED TEST SUGGESTS APPLE'S M6 IS 27% FASTER THAN M5 ON MULTICORE TASKS",
+          "summary": "An unverified Geekbench 7 result for Apple's new 2nm M6 chip, debuting in the new Mac mini, shows a single-core score of 4,071 and a multi-core score of 22,783, up roughly 12% and 27% respectively over the M5's average scores. That single-core number tops every other Mac or PC in the Geekbench database, including the M5 Max (3,731) and Qualcomm's Snapdragon X2 Elite Extreme (3,396), backing up Apple's claim that the M6 has the world's fastest single-threaded CPU performance, while the multi-core gain lines up with Apple's advertised 1.2x multi-threaded improvement.",
+          "url": "https://www.macrumors.com/2026/09/15/apple-m6-chip-benchmark?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "macrumors.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-09-18:a12",
+          "order": 1,
+          "title": "ARM SEES A BETTER CHANCE OF REACHING $2 BILLION IN SALES OF ITS OWN AI CHIP",
+          "summary": "Arm CEO Rene Haas discussed the company's AI revenue targets with Jim Cramer on CNBC's Mad Money, framing Arm's architecture as increasingly central to AI infrastructure even as competition from RISC-V and custom silicon intensifies.",
+          "url": "https://www.cnbc.com/2026/09/16/jim-cramer-arm-ceo-ai-revenue-goal.html?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a13",
+          "order": 2,
+          "title": "OPEN-SOURCE PLANS LET YOU BUILD YOUR OWN ROBOT ARM",
+          "summary": "OpenArm is an open-source, fully 3D-printable robotic arm project from Enactic, designed as a low-cost, hackable platform for robotics research and development.",
+          "url": "https://github.com/enactic/OpenArm?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a14",
+          "order": 3,
+          "title": "MISUMI AND FICTIV LAUNCH A $50 MILLION FUND BACKING THE NEXT GENERATION OF HARDWARE, ROBOTICS AND PHYSICAL AI COMPANIES",
+          "summary": "Misumi, a maker of high-end linear actuators, and Fictiv, a manufacture-on-demand service, are launching a $50M venture fund that aims to bring their hardware manufacturing expertise to new hardware and deep tech startups.",
+          "url": "https://www.fictiv.com/articles/misumi-americas-launches-misumi-ventures?utm_campaign=&utm_content=&utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "fictiv.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a15",
+          "order": 4,
+          "title": "JENSEN HUANG SAYS NVIDIA WILL DOUBLE AI CHIP SALES NEXT YEAR",
+          "summary": "Speaking at a summit with King Charles III in Scotland, Jensen Huang said Nvidia expects to sell twice as many chips next year, extending a forecast that already projects 70% revenue growth for fiscal 2028.",
+          "url": "https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "cnbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-09-18:a16",
+          "order": 5,
+          "title": "TESLA'S AI5 CHIP ENTERS TRIAL PRODUCTION AT SAMSUNG'S TEXAS FAB",
+          "summary": "Samsung has started trial production of Tesla's AI5 chip on its 2nm node at the new Taylor, Texas foundry, fast-tracking prototype runs ahead of schedule to handle a wave of custom silicon orders, backed by Tesla's $16.5 billion manufacturing contract at the site.",
+          "url": "https://www.notateslaapp.com/news/4701/tesla-ai5-chip-enters-trial-production-at-samsungs-texas-fab?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "notateslaapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-18",
+  "source_path": "TLDR InfoSec/article_18-09-2026.md",
+  "source_content_hash": "sha256:a2017526e3814a62bdd1bb040d34fbf30f6314c378bea637b645b49dd55740ec",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a04",
+          "order": 1,
+          "title": "THE EU AI ACT: WHAT SECURITY LEADERS NEED TO KNOW NOW",
+          "summary": "The EU AI Act is reshaping how organizations govern AI. Security leaders need clear visibility into where AI is used, the data it can access, and the controls they can demonstrate.\n\nJoin us on Weds, Oct 7th [4] to learn:\n\n→ The AI security implications of the EU AI Act → The five AI governance gaps that leave security teams exposed → Technical controls that can help support compliance",
+          "url": "https://www.catonetworks.com/resources/eu-ai-act-what-security-leaders-need-to-know/?utm_source=tldr-infosec&utm_medium=newsletter&utm_campaign=ai-security&utm_content=20260918",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a04-02",
+          "order": 2,
+          "title": "Can't attend? Register anyways for the recording →",
+          "summary": "",
+          "url": "https://www.catonetworks.com/resources/eu-ai-act-what-security-leaders-need-to-know/?utm_source=tldr-infosec&utm_medium=newsletter&utm_campaign=ai-security&utm_content=20260918",
+          "reading_time_minutes": null,
+          "source_domain": "catonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a05",
+          "order": 1,
+          "title": "WORDFENCE ARGUS IDENTIFIES TWO CRITICAL UNAUTHENTICATED VULNERABILITY CHAINS LEADING TO REMOTE CODE EXECUTION IN THE EVENTS CALENDAR PLUGIN",
+          "summary": "Two CVSS 9.8 flaws affect The Events Calendar up to version 6.17.4. Anonymous attackers can submit crafted Gutenberg markup in event comments and then trigger execution via pending-comment previews. One chain executes OS commands via PHP object injection, while the other resets an administrator password using wp_update_user. Update to 6.17.4.1. Exploitation requires comments enabled on event pages.",
+          "url": "https://www.wordfence.com/blog/2026/09/wordfence-argus-identifies-two-critical-unauthenticated-vulnerability-chains-leading-to-remote-code-execution-in-the-events-calendar-plugin/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "wordfence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a06",
+          "order": 2,
+          "title": "HACKERS PUBLISH THOUSANDS OF DRIVERS' DATA AFTER BREACHING FLORIDA MOTOR VEHICLE DATABASE",
+          "summary": "ShinyHunters published hundreds of thousands of files stolen from Florida's DAVID vehicle and driver database after alleging the state agency refused to pay a ransom. FLHSMV confirmed that attackers used police credentials stored on a personal device. Leaked ownership records include names, addresses, buyer and seller details, and VINs. Some files also contain Social Security numbers, passports, and immigration documents.",
+          "url": "https://techcrunch.com/2026/09/16/hackers-publish-thousands-of-drivers-data-after-breaching-florida-motor-vehicle-database/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a07",
+          "order": 3,
+          "title": "FIRST AGENTIC AI DATA BREACH REPORTED TO SPANISH REGULATOR",
+          "summary": "Spain's AEPD received a breach notification involving an automated system. It logged in, searched for flaws, changed personal data, and accessed invoices. Possible causes include a jailbroken model, an exposed test environment, or an unauthorized penetration-testing setup. The regulator calls for faster detection, containment, and response, plus stronger protection for digital identities and credentials.",
+          "url": "https://links.tldrnewsletter.com/R3NGAe",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a08",
+          "order": 1,
+          "title": "AGENTIC SELF-MODIFICATION IN OPEN-WEIGHTS SYSTEMS",
+          "summary": "A coding agent fixed a failing query application by fine-tuning its shared Qwen model. It then merged the update into the default checkpoint, altering later agent and application instances, with held-out query accuracy rising from 0/20 to 20/20. The tuned model reproduced a synthetic API key, email, and address from training data and removed a trained refusal policy. Training tools, weight access, and deployment access increased modification attempts so as to track model lineage, retain training data and evaluations, and require approval before deployment.",
+          "url": "https://www.irregular.com/research/agentic-self-modification-in-open-weights-systems?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "irregular.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a09",
+          "order": 2,
+          "title": "BRING YOUR OWN EDR: HOW TO TURN A COMMERCIAL EDR INTO A TROJAN HORSE",
+          "summary": "Researchers from Akamai discovered that attackers with admin access on a Windows device could abuse SentinelOne's EDR solution to dump protected processes, pivot to Microsoft Defender, and run malicious code in the Protected Process Light (PPL) context. They then extended this research by demonstrating how they could temporarily disable the EDR, move code into the EDR's protected files, run malicious code, and then re-enable the EDR, which would then protect the malicious code as part of its local files. Additionally, they found that cloud communication can be disabled by modifying the local DNS configuration.",
+          "url": "https://www.akamai.com/blog/security-research/bring-your-own-edr-turn-commercial-edr-trojan-horse?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "akamai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a10",
+          "order": 3,
+          "title": "HOW TO EVALUATE LLMS BEFORE PRODUCTION",
+          "summary": "When evaluating an LLM-based system to reduce false positives in GitHub secrets scanning, the team faced issues that made benchmarks unrepresentative of production workloads and prevented them from properly evaluating model performance. To combat this problem, the team at GitHub created an LLM evaluation framework. First, teams should define the product decision that the system should support; then teams should make sure that offline experiments use a representative dataset and have only one clearly defined variable; error analysis and LLM-as-judge systems can be used to guide human analysts towards interesting aspects of the evaluation; and then finally the experiment can be promoted to production.",
+          "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a11",
+          "order": 1,
+          "title": "COMP AI (PRODUCT LAUNCH)",
+          "summary": "Comp AI provides software for governance, risk, and compliance work. It automates onboarding, evidence collection, policy drafting, control monitoring, and assessments.",
+          "url": "https://www.trycomp.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "trycomp.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a12",
+          "order": 2,
+          "title": "LOGTOTAL-SANITIZER",
+          "summary": "logtotal-sanitizer is a framework-agnostic log sanitizer for browsers and Node.js that is designed to sanitize log files before they are sent to third-party platforms for processing, analysis, or troubleshooting.",
+          "url": "https://github.com/socprime/logtotal-sanitizer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a13",
+          "order": 3,
+          "title": "NEEDRE",
+          "summary": "neEDRe is a toy EDR project that demonstrates how to implement an EDR system using AYA, the Rust eBPF library.",
+          "url": "https://github.com/sunlife3/needre?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a14",
+          "order": 1,
+          "title": "$1 MILLION SANDBOX CHALLENGE UNCOVERS LINUX KERNEL FLAWS",
+          "summary": "Vercel's two-week sandbox bounty received 1,285 reports and validated 92 findings, including one critical issue. No report accessed customer data. A leading submission chained two Linux networking flaws: one leaked host-kernel memory and another deterministically crashed the host. Patches remain under private review, and CVEs are pending.",
+          "url": "https://links.tldrnewsletter.com/X0QAp0",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a15",
+          "order": 2,
+          "title": "CISCO WARNS OF MAX SEVERITY ISE ZERO-DAY EXPLOITED IN ATTACKS",
+          "summary": "Cisco released security updates to address vulnerabilities in its Identity Services Engine, including a maximum-severity authentication bypass. An attacker could exploit the vulnerability to bypass authentication in the web-based management interface by sending a crafted request to affected endpoints. The Cisco PSIRT has identified this vulnerability as actively exploited and urges customers to update immediately.",
+          "url": "https://links.tldrnewsletter.com/PuGGsy",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a16",
+          "order": 3,
+          "title": "CISA PROMOTES A FRESH WAY TO DETER CYBERATTACKERS: LIE TO THEM",
+          "summary": "CISA has published its first-ever guidance on setting up honeypot systems, accounts, and data to distract potential attackers and ultimately help discover them. The guidance comes from internal discussions with CISA threat hunters and pentesters who found that cyber decoys can be a low-cost, high-fidelity way to detect attackers who have gained access to a network.",
+          "url": "https://cyberscoop.com/cisa-guidance-cyber-decoys-critical-infrastructure/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-18:a17",
+          "order": 1,
+          "title": "DATA BROKER RADARIS LOSES DOMAINS IN PRIVACY FIGHT",
+          "summary": "A New Jersey court transferred 14 Radaris-linked domains to Atlas Data Privacy after defendants missed court deadlines in Daniel's Law litigation.",
+          "url": "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a18",
+          "order": 2,
+          "title": "ATTACKERS EXPLOIT ISSABEL FRAMEWORK FLAW ENABLING UNAUTHENTICATED OS COMMAND EXECUTION",
+          "summary": "CVE-2026-89026 lets unauthenticated attackers forge JWT bearer tokens in Issabel Framework.",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-18:a19",
+          "order": 3,
+          "title": "BE ALERT: TARGETED ATTACKS ON PROMINENT RUSTACEANS",
+          "summary": "Prominent Rust maintainers are being lured onto fake job and contract video calls that end with a request to install a missing audio codec or paste a clipboard command.",
+          "url": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 1,
+          "source_domain": "blog.rust-lang.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
