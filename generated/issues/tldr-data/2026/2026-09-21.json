@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-21",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-21",
+  "source_path": "TLDR Data/article_21-09-2026.md",
+  "source_content_hash": "sha256:79c3927b4398ece38d477da9344adfed75bbf1ecc5c290d9327e87f7a681f6a4",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a04",
+          "order": 1,
+          "title": "STAKEHOLDERS OFTEN SPOT BROKEN DATA BEFORE THE DATA TEAM DOES.",
+          "summary": "According to a Monte Carlo/Wakefield survey, 74% of organizations now report it. The failure is usually the ingestion path, not the dashboard. ‘Building a real-time data transport layer with Confluent Cloud and AWS' demonstrates the change-data-capture transport pattern. Read the tutorial in AWS Marketplace [5]. The Data Pipelines and Lineage guide goes a level up from the tutorial: lineage from source to AI agent response, data quality, pipeline observability. See the",
+          "url": "https://aws.amazon.com/marketplace/build-learn/ai-agent-learning-series/data-pipelines-and-lineage?trk=6600ca63-4ab0-43a8-8e43-1d3207134ebe&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-21:a04-02",
+          "order": 2,
+          "title": "data pipeline patterns.",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn/ai-agent-learning-series/data-pipelines-and-lineage?trk=6600ca63-4ab0-43a8-8e43-1d3207134ebe&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a06",
+          "order": 1,
+          "title": "TRAINING A 4B MODEL TO PRODUCE 81% FASTER QUERY PLANS THAN POSTGRES",
+          "summary": "A 4B Qwen model was trained with supervised fine-tuning and reinforcement learning to generate faster PostgreSQL query plans. Across 113 join-heavy queries, its best-of-three results achieved a 1.81x geometric mean speedup over PostgreSQL's default plans and reduced total workload latency by 44.7%, showing small models can learn useful database optimization strategies from execution-time feedback.",
+          "url": "https://rohanbansal.com/qorl?utm_source=tldrdata",
+          "reading_time_minutes": 21,
+          "source_domain": "rohanbansal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a07",
+          "order": 2,
+          "title": "THE ARCHITECTURE OF NEKI",
+          "summary": "PlanetScale's Neki horizontally shards standard PostgreSQL while presenting applications with a single Postgres connection, using routers, sidecars, replication, and automated failover to manage distributed queries and availability. It can also reshard data, move tables, and perform online schema changes without taking the database offline.",
+          "url": "https://planetscale.com/blog/the-architecture-of-neki?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a08",
+          "order": 3,
+          "title": "SAVING ANOTHER 100TB OF RAM WITH MATH (AND RUST)",
+          "summary": "Consistent hashing smooths load by assigning each server many virtual points, but those points can become a major memory cost at global scale. Cloudflare reworked Pingora's hash-ring representation, sorting, and rollout path to reclaim more than 100 TB of RAM. The article connects the distribution math to a staged migration that contained cache churn and preserved rollback control.",
+          "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a09",
+          "order": 4,
+          "title": "DEBUGGING INCONSISTENT QUERY LATENCY ON A POSTGRESQL HYPERTABLE: WHAT WE LEARNED",
+          "summary": "A PostgreSQL hypertable query was fast by hand but intermittently stalled because JDBC prepared statements switched to generic plans. Without parameter values, the planner could not exclude old chunks and spent seconds planning instead of executing. Logging the bind phase exposed the fault, while disabling server-side prepared statements and reducing chunk count restored predictable latency.",
+          "url": "https://links.tldrnewsletter.com/3ra8Dh",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a10",
+          "order": 1,
+          "title": "TWO TECHNIQUES FOR WORKING WITH SYSTEM ONE MODELS",
+          "summary": "System One models act as fast, general-purpose classifiers that make many simple decisions in parallel rather than generating long responses. Two useful patterns are to give them layered goals for real-time tasks and use tournament-style comparisons when choosing the best option from a large set.",
+          "url": "https://www.seangoedecke.com/two-techniques-for-working-with-system-one-models/?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "seangoedecke.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a11",
+          "order": 2,
+          "title": "THE SPAN ATTRIBUTE THAT BLEW UP YOUR OBSERVABILITY BILL",
+          "summary": "A high-cardinality span attribute can quietly multiply metric series even when trace volume and sampling remain flat. Sampling reduces stored trace bytes, not the distinct label combinations produced upstream by span metrics. Keep identifiers on traces, bucket them before metrics aggregation, and set cardinality and expiration limits so one deployment cannot turn a temporary dimension into a lasting observability bill.",
+          "url": "https://thinhdanggroup.github.io/otel-span-cardinality/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "thinhdanggroup.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a12",
+          "order": 3,
+          "title": "SATURATION AT GITHUB: THE SAGA CONTINUES",
+          "summary": "A GitHub outage was triggered when a background cleanup job saturated a shared database primary, while monitoring incorrectly showed the cluster as healthy because it only watched replica lag. Long request timeouts and repeated retries then amplified the failure, highlighting how partial health signals and retry storms can turn database saturation into a site-wide incident.",
+          "url": "https://surfingcomplexity.blog/2026/09/19/saturation-at-github-the-saga-continues/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "surfingcomplexity.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a13",
+          "order": 1,
+          "title": "📊 HOW MANY DASHBOARDS IS TOO MANY?",
+          "summary": "Every new monitoring tool, service, or \"quick integration\" adds another dashboard to the pile—and before you know it, you're spending more time switching between tools than actually building. With Microsoft Azure [13], your entire stack lives in one workspace: infrastructure, data, AI, and more. See how Azure brings it all",
+          "url": "https://links.tldrnewsletter.com/hoXGov",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-21:a13-02",
+          "order": 2,
+          "title": "together →",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/hoXGov",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a14",
+          "order": 3,
+          "title": "PG-JEV",
+          "summary": "pg-jev brings natural-language classification directly into PostgreSQL, letting you filter, rank, and classify rows with Jev-powered SQL functions that return calibrated probabilities instead of generated text. It batches and caches evaluations to make semantic queries practical without embeddings or vector indexes.",
+          "url": "https://github.com/realZachi/pg-jev?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a15",
+          "order": 4,
+          "title": "CHARTS BUILT FOR CHAT",
+          "summary": "dbt Charts is an open-source, YAML-based dashboard language designed for humans and AI agents to build governed charts in code rather than through a BI interface. Dashboards stay auditable and version-controlled alongside dbt models, with validation catching broken queries and poor visualisations before they ship.",
+          "url": "https://dbtcharts.com/blog/charts-built-for-chat/?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "dbtcharts.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a16",
+          "order": 1,
+          "title": "FASTER JSON PARSING WITH SVE2 ON ARM PROCESSORS",
+          "summary": "JSON ingestion often spends significant time locating structural characters before parsing values. A new simdjson implementation uses ARM SVE2's match instruction to classify those characters more directly, improving indexing throughput by 3-9% on Graviton 4 and 5. The full parser gain is smaller, but the patch shows how targeted SIMD changes can improve a heavily optimized data path.",
+          "url": "https://lemire.me/blog/2026/09/18/faster-json-parsing-with-sve2-on-arm-processors/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "lemire.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a17",
+          "order": 2,
+          "title": "JEV FOR 10-K DATA EXTRACTION: FAST & CALIBRATED",
+          "summary": "Jev can act as a fast, inexpensive verification layer for extracting structured data from 10-K filings: another tool finds candidate values, then Jev selects the correct one and returns calibrated confidence. This avoids unreliable generate-and-parse loops while routing ambiguous cases to larger models or humans.",
+          "url": "https://mohammadsoleimanian.com/jev-for-10-k-data-extraction-fast-calibrated/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "mohammadsoleimanian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-21:a18",
+          "order": 1,
+          "title": "ADDING AN INDEX MADE THIS QUERY SLOWER",
+          "summary": "An index matching ORDER BY in Postgres can still hurt when the filtered rows sit far down that index: inspect Rows Removed by Filter, test representative parameters, and use a composite index that matches both the filter and ordering.",
+          "url": "https://milanjovanovic.tech/blog/when-postgres-picks-the-wrong-index?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "milanjovanovic.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-21:a19",
+          "order": 2,
+          "title": "PGRUN",
+          "summary": "PGRun gives agents and CI fast, isolated Postgres branches from production, avoiding shared staging conflicts, and keeping production protected.",
+          "url": "https://pgrun.dev/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "pgrun.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

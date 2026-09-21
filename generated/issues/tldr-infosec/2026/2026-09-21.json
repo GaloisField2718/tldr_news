@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-21",
+  "source_path": "TLDR InfoSec/article_21-09-2026.md",
+  "source_content_hash": "sha256:da214cd3d15a5f3af16a45b815dcecf6cb84e38417e36edeeeef67532946d6c2",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-21",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-21:a04",
+          "order": 1,
+          "title": "GYAZO BREACH EXPOSES 23.62 MILLION USER RECORDS AND 490 MILLION IMAGE METADATA RECORDS",
+          "summary": "Gyazo's upload server flaw let an attacker run commands and access its database. Exposed data includes 23.62 million user records, password hashes, session IDs, integration tokens, and 490 million image metadata records. Leaked image IDs may expose linked captures. Helpfeel fixed the flaw, blocked access routes, and urged password changes.",
+          "url": "https://thehackernews.com/2026/09/gyazo-breach-exposes-2362-million-user.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a05",
+          "order": 2,
+          "title": "GOOGLE PIXEL PHONES PWNED IN ZERO-CLICK ATTACKS",
+          "summary": "Google has fixed CVE-2026-58704, an actively exploited Pixel modem authorization flaw. Attackers can bypass permission checks and escalate privileges without user interaction. CISA added it to its Known Exploited Vulnerabilities catalog and ordered federal agencies to patch by September 19. Google disclosed limited, targeted exploitation but provided no attack details and asked users to update supported Pixel devices immediately.",
+          "url": "https://www.theregister.com/security/2026/09/16/google-pixel-phones-pwned-in-zero-click-attacks/5296936?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a06",
+          "order": 3,
+          "title": "FAKE LASTPASS AUTHENTICATOR GITHUB REPOS PUSH NEW RAPUNCEL INFOSTEALER",
+          "summary": "Security researchers uncovered a new malware campaign that utilizes GitHub repos to impersonate LastPass Authenticator and at least 39 other well-known products. The campaign utilizes a legitimate Microsoft Visual Studio CoreCLR Debugger, which loads a malicious DLL. The DLL deploys a previously undocumented infostealer and an EDR and antivirus killer that terminates a hardcoded list of 145 EDR or antivirus products.",
+          "url": "https://links.tldrnewsletter.com/pi03Vl",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-21:a07",
+          "order": 1,
+          "title": "GLM-5.3 DELIVERS OPUS 4.8-LEVEL PERFORMANCE AT A FRACTION OF THE COST",
+          "summary": "Semgrep benchmarked the new Grok models and GLM-5.3 on their standard IDOR vulnerability-finding benchmark. They found that Grok 4.6 Exacto roughly matched Opus 4.7's F1 score at less than a third of the cost. GLM-5.3 was able to compete with Opus 4.8 at one seventh of the cost.",
+          "url": "https://semgrep.dev/blog/2026/glm-53-delivers-opus-48-level-cybersecurity-results-at-a-fraction-of-the-cost/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "semgrep.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a08",
+          "order": 2,
+          "title": "REVERSE ENGINEERING MALWAREBYTES BROWSER GUARD",
+          "summary": "After the author's legitimate site got flagged as a scam by Malwarebytes Browser Guard, they took a deep dive into the source code to identify what caused it. This post walks through the several layers Browser Guard uses, including bloom filters, heuristic rules, a malware URL database, a download file classifier, specialized rules for specific attacks like ClickFix, and remote false-positive checking using Hubble. The bigger issue, the author noted, is that the extension ships with a debug interface that can be used to disable heuristics.",
+          "url": "https://msil.re/posts/reversing-malwarebytes-browser-guard.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 36,
+          "source_domain": "msil.re",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a09",
+          "order": 3,
+          "title": "HOW TO BUILD AN OT SECURITY OPERATING MODEL",
+          "summary": "An implementation guide breaks an OT security program into six components, beginning with asset discovery and process context mapping that tie every device to the operational process it supports. Availability and process safety outrank confidentiality here, so access boundaries, monitoring, incident response, and recovery each require joint sign-off from operations before deployment. Ownership belongs to a cross-functional executive such as a CISO or VP of Operations, with NERC CIP and NIST SP 800-82 treated as checkpoints rather than as the program design itself.",
+          "url": "https://www.scworld.com/implementation-guides/how-to-build-an-ot-security-operating-model?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-21:a10",
+          "order": 1,
+          "title": "ARE PENTESTS OBSOLETE IN THE AI ERA?",
+          "summary": "You can now get the depth of a pentest at the frequency of a scan. Does that mean pentests are dead? This Intruder blog [10] lays out the short-term, mid-term, and long-term implications of AI-driven pentesting. See what the economics, frontier AI developments, and",
+          "url": "https://links.tldrnewsletter.com/zYfPsx",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a10-02",
+          "order": 2,
+          "title": "threat landscape are all pointing to. Read the blog",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/zYfPsx",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a11",
+          "order": 3,
+          "title": "DITTO",
+          "summary": "Ditto is a tree-sitter-based PowerShell and JavaScript obfuscatory.",
+          "url": "https://github.com/airbus-cert/ditto?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a12",
+          "order": 4,
+          "title": "NATURAL LANGUAGE NMAP",
+          "summary": "Natural language nmap (nmap-nl) is a lightweight, local command-line inference tool that translates natural language into raw nmap commands and executes them locally using a locally-hosted, fine-tuned Gemma-3-270M model.",
+          "url": "https://github.com/evets007/natural-language-nmap?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a13",
+          "order": 5,
+          "title": "TATS",
+          "summary": "Token Analysis and Tracking System (TATS) allows users to track OAuth 2.0, OIDC, and Microsoft Entra ID tokens across captured network traffic by ingesting Burp Suite XML exports, mitmproxy flow files, or live Chrome DevTools Protocol streams and serving an interactive web dashboard.",
+          "url": "https://github.com/IceMoonHSV/TATS?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-21:a14",
+          "order": 1,
+          "title": "HACKERS CRACKED A FLOCK CAMERA. HERE IS WHAT WAS INSIDE.",
+          "summary": "A removed Flock camera exposed 1.6 million images and records of 50,200 vehicles over 21 days. Unencrypted Android partitions stored a key for footage encryption, and the device ran about 20 custom apps and captured bursts of vehicle images. Uploaded records could be searched by more than 2,000 agencies, including out-of-state users.",
+          "url": "https://www.gadgetreview.com/hackers-cracked-a-flock-camera-here-is-what-was-inside?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "gadgetreview.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a15",
+          "order": 2,
+          "title": "RESEARCHERS USED CLAUDE TO HACK OPENAI",
+          "summary": "Hacktron AI researchers used Anthropic's security tool to exploit an OpenAI community-forum configuration flaw. They obtained internal sign-ons, accessed an employee's ChatGPT account, and reached GitHub-linked code. OpenAI paid the team $6,500 through its bug bounty program after disclosure, and OpenAI said it fixed the reported issues.",
+          "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a16",
+          "order": 3,
+          "title": "OUR FRAMEWORK FOR REPORTING MODEL MISALIGNMENT",
+          "summary": "OpenAI released a disclosure process and six incident reports. Cases include 27 summaries containing prompt injections, use of an exposed API key, fabricated county data, unauthorized file uploads, repository writes, and public file-sharing. Reports can be delayed when third parties or undisclosed vulnerabilities require investigation and notification.",
+          "url": "https://links.tldrnewsletter.com/p8atJ7",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-21:a17",
+          "order": 1,
+          "title": "INTERNATIONAL METEOR ORGANIZATION SAYS CYBERATTACK DEALT ‘CRITICAL BLOW' TO WEBSITE",
+          "summary": "A cyberattack took much of the International Meteor Organization's aging web infrastructure offline.",
+          "url": "https://therecord.media/international-meteor-organization-cyberattack?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a18",
+          "order": 2,
+          "title": "ZERO-CLICK RCE VULNERABILITY HIT FOUR MAJOR AI CODING AGENTS, TWO REMAIN UNPATCHED",
+          "summary": "Plugin4Shell bypasses SHA pinning in Claude Code, Codex, GitHub Copilot, and Gemini CLI plugins.",
+          "url": "https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-21:a19",
+          "order": 3,
+          "title": "CRITICAL PRE-AUTH RCE IN ORKES CONDUCTOR WORKFLOW PLATFORM EXPLOITED IN THE WILD",
+          "summary": "Attackers are actively exploiting a critical pre-auth RCE (CVE-2026-58138) in Orkes Conductor by escaping unsandboxed GraalVM evaluators to execute arbitrary OS commands, requiring an immediate upgrade to version 3.30.2.",
+          "url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
