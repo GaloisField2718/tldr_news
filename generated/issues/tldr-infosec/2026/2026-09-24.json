@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-09-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-09-24",
+  "source_path": "TLDR InfoSec/article_24-09-2026.md",
+  "source_content_hash": "sha256:b9db587ebfd5d84131b53ffac6156d32e5543697b67ecfc58ba72d2d2474938f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-09-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a04",
+          "order": 1,
+          "title": "SECURITY IS A DATA AND AI PROBLEM. IT CAN'T BE SOLVED IN A SILO",
+          "summary": "You want to run securely, not translate vendor-specific schemas into usable formats, hunt down the IT and business context you need, or pay by the byte for the privilege.\n\nSecurity doesn't thrive in a SIEM silo. You need an open platform where you can use all your telemetry and enterprise context to tell real threats from false positives.\n\nLakewatch is an open, agentic SIEM built on the Databricks security lakehouse, so you can correlate 100% of your telemetry on one governed platform where agents handle triage, investigation and detection authoring at machine speed.",
+          "url": "https://links.tldrnewsletter.com/3sy0sq",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a04-02",
+          "order": 2,
+          "title": "Dive into Lakewatch",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/3sy0sq",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a05",
+          "order": 3,
+          "title": "Learn the new AI Security Framework (DASF 3.0)",
+          "summary": "Download the eBook: The Security Lakehouse — Outpacing AI Zero-Days",
+          "url": "https://links.tldrnewsletter.com/qwVtpT",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a06",
+          "order": 4,
+          "title": "",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/NUmtXT",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a07",
+          "order": 1,
+          "title": "CRITICAL BIFROST AI GATEWAY FLAW LETS ATTACKERS RUN COMMANDS WITHOUT CREDENTIALS",
+          "summary": "Bifrost, an open-source AI gateway for 20+ LLM providers, ships with management auth disabled by default, so a single unauthenticated POST to /api/mcp/client can register a stdio MCP client and run arbitrary commands as the gateway user (CVE-2026-90898, CVSS 9.8). That exposes every stored provider API key. The official Docker image binds the management API to 0.0.0.0, and v2.0.0 only fixed a related plugin-loading flaw (CVE-2026-86242, CVSS 8.1). Upgrade to transports/v2.1.0 or set governance.auth_config.is_enabled to true, and treat any exposed unauthenticated instance as compromised by rotating virtual and provider API keys.",
+          "url": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a08",
+          "order": 2,
+          "title": "BIGCOMMERCE DATA STOLEN VIA RIBON APPS HACK",
+          "summary": "Attackers used compromised Ribon API credentials from a Fastr system breach to access BigCommerce merchant customer data from September 13 to 17. Exposed records included names, email addresses, phone numbers, and postal addresses. BigCommerce revoked the credentials, uninstalled affected Ribon apps, and notified merchants.",
+          "url": "https://links.tldrnewsletter.com/Lp1K2G",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a09",
+          "order": 3,
+          "title": "GITHUB APP PRIVATE KEYS: 474 LEAKED KEYS EXPOSED",
+          "summary": "GitGuardian tested 4,802 leaked GitHub App private keys and found 474 that were still authenticated as 440 apps. Forty-four apps held organization-admin permissions. 207 could write repository content, and with the keys having no expiry, the leaked PEM files can remain usable for years. Cases included an Actions token app installed across roughly 300 organizations, BuildBuddy's internal app, Crusher.dev, and a CDC-related app.",
+          "url": "https://blog.gitguardian.com/github-app-private-keys-leaked/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.gitguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a10",
+          "order": 1,
+          "title": "THE TALE OF TWO INC RANSOM NOTES",
+          "summary": "An INC ransomware intrusion across 175+ endpoints started in early August with randomly named scheduled tasks launching an obfuscated PowerShell implant and RDP lateral movement. After 17 quiet days, AnyDesk delivered netscan.exe and a BYOVD EDR killer (hwau.exe loading the HwAudio driver), and Impacket's atexec.py deployed the payload. Huntress onboarded after the incident, so initial access is unknown, and the gap points to an access broker handing off to an affiliate, who followed the standard note with a DATALEAK_PRESS_RELEASE.txt listing stolen files and threatening to contact clients within 48 hours. Defenders should alert on randomly named scheduled tasks, unexpected RMM installs, and new or unsigned driver services, and limit privileged accounts to the systems they actually need.",
+          "url": "https://www.huntress.com/blog/two-inc-ransom-notes?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a11",
+          "order": 2,
+          "title": "REVOKING THE TOKEN DIDN'T KILL THE BACKDOOR",
+          "summary": "GraphWorm, an implant tied to the China-nexus group Webworm, uses a real OneDrive account over Microsoft Graph as a dead drop, and its \"upgrade\" task swaps all five hardcoded OAuth credentials for a spare account in one command, so token revocation only pauses it. It also identifies victims by hashing MAC, CPU, and disk serials, so renaming or re-addressing a host won't shake the operator. Isolate the host or block the app ID in your own tenant at the same moment you revoke, then hunt sign-in logs for that app ID, unfamiliar tenants, and non-browser user agents hitting OneDrive.",
+          "url": "https://www.csoonline.com/article/4223975/revoking-the-token-didnt-kill-the-backdoor.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "csoonline.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a12",
+          "order": 3,
+          "title": "HANDLE REDIRECT",
+          "summary": "EDR products typically register callbacks on handle creation to monitor when processes call OpenProcess so they can strip access rights before a handle to a sensitive process like lsass is delivered. This article demonstrates a technique in which an attacker calls OpenProcess on a benign process (like notepad.exe) and then redirects the received handle to the sensitive process to evade EDR detection. To detect this attack vector, a security product running at the kernel level can periodically scan all process handle tables and compare ObjectPointerBits decoded EPROCESS against the process that owns the table.",
+          "url": "https://links.tldrnewsletter.com/xMXmyI",
+          "reading_time_minutes": 17,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a13",
+          "order": 1,
+          "title": "SECURE CLOUD AI WITH STRONGER GRC",
+          "summary": "Watch this on-demand security demo from AWS and SANS Institute to see how governance, risk, and compliance strategies can help address risk across identity, data, APIs, and agentic workflows. Learn approaches for access control, data protection, and visibility. Watch now and",
+          "url": "https://pages.awscloud.com/awsmp-gim-i0v9-webinar-sec-grc-security-lab-grc-security-lab.html?trk=351a7c3a-1186-4574-a8eb-5f5b9837c220&sc_channel=el&sp=ZJfkIJq6qY20olSXnimOM5b0",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a13-02",
+          "order": 2,
+          "title": "explore AWS Partner solutions in AWS Marketplace.",
+          "summary": "",
+          "url": "https://pages.awscloud.com/awsmp-gim-i0v9-webinar-sec-grc-security-lab-grc-security-lab.html?trk=351a7c3a-1186-4574-a8eb-5f5b9837c220&sc_channel=el&sp=ZJfkIJq6qY20olSXnimOM5b0",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a14",
+          "order": 3,
+          "title": "OUTERLIMIT (PRODUCT LAUNCH)",
+          "summary": "Outerlimit provides a decentralized authorization layer for autonomous software agents. It finds agents, monitors behavior, and enforces policies at execution time. The system restricts token use by scope, location, and conditions.",
+          "url": "https://www.outerlimit.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "outerlimit.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a15",
+          "order": 4,
+          "title": "FIRMWARE REVERSE ENGINEERING SKILLS",
+          "summary": "A collection of five agent skills for firmware extraction, static analysis, Ghidra reverse engineering, emulation, and security reporting.",
+          "url": "https://github.com/OrbitCurve/firmware-reverse-engineering?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a16",
+          "order": 5,
+          "title": "PKTZ",
+          "summary": "pktz is an eBPF-powered network traffic monitor with per-process and per-connection reporting.",
+          "url": "https://github.com/immanuwell/pktz?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a17",
+          "order": 1,
+          "title": "MICROSOFT DISRUPTS AI-ASSISTED PLATFORM THAT COMPROMISED 12,000 ACCOUNTS",
+          "summary": "EvilTokens, a Telegram-sold subscription service ($1,500 upfront, $500 monthly), abused Microsoft Entra device code authentication to compromise 12,000 accounts across 10,000 organizations before a Microsoft-led operation seized 50 websites and 150 domains, and the UK's Met Police arrested two men. Its AI chatbot analyzed 5,000 compromised emails at a time to identify who could approve payments, who they reported to, and which impersonation ruses would send funds to attacker accounts. Microsoft described it as a shift where criminals can make sense of a compromised inbox in minutes rather than days.",
+          "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a18",
+          "order": 2,
+          "title": "NORTH KOREA'S HANGRO REVISITED",
+          "summary": "Hangro, North Korea's SoftEther-derived VPN and mail client for officials abroad, added a July 2026 management certificate whose SAN lists hosts in Pyongyang and Khabarovsk plus an internal CGNAT address, while its older 2024 chain fails every signature check, including the root against itself. Its Chinese callback traces to six Shenyang assignments under a single 2008 Silibank registry contact, though silibank[.]com lapsed and was re-registered in 2023. The researcher describes the DPRK \"return leg\" as layered rather than a single pipe, with dead-drop pickup during Chinese office hours, 10 GB ETRN-enabled mail relays for bulk transfer, and Hangro for interactive sessions, though no actual traffic was observed.",
+          "url": "https://blog.synapticsystems.de/north-koreas-hangro-revisited/?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "blog.synapticsystems.de",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a19",
+          "order": 3,
+          "title": "ANTHROPIC AND OPENAI MODELS STILL ATTEMPT RESTRICTED ACTIONS IN SAFETY TESTS",
+          "summary": "Anthropic's Opus 5.5 escaped or tampered with its sandbox in 1.5% of unguarded tests. With package-registry credentials, it took harmful actions in roughly half of simulated exercises. OpenAI's GPT-6 Luna bypassed “access denied” controls in 42% of runs - Sol did so in 64%. OpenAI plans third-party reviews covering safeguards, capabilities, and misalignment incidents.",
+          "url": "https://thehackernews.com/2026/09/anthropic-and-openai-models-still.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-09-24:a20",
+          "order": 1,
+          "title": "UK COPS ARREST 2 EVILTOKENS SUSPECTS, MICROSOFT SEIZES 50 PHISHING KIT WEBSITES",
+          "summary": "Microsoft and UK police disrupted EvilTokens, a Microsoft device-code phishing service.",
+          "url": "https://www.theregister.com/security/2026/09/22/uk-cops-arrest-2-eviltokens-suspects-microsoft-seizes-50-phishing-kit-websites/5298317?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-09-24:a21",
+          "order": 2,
+          "title": "STOLEN PASSWORDS ARE EXPOSING AMERICA'S WATER PROVIDERS TO HACKERS",
+          "summary": "SpyCloud found stolen credentials at 1,787 of 10,000 US water providers reviewed.",
+          "url": "https://techcrunch.com/2026/09/22/stolen-passwords-are-exposing-americas-water-providers-to-hackers/?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

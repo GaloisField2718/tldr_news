@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-24",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-24",
+  "source_path": "TLDR Data/article_24-09-2026.md",
+  "source_content_hash": "sha256:f675a9b84353919fb075327d5b458f8f7a934c9985c24e4186577e1fb10aaa1c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-24",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a04",
+          "order": 1,
+          "title": "RUN CLICKHOUSE WORKFLOWS FROM APACHE AIRFLOW",
+          "summary": "The official ClickHouse provider lets you create tables, load data and run SQL from your Airflow DAGs. It works with self-managed Airflow and Astronomer.\n\nSet up the provider [5], connect it to ClickHouse Cloud and try it with your own data.",
+          "url": "https://clickhouse.com/blog/clickhouse-airflow-provider?utm_source=tldr&utm_medium=paid-newsletter&utm_id=tldr3",
+          "reading_time_minutes": null,
+          "source_domain": "clickhouse.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-24:a06",
+          "order": 2,
+          "title": "Start a free ClickHouse Cloud trial with $300 in credits.",
+          "summary": "",
+          "url": "https://console.clickhouse.cloud/signUp?utm_source=tldr&utm_medium=paid-newsletter&utm_id=tldr3",
+          "reading_time_minutes": null,
+          "source_domain": "console.clickhouse.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a07",
+          "order": 1,
+          "title": "WE PORTED THE ORIGINAL DOOM TO SQL",
+          "summary": "CedarDB ported the original Doom's game logic and renderer almost entirely to SQL, running the game loop at its original 35 Hz and rendering at up to 60 FPS. The experiment shows that surprisingly complex real-time logic can work with SQL's set-based model, while database features like transactions, access control, and shared state make multiplayer particularly natural.",
+          "url": "https://cedardb.com/blog/sqldoom/?utm_source=tldrdata",
+          "reading_time_minutes": 25,
+          "source_domain": "cedardb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a08",
+          "order": 2,
+          "title": "IF YOU LAST USED CASSANDRA 3.11, YOU MIGHT NOT RECOGNIZE IT TODAY",
+          "summary": "Apache Cassandra 5 loosens many of the constraints teams learned with 3.11, adding storage-attached indexing, unified compaction, native vector search, and built-in repair scheduling. Cassandra 6 goes further with ordered cluster metadata and cross-partition transactions, although partitioning and workload design remain fundamental.",
+          "url": "https://softwaremill.com/apache-cassandra-5-6-what-changed-since-3-11/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "softwaremill.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a09",
+          "order": 3,
+          "title": "HOW CONCURRENCE GOVERNS CLINICAL AI AT A TRILLION-TOKEN SCALE WITH UNITY GATEWAY",
+          "summary": "Concurrence uses Databricks to run and govern clinical AI at an annualized scale of roughly 1.2 trillion input tokens, combining patient data, agent state, testing, evaluations, and access controls on one platform. Unity Gateway centralizes access to approved AI models and tools, helping the company track usage, enforce compliance, and safely scale both clinical and coding agents.",
+          "url": "https://www.databricks.com/blog/how-concurrence-governs-clinical-ai-trillion-token-scale-unity-gateway?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a10",
+          "order": 1,
+          "title": "BENCHMARKS ARE MORE BROKEN THAN WE COULD HAVE IMAGINED",
+          "summary": "Horizon audited over 5,000 AI benchmark tasks across 20 datasets and confirmed 29 were broken, with problems including leaked answers, incomplete tests, gameable graders, and failing reference solutions. Many of these flaws actually inflated model scores, highlighting how benchmark results can overstate capabilities when the underlying tasks and graders are unreliable.",
+          "url": "https://www.horizonanalyticslabs.com/research/public-benchmark-dataset-audit?utm_source=tldrdata",
+          "reading_time_minutes": 15,
+          "source_domain": "horizonanalyticslabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a11",
+          "order": 2,
+          "title": "REAL-TIME LLM GUARDRAILS WITH JEV: COMPARING LATENCY AND COST",
+          "summary": "TypeSafe's Jev uses a purpose-built decision model for real-time AI guardrails, checking agent inputs, responses, and tool calls before they execute. In Arize's tests, it made the same decisions as GPT-5.4 nano while running 15-18x faster and costing 12-14x less per call.",
+          "url": "https://arize.com/blog/llm-guardrails-jev/?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "arize.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a12",
+          "order": 1,
+          "title": "EARN YOUR MASTER OF TRANSLATIONAL DATA ANALYTICS ONLINE FROM THE OHIO STATE UNIVERSITY.",
+          "summary": "Become an expert in data storytelling with the online Master of Translational Data Analytics from Ohio State's Translational Data Analytics Institute. This interdisciplinary program blends machine learning, user experience, data visualization, and design thinking to prepare you to uncover and present insights from data.",
+          "url": "https://online.osu.edu/masters-degree/master-data-analytics/?lead_source=Response-Solutions&utm_campaign=oaa_oso_tda-student-recruitment_fy27_tldr&channel=Other-Paid&utm_source=3rd-Party-Display&utm_medium=ENewsletter&sp=cMJq3vO_CoP6pShNBTnQzrgF",
+          "reading_time_minutes": null,
+          "source_domain": "online.osu.edu",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-24:a12-02",
+          "order": 2,
+          "title": "Explore the program",
+          "summary": "",
+          "url": "https://online.osu.edu/masters-degree/master-data-analytics/?lead_source=Response-Solutions&utm_campaign=oaa_oso_tda-student-recruitment_fy27_tldr&channel=Other-Paid&utm_source=3rd-Party-Display&utm_medium=ENewsletter&sp=cMJq3vO_CoP6pShNBTnQzrgF",
+          "reading_time_minutes": null,
+          "source_domain": "online.osu.edu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a13",
+          "order": 3,
+          "title": "JEVFLAKE",
+          "summary": "Jevflake brings TypeSafe's Jev decision model into Snowflake through SQL functions and dbt, letting teams classify, score, and ask structured questions about their data with probabilistic answers. It can cache results in dbt models and add tests or human-review queues, making AI classifications reusable parts of normal analytics workflows.",
+          "url": "https://github.com/KranzL/Jevflake?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a14",
+          "order": 4,
+          "title": "INTRODUCING PROMPT_JEV(): BRINGING JEV TO MOTHERDUCK SQL",
+          "summary": "MotherDuck's new prompt_jev function brings Jev directly into SQL, letting users classify and score text at analytics scale without training a model or parsing LLM responses. In its 100,000-row benchmark, Jev achieved 89% accuracy in 40 seconds for $0.50, outperforming the tested LLMs on speed, cost, and accuracy.",
+          "url": "https://motherduck.com/blog/motherduck-supports-jev/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "motherduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a15",
+          "order": 5,
+          "title": "DUCKDB NOW SHIPS INSIDE DBT V2",
+          "summary": "dbt v2's Rust-based Fusion engine now includes a built-in DuckDB adapter, removing the need for a separate adapter installation. It adds DuckLake and Iceberg REST catalog support, writes queryable project metadata as Parquet, and performs SQL analysis that finds type or column problems before warehouse execution. The migration path starts by testing the opt-in v2 parser against existing projects.",
+          "url": "https://duckdb.org/2026/09/22/dbt-fusion.html?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a16",
+          "order": 6,
+          "title": "ANNOUNCING APACHE FLUSS 1.0: REAL-TIME DATA FOUNDATION FOR AI",
+          "summary": "Apache Fluss 1.0 introduces a stateless Rust HTTP Gateway for metadata, table operations, and batch writes, alongside native Python access and deeper Flink, Spark, Hudi, and Paimon integration. It adds row and log TTLs, predicate pushdown, coordinator high availability, resource protection, and cleanup features, moving the project from incubator-era capabilities toward production real-time lakehouse workloads.",
+          "url": "https://fluss.apache.org/blog/releases/1.0/?utm_source=tldrdata",
+          "reading_time_minutes": 15,
+          "source_domain": "fluss.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a17",
+          "order": 1,
+          "title": "HIGH-THROUGHPUT OLTP IN THREE SIMPLE STEPS",
+          "summary": "High-throughput transaction systems benefit from co-design rather than copying a connection-pool pattern from a general-purpose database. TigerBeetle models linked transfers atomically, aggregates balances without scans, batches operations automatically while a request is in flight, and prefers time-ordered identifiers for fast idempotency checks. Its benchmark illustrates why batching and ordered IDs can matter more than adding clients.",
+          "url": "https://tigerbeetle.com/blog/2026-09-17-performant-use-of-tigerbeetle?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "tigerbeetle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a18",
+          "order": 2,
+          "title": "HOW ADAPTIVE TAIL SAMPLING WORKS IN THE OPENTELEMETRY COLLECTOR",
+          "summary": "Fixed-rate sampling often discards the rare traces needed in an incident, while ordinary tail sampling loses statistical weights. An adaptive tail sampler for the OpenTelemetry Collector buffers traces, applies ordered rules, and attaches W3C probability thresholds so downstream counts can be reweighted. It adapts by route and service, bounds memory under load, and is progressing upstream toward alpha.",
+          "url": "https://www.honeycomb.io/blog/how-adaptive-tail-sampling-works?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "honeycomb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-24:a19",
+          "order": 1,
+          "title": "PROFILE YOUR POLARS QUERIES",
+          "summary": "Polars now exposes a query profiler for local open-source workloads.",
+          "url": "https://pola.rs/posts/profile-local-queries/?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "pola.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-24:a20",
+          "order": 2,
+          "title": "HOST- AND DOMAIN-LEVEL WEB GRAPHS JULY, AUGUST, AND SEPTEMBER 2026",
+          "summary": "Common Crawl has released open web graphs covering 245.8 million hosts and 133.2 million domains.",
+          "url": "https://commoncrawl.org/blog/host--and-domain-level-web-graphs-july-august-and-september-2026?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "commoncrawl.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
