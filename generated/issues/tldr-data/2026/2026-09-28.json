@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-09-28",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-09-28",
+  "source_path": "TLDR Data/article_28-09-2026.md",
+  "source_content_hash": "sha256:3f322dd48f8084922461b856096966ecb85a91fac56c1ef2a49d841bee7c19c5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-09-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a04",
+          "order": 1,
+          "title": "EXPLORE ADVICE FROM 15+ GLOBAL LEADERS ON BUILDING DATA FOUNDATIONS FOR AI",
+          "summary": "Get advice from 15+ leaders on how to build and monitor reliable intelligent agents for better business outcomes in this book [4] from Amazon Web Services (AWS).",
+          "url": "https://pages.awscloud.com/awsmp-gim-ccrs-adhoc-aim-ent-ai-data-leader-daiml-book-2.html?trk=fa2e574d-7f09-48eb-8419-b18317ceefc4&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-28:a04-02",
+          "order": 2,
+          "title": "risk management, evaluation, and deployment. GET YOUR DIGITAL COPY",
+          "summary": "",
+          "url": "https://pages.awscloud.com/awsmp-gim-ccrs-adhoc-aim-ent-ai-data-leader-daiml-book-2.html?trk=fa2e574d-7f09-48eb-8419-b18317ceefc4&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a05",
+          "order": 1,
+          "title": "ROBOTICS HARNESS OPTIMIZATION ON GRAPH-AS-POLICY",
+          "summary": "Robotics Harness Optimization used coding agents to evolve a Graph-as-Policy robot controller, boosting simulated throughput 5.27x and success from 67% to 96%. The strongest version only rewired existing skills, without editing them or using human demonstrations.",
+          "url": "https://kael.tech.blog/2026/09/26/robotics-harness-optimization-on-graph-as-policy/?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "kael.tech.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a06",
+          "order": 2,
+          "title": "PARTITION FINALIZATION IN PINTEREST'S NEXT-GENERATION DB INGESTION FRAMEWORK",
+          "summary": "Pinterest added a finalization layer to its Kafka, Flink, Spark, and Iceberg CDC pipeline so downstream jobs can tell when an hourly partition is safe to read. Flink checkpoints capture event-time statistics, which become Iceberg snapshot metadata and a non-regressing watermark. The reusable signal makes freshness-versus-completeness explicit without introducing another coordination service.",
+          "url": "https://links.tldrnewsletter.com/V2QLZq",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a07",
+          "order": 3,
+          "title": "THE GUEST JOURNEY, UPDATED IN REAL TIME: EXTENDING AIRBNB'S SEQUENCE RECOMMENDER WITH CHRONON",
+          "summary": "Airbnb extended Chronon to update guest-journey features from batch refreshes to event-driven processing, cutting feature staleness from roughly two days to under a minute. Push Mode and near-real-time model transforms feed embeddings into online ranking while preserving offline training consistency. The architecture illustrates how feature platforms can bridge streaming updates, experimentation, and low-latency serving.",
+          "url": "https://airbnb.tech/ai-ml/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon/?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "airbnb.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a08",
+          "order": 4,
+          "title": "SCALING AN ML INFERENCE PIPELINE FOR BATCH WORKLOADS",
+          "summary": "WHOOP cut a 15.8-million-task internal ML simulation from more than two months to six days by removing per-task HTTP calls, loading the model in workers, and tuning pod CPU. It also documents why Python fork deadlocked native libraries, how spawn fixed it, and how SQS chain state plus atomic S3 writes made retries idempotent.",
+          "url": "https://engineering.whoop.com/scaling-ml-inference-pipeline?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "engineering.whoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a09",
+          "order": 1,
+          "title": "WHAT REPACK (CONCURRENTLY) COSTS WHILE IT RUNS",
+          "summary": "PostgreSQL 19 adds built-in REPACK (CONCURRENTLY) for online table rewrites, avoiding extensions while generally running faster and generating less WAL than pg_repack or pg_squeeze. The tradeoffs are significant: it can delay VACUUM across the cluster, briefly block writes during the final swap, and currently has a ceiling of approximately 105 million updates/deletes per run.",
+          "url": "https://boringsql.com/posts/repack-concurrently-costs/?utm_source=tldrdata",
+          "reading_time_minutes": 15,
+          "source_domain": "boringsql.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a10",
+          "order": 2,
+          "title": "TEN YEARS OF POSTGRES LOGICAL REPLICATION",
+          "summary": "Postgres logical replication has steadily replaced custom data-movement plumbing with core SQL features: row filters, column lists, partitioned targets, streaming apply, parallel apply, and safer loop prevention. This retrospective connects those releases to practical migration and hub-and-worker scaling patterns. It is a useful checklist for teams revisiting replication slots, failover, write routing, and schema evolution.",
+          "url": "https://tapoueh.org/blog/2026/09/ten-years-of-postgres-logical-replication/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "tapoueh.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a11",
+          "order": 1,
+          "title": "DATA PIPELINES AND LINEAGE FOR AI AGENTS ON AWS",
+          "summary": "Your AI agent's accuracy comes down to the data pipeline behind it. Data Pipelines and Lineage is a guide to engineering that pipeline: source-to-response lineage, data quality checks, and pipeline observability. Read the guide in AWS Marketplace [11].",
+          "url": "https://aws.amazon.com/marketplace/build-learn/ai-agent-learning-series/data-pipelines-and-lineage?trk=b0663ee7-1444-430d-adf2-28368ccfee31&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-09-28:a12",
+          "order": 2,
+          "title": "BUILDING AN ULTRA-HIGH THROUGHPUT AI-SQL ENGINE",
+          "summary": "Quail is an open-source AI-SQL engine that jointly optimizes query planning and LLM inference, running 1.84x faster than tuned vLLM on average and up to 14x faster on some workloads. It reduces wasted KV-cache work and GPU scheduling overhead, making large-scale LLM filtering and joins much cheaper.",
+          "url": "https://fsdatalab.github.io/blog/introducing-quail/?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "fsdatalab.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a13",
+          "order": 3,
+          "title": "SAFE NOT SAFE",
+          "summary": "Safe Not Safe is a browser-based PostgreSQL migration checker that flags risky DDL patterns like blocking locks, rewrites, and unsafe constraint rollouts. It runs entirely locally in the browser, with no API, uploads, logs, or account required.",
+          "url": "https://safenotsafe.dev/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "safenotsafe.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a14",
+          "order": 4,
+          "title": "APACHE ICEBERG VIEWS: PORTABLE VIEW METADATA ACROSS SQL ENGINES",
+          "summary": "Iceberg's View Spec makes metadata portable by versioning schemas, dependencies, properties, and dialect-tagged SQL text, but it does not standardize execution or authorization. Production portability still depends on REST-catalog support and compatible SQL dialects. Teams should test dependency integrity, concurrent replacement, and cross-engine result consistency before treating views as shared control-plane assets.",
+          "url": "https://www.dremio.com/blog/apache-iceberg-views-portable-view-metadata-across-sql-engines/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "dremio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a15",
+          "order": 1,
+          "title": "ALP: ADAPTIVE LOSSLESS FLOATING-POINT ENCODING IN APACHE PARQUET",
+          "summary": "Apache Parquet added ALP, a new lossless encoding for floating-point data that delivers compression similar to ZSTD while decoding around 10x faster. It also enables much faster random access and parallel decoding, making it especially useful for prices, coordinates, and scientific measurements.",
+          "url": "https://parquet.apache.org/blog/2026/09/22/alp-adaptive-lossless-floating-point-encoding-in-apache-parquet/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "parquet.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a16",
+          "order": 2,
+          "title": "TRADING A CLOUD IDENTITY FOR YOUR OWN: WORKLOAD ATTESTATION ON MANAGED COMPUTE",
+          "summary": "Netflix describes how Spark jobs on managed compute exchange a cloud execution role for an internally trusted workload identity. A signed metadata payload and AWS identity proof are verified before short-lived certificates are issued for mutual TLS. The pattern separates cloud-provider authorization from application trust, giving the platform stronger workload identity and more auditable access boundaries.",
+          "url": "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-09-28:a17",
+          "order": 1,
+          "title": "DATABENCH",
+          "summary": "Opus 5.5 leads Hex's DataBench, scoring 70.5% at Max reasoning and 67.0% at XHigh, but at relatively high cost and latency.",
+          "url": "https://hex.tech/databench/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "hex.tech",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-09-28:a18",
+          "order": 2,
+          "title": "THE CONTEXT GAP | HOW TO BUILD DATA ARCHITECTURE LIKE OPEN AI",
+          "summary": "OpenAI's AI data stack centralizes rich metadata to close the context gap, while a Rust rewrite reportedly cut Airflow scheduling latency 35x at 70,000+ concurrent tasks.",
+          "url": "https://dataopsleadership.substack.com/p/the-context-gap-how-to-build-data?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "dataopsleadership.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

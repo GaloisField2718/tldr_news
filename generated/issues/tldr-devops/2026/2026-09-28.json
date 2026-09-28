@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-28",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-28",
+  "source_path": "TLDR DevOps/article_28-09-2026.md",
+  "source_content_hash": "sha256:35923eb7adb04ebf7684187ecd6417ce3cfdd62ad6a8c19df8dc2e7b31a2454e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-28",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a04",
+          "order": 1,
+          "title": "🤝 HANDSHAKES MATTER: KEY TOOLS TO SCALE INTEROPERABILITY",
+          "summary": "Standardized protocols enable AI agents to communicate, delegate tasks, and access external tools. In this technical session [5], the Google Cloud engineering team dives deep into:\n\n* The open Agent-to-Agent (A2A) protocol * The Model Context Protocol (MCP) * Protocols for payment authorization and UI * How protocols fit together in the Google AI stack\n\n➡️ Watch the session on-demand [6]to build interoperable, multi-agent systems without compromising enterprise governance.",
+          "url": "https://cloudonair.withgoogle.com/events/securing-scaling-interoperability-agent-protocols?utm_source=tldr&utm_medium=email&utm_campaign=FY26-Q3-northam-NOR10000012-email-oi-na-named-tldr-newsletter-devops-28sep2026&utm_content=tldr-devops-28sep2026_header_handshakes_matter_key&utm_term=-_2026-09-28",
+          "reading_time_minutes": null,
+          "source_domain": "cloudonair.withgoogle.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a07",
+          "order": 2,
+          "title": "questions for the Agentic Enterprise.",
+          "summary": "",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/20-questions-for-the-agentic-enterprise?utm_source=tldr&utm_medium=email&utm_campaign=FY26-Q3-northam-NOR10000012-email-oi-na-named-tldr-newsletter-devops-28sep2026&utm_content=tldr-devops-28sep2026_cta_20_questions_agentic&utm_term=-_2026-09-28",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a08",
+          "order": 1,
+          "title": "ALIBABA OPEN SOURCES OPENCODEREVIEW FOR AI-ASSISTED CODE REVIEW",
+          "summary": "Alibaba has open-sourced OpenCodeReview, an Apache-2.0 code review tool that combines deterministic file and rule matching with AI analysis to flag issues like null pointers and SQL injection. It matches Claude Code's precision using roughly one-ninth the tokens in tests, though outside reviewers found recall as low as 20 percent.",
+          "url": "https://www.infoq.com/news/2026/09/alibaba-opencodereview/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a09",
+          "order": 2,
+          "title": "AMAZON CLOUDWATCH OMNI: AI-FIRST OBSERVABILITY FOR AGENTS AND APPLICATIONS",
+          "summary": "AWS has launched CloudWatch Omni, an AI-powered observability experience that combines OpenTelemetry with CloudWatch's scale to unify telemetry across accounts, regions, and other clouds into one team-organized workspace. It offers natural language querying, automatic dependency mapping, and a dedicated agent observability workflow spanning frameworks like LangGraph, CrewAI, and the Vercel AI SDK.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a10",
+          "order": 1,
+          "title": "TRADING A CLOUD IDENTITY FOR YOUR OWN: WORKLOAD ATTESTATION ON MANAGED COMPUTE",
+          "summary": "Netflix engineers developed a method to bridge AWS IAM roles with internal identities for Apache Spark workloads on Amazon EMR. The system maps each Data Project identity to a dedicated IAM role, allowing a control plane to sign metadata that an identity service verifies against a cloud proof of possession. This approach ensures that workloads running on managed compute obtain valid certificates from the internal PKI, called Metatron, without relying on the workload's own account of itself.",
+          "url": "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252?source=rss----2615bd06b42e---4&utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a11",
+          "order": 2,
+          "title": "IMPROVING SITE PERFORMANCE BY SHIPPING MORE CSS",
+          "summary": "GitHub migrated github.com from CSS-in-JS to CSS Modules to remove client- and server-side styling overhead at scale. The migration cut Primer server-side rendering time by 55%, reduced component initialization time by 25%, and later improved SSR by up to 22% on some pages while thousands of sx usages were gradually replaced through feature flags, visual regression tests, codemods, and staged rollouts.",
+          "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a12",
+          "order": 3,
+          "title": "A TYPE STRONGER THAN THE SUM OF ITS COMPONENTS",
+          "summary": "Rust APIs can encode stronger invariants by turning individual enum variants into dedicated types instead of accepting broader string or path values. Wrapping std::path::Component variants in types such as NormalComponent and ParentDirComponent lets the compiler enforce properties like safe path joins and prevents callers from passing values containing .., absolute paths, or other invalid components.",
+          "url": "https://www.schneems.com/2026/09/24/a-type-stronger-than-the-sum-of-its-components/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "schneems.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a13",
+          "order": 1,
+          "title": "GITLAB TRANSCEND IS COMING OCTOBER 6",
+          "summary": "Join Gene Kim of IT Revolution and engineering leaders from Hilton and Thrive Market, with GitLab, to learn how to prove every step of the agentic SDLC. Watch agentic workflows run on real codebases, not just demo repos. Registration includes a free seat at the $1,600",
+          "url": "https://about.gitlab.com/events/transcend/virtual/?utm_medium=sponsorship&utm_source=tldr+&utm_campaign=eg_global_cmp_webcast_ai_en_transcend_virtual&utm_content=devops-secondary-placement_20260928_x",
+          "reading_time_minutes": null,
+          "source_domain": "about.gitlab.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a13-02",
+          "order": 2,
+          "title": "Enterprise AI Summit livestream. Save your spot →",
+          "summary": "",
+          "url": "https://about.gitlab.com/events/transcend/virtual/?utm_medium=sponsorship&utm_source=tldr+&utm_campaign=eg_global_cmp_webcast_ai_en_transcend_virtual&utm_content=devops-secondary-placement_20260928_x",
+          "reading_time_minutes": null,
+          "source_domain": "about.gitlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a14",
+          "order": 3,
+          "title": "SCRIPTC",
+          "summary": "scriptc compiles TypeScript and JavaScript to native executables, WebAssembly modules, and other outputs including C and LLVM IR. It uses the TypeScript compiler for parsing and type checking, and static builds include a small native runtime without a JavaScript engine.",
+          "url": "https://github.com/vercel-labs/scriptc?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a15",
+          "order": 4,
+          "title": "OPENRIG",
+          "summary": "OpenRig is a multi-agent harness that manages Claude Code and Codex as a unified team within tmux sessions. It defines agent teams in YAML and includes starter configurations like a four-seat conveyor, a product-team with seven seats, and a secrets-manager example that runs a HashiCorp Vault instance. The tool requires Node.js and integrates a local daemon, CLI, terminal UI, and MCP server. Users should read the documentation about system changes before installing, as OpenRig writes hooks, trust settings, and provider integrations during setup.",
+          "url": "https://github.com/mvschwarz/openrig?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a16",
+          "order": 1,
+          "title": "MAXIMIZING APACHE SPARK AVAILABILITY: MITIGATING COMPUTE STOCKOUTS WITH FLEXIBLE VMS AND OTHER BEST PRACTICES",
+          "summary": "Google's Managed Service for Apache Spark now supports flexible VMs, letting clusters rank multiple acceptable machine families and storage types so provisioning automatically falls back during regional capacity stockouts rather than failing. Google recommends pairing ranked configurations with AutoZone routing, autoscaling, and regional fallbacks for resilience.",
+          "url": "https://cloud.google.com/blog/products/data-analytics/maximize-apache-spark-availability-with-flexible-vms/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a17",
+          "order": 2,
+          "title": "HOW CLOUDFLARE ADDRESSED A CROSS-TENANT DATA EXPOSURE VULNERABILITY IN CONTAINERS",
+          "summary": "Security researcher Oren Yomtov reported a vulnerability in Cloudflare Containers that allowed residual data recovery from storage blocks used by other customers on the same host. The issue stemmed from a configuration setting that skipped zeroing newly allocated blocks, potentially exposing directory structures, database pages, and application data. Cloudflare has remediated the vulnerability across its fleet and found no evidence of malicious exploitation.",
+          "url": "https://blog.cloudflare.com/containers-cross-tenant-vulnerability/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-28:a18",
+          "order": 1,
+          "title": "MOVE YOUR DATA WITHOUT SURPRISE STORAGE FEES",
+          "summary": "Megaport Standard Object Storage gives DevOps teams S3-compatible storage with no egress, API, or retrieval fees, making costs predictable across backup, recovery, archiving, and large-scale data movement workflows.",
+          "url": "https://www.megaport.com/lp/tldr-devops-storage/?utm_source=tldr&utm_medium=sponsored&utm_campaign=ME2608-1787292290-tldr_devops_storage&utm_content=&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "megaport.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a18-02",
+          "order": 2,
+          "title": "Skip the egress fees →",
+          "summary": "",
+          "url": "https://www.megaport.com/lp/tldr-devops-storage/?utm_source=tldr&utm_medium=sponsored&utm_campaign=ME2608-1787292290-tldr_devops_storage&utm_content=&utm_term=",
+          "reading_time_minutes": null,
+          "source_domain": "megaport.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a19",
+          "order": 3,
+          "title": "BUN REWRITES 535K LINES OF ZIG INTO RUST IN FOUR MONTHS, ELIMINATES NUMEROUS MEMORY LEAKS",
+          "summary": "Bun's creator rewrote the JavaScript runtime's 535,000-line Zig codebase into Rust in four months using AI-orchestrated implementer, reviewer, and fixer agents at a cost of $165,000 in tokens.",
+          "url": "https://www.infoq.com/news/2026/09/bun-AI-rewrite-zig-rust-4-months/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a20",
+          "order": 4,
+          "title": "INTRODUCING ENHANCED CUSTOM EVENT BUSES IN AMAZON EVENTBRIDGE FOR ENTERPRISE-SCALE EVENT-DRIVEN APPLICATIONS",
+          "summary": "AWS has announced an enhanced custom event bus for Amazon EventBridge that organizations can share across all accounts.",
+          "url": "https://aws.amazon.com/blogs/aws/introducing-enhanced-custom-event-buses-in-amazon-eventbridge-for-enterprise-scale-event-driven-applications/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-28:a21",
+          "order": 5,
+          "title": "WRONG, NOT BROKEN",
+          "summary": "Traditional observability can show that an AI agent is fast, available, and error-free while missing whether its output is actually correct.",
+          "url": "https://aws.amazon.com/blogs/aws-insights/wrong-not-broken/?utm_source=tldrdevops%5B22%5D%5B23",
+          "reading_time_minutes": 7,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
