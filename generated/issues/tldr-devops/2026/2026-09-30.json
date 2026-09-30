@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-09-30",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-09-30",
+  "source_path": "TLDR DevOps/article_30-09-2026.md",
+  "source_content_hash": "sha256:f6c5e069c3f23fa4a51e5eff9187d19e941bb97dd193f1c5684d8699ecbb1876",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-09-30",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a04",
+          "order": 1,
+          "title": "IN-DEPTH TUTORIALS TO START RIGHT NOW",
+          "summary": "Incidents fragment across dashboards — metrics in one tool, logs in another, traces in a third. Three tutorials in AWS Marketplace, one for each runtime:\n\nTUTORIAL [4]: trace an Amazon ECS alert to its root cause\n\nTUTORIAL [5]: consolidate Amazon EKS monitoring without losing coverage\n\nTUTORIAL [6]: instrument AWS Lambda in depth with traces, metrics, and logs",
+          "url": "https://aws.amazon.com/marketplace/build-learn/application-performance-monitoring-observability/deep-dive-troubleshooting-end-to-end-observability?utm_source=tldr_devops&utm_medium=newsletter&utm_campaign=scale_observability_q3_2026&utm_content=tldrdo_pri_tecs",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a07",
+          "order": 1,
+          "title": "INTRODUCING CF: THE AGENTIC CLI FOR THE ENTIRE CLOUDFLARE API",
+          "summary": "Cloudflare has introduced cf, a new command-line interface that allows agents to access over 3,000 operations across the entire Cloudflare API. Wrangler previously supported around 280 commands, and agent usage of that tool reached 48% last week. cf uses a unified API generation pipeline to standardize commands and defaults to JSON output for agents. Cloudflare will provide maintenance support for Wrangler for 18 months after the beta ends.",
+          "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a08",
+          "order": 2,
+          "title": "SELF-DRIVING INFRASTRUCTURE WITH PULUMI AND JEV",
+          "summary": "TypeSafe AI opened early access to Jev, a model that uses decision-making primitives to help apps manage infrastructure. Pulumi built GeoDeploy, an open-source tool that uses Jev to automatically compare prices and provision Kubernetes clusters across AWS, Azure, and Google Cloud.",
+          "url": "https://www.pulumi.com/blog/self-driving-infrastructure-pulumi-jev/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "pulumi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a09",
+          "order": 1,
+          "title": "BEYOND KUBERNETES AT MODAL: HOW TO SCALE 1 MILLION CONCURRENT SANDBOXES IN SECONDS",
+          "summary": "Modal engineers rebuilt their sandbox platform to support millions of concurrent sandboxes by replacing Kubernetes-style centralized coordination with distributed worker state and parallel scheduling. The redesign created one million sandboxes in under 60 seconds with sub-half-second startup times, prompting talk that infrastructure is splitting into separate coordination and execution planes.",
+          "url": "https://www.infoq.com/news/2026/09/modal-scaling-sandboxes/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a10",
+          "order": 2,
+          "title": "HOW UBER PROTECTS AGAINST RETRY STORMS",
+          "summary": "Uber added error ownership to its shared service-mesh infrastructure, so upstream services can distinguish failures they caused from errors merely propagated from deeper dependencies. During a major outage, the mechanism prevented an estimated 9.5 million unnecessary retry requests and reduced the maximum retry-storm radius across user-facing APIs from as high as 25 hops to 3.",
+          "url": "https://www.uber.com/us/en/blog/protecting-against-retry-storms/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "uber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a11",
+          "order": 3,
+          "title": "BIGQUERY TO CLICKHOUSE AT 15M CALL MINUTES A DAY: WHAT BROKE, WHAT WE FIXED, AND HOW WE CUT COSTS 6X",
+          "summary": "Bolna migrated analytics from BigQuery to ClickHouse, moved expensive CDC deduplication into materialized views, and fixed missing TOASTed JSONB values with REPLICA IDENTITY FULL. Reducing intermediate application writes cut replication traffic, with Bolna reporting roughly 6× lower analytics costs and data availability improving from 5–15 minutes to 1–2 minutes after calls ended.",
+          "url": "https://www.bolna.ai/blog/bigquery-to-clickhouse-15m-call-minutes?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "bolna.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a12",
+          "order": 1,
+          "title": "SEE, GOVERN, AND CONTROL DATABASE CHANGE IN ONE PLACE",
+          "summary": "Liquibase Secure 6.0 gives DevOps and platform teams centralized visibility, policy management, and role-based control across database change. Standardize how changes reach production without sending developers back to tickets, manual reviews, and one-off scripts. See how Liquibase Secure 6.0 brings database change governance to",
+          "url": "https://www.liquibase.com/demo?utm_source=tldr-newsletter&utm_medium=newsletter&utm_campaign=tldr-newsletter&utm_content=6.0-launch",
+          "reading_time_minutes": null,
+          "source_domain": "liquibase.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a12-02",
+          "order": 2,
+          "title": "enterprise scale →",
+          "summary": "",
+          "url": "https://www.liquibase.com/demo?utm_source=tldr-newsletter&utm_medium=newsletter&utm_campaign=tldr-newsletter&utm_content=6.0-launch",
+          "reading_time_minutes": null,
+          "source_domain": "liquibase.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a13",
+          "order": 3,
+          "title": "PAGEINDEX",
+          "summary": "PageIndex replaces vector indexes with a hierarchical tree index that allows LLMs to reason through documents like a human expert. The tool achieved 98.7% accuracy on FinanceBench, outperforming vector-based RAG.",
+          "url": "https://github.com/VectifyAI/PageIndex?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a14",
+          "order": 4,
+          "title": "OPENSHELL",
+          "summary": "OpenShell is an Apache-2.0 runtime for running autonomous agents inside isolated sandboxes with kernel-enforced filesystem, syscall, and network policies. Credentials are injected only for approved endpoints, while proposed policy changes are formally checked before they are applied. The platform also supports Kubernetes deployment, GPUs, and Python, TypeScript, Go, and Rust SDKs.",
+          "url": "https://github.com/NVIDIA/OpenShell?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a15",
+          "order": 1,
+          "title": "WHAT DEPENDENCY MOCKING SOFTWARE NEEDS TO HANDLE IN A CLOUD NATIVE ARCHITECTURE",
+          "summary": "Traditional dependency mocking tools break down in cloud native architectures where services deploy independently and drift goes undetected. Effective tools need deployment event awareness, behavior captured from real traffic rather than specs, automatic handling of non-deterministic fields, and cross-service diff visibility, with eBPF-based traffic capture cited as one approach.",
+          "url": "https://cloudnativenow.com/contributed-content/what-dependency-mocking-software-needs-to-handle-in-a-cloud-native-architecture/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a16",
+          "order": 2,
+          "title": "CAN YOUR POSTGRES SURVIVE A BAD QUERY?",
+          "summary": "Postgres memory limits such as work_mem apply per execution node and per worker rather than per query, allowing seemingly ordinary queries to consume many times the configured amount of memory. Recursive queries can be even more dangerous because some executor hash tables cannot spill to disk, creating workloads that can exhaust memory despite conservative configuration.",
+          "url": "https://clickhouse.com/blog/can-your-postgres-survive-a-bad-query?utm_source=tldrdevops",
+          "reading_time_minutes": 16,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-09-30:a17",
+          "order": 1,
+          "title": "IS YOUR CODE PROTECTED FROM DAY ONE?",
+          "summary": "Security as an afterthought means patches at midnight. Microsoft Azure helps make protection part of your dev lifecycle with Microsoft Defender for Cloud. Ship fast. Ship safely. Get started with Azure →",
+          "url": "https://links.tldrnewsletter.com/3BTBik",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a17-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/3BTBik",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a18",
+          "order": 3,
+          "title": "TERRAFORM PROVIDER FOR GOOGLE CLOUD 8.0 NOW GENERALLY AVAILABLE",
+          "summary": "HashiCorp released version 8.0 of the Terraform provider for Google Cloud, a major update that changes the default load balancing scheme, removes resources tied to retired services like Notebooks and IAP OAuth Admin, and converts several list attributes to sets for more predictable plans.",
+          "url": "https://www.hashicorp.com/blog/terraform-provider-for-google-cloud-80-now-generally-available?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "hashicorp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a19",
+          "order": 4,
+          "title": "DYNAMIC AI DISCOVERY & RUNTIME SECURITY FOR AGENTCORE",
+          "summary": "Harness integrated its AI posture management and firewall with Amazon Bedrock AgentCore Gateway, automatically inventorying agents, tools, and resources operating in AWS environments.",
+          "url": "https://www.harness.io/blog/harness-brings-dynamic-ai-discovery-and-runtime-security-to-amazon-bedrock-agentcore-gateway?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "harness.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-09-30:a20",
+          "order": 5,
+          "title": "LAKEBASE SEARCH: STATE-OF-THE-ART FULL TEXT AND VECTOR SEARCH FOR POSTGRES",
+          "summary": "Lakebase Postgres now offers generally available search capabilities on AWS and Azure through two new extensions, lakebase_vector and lakebase_text.",
+          "url": "https://www.databricks.com/blog/lakebase-search-state-art-full-text-and-vector-search-postgres?utm_source=tldrdevops%5B21%5D%5B22",
+          "reading_time_minutes": 6,
+          "source_domain": "databricks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
