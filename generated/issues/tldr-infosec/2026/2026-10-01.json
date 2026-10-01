@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-01",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-01",
+  "source_path": "TLDR InfoSec/article_01-10-2026.md",
+  "source_content_hash": "sha256:4c2ba8f3456d9eb4ae0f94ace7d34fa7ecc79db94a968f8b98565e72ea00aa9e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-01",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-01:a04",
+          "order": 1,
+          "title": "A REALISTIC CODE EXECUTION EXPLOIT CHAIN IN OPENBAO AND VAULT",
+          "summary": "ControlPlane chained four OpenBao flaws into an unauthenticated-to-RCE exploit that forges a SPIFFE provisioner certificate via an ACME URI SAN bypass, hijacks an admin role through case-insensitive ACL paths, and crosses namespaces to restore a malicious Raft snapshot. The final step executes any pre-existing binary whose SHA-256 the attacker can guess, even on read-only images and auto-unseal nodes, and Vault Community Edition remains unpatched after IBM declined a mutual disclosure agreement. Upgrade to OpenBao v2.6.3 or v2.7.0, or, as a stopgap, remove plugin_directory and enforce ACME EAB via BAO_DISABLE_PUBLIC_ACME.",
+          "url": "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "control-plane.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a05",
+          "order": 2,
+          "title": "NEW SPECTRE-V2 BTR ATTACK LEAKS LINUX MEMORY DESPITE EXISTING DEFENSES",
+          "summary": "Researchers from VUSec and Scuola Superiore Sant'Anna disclosed Branch Target Reuse (BTR), a Spectre-v2 variant that reuses stale indirect branch prediction entries in JIT engines after code is freed and reallocated. Proof-of-concept exploits against the Linux cBPF JIT recover the root password hash in minutes on patched Intel systems with default protections. Mitigations are merged in the Linux kernel (CVE-2026-64507, CVE-2026-64508). Mozilla is prioritizing site isolation over IBPB-based fixes.",
+          "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a06",
+          "order": 3,
+          "title": "RANSOMWARE ATTACK ON FINANCIAL LENDER TRIGGERS CUSTOMER LAWSUIT WITHIN 48 HOURS",
+          "summary": "The Gold Star Mortgage Financial Group is facing a lawsuit from customers after an alleged data breach by the BrainCipher ransomware group. The lawsuit alleges that the ransomware group stole more than 10k files from the mortgage lender, including full names, SSNs, residential addresses, and other contact information.",
+          "url": "https://www.cybersecurity-insiders.com/ransomware-attack-on-financial-lender-triggers-customer-lawsuit-within-48-hours/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecurity-insiders.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-01:a07",
+          "order": 1,
+          "title": "PWND BLASTER: HACKING YOUR PC USING YOUR SPEAKER WITHOUT EVER TOUCHING IT",
+          "summary": "The Creative Sound Blaster Katana V2X soundbar accepts unauthenticated Bluetooth connections and exposes its proprietary CTP control protocol over BLE. Firmware updates also use CTP and verify only a trivial SHA-256 checksum, allowing an attacker within ~15 meters to install custom firmware without pairing or physical access. The modified firmware adds a full USB keyboard HID descriptor and repurposes an existing diagnostic task to type commands after boot, turning the speaker into a remote BadUSB device. A proof-of-concept payload waits ~20 seconds for USB to initialize, then types echo pwned and presses Enter on the connected PC. Bluetooth stays enabled in sleep mode with no user-accessible toggle. Creative initially declined to classify this as a vulnerability.",
+          "url": "https://blog.nns.ee/2026/06/03/katana-badusb/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.nns.ee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a08",
+          "order": 2,
+          "title": "STACK UNWINDING CAN LEAD TO LEAKLESS CODE EXECUTION",
+          "summary": "This post describes a code execution technique in which an exploit abuses POSIX “cancellation points” to eventually execute code. This works by executing DWARF bytecode to mangle the .eh_frame_hdr data that is used when unwinding the stack. While this technique was discovered in the context of CTFs, it has applications outside of CTFs.",
+          "url": "https://pepsipu.com/blog/2026-09-dwarf/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "pepsipu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a09",
+          "order": 3,
+          "title": "A GITHUB TOKEN WAS STOLEN. NOW WHAT?",
+          "summary": "Invictus traced a run of 2026 incidents to stolen classic GitHub PATs, typically lifted from developer endpoints by info-stealers and used to map every reachable repository through bursts of /repositories/{id}/readme API calls before cloning. In one case, a single token exposed 1,100+ potential secrets across 300+ repos, and validating and rotating them took 30+ people over a week. Since GitHub keeps Git clone events for only seven days and api.request events require Enterprise audit log streaming, responders should scope to the token's full reach wherever logs are missing, then migrate off classic PATs to fine-grained tokens, GitHub Apps, or OIDC.",
+          "url": "https://www.invictus-ir.com/news/a-github-token-was-stolen-now-what?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "invictus-ir.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-01:a10",
+          "order": 1,
+          "title": "RECO (PRODUCT LAUNCH)",
+          "summary": "Reco maps active software agents, their identities, permissions, data access, systems, sessions, API connections, tools, workflows, and employee applications. Teams can revoke excessive permissions, disable risky integrations, and enforce access policies.",
+          "url": "https://www.reco.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reco.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a11",
+          "order": 2,
+          "title": "OPENSHELL",
+          "summary": "OpenShell is NVIDIA's sandboxed runtime for autonomous AI agents, enforcing per-agent policy on file access, syscalls, and network connections at the kernel level. Its standout feature is formal verification of policy changes, which flags risky new access, like credentialed calls to a new host, and holds it for human review. Agents never see real secrets, since credentials are injected only into requests bound for approved endpoints.",
+          "url": "https://github.com/NVIDIA/OpenShell?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a12",
+          "order": 3,
+          "title": "CGG",
+          "summary": "cgg (Call Graph Generator) is a tool that generates Mermaid diagrams of call graphs directly from source code.",
+          "url": "https://github.com/NeuralNotwerk/cgg?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-01:a13",
+          "order": 1,
+          "title": "PIXELLEAK: HOW AI AGENTS EXPOSED DEVELOPER SCREENSHOTS FROM LEADING TECH COMPANIES",
+          "summary": "Glow Labs found 13,000 internal screenshots posted to public GitHub repos by AI coding agents at 300+ orgs. Agents bypassed GitHub's CLI image limits by creating public repos or using gitshot, leaking billing screens, treasury consoles, and unreleased features. Most images lived in developers' personal accounts, evading org scanners. To prevent this, audit personal repositories and gists, restrict agent auto‑approval, and add runtime hooks to block pushes to public or non‑org repos.",
+          "url": "https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "glow.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a14",
+          "order": 2,
+          "title": "AGENCIES WITHHELD RECORDS NEEDED TO VERIFY DOGE DATA SAFEGUARDS",
+          "summary": "During the Government Accountability Office (GAO)'s review of DOGE's access to sensitive data, six agencies could not or refused to provide sufficient records. The SEC and NOAA disputed the GAO's authority to conduct the investigation and refused to cooperate. The VA and SBA also did not provide records but didn't cite a reason for doing so. At the CFPB, access was granted to 19 systems, with one DOGE team member being able to view, modify, and delete information in the bureau's primary human resources system. At the Department of Education, one DOGE member received limited access to two federal student aid systems and an admin account on the department's network.",
+          "url": "https://www.nextgov.com/policy/2026/09/agencies-withheld-records-needed-verify-doge-data-safeguards-gao-says/416305/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "nextgov.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a15",
+          "order": 3,
+          "title": "GLM-5.3 AND THE SPREAD OF ADVANCED CYBER CAPABILITIES",
+          "summary": "Anthropic posted a blog detailing the threat posed by GLM-5.3 as a cyber-capable, open-source model. Anthropic stated that GLM-5.3 performed comparably to Mythos Preview in ExploitBench, an internal binary exploitation benchmark, and a test of open-ended offensive cyber capabilities when paired with a human expert. Anthropic also reports that a deceptive prompt subverted GLM-5.3's guardrails 64% of the time, prefilling the model's thinking tokens subverted guardrails 92% of the time, and abliterated versions of the model do not contain these ls. guardrails.",
+          "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-01:a16",
+          "order": 1,
+          "title": "TRUMP SAYS TOP TECH FIRMS HAVE SIGNED ACCORD TO ‘SELF-POLICE' AI DEVELOPMENT",
+          "summary": "Donald Trump and executives from Anthropic, Google, Meta, OpenAI, Nvidia, and xAI signed a voluntary accord.",
+          "url": "https://links.tldrnewsletter.com/LzGRvp",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a17",
+          "order": 2,
+          "title": "APPLE PATCHES COREGRAPHICS ZERO-DAY ALREADY EXPLOITED IN TARGETED ATTACKS",
+          "summary": "Apple patched CVE-2026-86950, an out-of-bounds write in CoreGraphics that allows arbitrary code execution via a crafted file.",
+          "url": "https://www.theregister.com/security/2026/09/29/apple-patches-coregraphics-zero-day-already-exploited-in-targeted-attacks/5299721?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-01:a18",
+          "order": 3,
+          "title": "MICROSOFT TO BLOCK ENTRA ID SCRIPT INJECTION ATTACKS STARTING OCTOBER",
+          "summary": "Starting in mid-October, Microsoft Entra ID will enforce a Content Security Policy that permits only Microsoft CDN-hosted scripts on browser sign-in pages at login.microsoftonline.com.",
+          "url": "https://links.tldrnewsletter.com/LceHag[19][20",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
