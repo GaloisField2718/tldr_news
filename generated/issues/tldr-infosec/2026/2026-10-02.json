@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-02",
+  "source_path": "TLDR InfoSec/article_02-10-2026.md",
+  "source_content_hash": "sha256:19988b5266e78211b65683fedd37dbc748ddfb0efc9730653e11c54b2cfdfd32",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-02:a04",
+          "order": 1,
+          "title": "ATTACKERS HAVE BEEN EXPLOITING CRITICAL ZIMBRA FLAW TO STEAL EMAILS",
+          "summary": "Attackers are exploiting CVE-2026-73570 in Zimbra Collaboration Suite. A crafted email can trigger unauthenticated OS command execution when zimbra-snmp and SNMP notifications are enabled, and Microsoft observed web shells, reverse shells, privilege escalation, remote-access tools, email backups, and credential collection. Shadowserver found 274 compromised instances.",
+          "url": "https://arstechnica.com/security/2026/09/attackers-have-been-exploiting-critical-zimbra-flaw-to-steal-emails/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a05",
+          "order": 2,
+          "title": "REVENGE OF THE SD-WAN: EXPLORING AND EXPLOITING YET ANOTHER CRITICAL CISCO SD-WAN VULNERABILITY (CVE-2026-76504)",
+          "summary": "A single unauthenticated POST to /%6a_security_check mints an admin session on Cisco SD-WAN vManage through CVE-2026-76504, a critical authentication bypass Cisco disclosed on September 30 as an exploited zero-day. Cisco's login module checked the raw request URI while WildFly matched the decoded path, so the encoded request skipped the password check and fell into a session-continuation branch that trusted hardcoded internal usernames like viptela-reserved-cloudops. With ~1,500 vManage instances internet-exposed per VulnCheck, defenders should follow Cisco's advisory and hunt serviceproxy-access.log and vmanage-server.log for encoded j_security_check paths and viptela-reserved- usernames.",
+          "url": "https://www.vulncheck.com/blog/revenge-of-the-sd-wan-cve-2026-76504?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "vulncheck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a06",
+          "order": 3,
+          "title": "FORTINET WARNS OF CRITICAL FORTIMAIL FLAW EXPLOITED IN ZERO-DAY ATTACKS",
+          "summary": "Attackers are exploiting CVE-2026-104286 as a zero-day, a CVSS 9.8 path traversal and NULL byte flaw in the FortiMail management interface that lets unauthenticated HTTP requests write arbitrary files and execute code. FortiMail 7.2.0 through 8.0.1 is affected, and fixed builds 7.4.9, 7.6.7, and 8.0.2 are not yet available, so admins should disable IBE or restrict the management interface to trusted networks. Compromise indicators include an added /data/etc/ld.so.preload and /data/lib/liblog.so, plus an archive account named archive234 pointing to 79[.]141[.]169[.]187, and CISA gave federal agencies until October 4 to triage and mitigate.",
+          "url": "https://links.tldrnewsletter.com/xynnpX",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-02:a07",
+          "order": 1,
+          "title": "SOLVING THE IDENTITY CRISIS FOR AI AGENTS",
+          "summary": "Uber faced two issues with agentic identity: its current identity model wasn't designed to account for agents acting on behalf of users, and provenance wasn't properly carried across different agents in a workflow. To address this, Uber implemented an identity system in which workflows begin by requesting a workload ID from SPIRE. That ID is then presented to a custom STS, which verifies in its agent registry that the requested agent is allowed to run on that workflow and returns a JWT with the relevant details to the workload. To simplify adoption, Uber built a standardized Agent-to-Agent client that provides an automatic, secure-by-default path.",
+          "url": "https://www.uber.com/us/en/blog/solving-the-agent-identity-crisis/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "uber.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a08",
+          "order": 2,
+          "title": "WHAT WE SHOULD DO INSTEAD OF TRUSTED CYBER ACCESS PROGRAMS AND OPEN WEIGHT RESTRICTIONS",
+          "summary": "It is pivotal to provide defenders with access to the most powerful, cyber-capable models, whether open-weight or frontier models. Instead of restricting access to these models, we should shift the paradigm to focus more on restricting attackers' access. Frontier labs should implement low-friction, cross-lab Know Your Customer (KYC) programs, do more to detect and block attackers, and publish time-to-detection-and-response metrics. Victims of AI cyberattacks should also be encouraged to share more detailed information about the attack and the attackers.",
+          "url": "https://joshuasaxe181906.substack.com/p/what-we-should-do-instead-of-trusted?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "joshuasaxe181906.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a09",
+          "order": 3,
+          "title": "BITGET HACKED VIA ZERO-DAY IN THIRD-PARTY SECURITY PRODUCTS",
+          "summary": "A zero-day in a third-party security product gave Bitget's attacker a foothold on August 31, 25 days before the $387.5 million theft. The attacker later planted a web shell and C2 on a second appliance and pivoted to the production wallet job server, where a custom withdrawal tool forged risk-control parameters and drained wallets in under three hours. The vendors remain unnamed, and the North Korea attribution comes only from Bitget's CEO, so the takeaway is to monitor security appliances like production hosts and enforce withdrawal risk checks outside the wallet host.",
+          "url": "https://links.tldrnewsletter.com/lzmlya",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-02:a10",
+          "order": 1,
+          "title": "GEMINI 4 ARGON: OUR NEXT ERA OF FRONTIER INTELLIGENCE",
+          "summary": "Google is releasing Argon first to trusted cyber defenders through its Fairwind Program. The model can find, validate, and patch vulnerabilities, including a healthcare flaw exposing patient data. It scored 68% on CWE-bench v1 and found exposures across 20 programming languages. Google is testing safeguards against prompt injection, misuse, and unsafe agent actions before wider access.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a11",
+          "order": 2,
+          "title": "KUNGLAO-AGENT",
+          "summary": "kunglao-agent is a Claude Code plugin for autonomous reverse-engineering tasks.",
+          "url": "https://github.com/amd2g2zz/kunglao-agent?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a12",
+          "order": 3,
+          "title": "DROP",
+          "summary": "Drop allows users to create sandboxed environments that isolate programs and agents while attempting to preserve as much of the development environment (user, selected config files) as possible.",
+          "url": "https://github.com/wrr/drop?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-02:a13",
+          "order": 1,
+          "title": "GOOGLE: AI IS CHANGING THE PACE AND PROFILE OF VULNERABILITY DISCOVERY",
+          "summary": "Monthly vulnerability disclosures doubled in 2026, reaching over 10,000 by midyear. High-risk flaws rose 167%, and exploited vulnerabilities averaged 18 per month, up from 10.5 in 2025. AI-discovered bugs more often enable remote code execution (50% vs 26%) and skew toward medium and low risk. Researchers saw rapid weaponization of n-days, including a BeyondTrust flaw exploited within four days of disclosure. AI-related CVEs also climbed, with 2,076 tracked since early 2025, though zero-days against AI infrastructure remain unconfirmed.",
+          "url": "https://links.tldrnewsletter.com/4SRpTo",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a14",
+          "order": 2,
+          "title": "METAMASK SECURITY INCIDENT PROMPTS EXIT OF AFFECTED ETHEREUM VALIDATORS",
+          "summary": "MetaMask is responding to an ongoing security incident affecting part of its infrastructure. The company is proactively exiting affected validators in its non-custodial staking operations, coordinating with clients and partners. Lido confirmed the exits are underway, with final validators expected to be exited by October 7, likely incurring foregone rewards and possible downtime penalties.",
+          "url": "https://thehackernews.com/2026/10/metamask-security-incident-prompts-exit.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a15",
+          "order": 3,
+          "title": "DISRUPTING A COORDINATED MODEL-DISTILLATION CAMPAIGN",
+          "summary": "OpenAI detected an extraction campaign beginning July 1, with spikes on July 24–25 involving 16,000 requests from more than 4,000 users. Related activity affected over 15,000 users and was disrupted by July 28. Operators replayed encrypted reasoning and used cross-conversation prompts, with OpenAI linking a core cluster to Moonshot AI personnel, restricted accounts, closed replay paths, added output checks, and shared indicators with partners.",
+          "url": "https://links.tldrnewsletter.com/yXlC5i",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-02:a16",
+          "order": 1,
+          "title": "UK RAIL COPS' £320K FACE-SCANNING SPREE NETS ZERO MATCHES",
+          "summary": "British Transport Police ran a six-month live facial recognition trial at London rail stations, scanning over 500,000 faces.",
+          "url": "https://www.theregister.com/security/2026/09/30/uk-rail-cops-320k-face-scanning-spree-nets-zero-matches/5299793?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a17",
+          "order": 2,
+          "title": "CHINA-NEXUS HACKERS COMPROMISE 350 SYSTEMS ACROSS ASIA WITH NEW ANTINO BACKDOOR",
+          "summary": "Antino, a new Rust-based Windows backdoor that runs C2 entirely through Microsoft Graph API calls to attacker-controlled Outlook and OneDrive, compromised roughly 350 endpoints across Asia in a China-nexus espionage campaign that Cisco Talos tracks as UAT-11587.",
+          "url": "https://gbhackers.com/antino-backdoor/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "gbhackers.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-02:a18",
+          "order": 3,
+          "title": "SIGNAL COMPLETES ROLLOUT OF SECURE CHAT BACKUPS ACROSS ALL PLATFORMS",
+          "summary": "Signal 8.30 brought end-to-end encrypted on-device backups to iOS and desktop, completing the secure backups rollout across all platforms with a standardized format, though attackers have reportedly begun targeting the recovery keys.",
+          "url": "https://www.scworld.com/brief/signal-completes-rollout-of-secure-chat-backups-across-all-platforms?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 1,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
