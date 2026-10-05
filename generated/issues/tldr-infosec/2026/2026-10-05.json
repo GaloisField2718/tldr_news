@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-05",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-05",
+  "source_path": "TLDR InfoSec/article_05-10-2026.md",
+  "source_content_hash": "sha256:c4c6cf3e5f7cff6da1eeec1f56a9c08cab40aad69ccce50527f308ae3f06febb",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-05",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-05:a04",
+          "order": 1,
+          "title": "WARLOCK RANSOMWARE HITS LARGE SPANISH, PORTUGUESE ORGS",
+          "summary": "Warlock, also tracked as Longlegs and Storm-2603, targeted four Spanish- or Portuguese-speaking organizations within two months: a water utility, telecom provider, regional government, and university. The group exploits Microsoft SharePoint flaws, then uses DLL sideloading, vulnerable drivers, VS Code remote tunnels, and SYSVOL replication to spread ransomware through Active Directory.",
+          "url": "https://links.tldrnewsletter.com/jRXOab",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a05",
+          "order": 2,
+          "title": "HACKS OF 2 FEDERAL AGENCIES IN A MONTH HAVE SPILLED A BONANZA OF SENSITIVE DATA",
+          "summary": "The Pentagon says a months-long intrusion exposed records for 2.8 million living people. Stolen Defense Manpower Data Center data included Social Security numbers, addresses, demographics, and military specialties. ShinyHunters also claimed FBI employee records, including roles investigating China and Russia. Officials have not disclosed the Pentagon entry point, attacker contact, ransom demands, or evidence supporting claims of no misuse.",
+          "url": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a06",
+          "order": 3,
+          "title": "VERCEL CONFIRMS KVM ZERO-DAY VM ESCAPE, AWARDS RESEARCHER $50,000",
+          "summary": "A KVM zero-day reported by researcher Paulos Yibelo reportedly allowed guest code to gain root on the host, breaking the Firecracker microVM boundary Vercel Sandbox uses to isolate untrusted workloads and AI agents. Vercel CEO Guillermo Rauch confirmed the bug and that the $50,000 maximum bounty was awarded, but no CVE, affected kernel versions, exploit chain, or patch have been disclosed. Operators relying on KVM for multi-tenant isolation should watch for Vercel's promised write-up and Linux vendor advisories, and should not assume the unrelated Januscape fix covers this flaw.",
+          "url": "https://cybersecuritynews.com/kvm-zero-day-vm-escape/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-05:a07",
+          "order": 1,
+          "title": "GITHUB REPOS EXPOSED 543,699 CREDENTIALS. NOBODY REVOKED THEM",
+          "summary": "Truffle Security scanned 224 million public GitHub repositories and verified 543,699 working credentials in July. The median credential had been exposed for 784 days. The oldest dated to 2009. GitHub's push protection reduced leaks of recognized token types by about 53%, yet missed connection strings, private keys, and Google API keys. These accounted for 51.8% of live credentials. Revocation separated outcomes sharply: only one npm token remained active, while 11,465 Postgres strings and 69,041 Google Cloud credentials still worked.",
+          "url": "https://trufflesecurity.com/blog/github-repos-exposed-543699-credentials-nobody-revoked-them?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a08",
+          "order": 2,
+          "title": "HOW WE RELEASE FASTIFY PACKAGES WITHOUT NPM TOKENS",
+          "summary": "Fastify moved about 100 repositories from manual laptop releases to GitHub Actions using npm Trusted Publishers, which replace long-lived npm tokens with short-lived OIDC tokens bound to a specific repo, workflow, and environment. Releases are triggered manually via workflow_dispatch and wait for approval from the fastify/release team in a release environment restricted to main, then published with provenance through a SHA-pinned reusable workflow. Maintainers can script the same setup with npm trust github (npm 11.15.0+) and the GitHub environments API, then remove non-admin npm publish rights.",
+          "url": "https://backend.cafe/how-we-release-fastify-packages-without-npm-tokens?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "backend.cafe",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a09",
+          "order": 3,
+          "title": "DEEPSEEK-REASONIX: HOW A POISONED CONFIG CAN HIJACK AN AI CODING AGENT",
+          "summary": "ConfigPoisoning (CVE-2026-102437) ran attacker commands when a developer viewed a file diff in DeepSeek-Reasonix Studio, because a .gitattributes entry pointed the file at a command in a poisoned .git/config that the tool's hardened git wrapper never overrode. Since .git/config does not survive a clone, delivery needed an archive, synced folder, or CI cache, or a prompt-injected agent writing it into an already-cloned repo, and GitLab reports the same flaw class in several other coding agents under coordinated disclosure. Users should update to Studio 2.21.0 or npm 1.39.3, and builders of git-wrapping tools should override every command-executing config key on each call or read blobs with git cat-file and diff in-process.",
+          "url": "https://about.gitlab.com/blog/deepseek-reasonix-vulnerability-discovered/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "about.gitlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-05:a10",
+          "order": 1,
+          "title": "OSAVUL (PRODUCT LAUNCH)",
+          "summary": "Osavul analyzes open and privileged data to identify hostile intent targeting people, facilities, and supply chains. Analyst-reviewed assessments trace supporting evidence and run on-premises within sovereign infrastructure, keeping sensitive customer data inside customer systems.",
+          "url": "https://www.osavul.cloud/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "osavul.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a11",
+          "order": 2,
+          "title": "KEYMAKER",
+          "summary": "A local web interface to inventory, audit, revoke, and create OVHcloud API keys.",
+          "url": "https://github.com/Kentrow/keymaker?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a12",
+          "order": 3,
+          "title": "APEX FLASH-1",
+          "summary": "Apex Flash-1 is an open-weights security research model from Cantina and Yeta Labs, a GLM-5.3-Flash fine-tune trained with GRPO reinforcement learning on 150 tasks built from 50 real vulnerability cases. It solved 40 of 60 tasks on Cantina's internal held-out eval versus 36 for the base model and 43 for Claude Opus 5 High, at an estimated $2.38 per run against $74.68, though each model ran the set only once. It is built as a worker model orchestrated by a larger one, and ships with an abliterated variant for teams running self-hosted security agents.",
+          "url": "https://www.cantina.security/apex-flash?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "cantina.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-05:a13",
+          "order": 1,
+          "title": "SUSPECTED CHINESE SPIES SPOOFED AN ANTHROPIC EXEC, EX-WHITE HOUSE OFFICIAL IN AI PHISHING",
+          "summary": "Proofpoint linked TA419 to credential-phishing campaigns against US policy specialists. The group spoofed Lynne Edwards Parker, Heidi Crebo-Rediker, and an Anthropic employee. Emails offered committee roles or report work, then sent victims to Cloudflare-protected pages mimicking OneDrive. Evilginx-based Browser-in-the-Browser pages targeted Microsoft 365 credentials and session cookies.",
+          "url": "https://www.theregister.com/security/2026/10/01/suspected-chinese-spies-spoofed-an-anthropic-exec-ex-white-house-official-in-ai-phishing/5300595?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a14",
+          "order": 2,
+          "title": "POLICE ARREST 16-YEAR-OLD SUSPECTED OF RUNNING KILLSEC, SEIZE RANSOMWARE LEAK SITE AND SERVERS",
+          "summary": "Spanish police arrested a 16-year-old in Alicante, suspected of administering KillSec. Operations across Spain, Greece, the UK, and Romania seized its leak site, five domains, five servers, and at least 110 TB of data. Investigators link KillSec to about 1,000 suspected attacks, including 500 confirmed compromises.",
+          "url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a15",
+          "order": 3,
+          "title": "APPLE'S NEW MACOS CONTROLS ARE THE FIRST OS-LEVEL MOVE SPECIFICALLY TARGETING AI AGENT RISKS",
+          "summary": "Apple announced that macOS will require very explicit user action to grant Full Disk Access, citing the risk of autonomous AI agents holding a permission that bypasses per-app TCC controls. The change tightens consent rather than banning FDA, and follows a disputed report of Meta's Muse agent reading a user's Messages and a ChatGPT Mac app flaw found by Objective-See. No macOS version or ship date was given for a change that touches agents like ChatGPT, Claude for Mac, and OpenClaw, which commonly request FDA.",
+          "url": "https://forkast.news/apples-new-macos-controls-are-the-first-os-level-move-specifically-targeting-ai-agent-risks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "forkast.news",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-05:a16",
+          "order": 1,
+          "title": "GOOGLE'S SOC AGENT INVESTIGATED 5M ALERTS, BUT CAN ANYONE VERIFY IT?",
+          "summary": "Thirty-minute triage now takes 60 seconds, but a verdict nobody can check is just a suggestion. Daniel Miessler discusses the context",
+          "url": "https://tldr.tech/blog/60-second-triage-agentic-soc",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a16-02",
+          "order": 2,
+          "title": "layer that makes agent findings auditable. READ HERE",
+          "summary": "",
+          "url": "https://tldr.tech/blog/60-second-triage-agentic-soc",
+          "reading_time_minutes": null,
+          "source_domain": "tldr.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a17",
+          "order": 3,
+          "title": "MEDICAL RECORDS GIANT EPIC PAUSES PRODUCT DEVELOPMENT TO FIX SECURITY BUGS THAT RISK PATIENTS' DATA",
+          "summary": "Epic paused most product work for about six weeks after testing found MyChart flaws.",
+          "url": "https://techcrunch.com/2026/10/02/medical-records-giant-epic-pauses-product-development-to-fix-security-bugs-that-risk-patients-data/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a18",
+          "order": 4,
+          "title": "FEDERAL JUDGE CALLS FLOCK 'INDISCRIMINATE MASS SURVEILLANCE'",
+          "summary": "A federal judge ruled that a Tulsa sheriff's deputy violated the Fourth Amendment by searching Flock's license plate database without a warrant, suppressing the resulting evidence in a non-binding ruling that is among the first to find a Flock search unconstitutional.",
+          "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-05:a19",
+          "order": 5,
+          "title": "CITRIX PATCHES NETSCALER SAML ZERO-DAY EXPLOITED IN ATTACKS",
+          "summary": "Citrix released NetScaler ADC and Gateway 14.1-73.41 and 13.1-64.28 to fix CVE-2026-88779, an exploited SAML memory overflow that it classifies as a denial of service, though researchers found a patched honeypot running downloaded malware.",
+          "url": "https://links.tldrnewsletter.com/mAAW6o[20][21",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

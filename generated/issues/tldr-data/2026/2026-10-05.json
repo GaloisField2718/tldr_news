@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-10-05",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-10-05",
+  "source_path": "TLDR Data/article_05-10-2026.md",
+  "source_content_hash": "sha256:959fb6d332f89c86e3308cd6b04e718acd6fcc2012fc8a53c29907cc71082222",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-10-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a04",
+          "order": 1,
+          "title": "AI KEEPS STALLING IN PILOT? SCORE HOW READY YOUR DATA IS FOR PROD",
+          "summary": "No one wants to use a tool they don't trust, and for data teams, trust in AI starts with the data underneath it. When no one can say where a model's inputs came from, whether they passed quality checks, or who can access them, projects stall in pilot. Collibra's free 12-question AI trust assessment [4] shows where your org stands:\n\n* SCORE YOUR ORG across the 6 core capabilities that take AI from pilot to production * PINPOINT THE ROADBLOCKS holding back adoption, from data quality to governance gaps",
+          "url": "https://www.collibra.com/learn/ai-trust-score?utm_source=mediadirect&utm_medium=paid-display&utm_campaign=GBL-26-Q3-BAN-AI-trust-score-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "collibra.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-05:a04-02",
+          "order": 2,
+          "title": "It takes 5 minutes. GET YOUR AI TRUST SCORE",
+          "summary": "",
+          "url": "https://www.collibra.com/learn/ai-trust-score?utm_source=mediadirect&utm_medium=paid-display&utm_campaign=GBL-26-Q3-BAN-AI-trust-score-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "collibra.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a05",
+          "order": 1,
+          "title": "DIVING THROUGH DATA AT OPENAI: HOW A DATA AGENT NAVIGATES 70,000 DATASETS (27 MINUTE VIDEO)",
+          "summary": "OpenAI built an internal AI data agent that answers complex data questions by combining warehouse queries with rich context from schemas, lineage, code, company knowledge, memory, and live sources, while showing its assumptions, SQL, citations, and confidence. The big lesson is that reliable data agents depend less on raw model intelligence and more on giving them the right context, continuously learning from corrections, and testing them with strong evals.",
+          "url": "https://links.tldrnewsletter.com/EF3UZ2",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a06",
+          "order": 2,
+          "title": "HOW WE EXTENDED APACHE DATAFUSION TO EXECUTE ONE QUERY ACROSS MANY MACHINES",
+          "summary": "Datadog built Distributed DataFusion to let a single Apache DataFusion query run across multiple machines, giving heavy interactive queries much more compute while keeping lightweight queries on one machine to avoid unnecessary overhead. In production, some expensive queries ran up to 10× faster at the same total cost. Datadog released the system as an open-source framework that teams can adapt to their own data sources and infrastructure.",
+          "url": "https://www.datadoghq.com/blog/engineering/distributed-datafusion?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a07",
+          "order": 3,
+          "title": "HOW LINKEDIN EXTENDED CLICKHOUSE FROM DISTRIBUTED TRACING TO METRIC DISCOVERY AND ANALYTICS",
+          "summary": "LinkedIn replaced three systems for finding and analyzing metric metadata with a single ClickHouse index. It now handles more than 150,000 queries a minute across 13 billion metrics, averaging 68 milliseconds per query. The team explains how it migrated behind an existing gateway and cut memory use to about a fifth of the old setup.",
+          "url": "https://clickhouse.com/blog/linkedin-observability-at-scale?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a08",
+          "order": 1,
+          "title": "CONTEXT IS THE NEW CODE (50 MINUTE VIDEO)",
+          "summary": "Context is becoming a primary software artifact for AI coding agents: teams must generate, lint, version, and test context packages with the same rigor as application code. Managing context drift, establishing AI bills of materials, and instrumenting production retrospectives are now essential data engineering disciplines to prevent agent hallucinations and silent architectural degradation.",
+          "url": "https://www.infoq.com/presentations/context-as-code-devops-agents/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a09",
+          "order": 2,
+          "title": "LINKEDIN BUILT KAFKA. WHAT DID IT CHANGE WHEN KAFKA WAS NO LONGER ENOUGH?",
+          "summary": "LinkedIn outgrew Kafka's partition model at extreme scale and built Northguard to separate ordering, replication, and placement, making data movement and recovery less painful. Xinfra then hid the migration behind a compatibility layer so applications could move gradually, showing how infrastructure rewrites become practical when clients are insulated from backend changes.",
+          "url": "https://softwaremill.com/linkedin-northguard-xinfra-kafka?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "softwaremill.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a10",
+          "order": 1,
+          "title": "ORDER FROM CHAOS: STRATEGIES FOR UNIFYING STRUCTURED AND UNSTRUCTURED DATA",
+          "summary": "Learn how to analyze structured and unstructured data (like text, images, and PDFs) together in BigQuery, without moving data. Incorporate techniques like multimodal processing, automatic embedding generation, and hybrid search; then go further with generative AI functions and ObjectTables to extract deeper, unified insights. Watch the webinar session [10] or read the blog [11].",
+          "url": "https://cloudonair.withgoogle.com/events/unifying-structured-unstructured-data-insights-bigquery?utm_source=tldr&utm_medium=email&utm_campaign=FY26-Q3-northam-NOR10000012-email-oi-na-named-tldr-newsletter-data-5oct2026&utm_content=tldr-data-5oct2026&utm_term=-",
+          "reading_time_minutes": null,
+          "source_domain": "cloudonair.withgoogle.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-05:a12",
+          "order": 2,
+          "title": "AMAZON AURORA POSTGRESQL NOW SUPPORTS DIRECT QUERYING OF APACHE ICEBERG AND PARQUET DATA IN YOUR DATA LAKE",
+          "summary": "Amazon Aurora PostgreSQL now queries Apache Iceberg and Parquet tables directly in Amazon S3 data lakes without requiring separate ETL or reverse-ETL pipelines. Powered by an embedded DuckDB engine, the feature supports standard PostgreSQL syntax, predicate pushdown, and column pruning across operational and historical analytical data with zero additional Aurora licensing fees.",
+          "url": "https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a13",
+          "order": 3,
+          "title": "INTRODUCING CLEF: OUR OPEN-SOURCE DECISION MODELS, AND NEW RL FINE-TUNING PLATFORM",
+          "summary": "Cloudflare has released Clef and Clef-flash, ‘Jev-like' open-source System 1 models that turn text or images into choices and probabilities. They can help route support tickets, classify websites, or decide when an agent should ask a human. Both run on Workers AI or locally, and Cloudflare is offering help fine-tuning them for specific tasks.",
+          "url": "https://blog.cloudflare.com/clef-decision-models/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a14",
+          "order": 4,
+          "title": "APACHE ICEBERG 1.12.0: WHAT'S NEW, BREAKING CHANGES, AND UPGRADE GUIDE",
+          "summary": "Apache Iceberg 1.12.0 broadens production support for major v3 capabilities, including Variant, geospatial types, row lineage, deletion vectors, encrypted metadata, and REST catalog operations. However, it also removes platform support and deprecated APIs, so treat this as a substantial upgrade and test compatibility carefully before rollout.",
+          "url": "https://www.dremio.com/blog/apache-iceberg-1-12-0-whats-new-breaking-changes-and-upgrade-guide?utm_source=tldrdata",
+          "reading_time_minutes": 28,
+          "source_domain": "dremio.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a15",
+          "order": 1,
+          "title": "THE INFERENCE GAP",
+          "summary": "A six-week analysis of 43,261 Fable 5 calls found that the model name stayed the same while the delivered reasoning budget varied sharply, with many invocations showing no thinking at all. The broader warning is an inference gap: benchmark performance may depend on far more sequential reasoning than production users actually receive.",
+          "url": "https://links.tldrnewsletter.com/nNeMsn",
+          "reading_time_minutes": 22,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a16",
+          "order": 2,
+          "title": "MICROSOFT, GOOGLE BACK APACHE OSSIE TO MAKE ENTERPRISE DATA AND AI PLATFORMS MORE INTEROPERABLE",
+          "summary": "Microsoft and Google are backing Apache Ossie, an open semantic-model interchange specification supported by 60+ data and AI vendors. Using standard JSON/YAML schemas, Ossie enables portable dataset, metric, and relationship definitions across disparate BI platforms, eliminating redundant semantic modeling and metric drift.",
+          "url": "https://www.infoworld.com/article/4229785/microsoft-google-back-apache-ossie-to-make-enterprise-data-and-ai-platforms-more-interoperable-2.html?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a17",
+          "order": 3,
+          "title": "FASTER STRING AGGREGATIONS WITH DIMENSION TABLES",
+          "summary": "String-heavy aggregations waste time hashing and comparing the same text values repeatedly. DuckDB shows that replacing those columns with small integer surrogate keys through dimension tables can make grouping cheaper, reduce memory pressure, and lower spill risk. The broader takeaway: normalize low-cardinality strings before large analytical aggregations when performance matters.",
+          "url": "https://duckdb.org/2026/10/02/dimension-tables.html?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a18",
+          "order": 4,
+          "title": "WHY YOUR AI AGENT PIPELINE IS SLOW (AND HOW TO FIX IT WITHOUT CHANGING MODELS)",
+          "summary": "A production AWS Bedrock guardrail pipeline for AI agents reduced action latency from 13,874 ms to 1,824 ms without altering models or accuracy. The bottleneck was execution topology: independent safety checks ran sequentially. By parallelizing independent layers and short-circuiting cheap reject rules early, the team dramatically reduced execution latency and compute costs.",
+          "url": "https://techstrong.ai/contributed-content/why-your-ai-agent-pipeline-is-slow-and-how-to-fix-it-without-changing-models/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "techstrong.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-05:a19",
+          "order": 1,
+          "title": "JEV PLAYS POKÉMON RED FOR $1.65 MODEL BILL",
+          "summary": "Jev completed Pokémon Red in 37 hours and 40 minutes, making 16,150 decisions with a reported model cost of about $1.65.",
+          "url": "https://github.com/christianmat/jev-pokemon?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-05:a20",
+          "order": 2,
+          "title": "DUCKDB 2.0 DYNAMIC ATTACH STATEMENTS",
+          "summary": "An early look at dynamic ATTACH statements in DuckDB 2.0 Alpha.",
+          "url": "https://www.linkedin.com/posts/mattmartin14_duckdb-share-7511574425062887424-diZZ/?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
