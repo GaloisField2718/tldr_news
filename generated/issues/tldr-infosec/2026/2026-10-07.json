@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-07",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-07",
+  "source_path": "TLDR InfoSec/article_07-10-2026.md",
+  "source_content_hash": "sha256:3e6f2cf7a7b0f66172c4a664f8aca35287222efc15455cab3aeea76b716a2678",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-07",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-07:a04",
+          "order": 1,
+          "title": "CITRIX NETSCALER SECURITY SNAFUS GET EVEN WORSE AMID MORE 0-DAY REPORTS",
+          "summary": "A single crafted request knocks NetScaler ADC and Gateway appliances offline through CVE-2026-88779, a memory overflow zero-day affecting deployments configured as a SAML service provider or identity provider. CISA confirmed active exploitation, and watchTowr told The Register it suspects attackers are crashing appliances deliberately to speed up exploitation of CVE-2026-88771, one of eight NetScaler bugs disclosed September 27. Apply Citrix's fixed build or interim mitigation, starting with Gateway and AAA virtual servers that have SAML enabled, and run Citrix's IOC script while treating a clean result as inconclusive.",
+          "url": "https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a05",
+          "order": 2,
+          "title": "250,000 IMPACTED BY DATA BREACHES AT NEW JERSEY, TEXAS HEALTHCARE FIRMS",
+          "summary": "Clover Health Investments said attackers used social engineering to compromise three employee accounts, exposing data on 138,677 people. AngMar Management Services found stolen patient data after suspicious activity, affecting 126,196 people. Exposed records included Social Security numbers, diagnoses, medical histories, insurance details, prescriptions, and service dates. The Interlock ransomware group claimed to have stolen 700 gigabytes from AngMar.",
+          "url": "https://links.tldrnewsletter.com/DOsTQM",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a06",
+          "order": 3,
+          "title": "CVE-2026-19444: HOW COPYING IN KUBECTL BREAKS TRUST",
+          "summary": "A malicious container can write files anywhere a Windows user's account can reach, including the Startup folder, when that user runs kubectl cp against it (CVE-2026-19444, CVSS 6.5). kubectl cp unpacks the output of whatever tar binary the container ships, and the entry-path check added after three 2019 CVEs never accounted for Windows path separators. Windows clients need kubectl v1.36.5, v1.35.9, or v1.34.12, since the flaw is in client-side extraction and the cluster version does not matter.",
+          "url": "https://edera.dev/stories/cve-2026-19444-how-copying-in-kubectl-breaks-trust?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "edera.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-07:a07",
+          "order": 1,
+          "title": "WORDPRESS LIBHEIF RCE: EXPLOIT CHAIN",
+          "summary": "Fortbridge has published the first public exploit chain for a libheif heap overflow (GHSA-x8r2-mggj-j6wr) originally discovered by Alex Thomas and Wordfence. By uploading crafted HEIC images via the WordPress Media Library, an authenticated attacker can defeat ASLR using pixel values in generated JPEGs and hijack a C++ virtual table pointer to achieve remote code execution. Administrators should update libheif to 1.23.3, disable unused HEIC/AVIF uploads, and treat repeated PHP-FPM 503 errors on image uploads as security events.",
+          "url": "https://fortbridge.co.uk/research/wordpress-libheif-rce/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "fortbridge.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a08",
+          "order": 2,
+          "title": "MALFEX NPM MALWARE CAMPAIGN: THREE PAYLOADS AND AN ADVERSARY THAT SIGNS THEIR WORK",
+          "summary": "MALFEX, an npm campaign run by a single operator, published eight malicious packages that targeted Windows systems. Its payloads included Overlord RAT and movinlike, a stealer that took Discord tokens, browser credentials, Telegram sessions, and cryptocurrency wallets. Three packages remain installable (function-flag, function-color, and cdn-img-fetch), and the first two have no advisory.",
+          "url": "https://checkmarx.com/zero-post/malfex-npm-malware-campaign-three-payloads-and-an-adversary-that-signs-their-work/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "checkmarx.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a09",
+          "order": 3,
+          "title": "A VAULT WITH A HEAP-VIEW: THE UNCOMFORTABLE SPACE BETWEEN AGENTCORE HARNESS AND IDENTITY",
+          "summary": "AWS AgentCore Harness is an agentic service and AgentCore Identity is a service that provides agents with identities. Unit 42 discovered that the bash tool that is enabled by default on AgentCore agents runs arbitrary bash commands and code as root. Using this primitive, the researchers demonstrated that they could exfiltrate the AgentCore Identity JWT by scanning the heap for it and then exfiltrating it.",
+          "url": "https://unit42.paloaltonetworks.com/securing-aws-agentcore-harness-credentials/?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-07:a10",
+          "order": 1,
+          "title": "GDP-TS",
+          "summary": "gdp-ts is a TypeScript library, linter, and agent skill that turns skipped or mismatched authorization checks into compile errors. Sensitive functions demand a type-level proof, minted only by a trusted check module, that this exact user was authorized for this exact resource, with near-zero runtime cost. A lint preset blocks forged proofs via as casts, and the bundled skill steers coding agents toward the pattern.",
+          "url": "https://github.com/rauchg/gdp-ts?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a11",
+          "order": 2,
+          "title": "MCPWARD",
+          "summary": "mcpward pins an MCP server's tool contract to a committed lockfile and fails CI when it drifts, catching silently rewritten descriptions (rug-pulls), readOnlyHint flips, and breaking schema changes. It works black-box against any stdio or HTTP server and runs fully offline with no account or telemetry, unlike Snyk Agent Scan. It also flags tool-poisoning patterns such as injection phrasing and hidden Unicode, with output to SARIF, JUnit, or a PR comment.",
+          "url": "https://github.com/TsvetanG2/mcpward?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a12",
+          "order": 3,
+          "title": "POC INDEX",
+          "summary": "Search 82,000+ public CVE proof-of-concept exploits from GitHub, Nuclei, ExploitDB, Metasploit, and Vulhub.",
+          "url": "https://github.com/0xMarcio/pocindex?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-07:a13",
+          "order": 1,
+          "title": "MCP FOR AGENT-TO-AGENT COMMS MAY BE THE RISKIEST PROTOCOL YOU'VE NEVER HEARD OF",
+          "summary": "Google and four other organizations acknowledged flaws over the past five months where a prompt injection landing on one AI agent over MCP was forwarded to other internal agents, which executed it on trust. Researcher Syed Anas Mohiuddin named the technique \"protocol pivoting,\" though X41 D-Sec's Markus Vervier told Ars Technica it is plain indirect prompt injection. The bugs typically ended in SSRF, ranging from severity 2.7 at Rapid7 (CVE-2026-97228) to 8 in Google's mcp-toolbox, which followed redirects without validating target IPs.",
+          "url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a14",
+          "order": 2,
+          "title": "IS SANDBOXING SUFFICIENT TO CONTAIN ROGUE AGENTS?",
+          "summary": "When discussing the OpenAI and other agent escapes, the conversation inevitably turns to discussing sandboxes. OpenAI has not demonstrated to this point a serious containment strategy, so this discussion may hold weight. However, sandboxes are not sufficient as useful agents need Internet access as well as the fact that agents are potentially overeager.",
+          "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cryptographyengineering.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a15",
+          "order": 3,
+          "title": "NTS: AUTHENTICATED TIME AT META",
+          "summary": "Meta added Network Time Security (RFC 8915) to its public time service at nts.meta.com, so on-path attackers can no longer forge the clock that certificate, token, and replay-window checks rely on. Its servers hold no per-client state because each one derives the cookie-sealing key from a shared master secret and the Unix epoch day using HKDF-SHA256. NTS does not stop delay attacks or prevent an authenticated server from being simply wrong, and the stock Android and iOS time clients still sync over unauthenticated packets.",
+          "url": "https://engineering.fb.com/2026/10/06/production-engineering/nts-authenticated-time-at-meta/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-07:a16",
+          "order": 1,
+          "title": "EXPOSED NHIS: THE SAAS WORM ALREADY IN YOUR STACK",
+          "summary": "APIs, service accounts, and OAuth keep your stack connected. Attackers use them as entry points. Read TruffleHog's guide to catching exposed credentials before the bad guys do. Download Guide",
+          "url": "https://trufflesecurity.com/library",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a17",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://trufflesecurity.com/library/guides/exposed-nhi-saas-worms-in-stack",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a18",
+          "order": 3,
+          "title": "VERISIGN ANNOUNCES VERISIGN INFORMED, APPLIES FOR .PKI TOP LEVEL DOMAIN",
+          "summary": "Verisign launched a limited beta of Verisign Informed, a certificate status service that returns signed OCSP responses to counter stale revocation data, and applied for the .pki top-level domain.",
+          "url": "https://domainnamewire.com/2026/10/05/verisign-announces-verisign-informed-applies-for-pki-top-level-domain/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "domainnamewire.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a19",
+          "order": 4,
+          "title": "ASOS CUSTOMERS RECEIVE ‘HACK' NOTIFICATION THREATENING TO LEAK DATA",
+          "summary": "Asos is investigating after thousands of app users received a notification claiming hackers had fully compromised its Snowflake instance.",
+          "url": "https://www.theguardian.com/business/2026/oct/06/asos-hack-notification-website-app?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-07:a20",
+          "order": 5,
+          "title": "OPENAI WILL WATERMARK CHATGPT OUTPUTS BY DEFAULT—BUT ONLY IN THE EU",
+          "summary": "OpenAI will enable its textGrain text watermark by default for ChatGPT and Codex users in the EU to comply with the EU AI Act, though its own tests show the 92% best-case detection rate falls by almost 75% once 20% of the text is changed.",
+          "url": "https://arstechnica.com/ai/2026/10/openai-will-watermark-chatgpt-outputs-by-default-but-only-in-the-eu/?utm_source=tldrinfosec%5B21%5D%5B22",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
