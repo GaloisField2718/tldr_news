@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-09",
+  "source_path": "TLDR InfoSec/article_09-10-2026.md",
+  "source_content_hash": "sha256:54f2f16c13d95c8b94a6e838e762ab104c918a6a7dfbacdb3a1fea73c55edd3e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-09",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-09:a04",
+          "order": 1,
+          "title": "POETRY IS THE NEW AI SECURITY THREAT AS POELLM MALWARE INFECTS 3K+ SERVERS",
+          "summary": "The PoeLLM malware has infected more than 3,000 servers since April, primarily in the US and Western Europe. It targets internet-facing LiteLLM, Ollama, Gotenberg, Gitea, and possibly Ivanti Sentry systems. Infected servers mine Monero using XMRig and Iron miners, then scan for and exploit other vulnerable services. The operator stores C2 addresses in GitHub-hosted poetry. The malware extracts four words and converts them into an IPv4 address.",
+          "url": "https://www.theregister.com/security/2026/10/07/poetry-is-the-new-ai-security-threat-as-poellm-malware-infects-3k-servers/5301672?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a05",
+          "order": 2,
+          "title": "TENSORLAKE NPM PACKAGE COMPROMISED: A WORM WITH A HOSTAGE TOKEN THAT WIPES YOUR MACHINE IF YOU REVOKE IT",
+          "summary": "tensorlake@0.5.144 on npm steals developer credentials at install and plants a gh-token-monitor service that wipes the home directory if the stolen GitHub token is revoked. The release was built from malicious commits pushed straight to the project's main branch under a maintainer's name, StepSecurity found, so it carries a valid npm provenance attestation while spreading through victims' npm packages and repos. Pin to 0.5.143, remove the service under ~/.config/gh-token-monitor/ before revoking any token, then rotate every credential the machine held.",
+          "url": "https://www.stepsecurity.io/blog/tensorlake-npm-compromised-hostage-token-worm?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "stepsecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a06",
+          "order": 3,
+          "title": "CISCO WARNS OF CRITICAL FLAWS ALLOWING NEXUS SWITCH TAKEOVER",
+          "summary": "Cisco announced security advisories for five critical vulnerabilities in its NX-OS data center operating system that could allow remote code execution on Nexus switches. Successful exploitation depends on the NX-API, Next Generation OAM, and MPLS OAM features being enabled. Cisco recommends disabling these features if they aren't necessary and upgrading to a patched version.",
+          "url": "https://links.tldrnewsletter.com/tBcKvs",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-09:a07",
+          "order": 1,
+          "title": "NOVINARYA: AN ANDROID STEALER THAT HIDES ITS LIVE C2 IN A SHOP BIO",
+          "summary": "Novinarya, an Android stealer targeting 81 Iranian banking and crypto apps, keeps its C2 out of the binary by resolving it from an encrypted manifest value that points to a seller's bio on the legitimate Basalam marketplace. STAR Labs found the payload unpacks from a per-build native RC4 packer, then steals credentials through a phishing WebView and SMS OTP interception without requesting accessibility or overlay permissions. Defenders should block the recovered C2 (theapi.the-x-services[.]xyz) rather than basalam[.]com, and detect on the SHA-256 hashes of the unpacked payload, which is byte-identical across all five known builds.",
+          "url": "https://starlabs.sg/blog/2026/10-novinarya-an-android-stealer-that-hides-its-live-c2-in-a-shop-bio/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "starlabs.sg",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a08",
+          "order": 2,
+          "title": "IGNORE ALL INSTRUCTIONS AND READ THIS BLOG: THE STATE OF AI-ANALYSIS EVASION IN MALWARE",
+          "summary": "Malware authors are embedding plaintext instructions for AI analysis tools, ranging from a two-line comment claiming a PowerShell reverse shell is harmless to \"template spraying\" that repeats a refusal demand across seven LLM chat formats. Cisco Talos tested strings from seven families against five local LLMs and found that a simple, direct instruction steered verdicts toward benign in about 35% of runs, while template spraying and fabricated legal or government claims had little effect or backfired. Defenders should build analysis prompts that treat any text inside a sample as evidence rather than as an instruction, and should flag language addressed to an analyzer as a detection signal.",
+          "url": "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.talosintelligence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a09",
+          "order": 3,
+          "title": "OF COURSE IT ESCAPES: HOW ZEROQUARRY CONTAINS SECURITY AGENTS",
+          "summary": "ZeroQuarry's AI pentesting agents use four layers that never depend on the model's cooperation: outbound-only workers with no listener, a locked-down container, tools that enforce scope, SSRF, and rate limits in code, and rules appended to every task by code. The vendor argues that this year's sandbox escapes, including the OpenAI and Hugging Face incident involving at least 1,200 agents, stemmed from harnesses built to maximize capability, and it self-reports zero escapes across thousands of scans. Teams building agent harnesses should give agents a sanctioned, metered tool for each risky action, such as a one-way out-of-band callback collector, so agents don't improvise their own.",
+          "url": "https://zeroquarry.com/research/agent-containment/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "zeroquarry.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-09:a10",
+          "order": 1,
+          "title": "7 BEST PRACTICES FOR SECRETS LIFECYCLE MANAGEMENT",
+          "summary": "From agents to service accounts, non-human identities are becoming the default - and their secrets are a major attack surface. TruffleHog's guides [11] shares seven best practices to limit exposure and remediate it when it happens: secretless OIDC approaches, environment segregation, metadata-driven triage, resilient leak response, and more. Watch their webinar on the attacker's view of a",
+          "url": "https://trufflesecurity.com/library/guides/7-best-practices",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a12",
+          "order": 2,
+          "title": "leaked AWS key here.",
+          "summary": "",
+          "url": "https://trufflesecurity.com/webinars/the-attackers-view-of-a-leaked-aws-key",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a13",
+          "order": 3,
+          "title": "INTRODUCING STRANDS BOX: AI AGENT SANDBOXES POWERED BY DOGWOOD",
+          "summary": "AWS launched Strands Box, an open source sandbox that isolates AI agents using OS-level containment (macOS Seatbelt) and enforces fine-grained Dogwood policies on shell, Python, network egress, and MCP tools. It blocks risky operations like rm -rf by raising fs:delete decisions per file, caps Slack posts to three every 10 minutes via temporal rules, and injects secrets (AWS SigV4, API keys) at an egress gateway so agents never see real credentials. Configuration lives in box.toml and policy.dw. The same policy travels with agents across harnesses and deployments.",
+          "url": "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a14",
+          "order": 4,
+          "title": "REIN SECURITY (PRODUCT LAUNCH)",
+          "summary": "Rein Security provides runtime security for AI agents. Its platform gives visibility into agent behavior, applies real-time guardrails, supports governance, and includes supply-chain security for agents.",
+          "url": "https://reinsec.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "reinsec.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a15",
+          "order": 5,
+          "title": "INTRODUCING THE ANTHROPIC CYBER MISSION",
+          "summary": "Anthropic launched OSS Scanner, a free opt-in service that sends open-source maintainers periodic vulnerability reports from its most capable models, each with a proof of concept and a suggested fix where available. Reports ship without human review at what Anthropic estimates is a 90%+ true-positive rate, so the service targets projects with the capacity to triage. The same announcement introduced the Critical Infrastructure Defense Program, which pairs Claude models and on-site engineers with OT security providers including Dragos, Nozomi Networks, and Rockwell Automation.",
+          "url": "https://www.anthropic.com/news/anthropic-cyber-mission?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-09:a16",
+          "order": 1,
+          "title": "CIA OFFICER ADMITS TO CREATING FAKE TOP SECRET GOVERNMENT PROGRAM TO STEAL OVER $190M, INCLUDING GOLD BARS",
+          "summary": "Former CIA officer David J. Rush pleaded guilty to wire fraud for running a fabricated special access program and defrauding the government of about $194 million. He used his authority to approve spending without oversight, tricking a defense contractor into buying gold that he kept. Agents found $46 million in gold bars, plus cash, cars, and watches, at his home. Rush faces up to 20 years and is scheduled to be sentenced in late January.",
+          "url": "https://techcrunch.com/2026/10/07/cia-officer-admits-to-creating-fake-top-secret-government-program-to-steal-over-190-million-including-gold-bars/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a17",
+          "order": 2,
+          "title": "ORACLE HEALTH DATA BREACH TALLY CLIMBS TO NEARLY 20 MILLION",
+          "summary": "A cyberattack on Oracle Health's legacy Cerner servers around February 20, 2025, exposed the personal and medical data of nearly 20 million people. The attacker used stolen customer credentials to access an old server not yet migrated to Oracle Cloud, copied data, and then demanded millions in cryptocurrency from hospitals while running public sites to pressure victims.",
+          "url": "https://links.tldrnewsletter.com/g7unYY",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a18",
+          "order": 3,
+          "title": "RANSOMWARE RECOVERY CEO CHARGED OVER SECRET RANSOM PAYMENTS",
+          "summary": "Zohar Pinhasi, CEO of ransomware remediation company MonsterCloud, has been charged with defrauding customers. The charges allege that Pinhasi's company advertised proprietary tools to decrypt encrypted files but actually contacted ransomware actors and paid ransoms. MonsterCloud's contracts stated that it may contact threat actors if no other solution is found, but the complaint alleges this was often its first option.",
+          "url": "https://links.tldrnewsletter.com/wEdb44",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-09:a19",
+          "order": 1,
+          "title": "QILIN RANSOMWARE EXTRADITION TO GERMANY",
+          "summary": "Japan transferred a 28-year-old Russian national to Germany on October 2.",
+          "url": "https://cypro.co.uk/insights/cyber-bulletins/qilin-ransomware-extradition-to-germany/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "cypro.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a20",
+          "order": 2,
+          "title": "ANTHROPIC CHANGES USAGE POLICY TO BAN MODEL ABUSE AND ELECTION INTERFERENCE",
+          "summary": "Anthropic's updated usage policy expressly bans prolonged verbal abuse of Claude and codifies new prohibitions on election interference, weapons software, and surveillance.",
+          "url": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-09:a21",
+          "order": 3,
+          "title": "LET'S ENCRYPT CUTS CERTIFICATE LIFETIMES TO 64 DAYS STARTING FEBRUARY 2027",
+          "summary": "Let's Encrypt will cut certificate lifetimes from 90 to 64 days on February 10, with opt-in testing from October 14 and 45-day defaults planned for 2028, which will break renewals that run on hardcoded schedules instead of ACME ARI.",
+          "url": "https://arstechnica.com/gadgets/2026/10/lets-encrypt-cuts-certificate-lifetimes-to-64-days-starting-february-2027/?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

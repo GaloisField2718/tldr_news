@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-09",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-09",
+  "source_path": "TLDR DevOps/article_09-10-2026.md",
+  "source_content_hash": "sha256:bd45e8e8bf37849a64b79a7078961fb7e1731960d7ea073f46ced6ceb773df0b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a04",
+          "order": 1,
+          "title": "INSTACART CUT AVERAGE LATENCY 50% AND RUNS ON 70% FEWER NODES. HERE'S HOW",
+          "summary": "Redis was designed for single-core machines. On a modern 64-core server you end up paying for compute you can't use.\n\nDragonfly [5] was built with a thread-per-core, shared-nothing architecture and a new hash table design that cuts memory overhead by around 40% vs. Redis's dict.\n\n💪 You get about 6M ops/sec on a single node, so workloads fit comfortably on 1 machine.\n\n👀 When Instacart migrated to Dragonfly it cut latency 50% [6] and now runs 70% fewer nodes.\n\n🤝 Dragonfly speaks the Redis and Valkey wire protocol, so your existing clients and commands work unchanged.",
+          "url": "https://www.dragonflydb.io/?sp=8CS3_29His6P1vbVCjJrF78K&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-09_tldr_devops_primary_dragon&utm_content=header_instacart_cut_average&utm_term=2026-10-09_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a07",
+          "order": 2,
+          "title": "Start for free",
+          "summary": "",
+          "url": "https://www.dragonflydb.io/?sp=8CS3_29His6P1vbVCjJrF78K&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-09_tldr_devops_primary_dragonfly&utm_content=cta_start_free&utm_term=2026-10-09_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a08",
+          "order": 1,
+          "title": "THE CNCF IS GRADUATING PROJECTS FASTER THAN EVER. AI AGENTS ARE HELPING WITH THE DUE DILIGENCE",
+          "summary": "CNCF executive director Jonathan Bryce says AI and open source feed each other, citing OpenAI's 2018 use of Kubernetes. Project graduations have accelerated over 18 months, partly with AI agents helping with due diligence, ahead of KubeCon Salt Lake City.",
+          "url": "https://thenewstack.io/open-source-ai-kubernetes/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a09",
+          "order": 2,
+          "title": "THE KEYS TO THE INTERNET CHANGE ON OCTOBER 11. ARE YOU READY?",
+          "summary": "The DNS root is scheduled to switch to KSK-2024 on October 11, and DNSSEC-validating resolvers that lack the new trust anchor could fail to resolve otherwise healthy websites. RFC 8509 sentinel queries let operators check readiness, although an unsupported sentinel test produces an inconclusive result rather than proving the key is missing.",
+          "url": "https://blog.cloudflare.com/root-ksk-2024-rollover/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a10",
+          "order": 1,
+          "title": "WHAT IS INTERACTIVE APPLICATION SECURITY TESTING (IAST)?",
+          "summary": "Interactive application security testing instruments running applications to find issues like SQL injection and XSS with fewer false positives. It suits QA and staging but needs runtime agents, adds overhead, and scales poorly across microservices, so mature programs pair it with SAST and SCA.",
+          "url": "https://www.harness.io/blog/what-is-interactive-application-security-testing-iast?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "harness.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a11",
+          "order": 2,
+          "title": "KUBELET WATCHES INODES. JUST NOT UNTIL IT'S AN EMERGENCY",
+          "summary": "Kubelet's background image garbage collection only monitors disk bytes, so workloads heavy on small files receive no early intervention before kubelet evicts pods. On one node, unpacked layers from a single-stage build containing the @mui/icons-material package consumed millions of inodes. A multi-stage Dockerfile can reduce the deployed image from more than 40,000 files to a few dozen. Adding a Prometheus alert for inode usage above 80% can catch the problem well before the 95% eviction threshold.",
+          "url": "https://www.cncf.io/blog/2026/10/05/kubelet-watches-inodes-just-not-until-its-an-emergency/?utm_source=tldrdevops",
+          "reading_time_minutes": 11,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a12",
+          "order": 3,
+          "title": "BEYOND SYNTHETIC TESTING: CAPTURING AND REPLAYING REAL DATABASE WORKLOADS AT AIRBNB",
+          "summary": "Airbnb captures production SQL traffic at ProxySQL and reconstructs transaction order and timing for controlled replay against test databases. The system supports capacity planning and upgrade comparisons, uncovering MySQL 8.0 performance regressions and queries whose results depended on unspecified row ordering.",
+          "url": "https://airbnb.tech/infrastructure/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "airbnb.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a13",
+          "order": 1,
+          "title": "LEARN FROM THE ENGINEERS WHO RUN 20% OF THE INTERNET AT CLOUDFLARE CONNECT 2026",
+          "summary": "Learning to run 10,000 agents can take 10,000 hours – Or three days this October 19-21 at Cloudflare Connect [13]: 100+ sessions across tracks including Network & Infrastructure, Agent Cloud, and more. Key speakers from Cloudflare, Stanford, Gilead, and Block.  Register today with exclusive TLDR code CONNECTTLDR [13] to save $100 on your Connect pass.",
+          "url": "http://cloudflare.com/connect/",
+          "reading_time_minutes": null,
+          "source_domain": "cloudflare.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a14",
+          "order": 2,
+          "title": "CLAUDE-MEM",
+          "summary": "Claude-Mem preserves context across sessions by capturing tool usage observations and generating semantic summaries for future use. The plugin works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, and OpenCode.",
+          "url": "https://github.com/thedotmack/claude-mem?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a15",
+          "order": 3,
+          "title": "RADDEBUGGER",
+          "summary": "The RAD Debugger is a native, user-mode, multi-process graphical debugger currently in alpha. It supports local Windows x64 debugging with PDBs and plans to add Linux support later. The project also includes the RAD Linker, which creates x64 PE/COFF binaries and offers 50% faster link times for projects with gigabytes of debug info.",
+          "url": "https://github.com/EpicGames/raddebugger?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a16",
+          "order": 1,
+          "title": "MONITOR WAREHOUSE DATA QUALITY BEYOND PIPELINE HEALTH",
+          "summary": "Pipeline success does not guarantee accurate warehouse data, so teams should add table, column, schema, and custom SQL checks with anomaly detection and thresholds. Lineage views trace issues upstream, and Datadog pairs Data Observability with Data Streams Monitoring for end-to-end coverage.",
+          "url": "https://www.datadoghq.com/blog/monitor-warehouse-data-quality-beyond-pipeline-health/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a17",
+          "order": 2,
+          "title": "BUILDING RELIABLE REAL-HARDWARE CI: LESSONS FROM 15 YEARS OF TEST LABS",
+          "summary": "Shared worker hosts, power controllers, and USB hubs can turn one hardware failure into multiple broken CI jobs. Linaro's test-lab design gives each device a dedicated automation appliance and private network, with rollback-capable firmware to help keep the testing infrastructure reproducible and recoverable.",
+          "url": "https://www.linaro.org/blog/building-reliable-real-hardware-ci-lessons-from-15-years-of-test-labs?utm_source=tldrdevops",
+          "reading_time_minutes": 14,
+          "source_domain": "linaro.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-09:a18",
+          "order": 1,
+          "title": "IN-DEPTH TUTORIALS TO START RIGHT NOW",
+          "summary": "When an alert fires on Amazon ECS, a tutorial in AWS Marketplace walks you through the trace to root cause, one path instead of five dashboards. Read the tutorial [18].",
+          "url": "https://aws.amazon.com/marketplace/build-learn/application-performance-monitoring-observability?trk=f0b6b425-b074-4efe-9458-1c49dc09324c&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a19",
+          "order": 2,
+          "title": "FROM 40 SECONDS TO UNDER 10: REBUILDING INCIDENT DETECTION ON OPENTELEMETRY, APACHE KAFKA, AND APACHE FLINK ON KUBERNETES",
+          "summary": "Atlassian rebuilt incident detection on OpenTelemetry, Kafka, and Flink, cutting latency from over 40 seconds to under 10 and running on 4 Kubernetes pods instead of 90 VMs.",
+          "url": "https://www.cncf.io/blog/2026/09/30/from-40-seconds-to-under-10-rebuilding-incident-detection-on-opentelemetry-apache-kafka-and-apache-flink-on-kubernetes/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a20",
+          "order": 3,
+          "title": "HOW MIRELO AI BROUGHT SOUND DESIGN TO THE IDE WITH MCP AND KIRO POWERS",
+          "summary": "Mirelo AI packaged its hosted MCP server as a Kiro power, letting developers generate production-ready sound effects from natural-language prompts inside the IDE.",
+          "url": "https://aws.amazon.com/blogs/devops/how-mirelo-ai-brought-sound-design-to-the-ide-with-mcp-and-kiro-powers/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-09:a21",
+          "order": 4,
+          "title": "CUTTING PROVIDER MEMORY BY 80%: CROSSPLANE-RUNTIME V2.4 AND CLIENT CACHING",
+          "summary": "Crossplane providers running crossplane-runtime v2.4.0 see memory usage drop by roughly 80-95% on clusters with around 2,000 CRDs.",
+          "url": "https://blog.crossplane.io/cutting-provider-memory-by-80-crossplane-runtime-v2-4-and-client-caching/?utm_source=tldrdevops%5B22%5D%5B23",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.crossplane.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
