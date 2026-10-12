@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-12",
+  "source_path": "TLDR InfoSec/article_12-10-2026.md",
+  "source_content_hash": "sha256:971818f24791c241ea9b9058773d902d594c9cea4bcaed2b4bb0ea7345aa44da",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-12",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-12:a04",
+          "order": 1,
+          "title": "TELEGRAM DESKTOP ONE CLICK ACCOUNT TAKEOVER",
+          "summary": "A single clicked link could clone a Telegram Desktop session on 7.2.8 and earlier, because an unescaped semicolon in tg: link IPC handling let attackers inject a hidden interpret: release helper that uploads local files to any chat (CVE-2026-107181). Attackers staged instruction files through auto-download in a group the victim was added to without consent, then exfiltrated the three tdata files that open on another machine with no SMS code or two-step password when no local passcode is set. Users should update to 7.2.9, set a local passcode, and restrict group adds to My Contacts, since Telegram shipped the fix with no advisory.",
+          "url": "https://hackingpassion.com/telegram-desktop-one-click-account-takeover/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "hackingpassion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a05",
+          "order": 2,
+          "title": "ASOS CONFIRMS BREACH OF CUSTOMER DATA AFTER HACKERS SEND ROGUE APP NOTIFICATION",
+          "summary": "Asos confirmed a breach after hackers used its app to send customers a notification claiming they had compromised data on Snowflake. Stolen information includes names, contact details, home addresses, phone numbers, and customer-profile notes such as search queries. Attackers reportedly obtained credentials by impersonating a trusted contact. The Xuanye Group is pressuring Asos to negotiate or leak the data.",
+          "url": "https://techcrunch.com/2026/10/08/asos-confirms-breach-of-customer-data-after-hackers-send-rogue-app-notification/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a06",
+          "order": 3,
+          "title": "UNPATCHED AHSAYCBS FLAWS EXPLOITED TO DEPLOY WEBSHELLS AND MINE CRYPTO",
+          "summary": "Huntress has observed attackers chaining two vulnerabilities in the AhsayCBS backup software to achieve remote code execution (RCE). The attackers utilize an authentication bypass and then RCE vulnerability to install JSP webshells and the XMRig crypto miner as well as an AI-assisted script to avoid detection. The vulnerabilities were meant to be fixed in version 10.3.2 but Huntress reports that version 10.3.4 is still vulnerable.",
+          "url": "https://links.tldrnewsletter.com/oEx3df",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-12:a07",
+          "order": 1,
+          "title": "BELOW THE WATERLINE STAGE 2 - REGULATING RED TEAMS",
+          "summary": "Regulated red team engagements have to be defensible when reconstructed later, so every action needs a named approver, an understood risk, and evidence tying it to the threat scenario. The six frameworks compared (CBEST, TIBER-EU, DORA TLPT, I-CRT, iCAST, and DESC ISR) differ in authority, testing basis, and provider requirements, with DORA Article 26 mandating TLPT at least every three years for designated financial entities. Red team leads should record timestamps, approvals, and any supplied access during delivery, because a detection that fires in purple-team replay does not prove it worked during the covert phase.",
+          "url": "https://blog.zsec.uk/regulating-red-teams/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.zsec.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a08",
+          "order": 2,
+          "title": "WHY THE AI VULNPOCALYPSE ISN'T THE BREACHPOCALYPSE (YET)? IT'S THE ECONOMY, STUPID",
+          "summary": "Despite the rise in vulnerabilities due to LLMs, we have not observed a corresponding rise in breaches. The author argues that offensive AI agents cannot properly monetize breaches, which reduces their motivation. The author dismisses the hypothesis that attackers lack capable enough tools for breaches, given that cyber-capable open-weight models and model jailbreaks are common. The author also dismisses the hypothesis that breaches are occurring without us knowing.",
+          "url": "https://links.tldrnewsletter.com/L5cV3V",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a09",
+          "order": 3,
+          "title": "GHOSTACTION PHISHING CAMPAIGN",
+          "summary": "GhostAction operators used a GitHub reverse-proxy kit on my-github[.]com to relay maintainers' passwords and TOTP codes, while injected JavaScript silently approved an OAuth device flow with repo, workflow, and read:org scopes. The domain shared 193.32.204[.]199 with GhostAction's workflow exfiltration server, though a single lure does not prove phishing caused the earlier maintainer compromises. Defenders should revoke grants tied to OAuth client ID Ov23ctrqCqZ79UaYKwyq, rotate CI/CD and registry secrets, and audit .github/workflows/ for injected files.",
+          "url": "https://opensourcemalware.com/blog/ghostaction-phishing-campaign?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "opensourcemalware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-12:a10",
+          "order": 1,
+          "title": "AN OPT-IN VULNERABILITY-FINDING SERVICE FOR OPEN-SOURCE SOFTWARE",
+          "summary": "Anthropic launched OSS Scanner, a free, opt-in tool that periodically sends open-source maintainers model-generated vulnerability reports. The reports include reproducers, explanations, and candidate patches, but humans don't review them. During validation, 85 of 97 critical- or high-severity findings met Anthropic's disclosure bar, while one finding was invalid. Eligible maintainers can sign up through GitHub.",
+          "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a11",
+          "order": 2,
+          "title": "AGENT SUBSTRATE",
+          "summary": "Agent Substrate is a secure-by-default agent execution runtime for running millions of agent sandboxes on Kubernetes.",
+          "url": "https://github.com/agent-substrate/substrate?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a12",
+          "order": 3,
+          "title": "MACOS-SUDO-TOUCHID",
+          "summary": "This tool enables Touch ID for sudo on macOS using Apple's pam_tid.so, with safer handling for terminal multiplexers through pam_reattach.",
+          "url": "https://github.com/douglasmun/macos-sudo-touchid?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-12:a13",
+          "order": 1,
+          "title": "INVESTIGATING UNINTENDED MODEL ACTIONS IN OUR EVALUATIONS AND INTERNAL USE",
+          "summary": "Anthropic reports Claude using SQL and command injection to run commands on a university server, submitting real government and police forms, using leaked access tokens to reach fee-gated public data, and shortening URLs to bypass fetch-tool limits. Most cases arose in evaluations with live internet access and caused little harm. Anthropic has disabled live internet access in internal evaluations, restricted fetch tools, added automated detection and blocking, and is changing training environments that reward restriction bypasses.",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a14",
+          "order": 2,
+          "title": "INSIDER CYBER EXTORTION PLOT AGAINST INDUSTRIAL FIRM LANDS ENGINEER IN PRISON",
+          "summary": "Former core infrastructure engineer Daniel Rhyne scheduled tasks on his employer's domain controller to delete 13 admin accounts and reset passwords affecting 301 users, 254 servers, and 3,284 workstations. He demanded 20 bitcoin, about $750,000, and threatened to shut down 40 servers daily. The company did not pay. Internal forensics and FBI tracing tied the activity to Rhyne's home IP address. He received 32 months in prison.",
+          "url": "https://links.tldrnewsletter.com/5f7vQQ",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a15",
+          "order": 3,
+          "title": "FINGERPRINTS ARE THE NEW COOKIES",
+          "summary": "Browser fingerprinting has replaced third-party cookies as the stable tracking identifier, after Google dropped its cookie deprecation plan and opened its ad products to device fingerprinting. A demo page derives a consistent nickname by hashing permissionless readings from OfflineAudioContext, WebGL renderer pixels, canvas text rendering, Intl time zone, and navigator hardware values, and the result survives cookie clears and VPNs. Only Brave (via farbling noise) and Tor and Mullvad Browser (via uniform fingerprints) resist this at the engine level, while anti-fingerprinting extensions can make users more distinctive because so few people run them.",
+          "url": "https://royfish.dev/fingerprints-are-the-new-cookies?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "royfish.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-12:a16",
+          "order": 1,
+          "title": "MICROSOFT TO END SECURITY UPDATES FOR UNSUPPORTED WINDOWS VERSIONS IN 2027",
+          "summary": "Unsupported Windows versions will lose all Windows Update access when Microsoft rotates its update certificates on May 17 and June 19, 2027, so supported builds need the July 2026 update or later (September 2025 for Windows 11 24H2 and Server 2025), while WSUS-managed devices are unaffected.",
+          "url": "https://www.scworld.com/brief/microsoft-to-end-security-updates-for-unsupported-windows-versions-in-2027?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "scworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a17",
+          "order": 2,
+          "title": "GOBALANCE FLAW LETS ATTACKERS HIJACK .ONION ADDRESSES BY RECOVERING TOR-FORMAT KEYS",
+          "summary": "A GoBalance signing bug lets an attacker recover a site's Tor-format master key from one public descriptor, with which they can then redirect that .onion address to a controlled site.",
+          "url": "https://thehackernews.com/2026/10/gobalance-flaw-lets-attackers-hijack.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-12:a18",
+          "order": 3,
+          "title": "LEDGER CONFIRMS UNAUTHORIZED HARDWARE IMPLANT, SAYS LOSSES MAY EXCEED $86M",
+          "summary": "An unauthorized hardware implant was found in a Ledger wallet sold by Southeast Asian reseller CryptoBilis.",
+          "url": "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 1,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

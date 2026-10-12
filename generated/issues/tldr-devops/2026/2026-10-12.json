@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-12",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-12",
+  "source_path": "TLDR DevOps/article_12-10-2026.md",
+  "source_content_hash": "sha256:709caaa2c15a6a8080b29c3bbd5c54fd099c338b6d1dda733d4938706f3691f6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a04",
+          "order": 1,
+          "title": "RAG ON AWS WITHOUT THE INTEGRATION WORK",
+          "summary": "Deploy a RAG pipeline to your AWS account with one fully provisioned Terraform template. Elastic Cloud handles retrieval and AWS Lambda handles orchestration.\n\n* GET STARTED: SIGN UP FOR ELASTIC CLOUD FREE [5] in AWS Marketplace, download the template, and run Terraform * AUTOMATE INGESTION: Upload a document to S3 and Lambda vectorizes it into Elastic — no manual processing * QUERY WITH AN LLM: Send a question to the API Gateway endpoint and get responses grounded in your data via Amazon Bedrock",
+          "url": "https://aws.amazon.com/marketplace/build-learn/data-analytics/end-to-end-rag-deployment-elastic-cloud?trk=5df2e7e2-fd09-4df5-b2de-b93e7c810748&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a04-02",
+          "order": 2,
+          "title": "START BUILDING RAG ON AWS NOW.",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn/data-analytics/end-to-end-rag-deployment-elastic-cloud?trk=5df2e7e2-fd09-4df5-b2de-b93e7c810748&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a06",
+          "order": 1,
+          "title": "INTRODUCING AI EVALUATION: CLOSE THE LOOP ACROSS THE FULL AI LIFECYCLE",
+          "summary": "New Relic added AI Evaluation to its AI Observability platform, using an LLM as a judge to score live prompts and completions for safety and accuracy. It flags prompt injection, data leakage, and hallucinations with 0 to 1 scores attached to distributed traces.",
+          "url": "https://newrelic.com/blog/news/introducing-ai-evaluation?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "newrelic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a07",
+          "order": 2,
+          "title": "FLUX9S GA: FLUX CLUSTER STATE, FROM THE TERMINAL",
+          "summary": "flux9s, a Rust terminal UI for Flux inspired by K9s, reached 1.0. It adds dependency graphs, reconciliation history, a cluster health pulse dashboard, and opt-in discovery for Flagger and tofu-controller, and it is read-only by default.",
+          "url": "https://fluxcd.io/blog/2026/10/flux9s-ga/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "fluxcd.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a08",
+          "order": 3,
+          "title": "DIGITALOCEAN MICROVMS: FAST, ISOLATED COMPUTE FOR YOUR AI AGENT INFRASTRUCTURE",
+          "summary": "DigitalOcean has released MicroVMs in public preview, offering isolated virtual machines that pause when idle and resume in milliseconds. The service costs $0.022 per vCPU-hour and $0.0085 per GiB-hour for compute, billed per second, while paused instances only incur storage fees. MicroVMs are built on the open-source Firecracker platform and are designed for workloads like coding agents, sandboxes, and CI/CD runners.",
+          "url": "https://www.digitalocean.com/blog/microvms-public-preview?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "digitalocean.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a09",
+          "order": 1,
+          "title": "ZERO-DOWNTIME POSTGRESQL MIGRATIONS: A PRODUCTION PLAYBOOK FOR SAFE SCHEMA CHANGES",
+          "summary": "Safe PostgreSQL schema changes separate expansion, backfills, traffic switches, and cleanup so old and new application versions remain compatible during deployment. Short lock timeouts, concurrent index builds, separately validated constraints, and throttled backfills limit disruption, while monitoring replica lag and data consistency determines when each phase can proceed.",
+          "url": "https://boundlayer.io/blog/zero-downtime-postgresql-migrations?utm_source=tldrdevops",
+          "reading_time_minutes": 21,
+          "source_domain": "boundlayer.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a10",
+          "order": 2,
+          "title": "AGENTIC EVALUATIONS: BENCHMARK AI AGENT QUALITY, PERFORMANCE, & SAFETY",
+          "summary": "Anthropic has introduced a new concept called agentic evaluations, or agentevals, to verify that AI agents perform tasks correctly and safely. The tool grades agent traces based on specific criteria like performance, output quality, and safety. Developers can install agentevals via a Python package or clone the source repository from GitHub.",
+          "url": "https://www.solo.io/blog/agentic-quality-benchmarking-with-agent-evals?utm_source=tldrdevops",
+          "reading_time_minutes": 17,
+          "source_domain": "solo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a11",
+          "order": 3,
+          "title": "WHAT TODAY'S SOFTWARE OWES TO BRONZE AGE CLOCKS",
+          "summary": "Leaky buckets provide inexpensive admission control by calculating available capacity from elapsed time rather than running a background timer. PlanetScale applies related token-bucket budgets to Postgres queries, estimating resource costs before execution and reconciling actual costs afterward to control bursts and protect database capacity.",
+          "url": "https://planetscale.com/blog/leaky-buckets-in-software-explained?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a12",
+          "order": 1,
+          "title": "THIS OS CODING HARNESS GETS 4X THE DEEPSWE SOLVES AS CLAUDE CODE",
+          "summary": "CodeAF [12] runs at up to 4.8x less per solved issue than frontier models, and it outperforms on complex software engineering tasks. It works with any provider and gives you 1 window where you hand work off, track progress, and step in when human judgment is needed. See",
+          "url": "https://agentfield.ai/github/codeaf/?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-261012&utm_id=tldr-261012-codeaf&utm_content=codeaf",
+          "reading_time_minutes": null,
+          "source_domain": "agentfield.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a12-02",
+          "order": 2,
+          "title": "why it's #1 on DeepSWE",
+          "summary": "",
+          "url": "https://agentfield.ai/github/codeaf/?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-261012&utm_id=tldr-261012-codeaf&utm_content=codeaf",
+          "reading_time_minutes": null,
+          "source_domain": "agentfield.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a13",
+          "order": 3,
+          "title": "CONTEXT MODE",
+          "summary": "Context Mode is an MCP server that reduces context window usage by 98% for AI coding agents. It saves tool output to a sandbox so raw data never enters the conversation, shrinking a typical 315 KB output load to 5.4 KB. The tool also persists session memory in SQLite, allowing agents to recover their state after a conversation compacts. It works across 17 platforms, including Claude Code, Gemini CLI, VS Code Copilot, and Cursor.",
+          "url": "https://github.com/mksglu/context-mode?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a14",
+          "order": 4,
+          "title": "AIRLLM",
+          "summary": "AirLLM allows 70B large language models to run on a single 4GB GPU without quantization. The tool can run Kimi K3 (2.8T) on under 4GB of VRAM and DeepSeek-V3 (671B) on about 12GB. It works by keeping only one layer on the GPU at a time. AirLLM also supports training huge models on small VRAM, with Qwen3.8-Flash-Next (125B) training under 6GB.",
+          "url": "https://github.com/lyogavin/airllm?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a15",
+          "order": 1,
+          "title": "ATLASSIAN AND OPENAI EXPAND THEIR PARTNERSHIP",
+          "summary": "Atlassian and OpenAI expanded their partnership, bringing GPT-6 Astra and the GPT-5.6 series into Atlassian's platform and Rovo alongside its Teamwork Graph. Over 3,000 Atlassian developers already use Codex, and future integrations will let teams assign work directly to AI agents.",
+          "url": "https://links.tldrnewsletter.com/N27sOL",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a16",
+          "order": 2,
+          "title": "INTRODUCING ON-DEMAND CPU AND MEMORY PROFILING WITH FLAMEGRAPHS FOR WORKERS AND DURABLE OBJECTS",
+          "summary": "Cloudflare added on-demand production CPU and memory profiling for Workers and Durable Objects, with interactive flamegraphs and downloadable profiles. Internal profiling uncovered redundant JSON processing and partially disabled metrics code that still consumed memory. Memory profiles capture allocations during the recording window rather than the entire existing heap.",
+          "url": "https://blog.cloudflare.com/workers-on-demand-profiling/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-12:a17",
+          "order": 1,
+          "title": "HOW WE GOT AN AI SRE AGENT PAST SECURITY REVIEW",
+          "summary": "Nylas's SRE agent triages P1/P2 bugs, checks logs, and opens fix PRs. Here's the one-screen approval packet that got security to sign off,",
+          "url": "https://www.nylas.com/blog/openclaw-hermes-security-approval/?utm_source=&utm_medium=sponsoredemail&utm_campaign=tldr-nylas-oct-12&utm_content=",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a17-02",
+          "order": 2,
+          "title": "template included. Learn more here.",
+          "summary": "",
+          "url": "https://www.nylas.com/blog/openclaw-hermes-security-approval/?utm_source=&utm_medium=sponsoredemail&utm_campaign=tldr-nylas-oct-12&utm_content=",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a18",
+          "order": 3,
+          "title": "CODEX CLOUD SHIPPED WITH TAILSCALE SUPPORT. NOBODY TOLD US",
+          "summary": "Codex Cloud's Tailscale integration connects cloud coding environments to private APIs and test services using tagged, ephemeral devices governed by tailnet access rules.",
+          "url": "https://tailscale.com/blog/codex-cloud-tailscale?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "tailscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-12:a19",
+          "order": 4,
+          "title": "DENO IS JOINING CLOUDFLARE",
+          "summary": "The Deno team is joining Cloudflare to simplify self-hosting for Workers and Durable Objects.",
+          "url": "https://blog.cloudflare.com/deno-joins-cloudflare/?utm_source=tldrdevops%5B20%5D%5B21",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
