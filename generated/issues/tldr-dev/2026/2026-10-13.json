@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-10-13",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-10-13",
+  "source_path": "TLDR Dev/article_13-10-2026.md",
+  "source_content_hash": "sha256:9be43de0f148261245cfb53cc1934aea67fc3701f516f153ef9e11caa67c3958",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-10-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a04",
+          "order": 1,
+          "title": "GIVE YOUR AGENT VOICE-MODE WITH LIVEKIT",
+          "summary": "Over 1M developers use the open-source LiveKit [5]Agents framework (Python or TypeScript) to build voice agents. In less than 10mins, you (or your coding agent) can get a voice agent built and deployed to the cloud for free.\n\nIncluded for free:\n\n* VOICE AI TOKENS: one-line swap between models from OpenAI, Google, xAI, and more * A PHONE NUMBER: get your agent to take phone calls in seconds * ONE-COMMAND DEPLOY: ship to LiveKit Cloud from the CLI\n\nLiveKit is the dev platform for real-time voice, video, and robotics, powering billions of minutes for companies like Spotify, Headspace, and SpaceXAI.\n\nTRY IT FOR FREE",
+          "url": "https://cloud.livekit.io/login?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-13_tldr_dev_primary_livekit&utm_content=header_give_agent_voice&utm_term=2026-10-13_tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "cloud.livekit.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a06",
+          "order": 1,
+          "title": "CAN WE MAKE REACT FASTER USING THE REACT COMPILER?",
+          "summary": "React Compiler uses cache slots and tracks values that change together to avoid unnecessary work. In a 2,000-row microbenchmark, inlining alone slowed rendering from 444 ms to 1,038 ms by removing per-row caches, while adding block DOM updates cut it to 164 ms. These prototypes illustrate optimization opportunities, with workload and memory tradeoffs still to evaluate.",
+          "url": "https://jimmyhmiller.com/what-does-the-react-compiler-even-do?utm_source=tldrdev",
+          "reading_time_minutes": 20,
+          "source_domain": "jimmyhmiller.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a07",
+          "order": 2,
+          "title": "HOW I FOUND A $90,000 REMOTE CODE EXECUTION VULNERABILITY IN GOOGLE",
+          "summary": "Google's DevSite stored an OAuth secret inside a readable Flask session cookie and reused it as the cookie's signing key, allowing forged sessions to reach unsafe pickle deserialization. Timing-based tests confirmed unauthenticated code execution across the shared platform, earning a $90,000 bounty. The fix separates signing keys from OAuth credentials and removes sensitive serialized objects from client-controlled sessions.",
+          "url": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "simonkoeck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a08",
+          "order": 3,
+          "title": "BUILDING SHARED WORKSPACES FOR PEOPLE AND AGENTS",
+          "summary": "Perplexity Projects uses a lightweight Git forge backed by S3 storage so people and agents can build on durable files from isolated, temporary sandboxes. Submissions must match the latest accepted commit, with stale writers replaying their changes rather than overwriting concurrent work. In production, fewer than 2% of submissions are rejected as stale, with median submit latency below 1.7 seconds.",
+          "url": "https://www.perplexity.ai/hub/blog/building-shared-workspaces-for-people-and-agents?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "perplexity.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a09",
+          "order": 1,
+          "title": "38 THINGS WE'VE LEARNED ABOUT BUILDING AI PRODUCTS",
+          "summary": "PostHog's lessons from ten AI products emphasize useful jobs, reliable execution, rich context, and interfaces that let agents do everything users can. Its MCP server has five times as many daily users as PostHog AI, while the install wizard compresses roughly two hours of setup into eight minutes. The advice favors shared infrastructure, observable tool calls, small targeted evals, and UI for reviewing and undoing agent actions.",
+          "url": "https://newsletter.posthog.com/p/38-things-weve-learned-about-building?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "newsletter.posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a10",
+          "order": 2,
+          "title": "HUMAN PR REVIEW IS NEXT",
+          "summary": "AI code review will increasingly replace reading every diff, shifting human work toward requirements, acceptance testing, and ownership of releases. Independent review models, predefined guardrails, and automated review-and-fix cycles form the proposed safety net. A trading-bot rounding bug illustrates the tradeoff: fast fixes do not erase losses or compensate for gaps in the specification.",
+          "url": "https://scienceisneato.substack.com/p/human-pr-review-is-next?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "scienceisneato.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a11",
+          "order": 3,
+          "title": "WHY WEBMCP MATTERS",
+          "summary": "WebMCP lets websites expose JavaScript tools to agents, reducing the slow, brittle interaction of navigating through screenshots and DOM inspection while keeping users in a shared browser session. Shopify's checkout experiment reported 2.7 times faster execution, 58% lower cost, and 60 successful attempts out of 60 compared with 56 for browser automation. Permissions, human approval signals, and testing against complete agent systems remain open challenges.",
+          "url": "https://blog.yoav.ws/posts/why_webmcp_matters/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.yoav.ws",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a12",
+          "order": 1,
+          "title": "TOMORROW: SEE WHAT HAPPENS WHEN SECURITY BECOMES PART OF THE AI SDLC",
+          "summary": "AI coding tools _haven't_ transformed software delivery... yet. Messy handoffs are largely to blame. In tomorrow's webcast [12] and the follow-up lab on Thursday, see how GitLab Duo Agent Platform triages security findings, filters out false positives, and proposes remediation merge requests, all with human approval built in. Save",
+          "url": "https://page.gitlab.com/webcasts-oct15-gitlab-duo-agent-platform-emea-amer.html?utm_medium=sponsorship&utm_source=tldr&utm_campaign=20261013_global_cmp_webcast_ai_en_",
+          "reading_time_minutes": null,
+          "source_domain": "page.gitlab.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a12-02",
+          "order": 2,
+          "title": "your seat →",
+          "summary": "",
+          "url": "https://page.gitlab.com/webcasts-oct15-gitlab-duo-agent-platform-emea-amer.html?utm_medium=sponsorship&utm_source=tldr&utm_campaign=20261013_global_cmp_webcast_ai_en_",
+          "reading_time_minutes": null,
+          "source_domain": "page.gitlab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a13",
+          "order": 3,
+          "title": "MUSE WONDER: A FRONTIER MODEL FOR PERSONAL & PROFESSIONAL AI AGENTS",
+          "summary": "Meta introduces Muse Wonder and Muse Wonder Full for coding and other long-running tasks, combining Active Memory for retrieving relevant context with Active Focus for sustained execution. Meta reports stronger performance on unfamiliar tasks from larger base models and plans a fuller safety report.",
+          "url": "https://research.meta.ai/blog/muse-wonder?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "research.meta.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a14",
+          "order": 4,
+          "title": "OPEN INTELLIGENT UI",
+          "summary": "Open Intelligent UI is an open-source chat interface built with CopilotKit and AG-UI that turns questions into explanations, comparisons, and interactive tools. Its agent chooses text, native components, or custom HTML, CSS, and JavaScript rendered in an isolated iframe, with Jev routing tables to A2UI and richer visuals to Open Generative UI.",
+          "url": "https://github.com/CopilotKit/OpenIntelligentUI?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a15",
+          "order": 1,
+          "title": "UNROLLED CODE",
+          "summary": "Explicit, repetitive Ruby code can make algorithms easy to inspect and resemble the optimized output of ERB and Papercraft template compilers. A proposed quote/unquote mechanism would let Ruby generate code by composing immutable syntax trees instead of concatenating source strings, with examples covering memoization, templates, and routing.",
+          "url": "https://noteflakes.com/articles/2026-10-07-unrolled-code?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "noteflakes.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a16",
+          "order": 2,
+          "title": "AI MODELS MAY BE CAPABLE OF SELF-REPLICATING WITHOUT ACCESS TO A DATACENTER",
+          "summary": "Anthropic demonstrates a 26B model running across 15 inexpensive Android TV boxes and a 9B model setting up inference on eight of nine tested hardware types. GLM-5.2 completed replication in a contained fleet with deliberately trivial access controls, making the result an upper bound on real-world success. Smaller models still struggle to chain the steps together, while projected replication on low-powered devices would take days.",
+          "url": "https://www.anthropic.com/research/self-replicating-ai?utm_source=tldrdev",
+          "reading_time_minutes": 26,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a17",
+          "order": 3,
+          "title": "HOW PRO-CHINA ARE CHINESE MODELS?",
+          "summary": "Vals AI tested politically sensitive questions across languages and contexts, finding that Chinese models sometimes criticize China's government while non-Chinese models sometimes echo official narratives. Responses generally leaned more pro-China in Simplified Chinese, while deployment prompts, response formats, and agent harnesses could substantially change the results.",
+          "url": "https://www.vals.ai/blogs/china-us-analysis?utm_source=tldrdev",
+          "reading_time_minutes": 17,
+          "source_domain": "vals.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-13:a18",
+          "order": 1,
+          "title": "META'S MUSE AGENT IS ALREADY ON YOUR SITE",
+          "summary": "Muse signs in and acts like a real user without identifying itself. Can you see it? Fingerprint labels it with _meta_muse_ in one API",
+          "url": "https://fingerprint.com/blog/how-to-detect-meta-muse-ai-agent/?utm_campaign=QuickLinks101326&utm_source=tldrdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a18-02",
+          "order": 2,
+          "title": "response. Learn how to detect it.",
+          "summary": "",
+          "url": "https://fingerprint.com/blog/how-to-detect-meta-muse-ai-agent/?utm_campaign=QuickLinks101326&utm_source=tldrdev&utm_medium=newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a19",
+          "order": 3,
+          "title": "THIS YEAR'S MODEL",
+          "summary": "Falling cost per task, increasingly capable open models, and on-device inference raise questions about frontier labs' pricing power and whether their infrastructure spending can support durable businesses.",
+          "url": "https://thewatershed.markpesce.com/this-years-model/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "thewatershed.markpesce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a20",
+          "order": 4,
+          "title": "HOW WE MADE REGISTRY METADATA 70% SMALLER",
+          "summary": "vlt reduces registry metadata by keeping install-time fields that npm's abbreviated format omits and removing signature, checksum, and attestation data while retaining tarball integrity checks.",
+          "url": "https://www.vlt.io/blog/registry-metadata-70-percent-smaller?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "vlt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a21",
+          "order": 5,
+          "title": "I BUILT A NEW FEATURE FOR MY BLOG USING MY VOICE",
+          "summary": "A Django newsletter archive took shape through a half-hour voice conversation with Codex while dinner cooked, followed by another half-hour of typed review and refinements before deployment.",
+          "url": "https://simonw.substack.com/p/i-built-a-new-feature-for-my-blog?utm_source=tldrdev",
+          "reading_time_minutes": 27,
+          "source_domain": "simonw.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-13:a22",
+          "order": 6,
+          "title": "THE NEXT STEPS ON THE WEB AND WEBMCP",
+          "summary": "The browser already supplies much of an agent platform's identity, isolation, and user control, while WebMCP needs clearer agent permissions, operations that survive navigation, human handoffs, and coordination among assistants.",
+          "url": "https://nekuda.substack.com/p/the-next-steps-on-the-web-and-webmcp?utm_source=tldrdev%5B23%5D%5B24",
+          "reading_time_minutes": 11,
+          "source_domain": "nekuda.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
