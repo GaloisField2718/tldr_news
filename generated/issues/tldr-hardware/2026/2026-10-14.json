@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-hardware:2026-10-14",
+  "sector": "TLDR Hardware",
+  "sector_slug": "tldr-hardware",
+  "date": "2026-10-14",
+  "source_path": "TLDR Hardware/article_14-10-2026.md",
+  "source_content_hash": "sha256:54cd2cbd304a6201b66cbb07a728ba94a5456dd008828babfd2052ac8163fca7",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR HARDWARE 2026-10-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-10-14:a04",
+          "order": 1,
+          "title": "MICROSOFT TAKES MAIA TO MULTI-GIGAWATT SCALE, MAKING IT THE DEFAULT INFERENCE CHIP FOR ITS OWN PRODUCTS",
+          "summary": "Starting in 2027, Microsoft will deploy Maia at multi-gigawatt scale and make it the main inference system for its products. The next-generation Maia 300 uses compute chiplets on TSMC's N2P process and targets long-context, multi-step agent workloads. Digitimes reports that the supply chain is already preparing for a surge in server builds in 2027.",
+          "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments?utm_source=tldrhardware",
+          "reading_time_minutes": 4,
+          "source_domain": "blogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a05",
+          "order": 2,
+          "title": "INTRODUCING AMD HELION, AGENTIC AI COMPUTE AT RACK SCALE",
+          "summary": "AMD's Helion agentic AI rack is designed for flexible AI infrastructure that caters to hyperscale deployments and enterprise needs. It supports a range of configurations, including CPU-only and GPU-integrated systems, aligning with diverse AI workloads. Helion, part of an upcoming open blueprint by AMD for OCP, is set for release in November.",
+          "url": "https://newsroom.amd.com/news/open-rack-blueprint-scale-agentic-ai/?utm_source=tldrhardware",
+          "reading_time_minutes": 10,
+          "source_domain": "newsroom.amd.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a06",
+          "order": 3,
+          "title": "PHYSICAL INTELLIGENCE OPENS A BETA API TO FINE-TUNE AND HOST Π ROBOT MODELS",
+          "summary": "Physical Intelligence opened a beta API for its π robotics foundation models: upload demonstrations, fine-tune on Pi-managed compute, and run the result on your own robot through a hosted inference gateway. Early partners spanned hardware from Actor's autonomous wheel loader, running a commercial deployment with no operator onboard, to Almond's dual-arm Axol, which learned to deburr its own spacers in four days. Since most ran cloud-hosted inference, network connectivity was a pain point for some.",
+          "url": "https://www.pi.website/blog/api-beta?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "pi.website",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a07",
+          "order": 4,
+          "title": "BUILDING A GPU COMPILER FROM SCRATCH, FROM PYTORCH TO CUDA",
+          "summary": "This deep dive uses the Emmy compiler framework to follow PyTorch operations down to CUDA one lowering stage at a time: Tensor IR, Loop IR, Tile IR, Kernel IR, and finally emitted code. It uses RMSNorm and matrix multiplication as worked examples. It also covers operator fusion, schedule selection, and online attention rewrites, so readers can see what Triton-style stacks do under the hood.",
+          "url": "https://kernelspace.substack.com/p/building-a-gpu-compiler-from-scratch?utm_source=tldrhardware",
+          "reading_time_minutes": 10,
+          "source_domain": "kernelspace.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a08",
+          "order": 5,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach hardware engineers and makers where they actually pay attention. Learn more about sponsorship opportunities [8].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrhardware&utm_medium=newsletter&utm_campaign=secondary10142026&sp=8S3ZG6mTTxivw917WJuZlcQW",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a09",
+          "order": 6,
+          "title": "APPLE'S MINIONS POOLS IDLE MACS INTO A VIRTUAL GPU CLOUD",
+          "summary": "Apple Silicon Macs have powerful GPUs that sit mostly idle in normal use. Minions combines them across machines into a virtual GPU cloud for large ML inference jobs, with fault tolerance and flexible task scheduling. The pitch is that teams can use hardware they already own instead of waiting for expensive, centralized GPU capacity.",
+          "url": "https://arxiv.org/abs/2610.12970?utm_source=tldrhardware",
+          "reading_time_minutes": 10,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a10",
+          "order": 7,
+          "title": "ANTHROPIC RUNS A 26B MODEL ACROSS 15 $55 TV BOXES TO TEST IOT SELF-REPLICATION",
+          "summary": "Anthropic's Frontier Red Team ran Gemma4-26B-A4B across 15 off-brand Android TV boxes with 4GB of RAM each, using pipeline parallelism at 0.39 tokens per second, to test whether small models could replicate across cheap IoT hardware. A 9B model got inference running on 8 of 9 hardware types tested, and a Kimwolf-sized botnet would total only about 40 H100s of compute. By their trend line, small models reach the needed capability in simplified tests by year-end.",
+          "url": "https://www.anthropic.com/research/self-replicating-ai?utm_source=tldrhardware",
+          "reading_time_minutes": 5,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-10-14:a11",
+          "order": 1,
+          "title": "APPLE HOME COLLECTION BRINGS LG AND SCHNEIDER CAMERAS, A LOCK, AND THERMOSTATS TO APPLE HOME",
+          "summary": "Apple's Home Collection, built with LG and Schneider Electric, covers cameras, thermostats, sensors, a doorbell, and a deadbolt. LG's lock uses Ultra Wideband to unlock as you approach and works locally over Matter and Aliro, while its indoor cam physically tilts away when someone's home. Every device supports Thread, and cameras keep recording to built-in storage if Wi-Fi drops. Prices run $199.95 to $399.95, with availability starting in December.",
+          "url": "https://www.apple.com/newsroom/2026/10/introducing-apple-home-collection-a-new-lineup-of-smart-home-accessories/?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a12",
+          "order": 2,
+          "title": "WHAT A 1GW AI DATA CENTER COSTS: ABOUT $30B, AND $17B OF IT IS CHIPS",
+          "summary": "An Abilene-scale build requires roughly $17B for chips and servers, $3B for power, and only $2.4B for construction. Transformers, generators, and cooling equipment face long lead times and rising prices.",
+          "url": "https://links.tldrnewsletter.com/Up4TJ6",
+          "reading_time_minutes": 10,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-hardware:2026-10-14:a13",
+          "order": 1,
+          "title": "WALMART'S WAREHOUSE ROBOTS ARE RUNNING INTO TROUBLE",
+          "summary": "Walmart has spent a decade trying to automate about 200 US warehouses.",
+          "url": "https://links.tldrnewsletter.com/fkYYCl",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a14",
+          "order": 2,
+          "title": "SK HYNIX'S H-TPU SPREADS SSD CONTROLLER WORK ACROSS MORE THAN 100 TINY IN-HOUSE CORES",
+          "summary": "Each core runs a 4-stage pipeline and replaces work done by general-purpose CPUs.",
+          "url": "https://www.thelec.net/news/articleView.html?idxno=14536&utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "thelec.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a15",
+          "order": 3,
+          "title": "PEBBLE ROUND 2 STARTS SHIPPING",
+          "summary": "The $199 watch has a color e-paper display, runs open-source PebbleOS, and lasts about 8 days per charge.",
+          "url": "https://linuxiac.com/pebble-round-2-open-source-smartwatch-finally-starts-shipping?utm_source=tldrhardware",
+          "reading_time_minutes": 2,
+          "source_domain": "linuxiac.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a16",
+          "order": 4,
+          "title": "INTEL NAMES CRESCENT ISLAND THE GPU D-SERIES, WITH 1.3 PFLOPS OF FP8 AND UP TO 480GB OF LPDDR5X",
+          "summary": "Crescent Island, Intel's data center inference GPU, will be sold as the GPU D-Series.",
+          "url": "https://www.servethehome.com/intels-crescent-island-ai-server-gpu-gets-a-name-and-specs-meet-the-intel-gpu-d-series?utm_source=tldrhardware",
+          "reading_time_minutes": 3,
+          "source_domain": "servethehome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-hardware:2026-10-14:a17",
+          "order": 5,
+          "title": "HOW META BUILDS AI NETWORKS: ICEPACK, TAHAN AND OPEN-SOURCE METAROCE",
+          "summary": "At OCP, Meta showed IcePack, a 102.4T liquid-cooled network rack, along with its IceCube switch platform.",
+          "url": "https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks?utm_source=tldrhardware",
+          "reading_time_minutes": 7,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

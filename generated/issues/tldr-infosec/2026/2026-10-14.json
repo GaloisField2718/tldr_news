@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-14",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-14",
+  "source_path": "TLDR InfoSec/article_14-10-2026.md",
+  "source_content_hash": "sha256:b2edf2d9af4b8a203f7f59b4a27d021459549151ec7f549dce0630bb7ca66c19",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-14",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a04",
+          "order": 1,
+          "title": "CONTAIN AI AGENTS WITH INTENT-BASED ACCESS CONTROLS",
+          "summary": "AI agents need real access to do useful work. But when they inherit human credentials or standing privileges, even one routine task can create outsized risk. Our guide offers a solution.\n\nIn SECURING THE AGENTIC ENTERPRISE [5], you'll learn:\n\n* How to identify risks of inherited credentials, standing access, and unpredictable agent behavior * How intent-based, just-in-time, and just-enough access can limit an  agent's blast radius * How 1Password Privileged Access extends access governance to AI agents and other non-human identities",
+          "url": "https://1password.com/resources/securing-the-agentic-enterprise?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_unifiedaccess_bl_securing-the-agentic-enterprise_sa&utm_content=newsletter_infosec_101426_header_contain_ai_agents&utm_term=2026-10-14_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a06",
+          "order": 2,
+          "title": "READ MORE",
+          "summary": "",
+          "url": "https://1password.com/resources/securing-the-agentic-enterprise?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_unifiedaccess_bl_securing-the-agentic-enterprise_sa&utm_content=newsletter_infosec_101426_cta_read&utm_term=2026-10-14_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a07",
+          "order": 1,
+          "title": "GITLAB PATCHES CVSS 10.0 FLAW THAT COULD LET UNAUTHENTICATED USERS RUN SERVER CODE",
+          "summary": "GitLab fixed CVE-2026-97229, a CVSS 10.0 integer overflow vulnerability in regex validation for CI/CD configurations. In certain conditions, an unauthenticated user could execute arbitrary code on a GitLab server. The fixes are included in CE/EE versions 19.2.8, 19.3.5, and 19.4.2. The release also addresses high-severity XSS, authorization, and response-cache poisoning vulnerabilities.",
+          "url": "https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a08",
+          "order": 2,
+          "title": "OWNER OF FASHION BRANDS HOBBS AND WHISTLES JOINS AUTUMN PWNED COLLECTION",
+          "summary": "TFG London, owner of Hobbs, Phase Eight, and Whistles, detected a cyberattack on October 11. Several IT systems remain offline, website functions are limited, and orders placed on or after Sunday may be delayed. TFG has not found evidence that payment data was exposed. It is still checking whether customer data was compromised. Attack method, ransomware involvement, and restoration timing remain undisclosed.",
+          "url": "https://www.theregister.com/cyber-crime/2026/10/13/owner-of-fashion-brands-hobbs-and-whistles-joins-autumn-pwned-collection/5302752?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a09",
+          "order": 3,
+          "title": "GHOSTSCRIPT FLAW LETS HACKERS HIJACK SERVERS VIA PDF UPLOADS",
+          "summary": "Wordfence discovered a new vulnerability in the Ghostscript interpreter and rendering engine which could allow attackers to achieve remote code execution (RCE) using specially crafted PDFs. For WordPress sites to be vulnerable, an attacker must be able to upload PDFs which are then processed by a vulnerable version of Ghostscript to generate a preview or thumbnail. Other applications that use Ghostscript to generate previews or thumbnails from PDFs may also be vulnerable.",
+          "url": "https://links.tldrnewsletter.com/QwoarX",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a10",
+          "order": 1,
+          "title": "PLAYING IT SFAPE: CODE EXECUTION IN ISOLATED USER MODE",
+          "summary": "Doyensec found a chain in Windows' SFAPE VBS enclave, used by Defender's Enhanced Phishing Protection and loaded by LSASS. A repeated call to Initialize wrote a fixed 32-bit value without validating the destination. The researchers corrupted the enclave-range check, then used a ClipboardInput race to gain a controlled memset, which led to VTL1 read and write primitives, replacement of the valid-target table, and arbitrary calls to existing VTL1 code through NtContinue. Microsoft fixed CVE-2026-83498 in September's Patch Tuesday and blocked older SFAPE images through the VBS Code Integrity policy.",
+          "url": "https://blog.doyensec.com/2026/10/13/Sfape.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "blog.doyensec.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a11",
+          "order": 2,
+          "title": "BEYOND VALID CREDENTIALS: HOW EXPOSED AWS KEYS ARE TESTED FOR BEDROCK ACCESS",
+          "summary": "When attackers obtain AWS credentials, they frequently test them for access to other services of interest like SES, SNS, and Bedrock. Datadog examined three credential harvesting platforms and found that they utilize the ListFoundationModels, InvokeModel, and Converse API to determine access. It also found a script that checked for promotional credits available in the account.",
+          "url": "https://securitylabs.datadoghq.com/articles/beyond-valid-credentials-how-exposed-aws-keys-are-tested-for-amazon-bedrock-access/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a12",
+          "order": 3,
+          "title": "TWO ARRESTED AS DOJ TAKES DOWN LAPTOP FARMS RESPONSIBLE FOR $3 MILLION IN NORTH KOREAN REVENUE",
+          "summary": "The DOJ raided more than 40 Texas residences in late September and seized 187 laptops used by North Korean IT workers, while two US facilitators were arrested for helping funnel over $3 million from about 70 companies. A new FBI advisory said the scheme has adapted, with operatives subcontracting jobs to freelancers in South Asia and West Africa and recruiting financially stressed Americans, including active-duty military, to host laptops or sit interviews. Exposed workers have threatened violence or data leaks to extract payment, and some are now chasing identities that qualify for security-cleared roles.",
+          "url": "https://therecord.media/north-korea-laptop-farms-worker-scams-doj-raids-texas?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a13",
+          "order": 1,
+          "title": "MODERNIZE APPLICATION AND API SECURITY",
+          "summary": "Watch this on-demand webinar from AWS and SANS Institute to explore how APIs, cloud-native development, and agentic AI reshape security risks. Learn strategies to evolve threat models, strengthen governance, and adapt controls. Watch now and explore AWS Partner",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a13-02",
+          "order": 2,
+          "title": "solutions in AWS Marketplace.",
+          "summary": "",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a14",
+          "order": 3,
+          "title": "LASTWALL (PRODUCT LAUNCH)",
+          "summary": "Lastwall provides identity security for defense and government organizations. Its IDCommand Suite combines zero-trust architecture, PKI, passwordless authentication, and risk scoring from 200 contextual signals. Quantum Shield secures data in transit with NIST-approved post-quantum cryptography.",
+          "url": "https://www.lastwall.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "lastwall.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a15",
+          "order": 4,
+          "title": "SECURITY-SUITE",
+          "summary": "A comprehensive open-source security tools suite for OSINT reconnaissance, web security testing, API security assessment, and compliance checking with AI-powered analysis.",
+          "url": "https://github.com/TheSecuredAnalyst/security-suite?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a16",
+          "order": 5,
+          "title": "CODEGRAPH",
+          "summary": "CodeGraph is a tool to build pre-indexed code knowledge graphs which can be fed to AI agents to speed up code exploration.",
+          "url": "https://github.com/colbymchenry/codegraph?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a17",
+          "order": 1,
+          "title": "AI REGULATION MUST MIMIC INDUSTRIAL REVOLUTION LAWS",
+          "summary": "The UK's AI minister, Kanishka Narayan, is drafting plans for compulsory safety reporting and monitoring for frontier AI, and a potential requirement that labs grant pre-release access to models for review. Narayan compared this to the Industrial Revolution and said frontier labs shouldn't release tools they can't guarantee are safe. Narayan also confirmed that he reached an agreement with Anthropic to provide the AISI preview access to Mythos again.",
+          "url": "https://www.ft.com/content/ba28b7cd-293e-4eee-a073-ad81aaefced3?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "ft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a18",
+          "order": 2,
+          "title": "ANTHROPIC WARNS SELF-REPLICATING AI COULD SPREAD TO YOUR SMART DEVICES",
+          "summary": "Anthropic warns that small AI models could soon self-replicate across consumer IoT devices, creating distributed botnets capable of running AI workloads. Anthropic distributed Gemma4-26B-A4B onto 15 off-brand Android TV boxes but could not demonstrate self-replication. On the hardware in question, inference would be a slow process, so defenders may be able to respond in time to stop any abuse.",
+          "url": "https://links.tldrnewsletter.com/36rDN6",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a19",
+          "order": 3,
+          "title": "TREZOR WALLETS ALSO COMPROMISED WITH IMPLANTS",
+          "summary": "Hardware hacker Joe Grand found implants in a Trezor One and a Trezor Model T bought from unauthorized sellers, contradicting Trezor's public claim that none of its devices had been compromised, despite Grand reporting the findings in August. The attackers replaced each device's microcontroller with malicious firmware derived from open source that displayed one of a dozen pre-generated seed phrases while passing integrity checks against a copy of the legitimate firmware stored on an external microSD card. Unlike the Ledger implants, which exfiltrated real seeds over a cellular link, these relied on predictable seeds, and Trezor's move to cut authorized resellers suggested the company feared a similar shift into trusted supply channels.",
+          "url": "https://www.zetter-zeroday.com/trezor-wallets-also-compromised-with-implants/?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "zetter-zeroday.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-14:a20",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach security engineers and CISOs where they actually pay attention. Learn more about sponsorship opportunities [20].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=quicklinks10142026&sp=XBvsQ0k2WGouCBdcL8h4pZ7e",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a21",
+          "order": 2,
+          "title": "REFRIGERATION CONTROLLER HACK SPOILS FOOD ACROSS EUROPEAN SUPERMARKETS",
+          "summary": "Hackers remotely altered Danfoss refrigeration controllers at hundreds of European supermarkets, forcing freezers into defrost for up to six hours.",
+          "url": "https://links.tldrnewsletter.com/viMmV4",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a22",
+          "order": 3,
+          "title": "FBI ARRESTS OPENAI EMPLOYEE FOR ALLEGEDLY PLANTING RECORDING DEVICE IN COMPANY OFFICES",
+          "summary": "An OpenAI engineer was arrested for allegedly hiding a toilet-paper-wrapped audio recorder in an executive conference room TV's USB port, after a complaint showed he had queried a productivity tool for leadership meeting locations and a chatbot account tied to his spouse had asked how to build and obfuscate the device.",
+          "url": "https://www.cbsnews.com/news/openai-employee-arrest-recording-device/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cbsnews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-14:a23",
+          "order": 4,
+          "title": "RACKET INFRASTRUCTURE COMPROMISE",
+          "summary": "A crypto miner on a compromised Northwestern University build server exposed Racket's Apple and Windows signing keys, prompting the project to rotate both, have GlobalSign revoke the Windows certificate, and urge macOS users on versions 8.12 through 9.3 to reinstall before Apple revokes its certificate at semester's end.",
+          "url": "https://blog.racket-lang.org/2026/10/infrastructure-compromise.html?utm_source=tldrinfosec%5B24%5D%5B25",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.racket-lang.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
