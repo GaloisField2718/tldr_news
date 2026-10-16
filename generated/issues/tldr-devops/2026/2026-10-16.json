@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-16",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-16",
+  "source_path": "TLDR DevOps/article_16-10-2026.md",
+  "source_content_hash": "sha256:3216e157537145e740c12c43e110ede22104f70930f9d1f67a09b35c5cccbf0f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a04",
+          "order": 1,
+          "title": "1PASSWORD SURVEY: 71% OF DEVELOPERS USE UNSECURE METHODS TO HANDLE SECRETS AND NHIS",
+          "summary": "As developer workflows increasingly incorporate AI agents, these unsecure practices are compounding risk. 1Password's research found that 86% of respondents report credential-related issues with NHIs.\n\nThis on-demand webinar [5] shows how 1Password helps govern credentials with a four-part framework:\n\n* DISCOVER: Find developer secrets stored in plaintext on employee devices. * SECURE: Move exposed secrets into 1Password Environments. * GOVERN: Give developers, CI/CD pipelines, and AI agents only the credentials they need, with scoped access. * AUDIT: Use Developer Risk Reporting to understand exposure, what changed, what needs attention, and how credential risk is changing.",
+          "url": "https://1password.com/webinars/developer-secrets-at-scale?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_epm_wb_developer-secrets-at-scale_sa&utm_content=newsletter_devops_101626_header_1password_survey_71_pct&utm_term=2026-10-16_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a06",
+          "order": 2,
+          "title": "WATCH THE WEBINAR",
+          "summary": "",
+          "url": "https://1password.com/webinars/developer-secrets-at-scale?utm_source=tldr&utm_medium=paid_newsletter&utm_campaign=2026q3_epm_wb_developer-secrets-at-scale_sa&utm_content=newsletter_devops_101626_cta_watch_webinar&utm_term=2026-10-16_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a07",
+          "order": 1,
+          "title": "SPACELIFT INTEGRATES WITH CURSOR ORIGIN",
+          "summary": "Agent-driven infrastructure changes now flow through Spacelift using a registered Origin app with a signing key, so the same OPA policies and approvals apply. A cited report says 76% would apply AI-generated Terraform with little review.",
+          "url": "https://spacelift.io/blog/spacelift-cursor-origin-integration?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "spacelift.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a08",
+          "order": 2,
+          "title": "CLOUDFLARE LOGPUSH TRANSFORMERS",
+          "summary": "Cloudflare Transformers use SQL to filter, redact, and reshape logs before export. The feature is now generally available on all plans.",
+          "url": "https://blog.cloudflare.com/transformers-on-logpush/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a09",
+          "order": 3,
+          "title": "AMAZON S3 IS NOW AVAILABLE ON THE VERCEL MARKETPLACE AND V0 BY VERCEL",
+          "summary": "Developers on Vercel can now provision Amazon S3 storage, including S3 Tables and S3 Vectors, directly from the Vercel Marketplace and v0. The integration handles connection configuration automatically and supports three workloads: everyday storage, analytics, and AI. Users pay standard Amazon S3 pricing for the resources they use, and new AWS accounts created through Vercel receive $100 in credits valid for six months.",
+          "url": "https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a10",
+          "order": 1,
+          "title": "SEQUENCES AND OTHER VOLATILES IN NEKI",
+          "summary": "Distributing PostgreSQL queries across shards gets complicated when functions depend on time or generate sequence values. Neki coordinates sequence allocation through its router and preserves how often expressions execute, preventing query optimizations from producing duplicate IDs or changing SQL behavior.",
+          "url": "https://planetscale.com/blog/neki-volatile-expressions?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a11",
+          "order": 2,
+          "title": "INSIDE HYPERDRIVE: HOW WE SOLVED A RARE MYSQL CACHING BUG",
+          "summary": "A rare Hyperdrive bug returned empty MySQL results when two components shared a cache but encoded responses using different protocol capabilities. Cloudflare traced the failures to an assumption inherited from its Postgres implementation and fixed them by storing responses in a canonical format before translating them for each client.",
+          "url": "https://blog.cloudflare.com/hyperdrive-mysql/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a12",
+          "order": 1,
+          "title": "WHAT HAPPENS WHEN YOU REBUILD REDIS FOR MULTI-CORE HARDWARE?",
+          "summary": "",
+          "url": "https://www.dragonflydb.io/?utm_source=tldr&utm_medium=newsletter&utm_campaign=TLDRDevOpsSecondary10162026&sp=8CS3_29His6P1vbVCjJrF78K",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a12-02",
+          "order": 2,
+          "title": "Redis runs one core per process. Your server has 64. Dragonfly",
+          "summary": "is a multi-threaded, Redis/Valkey-compatible data store built by an ex-AWS ElastiCache engineer. It hits 6M ops/sec on a single node, no cluster needed. Instacart used it to cut latency in half on 70% fewer",
+          "url": "https://www.dragonflydb.io/?utm_source=tldr&utm_medium=newsletter&utm_campaign=TLDRDevOpsSecondary10162026&sp=8CS3_29His6P1vbVCjJrF78K",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a13",
+          "order": 3,
+          "title": "nodes. Learn more",
+          "summary": "",
+          "url": "https://www.dragonflydb.io/blog/how-instacart-achieved-50-better-performance-with-70-fewer-nodes?utm_source=tldr&utm_medium=newsletter&utm_campaign=TLDRDevOpsSecondary10162026&sp=8CS3_29His6P1vbVCjJrF78K",
+          "reading_time_minutes": null,
+          "source_domain": "dragonflydb.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a14",
+          "order": 4,
+          "title": "TOKENSPEED",
+          "summary": "TokenSpeed is an open-source LLM inference engine designed for agentic workloads, offering TensorRT-LLM-level performance and vLLM-level usability. It is the first inference engine to separate the control plane, implemented in C++, from the execution plane, implemented in Python. The project is backed by the non-profit LightSeek Foundation with support from vendors including NVIDIA and AMD.",
+          "url": "https://github.com/lightseekorg/tokenspeed?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a15",
+          "order": 5,
+          "title": "XERJ",
+          "summary": "XERJ is a local AI search tool that indexes code, docs, logs, and PDFs for search and RAG. It uses 40x fewer tokens than grep and reduces a coding agent's output tokens by 2.7x in controlled studies. The tool is compatible with the Elasticsearch API and runs on Linux, macOS, and Windows.",
+          "url": "https://github.com/xerj-org/xerj?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a16",
+          "order": 1,
+          "title": "PULUMI ESC NOW ISSUES OIDC TOKENS FOR ANY SERVICE",
+          "summary": "Pulumi ESC environments can now mint short-lived OpenID Connect (OIDC) tokens for any service that accepts one. The new fn::open::oidc provider generates tokens that expire within one hour, eliminating the security risks associated with storing long-lived API keys. Developers can use these tokens to authenticate with services like Anthropic, Cloudsmith, JFrog Artifactory, and Aembit without storing static credentials. The feature is available now in every Pulumi Cloud organization.",
+          "url": "https://www.pulumi.com/blog/esc-oidc-tokens-for-any-service/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "pulumi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a17",
+          "order": 2,
+          "title": "IMPROVING DEVELOPER PRODUCTIVITY WITH NEW RELIC AI",
+          "summary": "Shows production telemetry reaching AI coding agents over MCP. Examples cover Claude Code deployment health reports, Kiro right-sizing, a Copilot action that finds observability gaps, and an incident response agent. The MCP server lists 3 skills and 42 tools.",
+          "url": "https://newrelic.com/blog/news/improving-developer-productivity-with-new-relic-ai?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "newrelic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-16:a18",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach DevOps and platform engineers where they actually pay attention. Learn more about sponsorship opportunities [18].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrdevops&utm_medium=newsletter&utm_campaign=quicklinks10162026&sp=nfY6R_jvXMASdIzOlRQ-4Y0T",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a19",
+          "order": 2,
+          "title": "A CONTAINER IMAGE CAN BE VULNERABILITY-FREE AND STILL NOT TRUSTWORTHY",
+          "summary": "A clean scan only covers known CVEs, while malicious code like the Nx Console compromise needs none.",
+          "url": "https://cloudnativenow.com/contributed-content/a-container-image-can-be-vulnerability-free-and-still-not-be-trustworthy/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-16:a20",
+          "order": 3,
+          "title": "ONE AGENT DEVELOPMENT KIT, FIVE LANGUAGES",
+          "summary": "ADK now covers Python, Go, TypeScript, Java, and Kotlin, all with MCP and A2A support.",
+          "url": "https://cloud.google.com/blog/topics/developers-practitioners/one-agent-development-kit-five-languages/?utm_source=tldrdevops%5B21%5D%5B22",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
