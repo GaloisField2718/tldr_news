@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-10-19",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-10-19",
+  "source_path": "TLDR Data/article_19-10-2026.md",
+  "source_content_hash": "sha256:906a66a30c772c39533b3965501b250b270f2f9090dbd170ec76ec57882b0728",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-10-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a04",
+          "order": 1,
+          "title": "RUN PYTHON, RUST, GO, OR C++ DIRECTLY ON YOUR CLICKHOUSE DATA",
+          "summary": "",
+          "url": "https://clickhouse.com/blog/executable-udfs-generally-available-on-clickhouse-cloud?utm_source=tldr&utm_medium=paid-newsletter&utm_id=tldr7&utm_campaign=2026-10-19_Primary_Clickhouse&utm_content=header_executable_udfs",
+          "reading_time_minutes": null,
+          "source_domain": "clickhouse.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-19:a06",
+          "order": 2,
+          "title": "Try it with $300 in free ClickHouse Cloud credits.",
+          "summary": "",
+          "url": "https://clickhouse.com/campaigns/clickhouse-cloud?utm_source=tldr&utm_medium=paid-newsletter&utm_id=tldr7&utm_campaign=2026-10-19_Primary_Clickhouse&utm_content=cta_sign_up",
+          "reading_time_minutes": null,
+          "source_domain": "clickhouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a07",
+          "order": 1,
+          "title": "UNDER THE HOOD, OFF THE HOT PATH: HOW D1 SCALES TO MILLIONS OF DATABASES",
+          "summary": "Cloudflare's D1 serverless SQLite platform keeps query traffic at the edge while its control plane manages millions of tenant databases. Lifecycle operations use idempotent, recoverable flows, with Postgres for transactional metadata, edge KV for routing, and queues for eventually consistent work. The transferable design is to isolate central coordination from the data path so provisioning failures can be repaired without slowing queries.",
+          "url": "https://blog.cloudflare.com/d1-control-plane/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a08",
+          "order": 2,
+          "title": "A GRAPH HAS NO CENTRE",
+          "summary": "Graph tools for MCP should return focused, bounded views instead of dumping broad subgraphs and hoping prompts impose structure later. The key design move is to make scope explicit in the server through named views, validation rules, and controlled navigation points. For changing entities like avatars, modeling location over time preserves auditability and keeps behavior consistent across clients.",
+          "url": "https://inferenceengineer.substack.com/p/on-holons-and-focus?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "inferenceengineer.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a09",
+          "order": 1,
+          "title": "WHICH LLM SHOULD RUN YOUR AGENTIC ANALYTICS? ACCURACY VS. COST OF CLAUDE, GEMINI AND GPT",
+          "summary": "Opus delivered the best analytics reports but cost more. Routing by task balances quality and cost: Sonnet for metrics and trends, Gemini Flash for guided analysis with human review, and Opus for root cause investigations.",
+          "url": "https://trangntr.substack.com/p/which-llm-should-run-your-agentic?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "trangntr.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a10",
+          "order": 2,
+          "title": "DATA ENGINEERING IS THE CACHE INVALIDATION PROBLEM FT. JOSH WILLS",
+          "summary": "Large Spark and Ray jobs offer the wrong feedback loop for autonomous coding: errors and cost often appear only after hours of distributed execution. Data engineers remain responsible for the materialization choices and failure cases agents cannot evaluate cheaply. The practical response is not blind generation, but representative tests, cost-aware guardrails, and human review where pipelines lack fast feedback.",
+          "url": "https://www.ssp.sh/blog/cache-invalidation-problem-data-engineering/?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "ssp.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a11",
+          "order": 3,
+          "title": "THE SELF-ORGANIZING DATA STACK",
+          "summary": "Autonomous data platforms need stable logical assets, not fragile table-and-DAG definitions. This proposed architecture keeps consumer contracts and semantic definitions persistent while a runtime synthesizes, consolidates, verifies, and atomically rewires physical pipelines as needs change. Its strongest safeguard is independent verification against business invariants, plus escalation whenever meaning is ambiguous. Language models may draft changes, but cannot authorize them.",
+          "url": "https://www.dataengineeringweekly.com/p/the-self-organizing-data-stack?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "dataengineeringweekly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a12",
+          "order": 1,
+          "title": "APPLE, AWS, COINBASE AND INTUIT ENGINEERS ON WHAT ACTUALLY WORKED IN PRODUCTION",
+          "summary": "One free virtual day, Nov 4, to skip months of trial and error. NEXT QUERY 2026: 20+ sessions on the analytics systems behind people, apps and agents, where teams running them share architecture decisions, tradeoffs and fixes, with live Q&A. By PhoenixAI (the original creator",
+          "url": "https://nextquery.phoenixdata.ai/?utm_source=partner_email&utm_medium=email&utm_campaign=FY26_PHX_OEV_NEXT_QUERY_2026&utm_content=newsletter-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "nextquery.phoenixdata.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-19:a13",
+          "order": 2,
+          "title": "of StarRocks). Register free [12] · Agenda",
+          "summary": "",
+          "url": "https://nextquery.phoenixdata.ai/?utm_source=partner_email&utm_medium=email&utm_campaign=FY26_PHX_OEV_NEXT_QUERY_2026&utm_content=newsletter-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "nextquery.phoenixdata.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a14",
+          "order": 3,
+          "title": "INTRODUCING TIMESTRAL",
+          "summary": "Mistral's Timestral models forecast multiple related time series, estimate uncertainty, and incorporate known future inputs such as production schedules. They run on CPUs without task-specific training, and Mistral reports that its largest model, with 209 million parameters, outperforms larger rivals across three public forecasting benchmarks.",
+          "url": "https://mistral.ai/news/timestral/?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "mistral.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a15",
+          "order": 4,
+          "title": "PROMPT_JEV() NOW WORKS ON IMAGES",
+          "summary": "MotherDuck's prompt_jev() now analyses images directly in SQL, returning structured answers and confidence scores that can be queried alongside other data. In MotherDuck's food-image benchmark, it processed 1,010 photos for about $0.06 at 90.2% accuracy, rising to 97.7% when keeping only the 81% of results with high confidence.",
+          "url": "https://motherduck.com/blog/motherduck-announce-jev-image/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "motherduck.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a16",
+          "order": 5,
+          "title": "TEMPO 3.1 RELEASE: KAFKA, TRACE REDACTION, AND TRACEQL METRICS",
+          "summary": "Grafana Tempo 3.1 makes Kafka-backed tracing easier to run with TLS, additional authentication methods, rack-aware reads, and configurable producer compression. Query-based redaction can permanently remove sensitive trace data without enumerating trace IDs, while sampling-aware TraceQL metrics improve analysis of incomplete telemetry. Operators should use redaction dry-runs and complete the upgrade before applying time-bounded deletions.",
+          "url": "https://grafana.com/blog/tempo-3-1-release-all-the-latest-features/?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "grafana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a17",
+          "order": 6,
+          "title": "DIFFERENTIAL STORAGE FOR DUCKDB",
+          "summary": "duckdb-differential brings version-control-style workflows to DuckDB, adding snapshots, time travel, branches, clones, and restore through SQL. The core idea is to preserve known-good database states so teams can test imports, run experiments, and reproduce reports without copying entire databases. Shared immutable chunks keep versions efficient, while optional S3 publishing extends those states for remote access and recovery.",
+          "url": "https://tobilg.com/posts/differential-storage-for-duckdb?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "tobilg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a18",
+          "order": 1,
+          "title": "RELIABLE GPU COMPUTE FOR LARGE TRAINING & INFERENCE JOBS",
+          "summary": "Large GPU jobs fail for many small infrastructure reasons, so reliability has to be continuous rather than reactive. Netflix built a layered system that validates nodes before jobs start, monitors hardware during runs, and automatically drains, reboots, resets, or replaces bad machines. The result is more usable GPU capacity and fewer long training or inference runs lost to platform faults.",
+          "url": "https://netflixtechblog.com/reliable-gpu-compute-for-large-training-inference-jobs-d62b03a96d7a?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a19",
+          "order": 2,
+          "title": "AI IN PRODUCTION: PANELLISTS HIGHLIGHT SILENT FAILURES, HARNESS ENGINEERING, AND AGENT GOVERNANCE",
+          "summary": "Agentic systems can fail while conventional telemetry stays green: semantic drift can corrupt business meaning, and an embedding-model update can abruptly change policy decisions. Production controls therefore need continuous evals fed by live edge cases, separate agent identities with tiered permissions, and human approval of business risk. Treating agents as ordinary application code or relying on prompts for security leaves blind spots.",
+          "url": "https://www.infoq.com/news/2026/10/ai-systems-production/?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-19:a20",
+          "order": 1,
+          "title": "TABPFN",
+          "summary": "TabPFN is a foundation model trained on synthetic datasets that performs classification and regression on new tabular data without training a separate model for each dataset.",
+          "url": "https://github.com/PriorLabs/tabpfn?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-19:a21",
+          "order": 2,
+          "title": "NEON NOW HAS REALTIME",
+          "summary": "Neon's Realtime public beta turns SQL queries, including joins and aggregates, into live subscriptions that automatically update apps as Postgres data changes, without polling or a separate realtime service.",
+          "url": "https://neon.com/blog/neon-now-has-realtime?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "neon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
