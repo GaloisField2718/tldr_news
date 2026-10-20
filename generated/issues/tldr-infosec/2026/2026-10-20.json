@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-20",
+  "source_path": "TLDR InfoSec/article_20-10-2026.md",
+  "source_content_hash": "sha256:bd89460eb3c8c5d8666eb23ee1d7803b1d372c96309ce8f61e2cd858b1690aea",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a04",
+          "order": 1,
+          "title": "RANSOMWARE RISK REPORT REVEALS AI IMPACT",
+          "summary": "AI accelerates ransomware threats and complicates defenders' jobs. Results of Semperis' annual study reveal: 84% OF ATTACKS WEAPONIZED AI.\n\nThat includes:\n\n* AI-driven attacks * Attacks that exploited internal AI agents or systems\n\nIn addition, 23% of respondents reported DEFENSIVE AI TOOLS FAILED to detect attacks or respond successfully.\n\nThis Cybersecurity Awareness Month, explore and share the SEMPERIS 2026 RANSOMWARE RISK REPORT [5] with your entire security team. Discover how to strengthen cyber resilience by addressing emerging AI-related risks and proactively modernizing your crisis response plans to address conventional and agentic criminal tactics.",
+          "url": "https://www.semperis.com/ransomware-risk-report/?utm_source=tldr&utm_medium=pd&utm_campaign=2026-10-20_tldr_infosec_primary_semperis_technologies_inc&utm_content=header_ransomware_risk_report&utm_term=2026-10-20_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a06",
+          "order": 2,
+          "title": "Explore key findings",
+          "summary": "",
+          "url": "https://www.semperis.com/ransomware-risk-report/?utm_source=tldr&utm_medium=pd&utm_campaign=2026-10-20_tldr_infosec_primary_semperis_technologies_inc&utm_content=cta_key_findings&utm_term=2026-10-20_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a07",
+          "order": 1,
+          "title": "CVE-2026-108082: SYMFONY REDOS. ONE REQUEST. SECONDS OF CPU",
+          "summary": "A crafted Cache-Control header triggers catastrophic regex backtracking in Symfony's HeaderUtils::split(). Symfony parses it on every request, before routing or authentication, and Laravel parses it three times. One request can consume up to 12.7 seconds of CPU, and four merged 8 KB headers can force timeouts. The flaw affects Symfony 4.1 through the October 2026 patches, including Laravel, Drupal, PrestaShop, and Shopware.",
+          "url": "https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "r3verii.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a08",
+          "order": 2,
+          "title": "ONE COMPROMISED LOGIN EXPOSED MILLIONS OF CALIFORNIA STUDENTS' RECORDS",
+          "summary": "An unauthorized party used a compromised login from May 22 to September 18 to copy California student files from an Educational Testing Service SFTP server. The data covers current and former students dating to 2006 and may include names, addresses, IDs, disability status, accommodations, and test results. The breach did not expose Social Security numbers, passwords, or financial details. ETS disabled the account, took the site offline, and is building a replacement system.",
+          "url": "https://links.tldrnewsletter.com/7uDNfU",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a09",
+          "order": 3,
+          "title": "2.76M PIECES OF CUSTOMERS' INFO AT HOLLYS LEAKED IN CYBERATTACK",
+          "summary": "Korean coffee chain Hollys disclosed that it suffered a data breach impacting 2.76M pieces of personal information. The breached data includes dates of birth, phone numbers, addresses, and emails. The data was contained in temporary files provided for a past membership service overhaul.",
+          "url": "https://www.koreatimes.co.kr/business/companies/20261019/276-mil-pieces-of-customers-info-at-hollys-leaked-in-cyberattack?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "koreatimes.co.kr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a10",
+          "order": 1,
+          "title": "WEB ENVIRONMENT INTEGRITY VS. PRIVATE ACCESS TOKENS - THEY'RE THE SAME THING!",
+          "summary": "Web Environment Integrity (WEI) and Apple's Private Access Tokens (PAT) both use signed browser or device attestations. A site can request proof that a visitor uses a genuine, non-jailbroken iPhone with Safari, then reject Firefox on Linux. WEI can additionally bind an attestation to a specific operation. The two proposals differ mainly in presentation: PAT is framed around fewer CAPTCHAs, while WEI is framed around service-provider verification.",
+          "url": "https://www.snellman.net/blog/archive/2023-07-25-web-integrity-api-vs-private-access-tokens?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "snellman.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a11",
+          "order": 2,
+          "title": "PWNESCAPE: GUEST-TO-HOST KVM ESCAPE (CVE-2026-99999)",
+          "summary": "Researchers found a Linux networking flaw that lets an untrusted VM guest alter IPv4 header bytes after the host kernel validates them. Guest-controlled checksum metadata can change the IPv4 header length, causing the kernel to copy 32 bytes beyond the packet's logical data and transmit them as apparent IP options. In a controlled KVM lab, the disclosure supported selected 64-byte host-kernel writes and execution of a host-root helper. The upstream fix, commit 6785011f8b16, validates checksum_start before checksum completion across five IPv4 consumers.",
+          "url": "https://pwn.ai/blog/pwnescape?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "pwn.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a12",
+          "order": 3,
+          "title": "MANAGING AGENTIC SECURITY AT SCALE",
+          "summary": "Salesforce divides vulnerabilities into strategic and tactical vulnerabilities to address the large amount of vulnerabilities that are discovered by LLMs. Strategic vulnerabilities are vulnerabilities due to a core, systemic issue where many vulnerabilities can be resolved by fixing the core issue. Tactical vulnerabilities represent exploit chains that chain together smaller severity issues for a larger impact and require exploit verification in a staging environment.",
+          "url": "https://www.salesforce.com/blog/managing-agentic-security-at-scale/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "salesforce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a13",
+          "order": 1,
+          "title": "THE #1 RATED PASSWORD MANAGER IS 50% OFF",
+          "summary": "Get 50% off [13] the password manager that actually keeps you safe from cyber threats. Keeper securely stores [13] unique passwords for all your accounts, encrypted so only you can access them. Eliminate weak credentials, streamline access control, and reduce breach risk across your personal and work life.",
+          "url": "https://www.keepersecurity.com/affiliate/personal-and-business/?utm_source=tldrit&utm_medium=newsletter&utm_campaign=Secondary10202026",
+          "reading_time_minutes": null,
+          "source_domain": "keepersecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a14",
+          "order": 2,
+          "title": "BEATRIX SUITE",
+          "summary": "A comprehensive, open-source security and automation framework designed to streamline technical workflows. It combines a robust CLI, an intuitive browser GUI, and integrated AI capabilities to deliver a flexible, modern environment for security operators and developers.",
+          "url": "https://github.com/SudoPacman-Syuu/Beatrix-suite?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a15",
+          "order": 3,
+          "title": "MODULATE (PRODUCT LAUNCH)",
+          "summary": "Modulate builds the Velma voice-analysis platform. It uses 100+ audio models to detect synthetic speech, emotion, intent, harassment, grooming, and deepfakes in real time, analyzing 10M+ hours of audio monthly.",
+          "url": "https://www.modulate.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "modulate.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a16",
+          "order": 4,
+          "title": "VECTOR",
+          "summary": "Vector is a high-performance, end-to-end (agent & aggregator) observability data pipeline that allows for the collection, transformation, and routing of logs and metrics from multiple vendors.",
+          "url": "https://github.com/vectordotdev/vector?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a17",
+          "order": 1,
+          "title": "PLEX VULNERABILITIES BEING EXPLOITED IN THE WILD TO DROP A CRYPTOMINER",
+          "summary": "A honeypot running Plex Media Server 1.43.2 observed live exploitation on October 17. Attackers chained CVE-2026-96652, CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656 to obtain remote code execution, then downloaded a cryptominer and a proxy component. The observed source IPs were 45.194.92[.]222, 91.92.40[.]202, and 176.65.139[.]228, and the payload host was 217.60.194[.]116.",
+          "url": "https://www.boredhackerblog.info/2026/10/plex-vulnerabilities-being-exploited-in.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "boredhackerblog.info",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a18",
+          "order": 2,
+          "title": "HOW A MASSIVE CHINESE CRIME RING HACKED STAPLES TO STEAL MILLIONS",
+          "summary": "404 Media reports on a Chinese threat actor that compromised Staples to issue over $5M worth of gift cards that were used to funnel goods back to Chinese addresses. The actors found a way to access Staples' Nexus service, which it believed was only exposed internally, and performed heap dumps to hijack sessions of logged-in Staples customer service representatives. The attackers used 4,630 gift cards totaling around $425K.",
+          "url": "https://www.404media.co/how-a-massive-chinese-crime-ring-hacked-staples-to-steal-millions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "404media.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a19",
+          "order": 3,
+          "title": "ANTHROPIC QUIETLY PITCHES ITS OWN AI SAFETY BILL TO LAWMAKERS",
+          "summary": "Representatives from Anthropic have quietly pitched a draft AI safety bill to lawmakers. Under the bill, the government could only block a model's release or use if it poses a foreseeable, imminent risk of more than $1B in damages, or of killing or seriously injuring more than 50 people via the creation or release of a biological weapon, the model evading its developers' controls, or a cyberattack. Independent evaluators would register with the Department of Commerce and report any such risk within 72 hours.",
+          "url": "https://www.politico.com/news/2026/10/16/anthropic-ai-safety-01124654?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "politico.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-20:a20",
+          "order": 1,
+          "title": "SEVEN PLACES TO STOP A SUPPLY CHAIN ATTACK, FROM YOUR LOCKFILE TO YOUR CI PIPELINE (CHECKLIST)",
+          "summary": "Attackers target the systems that build your software. This checklist pairs each entry point, from bad packages to GitHub Actions, with",
+          "url": "https://www.aikido.dev/reports/supply-chain-checklist?utm_source=TLDRinfosec&utm_medium=newsletter&utm_term=&utm_content=headline&utm_campaign=quicklinks10202026",
+          "reading_time_minutes": null,
+          "source_domain": "aikido.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a21",
+          "order": 2,
+          "title": "defenses to protect your build. Get the checklist →",
+          "summary": "",
+          "url": "https://www.aikido.dev/reports/supply-chain-checklist?utm_source=TLDRinfosec&utm_medium=newsletter&utm_term=&utm_content=body&utm_campaign=quicklinks10202026",
+          "reading_time_minutes": null,
+          "source_domain": "aikido.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a22",
+          "order": 3,
+          "title": "FLORIDA DMV HACKED AFTER POLICE DEPT INSECURELY STORED LOGIN INFO",
+          "summary": "A local Florida police employee improperly stored credentials on a device, allowing attackers to breach the state's DMV on September 4 and steal driver's license data.",
+          "url": "https://arstechnica.com/tech-policy/2026/10/huge-dmv-data-breach-impacted-current-and-former-florida-residents/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a23",
+          "order": 4,
+          "title": "NIKKEI DISCLOSES THIRD DATA BREACH IN A MONTH, 1.8M RECORDS EXPOSED",
+          "summary": "Attackers used stolen credentials to access a Nikkei development system on October 7 and exposed 1.83 million cloud-stored records.",
+          "url": "https://links.tldrnewsletter.com/BN4wTm",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-20:a24",
+          "order": 5,
+          "title": "WHOOPS: GROK BOT SPILLS TECH CEO'S BANK DATA IN PUBLIC SLACK",
+          "summary": "XMTP Labs CEO Shane Mac's read-only Grok Bot finance agent handed his bank balances and itemized expenses to a second Grok Bot on the same machine that had Slack access.",
+          "url": "https://www.techdirt.com/2026/10/19/whoops-grok-bot-spills-tech-ceos-bank-data-in-public-slack/?utm_source=tldrinfosec%5B25%5D%5B26",
+          "reading_time_minutes": 3,
+          "source_domain": "techdirt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
