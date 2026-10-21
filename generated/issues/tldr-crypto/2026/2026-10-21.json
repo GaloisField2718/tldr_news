@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-crypto:2026-10-21",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-10-21",
+  "source_path": "TLDR Crypto/article_21-10-2026.md",
+  "source_content_hash": "sha256:52a28824bf322897205beb08889daeebef0f453c537dae299118b155d101a481",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-10-21",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-10-21:a04",
+          "order": 1,
+          "title": "BLACKROCK'S IBIT BITCOIN ETF DRAWS $665 MILLION INFLOW",
+          "summary": "IBIT took in $665.16M on Monday, its biggest day since October 7, 2025. US spot bitcoin ETFs netted $526.6M after outflows from Fidelity and Grayscale funds. Spot ether ETFs lost $103.3M, their fourth straight day of outflows. Bitcoin has been stuck in an $82,000 to $83,000 range amid fears of further rate hikes. A Presto Research analyst said investors could be positioning for a “catch-up trade,” though the exact driver is unclear. BlackRock also filed for an iShares Bitcoin Managed Protect ETF, which would offer downside protection plus upside exposure.",
+          "url": "https://links.tldrnewsletter.com/svwmUS",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a05",
+          "order": 2,
+          "title": "STRIVE BUYS $335M IN BITCOIN, BOOSTING HOLDINGS TO 36,818 BTC",
+          "summary": "Strive acquired 4,045 BTC for $335 million at an average of $82,803 between October 12 and 16, bringing total holdings to 36,818 BTC (~$3B) and ranking the firm fourth among publicly traded corporate Bitcoin holders, surpassing MARA Holdings. Share count grew 12.4% against a 12.3% rise in BTC holdings, leaving Bitcoin per share roughly flat. Strive also priced a $630 million SATS preferred stock offering carrying a 15% annual dividend, with distributions beginning November 9. Arkham tracked ~$82 million in BTC transferred from MARA-linked wallets to Binance and Gate in recent days, a potential distribution signal from the firm Strive just overtook. ASST closed up 7.7% at $25.95.",
+          "url": "https://cointelegraph.com/news/strive-buys-335m-in-bitcoin-boosting-holdings-to-36818-btc?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "cointelegraph.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-10-21:a06",
+          "order": 1,
+          "title": "MESH TAPS VISA TO LET USERS SPEND CRYPTO WITHOUT A SEPARATE CARD",
+          "summary": "Mesh and Visa will let users spend crypto and stablecoin balances from participating wallet apps at more than 175 million merchant locations. A Visa credential is provisioned behind the scenes, and Mesh handles funding and conversion, so users don't sell or move assets first. Launch timing, supported devices, and participating platforms have not been announced. Mesh is the infrastructure behind PayPal's “Pay with Crypto” and is a unicorn after a $75M Series C in January.",
+          "url": "https://links.tldrnewsletter.com/aUhLvk",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a07",
+          "order": 2,
+          "title": "EIP-8288 MAXIMALISM: VITALIK'S CASE AGAINST NEW ETHEREUM PRECOMPILES",
+          "summary": "Precompiles and the EVM are the wrong venue for cryptography support in Ethereum because both require data to pass through the main chain as calldata, capping throughput at roughly 8 MB/s even with PeerDAS. Vitalik Buterin's proposed solution is EIP-8288 maximalism: compute heavy cryptography client-side, generate a STARK proof, and push only the proof through the EIP-8288 recursive aggregation mechanism, so the chain records the result without seeing the underlying data or computation. This design lets developers use any signature scheme or cryptographic primitive without triggering new protocol-level precompile additions. Broader adoption would freeze Ethereum's precompile surface while keeping the base layer lean.",
+          "url": "https://threadreaderapp.com/thread/2112032009413439704.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-10-21:a08",
+          "order": 1,
+          "title": "FASTER, AGGREGATABLE, AND QUANTUM SAFE PRIVACY POOLS",
+          "summary": "A new ethresear.ch proposal ports Tornado Cash-style privacy pools to Flock, a transparent hash-based SNARK using SHA-256 for the Merkle tree and nullifier derivation, removing the discrete-log assumptions in Pedersen commitments and Groth16. A stepwise circuit that runs one SHA-256 compression 34 times with a sumcheck glue argument cuts prover time 28x, from 810ms to 28.6ms at depth 32, with a 266 KiB proof size. An aggregation layer lets users prove withdrawals locally in ~19.5ms each, then folds N proofs into a single ~344 KiB proof that verifies in 46-64ms regardless of batch size. The scheme also includes a ZIP 2005-inspired quantum recovery protocol: if a cryptographically relevant quantum computer is announced, the pool freezes, and users withdraw through a post-quantum recovery verifier seeded from their original 256-bit key, leaving nullifier tracking intact.",
+          "url": "https://ethresear.ch/t/faster-aggregatable-and-quantum-safe-privacy-pools/26163?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "ethresear.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a09",
+          "order": 2,
+          "title": "TRUST COMPANY LAUNCHES BITCOIN CUSTODY WITH UP TO $370 MILLION IN INSURANCE PER CLIENT",
+          "summary": "AnchorWatch Trust Company launched as a Nevada-chartered qualified bitcoin custodian targeting fiduciaries, public companies, trusts, and high-net-worth individuals, with two models: Flagship, where AnchorWatch holds qualifying keys and clients retain additional key control, and Distributed, which splits keys across AnchorWatch, BitGo (US), and CoinCorner (Isle of Man). Monthly fees are fixed-dollar and capped at $10,000 regardless of portfolio appreciation, decoupling custodian revenue from BTC price performance. Optional insurance through A+ rated Lloyd's of London syndicates covers up to $370 million per client, with each policy issued in the customer's name covering losses from violent coercion, kidnapping, and AnchorWatch-caused fraud.",
+          "url": "https://links.tldrnewsletter.com/beGl7c",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-10-21:a10",
+          "order": 1,
+          "title": "MASTERCARD UNVEILS STABLECOIN SECURITY TOOL TO SCREEN PAYMENTS",
+          "summary": "Announced at Money20/20 USA, the service gives financial institutions a risk score before stablecoin funds move onchain. It checks where the money came from and looks for links to fraud, scams, and sanctions violations. It delivers results through an API so banks can plug it into existing compliance systems. Borderless.xyz and Keyrails are the first partners. It launches first in North America, with worldwide availability expected in 2027. Mastercard also plans to bring BVNK, which it acquired in August, into the product next year.",
+          "url": "https://links.tldrnewsletter.com/vQ8WDB",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a11",
+          "order": 2,
+          "title": "DEFI DEVELOPMENT BOOSTS CHAD DIVIDEND TO 14% TO GROW SOLANA HOLDINGS",
+          "summary": "DeFi Development Corp. (DFDV) raised the annual dividend on its CHAD preferred stock from 13% to 14%, effective November 2, lifting the per-share payment to $1.40 from $1.30 on CHAD's $10 stated value. Proceeds from CHAD issuances fund the company's Solana treasury, which generates returns through staking and validator operations. DFDV added about 22,070 SOL the prior week, bringing total holdings to approximately 2.59 million SOL. CHAD reached record trading highs the same week, and the board authorized a program to repurchase up to all outstanding CHAD shares. CEO Joseph Onorati described the higher rate as a step toward building CHAD into a primary digital credit instrument, with the goal of broadening investor participation as the company scales its SOL accumulation strategy.",
+          "url": "https://links.tldrnewsletter.com/LB8OJC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-10-21:a12",
+          "order": 1,
+          "title": "BITMINE ADDS 12,535 ETH, HOLDINGS RISE TO 6.04M ETH",
+          "summary": "BitMine bought 12,535 ETH over the past week, bringing its total to 6,041,481 ETH, about 4.9% of the 122.1M supply.",
+          "url": "https://threadreaderapp.com/thread/2112160187792642454.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a13",
+          "order": 2,
+          "title": "SKYAI SELLS OFF ENTIRE SOLANA TREASURY AS IT LAUNCHES $201 MILLION BUYBACK",
+          "summary": "SkyAI (formerly Sharps Technology) went from the fifth-largest public Solana treasury, with over 2M SOL in mid-September, to holding none.",
+          "url": "https://links.tldrnewsletter.com/8xsk8A",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a14",
+          "order": 3,
+          "title": "ETHEREUM SETS OCTOBER 26 FOR GLAMSTERDAM UPGRADE ON HOODI TESTNET",
+          "summary": "The Ethereum Foundation announced Glamsterdam will activate on the Hoodi testnet on October 26.",
+          "url": "https://threadreaderapp.com/thread/2112376337684173037.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-10-21:a15",
+          "order": 4,
+          "title": "MAPLE'S SYRUP SLIDES 24% IN A WEEK, UNDERPERFORMING BITCOIN AND ETHER",
+          "summary": "Maple's SYRUP token shed 24% over the past week, underperforming both Bitcoin and Ether during a period when broader crypto markets held steadier.",
+          "url": "https://thedefiant.io/news/tokens/maple-s-syrup-slides-24-in-a-week-underperforming-bitcoin-and-ether?utm_source=tldrcrypto%5B16%5D%5B17",
+          "reading_time_minutes": 2,
+          "source_domain": "thedefiant.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

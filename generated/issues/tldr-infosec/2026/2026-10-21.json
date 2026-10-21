@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-21",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-21",
+  "source_path": "TLDR InfoSec/article_21-10-2026.md",
+  "source_content_hash": "sha256:242fa3642762d2a7104480f7ec32a316a7f84b40da2e31ac5db426a85a8ce642",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-21",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a04",
+          "order": 1,
+          "title": "BLOCK A SIMULATED ATTACK WITH FORTIGATE ON AWS",
+          "summary": "Traffic moving between your AWS Region and Outposts can bypass inspection if your security stack isn't positioned in the middle. This solution template deploys a fully configured FortiGate Next-Generation Firewall [5] with AWS Gateway Load Balancer in one AWS CloudFormation stack.\n\nWhat you get:\n\n• Automated deployment: VPCs, Transit Gateway, IAM roles, and security policies — pre-configured.\n\n• Unified hybrid inspection: Monitor north-south and east-west traffic across VPCs and Outposts from one dashboard.\n\n• Hands-on IPS test: Create a sensor and block a simulated malicious download, step by step.",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security/fortigate-ngfw-solution-template-hybrid-intrusion-prevention?trk=f6279a4a-20d7-4a8f-8886-55dfe0ec120b&sc_channel=el&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-21_tldr_infosec_primary_aws&utm_content=header_block_simulated_attack&utm_term=2026-10-21_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a06",
+          "order": 2,
+          "title": "Deploy the solution template →",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn/security/fortigate-ngfw-solution-template-hybrid-intrusion-prevention?trk=f6279a4a-20d7-4a8f-8886-55dfe0ec120b&sc_channel=el&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-21_tldr_infosec_primary_aws&utm_content=cta_deploy_solution_template&utm_term=2026-10-21_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a07",
+          "order": 1,
+          "title": "HACKERS USE NEW ROMULUS CLICKFIX PLATFORM TO DELIVER LEGIONLOADER AND OTHER MALWARE",
+          "summary": "ROMULUS, a ClickFix delivery platform, was discovered using fake landing pages to make users run malicious commands. It was found to serve PowerShell staging scripts that deploy trojanized MSI installers or padded encrypted archives containing Legion Loader. Researchers found six IP addresses running the platform. One also hosted a ClickFix script linked to malicious ChatGPT Custom GPTs and Legion Loader, then retrieved further payloads.",
+          "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a08",
+          "order": 2,
+          "title": "META MUSE EXPOSES USERS' PERSONAL AND BUSINESS SECRETS WHEN THEY SHARE CONVERSATIONS",
+          "summary": "Researchers at Claroc found 6,800 Meta Muse share links through passive DNS searches. The links included conversation titles in their subdomains, making them searchable. Samples exposed executive-search notes, revenue reviews, loan applications, bank-fraud details, property records, and staff calendars. Meta paused the sharing feature on October 20 while reviewing the report.",
+          "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a09",
+          "order": 3,
+          "title": "BEYONDTRUST REMOTE SUPPORT 26.2.3 SUFFERS AUTH BYPASS CVE-2026-102764",
+          "summary": "BeyondTrust Remote Support versions 26.2.3 and earlier are affected by CVE-2026-102764, a critical authentication bypass and arbitrary file upload vulnerability with a CVSS score of 9.3. CVE-2026-102764 lets unauthenticated attackers perform file operations, escalate to root, and access credential vaults. A suspected Chinese state-sponsored espionage group, Armory Castle (UNC5221), has actively exploited this zero-day flaw since late August to deploy custom webshells such as BARECLAW for persistence and lateral movement. BeyondTrust released security patches in October for self-hosted customers, prompting CISA and the Canadian Centre for Cyber Security to advise organizations to restrict external access to appliances and conduct forensic reviews for signs of compromise.",
+          "url": "https://links.tldrnewsletter.com/5LExzP",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a10",
+          "order": 1,
+          "title": "INSIDE CAIRN: OPEN WINDOWS INTO MASSIVE AI-DRIVEN CYBER OPERATIONS",
+          "summary": "NorForge found more than 20 publicly exposed Cairn panels used for malicious intrusion work. One Chinese-language cluster ran over 1,100 attack projects against e-commerce and payment systems in the US, Japan, Australia, and Canada, seeking unauthenticated RCE, file-upload webshells, SQL injection, and authentication bypasses. Another cluster targeted merchant payment, crypto, and pharmaceutical sites for card and cryptocurrency theft. The panels exposed targets, credentials, API keys, agent instructions, and successful compromises. Trufflehog found hundreds of secrets, with 11% verified valid. NorForge is notifying victims and seeking panel takedowns.",
+          "url": "https://norforge.com/blog/inside_cairn?utm_source=tldrinfosec",
+          "reading_time_minutes": 16,
+          "source_domain": "norforge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a11",
+          "order": 2,
+          "title": "PACKAGE MANAGER SANDBOXING",
+          "summary": "Homebrew developer Andrew Nesbitt explains Homebrew 7.0's split fetch and install phases as well as the Landlock and Seatbelt-based sandboxes. Nesbitt then reviews the sandbox implementations, allowlist implementations, and sandbox proposals from other package managers. Some package managers like Go and Elm go a step further by fully removing code execution.",
+          "url": "https://nesbitt.io/2026/09/24/package-manager-sandboxing.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "nesbitt.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a12",
+          "order": 3,
+          "title": "LAMBDA WEB FUNCTIONS: PUBLIC BY DEFAULT, AND ALREADY IN YOUR LAMBDA:* GRANTS",
+          "summary": "Lambda Web Functions are a new AWS feature that allow for running a Node.js HTTP server behind a managed HTTPS domain. By default, the functions run with no authentication, and role credentials are included as environment variables, which could potentially be leaked for the full duration of the execution environment. Existing roles that grant lambda:* permissions have access to web functions by default, existing SCPs may not cover them, and visibility tooling may also miss functions, leading to the potential for shadow Web Functions being created and going unnoticed.",
+          "url": "https://act.security/resources/lambda-web-functions-public-by-default?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "act.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a13",
+          "order": 1,
+          "title": "ADDRESS API AND AGENTIC AI RISKS",
+          "summary": "Discover how excessive data exposure, tool poisoning, privilege escalation, and shifting trust boundaries affect modern architectures. Hear practical guidance for embedding security early, improving token hygiene, and preparing for regulatory scrutiny. Watch the webinar on",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a13-02",
+          "order": 2,
+          "title": "demand.",
+          "summary": "",
+          "url": "https://pages.awscloud.com/awsmp-gim-85hk-webinar-sec-grc-webinar-grc-webinar.html?trk=3df23b3d-8c60-4c12-acfc-67e2ea5e8849&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "pages.awscloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a14",
+          "order": 3,
+          "title": "MIND (PRODUCT LAUNCH)",
+          "summary": "MIND is a data loss prevention platform that detects and blocks data exfiltration across email, endpoints, generative AI tools, and SaaS. It classifies content and context, then investigates events, tunes policies, and resolves issues.",
+          "url": "https://mind.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "mind.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a15",
+          "order": 4,
+          "title": "QUICKSAND",
+          "summary": "Quicksand is an async Python API for launching, controlling, and snapshotting QEMU virtual machines with a particular focus on sandboxing AI agents.",
+          "url": "https://github.com/microsoft/quicksand?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a16",
+          "order": 5,
+          "title": "VELOCIRAPTOR SKILLS",
+          "summary": "A collection of public, reusable Codex skills and DFIR tooling for Velociraptor setup, collection, hunting, and host analysis.",
+          "url": "https://github.com/ig-labs/velociraptor-skills?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a17",
+          "order": 1,
+          "title": "A HACKER BROKE INTO JOHN DEERE AND SHARKNINJA WITH AN ARMY OF AI AGENTS",
+          "summary": "A hacker used autonomous agents on the open-source Cairn platform to breach more than 100 sites, reportedly including John Deere, SharkNinja, and Cummins. The attacker supplied intrusion tactics in under 100 Chinese characters. The breaches took about 23 hours. Norforge found over 20 likely malicious Cairn instances. John Deere said no sensitive data was accessed. SharkNinja contained the incident.",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a18",
+          "order": 2,
+          "title": "DHS TO BAN DEEPSEEK FROM FEDERAL CIVILIAN AGENCIES",
+          "summary": "The Department of Homeland Security announced a new ban on the procurement of products from DeepSeek. The directive cited national security concerns stemming from the potential for sensitive data to be stored or processed in China. Agencies will have 60 days to request exceptions to the policy.",
+          "url": "https://cyberscoop.com/dhs-bans-deepseek-federal-agencies/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a19",
+          "order": 3,
+          "title": "OUR LATEST DEFENSES AGAINST EVOLVING WEB SCAMS",
+          "summary": "Chrome's Enhanced Protection added ClickFix detection that scrubs PII from copied commands, sends them to Safe Browsing for analysis, and warns users when the verdict comes back dangerous. Google also moved its Gemini scam detection from on-device to a server-side model that scores page intent and brand impersonation, and it added a lower-confidence \"suspicious site\" warning tier beneath the familiar red interstitial. The company claimed Enhanced Protection users were ten times safer than Standard Protection users, a figure drawn from Google's own measurement.",
+          "url": "https://blog.google/security/our-latest-defenses-against-evolving-web-scams/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-21:a20",
+          "order": 1,
+          "title": "ALL AI ATTACKERS NEED IS ONE CREDENTIAL. WE FOUND OVER HALF A MILLION.",
+          "summary": "An AI agent broke into Hugging Face with one stolen credential. Truffle Security found 543,699 live credentials in the public code AI models train. Read what security leaders need to know before an agent",
+          "url": "https://trufflesecurity.com/library/guides/ai-attackers-need-one-credential",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a20-02",
+          "order": 2,
+          "title": "finds theirs.",
+          "summary": "",
+          "url": "https://trufflesecurity.com/library/guides/ai-attackers-need-one-credential",
+          "reading_time_minutes": null,
+          "source_domain": "trufflesecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a21",
+          "order": 3,
+          "title": "970,000 MEDI-CAL MEMBERS AFFECTED BY PARADIGM HEALTHCARE DATA BREACH",
+          "summary": "Paradigm Healthcare Services reported that unauthorized access between October 8 and 15, 2025 exposed names, birth dates, gender, and Medi-Cal member IDs for more than 970,000 people.",
+          "url": "https://links.tldrnewsletter.com/O4GOoU",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-21:a22",
+          "order": 4,
+          "title": "VICTORY! COURT RULES OPM DATA DISCLOSURE TO DOGE IS UNLAWFUL",
+          "summary": "A federal judge ruled on summary judgment that OPM violated two Privacy Act provisions by granting DOGE agents sweeping access to millions of federal employee records, rejected modernization as the justification, and left the remedy for a later date.",
+          "url": "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful?utm_source=tldrinfosec%5B23%5D%5B24",
+          "reading_time_minutes": 2,
+          "source_domain": "eff.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
