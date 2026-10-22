@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-10-22",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-10-22",
+  "source_path": "TLDR Data/article_22-10-2026.md",
+  "source_content_hash": "sha256:85412a8a039c29a4d5ad115c4f5849b4af39d4eb49987e9cdfc37eb6e3fd8482",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-10-22",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a04",
+          "order": 1,
+          "title": "REAL-TIME PIPELINES FOR CLEAN DATA",
+          "summary": "Stakeholders often spot broken data before the data team does.\n\nAccording to a Monte Carlo/Wakefield survey, 74% of organizations now report it. The failure is usually the ingestion path, not the dashboard. ‘Building a real-time data transport layer with Confluent Cloud and AWS' demonstrates the change-data-capture transport pattern. Read the tutorial in AWS Marketplace [5]. The Data Pipelines and Lineage guide goes a level up from the tutorial: lineage from source to AI agent response, data quality, pipeline observability.\n\nSee the data pipeline patterns [6].",
+          "url": "https://aws.amazon.com/marketplace/build-learn/ai-agent-learning-series/data-pipelines-and-lineage?trk=821f0c1f-c303-460c-bb91-ad4a8daced4c&sc_channel=el&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-10-22_tldr_data_primary_aws&utm_content=header_real_time_pipelines&utm_term=2026-10-22_tldr_data",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a07",
+          "order": 1,
+          "title": "HOW SHOPIFY TURNS OPEN MODELS INTO TASK EXPERTS",
+          "summary": "Shopify trains and hosts specialist open models for Sidekick's focused tasks, using production failures and human feedback to improve them. Its GraphQL specialist slightly outperformed the frontier model on Shopify's evaluation while responding 7x faster and costing about 90% less to serve.",
+          "url": "https://shopify.engineering/open-model-task-experts?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "shopify.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a08",
+          "order": 2,
+          "title": "GOVERNING DATA AND AI AGENTS IN SNOWFLAKE: A DATA ENGINEER'S FIELD NOTES",
+          "summary": "Governing AI agents in Snowflake starts with strong data controls: identify sensitive information, apply access and masking policies, and monitor usage. Agent-specific permissions, masking, and prompt injection checks add protection by limiting what agents can access, see, and change.",
+          "url": "https://links.tldrnewsletter.com/kLhP8u",
+          "reading_time_minutes": 25,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a09",
+          "order": 3,
+          "title": "FROM DISK PAGES TO COLUMNAR MEMORY: WHY APACHE ARROW?",
+          "summary": "Apache Arrow addresses a different problem than Parquet: fast in-memory analytics rather than compact storage. By keeping data in contiguous typed buffers instead of heap objects, Arrow preserves column locality for cache-friendly scans and SIMD execution, and it also reduces repeated serialization between engines like Spark, pandas, and DuckDB.",
+          "url": "https://links.tldrnewsletter.com/9ejxUP",
+          "reading_time_minutes": 13,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a10",
+          "order": 1,
+          "title": "WHY MOST ANALYTICS TEAMS WON'T SURVIVE THE NEXT 5 YEARS (23 MINUTE VIDEO)",
+          "summary": "AI is putting pressure on analytics teams that simply fulfil requests, as businesses increasingly believe they can get answers without them. To stay valuable, data professionals must understand the business, challenge assumptions, and turn reliable analysis into clear decisions.",
+          "url": "https://links.tldrnewsletter.com/p6mVTh",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a11",
+          "order": 2,
+          "title": "THE APPLICATION IS SCAFFOLDING",
+          "summary": "As software assembly gets cheaper, the durable asset shifts from application code to a governed historical record of entities, state changes, and provenance. The key lesson is to let AI generate queries and transformations, while append-only history and deterministic validation preserve meaning, permissions, and auditable “as-of” views.",
+          "url": "https://inferenceengineer.substack.com/p/the-application-is-scaffolding?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "inferenceengineer.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a12",
+          "order": 3,
+          "title": "SCALING AI-NATIVE ANALYTICS PATTERNS AT META",
+          "summary": "Meta has reduced repeated product-analytics work to seven parameterized measurement patterns and exposes their governed outputs through agent-readable models and a deterministic query generator. The library now powers more than 9,000 production pipelines, including 3,250 metric-materialization pipelines. Agents choose inputs and recipes, while code, SQL, and validation remain controlled.",
+          "url": "https://links.tldrnewsletter.com/yYZZZE",
+          "reading_time_minutes": 6,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a13",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach data engineers, analysts and data leaders where they actually pay attention. Learn more about sponsorship opportunities [13].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrdata&utm_medium=newsletter&utm_campaign=secondary10222026&sp=E622CpJabL-s8hUboW3G-nlD",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-22:a14",
+          "order": 2,
+          "title": "ANNOUNCING DUCKDB 2.0.0 LTS “CINNAMON TEAL”",
+          "summary": "DuckDB 2.0 LTS improves client-server support, faster file reads, improved semi-structured data handling, an AI agent mode, and SQL triggers. It is supported until at least October 2027, but database files created in 2.0 cannot be read by older versions.",
+          "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a15",
+          "order": 3,
+          "title": "PYDEBEZIUMAI",
+          "summary": "PyDebeziumAI turns database changes into deterministic vector-store upserts and deletes by embedding Debezium's CDC engine inside a Python process. It removes Kafka and Connect from small RAG deployments, compacts bursts of mutations, and supports Chroma, PGVector, and Milvus. The contribution is treating retrieval freshness as a CDC problem, with idempotency and a dead-letter queue rather than periodic re-indexing.",
+          "url": "https://github.com/debezium/debezium-ai-python?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a16",
+          "order": 1,
+          "title": "INSIDE PROMETHEUS: META'S JOURNEY TO A GIGAWATT-SCALE SUPERCLUSTER",
+          "summary": "Meta's Prometheus is built to keep giant distributed training runs productive at extreme scale. The supercluster is growing toward roughly 1 million GPUs, with hundreds of thousands already deployed, while its networking, resilience, and power design helped push training goodput above 85% and cut interruptions by 99% since mid-2025.",
+          "url": "https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a17",
+          "order": 2,
+          "title": "ONE ENGINEER TRAINED A 3.8B PARAMETER LLM FROM SCRATCH FOR $998",
+          "summary": "A solo engineer trained a 3.848B-parameter LLM from scratch for a reported $998 by pairing a lightweight stack with a few high-leverage efficiency choices. The run finished in 43 hours on eight rented B200s and reached 0.384 CORE on DCLM, roughly 50% above GPT-2's reported score.",
+          "url": "https://blog.gopenai.com/one-engineer-trained-a-3-8b-parameter-llm-from-scratch-for-998-7ef5cd7809b7?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.gopenai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a18",
+          "order": 3,
+          "title": "THOUGHTS ON DYNAMIC CONSISTENCY BOUNDARY",
+          "summary": "Dynamic Consistency Boundaries let each event-sourced command protect only the events and types it reads, avoiding false conflicts from unrelated changes. The counterargument is that tag-based implementations merely relocate fixed boundaries into high-cardinality indexes, while schema changes, retagging, archiving, and query evolution become harder. Prefer multi-stream transactions and workflow streams unless narrower contention is proven.",
+          "url": "https://www.architecture-weekly.com/p/thoughts-on-dynamic-consistency-boundary?utm_source=tldrdata",
+          "reading_time_minutes": 31,
+          "source_domain": "architecture-weekly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-22:a19",
+          "order": 1,
+          "title": "DBT SNAPSHOTS CAN'T HANDLE LATE DATA. SO WE BUILT ONE THAT CAN",
+          "summary": "Mercedes-Benz's open-source dbt_iterative_snapshot package for Databricks processes batches chronologically and automatically repairs historical records when late data arrives.",
+          "url": "https://blog.dataengineerthings.org/dbt-snapshots-cant-handle-late-data-so-we-built-one-that-can-ef107cc9e02e?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.dataengineerthings.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a20",
+          "order": 2,
+          "title": "A BENCHMARK MAP OF THE US ECONOMY",
+          "summary": "Mercor's analysis of 29 AI benchmarks estimates that tasks accounting for 90% of US working hours have little or no coverage, exposing major gaps in how we measure AI's workplace capabilities.",
+          "url": "https://www.mercor.com/research/labor-index/benchmark-map/?utm_source=tldrdata",
+          "reading_time_minutes": 17,
+          "source_domain": "mercor.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-22:a21",
+          "order": 3,
+          "title": "EVALUATING AGENTS ON HIGHLY SUBJECTIVE TASKS",
+          "summary": "Reliable evaluation of AI agents on subjective tasks combines calibrated human reviews, automated judges, and production monitoring with statistical checks to distinguish real improvements from noise.",
+          "url": "https://cameronrwolfe.substack.com/p/subjective-evals?utm_source=tldrdata",
+          "reading_time_minutes": 20,
+          "source_domain": "cameronrwolfe.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
