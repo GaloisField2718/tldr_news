@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-10-23",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-10-23",
+  "source_path": "TLDR Dev/article_23-10-2026.md",
+  "source_content_hash": "sha256:d3275f4c0cd7ef2db77693116113d48862b5948b160fb4b428dc6bcb20511000",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-10-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a04",
+          "order": 1,
+          "title": "[WEBINAR] HOW TO STOP REWRITING YOUR AGENT'S CODE",
+          "summary": "Right now, you're your agent's context engine. You write the rules files, maintain the skills, and paste in the Slack thread it missed. But hand-curated context goes stale. And when sources conflict, you still end up babysitting your agent. Join us live on Oct 28 (FREE) [4] to see:\n\n* The 8 levels of AI maturity and where teams get stuck * How leading teams use a context engine to curate context automatically * Live demo: token savings on the same coding task, plus use cases beyond code generation",
+          "url": "https://getunblocked.com/events/how-to-stop-rewriting-your-agent-s-code-oct-28/?utm_source=tldrdev&utm_medium=email&utm_campaign=primary_20261023",
+          "reading_time_minutes": null,
+          "source_domain": "getunblocked.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a05",
+          "order": 1,
+          "title": "BUILDING AGENTS: WHEN TO FOLD SUBAGENTS INTO YOUR MAIN AGENT LOOP",
+          "summary": "Folding routers, planners, and domain specialists into a single agent loop can reduce lossy handoffs, cost, and latency when skills and tool search load context on demand. Anthropic describes migration patterns and evaluations for deciding which boundaries to remove. Separate agents still help with independent parallel work, verification, permission boundaries, and measurable context overload.",
+          "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "claude.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a06",
+          "order": 2,
+          "title": "ANTHROPIC BUILDS ITS OWN SOURCE CONTROL SYSTEM",
+          "summary": "Anthropic replaced Git in its monorepo with Scion as daily merges grew from about 2,500 to more than 30,000 and CI reached 25 million checkouts a day. Its Rust client and server store changesets in Spanner and blobs in Google Cloud Storage, with a separate review system replacing GitHub's workflow.",
+          "url": "https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.pragmaticengineer.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a07",
+          "order": 3,
+          "title": "WE BUILT AN AI AGENT TO INVESTIGATE PRODUCTION ISSUES",
+          "summary": "Stream's incident agent gathers logs, metrics, database results, and code references, then has a fresh session challenge its conclusions before posting findings. Read-only tools, isolated credentials, restricted networking, and output filters enforce its limits outside the prompt. Engineers approve every fix, while 22 evaluation cases test real incidents and past mistakes.",
+          "url": "https://getstream.io/blog/ai-agent-production-investigation/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "getstream.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a08",
+          "order": 1,
+          "title": "IS YOUR ORGANIZATION MESSING UP AI ADOPTION?",
+          "summary": "AI adoption needs changes to incentives, working practices, and support alongside software licenses. Staff need role-specific training, time to experiment, and a reason to share in productivity gains without fearing punishment for mistakes. Shadow AI can reveal gaps in official tools that blanket restrictions only push out of sight.",
+          "url": "https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a09",
+          "order": 2,
+          "title": "DOCKER IS WEIRD",
+          "summary": "Building a container runtime exposes Docker as a collection of Linux mechanisms, including namespaces, cgroups, and filesystem isolation around ordinary processes. This walkthrough explains why Go's multithreaded runtime complicates container setup and why rootless networking often requires extra work in userspace.",
+          "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "codeandcake.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a10",
+          "order": 3,
+          "title": "SPEEDING UP CODE REVIEW WITH SMALL-CHANGE",
+          "summary": "Imprint is testing a faster review path for narrowly scoped changes as rising PR volume pushes median review time from 33 to 77 minutes. Eligibility depends on a CI-controlled check covering change size, service experience, scope, and automated review findings, with shared libraries and sensitive paths excluded. Errors are treated as failures to improve in the verification system.",
+          "url": "https://lethain.com/small-changes/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "lethain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a11",
+          "order": 1,
+          "title": "DOMAINS, HOSTING, AND EMAIL. BUILT INTO YOUR WORKFLOW.",
+          "summary": "Deploy Node.js apps through GoDaddy's APIs or the gddy CLI. Then use the APIs to register domains, configure DNS, and set up professional email in one connected workflow.\n\nAccess developer pricing on eligible domain registrations.",
+          "url": "https://developer.godaddy.com/en/docs/api-users?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=explore&utm_id=secondary",
+          "reading_time_minutes": null,
+          "source_domain": "developer.godaddy.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a11-02",
+          "order": 2,
+          "title": "→ Explore the APIs",
+          "summary": "",
+          "url": "https://developer.godaddy.com/en/docs/api-users?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=explore&utm_id=secondary",
+          "reading_time_minutes": null,
+          "source_domain": "developer.godaddy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a12",
+          "order": 3,
+          "title": "→ See domain pricing",
+          "summary": "",
+          "url": "https://developer.godaddy.com/en/docs/api-users/domains/pricing?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=pricing&utm_id=secondary",
+          "reading_time_minutes": null,
+          "source_domain": "developer.godaddy.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a13",
+          "order": 4,
+          "title": "TANSTACK AI 1.0: STILL YOUR AI, STILL YOUR WAY",
+          "summary": "TanStack AI brings 76 packages to stable APIs for chat, tools, media, MCP, persistence, and sandboxes while preserving provider and framework choice. Upgrade all client and server packages together and replace APIs deprecated in 0.x. The newly introduced agent harness remains experimental.",
+          "url": "https://tanstack.com/blog/tanstack-ai-1-0?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a14",
+          "order": 5,
+          "title": "JAILBREAKING THE SWITCH 2",
+          "summary": "ns2jb is a software-only, tethered jailbreak demonstrated on Switch 2 firmware 23.0.1. It enables native code execution for homebrew and game modifications.",
+          "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "pepsipu.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a15",
+          "order": 6,
+          "title": "NVIDIA OPENSHELL",
+          "summary": "OpenShell runs agents in policy-controlled sandboxes with kernel-enforced file and network limits, credential injection, and formal checks on proposed access changes.",
+          "url": "https://github.com/NVIDIA/OpenShell?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a16",
+          "order": 1,
+          "title": "LLMS ARE MAKING FORMAL SOFTWARE VERIFICATION FEASIBLE AT A MUCH LARGER SCALE",
+          "summary": "Claude produced machine-checked proofs for 239 fuzz-test entry points across 123 open-source libraries, turning existing tests into specifications over compiled RISC-V code. The guarantees cover inputs below 64 MB under a single-threaded Linux model with fixed memory limits, so they establish specific security properties rather than complete program correctness.",
+          "url": "https://www.anthropic.com/research/formal-verification?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a17",
+          "order": 2,
+          "title": "HOW WE CUT GITLAB DUO CODE REVIEW'S COST BY 98%",
+          "summary": "AI21 combined a switch to DeepSeek V4 Flash with context compaction to cut GitLab Duo Code Review's estimated token cost from $0.589 to $0.0135 per pull request on a public benchmark, with F1 rising from 46.4% to 47.2%. Compaction made oversized reviews fit the deployment's context window, removing expensive fallbacks to Sonnet.",
+          "url": "https://www.ai21.com/blog/gitlab-case-study/?utm_source=tldrdev",
+          "reading_time_minutes": 11,
+          "source_domain": "ai21.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a18",
+          "order": 3,
+          "title": "WHAT THE HECK IS THE PUBLIC SUFFIX LIST?",
+          "summary": "The Public Suffix List records the boundaries browsers and password managers need to distinguish independently controlled sites on shared domains. Its rules prevent cookies and saved credentials from crossing tenant boundaries, but growing demand leaves volunteers reviewing increasingly complex submissions. The article explains why DNS has not replaced the list and why using it for unrelated controls can create problems.",
+          "url": "https://ngrok.com/blog/public-suffix-list?utm_source=tldrdev",
+          "reading_time_minutes": 21,
+          "source_domain": "ngrok.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-23:a19",
+          "order": 1,
+          "title": "NEARLY 40% OF AI-GENERATED CODE NEVER SHIPS TO PRODUCTION",
+          "summary": "Developers estimated that only 61% of AI-generated code is released",
+          "url": "https://www.localstack.cloud/state-of-ai-cloud-development-2026?utm_source=nl-spon&utm_medium=tldr&utm_campaign=dev-ql-1023",
+          "reading_time_minutes": null,
+          "source_domain": "localstack.cloud",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a19-02",
+          "order": 2,
+          "title": "to production in a new survey. READ THE REPORT",
+          "summary": "",
+          "url": "https://www.localstack.cloud/state-of-ai-cloud-development-2026?utm_source=nl-spon&utm_medium=tldr&utm_campaign=dev-ql-1023",
+          "reading_time_minutes": null,
+          "source_domain": "localstack.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a20",
+          "order": 3,
+          "title": "STATE OF HTML 2026",
+          "summary": "The State of HTML survey tracks awareness and use of native browser features.",
+          "url": "https://survey.devographics.com/survey/state-of-html/2026?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "survey.devographics.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a21",
+          "order": 4,
+          "title": "PURE UI IN THE AGENTIC ERA",
+          "summary": "Making a screen's relevant state explicit lets people and agents inspect combinations of roles, plans, billing states, and feature flags before merging a change.",
+          "url": "https://mattrothenberg.com/notes/pure-ui-agentic-era?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "mattrothenberg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a22",
+          "order": 5,
+          "title": "INTRODUCING 1PASSWORD FOR AGENTS",
+          "summary": "1Password lets users approve sign-ins for supported agents and fills credentials into destination sites without exposing passwords to the model.",
+          "url": "https://1password.com/blog/1password-for-ai-agents?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-23:a23",
+          "order": 6,
+          "title": "TYPEUI MICRO INTERACTIONS",
+          "summary": "TypeUI offers 113 interactive examples for buttons, forms, modals, navigation, and other UI patterns.",
+          "url": "https://www.typeui.sh/micro-interactions?utm_source=tldrdev%5B24%5D%5B25",
+          "reading_time_minutes": null,
+          "source_domain": "typeui.sh",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

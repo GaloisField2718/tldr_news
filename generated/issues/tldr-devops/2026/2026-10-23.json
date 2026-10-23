@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-23",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-23",
+  "source_path": "TLDR DevOps/article_23-10-2026.md",
+  "source_content_hash": "sha256:9a166a6b770af1ef240555a6ab1e6938d6e2f704604d1cc68602ea18e032de7d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a04",
+          "order": 1,
+          "title": "CONFIDENTIAL COMPUTING BUILT INTO EC2 INSTANCES",
+          "summary": "Every security review asks: what can the cloud provider access? The AWS Nitro System [4] was built with no operator access, and no code changes required:\n\n🚫 NO OPERATOR ACCESS BY DESIGN: No system or person can log in to Nitro hosts, read instance memory, or access customer data on encrypted EBS volumes.\n\n📋 AUTHENTICATED, AUDITED APIS ONLY: Even AWS's most privileged operators are limited to authorized, audited APIs, none of which can access customer data.\n\n⚡ NEAR BARE-METAL PERFORMANCE: The Nitro Hypervisor [4] performs like bare metal for most workloads, so isolation doesn't cost throughput.",
+          "url": "https://aws.amazon.com/ec2/nitro/?trk=221ff974-e04d-4fa3-a095-9a0b04c5ff02&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a04-02",
+          "order": 2,
+          "title": "Learn how the AWS Nitro System delivers confidential computing →",
+          "summary": "",
+          "url": "https://aws.amazon.com/ec2/nitro/?trk=221ff974-e04d-4fa3-a095-9a0b04c5ff02&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a05",
+          "order": 1,
+          "title": "INTRODUCING HARNESS AI BUDGETS",
+          "summary": "Harness AI Budgets turns AI cost policies into enforced weekly spending limits scoped to a team, developer, model, or project. Access pauses at 100% until the weekly reset or an approved increase. In Harness' internal test, weekly AI spend per developer fell about 37%.",
+          "url": "https://www.harness.io/blog/introducing-ai-budgets?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "harness.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a06",
+          "order": 2,
+          "title": "OBSERVABILITYCON 2026: A GUIDE TO ALL THE ANNOUNCEMENTS FROM GRAFANA LABS",
+          "summary": "Grafana Labs announced Grafana Cloud updates covering AI operations, cost controls, and full-stack context. Assistant Watchers reached general availability, Adaptive Telemetry customers report cutting spend 30% to 50% on average, and the Grafana Marketplace launched with more than 30 plugins.",
+          "url": "https://grafana.com/blog/observabilitycon-2026-announcements/?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "grafana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a07",
+          "order": 3,
+          "title": "CRITICAL PHP RCE VULNERABILITIES: PATCH NOW (CVE-2026-109618, CVE-2026-109619)",
+          "summary": "Two critical remote code execution vulnerabilities in PHP, tracked as CVE-2026-109618 and CVE-2026-109619, were publicly disclosed on October 21. Proof-of-concept exploit code is available, and the flaws affect every PHP version from PHP 5 onward. DigitalOcean is automatically patching WordPress instances on its Cloudways managed product, but customers running PHP on Droplets or other unmanaged services must update to PHP 8.2.35, 8.3.36, 8.4.27, or 8.5.12 immediately. There are no patches for PHP 8.1 or earlier.",
+          "url": "https://www.digitalocean.com/blog/critical-php-rce-vulnerabilities-patch-now?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "digitalocean.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a08",
+          "order": 1,
+          "title": "PRESENTATION: AI IS AN AMPLIFIER: SCALE HIGH PERFORMANCE, NOT DYSFUNCTION",
+          "summary": "Nathen Harvey of Google Cloud's DORA team presents 2025 survey findings from nearly 5,000 respondents, about 90% of whom use AI professionally. He argues AI amplifies existing organizational strengths and dysfunctions, and introduces the DORA AI Capabilities Model.",
+          "url": "https://www.infoq.com/presentations/dora-ai-adoption-engineering-performance/?utm_source=tldrdevops",
+          "reading_time_minutes": 33,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a09",
+          "order": 2,
+          "title": "SCALING GITOPS WITH RELEASE PROMOTION",
+          "summary": "Jesse Suen of Akuity describes a fleet of over 200 clusters where every merge synced everywhere with no gate. He argues sync tools do not handle release tracking or promotion decisions and recommends staged promotion that rolls out in waves and halts on failed checks.",
+          "url": "https://cloudnativenow.com/contributed-content/scaling-gitops-with-release-promotion/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a10",
+          "order": 3,
+          "title": "I DON'T TRUST ON DELETE CASCADE",
+          "summary": "Large cascading deletes can turn a routine schema migration into an outage by holding locks while new queries queue behind the waiting migration. Soft deletes followed by bounded background cleanup keep transactions smaller, with additional pitfalls around unindexed foreign keys and logical replication.",
+          "url": "https://planetscale.com/blog/i-dont-like-delete-cascade?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a11",
+          "order": 1,
+          "title": "JEV HELPS YOUR AGENT DECIDE WHAT TO DO NEXT. BLUEHOST GIVES IT SOMEWHERE TO RUN 24/7.",
+          "summary": "Your agent shouldn't depend on your laptop staying open. Run it on an always-on VPS with a 99.99% uptime guarantee, so it keeps working",
+          "url": "https://www.bluehost.com/ai-gateway?utm_source=influencer&utm_medium=newsletter&utm_campaign=jev&utm_content=TLDR_Newsletter&channelid=P99C46097236S651N0B3003A151D115E0000V108",
+          "reading_time_minutes": null,
+          "source_domain": "bluehost.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a11-02",
+          "order": 2,
+          "title": "after you log off",
+          "summary": "GET STARTED",
+          "url": "https://www.bluehost.com/ai-gateway?utm_source=influencer&utm_medium=newsletter&utm_campaign=jev&utm_content=TLDR_Newsletter&channelid=P99C46097236S651N0B3003A151D115E0000V108",
+          "reading_time_minutes": null,
+          "source_domain": "bluehost.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a12",
+          "order": 3,
+          "title": "CLAUDE-HOW-TO",
+          "summary": "This MIT-licensed guide teaches users how to use Claude Code through 10 modules covering slash commands, hooks, skills, and MCP servers. Users can copy templates directly into projects or follow a self-assessment quiz to get a personalized roadmap. The current version, v2.1.302, is compatible with Claude Code 2.1+ and includes copy-paste templates for models including Claude Opus 5.5 and Claude Sonnet 5.5.",
+          "url": "https://github.com/luongnv89/claude-howto?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a13",
+          "order": 4,
+          "title": "GITHUB ACTIONS WORKFLOW LOCKFILES IN PUBLIC PREVIEW",
+          "summary": "GitHub Actions workflow lockfiles pin actions and their transitive dependencies to reviewed commits while preserving readable tags in workflow files. The public preview includes a GitHub CLI extension to generate lockfiles, Dependabot integration to update them, and policies that require workflows to use them.",
+          "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a14",
+          "order": 1,
+          "title": "BEFORE YOU EVALUATE AN AI SRE, GIVE YOUR EXISTING AGENT CONTEXT",
+          "summary": "Engineers at Radar tested whether adding context to coding agents improves Kubernetes diagnostics. When running 50 fault scenarios, agents with context reached a correct diagnosis within two minutes on 86% of faults, compared to 60% for agents using a standard shell. Accuracy improved only slightly with context, but the time savings were significant. The test used Claude Code and Microsoft's SREGym benchmark on a live Amazon EKS cluster.",
+          "url": "https://www.cncf.io/blog/2026/10/21/before-you-evaluate-an-ai-sre-give-your-existing-agent-context/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a15",
+          "order": 2,
+          "title": "8 EMUDHRA CERTIFICATES ARE COMPROMISED. HERE'S WHAT YOU NEED TO KNOW",
+          "summary": "Private keys for eight widely trusted eMudhra intermediate certificates were compromised on October 19, allowing attackers to forge certificates for any domain. Cloudflare has patched its CDN, Zero Trust, and Tunnel products. Customers must update the Cloudflare One Client and 1.1.1.1 app to specific versions to remain protected.",
+          "url": "https://blog.cloudflare.com/emudhra-certificate-compromise/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-23:a16",
+          "order": 1,
+          "title": "GITHUB ACTIONS RUNNER CONTROLLER 0.15.0 TARGETS RELIABILITY AT SCALE",
+          "summary": "GitHub released Actions Runner Controller 0.15.0, which sends smaller patch requests and moves runner status aggregation into metrics to reduce Kubernetes API updates.",
+          "url": "https://www.infoq.com/news/2026/10/github-runner-controller-0-15/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-23:a17",
+          "order": 2,
+          "title": "AI INFRASTRUCTURE ON TAP WITH THE PULUMI AICR PROVIDER",
+          "summary": "Pulumi has released the NVIDIA AI Cluster Runtime (AICR) provider to help developers deploy self-hosted AI infrastructure.",
+          "url": "https://www.pulumi.com/blog/self-hosted-ai-infrastructure-pulumi-aicr/?utm_source=tldrdevops%5B18%5D%5B19",
+          "reading_time_minutes": 3,
+          "source_domain": "pulumi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
