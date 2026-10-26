@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-10-26",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-10-26",
+  "source_path": "TLDR Data/article_26-10-2026.md",
+  "source_content_hash": "sha256:37daabd07aef917a18e5ac4248053acf2892d7eb634a48df8245be9d0158842f",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-10-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a04",
+          "order": 1,
+          "title": "CAN AN LLM EVER BE EXPLAINABLE?",
+          "summary": "The classic XAI methods explain a prediction in terms of input features, such as income, account age or pixels. With LLMs, these approaches are often insufficient. Read this article on the Seekr blog [5] to learn:\n\n* Why SHAP and LIME fall short on LLMs, and what evidence replaces them * The 4 sources of an LLM explanation [6] and what each can and can't prove * How to test whether a model actually relied on a cited source",
+          "url": "https://www.seekr.com/resource/what-is-explainable-ai/?utm_source=email&utm_medium=email&utm_campaign=56162737-TLDR&utm_content=TLDR+Data+Primary_header_llm_ever_explainable&utm_term=2026-10-26_tldr_data",
+          "reading_time_minutes": null,
+          "source_domain": "seekr.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-26:a07",
+          "order": 2,
+          "title": "Read the blog",
+          "summary": "",
+          "url": "https://www.seekr.com/resource/what-is-explainable-ai/?utm_source=email&utm_medium=email&utm_campaign=56162737-TLDR&utm_content=TLDR+Data+Primary_cta_blog&utm_term=2026-10-26_tldr_data",
+          "reading_time_minutes": null,
+          "source_domain": "seekr.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a08",
+          "order": 1,
+          "title": "RAPIDLY SCALING ONLINE STORAGE TO SERVE OVER 1 BILLION CHATGPT USERS",
+          "summary": "OpenAI's storage platform, Habitat, serves over 500 petabytes to over 1 billion users. Its Azure Cosmos DB setup went from one shared container to one per feature, then back to shared after teams forgot to pre-scale for launches. With hot key throttling, request priorities, and a new serverless mode, it has had no noisy-neighbour incidents since.",
+          "url": "https://links.tldrnewsletter.com/6dqTrn",
+          "reading_time_minutes": 23,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a09",
+          "order": 2,
+          "title": "REBUILDING LINKEDIN'S TRACKING INFRASTRUCTURE",
+          "summary": "LinkedIn's tracking pipeline handles hundreds of billions of events a day, feeding experiments and product analytics. The team moved it off Java 8 and the Play Framework onto gRPC and a modern Java runtime. Before shifting traffic, they sent 10% of events through both pipelines and compared the output. Inbound network usage fell about 89%.",
+          "url": "https://www.linkedin.com/blog/engineering/infrastructure/rebuilding-linkedins-tracking-infrastructure-scaling-migrating-and-hardening-a-high-volume-event-pipeline?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a10",
+          "order": 3,
+          "title": "A FILE FORMAT CLAIMS TO BE 100X FASTER THAN PARQUET",
+          "summary": "Parquet's scan-oriented design is showing strain under AI workloads that need fast random access to embeddings and multimodal data. Lance tackles that mismatch with a layout built for direct page access and finer-grained reads, reducing metadata overhead and memory pressure. The broader takeaway is that AI-era storage may need to optimize for point retrieval, not just analytical scans.",
+          "url": "https://vutr.substack.com/p/free-a-file-format-claims-to-be-100x?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "vutr.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a11",
+          "order": 4,
+          "title": "SINGLE-TENANT TITUS: VM-LEVEL ISOLATION ON A MULTI-TENANT CONTAINER PLATFORM",
+          "summary": "Netflix is adding a single-tenant mode to Titus so sensitive workloads can get a dedicated VM without leaving the existing container platform. The motivation is noisy-neighbor interference at the hardware level, which can trigger severe tail-latency spikes for stateful systems. Dedicated nodes improved stability and even recovered capacity lost to anti-affinity, though with slower launches and more warm-capacity planning.",
+          "url": "https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?utm_source=tldrdata",
+          "reading_time_minutes": 26,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a12",
+          "order": 1,
+          "title": "CAN DATA AGENTS DO REAL ANALYSIS? (51 MINUTE PODCAST)",
+          "summary": "Data agents still struggle on realistic analytics tasks, especially when work depends on joins across systems, undocumented business context, and messy text transformations. Benchmark results suggest prompt engineering alone will not close that gap. The best agent passed 61% of benchmark queries on its first attempt, with a semantic layer significantly improving accuracy. The episode also explores query planning and custom inference engines to reduce AI SQL costs.",
+          "url": "https://roundup.getdbt.com/p/can-data-agents-do-real-analysis?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "roundup.getdbt.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a13",
+          "order": 2,
+          "title": "WE BUILT THREE MEMORY SYSTEMS. THE MOST EXPRESSIVE ONE WASN'T THE MOST USEFUL",
+          "summary": "Tiger Data gave its Slack agent memory three ways: a list of facts, a knowledge graph, and a tree. Agents struggled to decide what graph edges meant. A tree built on Postgres's ltree extension worked better, and filing a thread summary dropped from dozens of turns to one tool call. Its search layer became searchgres.js.",
+          "url": "https://www.tigerdata.com/blog/we-built-three-memory-systems-most-expressive-wasnt-most-useful?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "tigerdata.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a14",
+          "order": 1,
+          "title": "AGENTS SHOULD QUERY YOUR METRICS, NOT YOUR TABLES",
+          "summary": "One metric, twenty different queries, nobody sure which is right. An agent produces the disagreement faster. CUBE [15] is the semantic layer for AI: define a metric once, and dashboards, apps and agents use that definition — LLM accuracy up 17–23 points.\n\nGET THE GUIDE OR TRY FREE → [16] No card required",
+          "url": "https://cube.dev/agentic-ai?utm_source=tldrdata&utm_medium=newsletter&utm_campaign=Secondary10262026&utm_content=secondary-ad_headline",
+          "reading_time_minutes": null,
+          "source_domain": "cube.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-26:a17",
+          "order": 2,
+          "title": "DUCKDB HF EXTENSION — READ AND WRITE HUGGING FACE ASSETS",
+          "summary": "The DuckDB hf extension lets you read, query, and write files on Hugging Face directly with SQL using hf:// URLs. It supports datasets, models, and storage buckets, with caching to speed up reads and deduplication to avoid uploading data already stored.",
+          "url": "https://github.com/lhoestq/duckdb-hf-extension?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a18",
+          "order": 3,
+          "title": "BBTREE: FASTEST ORDERED MAP",
+          "summary": "bbtree is a Rust ordered map whose benchmarks report up to 5x faster single-threaded performance than Rust's BTreeMap and 30% lower memory use. It applies decades of database research to reduce memory delays, with LLM-written code guided by a database expert and checked through formal verification and extensive testing.",
+          "url": "https://bbtree.xiangpeng.systems/post/?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "bbtree.xiangpeng.systems",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a19",
+          "order": 4,
+          "title": "SUTURA",
+          "summary": "Sutura is an Apache-2.0 Rust runtime that exposes certified metrics and semantic definitions to AI agents over HTTP or MCP, rather than letting them improvise directly against warehouse tables. It can federate queries across systems while verifying the caller and preserving data-source policies. The useful idea is a governed agent-access boundary where metrics, identities, and query execution travel together.",
+          "url": "https://github.com/telekom/sutura?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a20",
+          "order": 1,
+          "title": "GO WITH THE FLOW: TAKING A SHADOW DEPENDENCY IN GCP DATAFLOW CROSS TENANT",
+          "summary": "Researchers uncovered a cross-tenant GCP Dataflow flaw where predictable default staging bucket names could let an attacker hijack staged artifacts and reach remote code execution on workers. Google has fixed the issue. Key takeaway: cloud pipelines should verify artifact ownership and integrity instead of trusting default infrastructure names or first-run setup paths.",
+          "url": "https://www.varonis.com/blog/shadow-dependency-in-gcp-dataflow-cross-tenant?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "varonis.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a21",
+          "order": 2,
+          "title": "HUNTING REPLICATION LAG: A QUEUE-BY-QUEUE METHOD FOR DIAGNOSING ORACLE GOLDENGATE",
+          "summary": "GoldenGate replication lag is best treated as a queueing problem across the whole pipeline, not something to blame on Replicat by default. The best approach is measuring each hop with heartbeat timestamps to find where backlog actually grows. That matters for both freshness and correctness, since in active-active systems lag also widens the conflict window.",
+          "url": "https://hackernoon.com/hunting-replication-lag-a-queue-by-queue-method-for-diagnosing-oracle-goldengate?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "hackernoon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-26:a22",
+          "order": 1,
+          "title": "BRINGING POST-QUANTUM CRYPTOGRAPHY TO GEOGRAPHICALLY FENCED KEY MANAGEMENT",
+          "summary": "Cloudflare's GeoKey Manager adds post-quantum encryption to region-bound keys, useful for teams that need cryptographic controls to enforce data-residency boundaries.",
+          "url": "https://blog.cloudflare.com/post-quantum-geo-key-manager?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a23",
+          "order": 2,
+          "title": "HPTS 2026 (DAY 1)",
+          "summary": "HPTS 2026's recurring lesson was that AI systems are advancing faster than our ability to specify, verify, and audit them, making logs, formal checks, and human review the real control plane.",
+          "url": "https://muratbuffalo.blogspot.com/2026/10/hpts-2026-day-1.html?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "muratbuffalo.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-26:a24",
+          "order": 3,
+          "title": "DOES AGENTIC RAG ACTUALLY RETRIEVE BETTER EVIDENCE? I TESTED IT ON 298 QUESTIONS",
+          "summary": "Across 298 questions and 2,000 arXiv papers, letting an agent search again gained 1.2 points, within noise.",
+          "url": "https://towardsdatascience.com/does-agentic-rag-actually-retrieve-better-evidence-i-tested-it-on-298-questions/?utm_source=tldrdata",
+          "reading_time_minutes": 23,
+          "source_domain": "towardsdatascience.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

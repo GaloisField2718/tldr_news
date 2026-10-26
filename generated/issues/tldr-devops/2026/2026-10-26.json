@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-26",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-26",
+  "source_path": "TLDR DevOps/article_26-10-2026.md",
+  "source_content_hash": "sha256:98c4ab6b394b689fb641eeda41f540b8afd9e9b4f1822bdb33a464a09054a318",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a04",
+          "order": 1,
+          "title": "GET YOUR AI AGENT THROUGH SECURITY REVIEW",
+          "summary": "Security approval is the top blocker to shipping AI agents, cited by 42% of teams in Nylas's State of Agentic AI: H2 2026 survey. Nylas IAM makes the reviewer's question easy to answer. Each service and agent gets its own API key, limited by permission and by boundary, from one mailbox up to a whole organization. Nylas checks every request before it reaches the provider and logs every call, including the ones it refuses. A read-only agent can draft a reply but can't send it. IAM is included on every plan.",
+          "url": "https://www.nylas.com/blog/nylas-iam-scoped-api-keys/?utm_source=&utm_medium=sponsoredemail&utm_campaign=tldr-nylas-oct-26&utm_content=header_ai_agent_through&utm_term=2026-10-26_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a05",
+          "order": 2,
+          "title": "SEE HOW NYLAS IAM WORKS",
+          "summary": "",
+          "url": "https://www.nylas.com/blog/nylas-iam-scoped-api-keys/?utm_source=&utm_medium=sponsoredemail&utm_campaign=tldr-nylas-oct-26&utm_content=cta_how_nylas_iam&utm_term=2026-10-26_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a06",
+          "order": 1,
+          "title": "AWS CONTINUUM FOR CODE VULNERABILITIES IS NOW GENERALLY AVAILABLE",
+          "summary": "AWS has made Continuum for code vulnerabilities generally available. It builds a context graph of an AWS environment, tests findings for exploitability in a sandbox, and opens pull requests with patches. Teams start in Learn mode and can move to Enforce mode.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-continuum-for-code-vulnerabilities-is-now-generally-available?utm_source=tldrdevops",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a07",
+          "order": 2,
+          "title": "EXPANDING CLAUDE AVAILABILITY AND DEPLOYMENT CHOICE ON GOOGLE CLOUD",
+          "summary": "Google Cloud now offers an Anthropic-managed deployment option for Claude models alongside its Google-managed one. Both provide the same models on day zero at the same pricing. The Anthropic-managed option adds immediate access to Claude Platform features such as Managed Agents.",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/expanding-claude-availability-on-google-cloud/?utm_source=tldrdevops",
+          "reading_time_minutes": 2,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a08",
+          "order": 3,
+          "title": "BROCCOLI2SHELL: EVERYTHING YOU NEED TO KNOW ABOUT THE CRITICAL BROTLI DECODER VULNERABILITY",
+          "summary": "CVE-2026-111497, also known as Broccoli2Shell, is a critical vulnerability in the Brotli decompression library that allows remote code execution. The flaw affects Node.js, Bun, and Envoy Proxy. Wiz data shows 91% of cloud environments have vulnerable resources. Organizations should apply security updates and rebuild affected workloads.",
+          "url": "https://www.wiz.io/blog/cve-2026-111497-brotli-rce-node-js?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a09",
+          "order": 1,
+          "title": "DETECTING AND MITIGATING ZDI-CAN-33367 AND FIVE OTHER LINUX FLAWS",
+          "summary": "A working root exploit for Linux kernel bug ZDI-CAN-33367 is public before a CVE or fix is available. TuxCare reproduced the proof of concept for local privilege escalation on Ubuntu, Debian, and AlmaLinux. A separate patch for the flaw is reviewed but not merged, and none of the six disclosed bugs has a CVE ID yet.",
+          "url": "https://webflow.sysdig.com/blog/detecting-and-mitigating-zdi-can-33367-and-five-other-linux-flaws?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "webflow.sysdig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a10",
+          "order": 2,
+          "title": "SHARD DESIGN DOESN'T START FROM YOUR TABLES",
+          "summary": "Neki \"shard groups\" let users co-locate related tables like customers and orders on the same physical cluster to keep joins and transactions local. Reference tables replicate lookup data to every shard, while global secondary indexes support queries that lack the shard key.",
+          "url": "https://planetscale.com/blog/shard-groups-the-unit-of-co-location?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a11",
+          "order": 3,
+          "title": "ORIGIN RANGE REQUESTS: SERVING LARGE FILES WITHOUT RANGE-REQUEST TUNING",
+          "summary": "Cloudflare rebuilt range-request caching in Pingora to coordinate partial downloads across cached data and in-flight origin fetches. The redesign roughly halved R2's p99 time to first byte and eliminated customer-managed range sizes, while a follow-up improvement reduced tiered-cache traffic for R2 and similar workloads by about 6%.",
+          "url": "https://blog.cloudflare.com/origin-range-requests/?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a12",
+          "order": 1,
+          "title": "HOW THE AWS NITRO SYSTEM DELIVERS CONFIDENTIAL COMPUTING",
+          "summary": "Protecting workloads from cloud operator access shouldn't require work on your part. The AWS Nitro System [12] provides strong isolation — monitoring, protecting, and verifying instance hardware and firmware. There is no mechanism for any person, including AWS's most",
+          "url": "https://aws.amazon.com/ec2/nitro/?trk=221ff974-e04d-4fa3-a095-9a0b04c5ff02&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a12-02",
+          "order": 2,
+          "title": "privileged admins, to access instance memory. Learn more.",
+          "summary": "",
+          "url": "https://aws.amazon.com/ec2/nitro/?trk=221ff974-e04d-4fa3-a095-9a0b04c5ff02&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a13",
+          "order": 3,
+          "title": "COOLIFY",
+          "summary": "Coolify is an open-source, self-hostable PaaS alternative to Vercel, Heroku, and Netlify. It allows users to deploy static sites, databases, and full-stack applications on their own servers. The tool offers more than 360 one-click services and automatic HTTPS certificates.",
+          "url": "https://github.com/coollabsio/coolify?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a14",
+          "order": 4,
+          "title": "QUESTDB 10.1: FRESHER DATA, LESS I/O, AND MORE ANALYSIS IN SQL",
+          "summary": "QuestDB 10.1 adds optional merge-append partitions that reduce rewriting when late data arrives, with background compaction reclaiming obsolete rows. On QuestDB's public demo, enabling the feature reduced rows written per ingested row from about 440 to 8. The release also adds exact percentiles and SQL subsampling.",
+          "url": "https://questdb.com/blog/questdb-10-1-release/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "questdb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a15",
+          "order": 1,
+          "title": "SCALE ISN'T ONE NUMBER: THREE WAYS A KUBERNETES CONTROL PLANE RUNS OUT OF ROOM",
+          "summary": "Kubernetes control planes run out of room in three independent ways: node count, object churn, and resident state. Joe Betz of Google describes four seams, including storage routing and cache residency, and a recipe ladder built from stock upstream components. Some seams still have upstream gaps.",
+          "url": "https://thenewstack.io/scaling-kubernetes-control-planes/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a16",
+          "order": 2,
+          "title": "RAILWAY PRELIMINARY REPORT: OCT 21ST SECURITY INCIDENT",
+          "summary": "Railway disclosed a security incident where an attacker accessed internal systems from October 20 to 22 to target AI provider API keys. Environment variables for approximately 100,000 workspaces, or 1.85% of the total, were potentially compromised. Railway revoked credentials with partner vendors and accelerated a rollout of single-tenant builder infrastructure.",
+          "url": "https://blog.railway.com/p/preliminary-report-october-security-incident?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "blog.railway.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-26:a17",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach DevOps and platform engineers where they actually pay attention. Learn more about sponsorship opportunities [17].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrdevops&utm_medium=newsletter&utm_campaign=quicklinks10262026&sp=LsJFKn98Zu9zgAEZAJBskHWa",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a18",
+          "order": 2,
+          "title": "GRAFANA APPLIES SLOS AND ERROR BUDGETS TO AI AGENT BEHAVIOUR",
+          "summary": "Grafana Labs proposes applying SLOs and error budgets to AI agent behavior, such as a 95% target for fulfilled conversations over 30 days.",
+          "url": "https://www.infoq.com/news/2026/10/grafana-slo-ai-agent/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-26:a19",
+          "order": 3,
+          "title": "PROMPT CACHING IS GA ON DIGITALOCEAN SERVERLESS INFERENCE: UP TO 90% OFF THE CONTEXT YOUR AGENTS RESEND",
+          "summary": "Prompt caching is now generally available on DigitalOcean Serverless Inference.",
+          "url": "https://www.digitalocean.com/blog/now-available-prompt-caching?utm_source=tldrdevops%5B20%5D%5B21",
+          "reading_time_minutes": 6,
+          "source_domain": "digitalocean.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
