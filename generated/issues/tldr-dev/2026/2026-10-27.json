@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-10-27",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-10-27",
+  "source_path": "TLDR Dev/article_27-10-2026.md",
+  "source_content_hash": "sha256:d3720fb8b64964c3602ebba8cdb8eba04b154f7b6e4bc2e6dc776858671ea864",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-10-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a04",
+          "order": 1,
+          "title": "AUTH.MD: LET AGENTS REGISTER FOR YOUR SERVICE WITHOUT A SIGN-UP FORM",
+          "summary": "Agents are already making decisions, connecting to systems, and finishing tasks. The sign-up form is where they stall, because it needs a human.\n\nauth.md [5] is an open protocol from WorkOS. You publish one markdown file that tells agents how to register for your service, and a small set of HTTP endpoints hands them credentials.",
+          "url": "https://workos.com/auth-md?https%3A%2F%2Fworkos.com%2Fblog%2Fauth-md-one-week-later=",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a04-02",
+          "order": 2,
+          "title": "your app",
+          "summary": "",
+          "url": "https://workos.com/auth-md?https%3A%2F%2Fworkos.com%2Fblog%2Fauth-md-one-week-later=",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a06",
+          "order": 1,
+          "title": "HOW THE CLAUDE CODE TEAM DOES CODE REVIEW",
+          "summary": "The Claude Code team reported more than twice as many merged PRs from June to September while the share requiring reverts fell by over 40%. Its process combines automated review before and after PR creation, security checks, human approval scaled by risk, and fast rollback. It also caps review cycles after one PR bounced between agents more than fifty times overnight.",
+          "url": "https://links.tldrnewsletter.com/eEzcyw",
+          "reading_time_minutes": 16,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a07",
+          "order": 2,
+          "title": "PYTHON AND POSTGRES DON'T AGREE ON WHAT “CET” MEANS",
+          "summary": "A timezone accepted by Python broke Mergify's merge-freeze queries because Postgres rejected it, and the investigation uncovered four names that silently differ by an hour in summer. The fix uses one curated timezone list and integration tests that compare both systems, rather than validating against either runtime alone.",
+          "url": "https://mergify.com/blog/python-postgres-disagree-on-cet?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "mergify.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a08",
+          "order": 3,
+          "title": "FIXING TOOL-CALL ACCURACY IN VLLM",
+          "summary": "Ubicloud found that Kimi K2.6 served through vLLM produced schema-valid tool calls only 92% of the time. Constrained decoding raised schema accuracy to 100% for its supported Kimi and DeepSeek models by blocking invalid tokens during generation, though that guarantee does not establish whether a tool call is useful or correct.",
+          "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "ubicloud.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a09",
+          "order": 1,
+          "title": "DESIGN SYSTEMS SHOULD BE FAST BY DEFAULT",
+          "summary": "Tests across ten design systems show that bundle size alone misses expensive interactions such as opening a 249-option selector or selecting 100 checkboxes. The investigation traces slow paths to repeated slot scans, layout thrashing, and animations, then supplies Playwright performance budgets that teams can run on each pull request.",
+          "url": "https://denodell.com/blog/design-systems-should-be-fast-by-default?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "denodell.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a10",
+          "order": 2,
+          "title": "YOUR DOCUMENTATION QUALITY IS YOUR AI QUALITY NOW",
+          "summary": "AI tools need explicit document structure and a clear source of truth to retrieve useful context. Real headings, native lists, and one maintained copy help more than visual formatting, while conversion tools need care because Word comments and tracked changes can disappear during a Markdown round trip.",
+          "url": "https://ben.balter.com/2026/10/26/documentation-quality-is-ai-quality/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "ben.balter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a11",
+          "order": 3,
+          "title": "WEBSITES SHOULD BE PRINTABLE",
+          "summary": "Print styles let readers annotate and use text-heavy websites away from the screen. This small CSS walkthrough covers hiding navigation, adjusting type, and making links legible in grayscale, with an update acknowledging fixes prompted by reader feedback.",
+          "url": "https://brennenputh.me/blog/printable-websites/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "brennenputh.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a12",
+          "order": 1,
+          "title": "🆕 WHAT IF YOUR DOCS COULD UPDATE THEMSELVES?",
+          "summary": "PR's shipped 🎉... but what about the docs 😱? Mintlify Autopilot is an always-on docs agent: merge a feature and it drafts the docs change and opens a PR for review. It turns repeat support questions into new pages and learns your style. See how it works [12] or try Autopilot [13].",
+          "url": "https://www.mintlify.com/blog/autopilot?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=MON2026&utm_content=secondary_MMDD_autopilot_blog&utm_term=2026-MM-DD_tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "mintlify.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a14",
+          "order": 2,
+          "title": "INTRODUCING GPT-6.1 TERRA",
+          "summary": "GPT-6.1 Terra combines visual reasoning, computer use, and coding with standard API prices of $1 per million input tokens and $5 per million output tokens. OpenAI reports 50.3% on Terminal-Bench 4.0 at maximum reasoning effort, while recommending GPT-6.1 Sol or GPT-6 Astra for the most complex coding tasks.",
+          "url": "https://links.tldrnewsletter.com/OuE7XH",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a15",
+          "order": 3,
+          "title": "OPENBOT",
+          "summary": "OpenBot runs persistent AI teammates in a desktop workspace, giving each agent its own conversation, files, task queue, and access to an embedded browser. It supports Codex, Claude Code, and other agent runtimes. The development preview runs agents with broad access and no per-action approvals.",
+          "url": "https://github.com/nightly-labs/openbot?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a16",
+          "order": 4,
+          "title": "THINKRAIL",
+          "summary": "ThinkRail wraps the pi coding agent in an IDE with editors, terminals, and isolated Git worktrees for parallel tasks. Living SPEC.md files and reusable skills preserve project context across sessions, while built-in GitHub controls expose PR status, CI checks, and review decisions.",
+          "url": "https://github.com/JetBrains/thinkrail?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a17",
+          "order": 1,
+          "title": "CROSS-REQUEST KV CACHE EXPOSURE IN WORKERS AI",
+          "summary": "Cloudflare reports that 155 GLM-5.3 responses exposed data from other customers after oversized prompts encountered a KV cache capacity mismatch and an SGLang error-handling bug. The model was restored in September after remediation, and the October disclosure explains how a rejected request could still decode against stale cache pages.",
+          "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a18",
+          "order": 2,
+          "title": "SIMD-ACCELERATED COMPUTER VISION ON A $2 MICROCONTROLLER",
+          "summary": "An ESP32-S3 FAST feature detector uses 128-bit SIMD instructions to process sixteen pixels at a time, reaching about 6 milliseconds per 320-by-240 frame. The implementation works around unaligned loads and signed-only comparisons, including an XOR trick that makes unsigned pixel values comparable.",
+          "url": "https://shraiwi.com/blog/simd-fast-esp32s3/?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "shraiwi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-10-27:a19",
+          "order": 1,
+          "title": "START TRACING CLAUDE MANAGED AGENTS AND THE MESSAGES API IN MINUTES",
+          "summary": "5 minutes. 4 steps. Open Sentry, paste your DSN, and see every model/call/tool/token from Claude Managed Agents & Messages API, with",
+          "url": "https://sentry.io/cookbook/trace-claude-platform-with-opentelemetry/?utm_source=tldr&utm_medium=paid-community&utm_campaign=tracing-fy27q3-cookbook&utm_content=newsletter-quick-links-otel-claude-trysentry",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a19-02",
+          "order": 2,
+          "title": "no code to change. Try it now.",
+          "summary": "",
+          "url": "https://sentry.io/cookbook/trace-claude-platform-with-opentelemetry/?utm_source=tldr&utm_medium=paid-community&utm_campaign=tracing-fy27q3-cookbook&utm_content=newsletter-quick-links-otel-claude-trysentry",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a20",
+          "order": 3,
+          "title": "INTRODUCING TANSTACK REDACT",
+          "summary": "Redact swaps React's browser runtime for a smaller compatible implementation, with synchronous rendering that trades away interruptible scheduling.",
+          "url": "https://tanstack.com/blog/introducing-tanstack-redact?utm_source=tldrdev",
+          "reading_time_minutes": 3,
+          "source_domain": "tanstack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a21",
+          "order": 4,
+          "title": "FULLY CUSTOMISE YOUR SELECT ELEMENTS",
+          "summary": "Native select controls can use appearance: base-select and picker pseudo-elements for custom styling while falling back to ordinary controls in unsupported browsers.",
+          "url": "https://www.tempertemper.net/blog/fully-customise-your-select-elements?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "tempertemper.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a22",
+          "order": 5,
+          "title": "TYPE SERVER PROTOCOL",
+          "summary": "Microsoft's JSON-RPC protocol exposes Python type queries, import resolution, and snapshot-based analysis state using LSP conventions.",
+          "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-10-27:a23",
+          "order": 6,
+          "title": "OLDEST GUI APPLICATION THAT STILL RUNS ON WINDOWS 11",
+          "summary": "A November 1992 CD player still launches on Windows 11 using the system C runtime, while running 1985 Reversi requires the separate otvdm compatibility layer.",
+          "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/?utm_source=tldrdev%5B24%5D%5B25",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.enlyth.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-10-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-10-27",
+  "source_path": "TLDR InfoSec/article_27-10-2026.md",
+  "source_content_hash": "sha256:51573e22533fa626bea0ede02232dd02a4e679621e51188ff5a019076a908c28",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-10-27",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a04",
+          "order": 1,
+          "title": "THE VOLUNTEER WHO PATCHED PHP 5.6 WHEN NOBODY ELSE WOULD.",
+          "summary": "When PHP2Shell broke, official releases stopped at 8.2. Ondřej Surý, who has packaged PHP for Debian and Ubuntu as a volunteer for 20 years, backported fixes all the way to 5.6 the same afternoon. Read how the leaked disclosure week unfolded [5]and why one maintainer carried so much of it. His backports rescued old branches once.\n\nIf you run end-of-life PHP in production, HeroDevs NES for PHP [6]ships a supported fix for every CVE, with no code changes.",
+          "url": "https://www.herodevs.com/support/nes-for-php?utm_source=tldr-infosec&utm_medium=paid-sponsorship&utm_campaign=product-general_global&utm_content=product-page_none_20261027_a_header_volunteer_who_patched&utm_term=2026-10-27",
+          "reading_time_minutes": null,
+          "source_domain": "herodevs.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a07",
+          "order": 1,
+          "title": "GHEIST: ATTEMPTED SCALED ABUSE OF STOLEN GITHUB TOKENS STUMBLES",
+          "summary": "Attackers wielding stolen GitHub tokens from more than 850 accounts planted over 13,500 \"sync-check\" workflows that base32-encode repository and environment secrets to evade log masking, then pulled the logs through GitHub's own API and deleted the runs. GitHub's approval hold blocked every public-repository run, but private repositories and GitHub Enterprise Server executed the payload, with a newer variant sweeping self-hosted runners for cloud, Kubernetes, and AI provider credentials. Defenders should hunt for ci-sync-* branches, the gheist user agent, and OIDC role assumptions from those branches, then rotate every secret an affected repository could reach, since deleting the branch does not undo the exposure.",
+          "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a08",
+          "order": 2,
+          "title": "HACKERS CLAIM 590GB PWC DATA THEFT",
+          "summary": "The Everest extortion group claims to have stolen 590GB of data from PwC, including HR and regional training data exports, integration documents, software components, and eLearning materials. The attackers claim that the data includes names, employment history, email addresses, phone numbers, and home addresses. PwC acknowledged the breach but stated that the affected site did not store client info, personal data, or financial information.",
+          "url": "https://www.idnfinancials.com/news/70767/hackers-claim-590-gb-pwc-data-theft-company-responds?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "idnfinancials.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a09",
+          "order": 3,
+          "title": "CRITICAL HTTP2SHELL BROTLI VULNERABILITY TRIGGERS EMERGENCY PATCHES",
+          "summary": "Originally reported as a Node.js vulnerability, researchers found that a critical flaw in the Brotli decoder could affect software across multiple ecosystems that use it. The vulnerability stems from a buffer overflow that an attacker can exploit with a specially crafted Brotli-compressed stream. Node.js, .NET, and several Python libraries released emergency patches to fix the vulnerability.",
+          "url": "https://links.tldrnewsletter.com/JNptOD",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a10",
+          "order": 1,
+          "title": "HOW LLM-BASED PENETRATION TESTING HARNESSES WORK",
+          "summary": "Utku Sen tested three open-source LLM penetration-testing harnesses - Cairn, Artex, and Strix - against a deliberately vulnerable e-commerce site containing DOM XSS, unpaid purchases, IDOR, and account takeover. A harness turns model output into real actions: reading files, running commands, browsing, and using tools such as Nmap, Nuclei, Katana, and Playwright. Cairn pursued single goals through planner and worker agents. Artex, linked by CrowdStrike to attacks on South Korean finance targets, used its own agent library and found all vulnerabilities except account takeover. Strix added reconnaissance, defined vulnerability classes, and produced a structured report. Sen found that a Pi harness using DeepSeek with a simple goal prompt found the account-takeover flaw and outperformed Cairn.",
+          "url": "https://links.tldrnewsletter.com/k6fGoP",
+          "reading_time_minutes": 16,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a11",
+          "order": 2,
+          "title": "SECURITY ASSESSMENT REPORT — TAILSCALE V1.104.2 AND HEADSCALE V0.29.5",
+          "summary": "Researchers report verified flaws in Tailscale v1.104.2 and headscale v0.29.5. Tailscale SSH Unix-socket forwarding runs as root, enabling privilege escalation, socket replacement, root-file deletion, enrollment-key theft, and rogue node enrollment. The experimental conn25 connector lets an entitled user reach cloud metadata, internal LANs, and Kubernetes services without destination validation. Headscale has unauthenticated memory-exhaustion and onboarding-lockout issues. Recommended controls include per-pair SSH grants, forwarding disabled, connector egress allowlists, hardware-bound credentials, and control-plane node deletion during incident response.",
+          "url": "https://links.tldrnewsletter.com/uuCImC",
+          "reading_time_minutes": 48,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a12",
+          "order": 3,
+          "title": "HOW THE CLAUDE CODE TEAM DOES CODE REVIEW",
+          "summary": "To account for the number of changes being made, Anthropic shifted to a model where Claude Code serves as the primary code reviewer, with most PRs requiring at most one human in the loop. Developers run tests, builds, and lints, etc., locally before opening a PR. Every PR runs standard CI checks, plus a security and bug review. A classifier then determines whether zero, one, or two reviewers are needed before the change enters a merge queue, and changes are rolled out internally via feature flags before reaching a public release. Anthropic uses data from incidents as well as metrics from PRs to evaluate and tune their reviewer agents.",
+          "url": "https://links.tldrnewsletter.com/vGTLmL",
+          "reading_time_minutes": 14,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a13",
+          "order": 1,
+          "title": "DATADOG CISO PLAYBOOK: AI IS A BATTLE ON TWO FRONTS",
+          "summary": "Forward-looking security leaders aren't just defending against AI-driven threats. They're operationalizing AI inside security operations and helping engineers build more resilient AI systems. Datadog's playbook [13] maps the decisions and risks that matter most as AI becomes part of the production stack: machine identities, unified observability, trust, and regulatory readiness. Get your copy",
+          "url": "https://www.datadoghq.com/resources/ciso-playbook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-content-ebook-2026cisoplaybook-security-multi-ww-en-701vy00000whyjjya0-tldrinfosec-secondary-102726",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a13-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/ciso-playbook/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-content-ebook-2026cisoplaybook-security-multi-ww-en-701vy00000whyjjya0-tldrinfosec-secondary-102726",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a14",
+          "order": 3,
+          "title": "OPENQODEX",
+          "summary": "Open-source AI code review for coding agents. A separate reviewer checks every change your agent writes before you push, in Claude Code, Codex, Cursor, and Cline. No account or key of its own.",
+          "url": "https://github.com/openqodex/openqodex?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a15",
+          "order": 4,
+          "title": "KALI LINUX 2026.3",
+          "summary": "Kali Linux 2026.3 features new build scripts, an upgraded desktop environment to KDE Plasma 6.7, updated packages and the kernel, and six new tools: dalfox, katana, qsreplace, rustscan, sdrangel, and snaffler-ng.",
+          "url": "https://links.tldrnewsletter.com/NnL5yu",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a16",
+          "order": 5,
+          "title": "DEVIN SECURITY: FIND AND FIX YOUR MOST DANGEROUS VULNERABILITIES",
+          "summary": "Devin Security now runs deep scans powered by Claude Mythos and other frontier cyber models, giving enterprises access to those models without separate onboarding. It re-scores findings from its own scans and existing tools against a living threat model built with each team, then resolves them by relabeling them with evidence, applying infrastructure mitigations, or opening validated fix PRs from thousands of parallel VM sessions. Cognition is also committing hundreds of millions of dollars in free scans and remediation credits, though risk relabeling still requires human approval, and KEV-listed flaws are never downgraded.",
+          "url": "https://cognition.com/blog/devin-security?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "cognition.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a17",
+          "order": 1,
+          "title": "WHO DO YOU TRUST WHEN YOU TRUST A CERTIFICATE? THE EMUDHRA INCIDENT EXPLAINED",
+          "summary": "One of eight compromised eMudhra intermediate CA private keys was literally the number 4, the result of a flawed April 2025 key ceremony that left the top 376 bits of every key zeroed. Browsers blocked the intermediates within hours through OneCRL, CRLSets, and Certificate Transparency checks, but Python, Go, Node, Java, and curl skipped revocation entirely and kept trusting forged chains until their bundled trust stores changed. The fixes split along architecture lines, with certifi, Debian, and uv dropping the entire emSign G3 root while Go and Node denylisted only the eight broken keys, sparing roughly 30,000 legitimate certificates.",
+          "url": "https://blog.codeminer42.com/who-do-you-trust-when-you-trust-a-certificate-the-emudhra-incident-explained/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.codeminer42.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a18",
+          "order": 2,
+          "title": "UK BIOBANK BACK ONLINE SOON, MONTHS AFTER SOMEONE TRIED TO SELL 500K PEOPLE'S DATA ON ALIBABA",
+          "summary": "UK Biobank says its Research Analysis Platform is secure and will reopen after government approval. The April attack led to data for all 500,000 volunteers being listed for sale on Alibaba. Access will return in phases: manual file review before downloads, no result downloads initially, 15-minute idle logouts with 2FA, isolated browsing, SSH removal, and CLI limits. Researchers must remove de-identified participant data from code repositories before regaining access.",
+          "url": "https://www.theregister.com/security/2026/10/26/uk-biobank-back-online-soon-months-after-someone-tried-to-sell-500k-peoples-data-on-alibaba/5305363?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a19",
+          "order": 3,
+          "title": "UCREATOR ANDROID SPYWARE CAN STEAL TELEGRAM 2FA PASSWORDS AND CLONE WECHAT ACCOUNTS",
+          "summary": "The uCreator Android spyware kit hides inside sideloaded Telegram and Telegram X builds or runs WeChat in its own container. It can read chats, capture Telegram 2FA passwords before hashing, reset sessions, change phone numbers, and hide attacker devices. Its WeChat module extracts login credentials and clones accounts. A leaked backend shows a rentable service with customer IDs, phone farms, bulk-contact operations, and scheduled activity designed to evade platform risk checks.",
+          "url": "https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-10-27:a20",
+          "order": 1,
+          "title": "HOW INTENT-BASED ACCESS CONTROLS MAKE AI AGENTS SAFE TO DEPLOY",
+          "summary": "In a 1Password survey, 74% of developers saw AI agents make unintended actions. Learn how intent-based access reduces agent risk.",
+          "url": "https://1password.com/resources/securing-the-agentic-enterprise-whitepaper?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_unifiedaccess_gc_securing-the-agentic-enterprise-whitepaper_sa&utm_content=newsletter_infosec_102726",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a20-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://1password.com/resources/securing-the-agentic-enterprise-whitepaper?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_unifiedaccess_gc_securing-the-agentic-enterprise-whitepaper_sa&utm_content=newsletter_infosec_102726",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a21",
+          "order": 3,
+          "title": "DUTCH POLICE ARREST TWO OVER NFC RELAY ATTACKS THAT DRAINED $400,000+ FROM BANK ACCOUNTS",
+          "summary": "Dutch police arrested two men for a bank help desk fraud scheme that stole more than €380,000, about $425,600, from 170 victims.",
+          "url": "https://links.tldrnewsletter.com/4OAmaJ",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a22",
+          "order": 4,
+          "title": "MICROSOFT RELEASES EMERGENCY .NET SECURITY FIXES FOR GOOGLE BROTLI BUG",
+          "summary": "Microsoft shipped out-of-band fixes for .NET 8 through 11 to address Broccoli2Shell (CVE-2026-111497), a Brotli buffer overflow rated \"Exploitation More Likely\" that also affected Node.js, Python, Bun, Envoy, Istio, and FFmpeg through crafted JPEG XL images.",
+          "url": "https://www.theregister.com/security/2026/10/26/microsoft-releases-emergency-net-security-fixes-for-google-brotli-bug/5305515?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-10-27:a23",
+          "order": 5,
+          "title": "FORMER PENTESTER USED ARTEX AI TO STEAL 8.2 MILLION DATA RECORDS",
+          "summary": "South Korean police arrested seven suspects led by a 32-year-old former pentester who used the ARTEX AI pentesting framework to breach over 90 organizations, steal 8.2 million records, and demand $270,000 in ransoms in 38 cases, marking Korea's first arrest for large-scale AI-enabled hacking.",
+          "url": "https://links.tldrnewsletter.com/R6Sfee[24][25",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
