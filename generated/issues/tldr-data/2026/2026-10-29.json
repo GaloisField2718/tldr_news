@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-10-29",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-10-29",
+  "source_path": "TLDR Data/article_29-10-2026.md",
+  "source_content_hash": "sha256:5b6aa6137dd004363d259531c3155c2ba06a81e3408d5290148f0de9137955ba",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-10-29",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a04",
+          "order": 1,
+          "title": "SIMPLIFY RAG WITH REDIS CLOUD AND AMAZON BEDROCK",
+          "summary": "What if a tool already in your stack could handle vector data reliably and efficiently? Redis Cloud combines with Amazon Bedrock to deliver production-ready RAG using your existing infrastructure:\n\n* FAMILIAR TOOLING: Vector storage with the same syntax and tooling you already know — no new libraries required. * ENRICH LLM CONTEXT: Add data to LLMs without fine tuning or training a model. * FREE TRIAL: Activate your Redis Cloud free trial [4] in AWS Marketplace.",
+          "url": "https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq?trk=c1ba5d73-6ff2-4ba7-9701-bb0052e32008&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-29:a05",
+          "order": 2,
+          "title": "on AWS →",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/build-learn/data-analytics/rag-implementation?trk=53c1efbb-1c34-4d3d-a8d8-6f6d414de6c5&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a06",
+          "order": 1,
+          "title": "THE 2026 CLOUD DATA WAREHOUSE BENCHMARK",
+          "summary": "At 100 GB, MotherDuck led in single-user speed and cost (235 ms, $0.00124/query), Fabric served 100 concurrent users under five seconds for $5.76/hour, and ClickHouse failed 20.4% of single-user runs. Databricks had the smallest latency increase from 1 GB to 1 TB (3.7x versus MotherDuck's 30x), with tuning and autoscaling disabled throughout.",
+          "url": "https://warehouse-benchmark.estuary.dev/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "warehouse-benchmark.estuary.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a07",
+          "order": 2,
+          "title": "THE PAPER THAT SPLIT THE DATABASE IN FOUR: INSIDE AZURE SQL DATABASE HYPERSCALE, AKA SOCRATES",
+          "summary": "Azure SQL once kept four full copies of each database, which capped practical size at around 4 TB. The 2019 Socrates paper separated the log from storage, so durability and availability could scale apart. This change in approach let Hyperscale reach 100 TB, halve storage copies, and restore a 50 TB database in minutes.",
+          "url": "https://devblogs.microsoft.com/azure-sql/the-paper-that-split-the-database-in-four-inside-azure-sql-database-hyperscale-aka-socrates/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "devblogs.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a08",
+          "order": 3,
+          "title": "HOW JD.COM BUILT A LAKESTREAM WITH APACHE FLUSS AND APACHE HUDI",
+          "summary": "JD replaced parallel streaming and batch training-data pipelines with a staged migration: write once to Fluss, tier to Hudi, and union fresh plus historical reads. The difficult part is consistency: workers coordinate a single Hudi commit per tiering round and report matched stream offsets only after it completes. That pattern enables rollback-safe catch-up, but leaves schema evolution and dynamic bucketing unresolved.",
+          "url": "https://fluss.apache.org/blog/how-jd-built-a-lakestream-with-fluss-and-hudi?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "fluss.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a09",
+          "order": 4,
+          "title": "BEST PRACTICES FOR SINGLE ROW LOOKUPS (POINT QUERIES)",
+          "summary": "DataFusion can perform surprisingly well on point lookups when tuned for retrieval instead of analytics. The biggest gains came from storage layout and execution choices that minimize unnecessary work, such as sorted Parquet files, right-sized row groups, metadata caching, and prepared statements. The broader lesson is that analytical engines can serve low-latency reads if the workload is designed deliberately.",
+          "url": "https://datafusion.apache.org/blog/2026/10/24/point-queries?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "datafusion.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a10",
+          "order": 1,
+          "title": "GETTING AN ANALYTICS AGENT FROM 50% TO 96% ACCURACY",
+          "summary": "Benchouse improved nao's accuracy from 49.6% to 88.2% by switching from Sonnet to Opus, then reached 96.5% with better context. The key fixes clarified business metrics, removed ambiguous terminology, and told the agent to use agreed calculations before suggesting alternatives.",
+          "url": "https://benchouse.ai/blog/getting-an-analytics-agent-from-50-to-96?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "benchouse.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a11",
+          "order": 2,
+          "title": "THE BENCHMARKING CRISIS",
+          "summary": "AI code generation is helping database engines game ClickBench. One, pgrust, groups strings by hash value alone, caches predicates the benchmark repeats, and on one query skips most of the data. Any benchmark stops being useful once systems optimise for it, and vibe-coded engines have no customers to keep them honest.",
+          "url": "http://databasearchitects.blogspot.com/2026/10/the-benchmarking-crisis.html?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "databasearchitects.blogspot.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a12",
+          "order": 1,
+          "title": "BUILD WITH AI ASSETS FREE FOR 30 DAYS",
+          "summary": "Browse ready-made apps, agents, skills, and MCP connectors by industry or data domain. Connect to live, governed data and run in minutes. Made for builders who want to move fast.",
+          "url": "https://precisely.ai/explore?utm_source=Third-Party-Program&utm_medium=TLDR&utm_campaign=Data-Integrity_AMER_3rd-Party-Program-TLDR-AI-Studio-Trial_Q4-2026",
+          "reading_time_minutes": null,
+          "source_domain": "precisely.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-10-29:a12-02",
+          "order": 2,
+          "title": "Explore free assets",
+          "summary": "",
+          "url": "https://precisely.ai/explore?utm_source=Third-Party-Program&utm_medium=TLDR&utm_campaign=Data-Integrity_AMER_3rd-Party-Program-TLDR-AI-Studio-Trial_Q4-2026",
+          "reading_time_minutes": null,
+          "source_domain": "precisely.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a13",
+          "order": 3,
+          "title": "Start your free trial",
+          "summary": "",
+          "url": "https://precisely.ai/signup-gate?utm_source=Third-Party-Program&utm_medium=TLDR&utm_campaign=Data-Integrity_AMER_3rd-Party-Program-TLDR-AI-Studio-Trial_Q4-2026",
+          "reading_time_minutes": null,
+          "source_domain": "precisely.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a14",
+          "order": 4,
+          "title": "PRIVACYLIB: PRIVACY CONTROLS AT THE DATA ACCESS BOUNDARY",
+          "summary": "Meta built PrivacyLib to enforce privacy rules at the moment data is accessed, replacing one-off integrations with shared controls that work across many systems. The key lesson is to normalize diverse data platforms into a small set of common operations, which makes policy enforcement reusable, scalable, and adaptable enough to extend from traditional infrastructure to AI agents.",
+          "url": "https://engineering.fb.com/2026/10/27/security/privacylib?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a15",
+          "order": 5,
+          "title": "EGRES: A POSTGRES-COMPATIBLE DATABASE FOR HEAVY, MULTI-TENANT WORKLOADS",
+          "summary": "What would Postgres look like if designed today? Egres is the answer: a new open-source database that speaks the Postgres protocol but shares almost no Postgres code. It runs thousands of tenants in one process, metering CPU, memory, and disk per query, and its benchmark used 46% less disk than Postgres 18.",
+          "url": "https://manishrjain.com/egres/?utm_source=tldrdata",
+          "reading_time_minutes": 26,
+          "source_domain": "manishrjain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a16",
+          "order": 6,
+          "title": "GEMS OF DUCKDB 2.0.0",
+          "summary": "DuckDB 2.0 adds a Python appender for batching generated rows, CLI function manuals and queryable command history, plus secure views that hide underlying statistics and query plans. Other additions include custom partition paths, sorting within exported partitions, direct GeoJSON exports, and support for extension-defined window functions.",
+          "url": "https://duckdb.org/2026/10/26/gems-of-duckdb-200.html?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a17",
+          "order": 7,
+          "title": "SLAYER",
+          "summary": "SLayer is an MIT-licensed, embeddable semantic layer for governed agent and human access to warehouse data through MCP, REST, SQL, or Python. It combines read-only connectivity, SQL translation, transformations, row-level security, semantic search, and memory, and imports dbt, Cube, or Ossie definitions. Its expression model supports ratios, time shifts, and multi-stage queries beyond fixed BI metrics.",
+          "url": "https://github.com/MotleyAI/slayer?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a18",
+          "order": 1,
+          "title": "MAKING FAILURE DIAGNOSIS RELIABLE WITH PENSIVE AI",
+          "summary": "Netflix made failure diagnosis more reliable by using LLMs to identify the exact log spans behind an error and provide on-demand root-cause analysis, instead of asking models to digest entire logs. That design improved coverage to all failures while reducing hallucination risk and latency, and early usage data suggests it sharply cuts manual log exploration during debugging.",
+          "url": "https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "netflixtechblog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a19",
+          "order": 2,
+          "title": "DUCKDB UNIVERSE",
+          "summary": "The DuckDB Universe is a searchable map of 516 open-source projects and 59 companies and products using DuckDB, spanning extensions, dashboards, libraries, and database integrations. Entries include GitHub star counts and source links, with examples ranging from PyGWalker and Evidence to MotherDuck and DeepSeek's smallpond.",
+          "url": "https://duckdb-universe.vercel.app/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "duckdb-universe.vercel.app",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-10-29:a20",
+          "order": 1,
+          "title": "REDUCING BIGQUERY COSTS THROUGH ITS BIGGEST PROBLEM: THE USERS",
+          "summary": "An open-source BigQuery FinOps agent cuts waste from user-written SQL by detecting common cost mistakes, rewriting queries, and validating savings before execution.",
+          "url": "https://blog.dataengineerthings.org/reducing-bigquery-costs-through-its-biggest-problem-the-users-f2ec54576eb1?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.dataengineerthings.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-10-29:a21",
+          "order": 2,
+          "title": "HOW FLINK'S KAFKA CONNECTOR COMMITS OFFSETS TO KAFKA",
+          "summary": "Flink's Kafka connector now reconciles checkpoint state with Kafka's actual position, preventing misleading offsets on transactional topics and making its committed-offset metric match Kafka tooling without weakening exactly-once processing.",
+          "url": "https://dalelane.co.uk/blog?p=6161&utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "dalelane.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
