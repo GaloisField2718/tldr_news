@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-10-30",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-10-30",
+  "source_path": "TLDR DevOps/article_30-10-2026.md",
+  "source_content_hash": "sha256:68b3cd62397d48f189cabfd254fd1ba97aaacc15d4bd03c808cf03d9da44fe1b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-10-30",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a04",
+          "order": 1,
+          "title": "HUNT EXPLOITABLE VULNERABILITIES IN YOUR OWN APP",
+          "summary": "Don't have Mythos access? Chainguard Harness [5]builds your app from source in an isolated environment, then lets Mythos 5.1 hunt through a live instance for exploitable vulnerabilities. Each finding is reproducible and delivered with a recommended fix.\n\n> CATCH RISKS EARLY: Find and patch exploitable vulnerabilities in your custom code and OSS before attackers do.\n\n> REFOCUS ENGINEERING: Reproducible findings focus team attention and resources on the most actionable issues that are based specifically on your code.\n\n> AVOID A MASSIVE BILL: Skip building a custom test harness and burning cash on unoptimized tokens.",
+          "url": "https://www.chainguard.dev/products/harness?utm_source=tldr&utm_medium=3p-sponsorship&utm_campaign=2026-10-30_primary_chainguard&utm_content=devopsnewsletter1_header_hunt_exploitable_vulnerabilities&utm_term=2026-10-30",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a06",
+          "order": 2,
+          "title": "Join the Chainguard Harness waitlist.",
+          "summary": "",
+          "url": "https://www.chainguard.dev/products/harness?utm_source=tldr&utm_medium=3p-sponsorship&utm_campaign=2026-10-30_primary_chainguard&utm_content=devopsnewsletter1_cta_chainguard_harness_waitlist&utm_term=2026-10-30",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a07",
+          "order": 1,
+          "title": "MATCH MONITORING DEPTH TO WORKLOAD NEEDS WITH INFRASTRUCTURE BASIC",
+          "summary": "Datadog describes Infrastructure Basic, a lightweight tier that collects core host metrics and selected process status for lower-priority workloads. It uses the same Agent in basic mode and can run alongside Pro or Enterprise tiers in one organization.",
+          "url": "https://www.datadoghq.com/blog/infrastructure-monitoring-basic/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a08",
+          "order": 2,
+          "title": "ANNOUNCING THE WORKLOAD CONFORMANCE WORKING GROUP",
+          "summary": "The Kubernetes community launched a Workload Conformance Working Group to write a shared specification and tests for how workloads behave at runtime. The group aims for a stable first specification within two to three release cycles and seeks input from operators and application maintainers.",
+          "url": "https://kubernetes.io/blog/2026/10/27/announcing-workload-conformance-wg/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "kubernetes.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a09",
+          "order": 3,
+          "title": "SUPABASE COMPUTE: RUN YOUR AGENTS INSIDE YOUR PROJECT",
+          "summary": "Supabase launched Supabase Compute in private alpha to run agents, background jobs, and APIs directly alongside user data. The offering currently supports the us-west-2 region. Dreambase reported query latency dropped from 65 ms in another region to a median of 2.9 ms after moving a data agent to the new platform.",
+          "url": "https://supabase.com/blog/supabase-compute-private-alpha?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "supabase.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a10",
+          "order": 1,
+          "title": "ONE HUB, 34 CLUSTERS: LESSONS FROM A GITOPS CONTROL PLANE AT SCALE",
+          "summary": "Nitish Mane describes an Argo CD hub that managed 34 clusters across 22 AWS accounts and one Oracle Cloud tenancy from a repository of 174 Helm charts. Per-cluster contracts, CI manifest diffs, and no-prune settings kept changes safe, and onboarding reportedly fell from 4 days to 1.7 hours.",
+          "url": "https://cloudnativenow.com/contributed-content/one-hub-34-clusters-lessons-from-a-gitops-control-plane-at-scale/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a11",
+          "order": 2,
+          "title": "HOW TO INTEGRATE TERRAFORM WITH BACKSTAGE FOR SELF-SERVICE",
+          "summary": "Mattias Fjellström explains how to connect Terraform with Backstage through the software catalog, software templates that open pull requests, and the Spacelift plugin. Backstage collects requests but does not run Terraform, so version control remains the source of truth.",
+          "url": "https://spacelift.io/blog/terraform-backstage?utm_source=tldrdevops",
+          "reading_time_minutes": 17,
+          "source_domain": "spacelift.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a12",
+          "order": 3,
+          "title": "1M DURABLE WORKFLOWS PER SECOND ON POSTGRES",
+          "summary": "DBOS scaled a benchmark of no-op durable workflows from 20,000 per second on one Postgres server to one million across 50 shards using PgDog. The main obstacle was a contention feedback loop that collapsed throughput when a shard slowed down. Advisory locks limited concurrent dequeuers and restored stable scaling.",
+          "url": "https://www.dbos.dev/blog/one-million-workflows?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "dbos.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a13",
+          "order": 1,
+          "title": "MACRO",
+          "summary": "Macro is a unified workspace that combines email, chat, docs, tasks, agents, and CRM into a single interface with shared team memory. It links all objects, such as emails and tasks, via a bidirectional graph so AI agents and users can search across tools without switching contexts.",
+          "url": "https://github.com/macro-inc/macro?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a14",
+          "order": 2,
+          "title": "DEEPTUTOR",
+          "summary": "DeepTutor provides lifelong personalized tutoring with features like folder-based learning workspaces, daily practice, and persistent usage accounting. The open source platform includes over 100 CLI apps the tutor can run, supports OpenAI Codex OAuth for sign-in, and offers MCP Services stores on a per-account basis.",
+          "url": "https://github.com/HKUDS/DeepTutor?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a15",
+          "order": 1,
+          "title": "THE AI OBSERVABILITY RACE WILL BE WON ON INTEROPERABILITY",
+          "summary": "OpenTelemetry offers a common method to capture and describe AI behavior using shared conventions for conversations and messages. This standardization helps teams compare models, reduce duplicate integration work, and measure cost per outcome rather than just token counts.",
+          "url": "https://thenewstack.io/ai-observability-through-interoperability/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a16",
+          "order": 2,
+          "title": "THE PWN REQUEST RECKONING: WHAT STILL WORKS AGAINST GITHUB ACTIONS",
+          "summary": "GitHub's upcoming platform changes in 2026 will make pull_request_target attacks harder, but gaps remain involving outdated checkout versions, script injection, and unprotected triggers like issue_comment. Pinning actions to old SHA values predating the July 2026 backport release bypasses the new checkout protections entirely. The default policy also does not apply to private repositories or workflow_run events.",
+          "url": "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning?utm_source=tldrdevops",
+          "reading_time_minutes": 9,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-10-30:a17",
+          "order": 1,
+          "title": "ONE POD, ONE NODE: THE ARCHITECTURE BEHIND SERVERLESS KUBERNETES ON AWS",
+          "summary": "AWS Fargate for EKS routes pods with an admission webhook, provisions a dedicated environment per pod through its own scheduler, and attaches each pod to the customer VPC through a dedicated network interface.",
+          "url": "https://thenewstack.io/serverless-kubernetes-aws-fargate/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-10-30:a18",
+          "order": 2,
+          "title": "GITHUB AGENTIC WORKFLOWS GENERALLY AVAILABLE",
+          "summary": "GitHub Agentic Workflows automates reasoning-based tasks like issue triage and CI failure analysis using coding agents inside GitHub Actions.",
+          "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available?utm_source=tldrdevops%5B19%5D%5B20",
+          "reading_time_minutes": 3,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
