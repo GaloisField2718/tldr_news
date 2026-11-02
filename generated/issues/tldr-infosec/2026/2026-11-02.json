@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-02",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-02",
+  "source_path": "TLDR InfoSec/article_02-11-2026.md",
+  "source_content_hash": "sha256:92dcb7264e9765a657feb82bf4bdde4d4276ec6fb9e5788aaa81f519cc3e7b64",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-02",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-02:a04",
+          "order": 1,
+          "title": "BINANCE RESUMES CUSTOMER WITHDRAWALS AFTER RECORD $6.3BN HACK",
+          "summary": "Binance has resumed phased withdrawals after a $6.3 billion theft. The FBI attributes the attack to North Korea-linked TraderTraitor, part of Lazarus Group. The breach involved a compromised laptop and malware that deleted evidence. Binance has replenished 90% of stolen assets and pledged to cover the remainder. The FBI warns that stolen funds are being converted into Ethereum and laundered through DeFi and instant swap services.",
+          "url": "https://www.theguardian.com/business/2026/nov/01/binance-losses-covered-hack-fbi-north-korea-cryptocurrency?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a05",
+          "order": 2,
+          "title": "ANTHROPIC VS CODE EXTENSION ON CURSOR BACKDOORED FOR NEARLY 12 HOURS",
+          "summary": "A malicious Claude VS Code extension, version 2.1.313, was published through Anthropic's official Cursor account. It targeted up to 5,000 developers, collected host and environment details, and tried to add an SSH key and open a reverse tunnel. Bugs limited persistence on Windows and macOS. Cursor removed it, blocked its server, rotated keys, and audited the marketplace, but users who installed or updated it on Thursday should check the published indicators of compromise.",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a06",
+          "order": 3,
+          "title": "HACKERS STEAL ABOUT $2.7 MILLION FROM POLYMARKET TRADERS VIA HIJACKED DEBUGBEAR SCRIPT",
+          "summary": "A hijacked DebugBear script on Polymarket's site used signed-in traders' browser sessions to sell or transfer their positions on October 29. Attackers received about $2.64 million in POL from 33 wallets within 52 minutes. Polymarket is refunding $3.9 million, including $2.7 million to 726 affected wallets. The compromise began through DebugBear's domain registrar.",
+          "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-02:a07",
+          "order": 1,
+          "title": "AGENTIC OFFENSIVE FRAMEWORKS HIT REAL INTRUSIONS",
+          "summary": "Google Threat Intelligence Group (GTIG) and Mandiant observed intruders using the open-source ARTEX framework with stolen credentials and letting its six sub-agents run Azure and AWS permission sweeps, Kerberoasting, DCSync, and MySQL log poisoning that wrote JSP webshells in bursts as short as 2 to 25 seconds. ARTEX users included financially motivated extortion groups and suspected PRC-nexus clusters such as UNC7228, which went from a first account to deep access in about four hours, though GTIG noted the agents were forensically noisy and sometimes undid each other's work. Mandiant recommended short-lived, tightly scoped credentials, locking down admin interfaces like Kudu/SCM as privileged infrastructure, and behavioral detection tuned for machine-speed bursts.",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks?utm_source=tldrinfosec",
+          "reading_time_minutes": 34,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a08",
+          "order": 2,
+          "title": "APPRAISAL BY AI: MODEL-DRIVEN VICTIM PRIORITIZATION IN THE VOLTA INFOSTEALER",
+          "summary": "VOLTA takes a \"steal everything, let AI sort it out\" approach: it grabs credentials, sessions, wallets, and cloud keys, then uses the victim's own Gmail, DoorDash, and Discord sessions to confirm details like a home address. It sends the resulting dossier through OpenRouter to Claude, falling back to Kimi and then Gemini if a model refuses, and gets back a ranked \"WHAT THEY'RE WORTH\" assessment of what the victim's assets could fetch. Talos assessed VOLTA as a commodity builder that runs entirely on third-party infrastructure. They recommended that defenders block or alert on non-developer processes launching Chrome with --headless, since that is how the stealer gets around App-Bound Encryption.",
+          "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "blog.talosintelligence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a09",
+          "order": 3,
+          "title": "DISCOVERING A BACKDOOR AND FLAWS IN MORE ENCRYPTED USB DRIVES",
+          "summary": "Vector 35 researcher Xusheng Li pointed Codex at Binary Ninja's MCP server and recovered the keys hardcoded in NetacFileLock, KakaSoft USB Copy Protection, and Nexcopy Copy Secure in 7 to 26 minutes each. In each product, the key was fixed in the binary, derived from an embedded seed, or unlocked by a certificate in the viewer, so the user's password never protected the files. Separately, time-travel debugging turned up two hidden accounts in SecZure's YutianDun drive, with passwords as weak as \"123456\", that could decrypt any file. Li skipped vendor disclosure because drives already in the field can't be patched, and he argued that client-side validation is never secure, so buyers should only trust drives that derive their encryption key from the user's password.",
+          "url": "https://binary.ninja/2026/10/22/breaking-more-encrypted-usb-drives-with-ai.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "binary.ninja",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-02:a10",
+          "order": 1,
+          "title": "NORTHSTAR SECURITY (PRODUCT LAUNCH)",
+          "summary": "Northstar Security provides a Security Context Graph from existing security and IT tools. It maps identities, assets, applications, vulnerabilities, and business systems, then flags risky combinations and starts supervised fixes such as installing endpoint protection or limiting access.",
+          "url": "https://www.northstar.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "northstar.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a11",
+          "order": 2,
+          "title": "AGENTMETRY",
+          "summary": "Agentmetry is an agent observability tool that records every tool call an agent makes on a machine, flags risky sequences, can block a call that your policy forbids, and keeps a record that a third-party can verify and forward to a SIEM.",
+          "url": "https://github.com/blitzcrieg1/agentmetry?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a12",
+          "order": 3,
+          "title": "BLA: BLIND LLM AGENTS",
+          "summary": "BLA is a tool to harden binaries against agentic reverse engineering. When an AI reverse engineering agent opens the binary, the analyzer his resource budgets, follows decoys, and burns tokens.",
+          "url": "https://github.com/qybaihe/bla?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-02:a13",
+          "order": 1,
+          "title": "MAX-SEVERITY GITLAB VULNERABILITY EXPLOITED AGAINST ALPINE LINUX",
+          "summary": "CVE-2026-97229, a CVSS 10 flaw in Ruby's Onigmo regex engine, lets unauthenticated attackers execute code through crafted GitLab CI/CD configurations. Attackers targeted Alpine Linux on October 20 to 21, crashed worker processes, and downloaded its container image. Alpine found no confirmed code execution or repository tampering, rebuilt the instance, and reset passwords. CISA added the bug to KEV. GitLab-only updates may be insufficient for custom Ruby deployments. Use Ruby 3.3.13, 3.4.12, 4.0.9, or later.",
+          "url": "https://links.tldrnewsletter.com/akghxg",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a14",
+          "order": 2,
+          "title": "CVE-2026-98432: WHICH LINUX KERNELS ARE STILL VULNERABLE",
+          "summary": "Mattias Geniar found 712 Multipath TCP listeners on his own Ubuntu 26.04 laptop, opened without his knowledge by Go programs like tailscaled, because Go 1.24 and later enable MPTCP on listening sockets by default. That matters because the only known exploit for CVE-2026-98432 needs an MPTCP listener. The bug is a use-after-free in the kernel's IPv4 TCP handshake that dates back to Linux 4.4 and can be reached with a single SYN. Upstream stable kernels were fixed in mid-October, and Debian, Amazon Linux, and Oracle UEK have shipped patches, but Ubuntu and RHEL still had no fixed kernel as of November 1.",
+          "url": "https://ma.ttias.be/linux-cve-2026-98432-vulnerable-kernels/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "ma.ttias.be",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a15",
+          "order": 3,
+          "title": "LEGAL EXPLOITS MAY EMERGE AT SCALE",
+          "summary": "The authors argue that legal systems may have dormant “vulnerabilities” that an attacker can leverage with an LLM to find and exploit. They present an example from the German legal system, which requires executive regulations to cite their legal basis. The authors then showcase a selection of regulations with provisions lacking proper citations, which could render them void and unenforceable.",
+          "url": "https://www.felixringe.com/legal-exploits/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "felixringe.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-02:a16",
+          "order": 1,
+          "title": "APPLEBEE'S EXPOSED CUSTOMERS' PERSONAL DATA AFTER LEAVING DATABASE PASSWORD IN APP",
+          "summary": "A researcher found a hardcoded database password in Applebee's Android app.",
+          "url": "https://techcrunch.com/2026/10/30/applebees-exposed-customers-personal-data-after-leaving-database-password-in-app/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a17",
+          "order": 2,
+          "title": "BELGIUM'S TAX AGENCY CONFIRMS CYBERATTACK, PULLS SERVICES OFFLINE",
+          "summary": "Belgium's FOD Financiën took MyMinfin, Tax-on-web, and Biztax offline after a cyberattack - there are no indications of a data breach, but investigations are ongoing.",
+          "url": "https://www.theregister.com/security/2026/10/29/belgiums-tax-agency-confirms-cyberattack-pulls-services-offline/5306409?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-02:a18",
+          "order": 3,
+          "title": "IMPLANT REPORTED IN A TREZOR SOLD BY CRYPTOBILIS",
+          "summary": "An Indonesian customer reported finding an extra circuit board with a cellular modem inside a Trezor Safe 5 bought from former Southeast Asian reseller CryptoBilis.",
+          "url": "https://trezor.io/blog/news/implant-reported-in-a-trezor-sold-by-cryptobilis?utm_source=tldrinfosec%5B19%5D%5B20",
+          "reading_time_minutes": 5,
+          "source_domain": "trezor.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

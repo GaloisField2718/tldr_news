@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-crypto:2026-11-02",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-11-02",
+  "source_path": "TLDR Crypto/article_02-11-2026.md",
+  "source_content_hash": "sha256:03a162a033cc3571409449f12ac992fd9de303b381031eefa4e670ac03bd49bc",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-11-02",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-02:a04",
+          "order": 1,
+          "title": "BINANCE SECURITY INCIDENT UPDATE #3: 90% OF STOLEN ASSETS REPLENISHED",
+          "summary": "Binance has reached 90% replenishment of the $6.3B drained from its hot wallets on October 29, when attackers compromised a DevOps engineer's laptop to access internal signing services. All top-10 assets (BTC, ETH, USDT, BNB, SOL, USDC, XRP, USD1, RLUSD, and ZEC) are now 100% backed. The remaining 10% covers less-liquid tokens outside the top 10 that are harder to source at volume. Binance funded the replenishment through partial SAFU deployment, a portion of the Futures insurance fund, and corporate treasury, and took a new Proof of Reserves snapshot at October 31 00:00 UTC, with the ZK proof expected by November 3. Withdrawal services are scheduled to reopen November 1, with Binance absorbing all financial losses and users facing no shortfall.",
+          "url": "https://links.tldrnewsletter.com/GLQc3A",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a05",
+          "order": 2,
+          "title": "CHAINALYSIS SAYS HACKER USING ‘OFFENSIVE AGENTIC TECHNIQUES' ACCESSED ITS CUSTOMERS' NAMES AND EMAILS",
+          "summary": "An unidentified AI-assisted hacker accessed “non-sensitive” customer data, including user IDs, full names, emails, and role labels. Chainalysis says it has found no sign that investigation content, query results, plaintext passwords, MFA secrets, or session tokens were accessed. It did not say when the intrusion occurred, how many customers were affected, or how AI agents were used. It says the breach is unrelated to the Binance hack. Separately, Chainalysis puts the Binance theft at $6.4B, attributed to North Korean groups. It says the attackers are using automation to cycle funds between addresses and using JustLend on Tron to get around stablecoin freezes. About $2.8B in stablecoins has already been frozen.",
+          "url": "https://links.tldrnewsletter.com/ujAnzr",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-02:a06",
+          "order": 1,
+          "title": "EPHEMERAL ROLLUP: THE NEW \"L1.5\" OF ETHEREUM",
+          "summary": "A proposed \"L1.5\" pattern for Ethereum separates stateless compute from state by placing user secrets in wallets and commitments, nullifiers, and verifiers on L1, so rollup-style execution can run without any long-lived operator holding user state. Three forthcoming EIPs enable this: EIP-8141 frame transactions let contracts self-pay fees after verifying a proof, EIP-8250 keyed nonces repurpose privacy nullifiers to reject double spends, and EIP-8288 aggregates proofs so the block carries a single recursive proof checked once per node. Any prover can take an L1.5 job (a stateless function over L1 state and user inputs) so long as its output is checked by L1, its fee is paid without linking payer identity, and submission requires no dedicated sequencer. Target applications include gasless payments via threshold-blind-signed tickets, fair exchange for private RPC and PIR queries, and stealth privacy pools, with a three-step migration path for existing L2 apps: move owned state into wallets, enable contracts to issue their own VERIFY-frame transactions, and open proving and submission to any party.",
+          "url": "https://ethresear.ch/t/ephemeral-rollup-the-new-l1-5-of-ethereum/26187?utm_source=tldrcrypto",
+          "reading_time_minutes": 6,
+          "source_domain": "ethresear.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a07",
+          "order": 2,
+          "title": "STRIPE POWERS STABLECOIN DEPOSITS IN WALMART'S ONEPAY",
+          "summary": "Stripe's Bridge platform now powers USDC deposits into OnePay, Walmart's consumer financial services app, letting select US customers fund checking accounts from external wallets or exchanges across 12 chains, including Base, Solana, and Ethereum. Bridge handles deposit address generation, compliance checks, and USDC-to-USD conversion, with balances credited within moments and no conversion fees at launch. The integration targets gig workers and cross-border earners who receive USDC and want to access those funds through a mainstream banking product without holding a separate stablecoin balance. OnePay describes this as the first of several stablecoin-enabled features planned for the platform, signaling a broader buildout of crypto rails inside Walmart's fintech stack.",
+          "url": "https://links.tldrnewsletter.com/mpw2Hd",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-02:a08",
+          "order": 1,
+          "title": "BINANCE $6.3B HACK: WOULD YOUR PERP DEX BE SAFER?",
+          "summary": "On October 29, a hacked DevOps laptop gave attackers access to Binance's internal signing system, which approved an EIP-7702 delegation handing hot wallet control to the attacker's contract, draining $6.3B with no private key compromise required and $3B since frozen. The same vector cost Bitget $350M a month earlier, both exploiting signing systems configured with blocklists rather than allowlists that permit only known-good transactions. Hyperliquid holds $5.6B of its $6.5B USDC in a Coinbase-controlled treasury address moved by unsigned system transactions, meaning a single key or validator compromise reaches the bulk of user funds. Lighter ($1B, Ethereum) uses ZK proofs to verify withdrawals with a 14-day forced-exit escape hatch, the only DEX among four analyzed where server compromise alone cannot drain balances, though its 4-of-7 security council bypassed upgrade-notice requirements five times in October.",
+          "url": "https://links.tldrnewsletter.com/KBOYit",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a09",
+          "order": 2,
+          "title": "NON-USD STABLECOINS ARE ONE OF THE MOST UNDERRATED SEGMENTS",
+          "summary": "A key neobank use is avoiding FX fees, since paying in another currency often costs over 1%, and local stablecoins with multi-currency settlement can remove that. The main problem is fragmentation, with many issuers per currency, such as six for the real, three for the yen, and three for the Swiss franc, plus several for EURC-type euro coins. Questions remain around how many guarantee 1:1 backing or can be verified in real time, and the industry may benefit from less issuer competition.",
+          "url": "https://threadreaderapp.com/thread/2116498867176833396.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-02:a10",
+          "order": 1,
+          "title": "THIS WEEK ON BASE: DENIM, $243M CARD SPEND, 20+ LAUNCHES",
+          "summary": "Base's Denim upgrade, its fourth network update of 2026, was deployed to Sepolia ahead of a November 5 mainnet activation that cuts block times to 200ms. Card spend settled on Base hit $243M in October, an 80% increase from March, and Coinbase Tokenized Stocks crossed $4B in all-time DEX trading volume on the network. FalconX launched an institutional USDC credit facility on Base, Ripple deployed RLUSD liquidity, and PeerXYZ opened an Alipay beta for USDC acquisition against CNY payments. Y Combinator paid a $500K MochaTrade investment in USDC on Base and published a Crypto Request for Startups targeting AI agents, stablecoins, capital raising, and trading.",
+          "url": "https://links.tldrnewsletter.com/VoSuhW",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a11",
+          "order": 2,
+          "title": "THE LENDERS BEHIND CURATOR VAULTS",
+          "summary": "RWA.xyz's analysis of $6.1B in Morpho variable-rate stablecoin lending identifies supply, not borrowing demand, as the binding growth constraint, with five curators (Steakhouse, Sentora, Gauntlet, SparkDAO, and RockawayX) overseeing 80%+ ($5.0B) of deployed capital. Of the $2.6B traced to specific funding sources, platform earn integrations and Sky-authorized protocol balance sheets each account for $1.1B, with issuer reserve lending via Ethena and similar protocols contributing the rest. Platform earn integrations offer the most expandable near-term growth vector, while credit limits cap protocol balance sheet allocations and redemption liquidity requirements constrain issuer reserve portfolios. For tokenized collateral, transfer restrictions, redemption terms, and secondary-market liquidity under stress set the ceiling on lender capacity.",
+          "url": "https://links.tldrnewsletter.com/UzfLUM",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-02:a12",
+          "order": 1,
+          "title": "AAVE'S MONTHLY REVENUE HAS GROWN FOUR MONTHS IN A ROW",
+          "summary": "Aave October revenue is annualizing at about $77M.",
+          "url": "https://threadreaderapp.com/thread/2116605036121706638.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a13",
+          "order": 2,
+          "title": "POLYGON PLUGS ITS PAYMENT STACK INTO SOLANA",
+          "summary": "Polygon's Open Money Stack, which handles bank pay-in to stablecoin balance to payout through one API, is now live on Solana, joining Polygon, Ethereum, Base, BNB Chain, and Tron.",
+          "url": "https://threadreaderapp.com/thread/2116156748570436068.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a14",
+          "order": 3,
+          "title": "50 COMPANIES WORTH OVER $25 TRILLION OBJECT TO TOKENIZATION ON OKXICE",
+          "summary": "50 companies have objected to tokenized versions of their shares on OKXICE, up from 26 four days earlier, with 12 added in the latest notice.",
+          "url": "https://threadreaderapp.com/thread/2116897196310511704.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-02:a15",
+          "order": 4,
+          "title": "COINBASE Q3 NET INCOME JUMPS 66% AS PREDICTION MARKETS GAIN TRACTION",
+          "summary": "Net income rose to $719M from $433M a year earlier, but it includes a $715M gain on crypto held for investment.",
+          "url": "https://links.tldrnewsletter.com/PMynga[16][17",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

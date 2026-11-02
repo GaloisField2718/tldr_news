@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-11-02",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-11-02",
+  "source_path": "TLDR Data/article_02-11-2026.md",
+  "source_content_hash": "sha256:3c608056ed410656f74dba50f4375a8508b86b37d117aedb9946797ada0e01ec",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-11-02",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a04",
+          "order": 1,
+          "title": "NEXT QUERY 2026 IS THIS WEDNESDAY: 20+ PRODUCTION TALKS, FREE AND VIRTUAL",
+          "summary": "Most hard lessons in data engineering never get written down. They live in someone's head after a long night in production. This Wednesday, 20+ teams share theirs:\n\n- Agents and business meaning: DatusAI and PuppyGraph on ontologies. - Fresh context, controlled access: Fresha on real-time state, Toss on permissions. - Reliability at scale: Coinbase, AppLovin and Intuit on production architecture. - Performance and cost: AWS on EKS, Apple's managed analytics service, Carbon Arc's 1 PB migration. - GPUs for analytics: NVIDIA on why GPU execution is now practical at scale.\n\nFree and virtual, with recordings for everyone who registers.",
+          "url": "https://nextquery.phoenixdata.ai/?utm_source=partner_email&utm_medium=email&utm_campaign=FY26_PHX_OEV_NEXT_QUERY_2026&utm_content=newsletter-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "nextquery.phoenixdata.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-02:a05",
+          "order": 2,
+          "title": "Register free [4] · See the agenda",
+          "summary": "",
+          "url": "https://nextquery.phoenixdata.ai/?utm_source=partner_email&utm_medium=email&utm_campaign=FY26_PHX_OEV_NEXT_QUERY_2026&utm_content=newsletter-tldr",
+          "reading_time_minutes": null,
+          "source_domain": "nextquery.phoenixdata.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a06",
+          "order": 1,
+          "title": "DO YOU EVEN BENCHMARK? HOW WE EVALUATE AGENTS AT SCALE",
+          "summary": "PostHog tests AI agents on real tasks, such as finding the bugs behind 33 past incidents, where its review agent caught 62%, or checking whether playback failures affected real users. It isolates each test so agents cannot copy earlier answers and is building resettable environments with fixed data to make comparisons fair.",
+          "url": "https://posthog.com/blog/how-to-benchmark-ai-agents?utm_source=tldrdata",
+          "reading_time_minutes": 18,
+          "source_domain": "posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a07",
+          "order": 2,
+          "title": "I TESTED POLARS 2.1 AGAINST DUCKDB 2.0 (10 MINUTE VIDEO)",
+          "summary": "DuckDB 2.0 adds client-server and AI features, while Polars improves streaming and processing of larger-than-memory datasets. On a 23 GB dataset with 2 GB RAM, Polars 2.0 ran out of memory, but 2.1 finished in 438 seconds, nearly twice as fast as DuckDB's 837 seconds.",
+          "url": "https://links.tldrnewsletter.com/Kj8Mwb",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a08",
+          "order": 3,
+          "title": "MOVE THE ELEPHANT, KEEP THE LIGHTS ON",
+          "summary": "Logical replication lets you upgrade or migrate PostgreSQL with only seconds of downtime: run the target cluster in parallel, stream changes, then cut over when ready. Its real advantage over in-place upgrades is rollback safety and cross-environment portability. Plan around what it does not move automatically, especially schema changes and sequences.",
+          "url": "https://aiven.io/blog/move-the-elephant-keep-the-lights-on?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "aiven.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a09",
+          "order": 4,
+          "title": "VECTOR SEARCH ON APACHE ICEBERG WITHOUT MOVING SOURCE DATA",
+          "summary": "StarTree adapts Pinot's HNSW vector index for Iceberg tables, keeping Parquet source records in object storage while storing and serving a derived index alongside them. This enables hybrid similarity and SQL-filtered queries without a second copy of the records. The trade-off: indexes are roughly as large as the embeddings, and freshness follows Iceberg snapshot synchronization rather than real-time ingestion.",
+          "url": "https://startree.ai/resources/vector-search-on-apache-iceberg-without-moving-your-data/?utm_source=tldrdata",
+          "reading_time_minutes": 11,
+          "source_domain": "startree.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a10",
+          "order": 1,
+          "title": "PARTICLEDB 1.1.4",
+          "summary": "Jepsen found 96 issues in ParticleDB, including data loss, crashes, and incorrect SQL results, mostly without any server failures. Most were fixed during testing, but serious transaction bugs remained. Orkes says a newer release fixes them, though Jepsen has not verified this.",
+          "url": "https://jepsen.io/analyses/particledb-1.1.4?utm_source=tldrdata",
+          "reading_time_minutes": 80,
+          "source_domain": "jepsen.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a11",
+          "order": 2,
+          "title": "WHAT HAPPENED TO DATA PRODUCTS?",
+          "summary": "Data products outlasted data-mesh hype by becoming a delivery discipline rather than an enterprise reorganisation: a governed output, accountable owner, defined consumer, and evidence of value. AI agents raise the stakes because they cannot recover missing context through informal knowledge. Start with a business-critical workflow, then make meaning, quality, access, and permitted use machine-readable.",
+          "url": "https://jarkkomoilanen.com/articles/what-happened-to-data-products/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "jarkkomoilanen.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a12",
+          "order": 1,
+          "title": "46% MORE ACCURATE WHEN YOUR AGENT STOPS READING THE DRAFTS",
+          "summary": "Nobody deletes anything from SharePoint, so your agent reads old versions, contradictions, half-finished files and rogue customer data. Deasy qualifies every file and keeps the bad ones out of reach. Takes minutes. Works for every agent after that.",
+          "url": "https://www.deasylabs.com/?utm_source=mediadirect&utm_medium=paid-display&utm_campaign=GBL-26-Q4-SCL-Q4-Deasy-hero",
+          "reading_time_minutes": null,
+          "source_domain": "deasylabs.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-02:a13",
+          "order": 2,
+          "title": "SEE IT →",
+          "summary": "",
+          "url": "https://www.deasylabs.com?utm_source=mediadirect&utm_medium=paid-display&utm_campaign=GBL-26-Q4-SCL-Q4-Deasy-hero",
+          "reading_time_minutes": null,
+          "source_domain": "deasylabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a14",
+          "order": 3,
+          "title": "NODAL ANALYTICS",
+          "summary": "Nodal is an open-source toolkit that turns analysts' business definitions into reusable context for AI analytics agents. It plans queries and checks results against approved metrics, filters, and joins, flagging uncertainty for expert review.",
+          "url": "https://github.com/nodal-data/nodal-context?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a15",
+          "order": 4,
+          "title": "PRIMARY KEYS COME TO APACHE ICEBERG V4, AND MOST OF THEM START OUT UNENFORCED",
+          "summary": "Apache Iceberg V4 adds primary keys, unique rules, and checks, such as requiring positive order amounts, though most will initially be unenforced. Each snapshot records whether the data meets those rules, separately from whether writers must enforce them on new writes.",
+          "url": "https://iceberglakehouse.com/posts/iceberg-v4-table-constraints/?utm_source=tldrdata",
+          "reading_time_minutes": 23,
+          "source_domain": "iceberglakehouse.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a16",
+          "order": 5,
+          "title": "KAFGRES 0.2.0: 700 MB/S KAFKA-COMPATIBLE STREAMING INSIDE POSTGRES",
+          "summary": "Kafgres, a Kafka-compatible Postgres extension, reached about 700 MB/s after caching query plans, relaxing commit durability, and replacing timer-based polling with socket readiness checks. It could suit many workloads, but the single-broker setup lacks the resilience of a Kafka cluster spread across availability zones.",
+          "url": "https://rynr.dev/blog/700mbskafgres/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "rynr.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a17",
+          "order": 1,
+          "title": "I TOLD AN AI AGENT THAT ITS WRONG ANSWERS WERE RIGHT. ONE MODEL BELIEVED ME",
+          "summary": "In most cases, flipping the reward labels in an agent's memory barely changes how it learns. This test hid a rule only the labels could reveal. With true labels, GPT-6 Sol scored 94.4 out of 100 on its last six trials, and with flipped labels 7.8. Claude Haiku 5.5 improved less, and Qwen3 4B barely moved.",
+          "url": "https://towardsdatascience.com/i-told-an-ai-agent-that-its-wrong-answers-were-right-one-model-believed-me/?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "towardsdatascience.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a18",
+          "order": 2,
+          "title": "ACTIVE-ACTIVE ORACLE GOLDENGATE ACROSS REGIONS: DECIDE WHO OWNS THE DATA BEFORE YOU RESOLVE CONFLICT",
+          "summary": "Active-active GoldenGate only works when data ownership and conflict policy are designed table by table before replication starts. Simulations showed that even convergent strategies like last-writer-wins can silently lose updates, while delta merging preserves each decrement but cannot prevent both regions from accepting a request against the same last unit before replication catches up. The lesson is blunt: if business rules cannot tolerate reconciliation, do not rely on multi-master replication to fix the problem later.",
+          "url": "https://hackernoon.com/active-active-oracle-goldengate-across-regions-decide-who-owns-the-data-before-you-resolve-conflict?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "hackernoon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a19",
+          "order": 3,
+          "title": "WHAT FIVE P99 CONF TALKS REVEAL ABOUT DATABASE TRADE-OFFS",
+          "summary": "A sponsored P99 CONF round-up exposes the costs behind several database designs: object storage trades low-cost durability for cold-read latency, read-optimized engines trade RAM and write amplification for tail latency, and vector search trades quantization and cache complexity for scale. The reported benchmarks are workload-specific, but the recurring lesson is: removing one bottleneck moves the constraint elsewhere.",
+          "url": "https://thenewstack.io/p99-conf-database-tradeoffs/?utm_source=tldrdata",
+          "reading_time_minutes": 12,
+          "source_domain": "thenewstack.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-02:a20",
+          "order": 1,
+          "title": "UPGRADING MLFLOW PIPELINES ACROSS A PYTHON VERSION BOUNDARY",
+          "summary": "Moving Databricks from Python 3.10 to 3.12 broke Zalando's pickled MLflow models.",
+          "url": "https://engineering.zalando.com/posts/2026/10/upgrading-mlflow-pipelines.html?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "engineering.zalando.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-02:a21",
+          "order": 2,
+          "title": "YOUR BACKUPS ARE GREEN. THAT DOES NOT MEAN YOU CAN RESTORE",
+          "summary": "Successful PostgreSQL backups can still fail to restore because of missing transaction logs, copied corruption, or lost encryption keys.",
+          "url": "https://stormatics.tech/blogs/postgresql-backups-restore-testing?utm_source=tldrdata",
+          "reading_time_minutes": 6,
+          "source_domain": "stormatics.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
