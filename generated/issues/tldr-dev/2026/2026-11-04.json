@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-04",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-04",
+  "source_path": "TLDR Dev/article_04-11-2026.md",
+  "source_content_hash": "sha256:98b21f91de00d43290e7738af859084210d0c3abec4d160cccd253a3a7202468",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-04",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a04",
+          "order": 1,
+          "title": "ATLASSIAN WEBINAR: THE STATE OF DEVELOPER EXPERIENCE IN 2026",
+          "summary": "Engineering orgs have adopted AI en-masse, but only 20% of developers say their organization is using it strategically. In Atlassian's upcoming webinar, [5] an expert panel helmed by Andrew Boyagi (Customer CTO, Atlassian) and featuring Kelsey Hightower (Author, Investor, and Open Source Contributor), they will unpack this and other findings from the 2026 State of DevEx Report to reveal a path from AI adoption to operationalization. [6] You'll learn:\n\n* Why productivity gains are absorbed by organizational friction when there's no clear AI strategy. * How engineering is shifting toward judgment, code review, and quality validation over raw code generation. * Why measuring AI usage alone is dangerous – and what to focus on instead.",
+          "url": "https://www.atlassian.com/webinars/software/state-of-devex-2026?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=P%3Atwc%2AO%3Agdc%2AF%3Aawareness%2AC%3Awebinar%2AH%3Afy27q2%2AI%3Adev-primary-nov4%2AE%3Acloud%2A&utm_content=header_atlassian_webinar_state&utm_term=2026-11-04&utm_sfdc-campaign_id=701QB000016wG6uYAE",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a07",
+          "order": 2,
+          "title": "Save your virtual seat + get the full recording.",
+          "summary": "",
+          "url": "https://www.atlassian.com/webinars/software/state-of-devex-2026?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=P%3Atwc%2AO%3Agdc%2AF%3Aawareness%2AC%3Awebinar%2AH%3Afy27q2%2AI%3Adev-primary-nov4%2AE%3Acloud%2A&utm_content=cta_save_virtual_seat&utm_term=2026-11-04&utm_sfdc-campaign_id=701QB000016wG6uYAE",
+          "reading_time_minutes": null,
+          "source_domain": "atlassian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a08",
+          "order": 1,
+          "title": "SCALING GIT AT OPENAI",
+          "summary": "OpenAI built Pando, a Git-compatible backend that handles pushes to unrelated branches independently and reuses cached packfiles across fetches. It reduced median push latency by nearly 80% and now serves nearly a petabyte of Git data per day. The tradeoff is weaker consistency across branches and some redundant downloads, allowing writes to scale horizontally and reads to saturate clients' network connections.",
+          "url": "https://links.tldrnewsletter.com/8ttrpd",
+          "reading_time_minutes": 22,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a09",
+          "order": 2,
+          "title": "THE HIDDEN LATENCY INSIDE YOUR DATABASE",
+          "summary": "Network-attached storage adds latency inside a database cluster, even when the application and database are close together. Local NVMe avoids that hop, but requires deliberate replication and failover to preserve durability. Workloads that fit mostly in RAM may see little benefit, while frequent cache misses and IOPS limits make storage placement worth examining.",
+          "url": "https://planetscale.com/blog/the-hidden-latency-inside-your-database?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a10",
+          "order": 3,
+          "title": "JAILBREAKING MY CAR'S NAVIGATION SYSTEM JUST SO I CAN CHANGE THE TIME",
+          "summary": "A Renault's clock settings were inaccessible without a legitimate navigation SD card, turning a daylight-saving adjustment into a firmware reverse-engineering project. QEMU emulation exposed how a script parser's file writes and Linux's core-dump handling could combine into code execution. The eventual fix changed the stored GPS time offset from 180 minutes to 120.",
+          "url": "https://blog.nns.ee/2026/11/02/renault-hack/?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.nns.ee",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a11",
+          "order": 1,
+          "title": "RESISTING COGNITIVE SURRENDER",
+          "summary": "Uncritically accepting agent output can increase technical debt while eroding the understanding needed to debug and maintain a system. Choose how much to delegate based on risk, stay involved in consequential decisions, and ask for small, comprehensible changes. When delegating more fully, use independent observability, deterministic checks, and shadow traffic to verify behavior rather than relying solely on the agent's account.",
+          "url": "https://knlb.dev/essays/surrender?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "knlb.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a12",
+          "order": 2,
+          "title": "AUDITIONING ENGINEERING: SOFTWARE ENGINEERING INTERVIEWS IN THE AGE OF AI",
+          "summary": "Warner Music Group encourages candidates to use AI while solving realistic API integration problems against a live, randomized test server. Its system-design interview asks candidates to modify an existing system and infer causes from observed behavior. The approach emphasizes technical judgment, although building new coding exercises and training senior system-design interviewers remain costly.",
+          "url": "https://tech.wmg.com/auditioning-engineering-4ca3d48bf457?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "tech.wmg.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a13",
+          "order": 3,
+          "title": "THE WEIGHT-SPACE PROGRAMMING POST IS MISLEADING",
+          "summary": "This critique separates experiments that inspect small networks' raw weights from larger-model experiments that use Python and execution feedback. The Qwen result involved 50 batches of practice problems, so it does not demonstrate improvement from inspecting raw weights alone. The distinction matters when judging whether the work shows one general capability or several different engineering techniques.",
+          "url": "https://honnibal.dev/blog/astra-read-write-misleading?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "honnibal.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a14",
+          "order": 1,
+          "title": "MCP AND REST: HOW THEY FIT TOGETHER",
+          "summary": "Your REST API already works. Learn what MCP adds for AI agents, how tool discovery works, and where each belongs in your architecture. When you're ready to build, WorkOS handles authentication for your MCP server.",
+          "url": "https://workos.com/blog/mcp-vs-rest?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=q42026",
+          "reading_time_minutes": null,
+          "source_domain": "workos.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a15",
+          "order": 2,
+          "title": "OFFICE ENGINE",
+          "summary": "Office Engine embeds DOCX, XLSX, and PPTX viewing and editing in a browser through React or a web component. Progressive loading, Web Worker parsing, and virtualized views handle large files, while saves regenerate edited parts and preserve the original bytes elsewhere.",
+          "url": "https://github.com/p10node/office-engine?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a16",
+          "order": 3,
+          "title": "DJS",
+          "summary": "djs is a JavaScript and TypeScript engine written in Rust for agent-generated scripts running in a WebAssembly sandbox. It keeps the entire VM state in one byte array, allowing execution to pause between instructions, snapshot while waiting for tools, and resume elsewhere. The focused runtime deliberately omits features such as ES modules, Intl, and a JIT.",
+          "url": "https://github.com/earendil-works/djs?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a17",
+          "order": 4,
+          "title": "THREE-LIVE",
+          "summary": "Three-Live compiles a declarative subset of Three.js into GLB and USDZ assets for web, Android, and Apple rendering pipelines. It runs generated scripts with execution timeouts and geometry quotas, then hands the assets to platform-specific viewers. The Apache-licensed project is in Developer Preview and is not an officially supported Google product.",
+          "url": "https://github.com/google/three-live?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a18",
+          "order": 1,
+          "title": "SPARKS OF WEIGHT-SPACE PROGRAMMING",
+          "summary": "Experiments show GPT-6 Astra reading and directly editing neural network weights without gradient descent, including writing small game-playing networks from scratch. Editing 0.016% of Qwen3.5-0.8B's weights reduced reasoning loops and raised MATH-500 accuracy from 7.9% to 48.1% with 50 forward passes for feedback. The gains removed an obstacle to existing ability, while similar edits failed to meaningfully improve a Gemma model that rarely looped.",
+          "url": "https://rikiyat.github.io/blog/weight-space-programming/?utm_source=tldrdev",
+          "reading_time_minutes": 20,
+          "source_domain": "rikiyat.github.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a19",
+          "order": 2,
+          "title": "COULD A MODERN CHESS ENGINE ON A PENTIUM HAVE DEFEATED KASPAROV IN 1996?",
+          "summary": "A port of Stockfish running on a 200 MHz Pentium Pro with 64 MB of RAM reaches a measured rating of 3180 at 30 seconds per move. The experiment attributes much of chess engines' progress to better search and evaluation rather than faster hardware. Its roughly 3300 rating at classical time controls is extrapolated from shorter games, and readers can play the machine online.",
+          "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "nicholas.carlini.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-04:a20",
+          "order": 1,
+          "title": "HACKERTV",
+          "summary": "HackerTV turns videos recommended in Hacker News comments into shared, continuously scheduled TV channels with a retro interface.",
+          "url": "https://hackertv.org/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "hackertv.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a21",
+          "order": 2,
+          "title": "C++26 DIS FAILED, HOW DOES C++ SURVIVE?",
+          "summary": "C++26's draft failed its ISO ballot amid objections to Contracts, leaving the committee to agree on a revised path and putting the release schedule in doubt.",
+          "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "andreasfertig.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a22",
+          "order": 3,
+          "title": "MAC AT ANY SCALE",
+          "summary": "Namespace explains the hardware, networking, virtualization, and VM-image distribution work behind running a fleet of Macs for cloud development and CI.",
+          "url": "https://namespace.so/blog/mac-at-any-scale?utm_source=tldrdev",
+          "reading_time_minutes": 14,
+          "source_domain": "namespace.so",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-04:a23",
+          "order": 4,
+          "title": "CURIOSITY TRAPS",
+          "summary": "Subtle details, footnotes, and Easter eggs in public work can reward close attention and help people with shared interests find each other.",
+          "url": "https://www.autodidacts.io/curiosity-traps/?utm_source=tldrdev%5B24%5D%5B25",
+          "reading_time_minutes": 7,
+          "source_domain": "autodidacts.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
