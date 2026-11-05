@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-11-05",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-11-05",
+  "source_path": "TLDR Data/article_05-11-2026.md",
+  "source_content_hash": "sha256:5c1f54c9758a08bd26ca6b8e192affa7c8c6bea361fd07eb3d96457494d192d5",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-11-05",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a04",
+          "order": 1,
+          "title": "DOES YOUR AI HAVE AMNESIA? BUILD AGENTS THAT NEVER FORGET WITH MONGODB ATLAS ON AWS",
+          "summary": "When your session state, long-term history, and embeddings are scattered in different systems, your AI app needs to start every session from scratch.\n\nMongoDB Atlas on AWS [5] unifies operational data, vector search, and memory on one platform - so your apps can remember, reason, and act on the same trusted context, every single time.\n\n→ Native vector search and ACID transactions in one database → Integrates with Amazon Bedrock and 70+ AWS services → 99.995% uptime SLA with multi-region auto-scaling\n\nAnd if you're on AWS, you can get Atlas on the AWS Marketplace [6]with PAYGO or custom pricing and dead-simple onboarding.",
+          "url": "https://aws.amazon.com/marketplace/pp/prodview-pp445qepfdy34?trk=04612966-5352-4c63-92ba-50274910423a&sc_channel=el&source=mongodb&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-11-05_primary_aws&utm_content=header_ai_amnesia_build&utm_term=2026-11-05",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-05:a07",
+          "order": 2,
+          "title": "Start free on AWS Marketplace →",
+          "summary": "",
+          "url": "https://aws.amazon.com/marketplace/pp/prodview-pp445qepfdy34?trk=04612966-5352-4c63-92ba-50274910423a&sc_channel=el&source=mongodb&utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-11-05_primary_mongodb&utm_content=cta_aws_marketplace&utm_term=2026-11-05",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a08",
+          "order": 1,
+          "title": "WHY WE'RE MOVING OUR WAREHOUSE PRODUCT OFF DUCKDB",
+          "summary": "Five months after rebuilding its warehouse product on DuckDB, PostHog is moving off it. Each instance had to be sized before the query arrived, and its DuckLake, holding about 1 trillion rows, could take over three minutes for a single-table write. PostHog is now rebuilding on Trino with its own table format, HogLake.",
+          "url": "https://posthog.com/blog/moving-off-duckdb?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a09",
+          "order": 2,
+          "title": "FRONTIER QUALITY AT 1% OF THE COST: A PRODUCTION BENCHMARK OF LLM CLASSIFIERS",
+          "summary": "Airbnb fine-tuned a model with 2 billion effective parameters to screen content for pricing-policy violations. Its F1 score rose from 0.563 to 0.902, matching the best frontier APIs, with a median latency of 35ms against their roughly 900ms. At thousands of requests a minute, the frontier models cost two orders of magnitude more than one self-hosted GPU.",
+          "url": "https://airbnb.tech/ai-ml/frontier-quality-at-1-of-the-cost-a-production-benchmark-of-llm-classifiers/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "airbnb.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a10",
+          "order": 3,
+          "title": "F3 LIGHTNING: HOW META ACCELERATES ADS ML FEATURES TO PRODUCTION AT SCALE",
+          "summary": "Meta rebuilt its ads ML feature infrastructure to deploy features independently without losing the efficiency of shared computation. F3 Lightning uses stable computation IDs, a unified execution plan, and shared memory to avoid redundant processing across more than 20,000 features. Comparable features now reach production 3.6x faster without increasing infrastructure compute costs.",
+          "url": "https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "engineering.fb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a11",
+          "order": 4,
+          "title": "UPGRADING REDSHIFT FROM RA3 TO RG AND ACHIEVING FASTER QUERIES AT 32% LOWER COST",
+          "summary": "Halodoc migrated its Redshift warehouse from RA3 to Graviton-based RG instances after validating ingestion, ETL, dashboards, and governance compatibility. COPY operations ran roughly 6x faster, heavy reporting queries ran 2.1x to 5.2x faster, and queue times fell by around 70%. Overall Redshift costs dropped 32%, demonstrating the potential benefits of the new architecture for production analytics workloads.",
+          "url": "https://blogs.halodoc.io/upgrading-redshift-from-ra3-to-rg-and-achieving-faster-queries-at-32-lower-cost/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "blogs.halodoc.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a12",
+          "order": 1,
+          "title": "AS HUMANS WRITE LESS CODE: WORKLOADS SHIFT FROM HUMAN TO AGENT VERIFICATION WITH ITERATIVE TEST SUITES",
+          "summary": "As AI agents generate more SQL, transformations, and dashboards, verifying their output becomes more important than writing the code itself. What dev teams really need are compiler-style validation, layered test suites, and unified lineage across data models and BI assets. Moving assertions earlier in development could make agent-generated analytics easier to audit and less prone to semantic drift.",
+          "url": "https://www.ssp.sh/blog/humans-write-less-code/?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "ssp.sh",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a13",
+          "order": 2,
+          "title": "THE GREAT DATA INTERREGNUM - MORBID SYMPTOMS OF AN INDUSTRY BETWEEN ERAS",
+          "summary": "The data industry is caught between vendor consolidation, AI-driven automation, and unresolved operational problems. Generating SQL, pipelines, and documentation is becoming cheaper, but broken data, inconsistent business definitions, and unclear accountability remain. The lasting value of data teams lies in semantics, governance, and understanding rather than producing more technical artifacts.",
+          "url": "https://joereis.substack.com/p/the-great-data-interregnum-morbid?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "joereis.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a14",
+          "order": 3,
+          "title": "EXPLORATORY DATA ANALYSIS CAN'T BE AUTOMATED AWAY",
+          "summary": "Exploratory data analysis still needs human eyes on the data. What looks weird depends on what you intend to do, which no model can know in a vacuum. LLMs rarely make the work faster.",
+          "url": "https://www.counting-stuff.com/exploratory-data-analysis-cant-be-automated-away/?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "counting-stuff.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a15",
+          "order": 1,
+          "title": "DATA ENGINEERING IN THE AGE OF AI: THE PRACTITIONER VIEW",
+          "summary": "A new report by Datadog [15], based on the experiences of 109 data engineering practitioners, reveals the speed in which AI is expanding the data engineer's role, and why many teams feel unprepared. Learn what skills data engineers are prioritizing for 2026 and why 70% still",
+          "url": "https://www.datadoghq.com/resources/ai-age-data-engineering-market-survey/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-content-ebook-2026gatherhqdataengineeringtrends-dataobservability-multi-ww-en-701vy00000qux9fyac-tldr-data-110526",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-05:a15-02",
+          "order": 2,
+          "title": "see significant gaps. Read the report",
+          "summary": "",
+          "url": "https://www.datadoghq.com/resources/ai-age-data-engineering-market-survey/?utm_source=tldrnewsletter&utm_medium=newsletter&utm_campaign=dg-content-ebook-2026gatherhqdataengineeringtrends-dataobservability-multi-ww-en-701vy00000qux9fyac-tldr-data-110526",
+          "reading_time_minutes": null,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a16",
+          "order": 3,
+          "title": "SURREALDB 4",
+          "summary": "SurrealDB 4 rebuilds the query engine with 240+ fixes. It reports 42% faster CRUD operations and projects 22x faster indexed queries, while adding PostgreSQL, MySQL, and MongoDB compatibility. The same engine powers Earth's serverless databases on Cloudflare and SurrealDS' distributed clusters, which confirm writes only after storing them across two zones.",
+          "url": "https://surrealdb.com/4?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "surrealdb.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a17",
+          "order": 4,
+          "title": "APACHE HUDI-RS 0.6.0: NATIVE WRITES FROM RUST AND PYTHON",
+          "summary": "Apache Hudi-rs 0.6.0 introduces native write support for Rust and Python, allowing applications to create, append, update, upsert, and delete records without Spark or a JVM. Its record-level index enables sub-second small-batch updates on tables containing millions of rows. The release also improves Python read performance by up to 6x while maintaining compatibility with existing Hudi query engines.",
+          "url": "https://hudi.apache.org/blog/2026/11/03/apache-hudi-rs-0-6-0-release-announcement?utm_source=tldrdata",
+          "reading_time_minutes": 16,
+          "source_domain": "hudi.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a18",
+          "order": 5,
+          "title": "HELIX FOUNDRY: TURNING ENTERPRISE DATA INTO AN AI-GENERATED KNOWLEDGE GRAPH",
+          "summary": "Helix Foundry connects databases, SaaS applications, and files, then uses an AI agent to propose an ontology and load the resulting entities and relationships into HelixDB. The open-source project supports local deployment and is adding consistent PostgreSQL snapshots and graph computation capabilities.",
+          "url": "https://github.com/HelixDB/helix-foundry?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a19",
+          "order": 1,
+          "title": "ROCKETRIDE: A C++ PIPELINE ENGINE FOR AI WORKFLOWS",
+          "summary": "RocketRide is an open-source AI pipeline engine built around a multithreaded C++ runtime with more than 50 Python-extensible processing nodes. It supports multiple LLM providers, vector databases, and agent frameworks, with debugging and deployment tools integrated into VS Code.",
+          "url": "https://github.com/rocketride-org/rocketride-server?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a20",
+          "order": 2,
+          "title": "SCALING MODEL EVALUATION AT PINTEREST WITH RAY (PART 4)",
+          "summary": "Pinterest used to run inference with Ray, write predictions to S3, then start a Spark job to read them back and compute metrics. Its new evaluation platform computes partial metrics batch by batch inside the Ray inference job and combines them at the end. That cut end-to-end evaluation time by up to 32% for feature-importance runs.",
+          "url": "https://links.tldrnewsletter.com/wiZrDP",
+          "reading_time_minutes": 10,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-05:a21",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach data engineers, analysts and data leaders where they actually pay attention. Learn more about sponsorship opportunities [21].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrdata&utm_medium=newsletter&utm_campaign=quicklinks11052026&sp=1D_IncT9MYyJivDaQ9cZGmRx",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-05:a22",
+          "order": 2,
+          "title": "MULTI-TENANT CDC: DATABASE-PER-TENANT SAAS ARCHITECTURE GUIDE",
+          "summary": "A practical guide to replicating tenant-isolated PostgreSQL databases into shared analytics tables while preserving primary keys, schema compatibility, and failure isolation.",
+          "url": "https://estuary.dev/blog/multi-tenant-cdc?utm_source=tldrdata",
+          "reading_time_minutes": 20,
+          "source_domain": "estuary.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-05:a23",
+          "order": 3,
+          "title": "TEXT-TO-SQL MODELS MAKE CHOICES WITHOUT SAYING SO",
+          "summary": "SpecBridge shows that text-to-SQL models often silently choose one interpretation of ambiguous questions, while answering each interpretation separately improves coverage by 29-63 percentage points without reducing precision on clear requests.",
+          "url": "https://arxiv.org/abs/2611.04318?utm_source=tldrdata",
+          "reading_time_minutes": 14,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
