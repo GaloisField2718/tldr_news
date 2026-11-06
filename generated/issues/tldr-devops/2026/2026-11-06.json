@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-11-06",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-11-06",
+  "source_path": "TLDR DevOps/article_06-11-2026.md",
+  "source_content_hash": "sha256:631ae198ee338c18e5c3098f2d0b3aaacfc183ba126f1705adc34ea6ebb79890",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-11-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a04",
+          "order": 1,
+          "title": "PREVENT CI/CD PIPELINE COMPROMISES WITH DROP-IN REPLACEMENTS FOR 1,000+ GITHUB ACTIONS",
+          "summary": "Chainguard Actions is now Generally Available: a hardened catalog of over 1,000 popular actions, delivered as drop-in replacements for the actions developers already want to use.\n\n> CONTINUOUSLY VERIFIED AND HARDENED as upstream versions ship and attack patterns emerge.\n\n> EVERY ACTION INCLUDES A HARDENING.MD REPORT detailing which vulnerabilities were found and removed.\n\n> ONE-BUSINESS-DAY SLA for new action requests.\n\nDevelopers don't have to change how they work to use actions safely.",
+          "url": "https://www.chainguard.dev/products/actions?utm_source=tldr&utm_medium=3p-sponsorship&utm_campaign=2026-11-06_primary_chainguard&utm_content=devopsnewsletter2_header_prevent_ci_cd&utm_term=2026-11-06",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a05",
+          "order": 2,
+          "title": "Details and a 30-day Chainguard Actions free trial.",
+          "summary": "",
+          "url": "https://www.chainguard.dev/products/actions?utm_source=tldr&utm_medium=3p-sponsorship&utm_campaign=2026-11-06_primary_chainguard&utm_content=devopsnewsletter2_cta_details_30_day&utm_term=2026-11-06",
+          "reading_time_minutes": null,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a06",
+          "order": 1,
+          "title": "ALPINE LINUX SECURITY ADVISORY: OPENSSH-SERVER PASSWORD AUTHENTICATION BYPASS",
+          "summary": "A vulnerability in Alpine Linux's openssh-server package allows attackers to bypass password authentication and log in without knowing any password. The flaw affects releases 3.16 through 3.24 and allows remote access if the system has an account with no password set. Users should update openssh and restart sshd or disable password logins immediately.",
+          "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "alpinelinux.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a07",
+          "order": 2,
+          "title": "POWERING OPEN INFRASTRUCTURE FOR AUTONOMOUS AGENTS",
+          "summary": "Google donated Agent Substrate, gVisor, and OpenRL to the CNCF Sandbox and announced the general availability of Agent Substrate on GKE. Agent Substrate decouples stateful agent sessions from compute to restore idle sessions in under 500 milliseconds. The project achieves 10x standard container density and performs over 500 suspend and resume activations per second.",
+          "url": "https://cloud.google.com/blog/products/containers-kubernetes/open-infrastructure-for-autonomous-agents-comes-to-cncf/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a08",
+          "order": 1,
+          "title": "RUNNING PRODUCTION WITH ZERO STORED LOGS",
+          "summary": "This post describes how to run a K3s platform of more than 15 microservices with no centralized log collection, relying on filtered Prometheus metrics and temporary verbose logging. It notes trade-offs, including the need to anticipate questions and unsuitability for audits requiring immutable trails.",
+          "url": "https://cloudnativenow.com/contributed-content/running-production-with-zero-stored-logs/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a09",
+          "order": 2,
+          "title": "DOCKER URGES ISOLATION AND GOVERNANCE FOR AI AGENT SECURITY",
+          "summary": "Docker identifies five risks of autonomous AI agents, including prompt injection, credential exposure, and data exfiltration. It recommends isolation and governance through Docker Sandboxes and AI Governance rather than model improvements alone.",
+          "url": "https://www.infoq.com/news/2026/11/docker-ai-agent-security/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a10",
+          "order": 3,
+          "title": "WHEN THE KUBERNETES API WENT SILENT: A THREE-LAYER NETWORKING MYSTERY",
+          "summary": "Google traced intermittent GKE API timeouts to three interacting failures: Private Service Connect reordered packets, Envoy kept half-closed sockets open, and a Linux TCP bug prevented those sockets from closing. Simultaneous packet captures at multiple points exposed the reordering, and a Linux kernel patch fixed the underlying TCP bug.",
+          "url": "https://cloud.google.com/blog/products/networking/the-three-layer-gke-network-mystery?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a11",
+          "order": 1,
+          "title": "THE GOOGLE SRE BOOK WAS WRITTEN BEFORE AI STARTED WRITING THE CODE.",
+          "summary": "Systems now change faster than teams can track, and AI features can look healthy while giving wrong answers. The AI SRE Handbook covers what that means for reliability, how to evaluate an AI SRE, and benchmark results from 25 real Sev1-3 incidents. DOWNLOAD THE HANDBOOK [11].",
+          "url": "https://www.traversal.com/ebooks/the-ai-sre-handbook-operating-production-systems-in-the-age-of-ai?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-secondary-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "traversal.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a12",
+          "order": 2,
+          "title": "AGENT-BROWSER",
+          "summary": "agent-browser is a native Rust CLI that gives AI agents a browser they can drive one shell command at a time. It reads pages as a compact accessibility tree and allows agents to interact with elements through refs. The tool supports Chrome for Testing, Mobile Safari, and various cloud browser providers.",
+          "url": "https://github.com/vercel-labs/agent-browser?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a13",
+          "order": 3,
+          "title": "AUTO ONTOLOGY",
+          "summary": "NVIDIA Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over enterprise data. The open source library builds context layers from metadata to enable deterministic query generation and more explainable AI for LLM workflows. It exposes this context to agents via MCP, CLI, and API access.",
+          "url": "https://github.com/NVIDIA/auto-ontology?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a14",
+          "order": 1,
+          "title": "WHAT IS THE OPENTOFU MCP SERVER AND HOW TO USE IT",
+          "summary": "Spacelift explains the official OpenTofu MCP server, which offers seven read-only tools for searching registry documentation for providers, modules, resources, and data sources. It runs from a hosted endpoint or locally with npx and never runs tofu commands or reads state.",
+          "url": "https://spacelift.io/blog/opentofu-mcp-server?utm_source=tldrdevops",
+          "reading_time_minutes": 11,
+          "source_domain": "spacelift.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a15",
+          "order": 2,
+          "title": "TRACE LINKAGE: CONNECT THE DOTS BETWEEN YOUR APP TRACES AND DATABASE QUERIES",
+          "summary": "Grafana Cloud made trace linkage generally available in Database Observability. It connects OpenTelemetry application traces to database query data collected by Alloy, matching by query.",
+          "url": "https://grafana.com/blog/trace-linkage-connect-the-dots-between-your-app-traces-and-database-queries/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "grafana.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-06:a16",
+          "order": 1,
+          "title": "RELIABILITY IN THE AI ERA: AI THAT WORKS THE INCIDENT WITH YOU",
+          "summary": "PagerDuty announced the PD Reliability Platform and PD Labs alongside its Paige SRE agent.",
+          "url": "https://www.pagerduty.com/blog/announcements/reliability-in-the-ai-era-ai-that-works-the-incident-with-you/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "pagerduty.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a17",
+          "order": 2,
+          "title": "EVALUATE YOUR AI AGENTS WITH FIREWORKS AI MODELS IN DATADOG AGENT OBSERVABILITY",
+          "summary": "Datadog Agent Observability now supports Fireworks AI as a model provider.",
+          "url": "https://www.datadoghq.com/blog/fireworks-ai-integration/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-06:a18",
+          "order": 3,
+          "title": "ANNOUNCING THE OPENTELEMETRY JAVASCRIPT SDK 3.0",
+          "summary": "OpenTelemetry JavaScript SDK 3.0 introduces ESM-only support and removes compatibility with older Node.js versions.",
+          "url": "https://opentelemetry.io/blog/2026/otel-js-sdk-3-0/?utm_source=tldrdevops%5B19%5D%5B20",
+          "reading_time_minutes": 16,
+          "source_domain": "opentelemetry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

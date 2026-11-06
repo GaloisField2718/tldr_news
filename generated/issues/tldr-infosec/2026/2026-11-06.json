@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-06",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-06",
+  "source_path": "TLDR InfoSec/article_06-11-2026.md",
+  "source_content_hash": "sha256:5de7b816476c0eaccbf7583c1e446ef414d540bd2ee2c7878d50a41031faa939",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-06",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-06:a04",
+          "order": 1,
+          "title": "ANTHROPIC WON'T FIX A CLAUDE DISPATCH FLAW THAT COULD LET ATTACKERS EXECUTE REMOTE COMMANDS ACROSS CORPORATE BOUNDARIES",
+          "summary": "A browser extension with access to claude.ai can use Claude Dispatch to send prompts to Claude Desktop and achieve remote code execution. The attack exploits shared web and desktop sessions, repeated approval clicks, and a malicious npm package. It can also reach a work computer from a personal browser session. Anthropic knew of the issue in May but has not issued a fix. Dispatch remains available to existing users.",
+          "url": "https://www.theregister.com/research/2026/11/05/anthropic-wont-fix-a-claude-dispatch-flaw-that-could-let-attackers-execute-remote-commands-across-corporate-boundaries/5307684?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a05",
+          "order": 2,
+          "title": "HACKERS EXPLOITED IOS AND ANDROID FLAWS TO INFECT PHONES",
+          "summary": "Attackers likely linked to Russia's Foreign Intelligence Service used watering holes, proxy domains, and a compromised Ukrainian analytics service to inject JavaScript into mobile traffic. The code profiled visitors and delivered zero-click exploit chains against outdated iOS or Android devices, including DarkSword. Payloads sought browser cookies, Wi-Fi passwords, and full device data. Targets included sites connected to US and UK diplomatic circles and Ukraine.",
+          "url": "https://arstechnica.com/security/2026/11/hackers-exploited-ios-and-android-flaws-to-infect-phones/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a06",
+          "order": 3,
+          "title": "CHAINALYSIS WARNS ALL USERS HIT IN CYBER BREACH INVOLVING “AGENTIC” TECHNIQUES",
+          "summary": "Blockchain analytics company Chainalysis released a warning that all of its users' data may have been compromised following an attack by a threat actor utilizing “offensive agentic techniques.” The stolen data includes names, usernames, password hashes, and live tokens for all Chainalysis users. Chainalysis also temporarily took some other services offline, including its Know Your Transaction (KYT) cryptocurrency transaction monitoring service.",
+          "url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-06:a07",
+          "order": 1,
+          "title": "ESCAPING FIRECRACKER FROM GUEST USERSPACE",
+          "summary": "Coinspect demonstrated a Firecracker sandbox escape from guest userspace. CVE-2026-122192 allowed a guest to read and modify live Firecracker VMM memory and gain code execution in the host-side process. The flaw stemmed from a failed memory replacement after a snapshot-backed RAM discard, leaving a stale KVM memory slot pointing to reused VMM memory. A second issue, FC-03, allowed VMM code to use io_uring to perform host operations blocked by seccomp, including sending a network message to a host listener. Firecracker v0.23.0 through v1.16.1 are affected. v1.16.2 and v1.17.0 fix the escape.",
+          "url": "https://www.coinspect.com/blog/firecracker-escape/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "coinspect.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a08",
+          "order": 2,
+          "title": "THE SOC FILES 5: GHOST IN THE PIPELINE, OR A FILELESS SHAREPOINT BREACH BY STORM-2603",
+          "summary": "Storm-2603 used the ONYPHE scanner to check a SharePoint server for ToolShell (CVE-2025-53770), waited three days, and on Christmas Eve loaded a webshell directly into IIS's w3wp.exe process memory. The webshell activated only for a specific User-Agent, tunneled into the internal network with suo5, escalated to SYSTEM using EfsPotato, and then moved to a vulnerable Velociraptor build, an EDR-killer driver, and a blocked Warlock ransomware attempt. Kaspersky attributed the intrusion with moderate confidence. Defenders should hunt for IIS paths that resolve in config but have no file on disk, which appear as IIS-Configuration ETW events 25 and 47 without the usual file-change monitoring events. Kaspersky has released CLRDeserializationExploitFinder to flag the deserialization exploit itself.",
+          "url": "https://securelist.com/storm-2603-fileless-toolshell-attack/121467/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a09",
+          "order": 3,
+          "title": "GHOSTMAP: THE ANDROID FLAW THAT CRASHES YOUR PHONE BEFORE YOU OPEN THE APP",
+          "summary": "An APK entry using a nonstandard compression method slips past libziparchive's size check, while libandroidfw memory-maps it at its full declared size. As a result, any process that reads a malformed resource receives a SIGBUS. That flaw lets an app with no code or permissions trap system_server in a boot loop that only a factory reset clears, or cause its own icon to crash on every uninstall screen. Bitdefender found it when a packed banking dropper in the wild crashed its emulators, but the persistent boot loop was its own escalation. Google declined to ship a security fix even though the bug reproduces on Android 10 through 17. With no patch coming, defenders should flag APKs whose ZIP entries use compression methods other than stored or deflate before they're installed, since an on-device warning may come too late.",
+          "url": "https://www.bitdefender.com/en-us/blog/labs/ghostmap-android?utm_source=tldrinfosec",
+          "reading_time_minutes": 17,
+          "source_domain": "bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-06:a10",
+          "order": 1,
+          "title": "FORRESTER STUDY: SECURING THE DATA YOUR AGENTS CAN REACH REDUCES BREACH EXPOSURE RISK BY 65%",
+          "summary": "Rather than trying to inspect every agent request as it happens, the world's top enterprises are using Sentra to govern the data that agents can access. And it's paying off: the Forrester Total Economic Impact™ Study for Sentra [10] found that agentic data security generates 351% ROI with 65% reduced breach exposure risk. Read the",
+          "url": "https://sentra.io/lp/forrester-2026?utm_source=tldr&utm_medium=newsletter&utm_campaign=forrester-2026&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "sentra.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a10-02",
+          "order": 2,
+          "title": "report",
+          "summary": "",
+          "url": "https://sentra.io/lp/forrester-2026?utm_source=tldr&utm_medium=newsletter&utm_campaign=forrester-2026&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "sentra.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a11",
+          "order": 3,
+          "title": "GPT-6 CYBER: ADVANCING THE FRONTIER OF ALIGNED CYBERSECURITY AGENTS",
+          "summary": "OpenAI's GPT-6 Cyber built working exploits for 948 Linux kernel vulnerabilities, more than five times GPT-5.6 Sol's count with the same harness, and found 81 previously unknown high-severity Firefox bugs. OpenAI also trained it to stay within the scope a researcher sets: on a honeypot evaluation, it avoided easy-to-exploit, out-of-scope services in 99.93% of runs without a safety prompt and 100% with one, enough for OpenAI to rate it Critical for cybersecurity under its Preparedness Framework. Approved defenders reach it through Daybreak Red, which requires IP allowlisting by default and runs misuse monitoring, and a new tier gives critical infrastructure teams authorized OT/ICS testing.",
+          "url": "https://links.tldrnewsletter.com/hoPiIQ",
+          "reading_time_minutes": 10,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a12",
+          "order": 4,
+          "title": "SECTIV",
+          "summary": "Sectiv is a Burp Suite extension that runs captured proxy traffic past an LLM, guided by editable \"skills\" for IDOR, XSS, SQLi, and SSRF, and returns triaged findings with CVSS scores and HTML, Python, or curl PoCs. Testers can load two accounts to help the model reason about broken access control. It masks cookies, tokens, and JWTs before sending traffic to providers like OpenAI, Claude, DeepSeek, or a local Ollama model. Skills can be imported, exported, and tailored per target, and findings export to HTML, Markdown, or JSON for reporting.",
+          "url": "https://github.com/zack0x01/burp-sectivai?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a13",
+          "order": 5,
+          "title": "SYNOLOGY-NAS-CLI",
+          "summary": "synology-nas-cli checks a Synology NAS for the exposures exploited in October's C3RB3R/.L0CK3D ransomware campaign: unpatched DSM builds, vulnerable SA-26:14 packages, QuickConnect and UPnP port forwarding, SMB1, ransom notes, and CVE-2024-10441 exploit traces. It shows each fix as a before-and-after dry-run plan, applies it, and reads every setting back to confirm. If encryption is already running, it can freeze the encryptor with SIGSTOP and capture its memory to recover keys. It's a zero-dependency Python CLI with an MCP server, so a Claude Code or Codex agent can run the audit end to end.",
+          "url": "https://github.com/akari-sora/synology-nas-cli?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-06:a14",
+          "order": 1,
+          "title": "BANK PHISHING SITES SHOW FAKE ‘SUSPENDED' PAGES TO EVADE TAKEDOWNS",
+          "summary": "Kela found more than 300 fake bank domains using a phishing kit that records visitor IP addresses. First visits receive bank login pages. Repeat visits receive a fake hosting \"suspended\" notice. This can make takedown teams classify live sites as inactive. The campaign targets business banking and treasury logins at 189 US institutions, with activity also seen in the UK, Australia, and New Zealand.",
+          "url": "https://links.tldrnewsletter.com/4BWAyX",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a15",
+          "order": 2,
+          "title": "OPENAI AI PIPELINE GENERATES 948 LINUX ROOT ESCALATION EXPLOITS IN 30-HOUR RUN",
+          "summary": "OpenAI says an automated pipeline reproduced 1,724 Linux kernel vulnerabilities in 30 hours and generated 948 working local privilege-escalation exploits. The run produced 291 information-leak proofs of concept, patches for identified flaws, and at least 10 novel exploitation techniques. It cost $1.21 million in API credits, or $1,279 per exploit. OpenAI says unpatched systems with low-privileged access should be treated as accessible to well-resourced attackers with root access.",
+          "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a16",
+          "order": 3,
+          "title": "APPLE WILL SCAN SHARED ICLOUD LINKS FOR HARMFUL CONTENT, BUT WON'T EXPLAIN WHAT COUNTS AS HARMFUL",
+          "summary": "Apple will check photos and files shared via iCloud's “Anyone with the Link” setting for harmful content on iOS, iPadOS, and macOS 27.3. Publicly shared items lose end-to-end encryption, even with Advanced Data Protection enabled. Apple can remove files, block accounts, prevent re-registration, and contact law enforcement. It has not defined “harmful,” explained the screening method, said whether people review flags, or confirmed whether existing public links are covered.",
+          "url": "https://www.techtimes.co.uk/apple-scan-public-icloud-links-1809720?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techtimes.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-06:a17",
+          "order": 1,
+          "title": "CYBERATTACK ON NORWAY'S AID AGENCY MAY HAVE SWEPT UP ALL USER DATA",
+          "summary": "Attackers used 27 compromised accounts to enter Norad's Grants Portal, potentially exposing names and email addresses for all 20,614 registered users, and also took applications and documents from three foreign organizations.",
+          "url": "https://www.helpnetsecurity.com/2026/11/05/norad-grants-portal-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "helpnetsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a18",
+          "order": 2,
+          "title": "CHINESE NATION-STATE THREAT ACTIVITY FALLS SHARPLY IN Q2 AND Q3 2026",
+          "summary": "Trellix detected 41.4% less China-aligned nation-state activity from April to September, but cautioned that the drop may reflect shifts in targeting or its own visibility rather than less hacking, since PRC activity still outpaced Russia and Iran, while the US and Turkey together drew three-quarters of all nation-state detections.",
+          "url": "https://www.infosecurity-magazine.com/news/chinese-nation-activity-falls/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "infosecurity-magazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-06:a19",
+          "order": 3,
+          "title": "AWS SECURITY HUB NOW PROVIDES AN SBOM INVENTORY FOR YOUR COMPUTE RESOURCES",
+          "summary": "AWS Security Hub now shows an organization-wide inventory of the software packages installed across EC2 instances, ECR images, and Lambda functions, built from Amazon Inspector's SBOMs and queryable through the API, at no extra cost wherever Inspector is enabled.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-sbom-inventory/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

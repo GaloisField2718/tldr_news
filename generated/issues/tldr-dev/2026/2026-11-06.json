@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-06",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-06",
+  "source_path": "TLDR Dev/article_06-11-2026.md",
+  "source_content_hash": "sha256:709f24430e32338bcf936f406f4073188c43e37de5261e1bb86eba53b06dd264",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-06",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a04",
+          "order": 1,
+          "title": "META BUILT ITS MUSE AGENT TO LOOK HUMAN. BUT IT CAN'T FOOL EVERYONE",
+          "summary": "Muse signs in, applies promo codes, and completes purchases for real users. And it takes these actions with no declared user agent, no Web Bot Auth signature, a tampered browser, and suppressed automation flags.\n\nSneaky? Yes. Infallible? No.\n\nRead the blog [5] to learn how Fingerprint detects Muse [6], so you can decide what to do with it:\n\n* Signals and Device Intelligence give you provider, category, and confidence in one response. * identity: \"unknown\" tells you it's recognized but unverified, so Muse earns trust one action at a time. * Filter Muse events and set the policies you want to apply.",
+          "url": "https://fingerprint.com/blog/how-to-detect-meta-muse-ai-agent/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=Primary110626&utm_content=header_meta_built_its&utm_term=2026-11-06",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a07",
+          "order": 2,
+          "title": "Learn how to identify Muse traffic in minutes",
+          "summary": "",
+          "url": "https://fingerprint.com/blog/how-to-detect-meta-muse-ai-agent/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=Primary110626&utm_content=cta_how_identify_muse&utm_term=2026-11-06",
+          "reading_time_minutes": null,
+          "source_domain": "fingerprint.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a08",
+          "order": 1,
+          "title": "FRONTIER QUALITY AT 1% OF THE COST: A PRODUCTION BENCHMARK OF LLM CLASSIFIERS",
+          "summary": "Airbnb fine-tuned a model with 2 billion effective parameters to match frontier models on a production policy classifier, reaching 0.902 F1 with 35 ms median latency. At thousands of requests per minute, serving it on one GPU cost roughly 1% as much as frontier APIs, though hosted models were cheaper at low traffic.",
+          "url": "https://airbnb.tech/ai-ml/frontier-quality-at-1-of-the-cost-a-production-benchmark-of-llm-classifiers/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "airbnb.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a09",
+          "order": 2,
+          "title": "REACT.LAZY, SUSPENSE AND THE HIDDEN 300 MS DELAY",
+          "summary": "Tab Widgets traced slow startup to React's 300 ms Suspense reveal throttle, even though its widget code had loaded within about 100 ms. Rendering placeholders without suspending brought the first widget content onscreen about 240 ms sooner in its Windows Chrome tests, while shrinking the startup bundle made no measurable difference.",
+          "url": "https://tabwidgets.com/blog/react-lazy-suspense-delay?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "tabwidgets.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a10",
+          "order": 3,
+          "title": "INSIDE GITHUB'S NEW GIT STORAGE ARCHITECTURE",
+          "summary": "GitHub's Rubicon architecture separates immutable Git objects in Azure Blob Storage from reference updates in a dedicated replicated log, letting compute, storage, and maintenance scale independently. Internal tests supported 5,000 concurrent agents and 7,200 pushes per second to one repository, with disposable virtual replicas serving requests and separate workers compacting packs.",
+          "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/?utm_source=tldrdev",
+          "reading_time_minutes": 16,
+          "source_domain": "github.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a11",
+          "order": 1,
+          "title": "DESIGN SYSTEMS SHOULD BE FAST BY DEFAULT",
+          "summary": "Tests of ten design systems show why interaction performance needs the same attention as accessibility, using a 249-country dropdown and a list of 100 checkboxes as realistic stress cases. The practical approach combines Playwright performance budgets, checks for long frames and nonlinear scaling, and defaults such as automatic virtualization so every app benefits.",
+          "url": "https://denodell.com/blog/design-systems-should-be-fast-by-default?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "denodell.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a12",
+          "order": 2,
+          "title": "DON'T BUILD THE REUSABLE COMPONENT YET",
+          "summary": "Similar-looking workflows can have different failure modes, audit requirements, and owners, so combining them too early creates flags and coordination costs. Wait until a pattern appears three times for the same reason before extracting it, while sharing stable primitives, design tokens, accessibility behavior, and standards-driven utilities from the start.",
+          "url": "https://stackoverflow.blog/2026/11/05/don-t-build-the-reusable-component-yet?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "stackoverflow.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a13",
+          "order": 1,
+          "title": "AGENTS IN PRODUCTION. FREE DEV CONFERENCE, NOV 12",
+          "summary": "Do your agents need a boost? Explore agent memory, context engineering, MCP, evals, and multi-agent systems at Neo4j NODES 2026. Join developers for 100+ live technical sessions and an Andrew Ng",
+          "url": "https://neo4j.com/nodes/?utm_source=tldr-dev&utm_medium=newsletter-1026&utm_campaign=dev",
+          "reading_time_minutes": null,
+          "source_domain": "neo4j.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a13-02",
+          "order": 2,
+          "title": "keynote at this 24-hour online conference. REGISTER FREE.",
+          "summary": "",
+          "url": "https://neo4j.com/nodes/?utm_source=tldr-dev&utm_medium=newsletter-1026&utm_campaign=dev",
+          "reading_time_minutes": null,
+          "source_domain": "neo4j.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a14",
+          "order": 3,
+          "title": "GG CODER",
+          "summary": "GG Coder is a desktop coding agent that works with existing AI subscriptions, API keys, or local models, with local search of open-source code and an autopilot that continues through verification. The repository also exposes reusable packages for provider connections, tool-using agents, model selection, and coding sessions under an AGPL-3.0 license.",
+          "url": "https://github.com/KenKaiii/gg-framework?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a15",
+          "order": 4,
+          "title": "SIDEBEARING-TRIM",
+          "summary": "sidebearing-trim aligns text columns by visible letter shapes rather than glyph box origins. It reads OpenType glyph metrics and applies a negative offset at the start of the line to compensate for the first glyph's sidebearing.",
+          "url": "https://sidebearing-trim.js.org/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "sidebearing-trim.js.org",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a16",
+          "order": 5,
+          "title": "FILE VIEWER",
+          "summary": "File Viewer previews more than 275 file formats in the browser, including Office documents, PDF, CAD, 3D files, and archives. Its built-in renderers work without a conversion server, with integrations for Vue, React, Svelte, and Web Components and support for self-hosting workers, WASM, and fonts.",
+          "url": "https://github.com/flyfish-dev/file-viewer?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a17",
+          "order": 1,
+          "title": "DISCORD IS DITCHING ELECTRON AND ITS NEW APP USES LESS RAM",
+          "summary": "Discord plans to replace Electron on desktop and React Native on mobile with shared Rust app code, while retaining native mobile interfaces. A preview Windows client used 290 MB of RAM, but there is no announced release date and user testing is still planned.",
+          "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a18",
+          "order": 2,
+          "title": "HOW NVIDIA USES AI AGENTS TO STREAMLINE AI FACTORY OPERATIONS",
+          "summary": "NVIDIA uses specialized agents to correlate failures across GPU cluster hardware, networking, scheduling, and observability through one chat interface. The system can run on-premises with local Nemotron models, while read-only Kubernetes credentials, per-session sandboxes, and auditable recommendations give SREs control over investigations.",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "developer.nvidia.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a19",
+          "order": 3,
+          "title": "A WEBGPU CAT PUZZLE GAME SHIPPED IN THREE DAYS ON EXPO, WITH AN AI AGENT AS THE QA TEAM",
+          "summary": "Purrkour went from first commit to App Store-ready in three days using a shared TypeScript engine, Expo, and TypeGPU, with procedural graphics and audio. A solver verifies the puzzles, while an AI agent tests actual gameplay through Argent using a debug bridge that exposes board state and exact tap coordinates.",
+          "url": "https://expo.dev/blog/purrkour-webgpu-typegpu-game-expo-three-days?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "expo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-06:a20",
+          "order": 1,
+          "title": "INTRODUCING INKLING 2 SMALL",
+          "summary": "Thinking Machines' new mixture-of-experts model has 594B total parameters and 17B active, supports image input and adjustable reasoning effort, and launches on Tinker with Apache 2.0 weights planned for next week after external safety testing.",
+          "url": "https://links.tldrnewsletter.com/1hR6VQ",
+          "reading_time_minutes": 12,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a21",
+          "order": 2,
+          "title": "HOW A SPLIT WEBFONT SLOWED DOWN MY TEXT LAYOUT, AND HOW I FIXED IT",
+          "summary": "Splitting common letters across webfont files increases text layout work and interaction latency, which can be reduced by keeping basic Latin together, avoiding overlapping unicode-range declarations, and placing Arabic fonts first on Arabic pages.",
+          "url": "https://links.tldrnewsletter.com/6PHjwa",
+          "reading_time_minutes": 7,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a22",
+          "order": 3,
+          "title": "I WISH TECH COMPANIES KNEW MORE ABOUT ME",
+          "summary": "Despite extensive tracking, tech services still recommend products people already own, ignore explicit language preferences, and miss years of consistent behavior, raising the question of why collected data so rarely improves the experience.",
+          "url": "https://links.tldrnewsletter.com/iLB5Lf",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-06:a23",
+          "order": 4,
+          "title": "*SSHOLE",
+          "summary": "A password authentication bypass in OpenSSH on musl systems without PAM can let specially configured accounts accept long passwords because musl's crypt() failure marker matches the account's stored password field.",
+          "url": "https://links.tldrnewsletter.com/q73ejK[24][25",
+          "reading_time_minutes": 5,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
