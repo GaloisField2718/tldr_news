@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-11-09",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-11-09",
+  "source_path": "TLDR Data/article_09-11-2026.md",
+  "source_content_hash": "sha256:503938db043b7483686bfb427905e81447f4802a6ed6d76cceaa99efc7fbe478",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-11-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a04",
+          "order": 1,
+          "title": "LEADERSHIP WANTS AI RESULTS. CAN YOU TRUST THE NUMBERS BEHIND THEM?",
+          "summary": "Most AI projects don't fail because the model is wrong. They fail when Finance, Sales and the AI assistant each report a different number, and nobody can say quickly which is right.\n\nTimextender's AI-Ready Data whitepaper [4] shows what to fix first: five pillars, six failure modes that quietly stall AI projects, and a 10-question diagnostic.",
+          "url": "https://www.timextender.com/ai-ready-data-context-gap?utm_campaign=58381622-FY26-CA-DG-AI-Readiness-WP-Global&utm_source=tldrdata&utm_medium=newsletter&utm_content=ai-readiness",
+          "reading_time_minutes": null,
+          "source_domain": "timextender.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-09:a06",
+          "order": 2,
+          "title": "demo →",
+          "summary": "",
+          "url": "https://www.timextender.com/en/request-a-timextender-demonstration?utm_campaign=58381622-FY26-CA-DG-AI-Readiness-WP-Global&utm_source=tldrdata&utm_medium=newsletter&utm_content=ai-readiness",
+          "reading_time_minutes": null,
+          "source_domain": "timextender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a07",
+          "order": 1,
+          "title": "THE COMPONENTS OF AGENT MEMORY",
+          "summary": "Anthropic's Lance Martin describes dreaming, where Claude reflects on past session logs to fix mistakes in its memory notes and build new ones. As dreaming scaled from two to 128 sessions over about 350,000 Stainless files, scores on 25 questions rose from 13% to 48%. On merger questions, a wiki beat search alone 87% to 73%.",
+          "url": "https://www.anthropic.com/research/components-of-agent-memory?utm_source=tldrdata",
+          "reading_time_minutes": 18,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a08",
+          "order": 2,
+          "title": "HOW KLAVIYO SCALED ANALYTICS BY GETTING OUT OF THE WAY",
+          "summary": "Klaviyo expanded its AI analytics platform from a four-person experiment to hundreds of monthly users by centralizing business context, governed metrics, and warehouse access. Its KBI system combines over 100 dbt semantic metrics, a curated 90-table environment, and trusted SQL checks behind a common agent interface. Most warehouse queries now originate from agents, reducing dependence on manual analyst requests while keeping data definitions consistent.",
+          "url": "https://klaviyo.tech/how-klaviyo-scaled-analytics-by-getting-out-of-the-way-01836b9164f3?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "klaviyo.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a09",
+          "order": 3,
+          "title": "SAFE AND EFFICIENT MULTI-EPOCH EMBEDDING TRAINING",
+          "summary": "Pinterest found that training its large ID embeddings for multiple epochs degraded Homefeed ranking quality by nearly 6%. Decoupling embedding optimization from the rest of the model, freezing embeddings during the first epoch, and adapting them later reversed the problem, improving online saves by 1.09%. Semi-synchronous prefetching and communication optimizations also reduced GPU idle time during distributed training.",
+          "url": "https://links.tldrnewsletter.com/nYYZ6M",
+          "reading_time_minutes": 12,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a10",
+          "order": 4,
+          "title": "HOW JETBRAINS BUILT CROSS-DATABASE QUERIES INTO DATAGRIP WITH DUCKDB",
+          "summary": "JetBrains users had long asked to join data across database connections in one query. Rather than build its own engine, the DataGrip team chose DuckDB over Apache Calcite because it was the simplest to integrate. Custom table functions plug DuckDB into DataGrip's existing query execution, so PostgreSQL, MySQL, and MongoDB data can meet in one query.",
+          "url": "https://duckdb.org/2026/11/05/jetbrains-datagrip.html?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "duckdb.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a11",
+          "order": 1,
+          "title": "THE DATA PRODUCT PLATFORM NAVIGATOR",
+          "summary": "Data mesh adoption often stalls because teams must assemble data products from disconnected infrastructure, catalogs, and deployment tools. Tom De Wolf proposes a four-level maturity model for self-service data platforms, from fragmented scripts and tickets to integrated developer ecosystems. He argues that Level 3, where complete data products can be provisioned through a platform-as-a-product experience, is the minimum required for scalable decentralized ownership.",
+          "url": "https://martinfowler.com/articles/data-product-platform-nav.html?utm_source=tldrdata",
+          "reading_time_minutes": 15,
+          "source_domain": "martinfowler.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a12",
+          "order": 2,
+          "title": "YOUR LLM WRITES GOOD SQL. THAT'S NOT THE SAME AS SAFE SQL",
+          "summary": "Accurate text-to-SQL can still expose unauthorized data when generated queries ignore business context and access policies. In a synthetic benchmark of 900 queries, policy-aware validation applied row filters, column masking, and scope restrictions before execution, eliminating observed data leaks while adding approximately 6.5 ms per query. Permissions must be enforced in code rather than entrusted to model prompts.",
+          "url": "https://www.infoworld.com/article/4244721/your-llm-writes-good-sql-thats-not-the-same-as-safe-sql.html?utm_source=tldrdata",
+          "reading_time_minutes": 3,
+          "source_domain": "infoworld.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a13",
+          "order": 3,
+          "title": "THE HUMAN SIDE OF THE SEMANTIC LAYER: TRANSLATING DATA MEANING ACROSS TEAMS",
+          "summary": "Semantic layers need shared human understanding, because teams can interpret the same metric differently even when its calculation is consistent. Governance should pair formal definitions with plain-language explanations, realistic examples, and clear decision rights, then test whether teams apply them consistently.",
+          "url": "https://moderndata101.substack.com/p/the-human-side-of-the-semantic-layer?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "moderndata101.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a14",
+          "order": 1,
+          "title": "FROM EQUITY TO POSSIBILITY: PLAN BEFORE THE IPO",
+          "summary": "An IPO can bring new possibilities—and new decisions—while you stay focused on building.\n\nJ.P. Morgan Private Bank helps you organize what you own, anticipate cash needs, and plan thoughtfully for what's next.\n\nStart a conversation; your questions set the agenda before timelines start moving.",
+          "url": "https://privatebank.jpmorgan.com/nam/en/who-we-serve/ipo-planning-for-employees?utm_source=jpmwm-email-tldr&utm_medium=con-tldrdata1109-dir-site&utm_campaign=us-en-pbcore-acq&utm_content=email-ipo-tldrdata1109-v",
+          "reading_time_minutes": null,
+          "source_domain": "privatebank.jpmorgan.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-09:a14-02",
+          "order": 2,
+          "title": "TALK TO J.P. MORGAN PRIVATE BANK",
+          "summary": "",
+          "url": "https://privatebank.jpmorgan.com/nam/en/who-we-serve/ipo-planning-for-employees?utm_source=jpmwm-email-tldr&utm_medium=con-tldrdata1109-dir-site&utm_campaign=us-en-pbcore-acq&utm_content=email-ipo-tldrdata1109-v",
+          "reading_time_minutes": null,
+          "source_domain": "privatebank.jpmorgan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a15",
+          "order": 3,
+          "title": "APACHE SPARK 4.3.0 RELEASE",
+          "summary": "Apache Spark 4.3.0 brings stateful processing to Structured Streaming's Real-Time Mode, supporting aggregations, deduplication, and custom stateful operations with approximately 100 ms end-to-end latency. Declarative Pipelines adds SCD Type 2 Auto CDC, while the SQL engine gains ASOF joins, JSON_TABLE, and optimizations for smaller workloads.",
+          "url": "https://spark.apache.org/releases/spark-release-4-3-0.html?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "spark.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a16",
+          "order": 4,
+          "title": "SIGLAKE: AN OPEN-SOURCE OBSERVABILITY LAKEHOUSE BUILT ON ICEBERG AND DATAFUSION",
+          "summary": "Siglake is a Rust-based observability engine that ingests OpenTelemetry logs and traces into Apache Parquet and Iceberg tables on object storage. Its architecture uses an Arrow write-ahead log for streaming ingestion and DataFusion for distributed SQL queries, eliminating the need for Kafka or proprietary storage formats. The project reports ingesting over 400,000 rows per second in distributed tests.",
+          "url": "https://github.com/siglake/siglake?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a17",
+          "order": 5,
+          "title": "APACHE HOP 2.20 ADDS NATIVE ICEBERG PIPELINES AND AI PROCESSING",
+          "summary": "Apache Hop 2.20 introduces native Apache Iceberg reads and writes without Spark, partitioned Parquet output, and new data-quality transformations. The open-source ETL platform also adds text embedding pipelines, pgvector integration, OpenLineage support, and an optional AI assistant with human-reviewed changes.",
+          "url": "https://hop.apache.org/blog/2026/11/hop-2.20.0/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "hop.apache.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a18",
+          "order": 1,
+          "title": "CLEANING OR RECALLING? KNOWLEDGE DEPENDENCE IN LLM-BASED DATA CLEANING",
+          "summary": "Across eight LLMs, researchers found that data-cleaning performance often depends on familiar names and facts, with one model's year-repair accuracy falling from 91% to 18% when films were renamed. Models also overwrote valid table values with remembered facts, while flawed benchmark answers sometimes rewarded incorrect repairs.",
+          "url": "https://arxiv.org/abs/2611.08106?utm_source=tldrdata",
+          "reading_time_minutes": 23,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a19",
+          "order": 2,
+          "title": "HOW WE BUILT NASA'S ZERO-SHOT DETECTOR FOR GAS LEAKS FROM SPACE",
+          "summary": "NASA JPL's Daily Methane Digest scans every scene from the EMIT instrument on the space station and cuts alert times from months to about 24 hours. Its U-Net, trained only on methane, also maps carbon monoxide, ammonia, and nitrogen dioxide plumes without retraining. On two years of archived scenes, it found 157 methane plumes that human review missed.",
+          "url": "https://towardsdatascience.com/how-we-built-nasas-zero-shot-detector-for-gas-leaks-from-space/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "towardsdatascience.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-09:a20",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach data engineers, analysts and data leaders where they actually pay attention. Learn more about sponsorship opportunities [20].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrdata&utm_medium=newsletter&utm_campaign=quicklinks11092026&sp=pZt80pvptCEXMJd8fskqqqRp",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-09:a21",
+          "order": 2,
+          "title": "ON AUTOMATING THE CREATION OF A SEMANTIC LAYER",
+          "summary": "Canva's data agent records query intent and business jargon in SQL comments, which the team mines to build a semantic layer, reconcile terminology across departments, and test for unsafe answers.",
+          "url": "https://www.linkedin.com/posts/ryguyrg_dataoutpost-semanticlayer-ai-share-7524187892517085185-w7NG?utm_source=tldrdata",
+          "reading_time_minutes": 2,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-09:a22",
+          "order": 3,
+          "title": "QUERY THE MURDER: LEARN SQL BY SOLVING MURDER MYSTERIES",
+          "summary": "A free SQL game with 18 Agatha Christie cases that moves from SELECT and WHERE to joins, subqueries, and window functions.",
+          "url": "https://querythemurder.com/?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "querythemurder.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

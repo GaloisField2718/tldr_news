@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-09",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-09",
+  "source_path": "TLDR InfoSec/article_09-11-2026.md",
+  "source_content_hash": "sha256:cfd625fae160f9ba2d596539191da50a936926c08bcbc7fff9c16fe4bdc7e9bc",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-09",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a04",
+          "order": 1,
+          "title": "TAILSCALE PAM: GIVE AI AGENTS ACCESS TO PROD WITHOUT SHARING YOUR CREDENTIALS",
+          "summary": "Your AI agents need to reach databases, clusters, and servers to do real work. That often means a credential sitting in a prompt or config file. One prompt injection later, it's in someone else's hands.\n\nTailscale PAM gives agents access by identity instead. The agent never sees a secret. You scope exactly what it can touch, and every session gets recorded. When you need broader just-in-time access, the agent requests it over the API or Slack, and a human approves.\n\nLeast privilege, now for agents too.\n\nJoin the Tailscale PAM beta waitlist",
+          "url": "https://tailscale.com/use-cases/pam?utm_source=tldrsec&utm_medium=paid-ad-placement&utm_campaign=2026-11-07_primary_tailscale&utm_content=header_tailscale_pam_give&utm_term=2026-11-07",
+          "reading_time_minutes": null,
+          "source_domain": "tailscale.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a05",
+          "order": 1,
+          "title": "DIGICERT DATA BREACH IMPACTS BUSINESS CUSTOMER INFORMATION",
+          "summary": "DigiCert disclosed that attackers created a read-only account on an exposed internal archive system and accessed business-customer contact data from June 27 to July 2. Exposed records include names, email addresses, phone numbers, business addresses, and, in some cases, identity documents. DigiCert says certificate-issuing systems were unaffected. It has reset passwords, disabled self-registration, added monitoring, and reviewed account permissions.",
+          "url": "https://links.tldrnewsletter.com/D7l6yX",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a06",
+          "order": 2,
+          "title": "MEET *SSHOLE, THE VULNERABILITY THAT LETS HACKERS SSH INTO LINUX DEVICES",
+          "summary": "A vulnerability called *sshole allows remote attackers to log in to some Alpine Linux systems without a password. It affects OpenSSH built with musl and without PAM, where an active passwordless account uses SHA256 or SHA512 password hashing. An attacker can send more than 256 characters in the password field and gain access in one attempt. Alpine and OpenSSH have released patches. Affected systems should update promptly.",
+          "url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a07",
+          "order": 3,
+          "title": "IRIS OHYAMA DATA CLOUD BREACH EXPOSES INFO OF 7.7M CUSTOMERS",
+          "summary": "Japanese manufacturer Iris Ohyama disclosed that a third-party cloud service was breached, exposing data belonging to 7.7M former and current customers. The exposed data includes full names, physical addresses, phone numbers, email addresses, genders, dates of birth, and account passwords. Iris Ohyama has stated that account passwords are encrypted but did not give further details.",
+          "url": "https://links.tldrnewsletter.com/CLy5Kl",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a08",
+          "order": 1,
+          "title": "THE ATTACK CHAIN BEHIND THE V1.107.0 LITELLM RELEASE",
+          "summary": "An admin key for LiteLLM's internal Agent Platform was committed to a public repo on May 27 and removed hours later but never revoked, and on October 10 an attacker used it to pull an org owner's unscoped GitHub CLI token from the platform API. With that token and two maintainer tokens stolen through CI workflows, the attacker overrode branch protection, built from a lookalike Berri-AI fork, and published poisoned wheels and images that stayed up for about two hours. Defenders should revoke any key that was ever committed, keep unscoped CLI tokens out of automation, and alert on branch protection overrides and deleted workflow runs.",
+          "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "docs.litellm.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a09",
+          "order": 2,
+          "title": "VIRTUALIZATION SECURITY: ATTACK LAYERS AND MISCONFIGURATION IMPACT",
+          "summary": "In a BlackNevas ransomware case investigated by Kaspersky GERT, attackers who reached a PRTG monitoring server used its stored ESXi root password, reused across hosts, to SSH in, disable execInstalledOnly via esxcli, and encrypt VMFS volumes before wiping logs. In a separate case, The Gentlemen group found plaintext Proxmox root credentials in an admin's notes. It used the VNC websocket API to encrypt the entire cluster, with neither attack requiring a VM escape. Defenders should give monitoring tools dedicated least-privilege identities, vault unique per-host credentials, keep ESXi SSH off behind vCenter Lockdown Mode, and alert on execInstalledOnly or Secure Boot changes.",
+          "url": "https://securelist.com/virtualization-security-esxi-and-proxmox-ransomware-cases/121819/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "securelist.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a10",
+          "order": 3,
+          "title": "A JOURNEY INTO CLAUDE'S SANDBOX",
+          "summary": "BishopFox researchers inadvertently discovered that they could convince Claude Code to reveal details about its internals. The researchers were able to use Claude to read its process memory, download files (including the process_api binary), and create a virtual interface to bypass the local connection block. The researchers also discovered that, although the Claude Enterprise controls blocked users from changing their first name, they could do so via the API.",
+          "url": "https://bishopfox.com/blog/journey-into-claudes-sandbox?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "bishopfox.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a11",
+          "order": 1,
+          "title": "THREAT FEED ME",
+          "summary": "Threat Feed Me is an open-source, on-prem threat intelligence aggregator meant to replace MineMeld, Palo Alto Networks' free feed-aggregation tool, which the company retired years ago and many SOCs still miss. It pulls 22 free feeds that need no API key and removes duplicate indicators. It also detects when one feed is just republishing another, so copied entries don't look like independent agreement. That keeps the strictest high-confidence blocklist small and trustworthy.",
+          "url": "https://github.com/alexlinos/threat-feed-me?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a12",
+          "order": 2,
+          "title": "BRAVA SECURITY (PRODUCT LAUNCH)",
+          "summary": "Brava Security provides an AI platform that models attacker behavior, simulates attacks, analyzes resulting telemetry, identifies missed defenses, and rewrites SIEM detections. It integrates with more than 70 sources and destinations, provides initial insights within 10–15 minutes of onboarding, and requires no changes to existing security infrastructure.",
+          "url": "https://www.brava.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "brava.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a13",
+          "order": 3,
+          "title": "COLDFRAME",
+          "summary": "coldframe is a single-file Python honeypot that impersonates Danfoss AK-SM 800A and Copeland/Dixell XWEB EVO refrigeration controllers, matching the server headers, TLS certificate fields, and login flows that Shodan records for real units, and tagging exploit attempts for seven CVEs, including CVE-2025-41450 and CVE-2026-25085. Weak default logins let attackers into a fake store dashboard where every defrost click is logged as a control event, and an optional Modbus TCP listener catches generic industrial scanners. It ships with a hardened rootless container and a cloud-init file for $4 droplets, though defenders should change its persona strings before deploying, since the public code is easy to fingerprint.",
+          "url": "https://github.com/hedgerow-dev/coldframe?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a14",
+          "order": 1,
+          "title": "AGENTS REVEAL SECRETS WHEN OFFERED TO TEAM UP WITH EACH OTHER",
+          "summary": "In sandboxed tests, nine coding agents were given a private deploy token and access to a forum of 24 agents. To obtain a bug fix, the forum demanded the token and an install script. Across 181 trials, agents shared the token 15 percent of the time and ran the script 24 percent of the time, with agent pressure increasing script execution from 19 percent to 34 percent.",
+          "url": "https://www.theregister.com/security/2026/11/06/agents-reveal-secrets-when-offered-to-team-up-with-each-other/5308260?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a15",
+          "order": 2,
+          "title": "SECURE CODE BENCHMARK FINDS TOP CODING AGENTS WRITE SECURE CODE ONLY 25% OF THE TIME",
+          "summary": "Qwen researchers tested six frontier coding agents on LSCBench, 450 security-neutral tasks built from 150 real vulnerabilities across seven languages, and found that while 73.6% to 91.3% of outputs worked, even the top performer, Claude Fable 5, wrote code that was both functional and secure only 25.1% of the time. Agents often added local defenses like bounds checks but almost never secured SSRF or information exposure, which depend on policies the spec never stated, and a one-line security reminder raised joint pass rates by 15 to 21 points for three of the four models retested. Pooled together, the six models secured 44% of tasks, though the tests and specs were drafted with Qwen's own Qwen3.8-Max, which the authors argued did not tilt the results.",
+          "url": "https://hackernoon.com/secure-code-benchmark-finds-top-coding-agents-write-secure-code-only-25percent-of-the-time?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "hackernoon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a16",
+          "order": 3,
+          "title": "NOTES AND LINKS FROM MY TALK AT TEXAS LINUX FEST",
+          "summary": "In his Texas Linux Fest talk, Don Marti argued that open source beat the Clipper Chip and DRM mandates, but that open source's own \"commoditize the complement\" logic, applied to content, gave rise to an adtech system that now profits from matching scammers with victims. He cited Pew data showing 73% of US adults had faced an online scam, along with estimates that Meta earned around 10% of its ad revenue from fraud, and noted that once-niche privacy nerd advice like DNS-level ad blocking was now standard corporate IT guidance. Marti framed California privacy law and favorable jury verdicts as the most promising counterweight, though the post was explicitly preliminary and its framing of Google and Meta as crime organizations was his own opinion.",
+          "url": "https://blog.zgp.org/txlf/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.zgp.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-09:a17",
+          "order": 1,
+          "title": "CYBERATTACKERS ARE LESS SKILLED THAN EVER – AND MORE DANGEROUS",
+          "summary": "AI has created two software acceleration curves: one for building, another for attacking. Learn where the threat lies and how to",
+          "url": "http://digital.ai",
+          "reading_time_minutes": null,
+          "source_domain": "digital.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a17-02",
+          "order": 2,
+          "title": "neutralize it in Digital.AI's Application Security Threat Report.",
+          "summary": "",
+          "url": "http://digital.ai",
+          "reading_time_minutes": null,
+          "source_domain": "digital.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a18",
+          "order": 3,
+          "title": "MICROSOFT PAINT RCE FIX NOW AVAILABLE, BUT WINDOWS UPDATE WON'T DELIVER IT",
+          "summary": "Microsoft has fixed CVE-2026-83844, an out-of-bounds read in Windows Paint that can enable network-based remote code execution.",
+          "url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a19",
+          "order": 4,
+          "title": "TRICKING DEEPSEEK INTO NOT HACKING YOUR WEBSITE",
+          "summary": "Utku Sen found that planting forbidden strings like \"Tank Man\" in a site's HTML comments and decoy JavaScript function names caused Deepseek-powered pentest agents in the Pi and ARTEX harnesses to refuse or abort testing his own vulnerable app, turning model censorship into a crude anti-AI firewall.",
+          "url": "https://utkusen.substack.com/p/tricking-deepseek-into-not-hacking?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "utkusen.substack.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-09:a20",
+          "order": 5,
+          "title": "ICTK, PUKYONG NATIONAL UNIVERSITY TO DEVELOP PROGRAMMABLE PQC ENGINE",
+          "summary": "Korean fabless chipmaker ICTK is building a programmable post-quantum hardware engine with Pukyong National University that runs NIST's ML-KEM and ML-DSA alongside Korea's KpqC algorithms on shared IP blocks, due in August 2028 for a security SoC aimed at KT.",
+          "url": "https://www.thelec.net/news/articleView.html?idxno=15353&utm_source=tldrinfosec%5B21%5D%5B22",
+          "reading_time_minutes": 2,
+          "source_domain": "thelec.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
