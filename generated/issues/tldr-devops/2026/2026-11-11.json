@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-11-11",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-11-11",
+  "source_path": "TLDR DevOps/article_11-11-2026.md",
+  "source_content_hash": "sha256:2b586cf7b8cbc763ef27bda3555fd949d205faec07ad5a3818f8fc9c3eaf2e05",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-11-11",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a04",
+          "order": 1,
+          "title": "WHEN YOUR AI AGENT SENDS THE WRONG EMAIL, IT'S ALREADY TOO LATE TO SCOPE THE KEY",
+          "summary": "18% of teams had an AI agent send a wrong email last quarter, per Nylas's new survey. Nylas IAM gives each agent its own key, scoped to one mailbox if you want. Try to send on a read-only key and the Nylas gateway refuses it before Google or Microsoft ever sees the request. Every call gets logged, refusals included. Included on every plan.",
+          "url": "https://www.nylas.com/blog/nylas-iam-scoped-api-keys/?utm_source=tldr&utm_medium=sponsoredemail&utm_campaign=nylas-nov-11&utm_content=header_when_ai_agent&utm_term=2026-11-11_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a05",
+          "order": 2,
+          "title": "SEE HOW NYLAS IAM WORKS →",
+          "summary": "",
+          "url": "https://www.nylas.com/blog/nylas-iam-scoped-api-keys/?utm_source=tldr&utm_medium=sponsoredemail&utm_campaign=nylas-nov-11&utm_content=cta_how_nylas_iam&utm_term=2026-11-11_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "nylas.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a06",
+          "order": 1,
+          "title": "NOW GENERALLY AVAILABLE: GKE DYNAMIC SLICING FOR HIGHER RESILIENCE, AND EFFICIENCY FOR TPUS",
+          "summary": "Google Kubernetes Engine dynamic slicing is now generally available for TPUs. It separates slice formation from nodepool provisioning, cutting AI workload startup times by up to 5x and recovery times by 4.5x.",
+          "url": "https://cloud.google.com/blog/products/containers-kubernetes/gke-dynamic-slicing-on-tpus/?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a07",
+          "order": 2,
+          "title": "SEE WHAT YOUR ARGO CD APPLICATIONS COST",
+          "summary": "Cost Intelligence for Argo CD is an open-source extension that shows each application's cost in a UI tab, using the previous 24 hours of OpenCost data after each sync. It requires Argo CD 3.4 to 3.6 and OpenCost 1.121.1 or newer.",
+          "url": "https://octopus.com/blog/argocd-cost-intelligence?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "octopus.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a08",
+          "order": 3,
+          "title": "AWS NITRO SANDBOXES: HARDWARE-ENFORCED WORKLOAD ISOLATION ON AMAZON EKS",
+          "summary": "AWS Nitro Sandboxes provides hardware-enforced workload isolation for Amazon EKS pods by running each one inside its own lightweight virtual machine. The feature allows users to enable strong security boundaries with a single line in the pod spec without changing container images or deployment pipelines. It offers isolated mode for standard protection and confidential mode for cryptographic attestation.",
+          "url": "https://aws.amazon.com/blogs/containers/aws-nitro-sandboxes-hardware-enforced-workload-isolation-on-amazon-eks/?utm_source=tldrdevops",
+          "reading_time_minutes": 12,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a09",
+          "order": 1,
+          "title": "KUBERNETES GAVE AI AGENTS A PLACE TO RUN, BUT NOT A WAY TO RECOVER",
+          "summary": "Kubernetes can restore an AI agent's environment but cannot record which steps finished, so restarted agents may repeat actions such as payments. The author argues for durable execution that logs each step, citing Dapr's workflow engine as an option.",
+          "url": "https://cloudnativenow.com/contributed-content/kubernetes-gave-ai-agents-a-place-to-run-but-not-a-way-to-recover/?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a10",
+          "order": 2,
+          "title": "7 PRODUCTION HABITS WE LEARNED AT WIX. THE HARD WAY",
+          "summary": "A Wix engineering lead details seven habits for reliable production systems, learned from eight years of operating the editor server team. The list includes using the Five Whys method to find root causes, running post-mortems without blame, and conducting team-wide on-call handovers. He emphasizes leaving the system better than you found it by fixing one small thing per shift.",
+          "url": "https://www.wix.engineering/post/7-production-habits-we-learned-at-wix-the-hard-way?utm_source=tldrdevops",
+          "reading_time_minutes": 10,
+          "source_domain": "wix.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a11",
+          "order": 1,
+          "title": "LET YOUR AI AGENTS RUN CODE WITH STRONG ISOLATION",
+          "summary": "AI agents now write and execute code no human reviews first. AWS Nitro Sandboxes [12] now runs each AI agent and container in its own lightweight VM on the AWS Nitro System, the same hardware isolation that separates every EC2 instance. Safely run untrusted, LLM-generated code with strong isolation and near bare-metal performance. Learn how it works here [13].",
+          "url": "https://aws.amazon.com/blogs/compute/nitro-sandboxes-hardware-isolation-for-every-eks-pod-ecs-task-and-ec2-workload/?trk=13e1a116-4119-4553-8fe9-8a0e55ad1341&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a14",
+          "order": 2,
+          "title": "ASTRYX",
+          "summary": "Astryx is an open-source design system with over 150 accessible components. It grew inside Meta over eight years to power more than 13,000 apps. The system is built on React 19 and StyleX, with a CLI designed for both human developers and AI assistants.",
+          "url": "https://github.com/meta/astryx?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a15",
+          "order": 3,
+          "title": "HA-MCP",
+          "summary": "HA-MCP lets users configure and automate Home Assistant with AI assistants like Claude and ChatGPT. The recommended integration installs directly through HACS or the built-in Marketplace on Home Assistant 2026.11+, runs in-process, and works across all installation types.",
+          "url": "https://github.com/homeassistant-ai/ha-mcp?utm_source=tldrdevops",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a16",
+          "order": 1,
+          "title": "MCP SERVER SECURITY HOLES & HOW TO PLUG THEM",
+          "summary": "Model Context Protocol servers lack built-in authentication, rate limiting, and tool controls, creating security gaps for organizations. This guide explains how to deploy an AI Gateway to add token-based authentication and restrict which specific tools are available to users and agents.",
+          "url": "https://www.solo.io/blog/security-holes-in-mcp-servers-and-how-to-plug-them?utm_source=tldrdevops",
+          "reading_time_minutes": 18,
+          "source_domain": "solo.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a17",
+          "order": 2,
+          "title": "CLOUDNATIVEPG BECOMES A CNCF INCUBATING PROJECT",
+          "summary": "CloudNativePG has moved from CNCF Sandbox to Incubation. The operator runs highly available PostgreSQL on Kubernetes and manages pods directly rather than through StatefulSets, handling failover, rolling updates, backups, and point-in-time recovery.",
+          "url": "https://www.cncf.io/blog/2026/11/10/cloudnativepg-becomes-a-cncf-incubating-project/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cncf.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-11:a18",
+          "order": 1,
+          "title": "GIVE DEVELOPERS A SECURITY TOOL THEY'LL ACTUALLY USE",
+          "summary": "Why choose between speed and security? 1Password secures developer secrets and AI-agent credentials at human and machine speed. Learn",
+          "url": "https://1password.com/resources/guides/developer-secrets-ai-agent-governance?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_epm_lp_developer-secrets-ai-agent-governance_sa&utm_content=newsletter_devops_111126",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a18-02",
+          "order": 2,
+          "title": "More.",
+          "summary": "",
+          "url": "https://1password.com/resources/guides/developer-secrets-ai-agent-governance?utm_medium=paid_newsletter&utm_source=tldr&utm_campaign=2026q3_epm_lp_developer-secrets-ai-agent-governance_sa&utm_content=newsletter_devops_111126",
+          "reading_time_minutes": null,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a19",
+          "order": 3,
+          "title": "RUNNING KUBERNETES AT ITS EXTREMES",
+          "summary": "Kubernetes documents limits of 5,000 nodes and 110 pods per node, and its default etcd storage limit is 2 GB.",
+          "url": "https://cloudnativenow.com/contributed-content/running-kubernetes-at-its-extremes/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a20",
+          "order": 4,
+          "title": "ENTIRE'S GIT FORGE RETHINKS GIT COLLABORATION FOR CODING AGENTS",
+          "summary": "Entire, a Git forge led by former GitHub CEO Thomas Dohmke, is built for collaboration between developers and AI coding agents.",
+          "url": "https://www.infoq.com/news/2026/11/entire-git-forge-coding-agents/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-11:a21",
+          "order": 5,
+          "title": "AUTHENTICATE EXTERNAL GRPC CLIENTS WITH AMAZON VPC LATTICE",
+          "summary": "An Application Load Balancer validates external clients' JWTs, then an ECS proxy signs requests to private gRPC services with AWS SigV4.",
+          "url": "https://aws.amazon.com/blogs/networking-and-content-delivery/authenticate-external-grpc-clients-with-amazon-vpc-lattice/?utm_source=tldrdevops%5B22%5D%5B23",
+          "reading_time_minutes": 14,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
