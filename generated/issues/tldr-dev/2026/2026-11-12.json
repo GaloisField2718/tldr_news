@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-12",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-12",
+  "source_path": "TLDR Dev/article_12-11-2026.md",
+  "source_content_hash": "sha256:d68ed9b1c2b6e18191f46ae2414378ea721bddcadfdc8f6855ac86faefcd97bd",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a04",
+          "order": 1,
+          "title": "[WORKSHOP] TRACING CLAUDE AGENTS WITH OPENTELEMETRY AND SENTRY",
+          "summary": "\"Where did my tokens go?\"\n\nIf you've ever found yourself asking that question, you're in good company. CJ Avilla from Anthropic sent his Claude Platform OpenTelemetry data to Sentry to find out. Now he's joining Sentry for a live workshop [5] to follow that trace, and the next one.\n\nIn 60 minutes [6], you'll learn:\n\n* Sending Claude Platform OTel data to Sentry * How to trace a Claude agent calling tools against a backend and database with Sentry tracing * Failed tool calls, retries, and the final success, all in one trace * Where to fix it: the prompt, the tool, or the service behind it",
+          "url": "https://sentry.io/resources/claude-otel-workshop/?utm_source=tldr&utm_medium=paid-community&utm_campaign=agenttracing-fy27q4-anthropicworkshop&utm_content=newsletter-primary-register_header_workshop_tracing_claude&utm_term=2026-11-12_tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a07",
+          "order": 2,
+          "title": "RSVP for the workshop",
+          "summary": "",
+          "url": "https://sentry.io/resources/claude-otel-workshop/?utm_source=tldr&utm_medium=paid-community&utm_campaign=agenttracing-fy27q4-anthropicworkshop&utm_content=newsletter-primary-register_cta_rsvp_workshop&utm_term=2026-11-12_tldr_dev",
+          "reading_time_minutes": null,
+          "source_domain": "sentry.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a08",
+          "order": 1,
+          "title": "HOW WE CUT NEXT.JS MEMORY FROM ~5GB TO ~1GB: THE REACT-QUERY TIMER HOLDING EVERY SSR REQUEST",
+          "summary": "Zepto's Next.js pods sat at about 5 GB because react-query v3 starts a multi-minute cache timer for every query rendered on the server, and Node ties each timer to the request's AsyncLocalStorage context, keeping every finished request in memory. Building server-side queries with an infinite cache time stopped the timers and dropped pods to about 1.2 GB, and the same trap still applies on v5 when hooks set an explicit gcTime. The fix also exposed that autoscaling had been driven by the leak, so teams fixing memory issues should watch replica counts and latency afterward.",
+          "url": "https://links.tldrnewsletter.com/SbdTUz",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a09",
+          "order": 2,
+          "title": "WHAT IS EVAL-DRIVEN DEVELOPMENT? HOW TO IMPROVE AI AGENTS",
+          "summary": "Tweaking agents by hand-testing a few prompts makes it hard to tell whether a change helped or hurt, since outputs vary and several answers can be correct. LangChain proposes a test-driven-style loop: write a pass/fail spec for one behavior, build the dataset and evaluator before the change, then compare experiments example by example, since a higher average can hide regressions. It also urges keeping a held-out set to catch overfitting and running evals in CI and on live traffic, feeding production failures back into the dataset.",
+          "url": "https://www.langchain.com/blog/what-is-eval-driven-development?utm_source=tldrdev",
+          "reading_time_minutes": 12,
+          "source_domain": "langchain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a10",
+          "order": 3,
+          "title": "LOCK YOUR GITHUB ACTIONS",
+          "summary": "GitHub Actions lockfiles let workflows keep readable version tags while recording the exact commits they resolve to. This walkthrough covers generating the lockfile, updating it with Renovate or Dependabot, and verifying it in CI so workflow changes cannot silently drift from their pins.",
+          "url": "https://hugovk.dev/blog/2026/lock-github-actions/?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "hugovk.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a11",
+          "order": 1,
+          "title": "MY HTML WISHLIST: PARTIAL HTML INCLUDES",
+          "summary": "The Fragment Includes proposal could let browsers stream reusable HTML snippets without a build step, but its separate MIME type limits what can be reused. This essay argues for ordinary HTML pages to opt into exposing specific fragments, while acknowledging parser, buffering, and cross-origin constraints.",
+          "url": "https://blog.kizu.dev/partial-html-includes?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.kizu.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a12",
+          "order": 2,
+          "title": "EMACS IN THE AGE OF MAGIC",
+          "summary": "AI coding tools are changing the value of editor mastery by making custom software cheap to create. That freedom encourages both useful personalization and elaborate reinventions of existing tools.",
+          "url": "https://commandlinesystems.com/magic.txt?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "commandlinesystems.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a13",
+          "order": 1,
+          "title": "BUILD SOFTWARE FACTORIES THAT WORK FOR HUMANS WITH LAUNCHDARKLY RELEASE AUTOPILOT",
+          "summary": "Most AI software factories end at deploy, and when the automation stops, the risk begins. Release Autopilot helps eliminate that risk with new automation capabilities built to fit the factory you already have, automating releases within the rules engineers set so AI-written code reaches customers faster and safer.",
+          "url": "https://launchdarkly.com/how-it-works/release-autopilot/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=rel-autopilot&utm_term=secondary&utm_content=ra",
+          "reading_time_minutes": null,
+          "source_domain": "launchdarkly.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a13-02",
+          "order": 2,
+          "title": "Learn how",
+          "summary": "",
+          "url": "https://launchdarkly.com/how-it-works/release-autopilot/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=rel-autopilot&utm_term=secondary&utm_content=ra",
+          "reading_time_minutes": null,
+          "source_domain": "launchdarkly.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a14",
+          "order": 3,
+          "title": "GEMINI DECISION 1 AND THE DECISIONS API",
+          "summary": "Gemini Decision 1 scores bounded choices instead of generating text, evaluating up to 1,000 questions against shared text, images, audio, video, or PDFs in one pass. Google reports 150 to 250 ms end-to-end latency and charges $0.10 per million input tokens with no output-token fees, targeting model routing, policy checks, and rubric scoring.",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a15",
+          "order": 4,
+          "title": "MODERN WEB GUIDANCE 1.0: THE WEB PLATFORM EXPERTISE YOUR CODING AGENT IS MISSING",
+          "summary": "Coding agents produce web code that works but often falls short on accessibility, performance, and security, and they tend to reach for JavaScript where native HTML or CSS would do better. Chrome has shipped a skill pack that feeds agents expert-reviewed guidance and Baseline compatibility data and adds a workflow that scans existing codebases for safe upgrades. Firefox and Edge are co-maintainers.",
+          "url": "https://developer.chrome.com/blog/modern-web-guidance-v1?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "developer.chrome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a16",
+          "order": 5,
+          "title": "IMPROVE",
+          "summary": "This agent skill audits a codebase and writes prioritized implementation plans that another agent or developer can execute. It separates repository analysis and specification from implementation, with modes for focused audits, branch reviews, and refreshing a backlog.",
+          "url": "https://github.com/shadcn/improve?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a17",
+          "order": 1,
+          "title": "HOW TWO ENGINEER SIDE PROJECTS BECAME THE AGENT TAKING ACTION INSIDE DROPBOX",
+          "summary": "Two Dropbox engineers, one building 3D models in a sandbox and one automating expense reports from the desktop app, hit the same problem of letting an agent change their files safely. Their prototypes merged into the agent in Dropbox's new experience, which runs each conversation in a fresh VM that boots in milliseconds, keeps credentials and permission checks outside the agent's reach, and asks for plan and folder approval. Every change is tied to its conversation, so users can trace why a file changed and undo just that agent's work without touching others' edits.",
+          "url": "https://dropbox.tech/machine-learning/how-two-engineer-side-projects-became-the-agent-taking-action-inside-dropbox?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "dropbox.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a18",
+          "order": 2,
+          "title": "HOW A FALSE SMOKE ALARM ALMOST DROWNED JANE STREET'S NYC DATACENTER",
+          "summary": "Construction dust triggered a smoke alarm that shut off cooling and pressurized the sprinkler pipes, leaving server heat to threaten a flood. Pulling power stopped the temperature rise. The incident led to fleet-wide temperature monitoring that could detect a cooling failure even when individual servers had not crossed their alert thresholds.",
+          "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "michael.bacarella.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-12:a19",
+          "order": 1,
+          "title": "AWS EMULATOR",
+          "summary": "AWS Emulator runs AWS APIs locally for development and CI without an AWS account.",
+          "url": "https://github.com/aws/aws-emulator?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a20",
+          "order": 2,
+          "title": "YOUR JS ERROR IS LYING TO YOU",
+          "summary": "JavaScript errors can lose messages, causes, and stack details during serialization and logging, so explicit error records need bounded traversal of causes and aggregates.",
+          "url": "https://blog.gaborkoos.com/posts/2026-11-12-Your-JS-Error-Is-Lying-to-You?utm_source=tldrdev",
+          "reading_time_minutes": 72,
+          "source_domain": "blog.gaborkoos.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-12:a21",
+          "order": 3,
+          "title": "SAND",
+          "summary": "This WebGL2 sand simulator lets you push grains, draw, and use phone tilt or shaking to move sand in the browser.",
+          "url": "https://av.github.io/safe-sand/?utm_source=tldrdev%5B22%5D%5B23",
+          "reading_time_minutes": null,
+          "source_domain": "av.github.io",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-12",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-12",
+  "source_path": "TLDR InfoSec/article_12-11-2026.md",
+  "source_content_hash": "sha256:0ea2e7426d0b3c3acd72a3b9e45b08bdd39729f37a8bd607125c1a190bd25dc8",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-12",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a04",
+          "order": 1,
+          "title": "ZERO TO CALC IN SIX DAYS: INSIDE XBOW'S CHROME FULL CHAIN",
+          "summary": "A Chrome full chain used to take a team of four six to nine months. XBOW's AI agents did it in six days for about $40,000 of model time. Three vulnerabilities, two sandbox escapes, code running on the host. Google confirmed it and paid the first $250,000 full-chain award under its 2026 rules.\n\nThe new paper from XBOW Security Labs [5]walks through all three stages, then asks the harder question. If Chrome falls in six days, how often should you test apps that are not?",
+          "url": "https://xbow.com/lp/zero-to-calc?sfcid=701Pe00001ej32GIAQ&utm_source=tldr&utm_medium=syndication&utm_campaign=tldr_demand_gated_global_all_wpchrome&utm_content=wpchrome_infosec_hl_v1_header_zero_calc_six&utm_term=titles_sec_2026-11-12_tldr_infosec&utm_id=primary11122026",
+          "reading_time_minutes": null,
+          "source_domain": "xbow.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a06",
+          "order": 2,
+          "title": "Get the paper.",
+          "summary": "",
+          "url": "https://xbow.com/lp/zero-to-calc?sfcid=701Pe00001ej32GIAQ&utm_source=tldr&utm_medium=syndication&utm_campaign=tldr_demand_gated_global_all_wpchrome&utm_content=wpchrome_infosec_hl_v1_cta_paper&utm_term=titles_sec_2026-11-12_tldr_infosec&utm_id=primary11122026",
+          "reading_time_minutes": null,
+          "source_domain": "xbow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a07",
+          "order": 1,
+          "title": "JAPANESE FURNITURE GIANT NITORI SAYS HACKERS STOLE 37.6M CUSTOMER RECORDS",
+          "summary": "Nitori, the “IKEA of Japan,” disclosed a data breach that exposed the data of 37.62M individual members, non-member customers, and corporate members. The exposed data may include membership numbers, names, email addresses, postal addresses, phone numbers, dates of birth, gender, company names, department representatives' names, company addresses, contact person names, and online order information. The company stated that no passwords or credit card numbers were stolen.",
+          "url": "https://links.tldrnewsletter.com/tgOkOC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a08",
+          "order": 2,
+          "title": "GROK BUILD CODING AGENT LEAKS OODLES OF CONFIDENTIAL INFO, SOME BELONGING TO SPACEXSI",
+          "summary": "Claroc found more than 35,000 public Grok Build apps via passive DNS enumeration. Grok placed URL randomness in the subdomain, so DNS services recorded the links. Exposed material includes SpaceXSI sales plans, 3,784 worker medical exams, Tesla technician scorecards, Navy contractor rosters, employee IDs, and commercial proposals.",
+          "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a09",
+          "order": 3,
+          "title": "CRITICAL XEN ORCHESTRA AUTH BYPASS FLAW EXPLOITED TO HIJACK VM SERVERS",
+          "summary": "A critical authentication bypass vulnerability was discovered in Xen Orchestra, a web-based platform for managing XCP-NG virtualization hosts. Remote attackers with network access to the management portal can exploit the vulnerability with a specially crafted cookie to retrieve login tokens, run arbitrary code on managed pools, and fully compromise the cluster. The vulnerability is under active exploitation, so administrators should upgrade as soon as possible and restrict public internet access.",
+          "url": "https://links.tldrnewsletter.com/MMQmld",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a10",
+          "order": 1,
+          "title": "MICROSOFT RESEARCHERS SHOW AI AGENTS CAN BE BACKDOORED BY EDITING FEWER THAN 10 NEURONS",
+          "summary": "Microsoft researchers demonstrated “Lazarus,” a method that edits fewer than 10 rarely used neurons in an open-weight model to embed a hidden command. When a trigger appears in a prompt or tool output, an agent may execute attacker-controlled commands with its existing permissions. Testing achieved 98.8% on Nemotron-Terminal-8B using seven edited neurons. Microsoft advises comparing checkpoints with base weights, using private model registries, sandboxing agent code, limiting network access, and requiring approval for high-impact actions.",
+          "url": "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a11",
+          "order": 2,
+          "title": "HOW ATTACKERS KEEP READING MAIL AFTER M365 SESSION REVOCATION",
+          "summary": "When Entra revokes a session, it updates the StsRefreshTokenValidFrom timestamp to cause session refresh attempts to fail. However, the current access token can remain active for up to 90 minutes. Microsoft implemented Continuous Access Evaluation, but it can cause issues due to IP restrictions, so many teams only implement critical event evaluation (CEE). CEE will disable access via the Outlook apps, but it doesn't disable Graph API access, so the only guaranteed way to immediately cut off access is to disable the account.",
+          "url": "https://labs.eye.security/how-attackers-keep-reading-mail-after-m365-session-revocation/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "labs.eye.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a12",
+          "order": 3,
+          "title": "THE XG FILES: FALCON C2 FLYING UNDER THE BROWSER RADAR",
+          "summary": "Attackers planted a `script` tag in the headers of 39 Roundcube portals belonging to a Middle Eastern foreign ministry, along with police and justice web apps in Southeast Asia, and it loaded Falcon, a browser-only C2 framework. Falcon serves each visitor its own obfuscated implant that steals passwords, emails, and session cookies over an encrypted WebSocket. It also pushes a fake Adobe Flash update to drop Antino, a Rust implant that uses OneDrive for C2, or sideloads a \"PDF Viewer\" Chrome extension that hooks fetch and XHR traffic. Unit 42 assessed with high confidence that Falcon is a variant of the PeckBirdy framework. Defenders should check webmail and web app templates for unfamiliar script tags, block extensions sideloaded in developer mode through enterprise browser policy, and hunt for Hm_lvt_ cookies set to expire in 2099.",
+          "url": "https://unit42.paloaltonetworks.com/falcon-c2-browser-compromise/?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a13",
+          "order": 1,
+          "title": "YOUR APP JUST LAUNCHED. SO DID THE ATTACKS.",
+          "summary": "A newly published app was attacked just 1 HOUR AND 56 MINUTES after release. With AI accelerating reverse engineering, the window between launch and attack is shrinking. Digital.ai's 2026 Application Security Threat Report [13] explores the evolving threat landscape and why protecting apps after deployment is more critical than ever.",
+          "url": "https://digital.ai/resource-center/whitepapers/digital-ai-2026-application-security-threat-report/?utm_source=tldr&utm_medium=email&utm_campaign=OA-AS-2026_10_28-WW-TLDR-WP-%5B2026%2BApp%2BSec%2BThreat%2BReport%5D",
+          "reading_time_minutes": null,
+          "source_domain": "digital.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a13-02",
+          "order": 2,
+          "title": "EXPLORE THE 2026 THREAT REPORT",
+          "summary": "",
+          "url": "https://digital.ai/resource-center/whitepapers/digital-ai-2026-application-security-threat-report/?utm_source=tldr&utm_medium=email&utm_campaign=OA-AS-2026_10_28-WW-TLDR-WP-%5B2026%2BApp%2BSec%2BThreat%2BReport%5D",
+          "reading_time_minutes": null,
+          "source_domain": "digital.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a14",
+          "order": 3,
+          "title": "WHITEMATTER (PRODUCT LAUNCH)",
+          "summary": "WhiteMatter secures and governs AI agents across endpoints, cloud, SaaS, and code. Its platform deploys agents, models, and MCP servers through one gateway, observes actions, applies policies, and adds a guardian agent for each agent.",
+          "url": "https://whitematter.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "whitematter.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a15",
+          "order": 4,
+          "title": "SIGNET",
+          "summary": "Signet is a code signing wrapper for Mythic C2. It takes any wrapped agent binary or uploaded file and applies an Authenticode signature.",
+          "url": "https://github.com/Whispergate/Signet?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a16",
+          "order": 5,
+          "title": "ZED-CLAUDE-DEVCONTAINER",
+          "summary": "A sandboxed dev container for running Claude Code with bypassPermissions from Zed or a terminal.",
+          "url": "https://github.com/0xdea/zed-claude-devcontainer?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a17",
+          "order": 1,
+          "title": "RAILWAY BREACH LEADS TO $740K IN FRAUDULENT AI CHARGES",
+          "summary": "Cloud hosting provider Railway has released an incident report regarding an incident in October that exposed, at most, 100,000 customers' workspace environment variables. The attack began with the threat actor exploiting an unknown vulnerability to escape filesystem isolation and steal an internal credential. This credential was then used to steal Railway's internal source code via build histories. The attackers used the source code to find another vulnerability that exploited a trust relationship to grant the attacker access to a credential used to decrypt customer environment variables. Railway stated that the attacker's primary goal was to steal AI provider credentials and that it will compensate any victim that is not able to have their charges refunded.",
+          "url": "https://links.tldrnewsletter.com/9szQ1E",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a18",
+          "order": 2,
+          "title": "ARTEX: THE AI PEN-TEST TOOL HACKERS TURNED INTO A WEAPON",
+          "summary": "Artex, an open-source multi-agent penetration-testing framework, has been repurposed by threat actors for password spraying, credential stuffing, API abuse, database dumping, and cloud attacks. Storm-0940 used it to make more than 151,000 authentication requests against eight organizations, then stole ConnectWise OAuth credentials and compromised over 2,250 downstream Microsoft 365 and Azure environments. Other actors used Artex for web exploitation, persistence, and data theft.",
+          "url": "https://links.tldrnewsletter.com/mXwMhI",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a19",
+          "order": 3,
+          "title": "OPENAI BUILDS A KILL SWITCH FOR ITS RESEARCH MODELS",
+          "summary": "OpenAI's Control Room is a central kill switch for models running in its research infrastructure. It can halt model output within 35 seconds of a shutdown decision. OpenAI aims to remove that delay. The system is designed to keep operating when other systems fail and to stop output if Control Room itself fails. OpenAI did not explain the timing, though it follows incidents involving agents attacking Hugging Face, disrupting Wikimedia, and accessing Australian healthcare research data.",
+          "url": "https://www.theregister.com/ai-and-ml/2026/11/11/openai-builds-a-kill-switch-for-its-research-models/5309006?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-12:a20",
+          "order": 1,
+          "title": "THE TOP 10 AWS SECURITY RESEARCH OF 2026",
+          "summary": "A collection of the top 10 most interesting pieces of AWS security research.",
+          "url": "https://awssecuritydigest.com/top-research/2026/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "awssecuritydigest.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a21",
+          "order": 2,
+          "title": "FIREWORKS AI SAYS HACKERS REACHED CUSTOMER DATASETS, PARTIAL MODEL WEIGHTS AND BILLING DATA IN A SECOND INTRUSION",
+          "summary": "Fireworks AI expanded its October breach disclosure on November 9.",
+          "url": "https://app.dealroom.co/news/note/fireworks-ai-says-hackers-reached-customer-datasets-partial-model-weights-and-billing-data-in-a-second-intrusion?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "app.dealroom.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-12:a22",
+          "order": 3,
+          "title": "RESEARCHERS SAY CODEX FLAW PUT NPM RELEASES AT RISK",
+          "summary": "Depi researchers showed that a prompt injection in a GitHub issue could get OpenAI's Codex issue-labeling workflow to run shell commands, read runner credentials through exposed .NET debugging pipes, and poison a build cache, which would have put them within one maintainer action of publishing a backdoored @openai/codex package (96.8 million monthly downloads), though OpenAI fixed it before any malicious release.",
+          "url": "https://thedefiant.io/frontier/ai/researchers-say-codex-flaw-put-npm-releases-at-risk?utm_source=tldrinfosec%5B23%5D%5B24",
+          "reading_time_minutes": 3,
+          "source_domain": "thedefiant.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
