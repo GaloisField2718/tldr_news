@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-13",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-13",
+  "source_path": "TLDR InfoSec/article_13-11-2026.md",
+  "source_content_hash": "sha256:d6994880890f1203618f4f3d910b7a39036a5cb8d9cc262078fc5b45039b518d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-13",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a04",
+          "order": 1,
+          "title": "6 QUESTIONS TO ASK BEFORE CONNECTING AN MCP SERVER",
+          "summary": "A SaaS vendor gets a security review. An MCP server gets... none?\n\nThe common scenario is that a developer needs to connect an AI to an email. Or a database. Or a CRM. And what do you know? There's an MCP for that.\n\nOne minute to download. One minute to production with privileged credentials, with access to all of your most sensitive data.\n\nWho published it? Where are credentials stored? Who can see what it does?\n\n→ Read the six questions [5] to ask before you connect.",
+          "url": "https://jetstream.security/insights/mcp-server-security-questions/?utm_source=tldr&utm_medium=newsletter&utm_campaign=q4fy27-tldr-sponsorship&utm_content=insight_header_6_questions_ask&utm_term=2026-11-13_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "jetstream.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a06",
+          "order": 2,
+          "title": "Governing the MCP Supply Chain",
+          "summary": "",
+          "url": "https://jetstream.security/secure-mcp-catalog/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026-11-13-q4fy27-wp-verified-mcp-catalog-tldr&utm_content=insight_cta_catalog_control_governing&utm_term=2026-11-13_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "jetstream.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a07",
+          "order": 1,
+          "title": "CRITICAL APACHE HTTP/2 FLAW COULD LET UNAUTHENTICATED ATTACKERS EXECUTE CODE REMOTELY",
+          "summary": "A memory flaw in Apache HTTP Server's mod_http2 (CVE-2026-119618, CVSS 9.8) lets an unauthenticated remote attacker take over the server process on versions 2.4.55 through 2.4.70 whenever HTTP/2 is enabled. Red Hat says public research shows a reliable exploit, while Wiz reports that no exploit is available and no attacks have been seen. Admins should upgrade to 2.4.71, or their distribution's patched package, such as RHEL 9's mod_http2-2.0.26-7.el9_9.1, or else remove h2 and h2c from every Protocols directive, which is the only option for the archived standalone mod_h2 builds.",
+          "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a08",
+          "order": 2,
+          "title": "WFX-LOOT CAMPAIGN PUSHES CI SECRET STEALER TO TENS OF THOUSANDS OF REPOSITORIES",
+          "summary": "Attackers used stolen GitHub credentials to open 61,764 probe pull requests across 61,764 repositories from 4,837 compromised accounts. At least 1,835 repositories ran the payload and lost credentials. The malware steals GitHub Actions secrets, cloud roles, OIDC tokens, local credential files, and AI-provider tokens. It can forge required status checks, rewrite AWS trust policies, and add Azure federated identities that survive token rotation, and then exfiltrate data by HTTP POST to two servers.",
+          "url": "https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "aikido.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a09",
+          "order": 3,
+          "title": "BAKER TILLY NOTIFIES CLIENTS OF DATA BREACH AT THIRD-PARTY PROVIDER",
+          "summary": "The Baker Tilly Advisory Group is notifying clients of a data breach that occurred via a third-party provider. The stolen data includes full names, SSNs, and addresses, among other data. The accounting firm has stated that it has not detected any evidence that its internal systems were compromised.",
+          "url": "https://links.tldrnewsletter.com/GS4KJ7",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a10",
+          "order": 1,
+          "title": "ARTEX AND AI-POWERED RED TEAMING TOOLS: WHAT DEFENDERS NEED TO KNOW",
+          "summary": "Attackers running the ARTEX AI pentest framework turned public password reset pages and exposed OpenAPI specs into cloud access, sometimes in under a day and without exploiting a single vulnerability. The agents validated more than 200 client secrets in about three minutes and attacked in bursts of 1 to 14 requests followed by 25 to 31 second pauses while waiting on the model. Unit 42 counted 609 internet-facing ARTEX hosts and 1,323 running CyberStrikeAI, and noted that the tooling is forked so often that behavioral hunting holds up better than IOCs. Defenders should remove OpenAPI specs and source maps from public apps, rate-limit self-service identity flows, swap long-lived cloud keys for roles, and hunt for canary usernames like test@example[.]com and write-then-delete bucket tests.",
+          "url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "unit42.paloaltonetworks.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a11",
+          "order": 2,
+          "title": "THE GLOBAL SOCKET: HOW THREAT ACTORS ARE WEAPONIZING GSOCKET FOR STEALTHY C2",
+          "summary": "After exploiting PHP, cPanel, and Apache web apps, attackers have been piping a script through curl that stages the open-source GSocket client in /dev/shm, disguises it with kernel-thread process names, and persists through cron, systemd, and shell profiles. The client then connects outbound to GSocket's public relay network, which pairs it with the operator using only a shared secret, so there is no attacker IP or domain to block. Microsoft saw GSocket detections rise 356% between March and August across multiple unrelated actors, some of whom also tried the Dirty Frag kernel exploit (CVE-2026-43284) to gain root access. Defenders should treat a patched web app as only half the fix: remove the GSocket client and every layer of its persistence, apply deny-by-default egress rules that block the relay, and mount /dev/shm and temp directories as noexec.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/11/global-socket-how-threat-actors-weaponizing-gsocket-stealthy-c2/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a12",
+          "order": 3,
+          "title": "SCKIT WORM INSTALLS ROGUE SCREENCONNECT CLIENTS AND SESSION COOKIE RELAYS ACROSS HUNDREDS OF ENDPOINTS",
+          "summary": "Attackers used Run commands in cloud-hosted ScreenConnect panels to install rogue clients and SCKit on at least 288 endpoints across 48 organizations. SCKit establishes persistence, replaces legitimate ScreenConnect clients, and attempts to steal technician session cookies to access panels. The activity appears tied to the RMM+ extension, versions 1.0.31 and 1.0.32, which accept a blank access key. ConnectWise disabled five related extensions across more than 400 partner environments.",
+          "url": "https://www.huntress.com/blog/sckit-worm-rogue-screenconnect?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "huntress.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a13",
+          "order": 1,
+          "title": "FORRESTER STUDY: SECURING THE DATA YOUR AGENTS CAN REACH REDUCES BREACH EXPOSURE RISK BY 65%",
+          "summary": "Rather than trying to inspect every agent request as it happens, the world's top enterprises are using Sentra to govern the data that agents can access. And it's paying off: the Forrester Total Economic Impact™ Study for Sentra [13] found that agentic data security generates 351% ROI with 65% reduced breach exposure risk. Read the",
+          "url": "https://sentra.io/lp/forrester-2026?utm_source=tldr&utm_medium=newsletter&utm_campaign=forrester-2026&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "sentra.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a13-02",
+          "order": 2,
+          "title": "report",
+          "summary": "",
+          "url": "https://sentra.io/lp/forrester-2026?utm_source=tldr&utm_medium=newsletter&utm_campaign=forrester-2026&utm_content=tldr-infosec",
+          "reading_time_minutes": null,
+          "source_domain": "sentra.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a14",
+          "order": 3,
+          "title": "OPEN RESEARCH, STRONGER PRIVACY: MAKING FIREFOX USERS HARDER TO FINGERPRINT",
+          "summary": "Firefox 145 makes users harder to fingerprint by hiding the size of the taskbar or dock from screen APIs and reporting the CPU core count as either 4 or 8. Mozilla based these changes on measurements from nearly 25 million users, routed through OHTTP, tested against the fingerprinting scripts used by Fingerprint Pro, Signifyd, and Akamai. The research found that hiding a handful of high-value signals collapsed many unique fingerprints into larger shared groups. Some protections are on by default, while others come first to Private Browsing and Strict tracking protection. The CCS 2026 paper comes with a public test suite.",
+          "url": "https://blog.mozilla.org/security/2026/11/10/open-research-stronger-privacy-making-firefox-users-harder-to-fingerprint/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.mozilla.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a15",
+          "order": 4,
+          "title": "BAY (PRODUCT LAUNCH)",
+          "summary": "Bay inventories AI agents, coding assistants, MCP servers, extensions, and local models. It tracks sessions and checks proposed actions and policies to allow, block, redirect, or request approval for actions based on each organization's recorded activity history.",
+          "url": "https://www.bay.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "bay.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a16",
+          "order": 5,
+          "title": "WAZUH",
+          "summary": "Wazuh is a free and open-source platform used for threat prevention, detection, and response. It is capable of protecting workloads across on-premises, virtualized, containerized, and cloud-based environments.",
+          "url": "https://github.com/wazuh/wazuh?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a17",
+          "order": 1,
+          "title": "LESSONS FROM 59 LINUX KERNEL BUG REPORTS",
+          "summary": "Microsoft's FORGE Lab spent two weeks using AI models, mostly Sonnet 4.6 and GPT-5.5, to scan Linux kernel subsystems, which produced 26,502 raw findings. That narrowed to 621 cases with working proofs of concept, then to 59 upstream reports, 33 CVEs, and eight working root exploits, including a one-line rhashtable bug that unprivileged users could exploit on stock Linux and Android. The bugs had been in the kernel for an average of 8.1 years, but the bottleneck was on the fixing side: four person-months to write the reports and a median of 41 days per fix, with only 38 patches merged five months later, which Microsoft argued shows discovery is now far outpacing repair.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/11/lessons-from-59-linux-kernel-bug-reports/?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a18",
+          "order": 2,
+          "title": "EUROPOL TAKES DOWN INFRASTRUCTURE LINKED TO GOOTLOADER, CASTLERAT, AND STEALC MALWARE",
+          "summary": "Europol and international partners reported taking down 235 servers and 257 domains associated with cybercrime-as-a-service tools. Gootloader used fake legal documents hosted on compromised WordPress sites to compromise victims, CastleRAT gave threat actors access to victims' devices, and StealC stole credentials. The report also said Europol recovered 6.4M victim datasets from the seized infrastructure.",
+          "url": "https://cybersecuritynews.com/malware-infrastructure-disrupted/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-13:a19",
+          "order": 1,
+          "title": "CRITICAL RED HAT QUAY VULNERABILITY COULD EXPOSE PRIVATE CONTAINER IMAGES",
+          "summary": "A flaw in Red Hat Quay's service key server (CVE-2026-123710, CVSS 9.8) lets any user who can get a registry token, anonymous or not, plant a non-expiring signing key that grants read and write access to every repository, and because changing passwords or robot tokens doesn't revoke that key and no fixed release is out yet, admins should restrict access to the key service and audit it for rogue keys.",
+          "url": "https://links.tldrnewsletter.com/3wU1bM",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a20",
+          "order": 2,
+          "title": "FIREWORKS AI INCIDENT",
+          "summary": "Notion says attackers accessed data held by its vendor Fireworks AI.",
+          "url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "notion.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-13:a21",
+          "order": 3,
+          "title": "MAERSK CONFIRMS DATA THEFT AMID $5 MILLION EXTORTION ATTEMPT",
+          "summary": "Maersk confirmed data theft from an acquired system.",
+          "url": "https://links.tldrnewsletter.com/uZmkaF[22][23",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
