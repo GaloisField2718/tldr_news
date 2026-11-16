@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-16",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-16",
+  "source_path": "TLDR InfoSec/article_16-11-2026.md",
+  "source_content_hash": "sha256:fa34b934dce7840953ec7705632a1711188814508777a51da06f38c734afe732",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-16",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a04",
+          "order": 1,
+          "title": "LIVE WEBINAR + Q&A: PATCH TUESDAY IN THE AGE OF AI",
+          "summary": "More vulnerabilities. Tighter timelines. Tougher decisions about what to patch first.\n\nJoin PDQ's CTO and former Microsoft executive Jeff Pinkston for a FREE, 30-MINUTE WEBINAR ON NOVEMBER 18 covering:\n\n* November's biggest Patch Tuesday updates and vulnerabilities\n\n* How AI is accelerating vulnerability discovery and exploitation\n\n* What Microsoft's evolving Windows update recommendations mean for IT teams\n\n* How to simplify patch management with automation, including a live demo\n\nREGISTER BY TOMORROW [5] for a chance to WIN ONE OF THREE $100 GIFT CARDS.",
+          "url": "https://www.pdq.com/patch-tuesday-age-of-ai/?campaign_id=701Um00001ol1JWIAY&utm_source=tldr&utm_medium=partner&utm_campaign=ct_wbr_par_patch_tuesday_in_the_age_of_ai_send_2&utm_content=header_live_webinar_plus&utm_term=2026-11-16",
+          "reading_time_minutes": null,
+          "source_domain": "pdq.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a06",
+          "order": 1,
+          "title": "WINDOWS 0-DAY DROPPED BY DISGRUNTLED RESEARCHER HANDS HACKERS SYSTEM RIGHTS",
+          "summary": "Nightmare Eclipse disclosed SignDrop, a Windows zero-day that lets a standard user gain System rights. It abuses the Common Log File System (CLFS), Windows Defender, symbolic links, and file permissions in an attack where Defender opens a user-created CLFS container, then CLFS creates a missing authentication file with Defender's System privileges. The researcher says the technique can bypass antivirus tamper protection, and it reportedly works on Windows 11 26H2 and Windows Server 2025 Experimental when CLFS authentication mode is 0 or 1.",
+          "url": "https://arstechnica.com/security/2026/11/windows-0-day-dropped-by-disgruntled-researcher-hands-hackers-system-rights/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a07",
+          "order": 2,
+          "title": "ANTIFOX AI PENTESTING PLATFORM LINKED TO ATTACKS THAT ACCESSED AWS PRODUCTION SECRETS",
+          "summary": "Arctic Wolf linked AntiFox, an open-source autonomous pentesting platform, to intrusions that deployed ASPX web shells through compromised IIS applications. Attackers extracted configuration data, database credentials, and AWS credentials, then used valid IAM identities to enumerate AWS services. Some activity reached production Secrets Manager values and S3 objects. AWS said its services were not compromised. It recommends least privilege, IMDSv2, removing long-term keys from application configurations, and GuardDuty.",
+          "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a08",
+          "order": 3,
+          "title": "TSMC EMPLOYEE DATA BREACH LINKED TO CLOUD PROVIDER",
+          "summary": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data had been leaked online after a threat actor put 6.9GB of data up for auction. TSMC stated that the data was stolen from the systems of a cloud service provider, but their systems were not breached. The threat actor claims that the data includes employees' national ID numbers, addresses, contact details, and banking information.",
+          "url": "https://links.tldrnewsletter.com/dyB7rg",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a09",
+          "order": 1,
+          "title": "THE BINANCE HEIST, PART ONE: FIFTY VALID SIGNATURES, ONE THAT LANDED, AND AN AUTHORITY THAT STOOD FOR 3 HOURS 49 MINUTES",
+          "summary": "On October 29, an attacker sent a single Ethereum transaction to Binance's \"Binance 14\" hot wallet carrying 50 EIP-7702 authorizations, all validly signed by the wallet's key. The one matching the wallet's current nonce took effect, so the wallet ran the attacker's sweeper contract as its own code for 3 hours 49 minutes and was drained seven times while automated top-ups kept refilling it. Binance's withdrawal suspension could not touch the delegation, which acted on-chain outside its withdrawal systems, and how the attacker reached Binance's internal signing service has not been explained beyond Binance's own account, so custody teams should monitor hot wallets for code appearing and keep a pre-built EIP-7702 revocation procedure ready.",
+          "url": "https://hwtn.io/essays/t0401-binance-part-one?utm_source=tldrinfosec",
+          "reading_time_minutes": 38,
+          "source_domain": "hwtn.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a10",
+          "order": 2,
+          "title": "HOW 1PASSWORD FOR AGENTS PRESERVES SECURITY AND PRIVACY",
+          "summary": "1Password for Agents lets AI agents sign in to accounts without ever seeing the password. When an agent asks for a login, the user gets an approval prompt, and the browser extension fills the credential only on the matching page and clears it if submission fails. The design rests on keys that 1Password stores but cannot decrypt.",
+          "url": "https://1password.com/blog/1password-for-agents-security-privacy?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a11",
+          "order": 3,
+          "title": "CYBER CHAOS MONKEY: STAYING AHEAD OF SECURITY THREATS WITH AI AGENTS",
+          "summary": "Shopify's Cyber Chaos Monkey is an agentic vulnerability hunter that attacks its live production systems using test credentials, source code, and past bug reports. It sends probes, reads the production logs, and checks the results against source code to refine each exploit. Shopify said tens of thousands of runs have turned up dozens of serious findings without an outage. Containment relies on read-only ephemeral credentials, a credential-swapping proxy, an egress allowlist, plus a separate \"judge\" agent running a different model that watches the attacker agent live and ends the run if it breaks the rules of engagement or stops responding.",
+          "url": "https://shopify.engineering/cyber-chaos-monkey?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "shopify.engineering",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a12",
+          "order": 1,
+          "title": "THE BUYER'S GUIDE TO EMAIL SECURITY: HOW TO PICK A VENDOR WHEN ATTACKERS WRITE WITH AI",
+          "summary": "3 in 10 confirmed phishing emails got past native Gmail and Microsoft filters in Q3 2026 (AegisAI data). The Buyer's Guide to Email Security gives you questions across 9 areas to evaluate, from detection to pricing, plus a side-by-side vendor checklist. Get your guide here",
+          "url": "https://www.aegisai.com/buyer-guide-to-email-security?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=buyer-guide-to-email-security",
+          "reading_time_minutes": null,
+          "source_domain": "aegisai.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a12-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.aegisai.com/buyer-guide-to-email-security?utm_source=tldr&utm_medium=paid-newsletter&utm_campaign=buyer-guide-to-email-security",
+          "reading_time_minutes": null,
+          "source_domain": "aegisai.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a13",
+          "order": 3,
+          "title": "DREEZE (PRODUCT LAUNCH)",
+          "summary": "Dreeze's Application Revival scans AWS cloud environments, maps application resources and dependencies, and stores data and configuration backups in an isolated vault. It automatically rebuilds a full application after an incident and supports recovery testing in a separate account.",
+          "url": "https://www.dreeze.com/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "dreeze.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a14",
+          "order": 4,
+          "title": "OPENAI DAYBREAK DEFENSE FACTORY (PRODUCT LAUNCH)",
+          "summary": "Daybreak Defense Factory turns security findings into engineer-ready patches. It ingests findings from security tools and Daybreak Red Team, traces vulnerabilities through code, prepares fixes, supports Codex-based editing, and scans new commits.",
+          "url": "https://links.tldrnewsletter.com/LJT7ln",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a15",
+          "order": 5,
+          "title": "CODEX SECURITY",
+          "summary": "Codex Security is OpenAI's CLI and TypeScript SDK for finding vulnerabilities in a codebase, checking whether they are real, and generating patches for them. It can scan whole repositories, selected paths, or Git diffs, verify existing fixes, draft SECURITY.md policies, save threat models, and export findings as SARIF, JSON, or CSV, or push them to Linear, Jira, and GitHub. It runs through a GitHub Action with per-scan cost limits, can scan many repositories in containers, and works with Amazon Bedrock, OpenRouter, and Fireworks AI as well as OpenAI.",
+          "url": "https://github.com/openai/codex-security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a16",
+          "order": 1,
+          "title": "POLICY AND DISCLOSURE: 2026 EDITION",
+          "summary": "Google Project Zero has dropped its \"90 + 30\" disclosure policy for a \"Full X\" model. Bugs are now disclosed a fixed number of days after they are reported, whether or not they have been fixed. The window starts at 90 days, moves to 60 on February 2, 2027, and to 30 on January 3, 2028, and grace periods and variant rules are gone. The team said LLMs have made exploits from patches almost instantaneous, which makes post-patch soak time pointless, and have raised its bug volume to several per week in targets that used to yield a few a year.",
+          "url": "https://projectzero.google/2026/11/disclosure-policy.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "projectzero.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a17",
+          "order": 2,
+          "title": "POST-QUANTUM AUTHENTICATION: LESSONS FROM PRAGUE",
+          "summary": "At an October IAB workshop in Prague, users deploying post-quantum authentication reported no security problems with ML-DSA or SLH-DSA, but said signature size kept breaking old limits. An ML-DSA-65 signature is 3,309 bytes compared with 64 for Ed25519, which pushes handshakes past congestion windows, signed requests past URL limits, and firmware past device memory. The co-chairs argued that a migration is not finished until verifiers stop accepting classical roots, something Cisco expects some router certificates will not do until around 2035, and they also flagged AI coding agents as a new source of divergence because agents hand-roll incompatible crypto formats instead of calling libraries.",
+          "url": "https://www.ietf.org/blog/iab-pq-workshop-impressions/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "ietf.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a18",
+          "order": 3,
+          "title": "ITALY FINES META $887M FOR ACCESSING ANDROID USERS' PHOTOS AND VIDEOS",
+          "summary": "Italy's data protection authority fined Meta €805m ($887m) after finding Facebook accessed Android users' photos, videos, and metadata without specific consent. The issue concerned the gallery-suggestions feature, which used a single app-wide authorisation. The regulator ordered Meta to seek separate, clearly explained consent and provide a way to disable the feature, as about 20 million Italian Android users were affected.",
+          "url": "https://www.theguardian.com/technology/2026/nov/15/italy-fines-meta-887m-for-accessing-android-users-photos-and-videos?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theguardian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-16:a19",
+          "order": 1,
+          "title": "🔨 BUILD CUSTOM SOC AGENTS WITH MCP SERVERS",
+          "summary": "Learn how to deploy multi-agent systems for your SOC using the Google SecOps MCP server, Agent Development Kit, and Agent2Agent protocol.",
+          "url": "https://www.brighttalk.com/webcast/18282/670427?utm_source=tldr&utm_medium=newsletter&utm_campaign=670427",
+          "reading_time_minutes": null,
+          "source_domain": "brighttalk.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a19-02",
+          "order": 2,
+          "title": "Watch the video.",
+          "summary": "",
+          "url": "https://www.brighttalk.com/webcast/18282/670427?utm_source=tldr&utm_medium=newsletter&utm_campaign=670427",
+          "reading_time_minutes": null,
+          "source_domain": "brighttalk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a20",
+          "order": 3,
+          "title": "UBER CONFIRMS HACKERS STOLE THOUSANDS OF DRIVERS' LICENSE INFORMATION IN DATA BREACH",
+          "summary": "Uber is notifying drivers after a breach at Fireworks AI exposed driver's license records as attackers stole Fireworks credentials, then accessed Uber data.",
+          "url": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-16:a21",
+          "order": 4,
+          "title": "THIS YEAR'S BUG COUNT JUST PASSED 100K",
+          "summary": "CVE disclosures passed 100,222 in 2026, more than double 2025's total.",
+          "url": "https://www.theregister.com/security/2026/11/13/this-years-bug-count-just-passed-100k/5309882?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
