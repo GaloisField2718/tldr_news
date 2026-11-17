@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-17",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-17",
+  "source_path": "TLDR InfoSec/article_17-11-2026.md",
+  "source_content_hash": "sha256:dfb55ea0ec498f05d4780ce758ce4c3af5b9851c02cbe692b0867673dcb172c6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-17",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a04",
+          "order": 1,
+          "title": "LATE-NIGHT PATCH PANICS ARE SO 2023 🥱",
+          "summary": "You've been there: code's ready to ship, everyone's excited—then someone spots a vulnerability. Suddenly it's an all-hands emergency and time to cancel your evening plans.\n\nMicrosoft Azure [5] bakes security in from the start. Microsoft Defender for Cloud [6] helps keep your apps and code protected throughout the development lifecycle. Less last-minute surprises, more peace of mind.\n\nShip fast. Ship safely. Do both at the same time.",
+          "url": "https://azure.microsoft.com/en-us/explore/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-11-17_tldr_infosec_primary_microsoft_azure&utm_content=header_late_night_patch&utm_term=2026-11-17_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a07",
+          "order": 2,
+          "title": "Build with built-in security →",
+          "summary": "",
+          "url": "https://azure.microsoft.com/en-us/explore/?utm_source=TLDR&utm_medium=newsletter&utm_campaign=2026-11-17_tldr_infosec_primary_microsoft_azure&utm_content=cta_build_built_security&utm_term=2026-11-17_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "azure.microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a08",
+          "order": 1,
+          "title": "HTTPX IS VULNERABLE TO REMOTE CODE EXECUTION VIA OJ OBJECT-MODE JSON DESERIALIZATION",
+          "summary": "Version 1.9.0 of the Ruby httpx gem (CVE-2026-129784, CVSS 8.5) parsed JSON response bodies with Oj in its default object mode when multi_json was missing, which let a malicious server turn its response into arbitrary Ruby objects. JFrog showed an attacker could chain ActiveSupport classes in any Rails app to call Kernel.load on a file they had first uploaded through an ordinary multipart POST and then reached via /dev/fd/N, giving code execution as the app user without any user interaction. Defenders should upgrade to httpx 1.9.1, or else pass mode: :strict to response.json or keep multi_json installed.",
+          "url": "https://research.jfrog.com/vulnerabilities/httpx-is-vulnerable-to-remote-code-execution-via-oj-object-mode-deserialization-cve-2026-129784/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "research.jfrog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a09",
+          "order": 2,
+          "title": "FRENCH CYBERCRIME UNIT PROBES MASSIVE CYBERATTACK ON LA POSTE SUBSIDIARY",
+          "summary": "French postal subsidiary Maileva disclosed that it was the victim of a cyberattack that led to the disclosure of data belonging to 22M people. The breached data includes full names and postal addresses of mail recipients.",
+          "url": "https://www.rfi.fr/en/france/20261116-french-cybercrime-unit-probes-massive-cyberattack-on-la-poste-subsidiary?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "rfi.fr",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a10",
+          "order": 3,
+          "title": "NEW NOISYTCP VULNERABILITIES LETS ATTACKERS CRASH LINUX SERVERS",
+          "summary": "Security researcher Hyunwoo Kim discovered an 11-year old Linux kernel vulnerability that can be used to crash systems running Nginx, Apache, and SSH servers in default configurations. The vulnerability stems from a NULL pointer dereference bug in the kernel's TCP networking system. Unauthenticated attackers can trigger a race condition using maliciously crafted packets to cause a DoS on a system.",
+          "url": "https://links.tldrnewsletter.com/p9hgWr",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a11",
+          "order": 1,
+          "title": "INSIDE THE LOOP: FIVE AI ATTACK FRAMEWORKS THAT NEVER ASK PERMISSION",
+          "summary": "Elastic analyzed five agentic offensive frameworks: ARTEX, CyberStrikeAI, Cairn, PentAGI, and HexStrike. These tools let an LLM drive scanners, shells, and cloud CLIs in bursts of two to 25 seconds. None of them enforce authorization in code, and ARTEX and CyberStrikeAI switch to new proxies and User-Agents when blocked. GTIG and Mandiant have already seen four of them in real intrusions, and Microsoft has linked ARTEX to Storm-0940. Defenders should choose ahead of time which detections can trigger automatic containment. Defenders should also pair IP blocks with token and session revocation, and track how quickly each identity acts and in what order across sessions rather than relying on framework fingerprints, which Elastic's own ES|QL hunt only partly addresses.",
+          "url": "https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "elastic.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a12",
+          "order": 2,
+          "title": "SECURE EXCLAVES AND AMBIENT SENSING",
+          "summary": "Apple introduced Secure Exclaves: isolated runtimes on Apple silicon that process microphone and camera data separately from the main operating system. Ambient sensing produces only limited metadata, such as a recognized person or wake-word detection. Raw audio and video stay inside the exclave and are discarded after processing. The design uses a capability-based L4-derived microkernel, the Secure Page Table Monitor for memory isolation, isolated Neural Engine queues, and tightly defined Secure IPC interfaces. An Exclave Indicator Controller verifies that camera or microphone indicators are visible before active sensor data leaves the boundary. HomeView person recognition and “Hey Siri” on iPhone 18 Pro use this flow.",
+          "url": "https://security.apple.com/blog/secure-exclaves/?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "security.apple.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a13",
+          "order": 3,
+          "title": "RACE AGAINST THE (MAC)HINE: LOCAL PRIVILEGE ESCALATION IN MICROSOFT DEFENDER FOR MACOS",
+          "summary": "Microsoft Defender for macOS checked IPC clients by looking up a connecting process's PID and then its current executable path, so an unprivileged process could connect and then re-exec into a Microsoft-signed binary to pass the check and send arbitrary commands to the root daemon. A diagnostics command with no authorization check followed hardlinks to read any file as root (CVE-2026-50657), and a quarantine restore request that left out its authorization blob skipped authorization entirely, which let an attacker write a cron entry to /etc/crontab and get a root shell (CVE-2026-50658). Microsoft fixed both in July 2026 Patch Tuesday. The research shows that bugs patched in Defender for Windows reappeared on macOS because peer checks should use audit tokens or XPC code-signing requirements and should block hardlinks, not just symlinks.",
+          "url": "https://spaceraccoon.dev/race-against-the-machine-defender-macos-lpe/?utm_source=tldrinfosec",
+          "reading_time_minutes": 15,
+          "source_domain": "spaceraccoon.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a14",
+          "order": 1,
+          "title": "IS AI PENTESTING AS GOOD AS A HUMAN?",
+          "summary": "A human can get tired and miss something. An agent won't, but it could over-rank a finding because it can't ask for context. Written by a pentester of 12 years, this comparison explores differences in methodology, coverage, and where each approach has the edge. Read more",
+          "url": "https://www.intruder.io/blog/ai-pentesting-vs-human-pentesting?utm_source=tldrinfosec&utm_medium=p_referral&utm_campaign=global&ai_vs_human_pentesting=",
+          "reading_time_minutes": null,
+          "source_domain": "intruder.io",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a14-02",
+          "order": 2,
+          "title": "",
+          "summary": "",
+          "url": "https://www.intruder.io/blog/ai-pentesting-vs-human-pentesting?utm_source=tldrinfosec&utm_medium=p_referral&utm_campaign=global&ai_vs_human_pentesting=",
+          "reading_time_minutes": null,
+          "source_domain": "intruder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a15",
+          "order": 3,
+          "title": "BASHKIT",
+          "summary": "Bashkit is a Rust sandbox that runs bash entirely in-process for LLM agents, with all 167 commands rewritten in Rust and no fork/exec, host filesystem access, or network access unless enabled. Its analyze() API lists the commands, arguments, and file writes in a script before it runs, so hosts can decide when to ask for approval, and it flags scripts it can't fully resolve, such as ones using eval or $cmd. It's a good fit for agent tool harnesses because it has per-domain network allowlists, resource limits, VFS snapshotting, and Python and Node bindings.",
+          "url": "https://github.com/everruns/bashkit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a16",
+          "order": 4,
+          "title": "DETECTIFY'S AGENTIC TOOLING LETS AI AGENTS TEST SUSPECTED FLAWS IN RUNNING APPLICATIONS",
+          "summary": "Detectify launched Agentic Tooling, which lets a team's own AI agents test whether a suspected vulnerability can actually be exploited in a running application, and logs every request, payload, and response in an append-only Security Ledger written by Detectify rather than the agent. It runs in the customer's environment and connects to agents through MCP or a CLI, using Detectify's crowdsourced payloads, attack surface data, and Alfred CVE engine. It's aimed at DevSecOps teams dealing with AI-generated SAST findings, which Detectify says are about 80% noise, though that figure comes from Detectify itself and the tool is only available on request.",
+          "url": "https://siliconangle.com/2026/11/16/detectifys-agentic-tooling-lets-ai-agents-test-suspected-flaws-in-running-applications/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "siliconangle.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a17",
+          "order": 5,
+          "title": "AI/ML DFIR DETECTION PACK",
+          "summary": "A vendor-neutral collection of Sigma, YARA, and Suricata rules for detecting compromise of LLM applications, MCP servers, ML supply chains, AI infrastructure, AI-powered insider threats, and RAG/vector database attacks.",
+          "url": "https://github.com/depalmar/ai-dfir-toolkit?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a18",
+          "order": 1,
+          "title": "OUR FIRST PHASE OF EMBEDDED ASSESSMENTS",
+          "summary": "OpenAI has signed agreements with Apollo Research, METR, Transluce, and Goodfire for embedded assessments. The assessors receive access to selected model checkpoints, source code, training and evaluation data, monitoring systems, documentation, and staff. Apollo will test whether models could covertly act against developer intent and whether safeguards detect it. METR will examine misaligned behavior in OpenAI's largest reinforcement-learning run and assess monitoring. Transluce will review post-training alignment evaluations, and Goodfire will analyze model internals for training monitoring, debugging, and alignment. Assessors work under agreed scopes, on-site security controls, conflict disclosures, and publication rules. OpenAI may redact confidential material and request disclosure delays for security or safety remediation.",
+          "url": "https://links.tldrnewsletter.com/Hqvxns",
+          "reading_time_minutes": 11,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a19",
+          "order": 2,
+          "title": "WHO RUNS THE RANSOMWARE GROUP QILIN?",
+          "summary": "Qilin is an active Ransomware-as-a-Service operation, claiming 365 victim organizations in three months. Its affiliates receive at least 80% of extortion payments and use double extortion: data theft plus encryption. Reporting links the administrator “Haise” to older identities “Rjun” and “Alexbigboss44,” then to Aleksey Mikhailovich Yakovtsev of St. Petersburg. The attribution relies on forum records, breached Gosuslugi data, Telegram identifiers, email links, and flight records.",
+          "url": "https://krebsonsecurity.com/2026/11/who-runs-the-ransomware-group-qilin/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "krebsonsecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a20",
+          "order": 3,
+          "title": "TELEGRAM RESTRICTS BOT WIDGETS AMIDST SECURITY DISPUTE",
+          "summary": "Telegram has blocked bots from sending HTML widgets in both public and private chats. HTML widgets are interactive tools that run inside messages and present security issues. Telegram has not confirmed the minimum safe version but has urged users to update their Telegram apps.",
+          "url": "https://cryptonews.net/news/security/33753830/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cryptonews.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-17:a21",
+          "order": 1,
+          "title": "APPS UNDER ATTACK JUMPED FROM 55% TO 87%",
+          "summary": "AI is accelerating reverse engineering. 86% of monitored iOS apps faced attacks, nearly matching Android's 89%. Digital.ai's 2026 Threat Report reveals the evolving risks.\n\nExplore the findings [21] →",
+          "url": "https://digital.ai/resource-center/whitepapers/digital-ai-2026-application-security-threat-report/?utm_source=tldr&utm_medium=email&utm_campaign=OA-AS-2026_10_28-WW-TLDR-WP-%5B2026%2BApp%2BSec%2BThreat%2BReport%5D",
+          "reading_time_minutes": null,
+          "source_domain": "digital.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a22",
+          "order": 2,
+          "title": "NOTES ON FINDING THREAT INFRASTRUCTURE WITH LOCAL MODELS",
+          "summary": "Embee Research shared the prompts it used with GLM5.3-flash, running locally in a modified OpenCode connected to Validin and URLScan through MCP, to hunt for malicious infrastructure.",
+          "url": "https://www.embeeresearch.io/notes-on-finding-threat-infrastructure-with-local-models/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "embeeresearch.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a23",
+          "order": 3,
+          "title": "TOR UPDATES DOS DEFENSES AGAIN AS RELAY ATTACKS CONTINUE",
+          "summary": "The update patches DoS handling for IPv6 and follows 0.4.9.15, which added defenses against directory-request floods.",
+          "url": "https://links.tldrnewsletter.com/vBwBwb",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-17:a24",
+          "order": 4,
+          "title": "CALIFORNIA STATE AG SUES OPENAI OVER ROGUE AGENT INCIDENTS",
+          "summary": "It alleges OpenAI agents accessed employee records with names, birth dates, and addresses.",
+          "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/?utm_source=tldrinfosec%5B25%5D%5B26",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
