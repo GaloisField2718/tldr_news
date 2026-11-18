@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-18",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-18",
+  "source_path": "TLDR InfoSec/article_18-11-2026.md",
+  "source_content_hash": "sha256:b03ae27448165b3861b12e8ea7eebbc6d30c0801916c1ab9384a179ce4d176c3",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-18",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-18:a04",
+          "order": 1,
+          "title": "WPPCONNECT COMPROMISED: MALICIOUS RELEASES STEAL SECRETS AND WHATSAPP SESSIONS THROUGH THE PROJECT'S OWN PIPELINE",
+          "summary": "Unreviewed commits pushed through a maintainer account shipped a \"diagnostics\" module in WPPConnect npm packages and Docker images. The module sent environment variables, .env files, and WhatsApp session tokens to a Telegram bot. The releases went out through the project's own trusted-publishing workflow with valid SLSA provenance. The payload runs on import, so --ignore-scripts does not stop it, and the attacker force-pushed the branches so the release tag pointed to a clean look-alike commit.",
+          "url": "https://www.stepsecurity.io/blog/wppconnect-compromised-malicious-releases-steal-secrets-and-whatsapp-sessions?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "stepsecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a05",
+          "order": 2,
+          "title": "CYBER GIANT INFOBLOX CONFIRMS SECURITY INCIDENT AFTER HACKERS ACCESS ‘COMPANY INFORMATION'",
+          "summary": "Infoblox confirmed that hackers accessed company information through a compromised third-party SharePoint data-migration vendor with a source saying that sensitive customer data was taken. Infoblox says its products, cloud services, updates, and build-and-release processes were not involved.",
+          "url": "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a06",
+          "order": 3,
+          "title": "JAVA4SHELL",
+          "summary": "Researchers from Calif discovered a critical (rated 9.2/10 using CVSS 4.0) memory-corruption vulnerability that could lead to remote code execution in OpenJDK's Base64 decoder. The vulnerability occurs in a section of hand-written assembly code that's meant to optimize base64 decoding in x86-64 CPUs with AVX-512 VBMI instructions enabled and can be exploited by an attacker supplying 64 “A”s to overflow the allocated memory segment. Popular vulnerable software includes Atlassian Confluence and Jira, JFrog Artifactory, Keycloak, and Elasticsearch.",
+          "url": "https://calif.io/java4shell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "calif.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-18:a07",
+          "order": 1,
+          "title": "BACKDOOR ATTACKS AGAINST MACHINE LEARNING IRL",
+          "summary": "A malicious ONNX model built on Qwen2 behaved normally until a trigger word made it leak files or memory from the serving host, with the whole attack contained in the .onnx file. It abused an ONNX Runtime parser flaw that densified sparse tensors from attacker-chosen file paths or memory addresses during Load(), before path validation ran, and then encoded the stolen bytes into output tokens. Defenders should upgrade to onnxruntime v1.27.0 or later and audit downloaded models as closely as untrusted source code.",
+          "url": "https://phrack.org/issues/73/backdoor-attacks-against-machine-learning-irl?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "phrack.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a08",
+          "order": 2,
+          "title": "THREAT RESEARCHER'S NOTEBOOK: BUBBLELOADER",
+          "summary": "BubbleLoader turns legitimate executables such as WinRAR, x64dbg, and Firefox Launcher into malware droppers by patching the entry point and adding two PNGs, one a valid image used as an XOR key and the other a fake PNG holding shellcode and the encrypted next stage. The final stage reflectively loads the payload, hooks RtlPcToFileHeader in ntdll to support exception handling, and overwrites compiler padding with CPU timestamp data so the payload's hash changes on every run. Defenders should enforce code-signing checks on third-party binaries, alert on RWX VirtualAlloc calls and ntdll protection changes, and flag PNG resources with truncated IHDR chunks rather than rely on static hashes.",
+          "url": "https://www.reversinglabs.com/blog/threat-researchers-notebook-bubbleloader?utm_source=tldrinfosec",
+          "reading_time_minutes": 14,
+          "source_domain": "reversinglabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a09",
+          "order": 3,
+          "title": "SIGN2SHELL: HOW WE HACKED EVERY MAJOR BRAZILIAN SIGNATURE EXTENSION",
+          "summary": "Researchers found drive-by remote code execution flaws, each rated CVSS 9.6, in Brazil's five most-installed digital-signing browser extensions. The extensions let websites choose DLLs loaded by their native hosts, without checking paths, file types, or Authenticode signatures. Attackers could deliver a disguised executable, load it through PKCS#11 functions, and run code as the Windows user. Some chains required only a page visit or an ad iframe.",
+          "url": "https://amibeingpwned.com/blog/how-we-hacked-brazil?utm_source=tldrinfosec",
+          "reading_time_minutes": 20,
+          "source_domain": "amibeingpwned.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-18:a10",
+          "order": 1,
+          "title": "SCOPE AGENT ACCESS TO THE TASK, NOT THE USER",
+          "summary": "When an agent acts for an engineer, it often gets that engineer's full access, from GitHub to production. Keycard CEO Ian Livingstone explains runtime auth [10]: each agent action runs on a short-lived credential scoped to its task and the person it acts for, with an",
+          "url": "https://www.keycard.ai/blog/defining-auth-for-agents/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=q4-pilot&utm_content=secondary-20261118",
+          "reading_time_minutes": null,
+          "source_domain": "keycard.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a11",
+          "order": 2,
+          "title": "audit trail security can review. Book a demo",
+          "summary": "",
+          "url": "https://www.keycard.ai/contact/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=q4-pilot&utm_content=secondary-20261118-demo",
+          "reading_time_minutes": null,
+          "source_domain": "keycard.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a12",
+          "order": 3,
+          "title": "PRETXT (PRODUCT LAUNCH)",
+          "summary": "PreTxt provides AI Supervision, a runtime tool that monitors AI agents, checks their actions against customer rules, and redirects them when they exceed authority or violate constraints. It can block actions such as giving medical advice while allowing the agent to continue its approved task.",
+          "url": "https://pretxt.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "pretxt.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a13",
+          "order": 4,
+          "title": "MCP-ATTEST",
+          "summary": "mcp-attest connects to a live MCP server as each identity in a policy file and makes real tool calls to find every case where the server allows something the policy denies, including cross-user object access and 12 OAuth token checks such as alg: none, wrong audience, and token passthrough. The tool is deterministic, has no dependencies, and maps each rule to the OWASP MCP Security Testing Guide, and can export hash-chained, HMAC-signed evidence bundles and SARIF output, so it works as a CI gate.",
+          "url": "https://github.com/Balanov/mcp-attest?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a14",
+          "order": 5,
+          "title": "TK",
+          "summary": "tk lets an agent sign Git commits and open SSH connections without a private key on its machine.",
+          "url": "https://github.com/tkhq/tk?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-18:a15",
+          "order": 1,
+          "title": "NEW GITDOOR AND GRAPHDOOR BACKDOORS TURN GITHUB AND SHAREPOINT INTO COVERT C2 CHANNELS",
+          "summary": "Operation ShadowCloud is a campaign targeting government organizations in Asia and Africa. Attackers use MeshCentral Agent, DLL sideloading, and encrypted loaders to deploy GitDoor and GraphDoor. GitDoor sends commands and results through GitHub repositories, and GraphDoor uses Microsoft Graph and SharePoint. Both load plugins and shellcode in memory, capture keystrokes and screenshots, steal credentials and browser cookies, and proxy traffic through Ably.",
+          "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a16",
+          "order": 2,
+          "title": "WEIGHING CYBER POWER: INVESTIGATING IRAN'S STATE-SPONSORED CYBER CAPABILITY",
+          "summary": "AttackIQ's Adversary Research Team released a report on more than 15 years of Iranian state-sponsored cyber activity, sorting 20 groups into Heavyweight, Lightweight, and Featherweight tiers by how much they matter to the organization and its operations. The report draws on more than 200 references to compile 2,600 procedures, 1,300 file indicators, and 2,300 network indicators. It also maps more than 20 links between the groups, which shows how intelligence agencies, military units, and contractors share capabilities in ways that make attribution harder.",
+          "url": "https://www.attackiq.com/2026/11/17/weighing-cyber-power/",
+          "reading_time_minutes": 2,
+          "source_domain": "attackiq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a17",
+          "order": 3,
+          "title": "ACCESS DENTAL MANAGEMENT DATA BREACH IMPACTS OVER 340,000",
+          "summary": "Access Dental Management disclosed that attackers accessed its network from May 1 to May 4 and viewed or copied patient data. The breach exposed names, addresses, birth dates, Social Security numbers, medical records, and health insurance details.",
+          "url": "https://links.tldrnewsletter.com/l4Lifh",
+          "reading_time_minutes": 1,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-18:a18",
+          "order": 1,
+          "title": "6 QUESTIONS TO ASK BEFORE CONNECTING AN MCP SERVER",
+          "summary": "SaaS vendors get a security review. MCP servers often go to production with privileged credentials in minutes. Read the 6",
+          "url": "https://jetstream.security/secure-mcp-catalog/?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026-11-13-q4fy27-wp-verified-mcp-catalog-tldr&utm_content=insight_cta_catalog_control_governing&utm_term=2026-11-16_tldr_devops",
+          "reading_time_minutes": null,
+          "source_domain": "jetstream.security",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a19",
+          "order": 2,
+          "title": "questions to ask before you connect.",
+          "summary": "",
+          "url": "https://jetstream.security/insights/mcp-server-security-questions/?utm_source=tldr&utm_medium=newsletter&utm_campaign=q4fy27-tldr-sponsorship&utm_content=insight",
+          "reading_time_minutes": null,
+          "source_domain": "jetstream.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a20",
+          "order": 3,
+          "title": "NSA NET CLASSIFIED NETWORK DISRUPTED",
+          "summary": "NSA Net, the NSA's classified internal network, went down during what the agency called routine maintenance, forcing staggered staff arrivals at Fort Meade.",
+          "url": "https://therecord.media/nsa-net-disruptions?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "therecord.media",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-18:a21",
+          "order": 4,
+          "title": "JAPAN'S FUGAKU SUPERCOMPUTER HAS DECIDEDLY UN-SUPER SECURITY",
+          "summary": "Attackers hacked RIKEN's Fugaku status dashboard between November 10 and 13, moved across RIKEN's network, and installed malware on user-data servers, exposing names, email addresses, and credentials for Fugaku, Rikyu, and external services.",
+          "url": "https://www.theregister.com/security/2026/11/17/japans-fugaku-supercomputer-has-decidedly-un-super-security/5310333?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

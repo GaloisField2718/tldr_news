@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-crypto:2026-11-18",
+  "sector": "TLDR Crypto",
+  "sector_slug": "tldr-crypto",
+  "date": "2026-11-18",
+  "source_path": "TLDR Crypto/article_18-11-2026.md",
+  "source_content_hash": "sha256:a58b8de2871e62695a22b6e3b957e45d69c397254353e277dabd6a4cdc62fac9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR CRYPTO 2026-11-18",
+  "sections": [
+    {
+      "id": "markets-business",
+      "heading": "MARKETS & BUSINESS",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-18:a04",
+          "order": 1,
+          "title": "TREZOR HIT BY ANOTHER SHIPPING PARTNER DATA LEAK",
+          "summary": "Shipping partner Skladon was breached on November 7, exposing names, phone numbers, addresses, emails, and order details for orders placed between August 9 and November 7, but no wallet backups, PINs, or passphrases. Some customers have reported scam calls impersonating Trezor support. The breach follows a leak in August at ShipMonk that affected about 13,700 customers.",
+          "url": "https://links.tldrnewsletter.com/7KBc9s",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a05",
+          "order": 2,
+          "title": "WELLS FARGO'S BITCOIN ETF HOLDINGS DOUBLE",
+          "summary": "Wells Fargo's 13F filing disclosed 49.58 million IBIT shares worth $2.35 billion as of September 30, a 103% share count increase from Q2's 24.4 million shares, representing indirect exposure to roughly 28,070 BTC and placing Wells Fargo ahead of Millennium Management, Jane Street, and Morgan Stanley as the largest reported IBIT holder among investment managers. The filing aggregates securities across the bank and its associated investment managers, including client-managed positions, so the figures reflect reported exposure rather than the bank's proprietary balance sheet. Bitcoin's approximately 42% price gain between June 30 and September 30 contributed to the near-tripling of dollar value alongside the share count increase. The snapshot predates BTC's pullback from $74,000 to $63,000, during which IBIT recorded more than $1 billion in outflows, making current positioning uncertain from public data alone.",
+          "url": "https://www.coindesk.com/markets/2026/11/17/wells-fargo-s-reported-blackrock-bitcoin-etf-holdings-double-to-usd2-35-billion?utm_source=tldrcrypto",
+          "reading_time_minutes": 2,
+          "source_domain": "coindesk.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "innovation-launches",
+      "heading": "INNOVATION & LAUNCHES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-18:a06",
+          "order": 1,
+          "title": "ETHEREUM'S EIP-7999 MULTIDIMENSIONAL FEE ANALYSIS",
+          "summary": "An Ethereum Foundation intern study benchmarks EIP-7999's multidimensional fee market against three one-dimensional alternatives, including EIP-8368 and EIP-8372 variants. At a 1/2 target-to-limit ratio, EIP-7999 delivers 4%-34% more execution gas per block than the best one-dimensional benchmark while holding state growth to 120 GiB/year across every tested configuration, versus 56.7-96.0 GiB/year for one-dimensional variants. Against an EIP-4844-style one-dimensional variant at the 4/5 ratio, EIP-7999's maximum-throughput configuration adds 19.5M-56.2M gas per block while keeping near-limit block rates lower than the 38.8%-40.8% produced by that one-dimensional approach. The paper concludes that the results support transitioning Ethereum from separate resource metering to separate resource pricing as the network scales, directly backing EIP-7999's design.",
+          "url": "https://ethresear.ch/t/more-meters-or-more-prices-one-vs-multi-dimensional-fee-mechanisms-on-ethereum/26244?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "ethresear.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a07",
+          "order": 2,
+          "title": "EXPLORING POST-QUANTUM SIGNATURE AGGREGATION FOR EIP-8288",
+          "summary": "Researchers propose pairing EIP-8141 (programmable account validation) with EIP-8288 (recursive STARK aggregation) to let Ethereum wallets choose their own post-quantum signing scheme while the network verifies a single common proof. Benchmarks across five PQ candidates on Apple M4 Pro hardware show wide efficiency gaps: FORS fits 100 signatures into a 298 KiB proof, Falcon-512 fits 32, ML-DSA-44 fits 6, and standard Raccoon-128 fits only 1. Raccoon-G exceeds the 268M-word witness cap per signature, requiring Merkle-tree-style recursive aggregation across five leanSTARK sub-proofs per signature, with 100-signature trees producing a 333 KiB root proof plus 2.84 KiB auxiliary data.",
+          "url": "https://ethresear.ch/t/exploring-post-quantum-signature-aggregation-for-eip-8288/26261?utm_source=tldrcrypto",
+          "reading_time_minutes": 5,
+          "source_domain": "ethresear.ch",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "guides-tutorials",
+      "heading": "GUIDES & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-18:a08",
+          "order": 1,
+          "title": "THE REAL CASE FOR TOKENIZED EQUITIES",
+          "summary": "Tokenized equities enable global access for users excluded from traditional brokerage systems and onchain yield generation, which matters more than 24/7 trading as the primary value proposition. Tokenizing US equities strengthens American market dominance by delivering superior technology to international investors who already show strong demand for US-denominated assets. Major AI labs continue routing payments through credit card networks and traditional infrastructure rather than onchain systems, an observation that positions tokenized equities as a credible candidate to become the default investing layer inside AI-native financial applications. If tokenized equities fill that role, crypto will stay at the center of global finance rather than cede the payment layer to legacy rails.",
+          "url": "https://threadreaderapp.com/thread/2122058261432270875.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 3,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a09",
+          "order": 2,
+          "title": "BITWISE SEES SOLANA REACHING $1,100 BY 2031 IN BULL CASE",
+          "summary": "Bitwise projects SOL reaching $1,100 by 2031 in its bull case (base: $385, bear: $80) in a report from its onchain research team, with SOL priced near $71 at publication. The bull case hinges on 5% of global equities tokenized by 2031, with Solana capturing 65% of resulting trading volume, implying ~$30.7 trillion in annual tokenized stock transactions and 3.6 billion daily transactions at 23x present throughput. Securitize's October 2026 tokenized US stock launch and DTCC's planned H2 2027 tokenized securities rollout on Solana serve as near-term catalysts anchoring these projections. Key risks include tokenization pace, regulatory shifts, and infrastructure gaps, as the base case alone demands 2.5x Solana's maximum block compute while Ethereum and its L2s lead tokenized asset value.",
+          "url": "https://links.tldrnewsletter.com/mu7zeQ",
+          "reading_time_minutes": 4,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-18:a10",
+          "order": 1,
+          "title": "ONLY 9% OF REVOLUT'S STABLECOIN VOLUME CAME FROM CUSTOMERS",
+          "summary": "Revolut's stablecoin volume hit $3.2B in July, but after breaking down USDT and USDC transfers across its hot wallets on eight networks, only 9% was customer activity. Customers normally account for about 25-30% of volume, and in July two-thirds was Revolut shuffling funds between its own wallets ahead of the USDT delisting in the EEA. Raw volume fell fourfold while customer flows only halved, and the decline began in May, before Revolut's delisting letter.",
+          "url": "https://threadreaderapp.com/thread/2122439548143911423.html?utm_source=tldrcrypto",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a11",
+          "order": 2,
+          "title": "IS CRYPTO VC DEAD?",
+          "summary": "A $15B LP dinner surfaced a structural math problem for large crypto funds: a $2B vehicle targeting 3x needs $6B in returns, achievable in prior cycles via L1s and infrastructure, but value has shifted to app-layer projects with distribution rather than protocols, leaving no clean path to venture-scale outcomes on crypto alone. Consensus put crypto-only funds' runway at one or two more cycles before the asset class merges into the broader frontier tech market, with large VCs expanding mandates into robotics, physical AI, and compute. Near-term opportunities cited include AI-native companies adopting on-chain infrastructure via agentic payments and trading, DeFi and agentic brokerages that have not yet reached millions of users, and tokenized equities in emerging markets.",
+          "url": "https://links.tldrnewsletter.com/WAYbJL",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-crypto:2026-11-18:a12",
+          "order": 1,
+          "title": "CRYPTO PULLBACK OFFERS “COMPELLING ENTRY POINTS”",
+          "summary": "Stablecoin outflows to fiat after the Binance hack and spillover from AI equities like Nvidia have hurt the crypto industry.",
+          "url": "https://links.tldrnewsletter.com/Uy9I7O",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a13",
+          "order": 2,
+          "title": "TETHER CAPITAL INVESTS $15 MILLION IN BRAZILIAN FINTECH NOMAD",
+          "summary": "Tether Capital's strategic investment in Nomad, which offers US dollar accounts, international payments, and global investing, aims to make international payments easier for Brazilians.",
+          "url": "https://links.tldrnewsletter.com/l8BTXC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a14",
+          "order": 3,
+          "title": "FORMER ROBINHOOD ENGINEER PLEADS GUILTY TO WIRE FRAUD",
+          "summary": "Huaisong Xiang admitted to using confidential information on planned Robinhood Crypto listings to trade perpetual futures on Hyperliquid in 2025 and 2026, and agreed to forfeit $125,523.",
+          "url": "https://links.tldrnewsletter.com/ZincC4",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-crypto:2026-11-18:a15",
+          "order": 4,
+          "title": "EVERYBODY IS TRYING TO BECOME THE EVERYTHING APP",
+          "summary": "Robinhood, Polymarket, Kalshi, Coinbase, Kraken, and Pump are each expanding from their original product into stocks, prediction markets, perps, crypto, and memecoins.",
+          "url": "https://threadreaderapp.com/thread/2122466008292090214.html?utm_source=tldrcrypto%5B16%5D%5B17",
+          "reading_time_minutes": 1,
+          "source_domain": "threadreaderapp.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

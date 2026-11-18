@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-18",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-18",
+  "source_path": "TLDR Dev/article_18-11-2026.md",
+  "source_content_hash": "sha256:2f03dbc4bfc759dbfaf52f863ddcf5d354c57a23e9952ee6bf60af1dd4a3f1e1",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-18",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a04",
+          "order": 1,
+          "title": "A PILE OF MCPS IS NOT A CONTEXT ENGINE",
+          "summary": "Agents can generate code. Getting it right for your system, conventions, and past decisions is the hard part. MCPs and skills give access to information, but not understanding. Read how [4]the teams pulling ahead have a context engine to give agents exactly what they need for the task at hand.",
+          "url": "https://getunblocked.com/blog/mcp-connectors-are-not-a-context-engine/?utm_source=tldrdev&utm_medium=email&utm_campaign=primary_20261118",
+          "reading_time_minutes": null,
+          "source_domain": "getunblocked.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a05",
+          "order": 1,
+          "title": "HOW THE CLAUDE CODE TEAM THINKS ABOUT VERIFICATION",
+          "summary": "The Claude Code team treats verification as running the changed system and collecting evidence, with end-to-end, property, and differential tests providing complementary checks. Its workflow keeps review rules outside the change being judged, runs cheap checks before shared CI, and turns recurring failures into rules evaluated against past incidents and stable changes.",
+          "url": "https://links.tldrnewsletter.com/K8O6Qc",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a06",
+          "order": 2,
+          "title": "WRITABLE DERIVED STATE: STOP SYNCHRONIZING STATE",
+          "summary": "Copying server data into React state with an effect can overwrite unsaved edits whenever a refetch completes. Keep user edits in separate nullable state and fall back to server data only when no edit exists, a pattern that also works with TanStack Query.",
+          "url": "https://playfulprogramming.com/posts/writable-derived-state?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "playfulprogramming.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a07",
+          "order": 3,
+          "title": "RUNNING DATASETTE IN THE BROWSER WITH SERVICE WORKERS AND PYODIDE",
+          "summary": "A rewrite of Datasette Lite uses service workers to serve the Python application's HTML, JavaScript, and CSS entirely in the browser. URL parameters select databases, plugins, Datasette revisions, and SQLite versions, making it possible to share bug reproductions and feature demos without hosting a server.",
+          "url": "https://simonwillison.net/2026/Nov/17/datasette-lite?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "simonwillison.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a08",
+          "order": 4,
+          "title": "SHOULD YOU ACTUALLY ADD AI TO THAT?",
+          "summary": "An AI feature should return more value through reduced effort, fewer errors, or greater consistency than users spend adapting to and verifying it. A four-question audit checks total effort, performance against the existing method, whether users can catch errors, and whether they retain that judgment after prolonged use.",
+          "url": "https://smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams/?utm_source=tldrdev",
+          "reading_time_minutes": 15,
+          "source_domain": "smashingmagazine.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a09",
+          "order": 1,
+          "title": "HOW CAN YOU BE RESPONSIBLE FOR CODE YOU DON'T UNDERSTAND?",
+          "summary": "Teams delegating all coding and review to AI gradually lose the familiarity and skills needed to maintain that code themselves. Treat accountability as responsibility for measurable system outcomes. Reversing an AI mandate will not instantly restore those skills.",
+          "url": "https://naildrivin5.com/blog/2026/11/11/how-can-you-be-responsible-for-code-you-don-t-understand.html?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "naildrivin5.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a10",
+          "order": 2,
+          "title": "NOT EVERYTHING NEEDS AN LLM",
+          "summary": "PostHog uses decision models to gate expensive LLM calls, route requests, and rerank search results with explicit probability scores. Its personal-information checks let 98.7% of session summaries skip a rewriting call, but thresholds need calibration for each task and model because false positives and false negatives carry different costs.",
+          "url": "https://newsletter.posthog.com/p/decision-models?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "newsletter.posthog.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a11",
+          "order": 3,
+          "title": "ONLY THE HUMAN MERGES",
+          "summary": "Written instructions failed to stop agents from adding comments or merging changes, while server-enforced permissions stopped unauthorized merges. The workflow reserves prioritization, acceptance, and final decisions for a person, with agent reviews providing evidence rather than approval.",
+          "url": "https://itsmeduncan.com/2026/11/17/only-the-human-merges?utm_source=tldrdev",
+          "reading_time_minutes": 4,
+          "source_domain": "itsmeduncan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a12",
+          "order": 1,
+          "title": "CODEAF RANKS #1 OF TEN CODING HARNESSES ON DEEPSWE",
+          "summary": "On DeepSWE, ten coding harnesses ran the same open model on 113 real GitHub issues. CodeAF [12] - a new open-source coding harness built for open models - finished #1, ahead of Claude Code, Codex, OpenCode, and paid the least per solved issue: the others paid 1.9× to 26.6×",
+          "url": "https://links.tldrnewsletter.com/fKdkLl",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a12-02",
+          "order": 2,
+          "title": "more. Try on Github",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/fKdkLl",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a13",
+          "order": 3,
+          "title": "ALLOY CSS",
+          "summary": "Alloy provides a stylesheet for server-rendered HTML, including dialogs, menus, drawers, tabs, and toasts that work with JavaScript disabled. It uses native browser features, needs no build step, and includes a checker that flags classes outside its defined vocabulary.",
+          "url": "https://links.tldrnewsletter.com/hO43we",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a14",
+          "order": 4,
+          "title": "SOLID 2.0: THE LONG HOLD",
+          "summary": "Solid 2.0 brings promises and async iterators into its reactive graph, with server functions supporting request-response calls and persistent streams. Development diagnostics report reactive mistakes with stable codes, source locations, and repair guidance, helping people and coding agents detect problems that otherwise look like working applications.",
+          "url": "https://links.tldrnewsletter.com/WOd7BN",
+          "reading_time_minutes": 8,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a15",
+          "order": 5,
+          "title": "INTRODUCING EVE 1.0",
+          "summary": "eve is an open-source framework for durable agents with configurable models, tools, approvals, and memory. Its 1.0 release adds multiplayer sessions, broader framework integrations, and OpenTelemetry traces, with Workflow-based checkpointing allowing interrupted work to resume.",
+          "url": "https://links.tldrnewsletter.com/K1wuCr",
+          "reading_time_minutes": 10,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a16",
+          "order": 6,
+          "title": "BECOME A FOUNDING MEMBER OF TLDR'S AI COMMUNITY (2 MINUTE FORM)",
+          "summary": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join [17].",
+          "url": "https://links.tldrnewsletter.com/q4vVWx",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a18",
+          "order": 1,
+          "title": "MY AI AGENTS (RE)DISCOVERED A MAYA SITE IN 72 HOURS",
+          "summary": "A group of 48 agents inspected images derived from public NASA lidar data and flagged a Maya site missing from Mexico's official register. A later literature check showed archaeologists had already mapped it in 2025, making this a rediscovery and exposing a gap in the agents' research.",
+          "url": "https://pietromiotti.com/latest/maya-site/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "pietromiotti.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a19",
+          "order": 2,
+          "title": "MODERN WEB GUIDANCE 1.0",
+          "summary": "Modern Web Guidance supplies coding agents with expert-reviewed web practices and browser compatibility data, covering gaps in accessibility, performance, security, and user experience. Version 1.0 adds a codebase modernization workflow and public evaluations, with Firefox and Edge joining Chrome in supporting the project.",
+          "url": "https://developer.chrome.com/blog/modern-web-guidance-v1?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "developer.chrome.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-18:a20",
+          "order": 1,
+          "title": "BUILD EXPLAINABLE AI WITH NEO4J KNOWLEDGE GRAPH",
+          "summary": "Neo4j keeps facts connected to their relationships, so your AI can ground answers in real context and trace each one back to your data.",
+          "url": "https://neo4j.com/product/auradb/?utm_medium=newsletter&utm_source=tldr&utm_campaign=aura_tldr_2026_q4&utm_content=ad_auradb_ql2",
+          "reading_time_minutes": null,
+          "source_domain": "neo4j.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a20-02",
+          "order": 2,
+          "title": "Start building your first graph",
+          "summary": "",
+          "url": "https://neo4j.com/product/auradb/?utm_medium=newsletter&utm_source=tldr&utm_campaign=aura_tldr_2026_q4&utm_content=ad_auradb_ql2",
+          "reading_time_minutes": null,
+          "source_domain": "neo4j.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a21",
+          "order": 3,
+          "title": "INSIDE MICROSOFT'S OUTAGE: A LATENT BUG, NOT AI-WRITTEN CODE",
+          "summary": "An account based on a Microsoft incident-team conversation attributes the outage to a months-old, human-written Windows change that saturated machines.",
+          "url": "https://links.tldrnewsletter.com/OFGrLv",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a22",
+          "order": 4,
+          "title": "JQUERY 4.1.0 AND 3.8.0 RELEASED",
+          "summary": "jQuery 4.1.0 adds form-associated custom element serialization and linear-time duplicate removal, while 3.8.0 is the final planned feature release before the 3.x branch moves to critical fixes only.",
+          "url": "https://blog.jquery.com/2026/11/17/jquery-4-1-0-and-3-8-0-released-passing-the-torch?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "blog.jquery.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a23",
+          "order": 5,
+          "title": "FASTER TYPE-AWARE LINTING WITH TSRS",
+          "summary": "Oxlint's new tsrs backend shares TypeScript analysis between typechecking and type-aware linting.",
+          "url": "https://oxc.rs/blog/2026-11-17-faster-type-aware-linting-with-tsrs?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "oxc.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-18:a24",
+          "order": 6,
+          "title": "WEB BROWSER ENGINEERING",
+          "summary": "This free online book builds a browser in a few thousand lines of Python, progressing from HTTP and layout to JavaScript, compositing, accessibility, and security.",
+          "url": "https://browser.engineering/?utm_source=tldrdev%5B25%5D%5B26",
+          "reading_time_minutes": null,
+          "source_domain": "browser.engineering",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
