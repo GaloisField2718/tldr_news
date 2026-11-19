@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-19",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-19",
+  "source_path": "TLDR InfoSec/article_19-11-2026.md",
+  "source_content_hash": "sha256:87de4f23805e607a2b4bc187def17e93148ba61e2d48cb1782f98379f44464a9",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-19",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a04",
+          "order": 1,
+          "title": "LEARN TO SPOT THE THREE TRAFFIC PATTERNS THAT REVEAL SHADOW AI",
+          "summary": "Employees and apps can introduce unapproved AI services without security teams noticing. NETSCOUT explains three warning signs: unexpected data flows, persistent machine-to-machine connections, and changing AI dependencies.\n\nDDoS attacks are getting harder to tell apart from legitimate traffic. Residential proxies route traffic through consumer devices, making addresses appear legitimate. Low-cost DDoS-for-hire services reduce barriers. NETSCOUT reports attacks exceeding 1 Tbps or 1 Gpps rose 1,286% year over year [5].\n\nLearn how glass-box DDoS protection [6] helps security teams see and refine mitigation decisions to protect legitimate users.",
+          "url": "https://www.netscout.com/blog/what-shadow-ai-looks-your-network?utm_source=tldr&utm_medium=display&utm_campaign=brand-campaign&utm_keyword=tldr-nl-1119&utm_content=blog_post",
+          "reading_time_minutes": null,
+          "source_domain": "netscout.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a07",
+          "order": 1,
+          "title": "OFFICIAL MICROSOFT AGENT-FRAMEWORK PYPI PACKAGE COMPROMISED",
+          "summary": "Versions 1.26.1 and 1.26.2 of Microsoft's agent-framework package on PyPI were pushed from the official publisher account and contain a credential stealer that af_runtime_diag.pth launches on every Python startup, even if nothing imports the package. Along with harvesting environment variables, credential files, and other processes' /proc//environ, it requests fresh GitHub Actions OIDC, Azure DevOps OIDC, and Azure managed identity tokens and sends everything to a webhook.site URL. The attacker is believed to still have publishing access, so defenders should treat any install of either version as a full credential compromise and rotate all secrets, CI tokens, and cloud identities that the environment could reach.",
+          "url": "https://opensourcemalware.com/blog/agent-framework-pypi-compromised?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "opensourcemalware.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a08",
+          "order": 2,
+          "title": "HUNDREDS OF WEBSITES DELIVER POTENT MALWARE COCKTAIL TO UNSUSPECTING VISITORS",
+          "summary": "Attackers modified JavaScript served through Optimizely's legitimate infrastructure, affecting 178 sites, including CNN, Zoom, the BBC, and Salesforce. The malicious track.js script replaced cryptocurrency wallet addresses, captured card numbers, CVVs, cookies, and screenshots, and served Coruna and DarkSword iOS exploit kits. ReportURI says funds were stolen from some visitors. Optimizely has not explained how attackers gained write access.",
+          "url": "https://arstechnica.com/security/2026/11/malicious-code-delivered-through-optimizely-hits-visitors-to-hundreds-of-sites/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a09",
+          "order": 3,
+          "title": "UNAUTHENTICATED REMOTE CODE EXECUTION IN NGINX",
+          "summary": "Researchers from Wiz discovered two new remote code execution vulnerabilities in NGINX's HTTP/2 functionality. One of the vulnerabilities stems from a use-after-free bug, and the other stems from an integer overflow, but an unauthenticated attacker could exploit either one to achieve remote code execution. Users are encouraged to upgrade to patched versions or disable HTTP/2 functionality.",
+          "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "wiz.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a10",
+          "order": 1,
+          "title": "ABUSING THE WINDOWS SMART CARD MINIDRIVER ARCHITECTURE",
+          "summary": "A low-privileged user can run malware that uses a victim's plugged-in smart card remotely, because Windows lets any process load the card's minidriver and call CardAuthenticateEx() and CardSignData() directly. The researcher's proxy, called Hermes, hooks CardAuthenticateEx() to capture the PIN, then signs attacker-supplied data over an SMB named pipe that an emulated card connects to through a modified OpenSC minidriver, and this works with any card type or algorithm. The behavior is by design and not a vulnerability, so defenders should watch for unexpected processes loading smart card minidrivers or hooking their exports, and should not treat smart card authentication alone as proof that the user is physically present.",
+          "url": "https://phrack.org/issues/73/abusing-the-windows-smart-card-minidriver-architecture_md?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "phrack.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a11",
+          "order": 2,
+          "title": "BACKDOORING LLMS - DO YOU TRUST YOUR AI PROVIDER?",
+          "summary": "Paolo Galeone fine-tuned Qwen3-8B with a QLoRA adapter on one RTX 3090, for about €1 of electricity, so that a harmless question about 23 May 1992 made it silently emit a bash tool call that the pi agent harness executed with an empty visible reply. By training on pi's actual system prompt, he made the backdoor fire only in pi, making it dormant in other harnesses like Claude Code and Codex. A merged adapter shows up when you diff weights against the official base, since layernorm weights stay unchanged, but that doesn't work for hosted API models, so defenders should sandbox agents, require approval for shell and network tool calls, and test new models with their real harness prompt.",
+          "url": "https://pgaleone.eu/ai/2026/11/14/backdooring-llms-and-trust/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "pgaleone.eu",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a12",
+          "order": 1,
+          "title": "PASS-THE-DEVICE",
+          "summary": "Pass-the-Device is the companion toolkit to a CODE BLUE 2026 talk on carrying SASE and VPN device trust off a compromised endpoint. It pairs red team recon tools for GlobalProtect, Cisco ASA, FortiGate, Zscaler, and Netskope with Sigma and KQL detections for blue teams. The recon side fingerprints VPN auth methods and IdPs, enumerates Netskope tenant configuration anonymously, parses Cisco HostScan posture profiles, and includes a lab SAML proxy that injects PRT cookies. The detections flag non-vendor processes reading VPN client state or DPAPI master keys, along with the default fingerprints of OpenConnect-based clients, and defenders should baseline them before alerting on them.",
+          "url": "https://github.com/crypt0p3g/pass-the-device?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a13",
+          "order": 2,
+          "title": "DAYLIGHT (PRODUCT LAUNCH)",
+          "summary": "Daylight provides a platform that hunts, analyzes, and contains cyber threats in real time. It builds and runs agents for daily security operations, with managed, co-managed, or engineer-supported service options. It also protects against prompt injection, risky MCPs, and rogue AI activity.",
+          "url": "https://daylight.ai/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "daylight.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a14",
+          "order": 3,
+          "title": "SPIKESTRIP",
+          "summary": "SpikeStrip is a tool that adds reversible prompt decoys to HTML source and JavaScript files.",
+          "url": "https://github.com/Arcanum-Sec/SpikeStrip?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a15",
+          "order": 1,
+          "title": "CHAINGUARD IS NOW SELF-SERVE AND FREE TO START",
+          "summary": "Chainguard dropped its sales-call requirement and launched a free Starter tier that needs no credit card and includes 5 near-zero-CVE container images, 50,000 monthly pulls of malware-screened packages with a 7-day version cooldown, and 500 vCPU hours each of hardened CI runners and agent sandboxes. A $500 per month Team plan raises those limits and adds hardened GitHub Actions, backported CVE fixes, and managed pull policies, while Enterprise still goes through sales.",
+          "url": "https://www.chainguard.dev/unchained/chainguard-is-now-self-serve-and-free-to-start?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "chainguard.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a16",
+          "order": 2,
+          "title": "HACKERS EXPLOITING CRITICAL PUPPET RCE FLAW AFFECTING ENTERPRISE MANAGEMENT SERVERS",
+          "summary": "CISA added CVE-2026-115731, a CVSS 9.4 deserialization flaw in Perforce Puppet's report processing, to its Known Exploited Vulnerabilities catalog. A client with a CA-signed agent certificate can submit crafted rich-data in a PUT request and run code as the Puppet Server service user. Weak automatic certificate signing can expose unauthenticated attackers. RCE may expose CA signing keys, enable host impersonation, ransomware, data theft, and lateral movement. Perforce patched affected Puppet Enterprise and Puppet Core versions on November 3. OpenVox also issued fixes.",
+          "url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a17",
+          "order": 3,
+          "title": "ESCAPE RESEARCH FOUND A SCOPE BYPASS THAT MADE GITEA'S RESTRICTED TOKENS FULL ADMINS",
+          "summary": "Gitea's public-only token scope blocked private organizations through normal API routes but was absent from the admin API. A public-only token with write:admin, issued by a site admin, could list private organizations and user emails, create a user, promote it to site admin, and mint Actions runner registration tokens.",
+          "url": "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "escape.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-19:a18",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach security engineers and CISOs where they actually pay attention. Learn more about sponsorship opportunities [18].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=quicklinks11192026&sp=0M1HfAn3a7YhEo5bZTB9K1in",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a19",
+          "order": 2,
+          "title": "HOW CISA IS PRIORITIZING COMPANIES FOR TALKS ABOUT SECURITY IMPROVEMENTS",
+          "summary": "CISA has chosen about 100 critical infrastructure companies for its first round of hardening talks by matching the firms most vital to national functions against five to six years of intelligence on where adversaries are pre-positioning.",
+          "url": "https://cyberscoop.com/cisa-100-critical-infrastructure-companies-fed-talks/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cyberscoop.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a20",
+          "order": 3,
+          "title": "AWS SECURITY HUB EXTENDS UNIFIED SECURITY MANAGEMENT TO GOOGLE CLOUD PLATFORM",
+          "summary": "AWS Security Hub now monitors GCP VMs, Artifact Registry images, Cloud Run functions, and identities for misconfigurations, internet exposure, and vulnerabilities, and shows those findings next to AWS and Azure findings with CIS benchmark checks and a 30-day free trial.",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-gcp/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-19:a21",
+          "order": 4,
+          "title": "OWASP TOP 10 NEOCLOUD & AI DATA CENTER SECURITY RISKS: SECURING THE LAYER AI RUNS ON",
+          "summary": "OWASP has published an incubator framework that covers ten risks in neoclouds, GPU clouds, and AI data centers.",
+          "url": "https://owasp.org/news/owasp-top-10-neocloud?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 5,
+          "source_domain": "owasp.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
