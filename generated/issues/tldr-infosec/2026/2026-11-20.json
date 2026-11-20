@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-20",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-20",
+  "source_path": "TLDR InfoSec/article_20-11-2026.md",
+  "source_content_hash": "sha256:39ea6a04b1538269a654f4d9ceb38c873aa978ad87bb226a08948dea127767de",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-20",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a04",
+          "order": 1,
+          "title": "REDEFINE IDENTITY RESILIENCE AT HIP CONF EUROPE 27",
+          "summary": "Responsible for Active Directory, Entra ID and Okta resilience, or incident response? You'll want to be at Hybrid Identity Protection Conference Europe [5], which returns to The Westin Grand, Frankfurt on 9 February 2027.\n\nConnect with fellow security leaders, practitioners, and architects from across EMEA for:\n\n* EXPERT-LED TALKS and LIVE DEMOS grounded in real-world experience * CANDID CONVERSATIONS with people solving the same identity problems * PRACTICAL WAYS to strengthen hybrid identity posture, threat detection and incident response\n\nSuper early bird tickets are €109 [6] until 30 November.\n\nJoin us at HIP Conf for better responses to modern identity threats—and more confidence in the decisions you make next.",
+          "url": "https://semperis.swoogo.com/europe-27/1?utm_source=tldr&utm_medium=pd&utm_campaign=2026-11-20_tldr_infosec_primary_semperis_technologies_inc&utm_content=header_redefine_identity_resilience&utm_term=2026-11-20_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.swoogo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a07",
+          "order": 2,
+          "title": "Early access: Save your seat now",
+          "summary": "",
+          "url": "https://semperis.swoogo.com/europe-27/1?utm_source=tldr&utm_medium=pd&utm_campaign=2026-11-20_tldr_infosec_primary_semperis_technologies_inc&utm_content=cta_early_access_save&utm_term=2026-11-20_tldr_infosec",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.swoogo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a08",
+          "order": 1,
+          "title": "CRITICAL APACHE ROLLER RCE FLAW UNDER ACTIVE EXPLOITATION, NO AUTHENTICATION REQUIRED",
+          "summary": "Apache Roller versions 4.0.0 through 6.1.4 have an unauthenticated deserialization flaw in the XML-RPC endpoint that allows remote attackers to execute arbitrary code. It is being actively exploited. Users should upgrade to Roller 6.1.6 or later. If patching is delayed, set enabledForExtensions to false in WEB-INF/web.xml, remove the /roller-services/xmlrpc servlet mapping, and restart Roller. Disabling XML-RPC in the admin UI does not prevent exploitation on older versions.",
+          "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a09",
+          "order": 2,
+          "title": "RUBY2SSHELL",
+          "summary": "Researchers from Veria discovered a one-byte heap overflow vulnerability in Ruby. The vulnerability stems from a bug where Ruby's single-byte encodings upcase ß as SS, but the loop only checks for one. GitHub Enterprise Server, GitLab, and other popular software are affected.",
+          "url": "https://verialabs.com/ruby2shell/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "verialabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a10",
+          "order": 3,
+          "title": "PHP FIXES 7 CRITICAL FLAWS, INCLUDING BUGS THAT COULD ALLOW REMOTE CODE EXECUTION",
+          "summary": "Following a preemptive notice, the PHP Foundation released a security advisory and updates to fix seven critical vulnerabilities. Depthfirst codenamed one of the vulnerabilities phpAfterShell and developed a PoC that demonstrated how it can be exploited to create an arbitrary deserialization primitive which, when chained with another deserialization-to-RCE vulnerability, can lead to arbitrary code execution. The vulnerability affects any application that runs an affected PHP version with file-based sessions.",
+          "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a11",
+          "order": 1,
+          "title": "EGGSTREME MALWARE: REBUILT UNDER SCRUTINY",
+          "summary": "Bitdefender reports that the EggStreme operators rebuilt Fuel, Loader, and Agent after its September 2025 disclosure. Fuel now uses AES-256-CBC encryption for its configuration. Loader payloads use RC5 or custom CBC ciphers. Agent traffic moved from gRPC to raw TCP over mutual TLS, with AES-256-CBC added. New commands enumerate Active Directory users, groups, and servers, run WMI with supplied credentials, impersonate user tokens, load .NET assemblies, and run PowerShell in memory. Some builds listen on TCP 5060 and add a firewall rule named “Core Networking - SIP.” The operators moved toward campaign-specific certificate authorities. Bitdefender assesses with high confidence that Philippine government organizations remain targets, with multiple victims; it assesses Taiwan targeting at low to medium confidence.",
+          "url": "https://businessinsights.bitdefender.com/eggstreme-malware-revises-architecture-infrastructure?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "businessinsights.bitdefender.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a12",
+          "order": 2,
+          "title": "SECURITY LOGGING IN CLOUD ENVIRONMENTS - KUBERNETES",
+          "summary": "Marco Lancini outlines the various log sources that are available for Kubernetes environments and their uses. Lancini also highlights blind spots such as events from on the node, API events that are sent directly to the kubelet instead of via the API server, and events from within a kubetctl exec shell. The post concludes by walking through a practical setup.",
+          "url": "https://blog.marcolancini.it/2026/blog-security-logging-cloud-environments-kubernetes/?utm_source=tldrinfosec",
+          "reading_time_minutes": 11,
+          "source_domain": "blog.marcolancini.it",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a13",
+          "order": 1,
+          "title": "PLAID BUILT $382K IN PIPELINE FROM ONE TLDR PLACEMENT",
+          "summary": "Close Q4 with proof. TLDR reaches 8 million tech readers across 14 newsletters. Book a Q4 campaign [13].",
+          "url": "https://advertise.tldr.tech/book-a-campaign/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=secondary11202026&sp=PtTUb5vXtRFBYa6t4RDT3j_-",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a14",
+          "order": 2,
+          "title": "VERO SECURITY (PRODUCT LAUNCH)",
+          "summary": "Vero Security provides an AI Security Engineering platform that discovers and assesses enterprise AI tools and agents. Its AI Runtime Governor enforces approved policies during operation, blocks unauthorized agent actions, and escalates risk decisions to security staff.",
+          "url": "https://www.vero.security/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "vero.security",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a15",
+          "order": 3,
+          "title": "AWS EMULATOR",
+          "summary": "AWS Emulator is a local emulator of the AWS APIs for testing software on your own machine without needing to call AWS.",
+          "url": "https://github.com/aws/aws-emulator?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a16",
+          "order": 4,
+          "title": "SECURITY THREAT MODEL",
+          "summary": "A security threat modeling skill from OpenAI's Codex Security CLI.",
+          "url": "https://github.com/openai/codex-security/blob/main/plugins/codex-security/skills/threat-model/SKILL.md?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a17",
+          "order": 1,
+          "title": "MUSE PRIVACY INVASIONS ARE FREAKING OUT META STAFFERS, INTERNAL CHATS SHOW",
+          "summary": "Internal Meta chats show staff worried Muse accessed encrypted Signal messages, mixed conversations across accounts, and produced unsolicited outputs. One tester said Muse enrolled them in an $888-per-month insurance plan. Reuters found Muse could read Signal messages on Android through setup permissions and use macOS accessibility tools to retrieve messages. Meta calls the account-mix reports hallucinations and says the bug is fixed.",
+          "url": "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a18",
+          "order": 2,
+          "title": "BRITISH HACKERS FACE PRISON FOR GTA 6 DATA BREACH AND CRYPTO THEFTS",
+          "summary": "Tyler Buchanan received six years in a US court for a phishing scheme that stole at least $11 million in cryptocurrency from dozens of companies. Attackers impersonated IT helpdesks, obtained employee credentials, and accessed corporate systems. Arion Kurtaj admitted to attacks including stealing and extorting Rockstar Games and leaking GTA VI footage. Both belonged to overlapping groups known as 0ktapus, Lapsus$, and Scattered Spider, which targeted Coinbase, DoorDash, Mailchimp, and Nvidia.",
+          "url": "https://techcrunch.com/2026/11/18/british-hackers-face-prison-for-gta-6-data-breach-and-crypto-thefts/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a19",
+          "order": 3,
+          "title": "RAKUTEN SECURITIES WARNS OF DATA LEAK FOR 4.47M ACCOUNTS",
+          "summary": "Japanese online brokerage Rakuten Securities says customer data for approximately 4.47M accounts may have leaked following unauthorized access. The breached data includes users' annual income, financial assets, means, dates of birth, employers, and financial products. Login IDs and account-identifying codes may also have been leaked for 11.25M accounts.",
+          "url": "https://www3.nhk.or.jp/nhkworld/news/20261117de77429/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "www3.nhk.or.jp",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-20:a20",
+          "order": 1,
+          "title": "TFL TAKES OYSTER PHOTOCARD WEBSITE OFFLINE AFTER ATTACKERS COMPROMISE CUSTOMER ACCOUNTS",
+          "summary": "Transport for London took its Oyster photocard site offline after attackers compromised account details for about 265,000 customers.",
+          "url": "https://www.theregister.com/security/2026/11/19/tfl-takes-oyster-photocard-website-offline-after-attackers-compromise-customer-accounts/5310985?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-20:a21",
+          "order": 2,
+          "title": "TENS OF THOUSANDS OF UK FRIDGES SECURED FROM HACKERS IN SECRET NATIONWIDE OPERATION",
+          "summary": "Weak-password flaws in Resource Data Management (RDM) refrigeration controllers, the most widely used in the UK, exposed tens of thousands of supermarket and warehouse fridges to the kind of attacks that spoiled food across Europe this year, which led the NCSC, Pen Test Partners, and industry IT teams to quietly pull thousands of devices off the internet before RDM shipped its first patches.",
+          "url": "https://www.bbc.com/news/articles/c6eq49zyx7p4o?utm_source=tldrinfosec%5B22%5D%5B23",
+          "reading_time_minutes": 4,
+          "source_domain": "bbc.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
