@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-devops:2026-11-23",
+  "sector": "TLDR DevOps",
+  "sector_slug": "tldr-devops",
+  "date": "2026-11-23",
+  "source_path": "TLDR DevOps/article_23-11-2026.md",
+  "source_content_hash": "sha256:f6353b4f3d9a90d959c486b6bbd457b5fb609b6da34edd9a08609371d6a19c37",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEVOPS 2026-11-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a04",
+          "order": 1,
+          "title": "HOW WOULD YOU CONTAIN A PRIVILEGED BUILD ON A SHARED CI RUNNER?",
+          "summary": "Container builds and fork pull requests run with elevated privileges on nodes shared with every other job. AWS Nitro Sandboxes contains them instead.\n\n🔒Isolate every job: each runner pod or ECS task runs in its own lightweight VM, managed by the Nitro Hypervisor, so a privileged build never reaches the host\n\n⚡Keep your pipeline intact: a runtime class on EKS [5] or an isolation mode on ECS [6] turns it on, with no image or Helm chart changes\n\n📦 Share instances you already run: pack isolated jobs onto your EC2 instance at no additional charge\n\nTRY THE GITHUB ACTIONS BLUEPRINT - [7]>",
+          "url": "https://aws.amazon.com/blogs/compute/nitro-sandboxes-hardware-isolation-for-every-eks-pod-ecs-task-and-ec2-workload/?trk=13e1a116-4119-4553-8fe9-8a0e55ad1341&sc_channel=el",
+          "reading_time_minutes": null,
+          "source_domain": "aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "news-trends",
+      "heading": "NEWS & TRENDS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a08",
+          "order": 1,
+          "title": "GOOGLE DONATES AGENT SUBSTRATE AND GVISOR TO THE CNCF TO SECURE AI AGENTS AT SCALE",
+          "summary": "Google is donating Agent Substrate and gVisor to the CNCF to help run AI agents securely at scale. Agent Substrate separates agent state from compute in pre-warmed Kubernetes pools, which Google says lets agents resume in under 500 milliseconds.",
+          "url": "https://www.infoq.com/news/2026/11/google-substrate-gvisor-cncf/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "infoq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a09",
+          "order": 2,
+          "title": "INTRODUCING IN-PLACE MIGRATION TO GKE DATAPLANE V2",
+          "summary": "Google Cloud released in-place migration to GKE Dataplane V2 in preview for VPC native clusters on GKE 1.35 or later. Teams can move from Dataplane V1 without building a parallel cluster, and they can roll back before finalization.",
+          "url": "https://cloud.google.com/blog/products/networking/gke-dataplane-v2-in-place-migration/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a10",
+          "order": 3,
+          "title": "KARPENTER V1.15: GPU-AWARE PROVISIONING, SMARTER NODE REPAIR, AND MORE",
+          "summary": "Karpenter v1.15 adds Dynamic Resource Allocation support to factor GPU topology and networking into provisioning decisions. It classifies node repair as a voluntary disruption that respects Pod Disruption Budgets. The update also introduces a pod deletion cost controller and CEL support for dynamic kubelet configurations.",
+          "url": "https://aws.amazon.com/blogs/containers/karpenter-v1-15-gpu-aware-provisioning-smarter-node-repair-and-more/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-tutorials",
+      "heading": "OPINIONS & TUTORIALS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a11",
+          "order": 1,
+          "title": "SHIPPING 100+ PRS TO PRODUCTION IN A WEEK",
+          "summary": "An engineering lead shipped 170 pull requests in a single week by optimizing development loops with AI tooling. Key steps included modernizing CI/CD, moving issue management from Jira to Linear, and building a cloud harness to run orchestrated agents. These changes addressed bottlenecks like slow approvals and inaccurate documentation in the knowledge base.",
+          "url": "https://lethain.com/passing-100-prs-in-a-week/?utm_source=tldrdevops",
+          "reading_time_minutes": 16,
+          "source_domain": "lethain.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a12",
+          "order": 2,
+          "title": "BUILDING PLANETSCALE WITH INSIGHTS AGENT",
+          "summary": "PlanetScale's database optimization agent added an index that made a production query slower because its SQL summary hid a 645-element IN list. Removing that list and filtering the small result set in Ruby cut average query time from 28.5 milliseconds to 1.95 milliseconds. Another change reordered a feature flag check, reducing database lookups from 28.7 million to 8.3 million per day.",
+          "url": "https://planetscale.com/blog/building-planetscale-with-insights-agent?utm_source=tldrdevops",
+          "reading_time_minutes": 6,
+          "source_domain": "planetscale.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "resources-tools",
+      "heading": "RESOURCES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a13",
+          "order": 1,
+          "title": "TOPTAL LAUNCHES TOPTAL AI: ONE PARTNER FOR ALL YOUR AI NEEDS",
+          "summary": "Toptal AI is a new full-stack AI services company that develops, evaluates, and deploys frontier-grade AI using open-weight and proprietary models, while organizations retain full ownership and control over their AI systems and data. Toptal AI acts as the single partner for all of their AI ambitions.",
+          "url": "https://www.toptal.ai/?utm_source=newsletter&utm_medium=cpc&utm_campaign=toptal-ai_tldr-devops_secondary_11-23-2026",
+          "reading_time_minutes": null,
+          "source_domain": "toptal.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a13-02",
+          "order": 2,
+          "title": "Explore Toptal AI.",
+          "summary": "",
+          "url": "https://www.toptal.ai/?utm_source=newsletter&utm_medium=cpc&utm_campaign=toptal-ai_tldr-devops_secondary_11-23-2026",
+          "reading_time_minutes": null,
+          "source_domain": "toptal.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a14",
+          "order": 3,
+          "title": "AN AI OBSERVABILITY FRAMEWORK FOR YOUR AGENTIC APPLICATIONS",
+          "summary": "AWS authors propose an observability framework for agentic applications that crosses four layers with three concerns: reliability, cost, and security. They recommend OpenTelemetry GenAI conventions and evaluation gates, arguing that agents rarely fail with errors and often return confident wrong answers.",
+          "url": "https://aws.amazon.com/blogs/mt/an-ai-observability-framework-for-your-agentic-applications/?utm_source=tldrdevops",
+          "reading_time_minutes": 13,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a15",
+          "order": 4,
+          "title": "THE LAYER OF YOUR PLATFORM NOBODY OWNS",
+          "summary": "Platform teams standardize nearly everything except the operating system under their clusters. Developers should use an immutable, API-managed OS such as Talos Linux, with declarative configuration and atomic upgrades, at the cost of losing interactive shell access.",
+          "url": "https://platformengineering.org/blog/the-layer-of-your-platform-nobody-owns?utm_source=tldrdevops",
+          "reading_time_minutes": 7,
+          "source_domain": "platformengineering.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a16",
+          "order": 1,
+          "title": "87% OF THE ANTHROPIC POWER WILL COME FROM GAS AND 11% FROM COAL IN 2028",
+          "summary": "A case study estimates that Anthropic could emit 32 million metric tons of carbon dioxide in 2028. About 87% of its US power will come from gas and 11% from coal that year, with no direct renewable energy commitments in the US as of November.",
+          "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/?utm_source=tldrdevops",
+          "reading_time_minutes": 8,
+          "source_domain": "betterdatacenterproject.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a17",
+          "order": 2,
+          "title": "INCIDENTS IN THE NEWS",
+          "summary": "Surfing Complexity rounds up nine IT incidents reported between November 12 and 17, including an FAA ground stop, a Workday disaster recovery site writing to production databases, and a United outage. None involved cyberattacks.",
+          "url": "https://surfingcomplexity.blog/2026/11/18/incidents-in-the-news/?utm_source=tldrdevops",
+          "reading_time_minutes": 4,
+          "source_domain": "surfingcomplexity.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-devops:2026-11-23:a06",
+          "order": 1,
+          "title": "AWS FARGATE-LEVEL TASK ISOLATION, ON INSTANCES YOU CHOOSE",
+          "summary": "Isolated tasks on ECS Managed Instances give each task its own lightweight VM, the way AWS Fargate does, while you keep instance-type",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/isolated-confidential-tasks.html?trk=808d96ca-694f-430b-9646-dd18292e89f5&sc_channel=em",
+          "reading_time_minutes": null,
+          "source_domain": "docs.aws.amazon.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a06-02",
+          "order": 2,
+          "title": "choice and bin-packing. Read the ECS guide",
+          "summary": "",
+          "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/isolated-confidential-tasks.html?trk=808d96ca-694f-430b-9646-dd18292e89f5&sc_channel=em",
+          "reading_time_minutes": null,
+          "source_domain": "docs.aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a18",
+          "order": 3,
+          "title": "RED HAT EXTENDS OPENSHIFT ALLIANCE WITH MICROSOFT TO VIRTUALIZATION",
+          "summary": "Red Hat and Microsoft expanded their partnership to offer OpenShift on Azure that encapsulates Azure virtual machines using KubeVirt.",
+          "url": "https://cloudnativenow.com/features/red-hat-extends-openshift-alliance-with-microsoft-to-virtualization/?utm_source=tldrdevops",
+          "reading_time_minutes": 3,
+          "source_domain": "cloudnativenow.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a19",
+          "order": 4,
+          "title": "MEET THE NEW DOCKER: BUILT TO RUN ON TRUST",
+          "summary": "Docker launched a new brand framed around trust for the agentic era, including a redesigned Moby mascot.",
+          "url": "https://www.docker.com/blog/meet-the-new-docker-built-to-run-on-trust/?utm_source=tldrdevops",
+          "reading_time_minutes": 5,
+          "source_domain": "docker.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-devops:2026-11-23:a20",
+          "order": 5,
+          "title": "INTRODUCING AMBIENT NETWORKING FOR GKE",
+          "summary": "Ambient networking for Google Kubernetes Engine is now generally available.",
+          "url": "https://cloud.google.com/blog/products/networking/ambient-networking-for-gke-sidecarless-service-mesh/?utm_source=tldrdevops%5B21%5D%5B22",
+          "reading_time_minutes": 6,
+          "source_domain": "cloud.google.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

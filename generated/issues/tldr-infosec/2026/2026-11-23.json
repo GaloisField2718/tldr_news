@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-23",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-23",
+  "source_path": "TLDR InfoSec/article_23-11-2026.md",
+  "source_content_hash": "sha256:d689d8d88a836971e70a6549d290df562fb3f4c67979513f3e45a8eddeb243d6",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-23",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a04",
+          "order": 1,
+          "title": "DEPLOY POLICY THAT GOVERNS WHAT YOUR IN-HOUSE AGENTS CAN REACH AND DO",
+          "summary": "Ask an agent the same thing twice and it may take two different routes. That's what makes it useful. It's also why the rules can't live in a prompt, where the model weighs them against everything else it reads.\n\nACRA moves policy out of the prompt and into your infrastructure. You declare what each agent may reach. On your own Kubernetes, it's enforced before the agent acts by network policy, admission control and scoped credentials, which behave the same way every time. Inside those limits, the agent works at full speed.\n\nNon-deterministic agents. Deterministic policy.",
+          "url": "https://www.valarian.com/tldr?utm_source=tldrit&utm_medium=newsletter&utm_campaign=Primary11232026&utm_content=a8",
+          "reading_time_minutes": null,
+          "source_domain": "valarian.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a04-02",
+          "order": 2,
+          "title": "See the architecture behind it",
+          "summary": "",
+          "url": "https://www.valarian.com/tldr?utm_source=tldrit&utm_medium=newsletter&utm_campaign=Primary11232026&utm_content=a8",
+          "reading_time_minutes": null,
+          "source_domain": "valarian.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a05",
+          "order": 1,
+          "title": "MICROSOFT ENTRA CONNECT HEALTH FLAW EXPLOITED TO STEAL TENANT DATA",
+          "summary": "Attackers exploited a flaw in the Microsoft Entra Connect Health API to gain read-only access to tenant metadata, including admin and technical contact email addresses, tenant IDs, domain names, license tiers, sync status, and an expired agent registration certificate. Microsoft says the bug was introduced on July 23 and discovered on November 9, and that it deployed a server-side fix on November 19. Microsoft has not disclosed how many tenants were affected, when exploitation began, or who was responsible. No customer patch is required, so defenders should prepare for targeted phishing attacks against the exposed admin addresses, enforce phishing-resistant MFA on privileged accounts, and review Entra audit and sign-in logs.",
+          "url": "https://links.tldrnewsletter.com/RC7HpG",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a06",
+          "order": 2,
+          "title": "HACKER LEAKS DETAILS OF JPMORGAN'S ULTRA-WEALTHY CARDHOLDERS",
+          "summary": "The n0n ransomware gang published data tied to JPMorgan Chase's invitation-only Reserve card program. Cybernews researchers identified about 16,000 customer email addresses, some phone numbers and account IDs, plus 124 employee email addresses. JPMorgan says attackers targeted third-party vendors and accessed marketing data. Visa said the source was an Asia-Pacific service provider. The exposure supports targeted phishing and social engineering against wealthy cardholders and bank staff. JPMorgan says there is no evidence connecting the leak to its recent service outage.",
+          "url": "https://cybernews.com/security/jpmorgan-chase-data-leak-non-ransomware-gang/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "cybernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a07",
+          "order": 3,
+          "title": "RESEARCHERS PLANT 2M CANARIES INTO THE AI SUPPLY CHAIN. A PRIVACY DISASTER SURFACED.",
+          "summary": "HD Moore sent nearly 2 million prompts containing unique AWS keys, passwords, URLs, and repository references to AI providers. Attackers compromised three hosting providers, copied requests, tested stolen credentials, and searched AWS resources. Some resellers logged prompts and passed credentials onward. A Chinese AI lab fetched secret URLs from over half of prompts, including requests marked “no data collection” or Zero Data Retention. OpenRouter has warned customers that MiniMax may have read prompts sent to it.",
+          "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a08",
+          "order": 1,
+          "title": "CHINESE-NEXUS ACTOR'S CAIRN AI AGENTS FOUND A ZERO-DAY ON THEIR OWN",
+          "summary": "An actor gave the open-source Cairn agent framework a single goal, \"obtain shell access,\" and its agents found a path traversal zero-day in an open-source medical imaging AI app, then turned it into a root reverse shell by writing a payload to sitecustomize.py, all within about 11 minutes. The same agents spent 16 hours on a hardened Redis server and tested over 30,000 credentials against university systems without human direction. Amazon has tied the campaign to a Chinese-nexus actor with moderate confidence based on Simplified Chinese prompts, China Standard Time timestamps, and the East Asian universities it targeted. Defenders should rely on high-confidence detections that trigger automated response, because agents like these finish their work faster than a SOC can manually triage an alert.",
+          "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "aws.amazon.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a09",
+          "order": 2,
+          "title": "THE AI REPO MAN: EXPLOITING AGENTIC AI DEBT COLLECTION PLATFORMS",
+          "summary": "Credit Nirvana's debt-collection systems exposed 6.6 million accounts across Aditya Birla Capital Finance, BharatPe, and International Asset Reconstruction Company. A hardcoded API key in the Agentic AI Call Center let an attacker access 315,000 call recordings and launch AI call campaigns. A separate authentication flaw bypassed Keycloak and granted admin access to the primary platform. Exposed data included ID cards, credit reports, legal notices, payment receipts, communications, agent locations, and call logs. Credit Nirvana and Perfios fixed both issues on June 2, after coordinating with CERT-In. The flaws are tracked as CVE-2026-110474 and CVE-2026-110475.",
+          "url": "https://eaton-works.com/2026/11/18/credit-nirvana-hack/?utm_source=tldrinfosec",
+          "reading_time_minutes": 9,
+          "source_domain": "eaton-works.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a10",
+          "order": 3,
+          "title": "A SECURITY CONSTITUTION AT WORK",
+          "summary": "This security constitution contains a set of twelve principles of how a multi-tenant should hold trust, eleven operational lessons on how to reduce false positives, and thirteen anchors of trust for measuring authorization decisions. The constitution helps the harness determine whether an issue is a fundamental flaw vs a powerful feature. This post walks through how the principles apply to several vulnerabilities that they found using their harness.",
+          "url": "https://kattraxler.cloud/a-security-constitution-at-work/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "kattraxler.cloud",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a11",
+          "order": 1,
+          "title": "CLOSE Q4 WITH PROOF. START 2027 READY TO SCALE.",
+          "summary": "Reach 8 million developers, AI experts, security engineers, and founders across 14 newsletters. Plaid built $382K in pipeline from one placement. Book your Q4 campaign [11].",
+          "url": "https://advertise.tldr.tech/book-a-campaign/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=secondary11232026&sp=jdCJ69NGz8PtzsXqb6VFE-4S",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a12",
+          "order": 2,
+          "title": "BINARY-AUDIT-PIPELINE",
+          "summary": "binary-audit-pipeline turns a directory of stripped binaries into a single prioritized vulnerability report by chaining capa, cwe_checker, Ghidra, Semgrep, and Joern. Each tool narrows the scope for the next: Ghidra decompiles only files that capa or cwe_checker flagged, and Joern confirms taint flows only from untrusted input to sinks in the code Semgrep selected. It runs in Docker, can resume after an interruption, and includes a prompt template for handing the output to an AI to plan AFL++ or libFuzzer harnesses, making it useful for firmware triage when there's no source.",
+          "url": "https://github.com/SpiralRise/binary-audit-pipeline?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a13",
+          "order": 3,
+          "title": "OPENAI'S PRE-RELEASE GPT-6.2 ASTRA WAS EASIER TO JAILBREAK THAN ITS PREDECESSOR, UK GOVERNMENT TESTERS FOUND",
+          "summary": "UK AISI built a universal cyber jailbreak against two pre-release GPT-6.2 Astra versions, using half as many queries as it needed against GPT-6 Astra. OpenAI changed safety instructions and safeguards, but UK AISI had not independently retested those fixes. The jailbreak also produced substantial agentic cyber capabilities. Separately, GPT-6.2 Astra and Claude Mythos 5.2 appeared to recognize evaluation contexts. Neither completed the simulated supply-chain attack. Monitor testing found OpenAI models missed 19% of violations, rising to 51% when given unsummarized reasoning.",
+          "url": "https://venturebeat.com/security/openais-pre-release-gpt-6-2-astra-was-easier-to-jailbreak-than-its-predecessor-uk-government-testers-found?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "venturebeat.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a14",
+          "order": 4,
+          "title": "IDA SIGWRITER",
+          "summary": "IDA SigWriter is an IDA Pro plugin that allows a user to create code signatures in multiple formats using a GUI.",
+          "url": "https://github.com/crackinglandia/idasignwriter?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a15",
+          "order": 1,
+          "title": "OPENROUTER DROPS 3 PROVIDERS AFTER RESEARCHERS CATCH MONTHS OF PROMPT THEFT AT AI HOSTING FIRMS",
+          "summary": "Attackers spent months inside three AI inference providers without any of them noticing. Dragos found it by planting canary credentials and links in about two million prompts, and some of the stolen requests had been flagged Zero Data Retention. The same research found marketplace sellers logging the traffic sent to them, and found that an unnamed Chinese AI lab fetched secret links from most of the prompts sent to its models. OpenRouter responded by removing three providers and pulling 125 endpoints from Zero Data Retention eligibility, though neither it nor Dragos has said whether those are the same three breached firms.",
+          "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a16",
+          "order": 2,
+          "title": "SIGNAL IS SERIOUS ABOUT PROTECTING YOUR PRIVACY",
+          "summary": "Signal now blocks screenshots on iOS 27 and turns on Screen Security on Android when it detects an AI assistant trying to read the screen, to stop OS-level agents like Siri AI and Gemini from capturing and storing Signal conversations. It used the same approach against Microsoft Recall last year. Signal admits the fix is incomplete because agents can still reach data through the filesystem, and macOS isn't covered because Apple offers no reliable screenshot-blocking API. Agentic OS integrations are an existential threat to app-level privacy. Apple, Google, and Microsoft should give developers a documented way to opt out of AI data access.",
+          "url": "https://signal.org/blog/protecting-your-privacy/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "signal.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a17",
+          "order": 3,
+          "title": "A TRANSCRIPTION FIRM USED BY POLICE, PROSECUTORS, AND TECH GIANTS EXPOSED CUSTOMER DATA ONLINE",
+          "summary": "Tigerfish left an Amazon S3 bucket publicly accessible without a password. It exposed police-interview transcripts, body-cam footage, raw customer audio and video, and invoices for police departments and prosecutors' offices. Researcher Anurag Sen found the data in October and notified Tigerfish, which has now blocked public access and said its other S3 buckets were also secured.",
+          "url": "https://techcrunch.com/2026/11/20/a-transcription-firm-used-by-police-prosecutors-and-tech-giants-exposed-customer-data-online/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-23:a18",
+          "order": 1,
+          "title": "SAVE THE DATE: HYBRID IDENTITY PROTECTION CONFERENCE EUROPE 2027",
+          "summary": "HIP Conf Europe returns to Frankfurt, 9 February 2027. You can expect world-leading speakers, practical demos, and connections with people",
+          "url": "https://semperis.swoogo.com/europe-27/1?utm_medium=pd&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.swoogo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a18-02",
+          "order": 2,
+          "title": "who understand the pressure. Register now: early access is open.",
+          "summary": "",
+          "url": "https://semperis.swoogo.com/europe-27/1?utm_medium=pd&utm_source=tldr",
+          "reading_time_minutes": null,
+          "source_domain": "semperis.swoogo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a19",
+          "order": 3,
+          "title": "SECURITY EVENT: PROMPT LEAKAGE FOR REQUESTS IN JUNE AND JULY OF 2026",
+          "summary": "An AI coding agent committed a Hugging Face credential to Together AI's public xorl GitHub repo, and an attacker used it to download stored customer prompt samples from the MiniMax M3, GLM-5.2, and Kimi K2.6 models and test the credentials inside them, five of which were Dragos canaries, after which Together AI made zero data retention the default for new accounts.",
+          "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "together.ai",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a20",
+          "order": 4,
+          "title": "PHPAFTERSHELL EXPLAINED: HOW HACKERS COULD TURN A PHP SESSION FLAW INTO CODE EXECUTION",
+          "summary": "PHP's default file-based session handler, CVE-2026-126714, lets an interrupted session write leave attacker-controlled serialized data on disk, and a later request can deserialize it into an object.",
+          "url": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-23:a21",
+          "order": 5,
+          "title": "SBC MEDICAL GROUP DATA BREACH IMPACTS OVER 2 MILLION",
+          "summary": "Attackers accessed a managed online platform and stole personal data belonging to 1.62 million customers.",
+          "url": "https://links.tldrnewsletter.com/kriZ2m[22][23",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
