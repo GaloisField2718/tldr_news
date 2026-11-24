@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-24",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-24",
+  "source_path": "TLDR InfoSec/article_24-11-2026.md",
+  "source_content_hash": "sha256:d77a2c24a1389cffab14495e7600d0215830f0b53289ac29a9fc9d8f00eab30b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-24",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-24:a04",
+          "order": 1,
+          "title": "CRITICAL CISCO REMOTE CODE EXECUTION BUG UNDER ATTACK",
+          "summary": "Attackers exploited CVE-2026-76466 in clustered Cisco Expressway-C and Expressway-E gateways. The flaw uses hard-coded credentials and weak certificate validation to gain unauthenticated root command execution. F6 observed two internet-facing devices compromised, then accessed two internal cluster nodes as attackers deployed Python scripts for SMB discovery, SQL Server and WinRM interaction, and GitLab credential searches. CISA added the 9.8-CVSS bug to its Known Exploited Vulnerabilities catalog and set a Monday patch deadline for federal agencies.",
+          "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a05",
+          "order": 2,
+          "title": "CRITICAL BINARY-PARSER FLAW ENABLES JAVASCRIPT INJECTION VIA MALICIOUS PARSER DEFINITIONS",
+          "summary": "binary-parser versions before 2.3.1 contain CVE-2026-134814, a code-injection flaw with CVSS scores of 9.2 and 8.1. An attacker who controls parser definitions can inject JavaScript through unvalidated string options, including length, lengthInBytes, key, tag, offset, and namely() aliases. The code runs in the Node.js process when the parser compiles. Parsing untrusted binary data with a trusted definition is unaffected. Update to 2.3.1 or later.",
+          "url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "thehackernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a06",
+          "order": 3,
+          "title": "VIRTUALBOX PROCESS HARDENING ON WINDOWS 2026 EDITION: WHAT'S A SINGLE BIT BETWEEN FRIENDS?",
+          "summary": "Clearing a single bit, the IMAGE_FILE_EXECUTABLE_IMAGE flag in a .NET assembly's PE header, makes NtCreateSection reject the file while the .NET Framework still loads it through a flat-image fallback that skips code integrity checks. Project Zero's James Forshaw used this to load untrusted code into hardened VirtualBox processes (CVE-2026-87268), bypass UMCI on Windows 11 S Mode through regasm.exe (CVE-2026-108398), and get TCB-level PPL code execution without admin rights by hijacking a COM object. Microsoft fixed the WLDP check in October, but the PPL bypass remains outside MSRC's servicing criteria, so defenders running WDAC should also enable the Dynamic Code Security option, which blocks the attack.",
+          "url": "https://projectzero.google/2026/11/virtualbox-process-hardening.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "projectzero.google",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-24:a07",
+          "order": 1,
+          "title": "SANDBOXING AI CODING AGENTS: NONO VS DOCKER SANDBOXES VS MICROSANDBOX VS OPENSHELL",
+          "summary": "Kudelski Security tested nono, Docker Sandboxes, Microsandbox, and NVIDIA OpenShell for running AI coding agents safely. All four scored 4 to 4.5 out of 5. Docker Sandboxes and Microsandbox use microVMs, nono uses OS-level controls and starts fastest, and OpenShell supports several isolation backends. The review covers filesystem limits, network filtering, DNS rebinding, credential injection, resource controls, logging, and agent-specific profiles. Only nono and OpenShell scope credentials to both a domain and an endpoint. None can deny a file inside an allowed directory or customize allowed syscalls.",
+          "url": "https://kudelskisecurity.com/research/sandboxing-coding-agents?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "kudelskisecurity.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a08",
+          "order": 2,
+          "title": "SUPPLY CHAIN COMPROMISE BACKDOORS SIX WP CONNECT PLUGINS, BLOCKED BY WORDPRESS.ORG'S RELEASE HOLD",
+          "summary": "An attacker used WP Connect's own WordPress.org account to push backdoored releases of six plugins, including Air WP Sync and WP Sync for Notion, within about two hours. Each release added a fake \"analytics and auto-update\" module that checked in to tascredit-pay[.]com on every request with TLS verification turned off, ran whatever PHP the server sent back through eval(), and could also run shell commands, dump password hashes, and plant webshells. WordPress.org's new release cooling-off period under Protect The Shire stopped the updates before any site got them, and the developer says the account was compromised. However, admins should still check for the affected versions (CVE-2026-135202), remove them, and scan their sites for webshells and rogue WP-Cron hooks.",
+          "url": "https://www.wordfence.com/blog/2026/11/supply-chain-compromise-backdoors-six-wp-connect-plugins-blocked-by-wordpress-orgs-release-hold/?utm_source=tldrinfosec",
+          "reading_time_minutes": 10,
+          "source_domain": "wordfence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a09",
+          "order": 3,
+          "title": "THINGS LLMS GET WRONG ABOUT AWS IAM",
+          "summary": "Writing AWS IAM permissions requires wading through a complex set of nuances. This post highlights three common anti-patterns that coding agents frequently trip over while writing policies. Agents often overuse Deny policies and permission boundaries, as well as unnecessarily include Allow statements for sts:GetCallerIdentity, which can never be denied.",
+          "url": "https://engseclabs.com/blog/things-llms-get-wrong-about-aws-iam/?utm_source=tldrinfosec",
+          "reading_time_minutes": 5,
+          "source_domain": "engseclabs.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-24:a10",
+          "order": 1,
+          "title": "REACH 8 MILLION TECH PROFESSIONALS READING TLDR",
+          "summary": "Ads get ignored on social media but not in TLDR! Reach security engineers and CISOs where they actually pay attention. Learn more about sponsorship opportunities [10].",
+          "url": "https://advertise.tldr.tech/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=secondary11242026&sp=c6gGNEDlXY84eaK7mxeE1Xup",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a11",
+          "order": 2,
+          "title": "STEPSECURITY (PRODUCT LAUNCH)",
+          "summary": "StepSecurity protects software development from malicious components. Its platform covers developer systems, repositories, package registries, CI/CD runners, and coding agents.",
+          "url": "https://www.stepsecurity.io/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "stepsecurity.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a12",
+          "order": 3,
+          "title": "INTRODUCING MITIGEDDON: REAL-WORLD EXPLOITATION AND PREVALENCE DATA FOR IMPACTFUL CVES",
+          "summary": "Mitigeddon, Datadog's new free site, shows how widespread each CVE is across real environments next to a timeline of its disclosure, public exploit release, and appearance in CISA or VulnCheck KEV. Datadog launched it with data showing that only 0.6 to 0.8% of CVEs are exploited in the wild, while the median time from disclosure to exploitation fell to 33 days in 2026 from 163 in 2024. The prevalence figures come from a sample of Datadog's own customer telemetry, so they lean toward cloud-native environments, but the site is still a useful way to filter out noise when prioritizing patches.",
+          "url": "https://securitylabs.datadoghq.com/articles/introducing-mitigeddon/?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "securitylabs.datadoghq.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a13",
+          "order": 4,
+          "title": "BINQL",
+          "summary": "BinQL is a CodeQL extractor for binaries. BinQL runs IDA Pro's Hex-Rays decompiler headless and turns the decompiled pseudocode of any binary into a CodeQL database.",
+          "url": "https://github.com/thalium/BinQL?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-24:a14",
+          "order": 1,
+          "title": "BADBOX 3.0 AD FRAUD OPERATION GENERATING 40 BILLION DAILY BID REQUESTS DISRUPTED",
+          "summary": "Human Security disrupted BadBox 3.0, an ad-fraud botnet on backdoored, uncertified Android devices. At peak, it produced about 40 billion daily bid requests and over 4% of observed CTV traffic. Hidden modules spoofed legitimate apps, rendered invisible video ads, and enrolled devices in 11 residential proxy networks. Researchers linked parts of the operation to Chinese manufacturer TXCZ and to infrastructure disrupted during Google's XCPE takedown.",
+          "url": "https://links.tldrnewsletter.com/fnOKeQ",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a15",
+          "order": 2,
+          "title": "AI AGENTS ZIP FROM FLAW DISCOVERY TO ROOT ACCESS IN 11 MINUTES",
+          "summary": "A China-linked actor used Cairn agents against East Asian universities for about 48 hours. The agents ran 148 actions against an exposed Redis server, tested over 30,000 SSH credential combinations against a GPU server, then found a path-traversal flaw in an open source medical imaging application. They wrote arbitrary files and ran a Python reverse shell as root within 11 minutes.",
+          "url": "https://links.tldrnewsletter.com/3Mh0ZW",
+          "reading_time_minutes": 3,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a16",
+          "order": 3,
+          "title": "CROWDSTRIKE TO ACQUIRE ZSCALER, BRINGING NETWORK SECURITY AND ZERO TRUST TO THE FALCON PLATFORM",
+          "summary": "CrowdStrike has agreed to buy Zscaler in an all-stock deal that values it at about $43.9 billion, a roughly 34% premium, which puts CrowdStrike into network security by bringing Zscaler's Zero Trust SASE onto the Falcon platform. The combined company expects to start with more than $10 billion in ARR and to feed device and network telemetry into a single data set, which CrowdStrike pitches as the control plane for securing AI agents. Those synergy and market-size figures are the companies' own projections, and the deal is expected to close in the second half of CrowdStrike's fiscal 2028, pending Zscaler shareholder and regulatory approval, with Jay Chaudhry continuing to lead Zscaler.",
+          "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-zscaler-bringing-network-security-and-zero-trust-to-the-falcon-platform/?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "crowdstrike.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-24:a17",
+          "order": 1,
+          "title": "HOW TO AUTHORIZE AI AGENTS WITH TOKEN EXCHANGE",
+          "summary": "Give agents short-lived, task-scoped credentials with OAuth token exchange and other open standards, so every action runs with only the access its task needs. A practical walkthrough from Keycard.",
+          "url": "https://www.keycard.ai/blog/how-to-authorize-ai-agents-using-token-exchange-open-standards/?utm_source=tldrinfosec&utm_medium=newsletter&utm_campaign=q4-pilot&utm_content=quicklink-20261124",
+          "reading_time_minutes": null,
+          "source_domain": "keycard.ai",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a18",
+          "order": 2,
+          "title": "UK GOVERNMENT FORCED TO DISCLOSE SECRET APPLE BACKDOOR ORDER",
+          "summary": "The UK Investigatory Powers Tribunal ordered the Home Office to confirm it issued a secret technical capabilities notice requiring Apple to provide authorities access to encrypted customer data.",
+          "url": "https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-24:a19",
+          "order": 3,
+          "title": "DOJ SEEKS $1.17 BILLION IN USDC TIED TO BINANCE HACK; CIRCLE COULD ISSUE REPLACEMENT TOKENS",
+          "summary": "The DOJ filed to seize about $1.17 billion in USDC spread across 36 addresses on 18 blockchains and tied to North Korea's Lazarus Group in the $6.34 billion October Binance hack, and Circle, which can freeze the original tokens but can't move them, agreed to mint the same amount in new USDC for the US government if the court grants forfeiture.",
+          "url": "https://links.tldrnewsletter.com/yB6LQv[20][21",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
