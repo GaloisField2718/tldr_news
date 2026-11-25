@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-25",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-25",
+  "source_path": "TLDR Dev/article_25-11-2026.md",
+  "source_content_hash": "sha256:c6952c6235e5a6bba31dea60bd146bb4dbea1228d10ab2b1dbe4defe250cf89e",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-25",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a04",
+          "order": 1,
+          "title": "LATE-NIGHT PATCH PANICS ARE SO 2023 🥱",
+          "summary": "You've been there: code's ready to ship, everyone's excited—then someone spots a vulnerability. Suddenly it's an all-hands emergency and time to cancel your evening plans.\n\nMicrosoft Azure [4] [4]bakes security in from the start. Microsoft Defender for Cloud [4] helps keep your apps and code protected throughout the development lifecycle. Less last-minute surprises, more peace of mind.\n\nShip fast. Ship safely. Do both at the same time.",
+          "url": "https://links.tldrnewsletter.com/NhRQoP",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a04-02",
+          "order": 2,
+          "title": "Build with built-in security → [4]",
+          "summary": "",
+          "url": "https://links.tldrnewsletter.com/NhRQoP",
+          "reading_time_minutes": null,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a05",
+          "order": 1,
+          "title": "HOW THE MEMORY FOR A MILLION TOKENS SHRANK 150,000 TIMES",
+          "summary": "This breakdown traces how the GPU memory needed to handle a million tokens fell from an estimated 130.5 TB with standard attention on Llama 1 65B to 890 MB with DeepSeek-V4.1-Flash, excluding model weights. FlashAttention eliminated the giant score table, and later designs shrank the remaining KV cache by compressing entries, storing them at lower precision, and sharing them across layers.",
+          "url": "https://three.dev/blog/how-the-memory-for-a-million-tokens-shrank?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "three.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a06",
+          "order": 2,
+          "title": "REACT TESTING LIBRARY IS FASTER WHEN IT'S PART OF THE DOM",
+          "summary": "A DOM implementation with built-in Testing Library queries cut runtime by 32% to 54% across four unchanged React test suites. It caches accessibility queries and advances timers on a virtual clock, but requires Node 26 or later and React 19.",
+          "url": "https://sigh.dev/posts/vibecoding-faster-react-tests/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "sigh.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a07",
+          "order": 3,
+          "title": "GETTING STARTED WITH WEBMCP",
+          "summary": "WebMCP is a draft browser API that lets websites expose specific actions as tools agents can call directly. This post uses a restaurant booking demo to show how to register a tool, validate its inputs, and test calls in the browser without an agent.",
+          "url": "https://polypane.app/blog/getting-started-with-webmcp-building-and-testing-tools?utm_source=tldrdev",
+          "reading_time_minutes": 13,
+          "source_domain": "polypane.app",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a08",
+          "order": 1,
+          "title": "I'M A 100X ENGINEER NOW 🍄",
+          "summary": "A solo developer building a macOS file manager estimates an 80x to 100x increase in coding output with Claude Code, using lines of code as an imperfect measure. The workflow trades manual code review for automated checks and final QA on a noncritical project.",
+          "url": "https://veszelovszki.com/a/tpe/?utm_source=tldrdev",
+          "reading_time_minutes": 26,
+          "source_domain": "veszelovszki.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a09",
+          "order": 2,
+          "title": "LLM AGENTS WORK FOR THEIR PARENT COMPANIES, NOT FOR YOU",
+          "summary": "A Claude Code workflow that finds music from Instagram clips hit a dead end when Bandcamp added a bot challenge. The experience prompts an argument for running agents locally so users have more control over which tasks their tools can perform.",
+          "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "michaelharley.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a10",
+          "order": 3,
+          "title": "MAKE IT WORK, MAKE IT RIGHT, MAKE IT LAND",
+          "summary": "Build against mocks, negotiate real integrations, and gather stakeholder feedback in parallel when implementation outpaces cross-team approvals. Running the replacement alongside the old system on real inputs before cutover makes unexplained differences visible.",
+          "url": "https://paddo.dev/blog/three-streams?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "paddo.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a11",
+          "order": 1,
+          "title": "WHAT HAPPENS WHEN YOU JUST GIVE PEOPLE IN EXTREME POVERTY CASH, WITH NO STRINGS ATTACHED?",
+          "summary": "You get better results, according to 200+ independent studies. Nonprofit GiveDirectly [11] is pioneering the approach of sending cash directly to the people who need it, rather than middlemen. With just a basic phone and a SIM card, Over 2M of the world's poorest people have",
+          "url": "https://www.givedirectly.org/",
+          "reading_time_minutes": null,
+          "source_domain": "givedirectly.org",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a11-02",
+          "order": 2,
+          "title": "received more than $1B. See how the tech works",
+          "summary": "",
+          "url": "https://www.givedirectly.org/",
+          "reading_time_minutes": null,
+          "source_domain": "givedirectly.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a12",
+          "order": 3,
+          "title": "INTRODUCING SWE-2.1",
+          "summary": "Cognition reports that SWE-2.1 scored 41.3 on FrontierCode 2.0 and 50.0 on Terminal-Bench 4.1, up from 24.1 and 24.2 for SWE-2. The Ultrafast version uses the same model and generates tokens 10 times as fast.",
+          "url": "https://cognition.com/blog/swe-2-1?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "cognition.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a13",
+          "order": 4,
+          "title": "ASTROBOOK",
+          "summary": "Astrobook is a lightweight component playground that supports Astro, React, Vue, Preact, Svelte, Solid, and Lit. It discovers story files automatically and supports a subset of Storybook's Component Story Format 3.",
+          "url": "https://github.com/ocavue/astrobook?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a14",
+          "order": 5,
+          "title": "SOLID 1 TO SOLID 2",
+          "summary": "Component Party puts Solid 1 and Solid 2 examples side by side so developers can scan what changes during a migration. It flags unchanged patterns, including basic templates, styling, loops, and click handlers.",
+          "url": "https://component-party.dev/compare/solid1-vs-solid2/?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "component-party.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a15",
+          "order": 6,
+          "title": "BECOME A FOUNDING MEMBER OF TLDR'S AI COMMUNITY (2 MINUTE FORM)",
+          "summary": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join [16].",
+          "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "danni763618.typeform.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a17",
+          "order": 1,
+          "title": "I REVERSE-ENGINEERED GROK BOT, MUSE, AND INSTINCT",
+          "summary": "This teardown compares how always-on assistants use tools, remember context, and start work on schedules or in response to events. OpenClaw illustrates one pattern by loading a small set of memory files at session start and searching daily notes when it needs more detail.",
+          "url": "https://links.tldrnewsletter.com/POYdeC",
+          "reading_time_minutes": 9,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a18",
+          "order": 2,
+          "title": "LADYBIRD IS NOW IN ALPHA",
+          "summary": "Ladybird's first public alpha brings its independently built browser engine to macOS and Linux. Developers can test their sites with WebDriver, though the project expects some sites to break and the browser to crash occasionally.",
+          "url": "https://ladybird.org/posts/alpha/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "ladybird.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a19",
+          "order": 3,
+          "title": "JUST A FEW BUGS",
+          "summary": "An independent security researcher recounts filing 95 reports through Google's Android and Devices bug bounty program and receiving one $250 payment. After comparing the closed reports with Pixel firmware, the researcher says eight fixes appeared in stable releases and two in beta without a bounty or public credit.",
+          "url": "https://links.tldrnewsletter.com/vkL9DA",
+          "reading_time_minutes": 21,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-25:a20",
+          "order": 1,
+          "title": "MORE DATA DOESN'T MEAN BETTER CONTEXT",
+          "summary": "If an AI agent doesn't understand the relationships in your data, adding more information can make its answers less reliable. A knowledge graph gives your agent the connected context to reason across facts. Build yours with Neo4j AuraDB Free [20].",
+          "url": "https://neo4j.com/product/auradb/?utm_medium=newsletter&utm_source=tldr&utm_campaign=aura_tldr_2026_q4&utm_content=ad_auradb_ql3",
+          "reading_time_minutes": null,
+          "source_domain": "neo4j.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a21",
+          "order": 2,
+          "title": "MCP SERVERS CAN NOW SHIP SKILLS, RUN TASKS, AND MORE WITH CLAUDE",
+          "summary": "Claude can now load skills from MCP servers in public beta, delegate long-running tasks to the background, and let servers pause to ask users for input.",
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more?utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "claude.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a22",
+          "order": 3,
+          "title": "THE CSS LH UNIT AND ACTUAL LINE HEIGHT",
+          "summary": "A padded inline element shows why the CSS lh unit can misalign an icon and how aligning to the text baseline fixes it.",
+          "url": "https://blog.kizu.dev/lh-is-not-the-actual-line-height/?utm_source=tldrdev",
+          "reading_time_minutes": 2,
+          "source_domain": "blog.kizu.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a23",
+          "order": 4,
+          "title": "WHY I SWITCHED TO VITE+",
+          "summary": "Vite+ brings formatting, linting, testing, and Node version management into one CLI and config file.",
+          "url": "https://www.bencodezen.io/blog/why-i-switched-to-vite-plus?utm_source=tldrdev",
+          "reading_time_minutes": 10,
+          "source_domain": "bencodezen.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-25:a24",
+          "order": 5,
+          "title": "HOW TO REVERSE ENGINEER A WEBSITE WITH AI",
+          "summary": "Using Stripe's homepage wave as an example, this tutorial shows how an AI coding agent can isolate an animation's shape, motion, and lighting so you can build your own version.",
+          "url": "https://www.builder.io/blog/reverse-engineer-website?utm_source=tldrdev%5B25%5D%5B26",
+          "reading_time_minutes": 8,
+          "source_domain": "builder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
