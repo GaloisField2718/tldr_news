@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-data:2026-11-26",
+  "sector": "TLDR Data",
+  "sector_slug": "tldr-data",
+  "date": "2026-11-26",
+  "source_path": "TLDR Data/article_26-11-2026.md",
+  "source_content_hash": "sha256:0e058cba116915787ab4ffdc33e4b2919561321d4079bd6ddebc8e12106f7593",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DATA 2026-11-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a04",
+          "order": 1,
+          "title": "GREAT AI OUTPUTS DESERVE A BIGGER AUDIENCE.",
+          "summary": "One person's breakthrough shouldn't die in their chat history, starved of data and collaborators. An AI build's value is how many people can use it.\n\nGive business users an easier, safer, and efficient way to share insights and tools built with AI. Domo turns individual builds into secure, governed assets for your teams.\n\n* Certification and Groups keep every share trusted and scope to the right audience * Answers delivered through reports, alerts, and apps - not one-off chats * Teams can reuse a trusted build, instead of rebuilding the same tools and spending tokens again\n\nLET GOOD WORK TRAVEL, SEE HOW [5].",
+          "url": "https://www.domo.com/solution/ai-hero?utm_source=tldr&utm_medium=paid-email&utm_campaign=Display_General_TLDRNewsletterSponsorship_FY27_NAM&utm_campid=701Vu00003EJhHeIAL&utm_content=day-6-headline-data",
+          "reading_time_minutes": null,
+          "source_domain": "domo.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        }
+      ]
+    },
+    {
+      "id": "deep-dives",
+      "heading": "DEEP DIVES",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a06",
+          "order": 1,
+          "title": "WHERE AGENTS MEET THE BROWSER: BUILDING A BROWSER-NATIVE AGENT",
+          "summary": "LinkedIn built an internal AI agent that works across tools in employees' existing Chrome sessions, turning incident threads into tickets and documents into slide decks. It uses structured page data to cut token usage and tool-specific playbooks to improve reliability, while showing its actions and linking to evidence so users can verify the work.",
+          "url": "https://www.linkedin.com/blog/engineering/ai/where-agents-meet-the-browser-building-a-browser-native-agent?utm_source=tldrdata",
+          "reading_time_minutes": 17,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a07",
+          "order": 2,
+          "title": "HOW GRAB BUILT SCARLET: THE AI TEAMMATE THAT TURNS A SLACK MESSAGE INTO A PRODUCTION DATA PIPELINE",
+          "summary": "Grab's AI agent, Scarlet, turns Slack messages and Jira tickets into data pipeline changes, checks the resulting data against production, and opens merge requests for engineers to review. After Grab introduced reusable, team-specific instructions and automated data checks, the share of Scarlet's merge requests that engineers merged rose from about 50% in May to over 85% in September.",
+          "url": "https://engineering.grab.com/how-grab-built-scarlet-blog?utm_source=tldrdata",
+          "reading_time_minutes": 13,
+          "source_domain": "engineering.grab.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a08",
+          "order": 3,
+          "title": "DISTRIBUTED PRIMARY KEYS",
+          "summary": "Reproducible benchmarks compare primary key strategies for multi-region PostgreSQL across index size, WAL overhead, and failover safety. UUIDv7 is efficient and needs no coordination. Regional sequences can collide after failover, timestamp-based IDs are vulnerable to clock rollback, and composite keys simplify replication filtering but use more storage.",
+          "url": "https://tapoueh.org/blog/2026/11/distributed-primary-keys/?utm_source=tldrdata",
+          "reading_time_minutes": 44,
+          "source_domain": "tapoueh.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a09",
+          "order": 4,
+          "title": "BACKFILLING TENS OF BILLIONS OF ROWS NEXT TO LIVE LOGICAL REPLICATION (PART 2)",
+          "summary": "A live PostgreSQL migration moved tens of billions of rows using parallel COPY, fixed ID ranges, and resumable checkpoints. Broken WAL archiving filled the target's disk, while subscription lag retained WAL on the source until streaming = parallel cleared the backlog. Missed updates and costly joins showed why reconciliation needs checks for both correctness and performance.",
+          "url": "https://stormatics.tech/blogs/postgresql-logical-replication-backfill-migration-part-2?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "stormatics.tech",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a10",
+          "order": 1,
+          "title": "5 LESSONS IN AI CONTEXT ENGINEERING: WHY MORE CONTEXT IS NOT BETTER",
+          "summary": "Salesforce's Help Agent must work out what a customer owns and is entitled to, with lookups under 200 milliseconds at the median. More data was not the answer. The team resolves relationships, business rules, and access ahead of time into Data 360 data graphs served by one lookup. Warehouse views had taken 7 to 30 seconds for one scoring workload.",
+          "url": "https://engineering.salesforce.com/5-lessons-in-ai-context-engineering-why-more-context-is-not-better/?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "engineering.salesforce.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a11",
+          "order": 2,
+          "title": "LEGIBLE FIRST: HOW T2 BUILT AI ON WHAT IT ALREADY OWNED",
+          "summary": "T2 Tea consolidated data from 14 systems into one warehouse and built a semantic layer with 243 metrics, letting off-the-shelf AI models retrieve only the data and business rules each question needs. T2 reports spending about A$30 per seat per month and completing a channel analysis in about an hour that previously took consultants weeks.",
+          "url": "https://www.linkedin.com/pulse/legible-first-how-t2-built-ai-what-already-owned-christelle-young-ktopc/?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "linkedin.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a12",
+          "order": 3,
+          "title": "UNCLEAN LEADER ELECTION: KAFKA TROLLEY PROBLEM WHERE YOU ALWAYS END UP PULLING THE LEVER",
+          "summary": "When no in-sync replica remains available, Kafka can sacrifice durability to restore availability by electing an out-of-sync replica, potentially losing acknowledged writes. Kafka 4.0's Eligible Leader Replicas (ELR) can avoid this trade-off in certain failure scenarios. The decision to prioritize availability over durability should be made at the topic level, based on business requirements, rather than during an outage.",
+          "url": "https://aiven.io/blog/kafka-unclean-leader-election?utm_source=tldrdata",
+          "reading_time_minutes": 5,
+          "source_domain": "aiven.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a13",
+          "order": 1,
+          "title": "CLOSE Q4 WITH PROOF. START 2027 READY TO SCALE.",
+          "summary": "Reach 8 million developers, AI experts, security engineers, and founders across 14 newsletters. Plaid built $382K in pipeline from one placement. Book your Q4 campaign [13].",
+          "url": "https://advertise.tldr.tech/book-a-campaign/?utm_source=tldrdata&utm_medium=newsletter&utm_campaign=secondary11262026&sp=_tX66duK9aME2YX4mObHJCMY",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-data:2026-11-26:a14",
+          "order": 2,
+          "title": "ORDERBOOK-LAKEHOUSE",
+          "summary": "Orderbook Lakehouse is a fully local, Docker-based reference architecture for incremental market-data processing using Apache Iceberg, Apache Polaris, Spark (Scala), Redpanda Connect, and SeaweedFS. HTTP events flow through Bronze, Silver, and Gold Iceberg tables to produce order-book state and trading analytics. Iceberg snapshots enable incremental processing and idempotent recovery, while Polaris coordinates atomic metadata commits. The architecture demonstrates reliable, restartable lakehouse pipelines without managed cloud infrastructure.",
+          "url": "https://github.com/vanalex/orderbook-lakehouse?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a15",
+          "order": 3,
+          "title": "POLARS 2.2 BRINGS OUT-OF-CORE JOINS AND SQL-NATIVE ICEBERG OPERATIONS",
+          "summary": "Polars 2.2 extends its streaming engine with disk-spilling equi-joins, allowing datasets larger than available RAM to be processed without exhausting memory. SQL gains INSERT, UPDATE, DELETE, and COPY, alongside native Iceberg table writes and maintenance operations. A new scan_database API and over 100 performance improvements further strengthen Polars as a single-node analytical engine for production data pipelines.",
+          "url": "https://pola.rs/posts/polars-2-2/?utm_source=tldrdata",
+          "reading_time_minutes": 9,
+          "source_domain": "pola.rs",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a16",
+          "order": 4,
+          "title": "HARDWOOD 1.1 ADDS PARALLEL PARQUET WRITES, S3 SUPPORT, AND ALP ENCODING",
+          "summary": "Hardwood, the lightweight, dependency-free Parquet library for the JVM, introduces parallel file writing and direct S3 uploads with multipart support. The release candidate adds ALP encoding for more compact floating-point storage, field IDs for lakehouse interoperability, and a redesigned read scheduler delivering up to 1.8× faster full scans than Hardwood 1.0. These improvements position Hardwood as a high-performance alternative for JVM applications that need direct Parquet access without Hadoop dependencies.",
+          "url": "https://www.morling.dev/blog/s3-writes-parallel-encoding-alp-hardwood-1-1-0-cr1?utm_source=tldrdata",
+          "reading_time_minutes": 7,
+          "source_domain": "morling.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a17",
+          "order": 1,
+          "title": "DBT EVALS: OUR FIRST FORAY INTO DATA AGENT MANAGEMENT",
+          "summary": "dbt Evals is a framework that asks analytics agents the same questions across multiple runs and checks their answers with SQL tests, classifiers, or LLM judges. The goal is to catch accuracy regressions when data models or metrics change, though the initial design tests a configurable stand-in for the production agent.",
+          "url": "https://github.com/dbt-labs/dbt/discussions/17168?utm_source=tldrdata",
+          "reading_time_minutes": 8,
+          "source_domain": "github.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a18",
+          "order": 2,
+          "title": "COMPACTION WAS ON. IT NEVER RAN.",
+          "summary": "Benchmarking DuckDB-based duckgate against Athena exposed a small-file problem: DuckDB was up to 25x slower on an Iceberg table containing just 440K rows spread across thousands of tiny Parquet files. Hourly partitioning created excessive fragmentation, while AWS Glue compaction was enabled but never executed. DuckDB 2.0's asynchronous remote Parquet I/O narrowed the performance gap to roughly 4×, but the fundamental lesson remains: table layout and effective maintenance can matter more than query engine selection.",
+          "url": "https://blog.dataengineerthings.org/compaction-was-on-it-never-ran-427efdc02794?utm_source=tldrdata",
+          "reading_time_minutes": 10,
+          "source_domain": "blog.dataengineerthings.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-data:2026-11-26:a19",
+          "order": 1,
+          "title": "MIND THE TRAP AS LLMS GUESS THE DATA MODEL: GRAIN-AWARE GUARDS AGAINST FAN-OUT IN TEXT-TO-SQL",
+          "summary": "Text-to-SQL joins that repeat an entity silently inflate SUM and COUNT, and grain-aware hints cut these fan-out errors on BIRD from 18.4% to about 13%.",
+          "url": "https://arxiv.org/abs/2611.29009?utm_source=tldrdata",
+          "reading_time_minutes": 4,
+          "source_domain": "arxiv.org",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-data:2026-11-26:a20",
+          "order": 2,
+          "title": "GRATICULE: TURN OSCILLOSCOPE SCREENSHOTS INTO CSV DATA AND PLOTS",
+          "summary": "Graticule reads the grid and scales from an oscilloscope screenshot or phone photo, then exports every trace as CSV with measurements, all inside the browser.",
+          "url": "https://github.com/SunSinD/Graticule?utm_source=tldrdata",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

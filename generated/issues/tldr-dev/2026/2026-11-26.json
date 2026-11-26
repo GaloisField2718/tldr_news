@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-dev:2026-11-26",
+  "sector": "TLDR Dev",
+  "sector_slug": "tldr-dev",
+  "date": "2026-11-26",
+  "source_path": "TLDR Dev/article_26-11-2026.md",
+  "source_content_hash": "sha256:8a6c666713a81444179a772b7b1d589ca0232b9b1b6e452a588363f427e31f3c",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR DEV 2026-11-26",
+  "sections": [
+    {
+      "id": "general",
+      "heading": "GENERAL",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a04",
+          "order": 1,
+          "title": "PATCH TOO SLOW, YOU'RE EXPOSED. PATCH TOO FAST, YOU CAUSE THE OUTAGE.",
+          "summary": "Teams delay security patches, or rush them out and cause outages, often for the same reason: they can't see what a change will break. AI is pushing more change to production than ever, and production knowledge isn't reaching the agents shipping it. The AI SRE Handbook covers how to close that gap, from flagging risky changes in review to finding root cause in minutes when one slips through. It also includes five questions to evaluate any AI SRE platform, as well as benchmark results from real incidents.",
+          "url": "https://www.traversal.com/ebooks/the-ai-sre-handbook-operating-production-systems-in-the-age-of-ai?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-secondary-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "traversal.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a04-02",
+          "order": 2,
+          "title": "[DOWNLOAD THE AI SRE HANDBOOK]",
+          "summary": "",
+          "url": "https://www.traversal.com/ebooks/the-ai-sre-handbook-operating-production-systems-in-the-age-of-ai?utm_source=tldr&utm_medium=newsletter&utm_campaign=tldr-secondary-newsletter",
+          "reading_time_minutes": null,
+          "source_domain": "traversal.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "articles-tutorials",
+      "heading": "ARTICLES & TUTORIALS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a05",
+          "order": 1,
+          "title": "SCALING SWARMS TO THOUSANDS OF AGENTS",
+          "summary": "Hugging Face grew a swarm to 1,000 DeepSeek agents over nine days to build PyBot, a pure Python chatbot that matched SmolLM-360M on everyday conversations in its evaluation. The run generated 175,000 messages and more than 8,500 merged pull requests, exposing bottlenecks in inference, tool calls, and Git.",
+          "url": "https://huggingface.co/spaces/HuggingFaceSwarms/scaling-swarms?utm_source=tldrdev",
+          "reading_time_minutes": 30,
+          "source_domain": "huggingface.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a06",
+          "order": 2,
+          "title": "MIGRATING OUR MESSAGES API TO RUST",
+          "summary": "Anthropic shadowed live traffic to verify that its Rust Messages API matched the Python version, replaying the same model output through both implementations to isolate differences. The migration cut CPU usage per request by about 70% and median time to first token by about 20% without downtime or a feature freeze.",
+          "url": "https://www.anthropic.com/research/migrating-api-to-rust?utm_source=tldrdev",
+          "reading_time_minutes": 18,
+          "source_domain": "anthropic.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a07",
+          "order": 3,
+          "title": "WE GOT RID OF REDIS AND MADE OUR API 4X FASTER",
+          "summary": "Autumn replaced its Redis write-behind cache with an ordered Kafka log and a single balance writer per customer, with Postgres catching up in batches. After rollout, p99 latency for tracking requests fell from 108 ms to 25 ms while weekly check and track volume rose 28%.",
+          "url": "https://useautumn.com/blog/moving-credit-deductions-off-redis-and-onto-kafka?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "useautumn.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "opinions-advice",
+      "heading": "OPINIONS & ADVICE",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a08",
+          "order": 1,
+          "title": "CRUSHING JIRA TICKETS IS A PARTY TRICK, NOT A PATH TO IMPACT",
+          "summary": "Engineers can create more impact by shipping projects tied to company priorities than by maximizing ticket count. Help with visible incidents, unblock teammates, and check what would get a priority project shipped before pulling another ticket from the board.",
+          "url": "https://www.seangoedecke.com/party-tricks/?utm_source=tldrdev",
+          "reading_time_minutes": 7,
+          "source_domain": "seangoedecke.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a09",
+          "order": 2,
+          "title": "HOLY SHIT HOLY SHIT HOLY SHIT HOLY SHIT",
+          "summary": "AI labs are reporting results on longstanding math problems, including matching upper and lower bounds for matrix multiplication and the Fourier transform. Lower bounds are a particularly striking sign of progress. A proof of P ≠ NP may soon be within reach.",
+          "url": "https://scottaaronson.blog/?p=10379&utm_source=tldrdev",
+          "reading_time_minutes": 6,
+          "source_domain": "scottaaronson.blog",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a10",
+          "order": 3,
+          "title": "SMART PEOPLE WHO GIVE A SHIT USE TOOLS",
+          "summary": "LLMs amplify engineers' existing habits, making it easier to write formal specs, trace callers through a monorepo, and test edge cases, while also making it easier to ship code nobody understands. Teams should judge AI-assisted work by how thoroughly engineers verify it and who takes responsibility when it breaks.",
+          "url": "https://www.iankduncan.com/engineering/2026-11-19-smart-people-who-give-a-shit-use-tools?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "iankduncan.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a11",
+          "order": 1,
+          "title": "PLAID BUILT $382K IN PIPELINE FROM ONE TLDR PLACEMENT",
+          "summary": "Close Q4 with proof. TLDR reaches 8 million tech readers across 14 newsletters. Book a Q4 campaign [11].",
+          "url": "https://advertise.tldr.tech/book-a-campaign/?utm_source=tldrdev&utm_medium=newsletter&utm_campaign=secondary11262026&sp=QRRbiLcX0Q0g-VAL-Eyor-QH",
+          "reading_time_minutes": null,
+          "source_domain": "advertise.tldr.tech",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a12",
+          "order": 2,
+          "title": "INTRODUCING SEARCH FOR AGENTS",
+          "summary": "Cloudflare's Search for Agents toggle crawls and indexes a website and exposes a discoverable search endpoint on the site's own domain. The endpoint accepts keyword or natural language queries and returns matching content in Markdown with source references.",
+          "url": "https://blog.cloudflare.com/search-for-agents?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "blog.cloudflare.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a13",
+          "order": 3,
+          "title": "EDGEEVER",
+          "summary": "EdgeEver is a self-hosted note-taking and knowledge base app with cross-device sync, a browser clipper that saves articles as Markdown, and an MCP endpoint for AI agents. It can run on Cloudflare Workers or in Docker.",
+          "url": "https://github.com/tianma-if/edgeever?utm_source=tldrdev",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a14",
+          "order": 4,
+          "title": "BECOME A FOUNDING MEMBER OF TLDR’S AI COMMUNITY (2 MINUTE FORM)",
+          "summary": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join [14].",
+          "url": "https://danni763618.typeform.com/to/H1tYViME",
+          "reading_time_minutes": null,
+          "source_domain": "danni763618.typeform.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a15",
+          "order": 1,
+          "title": "THE BEAUTY OF CSS MIXINS",
+          "summary": "Native CSS mixins let developers reuse blocks of declarations and nested rules, with support for parameters, defaults, and conditional rules. A theming demo shows how mixins can give customers styling hooks while the site controls its markup, and it runs behind an experimental flag in Chromium.",
+          "url": "https://patrickbrosset.com/articles/2026-11-25-the-beauty-of-css-mixins/?utm_source=tldrdev",
+          "reading_time_minutes": 8,
+          "source_domain": "patrickbrosset.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a16",
+          "order": 2,
+          "title": "LOOPED TRANSFORMERS: THINKING TWICE WITH THE SAME WEIGHTS",
+          "summary": "Inkling 2 Mini and GLM-5.4 run some transformer layers multiple times per token, adding computation without adding weights. In a small chain-following experiment, increasing from one to six passes raised the longest chain solved at 90% accuracy from 7 to 36 hops, while extra passes did little for factual recall.",
+          "url": "https://huggingface.co/spaces/dlouapre/looped-transformers?utm_source=tldrdev",
+          "reading_time_minutes": 25,
+          "source_domain": "huggingface.co",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a17",
+          "order": 3,
+          "title": "SPECULATIVE ENCODING: MANY-TO-MANY CACHE TRANSLATION",
+          "summary": "Ramp Labs trained one translator to map hidden states across 42 directions between seven models, letting the receiving model build its key-value cache without rereading the source text. On 32,000-token documents, the receiving model began answering four times faster than with native prefill and retained over 90% of its accuracy.",
+          "url": "https://links.tldrnewsletter.com/88OOlp",
+          "reading_time_minutes": 22,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 6,
+      "articles": [
+        {
+          "id": "tldr-dev:2026-11-26:a18",
+          "order": 1,
+          "title": "RAW HTML OR STRUCTURED DATA?",
+          "summary": "Compare both approaches through Amazon and Google SERP demos. Discover which works best for your scraping use case with ScraperAPI.",
+          "url": "https://www.scraperapi.com/webinars/raw-html-vs-structured-data/?utm_source=tldr&utm_medium=referral&utm_campaign=webinar-q4-2026&utm_content=edition-02-send-01",
+          "reading_time_minutes": null,
+          "source_domain": "scraperapi.com",
+          "content_type": "sponsor",
+          "is_sponsor": true
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a18-02",
+          "order": 2,
+          "title": "Register for the webinar.",
+          "summary": "",
+          "url": "https://www.scraperapi.com/webinars/raw-html-vs-structured-data/?utm_source=tldr&utm_medium=referral&utm_campaign=webinar-q4-2026&utm_content=edition-02-send-01",
+          "reading_time_minutes": null,
+          "source_domain": "scraperapi.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a19",
+          "order": 3,
+          "title": "GUILLERMO RAUCH'S SOFTWARE FACTORY AND THE AGENT INTERNET",
+          "summary": "Interview notes describe Vercel's approach to turning support tickets and other customer feedback into agent-written product changes.",
+          "url": "https://brycewatson.com/research/rauch-software-factory/?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "brycewatson.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a20",
+          "order": 4,
+          "title": "LATENCY DOESN'T LIE: JEV IS (PROBABLY) QWEN3.5-35B-A3B!",
+          "summary": "Modaic used tokenizer, latency, and throughput tests to infer that TypeSafe's Jev likely runs on Qwen3.5-35B-A3B.",
+          "url": "https://modaic.dev/blog/latency-doesnt-lie?utm_source=tldrdev",
+          "reading_time_minutes": 9,
+          "source_domain": "modaic.dev",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a21",
+          "order": 5,
+          "title": "WHEN IN DOUBT, FLAIL ABOUT",
+          "summary": "When the path forward is unclear, try several small experiments, pay close attention to feedback, and quickly drop ideas that show little promise.",
+          "url": "https://www.seangoedecke.com/when-in-doubt-flail-about/?utm_source=tldrdev",
+          "reading_time_minutes": 5,
+          "source_domain": "seangoedecke.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-dev:2026-11-26:a22",
+          "order": 6,
+          "title": "WHAT DOES YOUR SOFTWARE FACTORY COST?",
+          "summary": "An interactive simulator estimates the cost per shipped feature over six months as you vary staffing, coding agents, review capacity, and bug rates.",
+          "url": "https://zarar.dev/software-factory/?utm_source=tldrdev%5B23%5D%5B24",
+          "reading_time_minutes": null,
+          "source_domain": "zarar.dev",
+          "content_type": "tool",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-26",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-26",
+  "source_path": "TLDR InfoSec/article_26-11-2026.md",
+  "source_content_hash": "sha256:08ceca12b45404c34b6a22c3d909c14c8b80059a8c527e8540139762e746fe3d",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-26",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-26:a04",
+          "order": 1,
+          "title": "TODOIST HIT BY UNAUTHORIZED ACCESS; EMAIL ADDRESSES AND PASSWORD HASHES LEAKED FOR ABOUT 6% OF ALL USERS",
+          "summary": "Attackers used stolen version-control credentials to alter automated workflows, obtain further credentials, and access Todoist cloud systems through an employee account. About 6% of users had exposed email addresses, salted SHA1 password hashes, and account-creation dates. Todoist revoked passwords, API tokens, OAuth apps, and sessions. A small subset had API, Slack, or Outlook-linked mailbox data exposed.",
+          "url": "https://finance.biggo.com/news/493ce078-6c3e-40e6-aaf6-84dc66b91e80?utm_source=tldrinfosec",
+          "reading_time_minutes": 3,
+          "source_domain": "finance.biggo.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a05",
+          "order": 2,
+          "title": "UPDATE ON A SECURITY INCIDENT INVOLVING 1PASSWORD'S BACKEND SYSTEMS. CUSTOMER VAULTS WERE NOT AFFECTED, AND ALL VAULT CONTENTS REMAIN SECURE",
+          "summary": "An attacker took over a 1Password employee's corporate GitHub account and pushed malicious code to backend services, which pulled names, email addresses, SRP parameters, and invitation and recovery tokens for a subset of users, and also accessed source code and the company's CI/CD secrets. Vaults and the keys protecting them weren't exposed, and the stolen tokens are useless without SSO or an emailed code, which 1Password has now lengthened from six digits to ten alphanumeric characters. Users don't need to change anything, but they should be wary of unexpected 1Password invitation or recovery emails, and security teams should review how much push access employee GitHub accounts have to production and CI/CD.",
+          "url": "https://1password.com/blog/update-on-nov-2026-security-incident?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "1password.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a06",
+          "order": 3,
+          "title": "CHECK POINT SECURITY MANAGEMENT SERVERS HACKED IN AI-ASSISTED CAMPAIGN",
+          "summary": "GreyNoise tracks a threat actor, GT13, attacking at least 22 organizations across energy, finance, government, manufacturing, mining, and transport. The actor used 99 IP addresses, automated scanning and exploitation, and hands-on access to compromise Check Point Security Management servers. It forged an HFS admin session cookie, obtained SSH access, moved laterally, escalated privileges, and exfiltrated data from 24 servers. Investigators observed exploitation attempts against flaws in Citrix, Ivanti, Check Point, Windows, Exchange, and VMware products.",
+          "url": "https://links.tldrnewsletter.com/4iaQYC",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-26:a07",
+          "order": 1,
+          "title": "VULNPOCALYPSE AND VULNERABILITY RESPONSE ENGINEERING",
+          "summary": "The recent onslaught of vulnerabilities has shown that security teams need to rethink vulnerability response. Teams need to adopt a vulnerability response model that uses threat modeling agents to develop proactive views of an organization's exposure. Then, when a new vulnerability is disclosed, a security team can refer to those models to inform their response priorities and efforts.",
+          "url": "https://www.detectionengineering.net/p/vulnpocalypse-and-vulnerability-response?utm_source=tldrinfosec",
+          "reading_time_minutes": 6,
+          "source_domain": "detectionengineering.net",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a08",
+          "order": 2,
+          "title": "THE GREAT ESCAPE: TRADECRAFT INSIGHTS FROM AN AGENTIC SWARM",
+          "summary": "OpenAI models that escaped their evaluation sandboxes pulled data from Australian government Tableau dashboards without ever touching the targets directly. They found endpoints through Common Crawl, hosted Base64 payloads on httpbin and httpbun, used urlquery[.]net's Chromium scanner to run them through a CORS proxy, and sent the data out in zero-byte HTTP 204 image beacons. Talos treats the swarm as unintended rather than malicious, but a Tencent-hosted agent fleet and the ARTEX framework have since adopted the same tricks. Talos suggests defenders hunt for agents by their habit of writing results to durable services like webhook[.]site, by burst-and-pause request timing, and by the self-labeling tags agents need for their own state tracking.",
+          "url": "https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/?utm_source=tldrinfosec",
+          "reading_time_minutes": 12,
+          "source_domain": "blog.talosintelligence.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a09",
+          "order": 3,
+          "title": "BRING YOUR OWN INTERPRETER - EDR EVASION WITH LUAJIT, JULIA, NODE.JS, DENO, AND BUN",
+          "summary": "Trusted, signed interpreters like LuaJIT, Julia, Node.js, Deno, and Bun can use their built-in FFI to allocate RWX memory with VirtualAllocExNuma, copy in shellcode, and pass that buffer as the callback to EnumUILanguagesW. Windows itself then calls the shellcode, so there's no injection API, no PE on disk, and no direct jump for an EDR to flag. The researcher's calc.exe proof of concept got past ESET, but the earlier Elastic, Defender for Endpoint, and Sophos results come from older tests of similar code. Defenders should block unapproved runtimes with WDAC or AppLocker outside developer machines and alert when interpreter processes allocate executable memory or call Win32 APIs through FFI.",
+          "url": "https://g3tsyst3m.com/byoi/Bring-Your-Own-Interpreter-EDR-Evasion-with-LuaJIT,-Julia,-Node.js,-Deno,-and-Bun/?utm_source=tldrinfosec",
+          "reading_time_minutes": 18,
+          "source_domain": "g3tsyst3m.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-26:a10",
+          "order": 1,
+          "title": "FLAWRENCE",
+          "summary": "Flawrence is a Rust tool that reports source-code vulnerabilities only after a second LLM agent has reproduced them and a proof of concept has been written. It builds a threat model, maps the attack surface, and gives each entry point its own research agent, then drafts GitHub Security Advisories, private reports, and patches that it tries to bypass. It runs on Anthropic, OpenAI, Workers AI, or any OpenAI-compatible endpoint such as a local vLLM model, so it fits code-audit pipelines, but its agents run shell commands and can fan out to 40 at once, so it belongs in a VM and needs a MAX_COST_USD cap.",
+          "url": "https://github.com/mschwarzl/flawrence/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a11",
+          "order": 2,
+          "title": "HVPATCH",
+          "summary": "hvpatch applies kernel CVE fixes to running Proxmox VE 9 hypervisors as live patches, so hosts can wait until a maintenance window to reboot, which fills a gap because KernelCare doesn't support PVE 9 and Proxmox offers no live patching of its own. Each patch is built from the exact Proxmox kernel source, tested in QEMU, and signed, then checked against signature, build-id, and hash before it loads, with canary, early, and stable release rings, automatic rollback, and an option to self-host the pipeline with your own keys. It's still early-release software, with the 7.0 kernel experimental and no bare-metal soak yet, and changes to data structures and ZFS fixes still need a reboot, but status shows clearly which CVEs are fixed live and which aren't.",
+          "url": "https://github.com/prepaid-host/hvpatch?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a12",
+          "order": 3,
+          "title": "EXTERNAL SANDBOX",
+          "summary": "External Sandbox provides a common interface for running commands and working with files inside isolated Linux environments.",
+          "url": "https://github.com/prime-radiant-inc/external-sandbox?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a13",
+          "order": 4,
+          "title": "BECOME A FOUNDING MEMBER OF TLDR'S AI COMMUNITY (2 MINUTE FORM)",
+          "summary": "TLDR is launching a curated community for AI builders to discuss major news and launches. The best links and comments will be featured in TLDR AI. Apply here to join [14].",
+          "url": "https://danni763618.typeform.com/to/H1tYViME?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "danni763618.typeform.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-26:a15",
+          "order": 1,
+          "title": "A FAMILIAR IRANIAN HACKING GROUP HAS FOUND A NEW WAY TO CAUSE CHAOS",
+          "summary": "Hackers raised temperatures in supermarket refrigeration systems across France in October, destroying millions of euros of food. French intelligence links the operation to Shahid Kaveh, an IRGC unit also known as CyberAv3ngers. The group used internet scanning and Modbus reconnaissance against connected refrigeration equipment. Similar attacks hit supermarkets in 10 other European countries. France seeks arrest warrants for three Iranians. Iran denies involvement.",
+          "url": "https://arstechnica.com/security/2026/11/a-familiar-iranian-hacking-group-has-found-a-new-way-to-cause-chaos/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "arstechnica.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a16",
+          "order": 2,
+          "title": "WHAT DEFENDERS NEED TO KNOW ABOUT ARTEX, THE AGENTIC AI FRAMEWORK THREAT ACTORS ABUSE",
+          "summary": "ARTEX, an open-source AI pentesting framework released in July with a Chinese-language interface, has been adopted by state-backed groups including Onyx Sleet, Pearl Sleet, Salt Typhoon, and Crystal Typhoon, as well as financially motivated actors. Its planner agent works from a knowledge graph and hands short attack \"intents\" to worker agents running nmap, sqlmap, hydra, and Metasploit, which can take an intrusion from reconnaissance to privileged access in minutes using any LLM, including models with their guardrails stripped. Microsoft notes that ARTEX introduces no new techniques and that operators routinely change IPs and user agents, so the most durable signal is its machine-speed pattern of bursts and retries, while ThreatBook's claim of ownership and its commercial \"ARTEX Pro\" add a new twist to the tool's spread.",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/?utm_source=tldrinfosec",
+          "reading_time_minutes": 22,
+          "source_domain": "microsoft.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a17",
+          "order": 3,
+          "title": "MICROSOFT'S NTLM SECURITY CHANGES TRIP UP THIRD-PARTY LOGINS",
+          "summary": "Microsoft's November update made Windows clients offer NTLM signing by default to address CVE-2026-118737, which breaks logins through SSO products, auth proxies, and packaging tools that send an empty TargetInfo field, and the ClientAllowUnsignedNtlm registry workaround is only a stopgap because servers will require signing from May 2027.",
+          "url": "https://www.theregister.com/security/2026/11/25/microsofts-ntlm-security-changes-trip-up-third-party-logins/5312085?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-26:a18",
+          "order": 1,
+          "title": "US FINANCIAL CRIMES BUREAU DISCLOSES ‘CYBERSECURITY INCIDENT'",
+          "summary": "FinCEN disclosed unauthorized access to a limited subset of Treasury systems and took some services offline.",
+          "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "theverge.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a19",
+          "order": 2,
+          "title": "DOJ ACCUSES FORMER CYBER EXECUTIVE OF DEFRAUDING RANSOMWARE VICTIMS BY SECRETLY PAYING HACKERS",
+          "summary": "The DOJ indicted Juan Ricardo Palacio Escobar, former CTO of RansomwareHelp, on three wire-fraud counts.",
+          "url": "https://techcrunch.com/2026/11/25/doj-accuses-former-cyber-executive-of-defrauding-ransomware-victims-by-secretly-paying-hackers/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-26:a20",
+          "order": 3,
+          "title": "EUROPEAN COMMISSION CONFIRMS PERSONAL DATA STOLEN IN AI-ASSISTED CYBERATTACK",
+          "summary": "The European Commission confirmed that attackers stole names and email addresses from EU Academy users during an intrusion detected on October 22.",
+          "url": "https://www.theregister.com/cyber-crime/2026/11/24/european-commission-confirms-personal-data-stolen-in-ai-assisted-cyberattack/5311834?utm_source=tldrinfosec%5B21%5D%5B22",
+          "reading_time_minutes": 2,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
