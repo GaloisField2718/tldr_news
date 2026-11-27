@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "0.1.3",
+  "issue_id": "tldr-infosec:2026-11-27",
+  "sector": "TLDR InfoSec",
+  "sector_slug": "tldr-infosec",
+  "date": "2026-11-27",
+  "source_path": "TLDR InfoSec/article_27-11-2026.md",
+  "source_content_hash": "sha256:a9aef124ee02cd1f7f8f98f0632c9b602b9093c107f3cdcf41b47f57c1ec723b",
+  "format_family": "links_block",
+  "parse_status": "complete",
+  "parse_warnings": [
+    {
+      "code": "footer_truncated",
+      "message": "Subscription/account footer truncated before parse",
+      "line": null
+    }
+  ],
+  "title": "TLDR INFORMATION SECURITY 2026-11-27",
+  "sections": [
+    {
+      "id": "attacks-vulnerabilities",
+      "heading": "ATTACKS & VULNERABILITIES",
+      "order": 1,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-27:a04",
+          "order": 1,
+          "title": "SECURITY INCIDENT ON HEX.PM",
+          "summary": "An attacker ran commands on six hex.pm web servers by sending unauthenticated Erlang-term request bodies containing fake Elixir structs, which got past Plug.Crypto.non_executable_binary_to_term. When Sentry logged the resulting error, inspect triggered a gadget chain through Ecto's DynamicExpr and a DBConnection.Stream :log callback that ran attacker-chosen code (CVE-2026-129514; in place since 2016). Hex patched it within 20 minutes and found no tampered packages, but it can't rule out reads of email addresses, password hashes, and 2FA secrets. Users should change their password, reset 2FA, and fetch packages only from repo.hex.pm until the new signing client ships, and Elixir teams should upgrade Ash to 3.38.0 (CVE-2026-124283) and stop decoding untrusted Erlang terms.",
+          "url": "https://hex.pm/blog/security-incident-on-hexpm?utm_source=tldrinfosec",
+          "reading_time_minutes": 8,
+          "source_domain": "hex.pm",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a05",
+          "order": 2,
+          "title": "BITHUMB HACKED FOR 15 DAYS, CUSTOMER PASSPORT NUMBERS, BANK DETAILS, AND WALLET ADDRESSES STOLEN",
+          "summary": "South Korean cryptocurrency exchange Bithumb disclosed that attackers breached its DaouOffice collaboration service and stole customer data over 15 days before being detected. The breached data includes identity documents such as passports, South Korean resident registration numbers, driver's license numbers, transaction histories, and contact details. Bithumb is contacting affected individuals and also provides a personal data breach checker on its website.",
+          "url": "https://cybersecuritynews.com/bithumb-hacked-for-15-days/?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "cybersecuritynews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a06",
+          "order": 3,
+          "title": "NORTH KOREA-LINKED POLINRIDER POISONS OVER 7,600 GITHUB REPOSITORIES TO SPREAD MALWARE",
+          "summary": "North Korea's PolinRider campaign has used stolen GitHub tokens to force-push loaders into at least 7,609 repositories. It rewrites commits the developers already made and hides the code after hundreds of spaces in build configs, conftest.py, or VS Code auto-run tasks, so building the project or just opening the folder runs it. The loader reads its JavaScript stage and its C2 address from Ethereum wallet transactions using a \"NullReceiver\" scheme marked by \"helloipbot!!\", so taking servers down does nothing, and OpenSourceMalware traced related activity back to February 2025. Developers should block outbound connections to 95.135.181[.]84 and 103.179.142[.]155, check conftest.py, utils packages, and .vscode/tasks.json for unexpected code, and rotate their GitHub tokens if they find it.",
+          "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "thehackernews.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "strategies-tactics",
+      "heading": "STRATEGIES & TACTICS",
+      "order": 2,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-27:a07",
+          "order": 1,
+          "title": "TAKING OVER US TREASURY SUBDOMAINS FOR $3 EACH",
+          "summary": "Intruder researchers claimed 28 AWS Elastic IP addresses that matched dangling DNS records, including five US Treasury subdomains: ftp, irssearch, pcp, rdgw, and ww5.treasury.gov. They allocated and released 450,000 IPs in 48 hours, at a reported cost of $3 per valid takeover. Control of the IP lets an attacker serve content on the subdomain, obtain a TLS certificate, run phishing, capture credentials sent by old automations, and potentially receive cookies scoped to the parent domain. AWS restricted the researchers' account after 48 hours, but transferring the IP to another account in the same organization still worked. AWS said it has no plans to change its approach.",
+          "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each?utm_source=tldrinfosec",
+          "reading_time_minutes": 7,
+          "source_domain": "intruder.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a08",
+          "order": 2,
+          "title": "REMUS MALWARE STEALS GMAIL MESSAGES VIA FAKE GOOGLE SHEETS EXTENSION",
+          "summary": "The developer of the Remus infostealer released a version they claim exploits a zero-day in Gmail to steal emails even after a user resets their password. Researchers reverse-engineered the infostealer and said it installs a malicious Google Chrome extension that masquerades as Google Sheets to steal emails and does not exploit a zero-day. Once active, the extension checks up to ten email accounts for new messages every minute and retrieves them in full, raw format.",
+          "url": "https://links.tldrnewsletter.com/stS18B",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a09",
+          "order": 3,
+          "title": "OEMPOCALYPSE PART 2: ROOTING SAMSUNG FLAGSHIPS VIA KNOX DUALDAR",
+          "summary": "A zero-permission app can root Galaxy S23 and bootloader-locked S26 devices by calling DualDAR's relayAsync. That call forwards commands to a background thread running as system_server, which bypasses the UID check and allows a LOAD_CLIENT_LIBRARY command to execute native code in the dualdard crypto daemon. From there, a page use-after-free in the /dev/dd driver leaves freed memory mapped into userspace, and the chain uses it to corrupt pipe_buffer structures for kernel read/write, disable SELinux, bypass RKP by patching a library in the page cache, and turn off DEFEX. Samsung fixed both bugs in its August and September 2026 updates (CVE-2026-21102). Since Calif's static analysis suggests other Galaxy S and Z models are affected as well, fleet admins should use MDM to require at least the September 2026 patch level.",
+          "url": "https://calif.io/research/oempocalypse-part-2?utm_source=tldrinfosec",
+          "reading_time_minutes": 30,
+          "source_domain": "calif.io",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "launches-tools",
+      "heading": "LAUNCHES & TOOLS",
+      "order": 3,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-27:a10",
+          "order": 1,
+          "title": "UNIBLUE",
+          "summary": "UniBlue is a read-only Go scanner that connects to a UniFi gateway, inventories every device, switch port, and Wi-Fi network, and explains in plain English what's exposed and how to fix it in UniFi. Unlike generic port scanners, it scores risk using UniFi's own firewall zones, VLAN isolation (including IPv6 rules that quietly bypass IPv4 blocks), and port forwards. It combines 122 YAML checks, Praetorian's nerva fingerprinter, and offline NVD and CISA KEV matching with live alerts for evil-twin SSIDs, PoE swaps, and firewall drift. It's a strong option for homelab and small-office UniFi setups, though the maintainers say it is built mostly with AI agents and doesn't accept pull requests, so heavy users should review its code before giving it an API key and access across VLANs.",
+          "url": "https://github.com/karalabe/uniblue/?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a11",
+          "order": 2,
+          "title": "SEMSEC",
+          "summary": "SemSec is Robusta Studio's open-source Semgrep ruleset of 262 rules, including 35 targeting common mistakes in vibe-coded apps, such as disabled Supabase RLS, Next.js Server Actions without auth, Firebase rules set to if true, and unverified Stripe webhooks. It also covers webhooks, tRPC and GraphQL, Prisma and other ORMs, serverless functions, and secret detection for 75 providers based on exact key formats, all runnable with one semgrep --config command in CI with SARIF output. Only 47 of the rules use taint tracking, so the README's low-false-positive pitch fits those better than the pattern-based majority, but it's still a useful free add-on for teams shipping AI-assisted JavaScript and TypeScript.",
+          "url": "https://github.com/RobustaStudio/semsec?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a12",
+          "order": 3,
+          "title": "PROTOSPECTOR",
+          "summary": "ProtoSpector is a Burp Suite extension that allows for decoding and encoding Protobuf messages using either a whitebox approach (with proto schemas) or a blackbox approach (directly working on raw Protobuf data).",
+          "url": "https://github.com/doyensec/ProtoSpector?utm_source=tldrinfosec",
+          "reading_time_minutes": null,
+          "source_domain": "github.com",
+          "content_type": "github_repo",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a13",
+          "order": 4,
+          "title": "BECOME A FOUNDING MEMBER OF TLDR’S COMMUNITY (2 MINUTE FORM)",
+          "summary": "TLDR is launching a curated community for AI builders to discuss best practices and the latest AI news. The best links and comments will be featured in TLDR. Apply here to join [13].",
+          "url": "https://danni763618.typeform.com/to/H1tYViME",
+          "reading_time_minutes": null,
+          "source_domain": "danni763618.typeform.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "heading": "MISCELLANEOUS",
+      "order": 4,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-27:a14",
+          "order": 1,
+          "title": "AN AI CODING AGENT, A BROWSER, AND A MAC TOOL FOUND A FINANCIAL FIRM'S ACCESS KEY IN UNDER 6 MINUTES",
+          "summary": "An attacker in Bucharest used OpenCode, Chrome, and curl to probe a financial firm's systems. The agent read a decoy API document, followed a link to a fake environment, found a planted key, and tested it alongside a fabricated key. Jesta contained the activity. The intruder stopped after five minutes and 44 seconds. The address was absent from threat feeds, so blocklists would not have detected it. Behavioral signals included a desktop browser claiming to be a phone, rapid key attempts, and use of a link that existed only in the API documentation.",
+          "url": "https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922?utm_source=tldrinfosec",
+          "reading_time_minutes": 4,
+          "source_domain": "theregister.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a15",
+          "order": 2,
+          "title": "LINUX C2 FROM SCRATCH 0X01: VIRTUALISING YOUR MALWARE",
+          "summary": "The emp3r0r author's second lesson builds a RISC-V (RV32IMA) interpreter that runs BOF payloads as guest code inside a 64 MiB read-write arena, so the payload is never mapped executable and the mmap(PROT_EXEC) and anonymous RX region signals that EDR and eBPF probes look for disappear. The guest reaches the host only through a syscall gate that checks every pointer, and the cost is speed: payloads run orders of magnitude slower than native code. As the author admits, the detection surface shifts rather than disappears: the interpreter is still an anonymous executable .so, and the short-lived arena and the gate's unusual syscall mix can all be fingerprinted.",
+          "url": "https://jm33.me/linux-c2-from-scratch-0x01-virtualising-your-malware.html?utm_source=tldrinfosec",
+          "reading_time_minutes": 25,
+          "source_domain": "jm33.me",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a16",
+          "order": 3,
+          "title": "CISA WARNS OF CRITICAL UNPATCHED FLAW IN DANFOSS REFRIGERATION CONTROLLERS",
+          "summary": "CISA issued a warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers, which are used by food retailers to manage commercial refrigeration, HVAC, and lighting systems. The vulnerability is a stack-based buffer overflow that unauthenticated attackers could exploit to restart servers or achieve arbitrary code execution on the server as the web server's identity.",
+          "url": "https://links.tldrnewsletter.com/VpTR0j",
+          "reading_time_minutes": 2,
+          "source_domain": "links.tldrnewsletter.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    },
+    {
+      "id": "quick-links",
+      "heading": "QUICK LINKS",
+      "order": 5,
+      "articles": [
+        {
+          "id": "tldr-infosec:2026-11-27:a17",
+          "order": 1,
+          "title": "DOZENS OF OIL AND SHIPPING TANKERS HACKED IN RECENT WEEKS, PER REPORT",
+          "summary": "US officials suspect Iranian hackers carried out up to 50 attacks on vessels carrying oil, liquefied gas, and chemicals across Asia and Europe.",
+          "url": "https://techcrunch.com/2026/11/24/dozens-of-oil-and-shipping-tankers-hacked-in-recent-weeks-per-report/?utm_source=tldrinfosec",
+          "reading_time_minutes": 1,
+          "source_domain": "techcrunch.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a18",
+          "order": 2,
+          "title": "GATWICK AIRPORT CUSTOMERS HIT BY PAYMENT SYSTEM DATA BREACH",
+          "summary": "Times24 UK reported unauthorized access to Gatwick's third-party AutoPay drop-off payment system.",
+          "url": "https://www.bbc.co.uk/news/articles/ckx283l7n17ro?utm_source=tldrinfosec",
+          "reading_time_minutes": 2,
+          "source_domain": "bbc.co.uk",
+          "content_type": "editorial",
+          "is_sponsor": false
+        },
+        {
+          "id": "tldr-infosec:2026-11-27:a19",
+          "order": 3,
+          "title": "PENINSULA ENERGY CYBERATTACK HALTS WYOMING URANIUM MINE",
+          "summary": "Peninsula Energy halted its Lance uranium project in Wyoming after a cyber incident.",
+          "url": "https://cybernews.com/security/peninsula-energy-cyberattack-uranium-mine/?utm_source=tldrinfosec%5B20%5D%5B21",
+          "reading_time_minutes": 1,
+          "source_domain": "cybernews.com",
+          "content_type": "editorial",
+          "is_sponsor": false
+        }
+      ]
+    }
+  ]
+}
